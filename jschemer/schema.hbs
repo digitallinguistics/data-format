@@ -5,59 +5,79 @@
   {{/if}}
 
   {{#if id}}
-    <p class=id>Current context: {{id}}</p>
+    <p class=id>Current context: <code>{{id}}</code></p>
   {{/if}}
 
   {{#if multipleOf}}
-    <p class='multipleOf numeric'>Multiple of: {{multipleOf}}</p>
+    <p class='multipleOf numeric-prop'>Multiple of: <code>{{multipleOf}}</code></p>
   {{/if}}
 
   {{#if maximum}}
-    <p class='maximum numeric'>Maximum: {{maximum}}</p>
+    <p class='maximum numeric-prop'>Maximum: <code>{{maximum}}</code></p>
   {{/if}}
 
   {{#if exclusiveMaximum}}
-    <p class='exclusive-maximum numeric'>Exclusive maximum: {{exclusiveMaximum}}</p>
+    <p class='exclusive-maximum numeric-prop'>Exclusive maximum: <code>{{exclusiveMaximum}}</code></p>
   {{/if}}
 
   {{#if minimum}}
-    <p class='minimum numeric'>Minimum: {{minimum}}</p>
+    <p class='minimum numeric-prop'>Minimum: <code>{{minimum}}</code></p>
   {{/if}}
 
   {{#if exclusiveMinimum}}
-    <p class='exclusive-minimum numeric'>Exclusive minumum: {{exclusiveMinimum}}</p>
+    <p class='exclusive-minimum numeric-prop'>Exclusive minumum: <code>{{exclusiveMinimum}}</code></p>
   {{/if}}
 
   {{#if maxLength}}
-    <p class='maxLength string'>Max length: {{maxLength}}</p>
+    <p class='maxLength string-prop'>Max length: <code>{{maxLength}}</code></p>
   {{/if}}
 
   {{#if minLength}}
-    <p class='minLength string'>Min length: {{minLength}}</p>
+    <p class='minLength string-prop'>Min length: <code>{{minLength}}</code></p>
   {{/if}}
 
   {{#if pattern}}
-    <p class='pattern string'>Regular expression pattern: {{pattern}}</p>
+    <p class='pattern string-prop'>Regular expression pattern: <code>{{pattern}}</code></p>
   {{/if}}
+
+  {{#if maxItems}}
+    <p class='max-items array-prop'>Max items: <code>{{maxItems}}</code></p>
+  {{/if}}
+
+  {{#if minItems}}
+    <p class='min-items array-prop'>Min items: <code>{{minItems}}</code></p>
+  {{/if}}
+
+  {{#if uniqueItems}}
+    <p class='unique-items array-prop'>Unique items: <code>{{uniqueItems.boolean}}</code></p>
+  {{/if}}
+
+  
 
   {{#if additionalItems}}
-    {{#if additionalItems.boolean}}
-      <p class=additional-items>Additional Items: {{additionalItems.boolean}}</p>
-    {{else}}
-      {{!-- Need some sort of HTML element here --}}
-      {{> schema additionalItems}}
-    {{/if}}
+    <div class='additional-items array-prop'>
+      <h2>Additional Items</h2>
+      {{#if additionalItems.boolean}}
+        <code>true</code>
+      {{else}}
+        {{> schema additionalItems}}
+      {{/if}}
+    </div>
   {{/if}}
 
-  {{!-- TODO: need some sort of HTML element for both of these --}}
   {{#if items}}
-    {{#if items.object}}
-      {{> schema items}}
-    {{else}}
-      {{#each items}}
+    <div class='items array-prop'>
+      <h2>Items</h2>
+      {{#if items.object}}
         {{> schema items}}
-      {{/each}}
-    {{/if}}
+      {{else}}
+        <ul>
+          {{#each items}}
+            <li>{{> schema items}}</li>
+          {{/each}}
+        </ul>
+      {{/if}}
+    </div>
   {{/if}}
 
 </section>
