@@ -1,0 +1,15 @@
+{
+  "name": "jschemer",
+  "version": "0.1.0",
+  "description": "A simple utility for generating HTML from JSON Schema data using Handlebars.",
+  "keywords": ["JSON Schema", "json-schema", "Handlebars", "JSON", "documentation"],
+  "homepage": "https://github.com/dwhieb/jschemer#readme",
+  "bugs": "https://github.com/dwhieb/jschemer/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel W. Hieber",
+    "url": "http://danielhieber.com"
+  },
+  "main": "jschemer.js",
+  "repository": "https://github.com/dwhieb/jschemer.git"
+}
