@@ -156,13 +156,19 @@
       <h2>Properties</h2>
       <ul>
         {{#each properties}}
-          <li class=property>{{> schema this}}</li>
+          <li>{{> schema this}}</li>
         {{/each}}
-        {{#if patternProperties}}
-          {{#each patternProperties}}
-            <li class=pattern-property>{{> schema this}}</li>
-          {{/each}}
-        {{/if}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if patternProperties}}
+    <div class='pattern-properties object-prop'>
+      <h2>Custom Properties (<code>patternProperties</code>)</h2>
+      <ul>
+        {{#each patternProperties}}
+          <li>{{> schema this}}</li>
+        {{/each}}
       </ul>
     </div>
   {{/if}}

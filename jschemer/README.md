@@ -15,8 +15,6 @@ JSchemer comes with a default CSS file, `jschemer.css`, which you can link into 
 
 * Each JSON Schema keyword/attribute is associated with exactly one HTML element in the generated documentation, which is given the CSS class for that keyword (e.g. `class=max-length`). This element may contain other elements that may or may not have CSS classes, but which can be targeted using CSS child selectors.
 
-* An exception to the last convention is the `patternProperties` attribute. Pattern properties are placed in a `<ul></ul>` element along with regular properties. Each item in the list is given a class of either `property` or `pattern-property`.
-
 * camelCase keywords in JSON Schema are given a hyphen-separated CSS class name, e.g. `max-items`.
 
 * HTML elements in the generated documentation are also given CSS classes labeling the data type they apply to: `array-prop`, `numeric-prop`, `object-prop`, `string-prop`. Attributes that apply to any data type, such as `type`, are just given the class `prop`. Metadata keywords such as `title` are given the class `meta-prop`.

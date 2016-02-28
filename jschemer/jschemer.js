@@ -9,14 +9,20 @@ const preprocess = schema => {
     if (prop === 'patternProperties') {
       for (var patt in schema.patternProperties) {
         schema.patternProperties[patt].pattern = patt;
+        schema.patternProperties[patt] = preprocess(schema.patternProperties[patt]);
       }
     } else if (prop === 'type') {
       schema.type = Array.isArray(schema.type) ? schema.type : [schema.type];
     } else if (prop === 'properties') {
       for (var key in schema.properties) {
+        if (schema.properties[key].items && schema.properties[key].items instanceof Object) {
+          schema.properties[key].items.object = true;
+        }
         schema.properties[key].title = schema.properties[key].title || key;
         schema.properties[key] = preprocess(schema.properties[key]);
       }
+    } else if (prop === 'default') {
+      schema.default = JSON.stringify(schema.default, null, 2);
     }
 
     if (typeof schema[prop] === 'boolean') {
