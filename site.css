@@ -1,0 +1,322 @@
+/* sitewide styles */
+.array::before {
+  background-image: linear-gradient(#555, #222);
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: white;
+  content: '[]';
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  text-shadow: -2px -2px 3px black;
+}
+
+article {
+  display: block;
+}
+
+article > * {
+  padding: 0.5rem 5rem 0.5rem 5rem;
+}
+
+article > p {
+  display: block;
+}
+
+article ol,
+article ul {
+  list-style: disc outside;
+}
+
+article li {
+  display: list-item;
+  margin-left: 1.25rem;
+  padding: 0.5rem;
+}
+
+code {
+  background-color: #232C31;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Fira Mono';
+  font-size: 80%;
+  line-height: 150%;
+  padding: 0.25rem;
+  vertical-align: baseline;
+  white-space: pre-wrap;
+}
+
+code.example {
+  box-sizing: border-box;
+  float: left;
+  margin: 0rem 2rem 0rem 5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width: 50%;
+}
+
+.description {
+  padding: 0.25rem 0rem 0.25rem 0rem;
+}
+
+.details {
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1, h2, h3 {
+  display: inline;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h3.array::before,
+h3.number::before,
+h3.object::before,
+h3.string::before {
+  font-weight: normal;
+  margin: 0rem 1rem 0rem 0rem;
+}
+
+.number::before {
+  background-image: linear-gradient(#555, #222);
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: white;
+  content: '#';
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  text-shadow: -2px -2px 3px black;
+}
+
+.object::before {
+  background-image: linear-gradient(#555, #222);
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: white;
+  content: '{}';
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  text-shadow: -2px -2px 3px black;
+}
+
+.optional::after {
+  border: 2px solid green;
+  border-radius: 5px;
+  content: 'optional';
+  font-size: 80%;
+  font-weight: normal;
+  margin: 0rem 0.25rem 0rem 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+h3.optional::after {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+p a,
+p a:active,
+p a:visited,
+#specNav a {
+  color: blue;
+  font-weight: bold;
+}
+
+p a:hover {
+  border-bottom: 2px solid blue;
+  color: blue;
+}
+
+.required::after {
+  background-color: green;
+  border: 2px solid green;
+  border-radius: 5px;
+  color: white;
+  content: 'required';
+  font-size: 80%;
+  font-weight: normal;
+  margin: 0rem 0.25rem 0rem 0.5rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+}
+
+h3.required::after {
+  margin: 0rem 1rem 0rem 1rem;
+}
+
+select {
+  align-self: flex-start;
+}
+
+.selected {
+  border-bottom: 2px solid white;
+}
+
+.smallcaps {
+  font-variant: small-caps;
+}
+
+.string::before {
+  background-image: linear-gradient(#555, #222);
+  border: 2px solid #222;
+  border-radius: 5px;
+  color: white;
+  content: '""';
+  margin: 0rem 0.25rem 0rem 0.25rem;
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  text-shadow: -2px -2px 3px black;
+}
+
+time {
+  display: inline;
+}
+
+/* DOM elements */
+body {
+  font-family: 'Fira Sans';
+  font-size: 125%;
+}
+
+body > header {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+#logo {
+  height: 7.5rem;
+  padding: 1rem;
+  width: 7.5rem;
+}
+
+#headline {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+#headline p {
+  font-size: 2rem;
+}
+
+nav ul {
+  background-color: black;
+  color: white;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+nav li {
+  font-size: 1.5rem;
+  position: relative;
+}
+
+nav li:hover > a > span {
+  border-bottom: 2px solid white;
+}
+
+nav li ul {
+  border-radius: 0px 0px 5px 5px;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+}
+
+nav li ul li {
+  display: none;
+}
+
+nav li:hover li {
+  display: flex;
+}
+
+nav a {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+main {
+    padding: 1rem 0rem 1rem 0rem;
+}
+
+#specNav {
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-align-self: center;
+  align-self: center;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  list-style: none;
+}
+
+#specNav::before {
+  content: 'View the data format for a:';
+  font-style: italic;
+  padding-right: 0.5rem;
+}
+
+#specNav li {
+  padding: 0rem 1rem 0rem 1rem;
+}
+
+#spec section {
+  border-radius: 5px;
+  margin: 0.5rem 0rem 0.5rem 0rem;
+  padding: 1rem;
+}
+
+#spec > section {
+  background-color: #ccc;
+}
+
+#spec > section > section {
+  background-color: #e6e6e6;
+}
+
+#spec > section > section > section {
+  background-color: #fff;
+}
+
+#spec > section > section > section > section {
+  background-color: #e6e6e6;
+}
+
+#spec > section > section > section > section > section {
+  background-color: #ccc;
+}
+
+/* page-specific styling */
+#homePage section {
+  border: 5px solid black;
+  padding: 1rem;
+  margin: 1rem 2rem 1rem 2rem;
+}
+
+#homePage section li {
+  display: inline;
+}
+
+#spec main *,
+#textSpec main * {
+  line-height: 175%;
+}

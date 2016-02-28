@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset=utf-8>
+  <title>DLX | Lexicon Format</title>
+  <meta name=author content='Patrick J. Hall &amp; Daniel W. Hieber'>
+  <meta name=description content='The DLX format for a lexicon'>
+  <meta name=keywords content='linguistics, Digital Linguistics, language documentation'>
+
+  <link rel=stylesheet href=css/fonts.css charset=utf-8>
+  <link rel=stylesheet href=css/style.css charset=utf-8>
+  <link rel=stylesheet href=css/site.css charset=utf-8>
+</head>
+
+<body id=textSpec>
+  <header>
+    <img id=logo src=img/tunnel.png alt='DLX tunnel logo'>
+    <div id=headline>
+      <h1>Digital Linguistics</h1>
+      <p>The linguistic structures you know, in a form you can use</p>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href=index.html><span>Home</span></a></li>
+      <li><a href=spec.html><span>The DLX Format</span></a>
+        <ul>
+          <li><a href=lexiconSpec.html><span class=selected>Lexicon</span></a></li>
+          <li><a href=textSpec.html><span>Text</span></a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <ul id=specNav>
+      <li><a href=lexiconSpec.html>lexicon</a></li>
+      <li><a href=textSpec.html>text</a></li>
+    </ul>
+
+    <article>
+
+      <header>
+        <h1>The DLX Data Format for a Lexicon</h1>
+        <p id=version>Version ɑ.0 (<time datetime="2015-08-26">August 26, 2015</time>)</p>
+      </header>
+
+      <section>
+        <h2>Introduction</h2>
+
+        <p>This document is a <dfn>data format specification</dfn> or <dfn>schema</dfn> that lays out a standard format for representing a lexicon in <a href=http://www.json.org>JSON</a>. (For a brief overview of JSON and how it can be used to represent linguistic data, check out our <a href=spec.html>DLX Data Format</a> page.) Any application designed to use DLX-formatted data must therefore support processing of data that is correctly formatted according to this specification.</p>
+      </section>
+
+      <section>
+        <h2>How to read this document</h2>
+
+        <ul>
+          <li>When a term is represented using <code>code</code>, it refers to a JSON object and will begin with a capital letter. When a term is represented using normal text, it refers to the linguistic object and will begin with a lowercase letter. For example, <code>Definition</code> refers to the JSON object that stores data about a word, while <dfn>definition</dfn> refers to the linguistic unit.</li>
+          <li>Below is a list of attributes (i.e., properties, fields) that a <code>Lexicon</code> object may contain. Other attributes are possible and allowed, but this specification does not require that applications support any attributes beyond the ones listed here. Attributes must be coded using the field name provided in this specification, e.g. using the form <code>"lang"</code>, as specified in this document, and not the full word <code>"language"</code>.</li>
+          <li>The <dfn>title</dfn> of each section of this document is the English name for an attribute, and the way in which this attribute is referred to in this and other documentation.</li>
+          <li>Each attribute is one of four types:
+            <ul>
+              <li><dfn>an object</dfn>, represented by <span class=object>curly braces</span></li>
+              <li><dfn>an array</dfn>, represented by <span class=array>square brackets</span></li>
+              <li><dfn>a text string</dfn>, represented by <span class=string>double quotes</span></li>
+              <li><dfn>a number</dfn>, represented by <span class=number>a number sign</span></li>
+            </ul>
+          </li>
+          <li>In some cases, an attribute may be of more than one type. For example, the <code>"definition"</code> attribute may contain either a single <span class=string>string</span>, such as <code>"definition": "a kind of small turtle"</code>, or an <span class=object>object</span> containing multiple strings, such as <code>"translation": { "en": "a kind of small turtle", "sp": "un tipo de tortuga pequeña" }</code>. In cases like this, both options are listed under separate subsections of the same attribute.</li>
+          <li>Attributes marked as <span class=required>required</span> must be included in their specified object, even if they contain no content. For example, every lexical entry must have a <code>"definition"</code> attribute, but the value of that attribute may be an empty string <code>""</code>.</li>
+          <li>Attributes marked as <span class=optional>optional</span> may be omitted if there is no data present, however applications must still be able to support this field in the cases where the data is present.</li>
+          <li>The <dfn>description</dfn> is a brief prose explanation of this particular attribute, along with any notes or special considerations regarding implementation.</li>
+          <li>The <dfn>field name</dfn> is way that this attribute should be represented in the actual JSON data. The field name is always provided in code with double quotes, e.g., <code>"token"</code>. It should never be abbreviated or otherwise represented differently.</li>
+          <li>If the data in a text field must be in a particular format or structured in a certain way, that format will be specified as a regular expression in the field named <dfn>Regular expression to match</dfn>.</li>
+          <li>If each of the items in a collection must be unique, the <dfn>unique items</dfn> property will be listed as <em>true</em>.</li>
+          <li>An <dfn>example</dfn> is provided for each attribute. In order to make the examples more visually understandable and save space, occasionally a JSON object will be given an abbreviated label, e.g. <code>{Lexical Entry}</code>.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <script src=js/lexiconSpec.js charset=utf-8></script>
+  <script src=js/spec.js charset=utf-8></script>
+</body>
+</html>
