@@ -1,8 +1,4 @@
-var textSpec = {
-  "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.github.io/spec/textPl.json",
-
-  "title": "Text",
+{
   "description": "The <dfn>text</dfn> is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. The DLX <code>Text</code> object consists minimally of a <code>\"title\"</code> and <code>\"phrases\"</code> array.",
   "type": "object",
   "required": ["participants", "phrases", "title"],
@@ -76,7 +72,7 @@ var textSpec = {
           "required": ["Orthography"],
           "patternProperties": {
             "^[(a-z)|(A-Z)|(0-9)]+$": { "title": "Orthography", "description": "The title of this text, in the particular orthography specified by the attribute. The field name is the name of the orthography.", "type": "string", "requireSelf": true }
-          },
+          }
         }
       ]
     },
@@ -373,4 +369,4 @@ var textSpec = {
       }
     }
   }
-};
+}

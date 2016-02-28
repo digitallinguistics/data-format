@@ -4,8 +4,8 @@ const jschemer = require('./jschemer/jschemer')({
   template: './jschemer/schema.hbs'
 });
 
-const textSchema = require('./spec/text');
-const lexiconSchema = require('./spec/text');
+const textSchema = require('./schemas/text');
+const lexiconSchema = require('./schemas/lexicon');
 
 const textHtml = jschemer.convert(textSchema);
 const lexiconHtml = jschemer.convert(lexiconSchema);

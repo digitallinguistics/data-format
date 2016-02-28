@@ -1,27 +1,32 @@
 const fs = require('fs');
 const hbs = require('handlebars');
+const markdown = require('markdown').markdown;
 
-const preprocess = obj => {
-  obj = JSON.parse(JSON.stringify(obj));
-  for (var prop in obj) {
+const preprocess = schema => {
+  schema = JSON.parse(JSON.stringify(schema));
+  for (var prop in schema) {
 
-    if (obj[prop] === 'patternProperties') {
-      for (var patt in obj[prop]) {
-        obj.prop[patt].pattern = patt;
+    if (prop === 'patternProperties') {
+      for (var patt in schema.patternProperties) {
+        schema.patternProperties[patt].pattern = patt;
+      }
+    } else if (prop === 'type') {
+      schema.type = Array.isArray(schema.type) ? schema.type : [schema.type];
+    } else if (prop === 'properties') {
+      for (var key in schema.properties) {
+        schema.properties[key].title = schema.properties[key].title || key;
+        schema.properties[key] = preprocess(schema.properties[key]);
       }
     }
 
-    if (typeof obj[prop] === 'boolean') {
-      obj[prop] = { boolean: obj[prop] };
-    } else if (obj[prop] instanceof Array) {
-      obj[prop].forEach(preprocess);
-    } else if (obj[prop] instanceof Object) {
-      obj.object = true;
-      preprocess(obj[prop]);
+    if (typeof schema[prop] === 'boolean') {
+      schema[prop] = { boolean: schema[prop] };
+    } else if (schema[prop] instanceof Object) {
+      schema.object = true;
     }
 
   }
-  return obj;
+  return schema;
 };
 
 /**
@@ -34,7 +39,12 @@ module.exports = config => {
 
   const template = fs.readFileSync(config.template || './schema.hbs', 'utf8');
   const converter = hbs.compile(template);
+
   hbs.registerPartial('schema', template);
+  hbs.registerHelper('md', function (text) {
+    const html = markdown.toHTML(text).replace(/^<p>/, '').replace(/<\/p>$/, '');
+    return new hbs.SafeString(html);
+  });
 
   return {
     convert: jschema => {

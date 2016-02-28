@@ -1,15 +1,31 @@
 <section class=schema>
 
+  {{#if title}}
+    <h1 class='title meta-prop'>{{title}}</h1>
+  {{/if}}
+
   {{#if $schema}}
     <p class='$schema prop'>Validate against: <a href={{schema}}>{{$schema}}</a></p>
   {{/if}}
 
   {{#if id}}
-    <p class='id prop'>Current context: <code>{{id}}</code></p>
+    <p class='id prop'>ID: <code>{{id}}</code></p>
+  {{/if}}
+
+  {{#if $ref}}
+    <p>An instance of the schema at <a href={{$ref}}>{{$ref}}</a></p>
   {{/if}}
 
   {{#if type}}
-    <p class='type prop'>Type: {{this}}</p>
+    <p class='type prop'>Type(s): {{#each type}}<code>{{this}}</code> {{/each}}</p>
+  {{/if}}
+
+  {{#if description}}
+    <p class='description meta-prop'>{{description}}</p>
+  {{/if}}
+
+  {{#if format}}
+    <p class='format meta-prop'>Format: {{format}}</p>
   {{/if}}
 
   {{#if multipleOf}}
@@ -64,9 +80,20 @@
     <p class='min-properties object-prop'>Min properties: <code>{{minProperties}}</code></p>
   {{/if}}
 
+  {{#if definitions}}
+    <div class='definitions prop'>
+      <h2>Definitions</h2>
+      <ul>
+        {{#each definitions}}
+          <li>{{> schema this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
   {{#if enum}}
     <div class='enum prop'>
-      <h2>Allowed Values (Enum)</h2>
+      <h2>Allowed Values (`enum`)</h2>
       <ul>
         {{#each enum}}
           {{> schema this}}
@@ -80,7 +107,7 @@
       <h2>Required</h2>
       <ul>
         {{#each required}}
-        <li>{{this}}</li>
+        <li><code>{{this}}</code></li>
         {{/each}}
       </ul>
     </div>
@@ -116,7 +143,7 @@
     <div class='additional-properties object-prop'>
       <h2>Additional Properties</h2>
       {{#if additionalProperties.boolean}}
-        <code>additionalProperties.boolean</code>
+        <code>{{additionalProperties.boolean}}</code>
       {{else}}
         {{> schema additionalProperties}}
       {{/if}}
@@ -153,6 +180,55 @@
           </li>
         {{/each}}
       </ul>
+    </div>
+  {{/if}}
+
+  {{#if allOf}}
+    <div class='all-of prop'>
+      <h2>All of these schemas must be matched (<code>allOf</code>)</h2>
+      <ul>
+        {{#each allOf}}
+          <li>
+            {{> schema this}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if anyOf}}
+    <div class='any-of prop'>
+      <h2>Any one or more of these schemas must be matched (<code>anyOf</code>)</h2>
+      <ul>
+        {{#each anyOf}}
+          <li>{{>schema this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if oneOf}}
+    <div class='one-of prop'>
+      <h2>Exactly one of these schemas must be matched(<code>oneOf</code>)</h2>
+      <ul>
+        {{#each oneOf}}
+          <li>{{> schema this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if not}}
+    <div class='not prop'>
+      <h2>Should not validate against this schema</h2>
+      {{> schema not}}
+    </div>
+  {{/if}}
+
+  {{#if default}}
+    <div class='default meta-prop'>
+      <h2>Default Value</h2>
+      <pre>{{default}}</pre>
     </div>
   {{/if}}
 

@@ -85,3 +85,5 @@ Other non-linguistic objects are given specifications as well:
 * media item (e.g. WAV, PDF, JPEG, etc.)
 * bundle (a collection of related items, typically pertaining to a single day elicitation session)
 * location (using the [GeoJSON](http://geojson.org/) format)
+* tags (for tagging instances of a phenomenon in a corpus)
+* notes (notes about a given linguistic object)

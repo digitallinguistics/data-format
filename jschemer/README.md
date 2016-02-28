@@ -29,6 +29,8 @@ JSchemer comes with a default CSS file, `jschemer.css`, which you can link into 
 </div>
 ```
 
+If you would prefer the properties of a schema to display in a different order, I recommend using CSS3 Flexbox's `order` property to change their order. Note that this must then be set on all the sibling elements as well.
+
 ## Notes
 * JSchemer assumes your JSON data is valid according to v4 of the JSON Schema specification. You should validate your JSON Schema data before running JSchemer.
 * [Default values for keywords]
