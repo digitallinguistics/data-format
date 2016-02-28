@@ -33,9 +33,7 @@
       "type": "array"
     },
 
-    "access": {
-      "type": "object"
-    },
+    "access": { "$ref": "http://spec.digitallinguistics.org/schemas/access#" },
 
     "discourseType": {
       "type": "string"
