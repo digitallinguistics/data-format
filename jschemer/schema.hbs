@@ -1,0 +1,63 @@
+<section class=schema>
+
+  {{#if $schema}}
+    <p class=$schema>Validate against: <a href={{schema}}>{{$schema}}</a></p>
+  {{/if}}
+
+  {{#if id}}
+    <p class=id>Current context: {{id}}</p>
+  {{/if}}
+
+  {{#if multipleOf}}
+    <p class='multipleOf numeric'>Multiple of: {{multipleOf}}</p>
+  {{/if}}
+
+  {{#if maximum}}
+    <p class='maximum numeric'>Maximum: {{maximum}}</p>
+  {{/if}}
+
+  {{#if exclusiveMaximum}}
+    <p class='exclusive-maximum numeric'>Exclusive maximum: {{exclusiveMaximum}}</p>
+  {{/if}}
+
+  {{#if minimum}}
+    <p class='minimum numeric'>Minimum: {{minimum}}</p>
+  {{/if}}
+
+  {{#if exclusiveMinimum}}
+    <p class='exclusive-minimum numeric'>Exclusive minumum: {{exclusiveMinimum}}</p>
+  {{/if}}
+
+  {{#if maxLength}}
+    <p class='maxLength string'>Max length: {{maxLength}}</p>
+  {{/if}}
+
+  {{#if minLength}}
+    <p class='minLength string'>Min length: {{minLength}}</p>
+  {{/if}}
+
+  {{#if pattern}}
+    <p class='pattern string'>Regular expression pattern: {{pattern}}</p>
+  {{/if}}
+
+  {{#if additionalItems}}
+    {{#if additionalItems.boolean}}
+      <p class=additional-items>Additional Items: {{additionalItems.boolean}}</p>
+    {{else}}
+      {{!-- Need some sort of HTML element here --}}
+      {{> schema additionalItems}}
+    {{/if}}
+  {{/if}}
+
+  {{!-- TODO: need some sort of HTML element for both of these --}}
+  {{#if items}}
+    {{#if items.object}}
+      {{> schema items}}
+    {{else}}
+      {{#each items}}
+        {{> schema items}}
+      {{/each}}
+    {{/if}}
+  {{/if}}
+
+</section>
