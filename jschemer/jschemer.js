@@ -5,7 +5,13 @@ const preprocess = obj => {
   obj = JSON.parse(JSON.stringify(obj));
   for (var prop in obj) {
 
-    if (obj[prop] === true || obj[prop] === false) {
+    if (obj[prop] === 'patternProperties') {
+      for (var patt in obj[prop]) {
+        obj.prop[patt].pattern = patt;
+      }
+    }
+
+    if (typeof obj[prop] === 'boolean') {
       obj[prop] = { boolean: obj[prop] };
     } else if (obj[prop] instanceof Array) {
       obj[prop].forEach(preprocess);

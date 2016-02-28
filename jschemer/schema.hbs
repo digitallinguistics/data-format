@@ -1,11 +1,15 @@
 <section class=schema>
 
   {{#if $schema}}
-    <p class=$schema>Validate against: <a href={{schema}}>{{$schema}}</a></p>
+    <p class='$schema prop'>Validate against: <a href={{schema}}>{{$schema}}</a></p>
   {{/if}}
 
   {{#if id}}
-    <p class=id>Current context: <code>{{id}}</code></p>
+    <p class='id prop'>Current context: <code>{{id}}</code></p>
+  {{/if}}
+
+  {{#if type}}
+    <p class='type prop'>Type: {{this}}</p>
   {{/if}}
 
   {{#if multipleOf}}
@@ -52,13 +56,41 @@
     <p class='unique-items array-prop'>Unique items: <code>{{uniqueItems.boolean}}</code></p>
   {{/if}}
 
-  
+  {{#if maxProperties}}
+    <p class='max-properties object-prop'>Max properties: <code>{{maxProperties}}</code></p>
+  {{/if}}
+
+  {{#if minProperties}}
+    <p class='min-properties object-prop'>Min properties: <code>{{minProperties}}</code></p>
+  {{/if}}
+
+  {{#if enum}}
+    <div class='enum prop'>
+      <h2>Allowed Values (Enum)</h2>
+      <ul>
+        {{#each enum}}
+          {{> schema this}}
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if required}}
+    <div class='required object-prop'>
+      <h2>Required</h2>
+      <ul>
+        {{#each required}}
+        <li>{{this}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
 
   {{#if additionalItems}}
     <div class='additional-items array-prop'>
       <h2>Additional Items</h2>
       {{#if additionalItems.boolean}}
-        <code>true</code>
+        <code>additionalItems.boolean</code>
       {{else}}
         {{> schema additionalItems}}
       {{/if}}
@@ -73,10 +105,54 @@
       {{else}}
         <ul>
           {{#each items}}
-            <li>{{> schema items}}</li>
+            <li>{{> schema this}}</li>
           {{/each}}
         </ul>
       {{/if}}
+    </div>
+  {{/if}}
+
+  {{#if additionalProperties}}
+    <div class='additional-properties object-prop'>
+      <h2>Additional Properties</h2>
+      {{#if additionalProperties.boolean}}
+        <code>additionalProperties.boolean</code>
+      {{else}}
+        {{> schema additionalProperties}}
+      {{/if}}
+    </div>
+  {{/if}}
+
+  {{#if properties}}
+    <div class='properties object-prop'>
+      <h2>Properties</h2>
+      <ul>
+        {{#each properties}}
+          <li class=property>{{> schema this}}</li>
+        {{/each}}
+        {{#if patternProperties}}
+          {{#each patternProperties}}
+            <li class=pattern-property>{{> schema this}}</li>
+          {{/each}}
+        {{/if}}
+      </ul>
+    </div>
+  {{/if}}
+
+  {{#if dependencies}}
+    <div class='dependencies object-prop'>
+      <h2>Dependencies</h2>
+      <ul>
+        {{#each dependencies}}
+          <li>
+            {{#if this.object}}
+              {{> schema this}}
+            {{else}}
+              {{this}}
+            {{/if}}
+          </li>
+        {{/each}}
+      </ul>
     </div>
   {{/if}}
 
