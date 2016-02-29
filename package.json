@@ -27,10 +27,11 @@
     }
   ],
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
-  "devDependencies": {
-    "handlebars": "^4.0.5"
+  "scripts": {
+    "start": "node build/convert.js"
   },
-  "dependencies": {
-    "markdown": "^0.5.0"
-  }
+  "devDependencies": {
+    "jschemer": "^0.1.1"
+  },
+  "dependencies": {}
 }

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://spec.digitallinguistics.org/schemas/text#",
+  "id": "http://spec.digitallinguistics.org/text#",
 
   "title": "Text",
   "type": "object",
@@ -37,7 +37,7 @@
       "type": "array",
       "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
       "default": [],
-      "items": { "$ref": "http://spec.digitallinguistics.org/schemas/phrase#" },
+      "items": { "$ref": "http://spec.digitallinguistics.org/phrase#" },
       "minItems": 1
     },
 
@@ -89,7 +89,7 @@
           "person": {
             "title": "Person",
             "description": "A DLx person object containing more detailed information about this person.",
-            "$ref": "http://spec.digitallinguistics.org/schemas/person#"
+            "$ref": "http://spec.digitallinguistics.org/person#"
           }
         },
         "default": {}
@@ -98,7 +98,7 @@
 
     "access": {
       "title": "Access Rights",
-      "$ref": "http://spec.digitallinguistics.org/schemas/access#"
+      "$ref": "http://spec.digitallinguistics.org/access#"
     },
 
     "discourseType": {
@@ -117,12 +117,12 @@
 
     "location": {
       "title": "Location",
-      "$ref": "http://spec.digitallinguistics.org/schemas/location#"
+      "$ref": "http://spec.digitallinguistics.org/location#"
     },
 
     "notes": {
       "title": "Notes",
-      "$ref": "http://spec.digitallinguistics.org/schemas/notes#",
+      "$ref": "http://spec.digitallinguistics.org/notes#",
       "default": {}
     },
 
@@ -153,12 +153,12 @@
       "type": "array",
       "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
       "default": [],
-      "items": { "$ref": "http://spec.digitallinguistics.org/schemas/media#" }
+      "items": { "$ref": "http://spec.digitallinguistics.org/media#" }
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://spec.digitallinguistics.org/schemas/tags#",
+      "$ref": "http://spec.digitallinguistics.org/tags#",
       "default": {}
     }
 
