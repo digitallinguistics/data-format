@@ -54,15 +54,15 @@
       "description": "An absolute URL where this text can be retrieved from. The URL does not have to be publicly accessible."
     },
 
-    "participants": {
-      "title": "Participants",
+    "contributors": {
+      "title": "Contributors",
       "type": "array",
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
       "default": [],
       "items": {
-        "title": "Participant",
+        "title": "Contributor",
         "type": "object",
-        "description": "A participant is any person who contributed to the creation or analysis of this text, including speakers, linguists, transcribers, recorders, etc.",
+        "description": "A contributor is any person who contributed to the creation or analysis of this text, including speakers, linguists, transcribers, recorders, etc.",
         "required": [
           "name",
           "role"
