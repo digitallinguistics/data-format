@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/text-0.1.0.json#",
+  "id": "http://digitallinguistics.org/schemas/text-0.1.1.json#",
 
   "title": "Text",
   "type": "object",
 
-  "description": "The Text is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc.",
+  "description": "A text is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc.",
 
   "required": [
     "phrases",
@@ -59,41 +59,7 @@
       "type": "array",
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
       "default": [],
-      "items": {
-        "title": "Contributor",
-        "type": "object",
-        "description": "A contributor is any person who contributed to the creation or analysis of this text, including speakers, linguists, transcribers, recorders, etc.",
-        "required": [
-          "name",
-          "role"
-        ],
-        "additionalProperties": true,
-        "properties": {
-          "name": {
-            "title": "Name",
-            "type": "string",
-            "description": "The name of this person. If the person is using a pseudonym in your data, you should use that pseudonym in this field.",
-            "minLength": 1
-          },
-          "role": {
-            "title": "Role",
-            "type": "string",
-            "description": "The role that this person played in this text, e.g. `speaker` or `recorder`.",
-            "minLength": 1
-          },
-          "abbreviation": {
-            "title": "Abbreviation",
-            "description": "An abbreviation for this person.",
-            "$ref": "#/definitions/abbrev"
-          },
-          "person": {
-            "title": "Person",
-            "description": "A DLx person object containing more detailed information about this person.",
-            "$ref": "http://digitallinguistics.org/schemas/person#"
-          }
-        },
-        "default": {}
-      }
+      "items": { "$ref": "http://digitallinguistics.org/schemas/contributor#" }
     },
 
     "access": {
@@ -171,6 +137,19 @@
       "description": "A human-readable abbreviation, containing on letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed).",
       "pattern": "^[(a-z)|(A-Z)|(0-9)]+$"
     }
+  },
+
+  "default": {
+    "title": {},
+    "phrases": [],
+    "abbrev": "",
+    "access": {},
+    "contributors": [],
+    "dateCreated": "(Date.now())",
+    "media": [],
+    "notes": {},
+    "tags": {},
+    "url": ""
   }
 
 }

@@ -1,11 +1,16 @@
-# TODO: Pick up at Senses in FLEx
-- also check out fields having to do with variants, variants of, minor entries, and allomorphs
-- then read through Svenson's lexicography book, and make a plan to read through the other lexicography books as well
-
 # Lexicon Schema
 - examples with ** allow for multiple orthographies
 - custom attributes are allowed at any level
-- notes fields are meant for the linguist, not publication
+- notes fields include a type:
+  - note-to-self
+  - general
+  - anthropological
+  - discourse
+  - encyclopedic
+  - grammatical
+  - phonological
+  - semantic
+  - sociocultural
 
 ## Types of Information in a Lexicon Entry
 - formal
@@ -31,11 +36,15 @@
 ## Entries (Lexemes)
 - bibliography / references
 - citation form**
+- examples
 - headword**
+- included in (lexeme, entry)
 - lemma (abstract representation)**
+- lexeme forms (if different from lemma)
 - lexical relations / cross references
 - morpheme type / (complex) form type
 - notes**
+- senses (optional for minor entries)
 - source(s)
 - status
 - tags
@@ -51,8 +60,10 @@
 - allomorphs**
 - bibliography / references
 - components
+- examples
 - form type (FLEx: stem name)
 - headword**
+- included in (lexeme, form)
 - lemma (abstract representation)**
 - lexical relations / cross references (???)
 - notes**
@@ -63,17 +74,29 @@
 - (confidence level)
 - (frequency)
 - (historical source(s))
+- (tone / tonal pattern)
+- (syllable structure / CV pattern)
 
 ### Senses
+- argument structure (how? ValPal style?)
 - bibliography / references
+- definition**
+- examples
+- gloss**
+- included in (lexeme, sense)
+- lexical category / part of speech || morphosyntactic distribution
+  - inflectional class
+  - derivational source / target class
 - lexical relations / cross-references
 - notes**
 - tags
 - source(s)
 - status
 - usages
+- variants || variant type + variant of
 - (anthropological category)
 - (confidence level)
 - (frequency)
+- (scientific name)
 - (semantic/academic domain)
 - (sense type)
