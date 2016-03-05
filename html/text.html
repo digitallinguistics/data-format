@@ -5,12 +5,12 @@
 
     <p class='$schema prop'>Validate against: <a href=>http://json-schema.org/schema#</a></p>
 
-    <p class='id prop'>ID: <code>http://spec.digitallinguistics.org/text#</code></p>
+    <p class='id prop'>ID: <code>http://digitallinguistics.org/schemas/text-0.1.1#</code></p>
 
 
     <p class='type prop'>Type(s): <code>object</code> </p>
 
-    <p class='description meta-prop'>The Text is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc.</p>
+    <p class='description meta-prop'>A text is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc.</p>
 
 
 
@@ -26,8 +26,26 @@
 
 
 
-    <div class='definitions prop'>
-      <h2>Definitions</h2>
+
+
+    <div class='required object-prop'>
+      <h2>Required</h2>
+      <ul>
+        <li><code>access</code></li>
+        <li><code>phrases</code></li>
+        <li><code>title</code></li>
+      </ul>
+    </div>
+
+
+
+    <div class='additional-properties object-prop'>
+      <h2>Additional Properties</h2>
+        <code>true</code>
+    </div>
+
+    <div class='properties object-prop'>
+      <h2>Properties</h2>
       <ul>
           <li><section class=schema>
 
@@ -36,12 +54,10 @@
 
 
 
-
-    <p class='type prop'>Type(s): </p>
-
-    <p class='description meta-prop'>A human-readable abbreviation, containing on letters <code>a-z</code>, <code>A-Z</code>, and numbers <code>0-9</code> (no spaces allowed).</p>
+    <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/abbreviation#>http://digitallinguistics.org/schemas/abbreviation#</a></p>
 
 
+    <p class='description meta-prop'>A human-readable abbreviation for this text, containing only letters <code>a-z</code>, <code>A-Z</code>, and numbers <code>0-9</code> (no spaces allowed).</p>
 
 
 
@@ -49,7 +65,8 @@
 
 
 
-    <p class='pattern string-prop'>Regular expression pattern: <code>^[(a-z)|(A-Z)|(0-9)]+$</code></p>
+
+
 
 
 
@@ -72,28 +89,818 @@
 
 </section>
 </li>
-      </ul>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Access Rights: <code>"access"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/access#>http://digitallinguistics.org/schemas/access#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Contributors: <code>"contributors"</code></h1>
+
+
+
+
+
+    <p class='type prop'>Type(s): <code>array</code> </p>
+
+    <p class='description meta-prop'>A collection of people who contributed to the creation or analysis of this text in some way.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='items array-prop'>
+      <h2>Items</h2>
+        <section class=schema>
+        
+        
+        
+        
+        
+            <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/contributor#>http://digitallinguistics.org/schemas/contributor#</a></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </section>
     </div>
 
 
-    <div class='required object-prop'>
-      <h2>Required</h2>
-      <ul>
-        <li><code>phrases</code></li>
-        <li><code>title</code></li>
-      </ul>
+
+
+
+
+
+
+
+    <div class='default meta-prop'>
+      <h2>Default Value</h2>
+      <pre>[]</pre>
+    </div>
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Date Created: <code>"dateCreated"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://schema.org/dateCreated#>http://schema.org/dateCreated#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Date Modified: <code>"dateModified"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://schema.org/dateModified#>http://schema.org/dateModified#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Date Recorded: <code>"dateRecorded"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://schema.org/dateRecorded#>http://schema.org/dateRecorded#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Discourse Type: <code>"discourseType"</code></h1>
+
+
+
+
+
+    <p class='type prop'>Type(s): <code>string</code> </p>
+
+    <p class='description meta-prop'>The type of discourse event, e.g. monologue, dialogue, or song.</p>
+
+
+
+
+
+
+
+
+    <p class='minLength string-prop'>Min length: <code>1</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Genre: <code>"genre"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://schema.org/genre#>http://schema.org/genre#</a></p>
+
+    <p class='type prop'>Type(s): <code>string</code> </p>
+
+    <p class='description meta-prop'>The genre of the text, e.g. folktale, personal narrative, or expository.</p>
+
+
+
+
+
+
+
+
+    <p class='minLength string-prop'>Min length: <code>1</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Location: <code>"location"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://schema.org/location#>http://schema.org/location#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Media: <code>"media"</code></h1>
+
+
+
+
+
+    <p class='type prop'>Type(s): <code>array</code> </p>
+
+    <p class='description meta-prop'>An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='items array-prop'>
+      <h2>Items</h2>
+        <section class=schema>
+        
+        
+        
+        
+        
+            <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/media#>http://digitallinguistics.org/schemas/media#</a></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </section>
     </div>
 
 
 
-    <div class='additional-properties object-prop'>
-      <h2>Additional Properties</h2>
-        <code>true</code>
+
+
+
+
+
+
+    <div class='default meta-prop'>
+      <h2>Default Value</h2>
+      <pre>[]</pre>
     </div>
 
-    <div class='properties object-prop'>
-      <h2>Properties</h2>
-      <ul>
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Notes: <code>"notes"</code></h1>
+
+
+
+
+
+    <p class='type prop'>Type(s): <code>array</code> </p>
+
+    <p class='description meta-prop'>A collection of notes about this text.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+    <p class='unique-items array-prop'>Unique items: <code>true</code></p>
+
+
+
+
+
+
+
+    <div class='items array-prop'>
+      <h2>Items</h2>
+        <section class=schema>
+        
+        
+        
+        
+        
+            <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/note#>http://digitallinguistics.org/schemas/note#</a></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Phrases: <code>"phrases"</code></h1>
+
+
+
+
+
+    <p class='type prop'>Type(s): <code>array</code> </p>
+
+    <p class='description meta-prop'>A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do <em>not</em> have to be unique - a phrase may be repeated in a text, for example.,</p>
+
+
+
+
+
+
+
+
+
+
+
+    <p class='min-items array-prop'>Min items: <code>1</code></p>
+
+
+
+
+
+
+
+
+    <div class='items array-prop'>
+      <h2>Items</h2>
+        <section class=schema>
+        
+        
+        
+        
+        
+            <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/phrase#>http://digitallinguistics.org/schemas/phrase#</a></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class='default meta-prop'>
+      <h2>Default Value</h2>
+      <pre>[]</pre>
+    </div>
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>References: <code>"references"</code></h1>
+
+
+
+
+
+    <p class='type prop'>Type(s): <code>array</code> </p>
+
+    <p class='description meta-prop'>A list of any bibliographic references concerning or relating to this text.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='items array-prop'>
+      <h2>Items</h2>
+        <section class=schema>
+        
+        
+        
+        
+        
+            <p>An instance of the schema at <a href=http://schema.org/CreativeWork#>http://schema.org/CreativeWork#</a></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        </section>
+    </div>
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Status: <code>"status"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/status#>http://digitallinguistics.org/schemas/status#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+          <li><section class=schema>
+
+    <h1 class='title meta-prop'>Tags: <code>"tags"</code></h1>
+
+
+
+
+    <p>An instance of the schema at <a href=http://digitallinguistics.org/schemas/tags#>http://digitallinguistics.org/schemas/tags#</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class='default meta-prop'>
+      <h2>Default Value</h2>
+      <pre>{}</pre>
+    </div>
+
+</section>
+</li>
           <li><section class=schema>
 
     <h1 class='title meta-prop'>Title: <code>"title"</code></h1>
@@ -192,148 +999,15 @@
 </li>
           <li><section class=schema>
 
-    <h1 class='title meta-prop'>Phrases: <code>"phrases"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>array</code> </p>
-
-    <p class='description meta-prop'>A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do <em>not</em> have to be unique - a phrase may be repeated in a text, for example.,</p>
-
-
-
-
-
-
-
-
-
-
-
-    <p class='min-items array-prop'>Min items: <code>1</code></p>
-
-
-
-
-
-
-
-
-    <div class='items array-prop'>
-      <h2>Items</h2>
-        <section class=schema>
-        
-        
-        
-        
-        
-            <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/phrase#>http://spec.digitallinguistics.org/phrase#</a></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </section>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class='default meta-prop'>
-      <h2>Default Value</h2>
-      <pre>[]</pre>
-    </div>
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Abbreviation: <code>"abbrev"</code></h1>
-
-
-
-
-    <p>An instance of the schema at <a href=#/definitions/abbrev>#/definitions/abbrev</a></p>
-
-
-    <p class='description meta-prop'>A human-readable abbreviation for this text, containing only letters <code>a-z</code>, <code>A-Z</code>, and numbers <code>0-9</code> (no spaces allowed).</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
     <h1 class='title meta-prop'>URL: <code>"url"</code></h1>
 
 
 
 
+    <p>An instance of the schema at <a href=http://schema.org/url#>http://schema.org/url#</a></p>
 
-    <p class='type prop'>Type(s): <code>string</code> </p>
 
-    <p class='description meta-prop'>An absolute URL where this text can be retrieved from. The URL does not have to be publicly accessible.</p>
 
-    <p class='format meta-prop'>Format: uri</p>
 
 
 
@@ -361,802 +1035,6 @@
 
 
 
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Participants: <code>"participants"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>array</code> </p>
-
-    <p class='description meta-prop'>A collection of people who contributed to the creation or analysis of this text in some way.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='items array-prop'>
-      <h2>Items</h2>
-        <section class=schema>
-        
-            <h1 class='title meta-prop'>Participant: <code>"participants"</code></h1>
-        
-        
-        
-        
-        
-            <p class='type prop'>Type(s): </p>
-        
-            <p class='description meta-prop'>A participant is any person who contributed to the creation or analysis of this text, including speakers, linguists, transcribers, recorders, etc.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            <div class='required object-prop'>
-              <h2>Required</h2>
-              <ul>
-                <li><code>name</code></li>
-                <li><code>role</code></li>
-              </ul>
-            </div>
-        
-        
-        
-            <div class='additional-properties object-prop'>
-              <h2>Additional Properties</h2>
-                <section class=schema>
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                </section>
-            </div>
-        
-            <div class='properties object-prop'>
-              <h2>Properties</h2>
-              <ul>
-                  <li><section class=schema>
-        
-            <h1 class='title meta-prop'>Name: <code>"name"</code></h1>
-        
-        
-        
-        
-        
-            <p class='type prop'>Type(s): </p>
-        
-            <p class='description meta-prop'>The name of this person. If the person is using a pseudonym in your data, you should use that pseudonym in this field.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-            <p class='minLength string-prop'>Min length: <code>1</code></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </section>
-        </li>
-                  <li><section class=schema>
-        
-            <h1 class='title meta-prop'>Role: <code>"role"</code></h1>
-        
-        
-        
-        
-        
-            <p class='type prop'>Type(s): </p>
-        
-            <p class='description meta-prop'>The role that this person played in this text, e.g. <code>speaker</code> or <code>recorder</code>.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-            <p class='minLength string-prop'>Min length: <code>1</code></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </section>
-        </li>
-                  <li><section class=schema>
-        
-            <h1 class='title meta-prop'>Abbreviation: <code>"abbreviation"</code></h1>
-        
-        
-        
-        
-            <p>An instance of the schema at <a href=#/definitions/abbrev>#/definitions/abbrev</a></p>
-        
-        
-            <p class='description meta-prop'>An abbreviation for this person.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </section>
-        </li>
-                  <li><section class=schema>
-        
-            <h1 class='title meta-prop'>Person: <code>"person"</code></h1>
-        
-        
-        
-        
-            <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/person#>http://spec.digitallinguistics.org/person#</a></p>
-        
-        
-            <p class='description meta-prop'>A DLx person object containing more detailed information about this person.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </section>
-        </li>
-              </ul>
-            </div>
-        
-        
-        
-        
-        
-        
-        
-            <div class='default meta-prop'>
-              <h2>Default Value</h2>
-              <pre>[object Object]</pre>
-            </div>
-        
-        </section>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class='default meta-prop'>
-      <h2>Default Value</h2>
-      <pre>[]</pre>
-    </div>
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Access Rights: <code>"access"</code></h1>
-
-
-
-
-    <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/access#>http://spec.digitallinguistics.org/access#</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Discourse Type: <code>"discourseType"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>string</code> </p>
-
-    <p class='description meta-prop'>The type of discourse event, e.g. monologue, dialogue, or song.</p>
-
-
-
-
-
-
-
-
-    <p class='minLength string-prop'>Min length: <code>1</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Genre: <code>"genre"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>string</code> </p>
-
-    <p class='description meta-prop'>The genre of the text, e.g. folktale, personal narrative, or expository.</p>
-
-
-
-
-
-
-
-
-    <p class='minLength string-prop'>Min length: <code>1</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Location: <code>"location"</code></h1>
-
-
-
-
-    <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/location#>http://spec.digitallinguistics.org/location#</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Notes: <code>"notes"</code></h1>
-
-
-
-
-    <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/notes#>http://spec.digitallinguistics.org/notes#</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='default meta-prop'>
-      <h2>Default Value</h2>
-      <pre>{}</pre>
-    </div>
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Date Created: <code>"dateCreated"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>string</code> </p>
-
-    <p class='description meta-prop'>The date (and optionally time) that this text object was created, in <a href="http://tools.ietf.org/html/rfc3339">internet date-time format</a>. This should <strong>not</strong> be used for the date the text was recorded (see the <code>dateRecorded</code> property instead). Applications should supply today&#39;s date as the default if the <code>dateCreated</code> field is empty.</p>
-
-    <p class='format meta-prop'>Format: date-time</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='default meta-prop'>
-      <h2>Default Value</h2>
-      <pre>&quot;(today&#x27;s date)&quot;</pre>
-    </div>
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Date Modified: <code>"dateModified"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>string</code> </p>
-
-    <p class='description meta-prop'>The date (and optionally time) that this text was last updated, in <a href="http://tools.ietf.org/html/rfc3339">internet date-time format</a>.</p>
-
-    <p class='format meta-prop'>Format: date-time</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Date Recorded: <code>"dateRecorded"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>string</code> </p>
-
-    <p class='description meta-prop'>The date (and optionally time) that this text was recorded, in <a href="http://tools.ietf.org/html/rfc3339">internet date-time format</a>.</p>
-
-    <p class='format meta-prop'>Format: date-time</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Media: <code>"media"</code></h1>
-
-
-
-
-
-    <p class='type prop'>Type(s): <code>array</code> </p>
-
-    <p class='description meta-prop'>An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='items array-prop'>
-      <h2>Items</h2>
-        <section class=schema>
-        
-        
-        
-        
-        
-            <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/media#>http://spec.digitallinguistics.org/media#</a></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        </section>
-    </div>
-
-
-
-
-
-
-
-
-
-    <div class='default meta-prop'>
-      <h2>Default Value</h2>
-      <pre>[]</pre>
-    </div>
-
-</section>
-</li>
-          <li><section class=schema>
-
-    <h1 class='title meta-prop'>Tags: <code>"tags"</code></h1>
-
-
-
-
-    <p>An instance of the schema at <a href=http://spec.digitallinguistics.org/tags#>http://spec.digitallinguistics.org/tags#</a></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class='default meta-prop'>
-      <h2>Default Value</h2>
-      <pre>{}</pre>
-    </div>
 
 </section>
 </li>
@@ -1169,5 +1047,20 @@
 
 
 
+    <div class='default meta-prop'>
+      <h2>Default Value</h2>
+      <pre>{
+  &quot;title&quot;: {},
+  &quot;phrases&quot;: [],
+  &quot;abbrev&quot;: &quot;&quot;,
+  &quot;access&quot;: {},
+  &quot;contributors&quot;: [],
+  &quot;dateCreated&quot;: &quot;(Date.now())&quot;,
+  &quot;media&quot;: [],
+  &quot;notes&quot;: {},
+  &quot;tags&quot;: {},
+  &quot;url&quot;: &quot;&quot;
+}</pre>
+    </div>
 
 </section>
