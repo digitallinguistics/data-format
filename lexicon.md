@@ -4,19 +4,18 @@
 
 ## Metadata
 [X] access rights
-[ ] contributors
-[ ] date created
-[ ] date modified
-[ ] lexicon entries
-[ ] name
-[ ] notes**
-[ ] language
-[ ] orthographies
-[ ] references / bibliography
-[ ] tags
-[ ] url
+[X] contributors
+[X] date created
+[X] date modified
+[X] language
+[X] lexemes
+[X] name
+[X] notes**
+[X] references / bibliography
+[X] tags
+[X] url
 
-## Entries (Lexemes)
+## Lexemes (Lexicon Entries)
 [ ] citation form**
 [ ] examples
 [ ] headword**

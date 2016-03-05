@@ -76,7 +76,7 @@ The DLx project provides recommendations for how to format linguistic data in JS
 * [phrase](http://digitallinguistics.github.io/dlx-spec/phrase.html)
 * [word](http://digitallinguistics.github.io/dlx-spec/word.html)
 * [lexicon](http://digitallinguistics.github.io/dlx-spec/lexicon.html)
-* [lexicon entry](http://digitallinguistics.github.io/dlx-spec/lexEntry.html)
+* [lexeme](http://digitallinguistics.github.io/dlx-spec/lexeme.html)
 
 Other non-linguistic objects are given specifications as well:
 
