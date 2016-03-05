@@ -28,7 +28,7 @@
   ],
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "scripts": {
-    "start": "node build/convert.js"
+    "start": "node convert.js"
   },
   "devDependencies": {
     "jschemer": "^0.1.1"
