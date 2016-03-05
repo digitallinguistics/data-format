@@ -68,27 +68,45 @@ JSON format is incredibly easy to learn. It consists of just a few simple rules:
 
 Another great feature of JSON is that adding new properties to an Object doesn't change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you've transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data *format* just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called `"startTime"` and `"endTime"` to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting, because the data hasn't been altered, just extended. The underlying format is all the same.
 
+## Schemas
+
+### Linguistic Schemas
 The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification.
 
 * [language](http://digitallinguistics.github.io/dlx-spec/language.html)
-* [orthography](http://digitallinguistics.github.io/dlx-spec/orthography.html)
-* [text](http://digitallinguistics.github.io/dlx-spec/text.html)
-* [phrase](http://digitallinguistics.github.io/dlx-spec/phrase.html)
-* [word](http://digitallinguistics.github.io/dlx-spec/word.html)
-* [lexicon](http://digitallinguistics.github.io/dlx-spec/lexicon.html)
 * [lexeme](http://digitallinguistics.github.io/dlx-spec/lexeme.html)
+* [lexicon](http://digitallinguistics.github.io/dlx-spec/lexicon.html)
+* [orthography](http://digitallinguistics.github.io/dlx-spec/orthography.html)
+* [phrase](http://digitallinguistics.github.io/dlx-spec/phrase.html)
+* [text](http://digitallinguistics.github.io/dlx-spec/text.html)
+* [word](http://digitallinguistics.github.io/dlx-spec/word.html)
 
+### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well:
 
-* access rights (who should be allowed to access the given piece of data)
-* project (e.g. Comparative Mixtec Dialectology, Documenting Ékegusií Folktales, etc.)
-* person (e.g. speaker, transcriber, linguist, etc.)
-* media item (e.g. WAV, PDF, JPEG, etc.)
-* bundle (a collection of related items, typically pertaining to a single day elicitation session)
-* location (using the [GeoJSON](http://geojson.org/) format)
-* tags (for tagging instances of a phenomenon in a corpus)
-* notes (notes about a given linguistic object)
-* and many others ...
+Schema         | Description
+-------------- | -----------
+[`abbreviation`][1] | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
+[`access`][2]       | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
+[`bundle`][3]       | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
+[`contributor`][4]  | Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of `speaker` specified.
+[`dateCreated`][10] | The date a database resource was created (*not* the date the item was recorded).
+[`media`][5]        | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
+[`note`][6]         | Most DLx resources allow you to add notes in different languages, of different types.
+[`person`][7]       | Information about a person, e.g. speaker, linguist, editor, translator, etc.
+[`project`][8]      | Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.
+[`tags`][9]         | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
+
+[1]:  http://digitallinguistics.github.io/dlx-spec/abbreviation.html
+[2]:  http://digitallinguistics.github.io/dlx-spec/access.html
+[3]:  http://digitallinguistics.github.io/dlx-spec/bundle.html
+[4]:  http://digitallinguistics.github.io/dlx-spec/contributor.html
+[5]:  http://digitallinguistics.github.io/dlx-spec/media.html
+[6]:  http://digitallinguistics.github.io/dlx-spec/note.html
+[7]:  http://digitallinguistics.github.io/dlx-spec/person.html
+[8]:  http://digitallinguistics.github.io/dlx-spec/project.html
+[9]:  http://digitallinguistics.github.io/dlx-spec/tags.html
+[10]: http://digitallinguistics.github.io/dlx-spec/dateCreated.html
 
 ## Technical Notes
 - JSON

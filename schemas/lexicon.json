@@ -30,7 +30,7 @@
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://schema.org/dateCreated#",
+      "$ref": "http://digitallinguistics.org/schemas/dateCreated#",
       "default": ""
     },
 
