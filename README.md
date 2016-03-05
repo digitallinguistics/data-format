@@ -1,4 +1,4 @@
-# The DLx Data Format
+# The DLx Data Formats
 
 ## Introduction
 There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as `"lang"` or `"language"`?
@@ -82,7 +82,7 @@ The DLx project provides recommendations for how to format linguistic data in JS
 * [word](http://digitallinguistics.github.io/dlx-spec/word.html)
 
 ### Non-Linguistic Schemas
-Other non-linguistic objects are given specifications as well:
+Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
 
 Schema         | Description
 -------------- | -----------
