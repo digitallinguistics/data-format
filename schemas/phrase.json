@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/phrase-0.1.0.json#",
+
+  "title": "Phrase"
+}

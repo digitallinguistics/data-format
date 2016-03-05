@@ -1,0 +1,153 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/text-0.1.1#",
+
+  "title": "Text",
+  "type": "object",
+
+  "description": "A text is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc.",
+
+  "required": [
+    "access",
+    "phrases",
+    "title"
+  ],
+
+  "additionalProperties": true,
+
+  "properties": {
+
+    "abbrev": {
+      "title": "Abbreviation",
+      "$ref": "http://digitallinguistics.org/schemas/abbreviation#",
+      "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."
+    },
+
+    "access": {
+      "title": "Access Rights",
+      "$ref": "http://digitallinguistics.org/schemas/access#"
+    },
+
+    "contributors": {
+      "title": "Contributors",
+      "type": "array",
+      "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
+      "default": [],
+      "items": { "$ref": "http://digitallinguistics.org/schemas/contributor#" }
+    },
+
+    "dateCreated": {
+      "title": "Date Created",
+      "$ref": "http://digitallinguistics.org/schemas/dateCreated#"
+    },
+
+    "dateModified": {
+      "title": "Date Modified",
+      "$ref": "http://schema.org/dateModified#"
+    },
+
+    "dateRecorded": {
+      "title": "Date Recorded",
+      "$ref": "http://schema.org/dateRecorded#"
+    },
+
+    "discourseType": {
+      "title": "Discourse Type",
+      "type": "string",
+      "description": "The type of discourse event, e.g. monologue, dialogue, or song.",
+      "minLength": 1
+    },
+
+    "genre": {
+      "title": "Genre",
+      "type": "string",
+      "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
+      "minLength": 1,
+      "$ref": "http://schema.org/genre#"
+    },
+
+    "location": {
+      "title": "Location",
+      "$ref": "http://schema.org/location#"
+    },
+
+    "media": {
+      "title": "Media",
+      "type": "array",
+      "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
+      "default": [],
+      "items": { "$ref": "http://digitallinguistics.org/schemas/media#" }
+    },
+
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "description": "A collection of notes about this text.",
+      "uniqueItems": true,
+      "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+    },
+
+    "phrases": {
+      "title": "Phrases",
+      "type": "array",
+      "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
+      "default": [],
+      "items": { "$ref": "http://digitallinguistics.org/schemas/phrase#" },
+      "minItems": 1
+    },
+
+    "references": {
+      "title": "References",
+      "type": "array",
+      "description": "A list of any bibliographic references concerning or relating to this text.",
+      "items": { "$ref": "http://schema.org/CreativeWork#" }
+    },
+
+    "status": {
+      "title": "Status",
+      "$ref": "http://digitallinguistics.org/schemas/status#"
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "http://digitallinguistics.org/schemas/tags#",
+      "default": {}
+    },
+
+    "title": {
+      "title": "Title",
+      "type": "object",
+      "description": "A title is a human-readable prose description of the content of the text. The `title` object contains all the titles of the text, in one or more orthographies. Each attribute in the `title` object should be the abbreviation of an orthography, and its value should be the title of the text, in that orthography.",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[(a-z)|(A-Z)|(0-9)]+$": {
+          "title": "Transcription",
+          "type": "string",
+          "description": "A transcription of the title, in the orthography specified by the field's attribute name.",
+          "minLength": 1,
+          "default": ""
+        }
+      }
+    },
+
+    "url": {
+      "title": "URL",
+      "$ref": "http://schema.org/url#"
+    }
+
+  },
+
+  "default": {
+    "title": {},
+    "phrases": [],
+    "abbrev": "",
+    "access": {},
+    "contributors": [],
+    "dateCreated": "(Date.now())",
+    "media": [],
+    "notes": {},
+    "tags": {},
+    "url": ""
+  }
+
+}

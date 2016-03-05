@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/status-1.0.0.json#",
+  "title": "Status",
+  "type": "string",
+  "description": "The status of this item, usually in terms of the linguist's workflow. Some examples might include `transcribed`, `confirmed`, or `needs reeliciting`."
+}

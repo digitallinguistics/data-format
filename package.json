@@ -1,0 +1,37 @@
+{
+  "name": "dlx-spec",
+  "version": "0.1.0",
+  "description": "The DLx specification for formatting linguistic data in JSON.",
+  "keywords": [
+    "DLx",
+    "Digital Linguistics",
+    "JSON",
+    "linguistics",
+    "UCSB",
+    "University of California Santa Barbara"
+  ],
+  "homepage": "https://github.com/digitallinguistics/dlx-spec#readme",
+  "bugs": "https://github.com/digitallinguistics/dlx-spec/issues",
+  "license": "MIT",
+  "contributors": [
+    {
+      "name": "Daniel W. Hieber",
+      "url": "http://danielhieber.com"
+    },
+    {
+      "name": "Patrick J. Hall"
+    },
+    {
+      "name": "John Mangel",
+      "url": "http://jmangel.github.io"
+    }
+  ],
+  "repository": "https://github.com/digitallinguistics/dlx-spec.git",
+  "scripts": {
+    "start": "node build/convert.js"
+  },
+  "devDependencies": {
+    "jschemer": "^0.1.1"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,10 @@
+- notes fields include a type:
+  - note-to-self
+  - general
+  - anthropological
+  - discourse
+  - encyclopedic
+  - grammatical
+  - phonological
+  - semantic
+  - sociocultural
