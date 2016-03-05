@@ -1,4 +1,7 @@
 {
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/contributor-0.1.0.json#",
+
   "title": "Contributor",
   "type": "object",
   "description": "A contributor is any person who contributed to the creation or analysis of this text, including speakers, linguists, transcribers, recorders, etc.",
@@ -7,29 +10,37 @@
     "role"
   ],
   "additionalProperties": true,
+
   "properties": {
+
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "An abbreviation for this person.",
+      "$ref": "http://digitallinguistics.org/schemas/abbreviation#"
+    },
+
     "name": {
       "title": "Name",
       "type": "string",
       "description": "The name of this person. If the person is using a pseudonym in your data, you should use that pseudonym in this field.",
       "minLength": 1
     },
+
     "role": {
       "title": "Role",
       "type": "string",
       "description": "The role that this person played in this text, e.g. `speaker` or `recorder`.",
       "minLength": 1
     },
-    "abbreviation": {
-      "title": "Abbreviation",
-      "description": "An abbreviation for this person.",
-      "$ref": "#/definitions/abbrev"
-    },
+
     "person": {
       "title": "Person",
       "description": "A DLx person object containing more detailed information about this person.",
       "$ref": "http://digitallinguistics.org/schemas/person#"
     }
+
   },
+
   "default": {}
+
 }

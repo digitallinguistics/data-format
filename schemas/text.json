@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/text-0.1.1.json#",
+  "id": "http://digitallinguistics.org/schemas/text-0.1.1#",
 
   "title": "Text",
   "type": "object",
@@ -15,6 +15,102 @@
   "additionalProperties": true,
 
   "properties": {
+
+    "abbrev": {
+      "title": "Abbreviation",
+      "$ref": "http://digitallinguistics.org/schemas/abbreviation#",
+      "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."
+    },
+
+    "access": {
+      "title": "Access Rights",
+      "$ref": "http://digitallinguistics.org/schemas/access#"
+    },
+
+    "contributors": {
+      "title": "Contributors",
+      "type": "array",
+      "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
+      "default": [],
+      "items": { "$ref": "http://digitallinguistics.org/schemas/contributor#" }
+    },
+
+    "dateCreated": {
+      "title": "Date Created",
+      "$ref": "http://schema.org/dateCreated#"
+    },
+
+    "dateModified": {
+      "title": "Date Modified",
+      "$ref": "http://schema.org/dateModified#"
+    },
+
+    "dateRecorded": {
+      "title": "Date Recorded",
+      "$ref": "http://schema.org/dateRecorded#"
+    },
+
+    "discourseType": {
+      "title": "Discourse Type",
+      "type": "string",
+      "description": "The type of discourse event, e.g. monologue, dialogue, or song.",
+      "minLength": 1
+    },
+
+    "genre": {
+      "title": "Genre",
+      "type": "string",
+      "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
+      "minLength": 1,
+      "$ref": "http://schema.org/genre#"
+    },
+
+    "location": {
+      "title": "Location",
+      "$ref": "http://schema.org/location#"
+    },
+
+    "media": {
+      "title": "Media",
+      "type": "array",
+      "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
+      "default": [],
+      "items": { "$ref": "http://digitallinguistics.org/schemas/media#" }
+    },
+
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+    },
+
+    "phrases": {
+      "title": "Phrases",
+      "type": "array",
+      "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
+      "default": [],
+      "items": { "$ref": "http://digitallinguistics.org/schemas/phrase#" },
+      "minItems": 1
+    },
+
+    "references": {
+      "title": "References",
+      "type": "array",
+      "description": "A list of any bibliographic references concerning or relating to this text.",
+      "items": { "$ref": "http://schema.org/CreativeWork#" }
+    },
+
+    "status": {
+      "title": "Status",
+      "$ref": "http://digitallinguistics.org/schemas/status#"
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "http://digitallinguistics.org/schemas/tags#",
+      "default": {}
+    },
 
     "title": {
       "title": "Title",
@@ -32,111 +128,11 @@
       }
     },
 
-    "phrases": {
-      "title": "Phrases",
-      "type": "array",
-      "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
-      "default": [],
-      "items": { "$ref": "http://digitallinguistics.org/schemas/phrase#" },
-      "minItems": 1
-    },
-
-    "abbrev": {
-      "title": "Abbreviation",
-      "$ref": "#/definitions/abbrev",
-      "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."
-    },
-
     "url": {
       "title": "URL",
-      "type": "string",
-      "format": "uri",
-      "description": "An absolute URL where this text can be retrieved from. The URL does not have to be publicly accessible."
-    },
-
-    "contributors": {
-      "title": "Contributors",
-      "type": "array",
-      "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
-      "default": [],
-      "items": { "$ref": "http://digitallinguistics.org/schemas/contributor#" }
-    },
-
-    "access": {
-      "title": "Access Rights",
-      "$ref": "http://digitallinguistics.org/schemas/access#"
-    },
-
-    "discourseType": {
-      "title": "Discourse Type",
-      "type": "string",
-      "description": "The type of discourse event, e.g. monologue, dialogue, or song.",
-      "minLength": 1
-    },
-
-    "genre": {
-      "title": "Genre",
-      "type": "string",
-      "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
-      "minLength": 1
-    },
-
-    "location": {
-      "title": "Location",
-      "$ref": "http://digitallinguistics.org/schemas/location#"
-    },
-
-    "notes": {
-      "title": "Notes",
-      "$ref": "http://digitallinguistics.org/schemas/notes#",
-      "default": {}
-    },
-
-    "dateCreated": {
-      "title": "Date Created",
-      "type": "string",
-      "format": "date-time",
-      "description": "The date (and optionally time) that this text object was created, in [internet date-time format](http://tools.ietf.org/html/rfc3339). This should **not** be used for the date the text was recorded (see the `dateRecorded` property instead). Applications should supply today's date as the default if the `dateCreated` field is empty.",
-      "default": "(today's date)"
-    },
-
-    "dateModified": {
-      "title": "Date Modified",
-      "type": "string",
-      "format": "date-time",
-      "description": "The date (and optionally time) that this text was last updated, in [internet date-time format](http://tools.ietf.org/html/rfc3339)."
-    },
-
-    "dateRecorded": {
-      "title": "Date Recorded",
-      "type": "string",
-      "format": "date-time",
-      "description": "The date (and optionally time) that this text was recorded, in [internet date-time format](http://tools.ietf.org/html/rfc3339)."
-    },
-
-    "media": {
-      "title": "Media",
-      "type": "array",
-      "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
-      "default": [],
-      "items": { "$ref": "http://digitallinguistics.org/schemas/media#" }
-    },
-
-    "tags": {
-      "title": "Tags",
-      "$ref": "http://digitallinguistics.org/schemas/tags#",
-      "default": {}
+      "$ref": "http://schema.org/url#"
     }
 
-  },
-
-  "definitions": {
-    "abbrev": {
-      "title": "Abbreviation",
-      "type": "string",
-      "description": "A human-readable abbreviation, containing on letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed).",
-      "pattern": "^[(a-z)|(A-Z)|(0-9)]+$"
-    }
   },
 
   "default": {

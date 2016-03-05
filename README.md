@@ -88,3 +88,9 @@ Other non-linguistic objects are given specifications as well:
 * location (using the [GeoJSON](http://geojson.org/) format)
 * tags (for tagging instances of a phenomenon in a corpus)
 * notes (notes about a given linguistic object)
+* and many others ...
+
+## Technical Notes
+- JSON
+- JSON Schema
+- JSON-LD
