@@ -3,7 +3,7 @@
   "id": "http://digitallinguistics.org/schemas/note-1.0.0.json#",
 
   "title": "Note",
-  "description": "A note about this resource. Notes may also include <code>\"type\"</code> and <code>\"language\"</code> attributes.",
+  "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
   "type": "object",
   "additionalProperties": false,
   "required": ["note"],

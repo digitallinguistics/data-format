@@ -1,0 +1,11 @@
+{
+  "curly": true,
+  "devel": true,
+  "esnext": true,
+  "node": true,
+  "nonbsp": true,
+  "undef": true,
+  "unused": true,
+  "predef": [],
+  "globals": {}
+}

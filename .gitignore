@@ -193,7 +193,6 @@ $RECYCLE.BIN/
 *.egg
 *.egg-info
 dist/
-build/
 eggs/
 parts/
 var/
@@ -215,4 +214,4 @@ pip-log.txt
 .mr.developer.cfg
 
 node_modules/
-.jshintrc
+credentials.js.jshintrc
