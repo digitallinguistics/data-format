@@ -1,6 +1,43 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/note-0.1.0.json#",
+  "id": "http://digitallinguistics.org/schemas/note-1.0.0.json#",
 
-  "title": "Note"
+  "title": "Note",
+  "description": "A note about this resource. Notes may also include <code>\"type\"</code> and <code>\"language\"</code> attributes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["note"],
+
+  "properties": {
+
+    "type": {
+      "title": "Note Type",
+      "description": "The type of note.",
+      "type": "string",
+      "enum": [
+        "note-to-self",
+        "general",
+        "anthropological",
+        "discourse",
+        "encyclopedic",
+        "grammar",
+        "phonology",
+        "semantics",
+        "sociocultural"
+      ]
+    },
+
+    "note": {
+      "title": "Note Text",
+      "description": "The text of the note itself.",
+      "type": "string"
+    },
+
+    "lang": {
+      "title": "Note Language",
+      "description": "A language code or language name of the language that this note is written in.",
+      "type": "string"
+    }
+
+  }
 }

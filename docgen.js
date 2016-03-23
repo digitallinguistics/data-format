@@ -1,3 +1,4 @@
+// generates the documentation pages
 const fs = require('fs');
 const jschemer = require('jschemer')();
 
