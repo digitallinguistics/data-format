@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/contributor-0.1.0.json#",
+  "id": "http://digitallinguistics.org/schemas/contributor-1.0.0.json#",
 
   "title": "Contributor",
   "type": "object",
