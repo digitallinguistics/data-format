@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/tags-1.0.0.json#",
+  "id": "http://digitallinguistics.org/schemas/tags-0.1.0.json#",
 
   "title": "Tags"
 }

@@ -107,8 +107,3 @@ Schema         | Description
 [8]:  http://digitallinguistics.github.io/dlx-spec/project.html
 [9]:  http://digitallinguistics.github.io/dlx-spec/tags.html
 [10]: http://digitallinguistics.github.io/dlx-spec/dateCreated.html
-
-## Technical Notes
-- JSON
-- JSON Schema
-- JSON-LD
