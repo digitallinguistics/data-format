@@ -59,44 +59,7 @@
       "uniqueItems": true,
       "items": { "$ref": "#/definitions/tag" }
     },
-
-    "access": {
-      "title": "Access Rights",
-      "description": "The <code>Access Rights</code> object stores information regarding who has permission to access this particular text. Users may choose to follow the access protocol of their archive of choice, or their own custom access protocol. If a specific protocol is selected, possible values for <code>Access Level</code> will be restricted to the appropriate values for that particular access protocol. For instance, specifying <code>\"ELAR\"</code> as the access protocol restricts the possible values of <code>Access Level</code> to <code>\"U\"</code>, <code>\"R\"</code>, <code>\"C\"</code>, or <code>\"S\"</code>. These interdependencies are formalized below.",
-      "type": "object",
-      "required": ["accessLevel", "protocol"],
-
-      "oneOf": [
-        {
-          "required": ["accessLevel", "protocol"],
-          "properties": {
-            "protocol": { "enum": ["ELAR"] },
-            "accessLevel": { "enum": ["U", "R", "C", "S"] }
-          }
-        },
-        {
-          "required": ["accessLevel", "protocol"],
-          "properties": {
-            "protocol": { "enum": ["AILLA"] },
-            "accessLevel": { "enum": ["Public", "Password", "Time Limit", "Depositor Control"] }
-          }
-        },
-        {
-          "required": ["accessLevel", "protocol"],
-          "properties": {
-            "protocol": { "enum": ["custom"] },
-            "accessLevel": { "type": "string", "description": "A description of the level of access allowed for this text." }
-          }
-        }
-      ],
-
-      "properties": {
-        "accessLevel": { "title": "Access Level", "type": "string", "description": "The level of access this text adheres to." },
-        "note": { "title": "Note", "type": "string", "description": "Any additional notes concerning access to this text." },
-        "protocol": { "title": "Protocol", "type": "string", "description": "The access protocol this text follows, e.g. AILLA, ELAR, PARADISEC. May also be set to <code>\"custom\"</code>.", "enum": ["AILLA", "ELAR", "custom"] }
-      }
-    },
-
+    
     "coordinates": {
       "title": "GeoJSON Coordinates",
       "description": "A pair of geographic coordinates where this text was recorded, following the GeoJSON specification for recording coordinates in an array: <a href=http://geojson.org/geojson-spec.html#positions>http://geojson.org/geojson-spec.html#positions</a>.",
