@@ -84,8 +84,8 @@ The DLx project provides recommendations for how to format linguistic data in JS
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
 
-Schema         | Description
--------------- | -----------
+Schema              | Description
+------------------- | -----------
 [`abbreviation`][1] | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
 [`access`][2]       | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
 [`bundle`][3]       | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
