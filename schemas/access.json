@@ -1,5 +1,55 @@
 {
   "$schema": "http://digitallinguistics.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/access-0.1.0.json#",
-  "title": "Access Rights"
+  "id": "http://digitallinguistics.org/schemas/access-1.0.0.json#",
+  "title": "Access Rights",
+  "description": "The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and a custom option is available as well. Additional access protocols may also be added by simply adding an attribute with the name of the relevant archive.",
+  "type": "object",
+
+  "additionalProperties": {
+    "type": "string"
+  },
+
+  "properties": {
+
+    "accessNotes": {
+      "title": "Access Notes",
+      "description": "Notes about access rights for this resource, or any other special considerations regarding who should have access.",
+      "type": "string",
+      "default": ""
+    },
+
+    "custom": {
+      "title": "Custom Access Rights",
+      "description": "Users can use their own access schema/protocol by adding a <code>custom</code> attribute to the Access Rights object.",
+      "type": "string",
+      "default": ""
+    },
+
+    "AILLA": {
+      "title": "AILLA Access Level",
+      "description": "For users who are depositing their materials at The Archive of the Indigenous Languages of Latin America (AAILA) in Texas, an <code>\"AILLA\"</code> attribute may be added, and its value set to one of the access levels set forth by the archive.",
+      "type": "string",
+      "enum": [
+        "public access",
+        "password",
+        "time limit",
+        "depositor control"
+      ],
+      "default": "depositor control"
+    },
+
+    "ELAR": {
+      "title": "ELAR Access Level",
+      "description": "For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an <code>\"ELAR\"</code> attribute may be added, and its value set to one of the access levels set forth by the archive.",
+      "type": "string",
+      "enum": [
+        "User",
+        "Researcher",
+        "Community Member",
+        "Subscriber"
+      ],
+      "default": "Researcher"
+    }
+
+  }
 }
