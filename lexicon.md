@@ -18,25 +18,21 @@
 ## Lexemes (Lexicon Entries)
 [ ] citation form**
 [ ] examples
-[ ] headword**
+[ ] (lexeme) forms (if different from lemma)
 [ ] included in (lexeme, entry)
+[ ] key (default language lemma + optional homonym number)
 [ ] lemma (abstract representation)**
-[ ] lexeme forms (if different from lemma)
-[ ] lexical relations / cross references
+[ ] lexical relations / cross references (including historical relationships)
+[ ] literal meaning**
 [ ] morpheme type / (complex) form type
 [ ] notes**
 [ ] references / bibliography
 [ ] senses (optional for minor entries)
-[ ] source(s)
-[ ] status
-[ ] tags
-[ ] variants || variant type + variant of
-[ ] (anthropological category)
-[ ] (confidence level) = status?
-[ ] (frequency)
-[ ] (historical source(s))
-[ ] (literal meaning) = sense type?
-[ ] (semantic/academic domain)
+[ ] source
+[ ] tags (includes anthropological categories, semantic domains, academic domains, status, confidence level)
+[ ] variant of
+[ ] variants
+[ ] variant type
 
 ### Forms
 [ ] allomorphs**
@@ -54,7 +50,6 @@
 [ ] status
 [ ] variants || variant type + variant of
 [ ] (confidence level)
-[ ] (frequency)
 [ ] (historical source(s))
 [ ] (tone / tonal pattern)
 [ ] (syllable structure / CV pattern)
@@ -78,7 +73,6 @@
 [ ] variants || variant type + variant of
 [ ] (anthropological category)
 [ ] (confidence level)
-[ ] (frequency)
 [ ] (scientific name)
 [ ] (semantic/academic domain)
 [ ] (sense type)

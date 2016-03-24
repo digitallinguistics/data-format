@@ -2,5 +2,115 @@
   "$schema": "http://json-schema.org/schema#",
   "id": "http://digitallinguistics.org/schemas/lexeme-0.1.0.json#",
 
-  "title": "Lexeme"
+  "title": "Lexeme",
+  "type": "object",
+  "description": "A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a construction, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or memorized chunk. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple forms, even before considering inflection. For example, the lexeme `run` in English has two base forms: `run` and `ran`. These different base forms of a lexeme are listed in the `forms` field. The `baseForms` field should *not* be used to list all the inflectional forms of a lexeme.",
+  "required": ["lemma"],
+  "additionalProperties": true,
+
+  "properties": {
+
+    "citationForm": {
+      "title": "Citation Form",
+      "description": "A citation form is the form of a word when given in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though the lemma form of the word is simply `run`.",
+      "type": "object"
+    },
+
+    "examples": {
+      "title": "Examples",
+      "description": "",
+      "type": "array"
+    },
+
+    "forms": {
+      "title": "Forms",
+      "description": "",
+      "type": "array"
+    },
+
+    "includedIn": {
+      "title": "Included In",
+      "description": "",
+      "type": "array"
+    },
+
+    "key": {
+      "title": "Key",
+      "description": "",
+      "type": "string"
+    },
+
+    "lemma": {
+      "title": "Lemma",
+      "description": "",
+      "type": "object"
+    },
+
+    "lexicalRelations": {
+      "title": "Lexical Relations",
+      "description": "",
+      "type": "array"
+    },
+
+    "literalMeaning": {
+      "title": "Literal Meaning",
+      "description": "",
+      "type": "object"
+    },
+
+    "morphemeType": {
+      "title": "Morpheme Type",
+      "description": "",
+      "type": "string"
+    },
+
+    "notes": {
+      "title": "Notes",
+      "description": "",
+      "type": "array"
+    },
+
+    "references": {
+      "title": "References",
+      "description": "",
+      "type": "array"
+    },
+
+    "senses": {
+      "title": "Senses",
+      "description": "",
+      "type": "array"
+    },
+
+    "source": {
+      "title": "Source",
+      "description": "",
+      "type": "string"
+    },
+
+    "tags": { "$ref": "http://digitallinguistics.org/schemas/tags#" },
+
+    "variantOf": {
+      "title": "Variant Of",
+      "description": "",
+      "type": "string"
+    },
+
+    "variants": {
+      "title": "Variants",
+      "description": "",
+      "type": ""
+    },
+
+    "variantType": {
+      "title": "Variant Type",
+      "description": "",
+      "type": ""
+    }
+
+  },
+
+  "default": {
+    "lemma": ""
+  }
 }
