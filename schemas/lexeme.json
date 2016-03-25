@@ -1,116 +1,337 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/lexeme-0.1.0.json#",
+  "id": "http://digitallinguistics.org/schemas/lexeme-0.3.0.json#",
 
   "title": "Lexeme",
   "type": "object",
-  "description": "A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a construction, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or memorized chunk. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple forms, even before considering inflection. For example, the lexeme `run` in English has two base forms: `run` and `ran`. These different base forms of a lexeme are listed in the `forms` field. The `baseForms` field should *not* be used to list all the inflectional forms of a lexeme.",
-  "required": ["lemma"],
+  "description": "A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a construction, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or memorized chunk. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple forms, even before considering inflection. For example, the lexeme `run` in English has two base forms: `run` and `ran`. These different base forms of a lexeme are listed in the `forms` field. The `baseForms` field should *not* be used to list all the inflectional forms of a lexeme. NB: An entry in a dictionary does *not* represent a lexeme, but rather a lexeme form (see the `forms` attribute instead).",
+  "required": ["lemma", "senses"],
   "additionalProperties": true,
+  "dependencies": {
+    "variantType": ["variantOf"]
+  },
 
   "properties": {
 
     "citationForm": {
       "title": "Citation Form",
-      "description": "A citation form is the form of a word when given in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though the lemma form of the word is simply `run`.",
-      "type": "object"
+      "description": "The citation form of a lexeme is the form given in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. It may be represented in multiple orthographies.",
+      "type": "object",
+      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
     },
 
     "examples": {
       "title": "Examples",
-      "description": "",
-      "type": "array"
+      "description": "A collection of examples illustrating this lexeme in use. Each example is a phrase from a text.",
+      "type": "array",
+      "items": {
+        "title": "Example Phrase",
+        "$ref": "http://digitallinguistics.org/schemas/phrase#"
+      }
     },
 
     "forms": {
       "title": "Forms",
-      "description": "",
-      "type": "array"
+      "description": "The different base forms that this lexeme has, other than its lemma form. These are usually suppletive forms of a root or stem, e.g. `ran` as the past form of `run`, or `men` as the plural form of `man`. A lexeme form is generally what is listed as an entry in the dictionary. In the usual scenario, the main entry is listed under the lemma form, and contains detailed information about the lexeme, while entries for each of the different lexeme forms are simply pointers to the main entry. If the lemma has allomorphs, you should list the lemma form again here.",
+      "type": "array",
+      "items": {
+
+        "title": "Lexeme Form",
+        "description": "One of the forms of a lexeme.",
+        "type": "object",
+        "required": ["form", "type"],
+
+        "properties": {
+
+          "allomorphs": {
+            "title": "Allomorphs",
+            "type": "array",
+            "description": "A list of allomorphs of this form.",
+            "items": {
+
+              "title": "Allomorph",
+              "type": "object",
+              "description": "An allomorph of this form.",
+              "additionalProperties": true,
+              "properties": {
+
+                "transcription": {
+                  "title": "Transcription",
+                  "description": "A transcription of this allomorph, optionally in multiple orthographies.",
+                  "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+                },
+
+                "environments": {
+                  "title": "Environments",
+                  "type": "array",
+                  "description": "A list of (morpho)phonological environments in which this allomorph occurs.",
+                  "items": {
+                    "title": "Environment",
+                    "type": "string",
+                    "description": "A formalization of a (morpho)phonologial environemnt, e.g. `_k`."
+                  }
+                }
+
+              }
+
+            }
+          },
+
+          "components": {
+            "title": "Components",
+            "type": "array",
+            "description": "A list of the forms contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific lexeme form.",
+            "items": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+          },
+
+          "examples": {
+            "title": "Examples",
+            "type": "array",
+            "description": "A collection of examples illustrating this form in use. Each example is a phrase.",
+            "items": {
+              "title": "Example Phrase",
+              "$ref": "http://digitallinguistics.org/schemas/phrase#"
+            }
+          },
+
+          "form": {
+            "title": "Transcription",
+            "description": "A transcription of this lexeme form, optionally in multiple orthographies.",
+            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+          },
+
+          "formType": {
+            "title": "Lexeme Form Type",
+            "description": "The type of lexeme form, identifying when this form of the lexeme is used. Values might be `past`, `plural`, `phrase-final`, etc.",
+            "type": "string"
+          },
+
+          "headword": {
+            "title": "Headword",
+            "description": "The dictionary headword that this form should be found under, optionally in multiple orthographies. If the `headword` attribute is missing or empty, programs should use the citation form for the headword, if present. Otherwise, the lemma form should be used.",
+            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+          },
+
+          "includedIn": {
+            "title": "Included In",
+            "$ref": "#/definitions/includedIn"
+          },
+
+          "notes": {
+            "title": "Notes",
+            "type": "array",
+            "description": "A collection of notes about this lexeme form.",
+            "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+          },
+
+          "references": {
+            "title": "Bibliographic References",
+            "type": "array",
+            "description": "A collection of bibliographic references about this lexeme form, if it has been discussed in the literature.",
+            "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" }
+          },
+
+          "syllableStructure": {
+            "title": "Syllable Structure",
+            "type": "string",
+            "description": "An abstract representation of the syllable structure of this form, e.g. `CVC`."
+          },
+
+          "tags": {
+            "title": "Tags",
+            "$ref": "http://digitallinguistics.org/schemas/tags#"
+          },
+
+          "tone": {
+            "title": "Tone",
+            "type": "string",
+            "description": "An abstract representation of the tonal pattern of this lexeme form. Examples: `HLH`, `323`, etc."
+          },
+
+          "transcription": {
+            "title": "Transcription",
+            "description": "A transcription of this lexeme form, optionally in multiple orthographies.",
+            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+          },
+
+          "variantOf": {
+            "title": "Variant Of",
+            "description": "When this lexeme form is a variant of another lexeme form, this field will contain a reference to the other lexeme. Lexeme forms may only be variants of one other lexeme form.",
+            "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+          },
+
+          "variants": {
+            "title": "Variants",
+            "$ref": "#/definitions/variants"
+          },
+
+          "variantType": {
+            "title": "Variant Type",
+            "$ref": "#/definitions/variantType"
+          }
+
+        }
+
+      }
     },
 
     "includedIn": {
       "title": "Included In",
-      "description": "",
-      "type": "array"
+      "$ref": "#/definitions/includedIn"
     },
 
     "key": {
-      "title": "Key",
-      "description": "",
+      "title": "Lexeme Key",
+      "description": "A human-readable key that helps uniquely identify this lexeme within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
       "type": "string"
     },
 
     "lemma": {
       "title": "Lemma",
-      "description": "",
-      "type": "object"
+      "description": "The lemma form of this lexeme. In the DLx framework, a lemma is an abstract form meant to represent the lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be` (which would be its citation form). Lemmas may be represented in multiple orthographies.",
+      "type": "object",
+      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
     },
 
     "lexicalRelations": {
       "title": "Lexical Relations",
-      "description": "",
-      "type": "array"
+      "description": "A list of the lexical relations that this lexeme has to other lexemes.",
+      "type": "array",
+      "items": {
+
+        "title": "Lexical Relation",
+        "type": "object",
+        "description": "A lexical relation between two lexemes or senses.",
+        "required": ["referencedLexeme", "relation"],
+        "properties": {
+
+          "relation": {
+            "title": "Lexical Relation Type",
+            "description": "The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
+          },
+
+          "referencedLexeme": {
+            "title": "Referenced Lexeme",
+            "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+          }
+        }
+      }
     },
 
     "literalMeaning": {
       "title": "Literal Meaning",
-      "description": "",
-      "type": "object"
+      "description": "The literal meaning of the lexeme, optionally in multiple orthographies.",
+      "type": "object",
+      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
     },
 
     "morphemeType": {
       "title": "Morpheme Type",
-      "description": "",
+      "description": "The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`",
       "type": "string"
     },
 
     "notes": {
       "title": "Notes",
-      "description": "",
-      "type": "array"
+      "description": "A collection of notes about this lexeme.",
+      "type": "array",
+      "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
     },
 
     "references": {
       "title": "References",
-      "description": "",
-      "type": "array"
+      "description": "A collection of bibliographic references relating to this lexeme. For example, a particular lexeme may have been discussed in detail in a published article.",
+      "type": "array",
+      "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" }
     },
 
     "senses": {
       "title": "Senses",
-      "description": "",
-      "type": "array"
+      "description": "A collection of senses for this lexeme.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+
+        "title": "Sense",
+        "description": "One of the meanings for this lexeme. Every lexeme must have at least 1 sense.",
+        "type": "object",
+        "additionalProperties": true,
+        "required": [],
+
+        "properties": {}
+
+      }
     },
 
     "source": {
       "title": "Source",
-      "description": "",
-      "type": "string"
+      "$ref": "#/definitions/source"
     },
 
     "tags": { "$ref": "http://digitallinguistics.org/schemas/tags#" },
 
+    "url": { "$ref": "http://digitallinguistics.org/schemas/url#" },
+
     "variantOf": {
       "title": "Variant Of",
-      "description": "",
+      "description": "When this lexeme is a variant of another lexeme, this field should contain a reference to the other lexeme. Lexemes may only be variants of one other lexeme.",
+      "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+    },
+
+    "variants": {
+      "title": "Variants",
+      "$ref": "#/definitions/variants"
+    },
+
+    "variantType": {
+      "title": "Variant Type",
+      "$ref": "#/definitions/variantType"
+    }
+
+  },
+
+  "definitions": {
+
+    "includedIn": {
+      "title": "Included In",
+      "description": "A list of references to lexemes or lexeme forms that this item is included in. For example, the lexeme `-s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
+      "type": "array",
+      "items": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+    },
+
+    "source": {
+      "title": "Source",
+      "description": "The source(s) of information about this lexeme. This will often be the initials of a speaker.",
       "type": "string"
     },
 
     "variants": {
       "title": "Variants",
-      "description": "",
-      "type": ""
+      "description": "A collection of variants of this lexeme / lexeme form / sense.",
+      "type": "array",
+      "items": {
+        "title": "Variant",
+        "type": "object",
+        "description": "A reference to, and information about, a variant of the current lexeme / lexeme form / sense.",
+        "additionalProperties": false,
+        "properties": {
+          "type": { "$ref": "#/definitions/variantType" },
+          "referencedLexeme": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+        }
+      }
     },
 
     "variantType": {
       "title": "Variant Type",
-      "description": "",
-      "type": ""
+      "description": "The type of variant that this item is. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
+      "type": "string"
     }
 
   },
 
   "default": {
-    "lemma": ""
+    "lemma": "",
+    "senses": []
   }
+
 }

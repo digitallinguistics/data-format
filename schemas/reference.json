@@ -1,1 +1,128 @@
-{}
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/reference-1.0.0.json",
+  "title": "Bibliographic Reference",
+  "description": "A bibliographic reference. This schema borrows from Mendeley's API.",
+  "required": ["title"],
+
+  "properties": {
+
+    "authors": {
+      "title": "Authors",
+      "type": "array",
+      "description": "An array of authors for this reference.",
+      "items": { "$ref": "#/definitions/person" }
+    },
+
+    "city": {
+      "title": "City",
+      "type": "string",
+      "description": "The city in which this reference was published."
+    },
+
+    "edition": {
+      "title": "Edition",
+      "type": "integer",
+      "description": "The edition of this reference."
+    },
+
+    "editors": {
+      "title": "Editors",
+      "type": "array",
+      "description": "An array of editors for this reference.",
+      "items": { "$ref": "#/definitions/person" }
+    },
+
+    "issue": {
+      "title": "Issue",
+      "type": "integer",
+      "description": "The publication issue."
+    },
+
+    "publisher": {
+      "title": "Publisher",
+      "type": "string",
+      "description": "The name of the publisher of this reference."
+    },
+
+    "series": {
+      "title": "Series",
+      "type": "string",
+      "description": "The series in which this publication was published."
+    },
+
+    "title": {
+      "title": "Title",
+      "type": "string",
+      "description": "The title of this publication."
+    },
+
+    "translators": {
+      "title": "Translators",
+      "type": "array",
+      "description": "An array of translations for this reference.",
+      "items": { "$ref": "#/definitions/person" }
+    },
+
+    "type": {
+      "title": "Publication Type",
+      "type": "string",
+      "description": "The type of publication.",
+      "enum": [
+        "journal",
+        "book",
+        "generic",
+        "book section",
+        "conference proceedings",
+        "working paper",
+        "report",
+        "web page",
+        "thesis",
+        "magazine article",
+        "statue",
+        "patent",
+        "newspaper article",
+        "computer program",
+        "hearing",
+        "television broadcast",
+        "encyclopedia article",
+        "case",
+        "film",
+        "bill"
+      ]
+    },
+
+    "volume": {
+      "title": "Volume",
+      "type": "integer",
+      "description": "The volume number for this publication."
+    },
+
+    "year": {
+      "title": "Year",
+      "type": "integer",
+      "description": "The year this item was published."
+    },
+
+    "definitions": {
+      "person": {
+        "title": "Person",
+        "type": "object",
+        "description": "An object representing a person.",
+        "required": ["lastName"],
+        "properties": {
+          "firstName": {
+            "title": "First Name / Given Name",
+            "type": "string",
+            "description": "The person's first name(s) or given name(s)."
+          },
+          "lastName": {
+            "title": "Last Name / Family Name",
+            "type": "string",
+            "description": "The person's last name(s) or family name(s)."
+          }
+        }
+      }
+    }
+  }
+}

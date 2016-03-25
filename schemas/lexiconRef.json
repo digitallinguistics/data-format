@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/lexiconRef-1.0.0.json#",
+  "title": "Lexicon Reference",
+  "type": "object",
+  "description": "A reference to an item in a lexicon.",
+  "additionalProperties": false,
+  "properties": {
+
+    "lexicon": {
+      "title": "Referenced Lexicon",
+      "type": "string",
+      "description": "The name of the lexicon being referenced, or the lexicon that contains the item being referenced."
+    },
+
+    "lexiconUrl": {
+      "title": "Referenced Lexicon URL",
+      "$ref": "http://digitallinguistics.org/schemas/url#"
+    },
+
+    "lexeme": {
+      "title": "Referenced Lexeme Key",
+      "type": "string",
+      "description": "The key of the lexeme being referenced."
+    },
+
+    "lexemeUrl": {
+      "title": "Referenced Lexeme URL",
+      "$ref": "http://digitallinguistics.org/schemas/url#"
+    },
+
+    "sense": {
+      "title": "Referenced Sense",
+      "type": "integer",
+      "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the lexeme."
+    },
+
+    "form": {
+      "title": "Referenced Form",
+      "type": "integer",
+      "description": "The number of the form being referenced. The form number is its index in the `forms` array on the lexeme."
+    }
+
+  }
+}

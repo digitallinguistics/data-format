@@ -28,6 +28,8 @@
       "$ref": "http://digitallinguistics.org/schemas/access#"
     },
 
+    "breadcrumb": {},
+
     "contributors": {
       "title": "Contributors",
       "type": "array",
