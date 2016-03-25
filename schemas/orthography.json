@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/orthography-0.1.0.json",
+  "title": "Orthography",
+  "type": "object",
+  "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators."
+}

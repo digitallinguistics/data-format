@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/language-0.1.0.json",
+  "title": "Language",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [],
+
+  "properties": {
+
+    "codes": {},
+
+    "phomemes": {
+      "title": "Phonemes",
+      "type": "array",
+      "description": "The phonological inventory for this language, i.e. a collection of phonemes.",
+      "items": {
+        "title": "Phoneme",
+        "$ref": "http://digitallinguistics.org/schemas/phoneme#"
+      }
+    },
+
+    "orthographies": {
+      "title": "Orthographies",
+      "type": "array",
+      "description": "A collection of orthographies used to represent this language.",
+      "items": {
+        "title": "Orthography",
+        "$ref": "http://digitallinguistics.org/schemas/orthography#"
+      }
+    }
+
+  },
+
+  "default": {}
+
+}

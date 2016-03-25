@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/lexeme-0.3.0.json#",
+  "id": "http://digitallinguistics.org/schemas/lexeme-1.0.0.json#",
 
   "title": "Lexeme",
   "type": "object",

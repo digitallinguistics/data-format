@@ -77,6 +77,7 @@ The DLx project provides recommendations for how to format linguistic data in JS
 * [lexeme](http://digitallinguistics.github.io/dlx-spec/lexeme.html)
 * [lexicon](http://digitallinguistics.github.io/dlx-spec/lexicon.html)
 * [orthography](http://digitallinguistics.github.io/dlx-spec/orthography.html)
+* [phoneme](http://digitallinguistics.github.io/dlx-spec/phoneme.html)
 * [phrase](http://digitallinguistics.github.io/dlx-spec/phrase.html)
 * [text](http://digitallinguistics.github.io/dlx-spec/text.html)
 * [word](http://digitallinguistics.github.io/dlx-spec/word.html)
@@ -84,18 +85,24 @@ The DLx project provides recommendations for how to format linguistic data in JS
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
 
-Schema              | Description
-------------------- | -----------
-[`abbreviation`][1] | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
-[`access`][2]       | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
-[`bundle`][3]       | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
-[`contributor`][4]  | Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of `speaker` specified.
-[`dateCreated`][10] | The date a database resource was created (*not* the date the item was recorded).
-[`media`][5]        | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
-[`note`][6]         | Most DLx resources allow you to add notes in different languages, of different types.
-[`person`][7]       | Information about a person, e.g. speaker, linguist, editor, translator, etc.
-[`project`][8]      | Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.
-[`tags`][9]         | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
+Schema                  | Description
+----------------------- | -----------
+[`abbreviation`][1]     | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
+[`access`][2]           | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
+[`bundle`][3]           | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
+[`contributor`][4]      | Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of `speaker` specified.
+[`dateCreated`][10]     | The date a database resource was created (*not* the date the item was recorded).
+[`dateModified`][11]    | The date a database resource was last modified.
+[`dateRecorded`][12]    | The date a database resource (usually a text) was recorded.
+[`lexiconRef`][13]      | An object that contains a reference to any item in a lexicon.
+[`media`][5]            | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
+[`multiLangString`][14] | An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.
+[`note`][6]             | Most DLx resources allow you to add notes in different languages, of different types.
+[`person`][7]           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
+[`project`][8]          | Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.
+[`reference`][15]       | A bibliographic reference.
+[`tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
+[`url`][16]             | A URL.
 
 [1]:  http://digitallinguistics.github.io/dlx-spec/abbreviation.html
 [2]:  http://digitallinguistics.github.io/dlx-spec/access.html
@@ -107,3 +114,9 @@ Schema              | Description
 [8]:  http://digitallinguistics.github.io/dlx-spec/project.html
 [9]:  http://digitallinguistics.github.io/dlx-spec/tags.html
 [10]: http://digitallinguistics.github.io/dlx-spec/dateCreated.html
+[11]: http://digitallinguistics.github.io/dlx-spec/dateModified.html
+[12]: http://digitallinguistics.github.io/dlx-spec/dateRecorded.html
+[13]: http://digitallinguistics.github.io/dlx-spec/lexiconRef.html
+[14]: http://digitallinguistics.github.io/dlx-spec/multiLangString.html
+[15]: http://digitallinguistics.github.io/dlx-spec/reference.html
+[16]: http://digitallinguistics.github.io/dlx-spec/url.html

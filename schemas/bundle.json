@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://digitallinguistics.org/schemas/bundle-0.1.0.json",
+  "title": "Bundle",
+  "type": "object",
+  "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
+  "additionalProperties": true,
+  "required": [],
+
+  "properties": {}
+
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://digitallinguistics.org/schemas/project-0.1.0.json",
+  "title": "Project",
+  "type": "object",
+  "description": "An object containing information about a project. Projects are purely organizational objects containing references to various associated resoures."
+}
