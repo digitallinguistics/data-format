@@ -100,12 +100,6 @@
             "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
           },
 
-          "formType": {
-            "title": "Lexeme Form Type",
-            "description": "The type of lexeme form, identifying when this form of the lexeme is used. Values might be `past`, `plural`, `phrase-final`, etc.",
-            "type": "string"
-          },
-
           "headword": {
             "title": "Headword",
             "description": "The dictionary headword that this form should be found under, optionally in multiple orthographies. If the `headword` attribute is missing or empty, programs should use the citation form for the headword, if present. Otherwise, the lemma form should be used.",
@@ -154,6 +148,12 @@
             "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
           },
 
+          "type": {
+            "title": "Lexeme Form Type",
+            "description": "The type of lexeme form, identifying when this form of the lexeme is used. Values might be `past`, `plural`, `phrase-final`, etc.",
+            "type": "string"
+          },
+
           "variantOf": {
             "title": "Variant Of",
             "description": "When this lexeme form is a variant of another lexeme form, this field will contain a reference to the other lexeme. Lexeme forms may only be variants of one other lexeme form.",
@@ -170,6 +170,11 @@
             "$ref": "#/definitions/variantType"
           }
 
+        },
+
+        "default": {
+          "form": {},
+          "type": ""
         }
 
       }
@@ -198,23 +203,8 @@
       "description": "A list of the lexical relations that this lexeme has to other lexemes.",
       "type": "array",
       "items": {
-
         "title": "Lexical Relation",
-        "type": "object",
-        "description": "A lexical relation between two lexemes or senses.",
-        "required": ["referencedLexeme", "relation"],
-        "properties": {
-
-          "relation": {
-            "title": "Lexical Relation Type",
-            "description": "The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
-          },
-
-          "referencedLexeme": {
-            "title": "Referenced Lexeme",
-            "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
-          }
-        }
+        "$ref": "#/definitions/lexicalRelation"
       }
     },
 
@@ -256,9 +246,118 @@
         "description": "One of the meanings for this lexeme. Every lexeme must have at least 1 sense.",
         "type": "object",
         "additionalProperties": true,
-        "required": [],
+        "required": ["gloss"],
 
-        "properties": {}
+        "properties": {
+
+          "argumentStructure": {
+            "title": "Argument Structure",
+            "type": "string",
+            "description": "An abstract representation of the argument structure for this word."
+          },
+
+          "category": {
+            "title": "Lexical Category (Part of Speech, Morphosyntactic Class, etc.)",
+            "type": "string",
+            "description": "The lexical category, part of speech, or morphosyntactic class for this lexeme. If the current lexeme is an affix or other grammatical (rather than lexical) morpheme, this field should be used to describe the category that the morpheme attaches to. Examples: the English verb suffix `‑s` would set this property to `verb`, and the English derivational suffix `‑ize` would set this property to `noun`."
+          },
+
+          "definition": {
+            "title": "Definition",
+            "description": "The definition for this particular sense, optionally in multiple orthographies.",
+            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+          },
+
+          "derives": {
+            "title": "Derived Category",
+            "type": "string",
+            "description": "If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix `‑er` would have this property set to `noun`."
+          },
+
+          "examples": {
+            "title": "Examples",
+            "type": "array",
+            "description": "A collection of examples of this sense in use. Each example is a phrase.",
+            "items": { "$ref": "http://digitallinguistics.org/schemas/phrase#" }
+          },
+
+          "gloss": {
+            "title": "Gloss",
+            "type": "string",
+            "description": "A short version of the definition, using Leipzig-style glossing notation."
+          },
+
+          "inflectionClass": {
+            "title": "Inflectional Class",
+            "type": "string",
+            "description": "If this lexeme is a root or stem, this field indicates the inflectional class that the lexeme takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form."
+          },
+
+          "lexicalRelations": {
+            "title": "Lexical Relations",
+            "type": "array",
+            "description": "A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.",
+            "items": { "$ref": "#/definitions/lexicalRelation" }
+          },
+
+          "notes": {
+            "title": "Notes",
+            "type": "array",
+            "description": "A collection of notes about this sense.",
+            "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+          },
+
+          "references": {
+            "title": "Bibliographic References",
+            "type": "array",
+            "description": "A collection of bibliographic references about this particular sense.",
+            "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" }
+          },
+
+          "scientificName": {
+            "title": "Scientific Name",
+            "type": "string",
+            "description": "The scientific name for this item."
+          },
+
+          "source": {
+            "title": "Source",
+            "$ref": "#/definitions/source"
+          },
+
+          "tags": {
+            "title": "Tags",
+            "$ref": "http://digitallinguistics.org/schemas/tags#"
+          },
+
+          "usages": {
+            "title": "Usages",
+            "type": "array",
+            "description": "A list of the appropriate usages for this sense. Example: `formal`, `medicinal`, `informal`, etc.",
+            "items": { "type": "string" }
+          },
+
+          "variantOf": {
+            "title": "Variant Of",
+            "description": "If this sense is a variant of another sense, a reference to the other sense should go here. An example use case might be if one speaker uses a word to mean one sense, and another speaker uses the same word to mean another thing.",
+            "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+          },
+
+          "variants": {
+            "title": "Variants",
+            "$ref": "#/definitions/variants"
+          },
+
+          "variantType": {
+            "title": "Variant Type",
+            "$ref": "#/definitions/variantType"
+          }
+
+        },
+
+        "default": {
+          "gloss": ""
+        }
 
       }
     },
@@ -294,9 +393,27 @@
 
     "includedIn": {
       "title": "Included In",
-      "description": "A list of references to lexemes or lexeme forms that this item is included in. For example, the lexeme `-s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
+      "description": "A list of references to lexemes or lexeme forms that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
       "type": "array",
       "items": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+    },
+
+    "lexicalRelation": {
+      "type": "object",
+      "description": "A lexical relation between two lexemes or senses.",
+      "required": ["referencedLexeme", "relation"],
+      "properties": {
+
+        "relation": {
+          "title": "Lexical Relation Type",
+          "description": "The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
+        },
+
+        "referencedLexeme": {
+          "title": "Referenced Lexeme",
+          "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+        }
+      }
     },
 
     "source": {

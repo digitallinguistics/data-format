@@ -1,6 +1,5 @@
 # Lexicon Schema
-[ ] examples with ** allow for multiple orthographies
-[ ] custom attributes are allowed at any level
+* examples with ** allow for multiple orthographies
 
 ## Metadata
 [ ] access rights
@@ -39,7 +38,6 @@
 [X] allomorphs**
 [X] components
 [X] examples
-[X] form type (FLEx: stem name)
 [X] headword**
 [X] included in (lexeme, form)
 [X] notes**
@@ -49,23 +47,22 @@
 [X] source(s)
 [X] variants || variant type + variant of
 [X] tone / tonal pattern
+[X] (form) type (FLEx: stem name)
 [X] syllable structure / CV pattern
 
 ### Senses
-[ ] argument structure (how? ValPal style?)
-[ ] definition**
-[ ] examples
-[ ] gloss**
-[ ] included in (lexeme, sense)
-[ ] lexical category / part of speech || morphosyntactic distribution
-  [ ] inflectional class
-  [ ] derivational source / target class
-[ ] lexical relations / cross-references
-[ ] notes**
-[ ] references / bibliography
-[ ] tags
-[ ] source(s)
-[ ] usages
-[ ] variants || variant type + variant of
-[ ] (scientific name)
-[ ] (sense type)
+[X] argument structure
+[X] definition**
+[X] derives
+[X] examples
+[X] inflectional class
+[X] gloss
+[X] lexical category / part of speech || morphosyntactic distribution
+[X] lexical relations / cross-references
+[X] notes**
+[X] references / bibliography
+[X] source(s)
+[X] tags
+[X] usages
+[X] variants || variant type + variant of
+[X] scientific name
