@@ -99,6 +99,7 @@ Schema                  | Description
 [`dateModified`][11]    | The date a database resource was last modified.
 [`dateRecorded`][12]    | The date a database resource (usually a text) was recorded.
 [`lexiconRef`][13]      | An object that contains a reference to any item in a lexicon.
+[`location`][17]        | A location with optional geographic coordinates.
 [`media`][5]            | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
 [`multiLangString`][14] | An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.
 [`note`][6]             | Most DLx resources allow you to add notes in different languages, of different types.
@@ -124,3 +125,4 @@ Schema                  | Description
 [14]: http://digitallinguistics.github.io/dlx-spec/multiLangString.html
 [15]: http://digitallinguistics.github.io/dlx-spec/reference.html
 [16]: http://digitallinguistics.github.io/dlx-spec/url.html
+[17]: http://digitallinguistics.github.io/dlx-spec/location.html
