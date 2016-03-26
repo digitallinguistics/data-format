@@ -93,6 +93,7 @@ Schema                  | Description
 ----------------------- | -----------
 [`abbreviation`][1]     | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
 [`access`][2]           | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
+[`address`][18]         | A postal address.
 [`bundle`][3]           | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
 [`contributor`][4]      | Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of `speaker` specified.
 [`dateCreated`][10]     | The date a database resource was created (*not* the date the item was recorded).
@@ -126,3 +127,4 @@ Schema                  | Description
 [15]: http://digitallinguistics.github.io/dlx-spec/reference.html
 [16]: http://digitallinguistics.github.io/dlx-spec/url.html
 [17]: http://digitallinguistics.github.io/dlx-spec/location.html
+[18]: http://digitallinguistics.github.io/dlx-spec/address.html
