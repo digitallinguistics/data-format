@@ -20,7 +20,7 @@ if (process.argv[2] === 'store') {
     contentType: 'application/schema+json'
   };
 
-  storage.createBlockBlobFromText('schemas', filename, text, opts, err => {
+  storage.createBlockBlobFromText('schemas', filename, text, opts, (err) => {
     if (err) { console.error(err); }
     else {
 

@@ -3,5 +3,144 @@
   "id": "https://digitallinguistics.blob.core.windows.net/schemas/media-0.1.0.json#",
 
   "title": "Media File",
-  "description": "Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, or scans of field notes."
+  "type": "object",
+  "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaUrl` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, or scans of field notes.",
+
+  "required": [
+    "access",
+    "filename",
+    "format",
+    "languages",
+    "mediaUrl"
+  ],
+
+  "properties": {
+
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "An abbreviation for referring to this file.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+    },
+
+    "access": {
+      "title": "Access Rights",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+    },
+
+    "content": {
+      "title": "Content",
+      "description": "A description of the content of this file, optionally in multiple languages or orthographies.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/mulitLangString#"
+    },
+
+    "contentType": {
+      "title": "MIME Content Type",
+      "description": "The media type of the file. Examples: `audio/wav`, `application/pdf`, `video/mpeg`"
+    },
+
+    "creator": {
+      "title": "Creator",
+      "description": "The person who created this specific file.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
+    },
+
+    "dateCreated": {
+      "title": "Date Created",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
+    },
+
+    "dateRecorded": {
+      "title": "Date Recorded",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateRecorded#"
+    },
+
+    "filename": {
+      "title": "Filename",
+      "type": "string",
+      "description": "The filename for this media item without spaces, but including the extension.",
+      "pattern": "^[^ ]+\\.[^ ]+"
+    },
+
+    "fileSize": {
+      "title": "File Size",
+      "type": "integer",
+      "description": "The size of the file, in bytes."
+    },
+
+    "format": {
+      "title": "Format (File Extension)",
+      "type": "string",
+      "description": "The format (file extension) of the media file, without a period. Examples: `wav`, `mp4`, `pdf`"
+    },
+
+    "languages": {
+      "title": "Languages",
+      "type": "array",
+      "description": "A collection of the languages that are used in this media file.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Language",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language#"
+      }
+    },
+
+    "length": {
+      "title": "Length (in Time / Pages)",
+      "type": "number",
+      "description": "The length of the file, in seconds and milliseconds if an audio/video file (in `SS.MM` format), or pages if a document."
+    },
+
+    "location": {
+      "title": "Location",
+      "description": "The location where the content in this media file was recorded or produced.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
+    },
+
+    "mediaUrl": {
+      "title": "Media URL",
+      "description": "The URL where the media file itself can be found.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    },
+
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A collection of notes about this media item.",
+      "items": {
+        "title": "Note",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+      }
+    },
+
+    "original": {
+      "title": "Original Media Item",
+      "description": "The URL of the media object (*not* the URL to the media file itself) that this file is derived from.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    },
+
+    "persons": {
+      "title": "Persons in File",
+      "type": "array",
+      "description": "A list of all the people who appear in this file. Often a list of speakers.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Person",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
+      }
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+    },
+
+    "url": {
+      "title": "URL",
+      "description": "The URL where this media object can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaUrl` attribute).",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    }
+
+  }
+
 }
