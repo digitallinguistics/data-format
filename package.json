@@ -1,6 +1,6 @@
 {
   "name": "dlx-spec",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "The DLx specification for formatting linguistic data in JSON.",
   "keywords": [
     "DLx",
@@ -29,7 +29,12 @@
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "devDependencies": {
     "azure-storage": "^0.9.0",
-    "jschemer": "^0.1.1"
+    "jasmine": "^2.4.1",
+    "jschemer": "^0.1.1",
+    "tv4": "^1.2.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "test": "jasmine JASMINE_CONFIG_PATH=build/jasmine.json"
+  }
 }

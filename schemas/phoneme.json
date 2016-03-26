@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/phoneme-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/phoneme-0.1.0.json#",
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones."

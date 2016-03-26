@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/reference-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/reference-1.0.1.json#",
   "title": "Bibliographic Reference",
   "description": "A bibliographic reference. This schema borrows from Mendeley's API.",
   "required": ["title"],
@@ -11,6 +11,7 @@
       "title": "Authors",
       "type": "array",
       "description": "An array of authors for this reference.",
+      "uniqueItems": true,
       "items": { "$ref": "#/definitions/person" }
     },
 
@@ -30,6 +31,7 @@
       "title": "Editors",
       "type": "array",
       "description": "An array of editors for this reference.",
+      "uniqueItems": true,
       "items": { "$ref": "#/definitions/person" }
     },
 
@@ -61,6 +63,7 @@
       "title": "Translators",
       "type": "array",
       "description": "An array of translations for this reference.",
+      "uniqueItems": true,
       "items": { "$ref": "#/definitions/person" }
     },
 
