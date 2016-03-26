@@ -15,6 +15,12 @@
 
   "properties": {
 
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "An abbreviation for this lexicon.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+    },
+
     "access": {
       "title": "Access Rights",
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
@@ -60,6 +66,7 @@
 
     "name": {
       "title": "Name",
+      "description": "A name for this lexicon.",
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 

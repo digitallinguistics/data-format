@@ -20,6 +20,16 @@
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
+    "dateCreated": {
+      "title": "Date Created",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
+    },
+
+    "dateModified": {
+      "title": "Date Modified",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified#"
+    },
+
     "examples": {
       "title": "Examples",
       "description": "A collection of examples illustrating this lexeme in use. Each example is a phrase from a text.",
@@ -115,7 +125,10 @@
             "type": "array",
             "uniqueItems": true,
             "description": "A collection of notes about this lexeme form.",
-            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
+            "items": {
+              "title": "Note",
+              "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+            }
           },
 
           "references": {
@@ -123,7 +136,10 @@
             "type": "array",
             "uniqueItems": true,
             "description": "A collection of bibliographic references about this lexeme form, if it has been discussed in the literature.",
-            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
+            "items": {
+              "title": "Reference",
+              "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#"
+            }
           },
 
           "syllableStructure": {
@@ -152,7 +168,7 @@
           "type": {
             "title": "Lexeme Form Type",
             "description": "The type of lexeme form, identifying when this form of the lexeme is used. Values might be `past`, `plural`, `phrase-final`, etc.",
-            "type": "string"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
           },
 
           "variantOf": {
@@ -189,7 +205,8 @@
     "key": {
       "title": "Lexeme Key",
       "description": "A human-readable key that helps uniquely identify this lexeme within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
-      "type": "string"
+      "type": "string",
+      "pattern": "^[^ ]+$"
     },
 
     "lemma": {
@@ -304,7 +321,10 @@
             "type": "array",
             "uniqueItems": true,
             "description": "A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.",
-            "items": { "$ref": "#/definitions/lexicalRelation" }
+            "items": {
+              "title": "Lexical Relation",
+              "$ref": "#/definitions/lexicalRelation"
+            }
           },
 
           "notes": {
@@ -312,7 +332,10 @@
             "type": "array",
             "uniqueItems": true,
             "description": "A collection of notes about this sense.",
-            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
+            "items": {
+              "title": "Note",
+              "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+            }
           },
 
           "references": {
@@ -320,7 +343,10 @@
             "type": "array",
             "uniqueItems": true,
             "description": "A collection of bibliographic references about this particular sense.",
-            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
+            "items": {
+              "title": "Reference",
+              "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#"
+            }
           },
 
           "scientificName": {
@@ -344,7 +370,10 @@
             "type": "array",
             "uniqueItems": true,
             "description": "A list of the appropriate usages for this sense. Example: `formal`, `medicinal`, `informal`, etc.",
-            "items": { "type": "string" }
+            "items": {
+              "title": "Usage",
+              "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+            }
           },
 
           "variantOf": {
@@ -363,10 +392,6 @@
             "$ref": "#/definitions/variantType"
           }
 
-        },
-
-        "default": {
-          "gloss": ""
         }
 
       }
@@ -377,9 +402,15 @@
       "$ref": "#/definitions/source"
     },
 
-    "tags": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#" },
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+    },
 
-    "url": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#" },
+    "url": {
+      "title": "URL",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    },
 
     "variantOf": {
       "title": "Variant Of",
@@ -444,8 +475,14 @@
         "description": "A reference to, and information about, a variant of the current lexeme / lexeme form / sense.",
         "additionalProperties": false,
         "properties": {
-          "type": { "$ref": "#/definitions/variantType" },
-          "referencedLexeme": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#" }
+          "variantType": {
+            "title": "Variant Type",
+            "$ref": "#/definitions/variantType"
+          },
+          "referencedLexeme": {
+            "title": "Referenced Lexeme",
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
+          }
         }
       }
     },

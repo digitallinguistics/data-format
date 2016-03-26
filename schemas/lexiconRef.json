@@ -10,7 +10,7 @@
     "lexicon": {
       "title": "Referenced Lexicon",
       "type": "string",
-      "description": "The name of the lexicon being referenced, or the lexicon that contains the item being referenced."
+      "description": "The abbreviation of the lexicon being referenced."
     },
 
     "lexiconUrl": {

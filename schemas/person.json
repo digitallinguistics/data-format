@@ -2,5 +2,13 @@
   "$schema": "http://json-schema.org/schema#",
   "id": "https://digitallinguistics.blob.core.windows.net/schemas/person-0.1.0.json#",
 
-  "title": "Person"
+  "title": "Person",
+
+  "required": [
+    "access"
+  ],
+
+  "properties": {
+    "access": {}
+  }
 }

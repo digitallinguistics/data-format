@@ -1,13 +1,37 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/bundle-1.0.2.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/bundle-1.1.0.json#",
   "title": "Bundle",
   "type": "object",
   "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
   "additionalProperties": true,
-  "required": [],
+  "required": [
+    "access",
+    "name"
+  ],
 
   "properties": {
+
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "An abbreviation for this bundle.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+    },
+
+    "access": {
+      "title": "Access Rights",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+    },
+
+    "dateCreated": {
+      "title": "Date Created",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
+    },
+
+    "dateModified": {
+      "title": "Date Modified",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified#"
+    },
 
     "locations": {
       "title": "Locations",
@@ -31,6 +55,23 @@
       }
     },
 
+    "name": {
+      "title": "Name",
+      "description": "A name for this bundle.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+    },
+
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "description": "A collection of notes about this bundle.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Note",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+      }
+    },
+
     "persons": {
       "title": "Persons",
       "type": "array",
@@ -40,6 +81,11 @@
         "title": "Person",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
       }
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
     },
 
     "texts": {

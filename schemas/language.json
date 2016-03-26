@@ -50,6 +50,16 @@
       }
     },
 
+    "dateCreated": {
+      "title": "Date Created",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
+    },
+
+    "dateModified": {
+      "title": "Date Modified",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified#"
+    },
+
     "locations": {
       "title": "Locations",
       "type": "array",

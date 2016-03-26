@@ -37,6 +37,12 @@
       "title": "Note Language",
       "description": "A language code or language name of the language that this note is written in.",
       "type": "string"
+    },
+
+    "source": {
+      "title": "Source (Person)",
+      "description": "The person who is the source of this note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
     }
 
   }
