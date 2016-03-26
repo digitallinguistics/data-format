@@ -20,7 +20,7 @@
 
     <section class="main-content">
       <h1>
-<a id="the-dlx-data-format" class="anchor" href="#the-dlx-data-format" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The DLx Data Format</h1>
+<a id="the-dlx-data-formats" class="anchor" href="#the-dlx-data-formats" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The DLx Data Formats</h1>
 
 <h2>
 <a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h2>
@@ -32,8 +32,12 @@
 <p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even without understanding how the format works, you can see the hierarchical relationship between phrases, words, and morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
 
 <pre><code>{
-  "transcription": "Hola, me llamo Daniel.",
-  "translation": "Hello, my name is Daniel.",
+  "transcription": {
+    "spa": "Hola, me llamo Daniel."
+  },
+  "translation": {
+    "eng": "Hello, my name is Daniel."
+  },
   "words": [
     {
       "token": "Hola",
@@ -103,6 +107,7 @@
 <li><a href="http://digitallinguistics.github.io/dlx-spec/lexeme.html">lexeme</a></li>
 <li><a href="http://digitallinguistics.github.io/dlx-spec/lexicon.html">lexicon</a></li>
 <li><a href="http://digitallinguistics.github.io/dlx-spec/orthography.html">orthography</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/phoneme.html">phoneme</a></li>
 <li><a href="http://digitallinguistics.github.io/dlx-spec/phrase.html">phrase</a></li>
 <li><a href="http://digitallinguistics.github.io/dlx-spec/text.html">text</a></li>
 <li><a href="http://digitallinguistics.github.io/dlx-spec/word.html">word</a></li>
@@ -111,7 +116,7 @@
 <h3>
 <a id="non-linguistic-schemas" class="anchor" href="#non-linguistic-schemas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Non-Linguistic Schemas</h3>
 
-<p>Other non-linguistic objects are given specifications as well:</p>
+<p>Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):</p>
 
 <table>
 <thead>
@@ -142,8 +147,24 @@
 <td>The date a database resource was created (<em>not</em> the date the item was recorded).</td>
 </tr>
 <tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/dateModified.html"><code>dateModified</code></a></td>
+<td>The date a database resource was last modified.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/dateRecorded.html"><code>dateRecorded</code></a></td>
+<td>The date a database resource (usually a text) was recorded.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/lexiconRef.html"><code>lexiconRef</code></a></td>
+<td>An object that contains a reference to any item in a lexicon.</td>
+</tr>
+<tr>
 <td><a href="http://digitallinguistics.github.io/dlx-spec/media.html"><code>media</code></a></td>
 <td>Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/multiLangString.html"><code>multiLangString</code></a></td>
+<td>An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.</td>
 </tr>
 <tr>
 <td><a href="http://digitallinguistics.github.io/dlx-spec/note.html"><code>note</code></a></td>
@@ -158,20 +179,19 @@
 <td>Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.</td>
 </tr>
 <tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/reference.html"><code>reference</code></a></td>
+<td>A bibliographic reference.</td>
+</tr>
+<tr>
 <td><a href="http://digitallinguistics.github.io/dlx-spec/tags.html"><code>tags</code></a></td>
 <td>A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.</td>
 </tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/url.html"><code>url</code></a></td>
+<td>A URL.</td>
+</tr>
 </tbody>
 </table>
-
-<h2>
-<a id="technical-notes" class="anchor" href="#technical-notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Technical Notes</h2>
-
-<ul>
-<li>JSON</li>
-<li>JSON Schema</li>
-<li>JSON-LD</li>
-</ul>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/digitallinguistics/dlx-spec">DLx Data Formats </a> is maintained by <a href="https://github.com/digitallinguistics">digitallinguistics</a>.</span>
