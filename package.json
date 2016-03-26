@@ -1,6 +1,6 @@
 {
   "name": "dlx-spec",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "The DLx specification for formatting linguistic data in JSON.",
   "keywords": [
     "DLx",
