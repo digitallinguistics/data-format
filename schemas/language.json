@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/language-1.0.1.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/language-1.0.1.json#",
   "title": "Language",
   "type": "object",
   "description": "The DLx framework uses the term `language` to refer broadly to any language variety - whether conceptualized as a language, dialect, or idiolect - at a particular point in time.",
@@ -12,7 +12,7 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "A short, human-readable abbreviation for this language.",
-      "$ref": "http://digitallinguistics.org/schemas/abbreviation#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
     },
 
     "codes": {
@@ -54,14 +54,14 @@
       "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data.",
       "items": {
         "title": "Location",
-        "$ref": "http://digitallinguistics.org/schemas/location#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
       }
     },
 
     "name": {
       "title": "Language Name",
       "description": "The name of this language, optionally in multiple orthographies.",
-      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
     "phomemes": {
@@ -70,7 +70,7 @@
       "description": "The phonological inventory for this language, i.e. a collection of phonemes.",
       "items": {
         "title": "Phoneme",
-        "$ref": "http://digitallinguistics.org/schemas/phoneme#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phoneme#"
       }
     },
 
@@ -80,7 +80,7 @@
       "description": "A collection of orthographies used to represent this language.",
       "items": {
         "title": "Orthography",
-        "$ref": "http://digitallinguistics.org/schemas/orthography#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/orthography#"
       }
     }
 

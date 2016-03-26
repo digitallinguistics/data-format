@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/lexeme-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexeme-1.0.0.json#",
 
   "title": "Lexeme",
   "type": "object",
@@ -17,7 +17,7 @@
       "title": "Citation Form",
       "description": "The citation form of a lexeme is the form given in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.",
       "type": "object",
-      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
     "examples": {
@@ -26,7 +26,7 @@
       "type": "array",
       "items": {
         "title": "Example Phrase",
-        "$ref": "http://digitallinguistics.org/schemas/phrase#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#"
       }
     },
 
@@ -58,7 +58,7 @@
                 "transcription": {
                   "title": "Transcription",
                   "description": "A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
-                  "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+                  "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
                 },
 
                 "environments": {
@@ -81,7 +81,7 @@
             "title": "Components",
             "type": "array",
             "description": "A list of the forms contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific lexeme form.",
-            "items": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#" }
           },
 
           "examples": {
@@ -90,14 +90,14 @@
             "description": "A collection of examples illustrating this form in use. Each example is a phrase.",
             "items": {
               "title": "Example Phrase",
-              "$ref": "http://digitallinguistics.org/schemas/phrase#"
+              "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#"
             }
           },
 
           "headword": {
             "title": "Headword",
             "description": "The dictionary headword that this form should be found under, optionally in multiple orthographies. If the `headword` attribute is missing or empty, programs should use the citation form for the headword, if present. Otherwise, the lemma form should be used. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
-            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
           },
 
           "includedIn": {
@@ -109,14 +109,14 @@
             "title": "Notes",
             "type": "array",
             "description": "A collection of notes about this lexeme form.",
-            "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
           },
 
           "references": {
             "title": "Bibliographic References",
             "type": "array",
             "description": "A collection of bibliographic references about this lexeme form, if it has been discussed in the literature.",
-            "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" }
+            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
           },
 
           "syllableStructure": {
@@ -127,7 +127,7 @@
 
           "tags": {
             "title": "Tags",
-            "$ref": "http://digitallinguistics.org/schemas/tags#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
           },
 
           "tone": {
@@ -139,7 +139,7 @@
           "transcription": {
             "title": "Transcription",
             "description": "A transcription of this lexeme form, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
-            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
           },
 
           "type": {
@@ -151,7 +151,7 @@
           "variantOf": {
             "title": "Variant Of",
             "description": "When this lexeme form is a variant of another lexeme form, this field will contain a reference to the other lexeme. Lexeme forms may only be variants of one other lexeme form.",
-            "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
           },
 
           "variants": {
@@ -189,7 +189,7 @@
       "title": "Lemma",
       "description": "The lemma form of this lexeme. In the DLx framework, a lemma is an abstract form meant to represent the lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be` (which would be its citation form). Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
       "type": "object",
-      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
     "lexicalRelations": {
@@ -206,7 +206,7 @@
       "title": "Literal Meaning",
       "description": "The literal meaning of the lexeme, optionally in multiple orthographies.",
       "type": "object",
-      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
     "morphemeType": {
@@ -219,14 +219,14 @@
       "title": "Notes",
       "description": "A collection of notes about this lexeme.",
       "type": "array",
-      "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
     },
 
     "references": {
       "title": "References",
       "description": "A collection of bibliographic references relating to this lexeme. For example, a particular lexeme may have been discussed in detail in a published article.",
       "type": "array",
-      "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
     },
 
     "senses": {
@@ -259,7 +259,7 @@
           "definition": {
             "title": "Definition",
             "description": "The definition for this particular sense, optionally in multiple orthographies.",
-            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
           },
 
           "derives": {
@@ -272,7 +272,7 @@
             "title": "Examples",
             "type": "array",
             "description": "A collection of examples of this sense in use. Each example is a phrase.",
-            "items": { "$ref": "http://digitallinguistics.org/schemas/phrase#" }
+            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#" }
           },
 
           "gloss": {
@@ -298,14 +298,14 @@
             "title": "Notes",
             "type": "array",
             "description": "A collection of notes about this sense.",
-            "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
           },
 
           "references": {
             "title": "Bibliographic References",
             "type": "array",
             "description": "A collection of bibliographic references about this particular sense.",
-            "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" }
+            "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
           },
 
           "scientificName": {
@@ -321,7 +321,7 @@
 
           "tags": {
             "title": "Tags",
-            "$ref": "http://digitallinguistics.org/schemas/tags#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
           },
 
           "usages": {
@@ -334,7 +334,7 @@
           "variantOf": {
             "title": "Variant Of",
             "description": "If this sense is a variant of another sense, a reference to the other sense should go here. An example use case might be if one speaker uses a word to mean one sense, and another speaker uses the same word to mean another thing.",
-            "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
           },
 
           "variants": {
@@ -361,14 +361,14 @@
       "$ref": "#/definitions/source"
     },
 
-    "tags": { "$ref": "http://digitallinguistics.org/schemas/tags#" },
+    "tags": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#" },
 
-    "url": { "$ref": "http://digitallinguistics.org/schemas/url#" },
+    "url": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#" },
 
     "variantOf": {
       "title": "Variant Of",
       "description": "When this lexeme is a variant of another lexeme, this field should contain a reference to the other lexeme. Lexemes may only be variants of one other lexeme.",
-      "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
     },
 
     "variants": {
@@ -389,7 +389,7 @@
       "title": "Included In",
       "description": "A list of references to lexemes or lexeme forms that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
       "type": "array",
-      "items": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#" }
     },
 
     "lexicalRelation": {
@@ -405,7 +405,7 @@
 
         "referencedLexeme": {
           "title": "Referenced Lexeme",
-          "$ref": "http://digitallinguistics.org/schemas/lexiconRef#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
         }
       }
     },
@@ -427,7 +427,7 @@
         "additionalProperties": false,
         "properties": {
           "type": { "$ref": "#/definitions/variantType" },
-          "referencedLexeme": { "$ref": "http://digitallinguistics.org/schemas/lexiconRef#" }
+          "referencedLexeme": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#" }
         }
       }
     },

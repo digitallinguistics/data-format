@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/contributor-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/contributor-1.0.0.json#",
 
   "title": "Contributor",
   "type": "object",
@@ -16,7 +16,7 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person.",
-      "$ref": "http://digitallinguistics.org/schemas/abbreviation#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
     },
 
     "name": {
@@ -36,7 +36,7 @@
     "person": {
       "title": "Person",
       "description": "A DLx person object containing more detailed information about this person.",
-      "$ref": "http://digitallinguistics.org/schemas/person#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
     }
 
   },

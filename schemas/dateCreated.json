@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/dateCreated-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated-1.0.0.json#",
   "type": "string",
   "title": "Date Created",
   "description": "The date this database object was created, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime) (*not* the date it was recorded; for that, see `dateRecorded`).",

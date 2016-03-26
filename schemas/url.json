@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/url-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/url-1.0.0.json#",
   "title": "URL",
   "type": "string",
   "format": "uri",
