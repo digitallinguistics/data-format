@@ -15,7 +15,7 @@
 
     "citationForm": {
       "title": "Citation Form",
-      "description": "The citation form of a lexeme is the form given in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. It may be represented in multiple orthographies.",
+      "description": "The citation form of a lexeme is the form given in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.",
       "type": "object",
       "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
     },
@@ -57,7 +57,7 @@
 
                 "transcription": {
                   "title": "Transcription",
-                  "description": "A transcription of this allomorph, optionally in multiple orthographies.",
+                  "description": "A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
                   "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
                 },
 
@@ -94,15 +94,9 @@
             }
           },
 
-          "form": {
-            "title": "Transcription",
-            "description": "A transcription of this lexeme form, optionally in multiple orthographies.",
-            "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
-          },
-
           "headword": {
             "title": "Headword",
-            "description": "The dictionary headword that this form should be found under, optionally in multiple orthographies. If the `headword` attribute is missing or empty, programs should use the citation form for the headword, if present. Otherwise, the lemma form should be used.",
+            "description": "The dictionary headword that this form should be found under, optionally in multiple orthographies. If the `headword` attribute is missing or empty, programs should use the citation form for the headword, if present. Otherwise, the lemma form should be used. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
             "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
           },
 
@@ -144,7 +138,7 @@
 
           "transcription": {
             "title": "Transcription",
-            "description": "A transcription of this lexeme form, optionally in multiple orthographies.",
+            "description": "A transcription of this lexeme form, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
             "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
           },
 
@@ -193,7 +187,7 @@
 
     "lemma": {
       "title": "Lemma",
-      "description": "The lemma form of this lexeme. In the DLx framework, a lemma is an abstract form meant to represent the lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be` (which would be its citation form). Lemmas may be represented in multiple orthographies.",
+      "description": "The lemma form of this lexeme. In the DLx framework, a lemma is an abstract form meant to represent the lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be` (which would be its citation form). Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
       "type": "object",
       "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
     },

@@ -9,8 +9,12 @@ The DLx project recommends JSON because it has become the data interchange forma
 
 ```
 {
-  "transcription": "Hola, me llamo Daniel.",
-  "translation": "Hello, my name is Daniel.",
+  "transcription": {
+    "spa": "Hola, me llamo Daniel."
+  },
+  "translation": {
+    "eng": "Hello, my name is Daniel."
+  },
   "words": [
     {
       "token": "Hola",

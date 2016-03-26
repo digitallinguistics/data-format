@@ -17,7 +17,7 @@
 
   "properties": {
 
-    "abbrev": {
+    "abbreviation": {
       "title": "Abbreviation",
       "$ref": "http://digitallinguistics.org/schemas/abbreviation#",
       "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."

@@ -1,14 +1,68 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/language-0.1.0.json",
+  "id": "http://digitallinguistics.org/schemas/language-1.0.1.json#",
   "title": "Language",
   "type": "object",
+  "description": "The DLx framework uses the term `language` to refer broadly to any language variety - whether conceptualized as a language, dialect, or idiolect - at a particular point in time.",
   "additionalProperties": true,
-  "required": [],
+  "required": ["name"],
 
   "properties": {
 
-    "codes": {},
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "A short, human-readable abbreviation for this language.",
+      "$ref": "http://digitallinguistics.org/schemas/abbreviation#"
+    },
+
+    "codes": {
+      "title": "Language Codes",
+      "type": "object",
+      "description": "An object containing any ISO 639-3 and Glottolog language codes for this language.",
+      "required": ["iso", "glottolog"],
+      "additionalProperties": false,
+      "properties": {
+
+        "iso": {
+          "title": "ISO 639-3 Codes",
+          "type": "array",
+          "description": "A list of ISO 639-3 codes that are applicable to this language variety.",
+          "items": {
+            "title": "ISO 639-3 Code",
+            "type": "string",
+            "pattern": "[a-z]{3}"
+          }
+        },
+
+        "glottolog": {
+          "title": "Glottolog Codes",
+          "type": "array",
+          "description": "A list of Glottolog codes that are applicable to this language variety.",
+          "items": {
+            "title": "Glottolog Code",
+            "type": "string",
+            "pattern": "[a-z]{4}[0-9]{4}"
+          }
+        }
+
+      }
+    },
+
+    "locations": {
+      "title": "Locations",
+      "type": "array",
+      "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data.",
+      "items": {
+        "title": "Location",
+        "$ref": "http://digitallinguistics.org/schemas/location#"
+      }
+    },
+
+    "name": {
+      "title": "Language Name",
+      "description": "The name of this language, optionally in multiple orthographies.",
+      "$ref": "http://digitallinguistics.org/schemas/multiLangString#"
+    },
 
     "phomemes": {
       "title": "Phonemes",
@@ -32,6 +86,15 @@
 
   },
 
-  "default": {}
+  "default": {
+    "abbreviation": "",
+    "codes": {
+      "iso": [],
+      "glottolog": []
+    },
+    "name": "",
+    "phonemes": [],
+    "orthographies": []
+  }
 
 }
