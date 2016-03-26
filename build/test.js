@@ -27,6 +27,7 @@ describe('schemas', function () {
 
     for (var schema in this.schemas) {
       expect(tv4.validate(this.schemas[schema], this.jsonSchema)).toBe(true);
+      if (tv4.error) { console.log(tv4.error); }
     }
 
   });
