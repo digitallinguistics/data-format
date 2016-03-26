@@ -86,6 +86,11 @@
         "title": "Orthography",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/orthography#"
       }
+    },
+
+    "url": {
+      "title": "URL",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
     }
 
   },
