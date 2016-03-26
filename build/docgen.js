@@ -1,8 +1,9 @@
 // generates the documentation pages
+// simply run `node build/docgen.js`
 const fs = require('fs');
 const jschemer = require('jschemer')();
 
-const filenames = fs.readdirSync('../schemas');
+const filenames = fs.readdirSync('schemas');
 
 filenames.forEach(filename => {
   if (filename.endsWith('.json')) {
