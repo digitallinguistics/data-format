@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexeme-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexeme-1.0.1.json#",
 
   "title": "Lexeme",
   "type": "object",
@@ -24,6 +24,7 @@
       "title": "Examples",
       "description": "A collection of examples illustrating this lexeme in use. Each example is a phrase from a text.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "title": "Example Phrase",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#"
@@ -34,6 +35,7 @@
       "title": "Forms",
       "description": "The different base forms that this lexeme has, other than its lemma form. These are usually suppletive forms of a root or stem, e.g. `ran` as the past form of `run`, or `men` as the plural form of `man`. A lexeme form is generally what is listed as an entry in the dictionary. In the usual scenario, the main entry is listed under the lemma form, and contains detailed information about the lexeme, while entries for each of the different lexeme forms are simply pointers to the main entry. If the lemma has allomorphs, you should list the lemma form again here.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
 
         "title": "Lexeme Form",
@@ -46,6 +48,7 @@
           "allomorphs": {
             "title": "Allomorphs",
             "type": "array",
+            "uniqueItems": true,
             "description": "A list of allomorphs of this form.",
             "items": {
 
@@ -64,6 +67,7 @@
                 "environments": {
                   "title": "Environments",
                   "type": "array",
+                  "uniqueItems": true,
                   "description": "A list of (morpho)phonological environments in which this allomorph occurs.",
                   "items": {
                     "title": "Environment",
@@ -87,6 +91,7 @@
           "examples": {
             "title": "Examples",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of examples illustrating this form in use. Each example is a phrase.",
             "items": {
               "title": "Example Phrase",
@@ -108,6 +113,7 @@
           "notes": {
             "title": "Notes",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of notes about this lexeme form.",
             "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
           },
@@ -115,6 +121,7 @@
           "references": {
             "title": "Bibliographic References",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of bibliographic references about this lexeme form, if it has been discussed in the literature.",
             "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
           },
@@ -196,6 +203,7 @@
       "title": "Lexical Relations",
       "description": "A list of the lexical relations that this lexeme has to other lexemes.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "title": "Lexical Relation",
         "$ref": "#/definitions/lexicalRelation"
@@ -219,6 +227,7 @@
       "title": "Notes",
       "description": "A collection of notes about this lexeme.",
       "type": "array",
+      "uniqueItems": true,
       "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
     },
 
@@ -226,6 +235,7 @@
       "title": "References",
       "description": "A collection of bibliographic references relating to this lexeme. For example, a particular lexeme may have been discussed in detail in a published article.",
       "type": "array",
+      "uniqueItems": true,
       "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
     },
 
@@ -233,6 +243,7 @@
       "title": "Senses",
       "description": "A collection of senses for this lexeme.",
       "type": "array",
+      "uniqueItems": true,
       "minItems": 1,
       "items": {
 
@@ -271,6 +282,7 @@
           "examples": {
             "title": "Examples",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of examples of this sense in use. Each example is a phrase.",
             "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#" }
           },
@@ -290,6 +302,7 @@
           "lexicalRelations": {
             "title": "Lexical Relations",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.",
             "items": { "$ref": "#/definitions/lexicalRelation" }
           },
@@ -297,6 +310,7 @@
           "notes": {
             "title": "Notes",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of notes about this sense.",
             "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
           },
@@ -304,6 +318,7 @@
           "references": {
             "title": "Bibliographic References",
             "type": "array",
+            "uniqueItems": true,
             "description": "A collection of bibliographic references about this particular sense.",
             "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#" }
           },
@@ -327,6 +342,7 @@
           "usages": {
             "title": "Usages",
             "type": "array",
+            "uniqueItems": true,
             "description": "A list of the appropriate usages for this sense. Example: `formal`, `medicinal`, `informal`, etc.",
             "items": { "type": "string" }
           },
@@ -389,6 +405,7 @@
       "title": "Included In",
       "description": "A list of references to lexemes or lexeme forms that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
       "type": "array",
+      "uniqueItems": true,
       "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#" }
     },
 
@@ -420,6 +437,7 @@
       "title": "Variants",
       "description": "A collection of variants of this lexeme / lexeme form / sense.",
       "type": "array",
+      "uniqueItems": true,
       "items": {
         "title": "Variant",
         "type": "object",

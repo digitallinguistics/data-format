@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/bundle-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/bundle-1.0.1.json#",
   "title": "Bundle",
   "type": "object",
   "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
@@ -13,6 +13,7 @@
       "title": "Locations",
       "type": "array",
       "description": "An array of locations included in this bundle (usually locations that were visited during a day or session).",
+      "uniqueItems": true,
       "items": {
         "title": "Location",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
@@ -23,6 +24,7 @@
       "title": "Media",
       "type": "array",
       "description": "An array of media files included in this bundle.",
+      "uniqueItems": true,
       "items": {
         "title": "Media File",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#"
@@ -33,6 +35,7 @@
       "title": "Persons",
       "type": "array",
       "description": "An array of persons included in this bundle.",
+      "uniqueItems": true,
       "items": {
         "title": "Person",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
@@ -43,6 +46,7 @@
       "title": "Texts",
       "type": "array",
       "description": "An array of texts included in this bundle.",
+      "uniqueItems": true,
       "items": {
         "title": "Text",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/text#"
