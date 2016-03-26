@@ -20,14 +20,14 @@
 
     "custom": {
       "title": "Custom Access Rights",
-      "description": "Users can use their own access schema/protocol by adding a <code>custom</code> attribute to the Access Rights object.",
+      "description": "Users can use their own access schema/protocol by adding a `custom` attribute to the Access Rights object.",
       "type": "string",
       "default": ""
     },
 
     "AILLA": {
       "title": "AILLA Access Level",
-      "description": "For users who are depositing their materials at The Archive of the Indigenous Languages of Latin America (AAILA) in Texas, an <code>\"AILLA\"</code> attribute may be added, and its value set to one of the access levels set forth by the archive.",
+      "description": "For users who are depositing their materials at The Archive of the Indigenous Languages of Latin America (AAILA) in Texas, an `AILLA` attribute may be added, and its value set to one of the access levels set forth by the archive.",
       "type": "string",
       "enum": [
         "public access",
@@ -40,7 +40,7 @@
 
     "ELAR": {
       "title": "ELAR Access Level",
-      "description": "For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an <code>\"ELAR\"</code> attribute may be added, and its value set to one of the access levels set forth by the archive.",
+      "description": "For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an `ELAR` attribute may be added, and its value set to one of the access levels set forth by the archive.",
       "type": "string",
       "enum": [
         "User",
@@ -51,5 +51,7 @@
       "default": "Researcher"
     }
 
-  }
+  },
+
+  "default": {}
 }

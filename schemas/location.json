@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/location-0.1.0.json#",
+  "title": "Location",
+  "description": "A location, optionally with accompanying geographic coordinate data."
+}
