@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/media-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/media-1.0.0.json#",
 
   "title": "Media File",
   "type": "object",
