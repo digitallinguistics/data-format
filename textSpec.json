@@ -15,59 +15,7 @@
     }
   },
 
-  "oneOf": [
-    { "properties": {
-        "participants": {
-          "description": "One of the persons in the Participants array must have a role of `speaker`. A more formalized way of expressing this constraint is given below. In prose form, it says that it must not be the case that every participant in the array does not have a `speaker` role (this is simply the inverse of saying that at least one participant in the array has a `speaker` role).",
-          "not": {
-            "items": {
-              "title": "Participant",
-              "type": "object",
-              "not": {
-                "properties": {
-                  "role": { "title": "Role", "type": "string", "enum": ["speaker"] }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-
-    { "properties": {
-        "phrases": {
-          "title": "Phrases",
-          "description": "Each phrase must have a non-empty `speaker` attribute. This is formalized below.",
-          "type": "array",
-          "allOf": [
-            { "$ref": "#/properties/phrases" },
-            { "items": { "required": ["speaker"] } }
-          ]
-        }
-      }
-    }
-  ],
-
   "properties": {
-
-    "location": { "title": "Location", "type": "string", "description": "A text description of the locale, neighborhood, city, region, locality, and/or country." },
-    "note": { "title": "Note", "type": "string", "description": "Any notes about this text." },
-    "tags": {
-      "title": "Tags",
-      "description": "An array of any tags for this text.",
-      "type": "array",
-      "uniqueItems": true,
-      "items": { "$ref": "#/definitions/tag" }
-    },
-    
-    "coordinates": {
-      "title": "GeoJSON Coordinates",
-      "description": "A pair of geographic coordinates where this text was recorded, following the GeoJSON specification for recording coordinates in an array: <a href=http://geojson.org/geojson-spec.html#positions>http://geojson.org/geojson-spec.html#positions</a>.",
-      "type": "array",
-      "minItems": 2,
-      "maxItems": 2,
-      "items": { "title": "GeoJSON Coordinate", "type": "number", "maximum": 360, "minimum": -360 }
-    },
 
     "mediaFiles": {
       "title": "Media",
