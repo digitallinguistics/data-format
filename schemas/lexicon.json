@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexicon-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexicon-1.0.0.json#",
 
   "title": "Lexicon",
   "description": "A lexicon is a collection of the linguistic signs, or *lexemes*, of a particular language at a particular point in time. Each entry in the lexicon provides information on the formal, semantic, behavioral/syntagmatic, and pragmatic/sociocultural properties of a single lexeme. Each lexeme in turn includes various *lexeme forms* - the different formal realizations of the word (e.g. *ran* vs. *run) - and *senses* - the different meanings that a lexeme can have.\n\nLexicons differ from dictionaries in that dictionaries may be thought of as lexicons that have been filtered and formatted for a specific audience. Lexicons, on the other hand, contain the raw, unfiltered data, and do not contain information about presentational format. This distinction allows for the creation of many different dictionaries, with different audiences, from a single lexicon.",
@@ -42,6 +42,7 @@
 
     "language": {
       "title": "Language",
+      "description": "A language object describing the language of the items in this lexicon. The language object must contain at least the `name` property.",
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language#"
     },
 
@@ -50,8 +51,10 @@
       "type": "array",
       "description": "The collection of lexemes in this lexicon.",
       "uniqueItems": true,
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexeme#" },
-      "default": []
+      "items": {
+        "title": "Lexeme",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexeme#"
+      }
     },
 
     "name": {
@@ -90,8 +93,7 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#",
-      "default": {}
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
     },
 
     "url": {
@@ -103,6 +105,11 @@
 
   "definitions": {},
 
-  "default": {}
+  "default": {
+    "access": {},
+    "language": {},
+    "lexemes": [],
+    "name": ""
+  }
 
 }
