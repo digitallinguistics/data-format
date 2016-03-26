@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/note-1.0.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/note-1.0.0.json#",
 
   "title": "Note",
   "description": "A note about this resource. Notes may also include `type` and `language` attributes.",

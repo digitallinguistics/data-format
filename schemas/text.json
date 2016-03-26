@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.org/schemas/text-0.1.1#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-0.1.1#",
 
   "title": "Text",
   "type": "object",
@@ -19,13 +19,13 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "$ref": "http://digitallinguistics.org/schemas/abbreviation#",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#",
       "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "http://digitallinguistics.org/schemas/access#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
     },
 
     "breadcrumb": {},
@@ -35,22 +35,22 @@
       "type": "array",
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
       "default": [],
-      "items": { "$ref": "http://digitallinguistics.org/schemas/contributor#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor#" }
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://digitallinguistics.org/schemas/dateCreated#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "http://digitallinguistics.org/schemas/dateModified#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified#"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "http://digitallinguistics.org/schemas/dateRecorded#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateRecorded#"
     },
 
     "discourseType": {
@@ -65,12 +65,12 @@
       "type": "string",
       "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
       "minLength": 1,
-      "$ref": "http://digitallinguistics.org/schemas/genre#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/genre#"
     },
 
     "location": {
       "title": "Location",
-      "$ref": "http://digitallinguistics.org/schemas/location#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
     },
 
     "media": {
@@ -78,7 +78,7 @@
       "type": "array",
       "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
       "default": [],
-      "items": { "$ref": "http://digitallinguistics.org/schemas/media#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#" }
     },
 
     "notes": {
@@ -86,7 +86,7 @@
       "type": "array",
       "description": "A collection of notes about this text.",
       "uniqueItems": true,
-      "items": { "$ref": "http://digitallinguistics.org/schemas/note#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
     },
 
     "phrases": {
@@ -94,7 +94,7 @@
       "type": "array",
       "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
       "default": [],
-      "items": { "$ref": "http://digitallinguistics.org/schemas/phrase#" },
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#" },
       "minItems": 1
     },
 
@@ -102,17 +102,17 @@
       "title": "References",
       "type": "array",
       "description": "A list of any bibliographic references concerning or relating to this text.",
-      "items": { "$ref": "http://digitallinguistics.org/schemas/CreativeWork#" }
+      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/CreativeWork#" }
     },
 
     "status": {
       "title": "Status",
-      "$ref": "http://digitallinguistics.org/schemas/status#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/status#"
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://digitallinguistics.org/schemas/tags#",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#",
       "default": {}
     },
 
@@ -134,7 +134,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "http://digitallinguistics.org/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
     }
 
   },
