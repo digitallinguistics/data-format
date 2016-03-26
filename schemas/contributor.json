@@ -21,16 +21,14 @@
 
     "name": {
       "title": "Name",
-      "type": "string",
       "description": "The name of this person. If the person is using a pseudonym in your data, you should use that pseudonym in this field.",
-      "minLength": 1
+      "$ref": "http://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
     "role": {
       "title": "Role",
-      "type": "string",
       "description": "The role that this person played in this text, e.g. `speaker` or `recorder`.",
-      "minLength": 1
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
     "person": {

@@ -3,5 +3,13 @@
   "id": "https://digitallinguistics.blob.core.windows.net/schemas/project-0.1.0.json#",
   "title": "Project",
   "type": "object",
-  "description": "An object containing information about a project. Projects are purely organizational objects containing references to various associated resoures."
+  "description": "An object containing information about a project. Projects are purely organizational objects containing references to various associated resoures.",
+
+  "required": [
+    "access"
+  ],
+
+  "properties": {
+    "access": {}
+  }
 }
