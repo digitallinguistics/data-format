@@ -27,11 +27,14 @@
     }
   ],
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
-  "scripts": {
-    "start": "node docgen.js"
-  },
   "devDependencies": {
-    "jschemer": "^0.1.1"
+    "azure-storage": "^0.9.0",
+    "jasmine": "^2.4.1",
+    "jschemer": "^0.1.1",
+    "tv4": "^1.2.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "test": "jasmine JASMINE_CONFIG_PATH=build/jasmine.json"
+  }
 }

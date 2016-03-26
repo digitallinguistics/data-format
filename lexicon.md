@@ -1,84 +1,68 @@
 # Lexicon Schema
-[ ] examples with ** allow for multiple orthographies
-[ ] custom attributes are allowed at any level
+* examples with ** allow for multiple orthographies
 
 ## Metadata
-[X] access rights
-[X] contributors
-[X] date created
-[X] date modified
-[X] language
-[X] lexemes
-[X] name
+[ ] access rights
+[ ] contributors
+[ ] date created
+[ ] date modified
+[ ] language
+[ ] lexemes
+[ ] name
+[ ] notes**
+[ ] references / bibliography
+[ ] tags
+[ ] url
+
+## Lexemes (Lexicon Entries)
+[X] citation form**
+[X] examples
+[X] (lexeme) forms (if different from lemma)
+[X] included in (lexeme, entry)
+[X] key (default language lemma + optional homonym number)
+[X] lemma (abstract representation)**
+[X] lexical relations / cross references (including historical relationships)
+[X] literal meaning**
+[X] morpheme type / (complex) form type
+[X] notes**
+[X] references / bibliography
+[X] senses (optional for minor entries)
+[X] source
+[X] tags (includes anthropological categories, semantic domains, academic domains, status, confidence level)
+[X] url
+[X] variant of
+[X] variants
+[X] variant type
+
+### Forms
+[X] allomorphs**
+[X] components
+[X] examples
+[X] headword**
+[X] included in (lexeme, form)
 [X] notes**
 [X] references / bibliography
 [X] tags
-[X] url
-
-## Lexemes (Lexicon Entries)
-[ ] citation form**
-[ ] examples
-[ ] headword**
-[ ] included in (lexeme, entry)
-[ ] lemma (abstract representation)**
-[ ] lexeme forms (if different from lemma)
-[ ] lexical relations / cross references
-[ ] morpheme type / (complex) form type
-[ ] notes**
-[ ] references / bibliography
-[ ] senses (optional for minor entries)
-[ ] source(s)
-[ ] status
-[ ] tags
-[ ] variants || variant type + variant of
-[ ] (anthropological category)
-[ ] (confidence level) = status?
-[ ] (frequency)
-[ ] (historical source(s))
-[ ] (literal meaning) = sense type?
-[ ] (semantic/academic domain)
-
-### Forms
-[ ] allomorphs**
-[ ] components
-[ ] examples
-[ ] form type (FLEx: stem name)
-[ ] headword**
-[ ] included in (lexeme, form)
-[ ] lemma (abstract representation)**
-[ ] lexical relations / cross references (???)
-[ ] notes**
-[ ] references / bibliography
-[ ] tags
-[ ] source(s)
-[ ] status
-[ ] variants || variant type + variant of
-[ ] (confidence level)
-[ ] (frequency)
-[ ] (historical source(s))
-[ ] (tone / tonal pattern)
-[ ] (syllable structure / CV pattern)
+[X] transcription
+[X] source(s)
+[X] variants || variant type + variant of
+[X] tone / tonal pattern
+[X] (form) type (FLEx: stem name)
+[X] syllable structure / CV pattern
 
 ### Senses
-[ ] argument structure (how? ValPal style?)
-[ ] definition**
-[ ] examples
-[ ] gloss**
-[ ] included in (lexeme, sense)
-[ ] lexical category / part of speech || morphosyntactic distribution
-  [ ] inflectional class
-  [ ] derivational source / target class
-[ ] lexical relations / cross-references
-[ ] notes**
-[ ] references / bibliography
-[ ] tags
-[ ] source(s)
-[ ] status
-[ ] usages
-[ ] variants || variant type + variant of
-[ ] (anthropological category)
-[ ] (confidence level)
-[ ] (frequency)
-[ ] (scientific name)
-[ ] (semantic/academic domain)
-[ ] (sense type)
+[X] argument structure
+[X] definition**
+[X] derives
+[X] examples
+[X] inflectional class
+[X] gloss
+[X] lexical category / part of speech || morphosyntactic distribution
+[X] lexical relations / cross-references
+[X] notes**
+[X] references / bibliography
+[X] source(s)
+[X] tags
+[X] usages
+[X] variants || variant type + variant of
+[X] scientific name

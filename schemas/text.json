@@ -17,7 +17,7 @@
 
   "properties": {
 
-    "abbrev": {
+    "abbreviation": {
       "title": "Abbreviation",
       "$ref": "http://digitallinguistics.org/schemas/abbreviation#",
       "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."
@@ -27,6 +27,8 @@
       "title": "Access Rights",
       "$ref": "http://digitallinguistics.org/schemas/access#"
     },
+
+    "breadcrumb": {},
 
     "contributors": {
       "title": "Contributors",
@@ -43,12 +45,12 @@
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "http://schema.org/dateModified#"
+      "$ref": "http://digitallinguistics.org/schemas/dateModified#"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "http://schema.org/dateRecorded#"
+      "$ref": "http://digitallinguistics.org/schemas/dateRecorded#"
     },
 
     "discourseType": {
@@ -63,12 +65,12 @@
       "type": "string",
       "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
       "minLength": 1,
-      "$ref": "http://schema.org/genre#"
+      "$ref": "http://digitallinguistics.org/schemas/genre#"
     },
 
     "location": {
       "title": "Location",
-      "$ref": "http://schema.org/location#"
+      "$ref": "http://digitallinguistics.org/schemas/location#"
     },
 
     "media": {
@@ -100,7 +102,7 @@
       "title": "References",
       "type": "array",
       "description": "A list of any bibliographic references concerning or relating to this text.",
-      "items": { "$ref": "http://schema.org/CreativeWork#" }
+      "items": { "$ref": "http://digitallinguistics.org/schemas/CreativeWork#" }
     },
 
     "status": {
@@ -132,7 +134,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "http://schema.org/url#"
+      "$ref": "http://digitallinguistics.org/schemas/url#"
     }
 
   },

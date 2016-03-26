@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://digitallinguistics.org/schemas/bundle-1.0.0.json#",
+  "title": "Bundle",
+  "type": "object",
+  "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
+  "additionalProperties": true,
+  "required": [],
+
+  "properties": {
+
+    "locations": {
+      "title": "Locations",
+      "type": "array",
+      "description": "An array of locations included in this bundle (usually locations that were visited during a day or session).",
+      "items": {
+        "title": "Location",
+        "$ref": "http://digitallinguistics.org/schemas/location#"
+      }
+    },
+
+    "media": {
+      "title": "Media",
+      "type": "array",
+      "description": "An array of media files included in this bundle.",
+      "items": {
+        "title": "Media File",
+        "$ref": "http://digitallinguistics.org/schemas/media#"
+      }
+    },
+
+    "persons": {
+      "title": "Persons",
+      "type": "array",
+      "description": "An array of persons included in this bundle.",
+      "items": {
+        "title": "Person",
+        "$ref": "http://digitallinguistics.org/schemas/person#"
+      }
+    },
+
+    "texts": {
+      "title": "Texts",
+      "type": "array",
+      "description": "An array of texts included in this bundle.",
+      "items": {
+        "title": "Text",
+        "$ref": "http://digitallinguistics.org/schemas/text#"
+      }
+    }
+  }
+
+}

@@ -36,7 +36,7 @@
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "http://schema.org/dateModified#",
+      "$ref": "http://digitallinguistics.org/schemas/dateModified#",
       "default": ""
     },
 
@@ -83,8 +83,8 @@
     "references": {
       "title": "References",
       "type": "array",
-      "description": "A list of any bibliographic references concerning or relating to this lexicon.",
-      "items": { "$ref": "http://schema.org/CreativeWork#" },
+      "description": "A collection of any bibliographic references concerning or relating to this lexicon.",
+      "items": { "$ref": "http://digitallinguistics.org/schemas/reference#" },
       "default": []
     },
 
@@ -96,7 +96,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "http://schema.org/url#"
+      "$ref": "http://digitallinguistics.org/schemas/url#"
     }
 
   },
