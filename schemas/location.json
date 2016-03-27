@@ -4,7 +4,6 @@
   "title": "Location",
   "description": "A location, optionally with accompanying geographic coordinate data. Each location should also be a valid GeoJSON geometry object.",
   "required": [
-    "access",
     "name"
   ],
 

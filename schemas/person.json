@@ -3,12 +3,38 @@
   "id": "https://digitallinguistics.blob.core.windows.net/schemas/person-0.1.0.json#",
 
   "title": "Person",
+  "type": "object",
+  "description": "An object providing information about a person.",
 
-  "required": [
-    "access"
-  ],
+  "required": [],
 
   "properties": {
-    "access": {}
+
+    "abbreviation": {},
+
+    "access": {},
+
+    "address": {},
+
+    "birthdate": {},
+
+    "birthplace": {},
+
+    "email": {},
+
+    "familyName": {},
+
+    "gender": {},
+
+    "givenName": {},
+
+    "languages": {},
+
+    "notes": {},
+
+    "phone": {},
+
+    "pseudonym": {}
+
   }
 }
