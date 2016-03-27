@@ -1,3 +1,16 @@
 {
-  "minProperties": 1
+  "$schema": "http://json-schema.org/schema#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-1.0.0.json#",
+  "title": "Multi-Language Text / String",
+  "type": "object",
+  "description": "This object represents a piece of data or text in multiple languages or orthographies. For example, a transcription might be written in both a practical orthography and in IPA; or a translation might be given in both English and Spanish. Each representation of the piece of data should have its own attribute, where the attribute is the abbreviation for the language/orthography, and the value is the text itself (the transcription, the translation, etc.).",
+  "minProperties": 1,
+  "additionalProperties": true,
+  "patternProperties": {
+    "^[(a-z)|(A-Z)|(0-9)]+$": {
+      "title": "Text / String",
+      "type": "string",
+      "description": "The text for this orthography."
+    }
+  }
 }
