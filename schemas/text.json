@@ -8,7 +8,6 @@
   "description": "A text is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc.",
 
   "required": [
-    "access",
     "phrases",
     "title"
   ],

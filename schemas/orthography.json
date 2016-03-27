@@ -1,7 +1,107 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/orthography-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/orthography-1.0.0.json#",
   "title": "Orthography",
   "type": "object",
-  "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators."
+  "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
+  "required": [
+    "abbreviation",
+    "graphemes",
+    "name"
+  ],
+
+  "properties": {
+
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "An abbreviation for this orthography.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+    },
+
+    "graphemes": {
+      "title": "Graphemes",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A collection of graphemes, i.e. units of writing within a writing system, for this orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).",
+      "items": {
+
+        "title": "Grapheme",
+        "type": "object",
+        "description": "An object representing a grapheme.",
+        "required": ["form"],
+        "properties": {
+
+          "allographs": {
+            "title": "Allographs",
+            "type": "array",
+            "uniqueItems": true,
+            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `t` in an English orthography would have the allograph `T`.",
+            "items": {
+              "title": "Allograph",
+              "type": "string"
+            }
+          },
+
+          "form": {
+            "title": "Grapheme Form",
+            "type": "string",
+            "description": "The written form of this grapheme. Graphemes should include their diacritics. For example, `c` and `č` should be considered separate graphemes, unless they are allographs. Do not include graphemes for characters that only occur as part of a digraph (or trigraph, etc.). For example, standard Swahili orthography has a grapheme `ch`, but no grapheme `c` by itself, so `c` would not be listed as a grapheme, only `ch`."
+          },
+
+          "name": {
+            "title": "Grapheme Name",
+            "description": "The name of this grapheme, if any. The grapheme name can be represented in one or more orthographies (for example, the grapheme `a` in English could be represented as `A` in the English orthography itself, or as `eɪ` in an IPA orthography.)",
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+          },
+
+          "pronunciations": {
+            "title": "Pronunciations",
+            "type": "array",
+            "uniqueItems": true,
+            "description": "A list of the possible pronunciations of this grapheme. It may be difficult or impossible to fill in this field for all orthographies (like English).",
+            "items": {
+              "title": "Pronunciation",
+              "type": "string"
+            }
+          }
+
+        }
+
+      }
+    },
+
+    "name": {
+      "title": "Orthography Name",
+      "description": "The name of this orthography, optionally in multiple languages/orthographies.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+    },
+
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "description": "A collection of notes about this orthography.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Note",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+      }
+    },
+
+    "punctuation": {
+      "title": "Punctuation",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A list of all the punctuation characters in this orthography, including white space and non-breaking characters.",
+      "items": {
+        "title": "Punctuation Character",
+        "type": "string"
+      }
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+    }
+
+  }
 }
