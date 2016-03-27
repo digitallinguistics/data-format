@@ -7,7 +7,6 @@
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaUrl` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, or scans of field notes.",
 
   "required": [
-    "access",
     "filename",
     "format",
     "languages",

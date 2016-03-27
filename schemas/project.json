@@ -5,9 +5,7 @@
   "type": "object",
   "description": "An object containing information about a project. Projects are purely organizational objects containing references to various associated resoures.",
 
-  "required": [
-    "access"
-  ],
+  "required": [],
 
   "properties": {
     "access": {}
