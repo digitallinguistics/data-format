@@ -10,31 +10,127 @@
 
   "properties": {
 
-    "abbreviation": {},
+    "abbreviation": {
+      "title": "Abbreviation",
+      "description": "An abbreviation for this person.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+    },
 
-    "access": {},
+    "access": {
+      "title": "Access Rights",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+    },
 
-    "address": {},
+    "address": {
+      "title": "Address",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/address#"
+    },
 
-    "birthdate": {},
+    "birthDate": {
+      "title": "Birth Date",
+      "type": "string",
+      "format": "date-time",
+      "description": "This person's birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime)."
+    },
 
-    "birthplace": {},
+    "birthPlace": {
+      "title": "Birth Place",
+      "description": "This person's place of birth, as a location object.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
+    },
 
-    "email": {},
+    "email": {
+      "title": "Email",
+      "type": "string",
+      "format": "email",
+      "description": "This person's email."
+    },
 
-    "familyName": {},
+    "familyName": {
+      "title": "Family Name(s) / Last Name(s)",
+      "type": "string",
+      "description": "This person's family name(s) (last name(s))."
+    },
 
-    "gender": {},
+    "gender": {
+      "title": "Gender",
+      "type": "string",
+      "description": "This person's self-reported gender identity."
+    },
 
-    "givenName": {},
+    "givenName": {
+      "title": "Given Name(s) / First Name(s)",
+      "type": "string",
+      "description": "This person's given name(s) (first name(s)), including middle name(s), if any."
+    },
 
-    "languages": {},
+    "languages": {
+      "title": "Languages Spoken",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A list of the languages that this person speaks. Each language should be a DLx Language object, optionally with a few additional properties such as `ageLearned`, etc. Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.",
+      "items": {
 
-    "notes": {},
+        "title": "Language Spoken",
+        "allOf": [
+          { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language#" },
+          {
+            "additionalProperties": true,
+            "properties": {
 
-    "phone": {},
+              "ageLearned": {
+                "title": "Age Learned",
+                "type": "integer",
+                "description": "The age at which this person learned this language."
+              },
 
-    "pseudonym": {}
+              "notes": {
+                "title": "Notes",
+                "type": "array",
+                "uniqueItems": true,
+                "description": "Notes about this person's use of this language.",
+                "items": {
+                  "title": "Note",
+                  "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+                }
+              },
+
+              "proficiency": {
+                "title": "Proficiency",
+                "type": "string",
+                "description": "The proficiency level of this person in this language."
+              },
+
+              "yearsKnown": {
+                "title": "Years Known",
+                "type": "integer",
+                "description": "The number of years this person has known this language."
+              }
+
+            }
+          }
+        ]
+
+      }
+    },
+
+    "notes": {
+      "title": "Notes",
+      "description": "Notes about this person.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+    },
+
+    "phone": {
+      "title": "Phone Number",
+      "type": "string",
+      "description": "A phone number for this person."
+    },
+
+    "pseudonym": {
+      "title": "Pseudonym",
+      "type": "string",
+      "description": "A pseudonym for this person."
+    }
 
   }
 }
