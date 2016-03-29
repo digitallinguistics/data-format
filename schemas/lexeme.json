@@ -115,6 +115,12 @@
             "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
           },
 
+          "gloss": {
+            "title": "Gloss",
+            "description": "A Leipzig-style gloss for the entire lexeme. Use this field instead of (or in addition to) the gloss field within a sense when there is a single gloss that applies to all the senses for this lexeme.",
+            "type": "string"
+          },
+
           "includedIn": {
             "title": "Included In",
             "$ref": "#/definitions/includedIn"

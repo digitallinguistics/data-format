@@ -1,1 +1,68 @@
-{}
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/word-0.1.0.json#",
+
+  "title": "Word",
+  "description": "In the DLx framework, a word refers to a specific token in context, rather than an abstract type. Each word maps to one or more morphemes.",
+
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "transcription",
+    "translation"
+  ],
+
+  "properties": {
+
+    "components": {
+      "title": "Word Components",
+      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Note that each component here is a reference to a lexicon item in a lexicon associated with this text. At a minimum, the reference must contain a unique lemma form, lexeme form, or lexeme key.",
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "title": "Lexicon Item",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
+      }
+    },
+
+    "gloss": {
+      "title": "Gloss",
+      "description": "A Leipzig-style gloss for this word. This does not always need to be supplied if it can be generated automatically from the glosses at the morpheme level.",
+      "type": "string"
+    },
+
+    "notes": {
+      "title": "Notes",
+      "description": "A collection of notes about this token.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Note",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+      }
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+    },
+
+    "transcription": {
+      "title": "Transcription",
+      "description": "A transcription of this word, optionally in multiple orthographies.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+    },
+
+    "translation": {
+      "title": "Translation",
+      "description": "A translation of this word, optionally in multiple languages/orthographies. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+    },
+
+    "url": {
+      "title": "URL",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    }
+
+  }
+}
