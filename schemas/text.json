@@ -75,6 +75,7 @@
     "media": {
       "title": "Media",
       "type": "array",
+      "uniqueItems": true,
       "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
       "default": [],
       "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#" }

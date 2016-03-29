@@ -4,7 +4,7 @@
 
   "title": "Media File",
   "type": "object",
-  "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaUrl` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, or scans of field notes.",
+  "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaUrl` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
 
   "required": [
     "filename",
@@ -12,6 +12,8 @@
     "languages",
     "mediaUrl"
   ],
+
+  "additionalProperties": true,
 
   "properties": {
 
@@ -51,6 +53,12 @@
     "dateRecorded": {
       "title": "Date Recorded",
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateRecorded#"
+    },
+
+    "endTime": {
+      "title": "End Time",
+      "description": "Within an audiovisual file, the time at which the relevant linguistic data ends, or the time at which an offset should be calculcated from. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.",
+      "type": "number"
     },
 
     "filename": {
@@ -127,6 +135,12 @@
         "title": "Person",
         "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
       }
+    },
+
+    "startTime": {
+      "title": "Start Time",
+      "description": "Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. Programs may use this field in different ways. For example, if the camera started recording five minutes before the speaker began speaking, the `Start Time` might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.",
+      "type": "number"
     },
 
     "tags": {
