@@ -1,24 +1,5 @@
 {
 
-  "participants": {
-    "title": "Participants",
-    "type": "array",
-    "minItems": 1,
-    "items": {
-      "title": "Participant",
-      "description": "A <dfn>participant</dfn> is anyone who contributed to the creation or analysis of the text, and the role they played (e.g. recording, transcribing, speaking, etc.). A `Participant` is not just a `Person` object (see the DLX <a href=personSpec.html>Person</a> specification for that), but rather it is an object which specifies the particular role a person played in producing this text. It is a pairing of person and role. The `person` field references a `Person` object, following the DLX <a href=personSpec.html'>Person</a> specification.",
-      "type": "object",
-      "required": ["name", "role"],
-
-      "properties": {
-        "abbreviation": { "title": "Abbreviation", "type": "string", "description": "The participant <dfn>abbreviation</dfn> is a human-readable key for referring to this person, usually but not always consisting of the person’s initials. Other schemas might be `A` and `B` respectively for speakers A and B, for example. The participant abbreviation may contain only letters a-z, A-Z, and numbers 0-9 (no spaces allowed)." },
-        "name": { "title": "Name", "type": "string", "description": "The name of this participant. If a pseudonym is used for this participant, that pseudonym should be used here instead of the participant’s real name. Their real name should be stored in the `Person` object for that person." },
-        "role": { "title": "Role", "type": "string", "description": "The role that this person played in the creation or curation of this text, e.g. speaker, translator, transcriber, rehearer, editor, checker, glosser, researcher, etc." },
-        "person": { "title": "Person", "$ref": "http://digitallinguistics.github.io/personSpec.json", "description": "The `person` field references a `Person` object. This must be a valid `Person` object, following the <a href=personSpec.html>Person</a> specification." }
-      }
-    }
-  },
-
   "phrases": {
     "title": "Phrases",
     "items": {
