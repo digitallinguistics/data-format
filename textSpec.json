@@ -1,20 +1,5 @@
 {
 
-  "definitions": {
-    "tag": {
-      "title": "Tag",
-      "description": "A <dfn>tag</dfn> is a piece of metadata that can be applied to any linguistic object, in order to associate related objects together. Each DLX `Tag` object consists of a `category` and an optional `value` or subcategory. Both `category` and `value` must be text (numbers will be converted into text).",
-      "type": "object",
-      "required": ["category"],
-      "additionalProperties": false,
-
-      "properties": {
-        "category": { "title": "Category", "type": "string", "description": "The category for this tag." },
-        "value": { "title": "Value", "type": "string", "description": "The value for this tag." }
-      }
-    }
-  },
-
   "properties": {
 
     "mediaFiles": {
