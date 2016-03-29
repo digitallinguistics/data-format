@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/phrase-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/phrase-1.0.0.json#",
 
   "title": "Phrase",
   "description": "A phrase is a segmentation of a text above the word level. The DLx framework imposes no requirements regarding how this segmentation should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase object consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
