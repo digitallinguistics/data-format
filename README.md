@@ -1,4 +1,5 @@
 # The DLx Data Formats
+A collection of JSON Schemas for representing scientific linguistic data.
 
 ## Introduction
 There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as `"lang"` or `"language"`?
