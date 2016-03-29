@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/person-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/person-1.0.0.json#",
 
   "title": "Person",
   "type": "object",
