@@ -26,6 +26,7 @@ describe('schemas', function () {
   it('are valid schemas', function () {
 
     for (var schema in this.schemas) {
+      console.log(`${schema}: ${tv4.validate(this.schemas[schema], this.jsonSchema)}`);
       expect(tv4.validate(this.schemas[schema], this.jsonSchema)).toBe(true);
       if (tv4.error) { console.log(tv4.error); }
     }
