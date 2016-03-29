@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-0.1.1#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-1.1.0#",
 
   "title": "Text",
   "type": "object",
@@ -18,8 +18,7 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#",
-      "description": "A human-readable abbreviation for this text, containing only letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed)."
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
     },
 
     "access": {
@@ -27,14 +26,14 @@
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
     },
 
-    "breadcrumb": {},
-
     "contributors": {
       "title": "Contributors",
       "type": "array",
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
-      "default": [],
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor#" }
+      "items": {
+        "title": "Contributor",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor#"
+      }
     },
 
     "dateCreated": {
@@ -69,6 +68,7 @@
 
     "location": {
       "title": "Location",
+      "description": "The location where this text was recorded.",
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
     },
 
@@ -77,8 +77,10 @@
       "type": "array",
       "uniqueItems": true,
       "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
-      "default": [],
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#" }
+      "items": {
+        "title": "Media Items",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#"
+      }
     },
 
     "notes": {
@@ -86,15 +88,20 @@
       "type": "array",
       "description": "A collection of notes about this text.",
       "uniqueItems": true,
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#" }
+      "items": {
+        "title": "Note",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+      }
     },
 
     "phrases": {
       "title": "Phrases",
       "type": "array",
       "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
-      "default": [],
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#" },
+      "items": {
+        "title": "Phrase",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#"
+      },
       "minItems": 1
     },
 
@@ -102,7 +109,10 @@
       "title": "References",
       "type": "array",
       "description": "A list of any bibliographic references concerning or relating to this text.",
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/CreativeWork#" }
+      "items": {
+        "title": "Reference",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/CreativeWork#"
+      }
     },
 
     "status": {
@@ -112,8 +122,7 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#",
-      "default": {}
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
     },
 
     "title": {
@@ -126,8 +135,7 @@
           "title": "Transcription",
           "type": "string",
           "description": "A transcription of the title, in the orthography specified by the field's attribute name.",
-          "minLength": 1,
-          "default": ""
+          "minLength": 1
         }
       }
     },
@@ -137,19 +145,6 @@
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
     }
 
-  },
-
-  "default": {
-    "title": {},
-    "phrases": [],
-    "abbrev": "",
-    "access": {},
-    "contributors": [],
-    "dateCreated": "(Date.now())",
-    "media": [],
-    "notes": {},
-    "tags": {},
-    "url": ""
   }
 
 }
