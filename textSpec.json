@@ -1,175 +1,92 @@
 {
 
-  "phrases": {
-    "title": "Phrases",
-    "items": {
-      "title": "Phrase",
-      "description": "A <dfn>phrase</dfn> is a segmentation of a text above the word level. The DLX specification imposes no requirements regarding how linguists should implement this segmentation — a linguist may choose to segement the text based on intonation units, turns, sentences, or any other appropriate subdivision. A `Phrase` consists minimally of a `Transcription`, a `Translation`, and an array of `Words` (though the words array may be empty).<br>If the `participants` array in the `Text` contains a single `Participant` with the `role` of `speaker`, that speaker is assumed to be the speaker for every phrase in the `Text`. If there is more than one `Participant` in the text with the `role` of `speaker`, each `Phrase` must have its speaker specified in the `speaker` property.<br>If a phrase has a `startTime`, it must have an `endTime`, and vice versa.",
+  "title": "Word",
+  "description": "A <dfn>word</dfn> is typically defined as the smallest freestanding unit in a language, although this unit varies depending on whether one uses phonological or syntactic criteria. A linguistic word conists of one or more morphemes. A DLX `Word` object consists minimally of a `'token'` string and an array of `'morphemes'` (even if the array is empty).",
+  "type": "object",
+  "required": ["morphemes", "token"],
+  "additionalProperties": true,
+
+  "properties": {
+
+    "note": { "type": "string" },
+
+    "glosses": {
+      "title": "Word Glosses",
+      "description": "A <dfn>word gloss</dfn> is a brief annotation of a word, morpheme, or other linguistic structure in a text. The `Word Glosses` object contains all the word-level glosses for a given word (glosses for individual morphemes within the word are provided in the `Morpheme` object; word glosses only gloss the word as a whole). The attribute (key, field name) for each gloss is the type of gloss, e.g. 'pedagogical' or 'Leipzig', while the value for the gloss is the gloss itself, e.g. '<span style='font-variant: small-caps;'>DET</span>' or 'he.eats'.",
       "type": "object",
-      "required": ["transcription", "translation", "words"],
-      "dependencies": {
-        "startTime": ["endTime"],
-        "endTime": ["startTime"]
+
+      "patternProperties": {
+        "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Gloss" }
       },
-      "additionalProperties": true,
 
-      "properties": {
+      "additionalProperties": false
+    },
 
-        "startTime": { "title": "Start Time", "description": "The starting timestamp for this phrase, in seconds and milliseconds.", "type": "number", "pattern": "^[0-9]{1,2}.[0-9]+$" },
-        "endTime": { "title": "End Time", "description": "The ending timestamp for this phrase, in seconds and milliseconds.", "type": "number", "pattern": "^[0-9]{1,2}.[0-9]+$" },
-        "note": { "title": "Note", "description": "Any additional notes about this phrase.", "type": "string" },
-        "speaker": { "title": "Speaker", "description": "The person who spoke this phrase. This value must match either the `name` or `abbreviation` of a `Participant` in the `Participants` array.", "type": "string" },
-        "tags": {
-          "title": "Tags",
-          "type": "array",
-          "uniqueItems": true,
-          "items": { "$ref": "#/definitions/tag" }
-        },
+    "token": {
+      "title": "Word Token",
+      "description": "A <dfn>word token</dfn> is an individual instance of a word in context (as opposed to an abstract <dfn>word type</dfn> or <dfn>wordform</dfn>). Like phrases, each word token can be transcribed using different orthographies or conventions. The `Token` object holds all of those transcriptions of the individual token. The `Token` object is required, and must contain at least 1 representation of the token.",
+      "type": "object",
+      "minProperties": 1,
 
-        "transcription": {
+      "patternProperties": {
+        "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Representation" }
+      },
 
-          "title": "Transcription",
-          "description": "A <dfn>transcription</dfn> is a phonemic representation of the phrase in a particular orthography. The `transcription` attribute may be either a simple text string (when only one orthography is being used for transcription), or an object whose attributes are different orthographies (when multiple orthographies are being used to represent the same phrase). There must be at least one transcription specified for every phrase.",
+      "additionalProperties": false
+    },
 
-          "oneOf": [
-            {
-              "description": "The single transcription for this phrase. If this option is chosen, the `Text` object must have a `Default Transcription` specified. If there are multiple translations or representations of this transcription, `transcription` should be an object instead (see the other option for the `Transcription` object).",
-              "type": "string"
-            },
-            {
-              "description": "The transcriptions for this phrase. Use this option when the phrase has multiple transcriptions in different orthographies. The `transcription` attribute in this case should be an object containing each of these different representations. The attribute of each representation should be the name of the orthography, (e.g. `MixtecPhonemic`), while the value is the transcription itself. Each phrase must have at least 1 transcription within the `Transcription` object if this option is selected.",
-              "type": "object",
-              "minProperties": 1,
-              "patternProperties": {
-                "^[(a-z)|(A-Z)|(0-9)]+$": {
-                  "type": "string",
-                  "title": "Transcription",
-                  "description": "The transcription for this phrase, in the particular orthography specified by the attribute. The field name is the name of the orthography.",
-                  "requireSelf": true
-                }
-              },
-              "additionalProperties": false
-            }
-          ]
-        },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "#/definitions/tag" }
+    },
 
-        "translation": {
-          "title": "Translation",
-          "description": "The translation(s) for this phrase. There may be multiple translations per phrase, in different languages or styles (e.g. literal vs. free translations, English vs. Swahili translations, etc.). The `Translation` may either be a simple string (when there is only one translation for the phrase), or an object whose attributes are the names of different orthographies (when there are multiple translations or types of translations for the phrase).",
+    "morphemes": {
 
-          "oneOf": [
-            {
-              "type": "string",
-              "description": "The single translation for this phrase. If this option is chosen, the `Text` object must have a `Default Translation` specified. If there are multiple translations or representations of this translation, `translation` should be an object instead (see the other option for the `Translation` object)."
-            },
-            {
-              "type": "object",
-              "description": "The translations for this phrase. Use this option when the phrase has multiple translations in different orthographies or different styles. The `translation` attribute in this case should be an object containing each of these different translations. The attribute of each representation should be the name of the orthography, (e.g. `EnglishLiteral`), while the value is the translation itself. Each phrase must have at least 1 translation within the `Translation` object if this option is selected, although the value may be an empty string.",
-              "minProperties": 1,
-              "patternProperties": {
-                "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Translation", "description": "The translation for this phrase, in the particular orthography specified by the attribute. The field name is the name of the orthography.", "requireSelf": true }
-              },
-              "additionalProperties": false
-            }
-          ]
-        },
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
 
-        "words": {
-          "type": "array",
-          "items": {
+        "title": "Morpheme",
+        "description": "A <dfn>morpheme</dfn> is generally defined as the smallest grammatical unit, or unit of meaning, in a language. Each `Morpheme` object within a `Text` represents a linguistic token of that morpheme, rather than a type. A `Morpheme` consists minimally of `'token'` and `'gloss'` strings.",
+        "type": "object",
+        "required": ["token", "glosses"],
+        "additionalProperties": true,
 
-            "title": "Word",
-            "description": "A <dfn>word</dfn> is typically defined as the smallest freestanding unit in a language, although this unit varies depending on whether one uses phonological or syntactic criteria. A linguistic word conists of one or more morphemes. A DLX `Word` object consists minimally of a `'token'` string and an array of `'morphemes'` (even if the array is empty).",
+        "properties": {
+
+          "note": { "type": "string" },
+
+          "token": {
+            "title": "Morpheme Token",
+            "description": "A <dfn>morpheme token</dfn> is a specific instance of a morpheme in context (as opposed to an abstract <dfn>morpheme type</dfn> that you might find in a dictionary). The `Morphme Token` object contains all the representations/transcriptions of a particular morpheme token. The `Morpheme Token` object is required, and must have at least 1 representation of the token in it.",
             "type": "object",
-            "required": ["morphemes", "token"],
-            "additionalProperties": true,
+            "minProperties": 1,
 
-            "properties": {
+            "patternProperties": {
+              "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Representation" }
+            },
 
-              "note": { "type": "string" },
+            "additionalProperties": false
+          },
 
-              "glosses": {
-                "title": "Word Glosses",
-                "description": "A <dfn>word gloss</dfn> is a brief annotation of a word, morpheme, or other linguistic structure in a text. The `Word Glosses` object contains all the word-level glosses for a given word (glosses for individual morphemes within the word are provided in the `Morpheme` object; word glosses only gloss the word as a whole). The attribute (key, field name) for each gloss is the type of gloss, e.g. 'pedagogical' or 'Leipzig', while the value for the gloss is the gloss itself, e.g. '<span style='font-variant: small-caps;'>DET</span>' or 'he.eats'.",
-                "type": "object",
+          "glosses": {
+            "title": "Morpheme Glosses",
+            "description": "A <dfn>morpheme gloss</dfn> is a brief annotation of the meaning of a morpheme. The `Morpheme Glosses` object contains all the glosses for a given morpheme. The attribute (key, field name) for each gloss is the type of gloss, e.g. 'pedagogical' or 'Leipzig', while the value for the gloss is the gloss itself, e.g. '<span style='font-variant: small-caps;'>DET</span>' or 'hand' or '<span style='font-variant: small-caps;'>CAUS</span>'. Each `Morpheme` requires a gloss, even if the field is an empty string.",
+            "type": "object",
+            "minProperties": 1,
 
-                "patternProperties": {
-                  "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Gloss" }
-                },
+            "patternProperties": {
+              "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Gloss" }
+            },
 
-                "additionalProperties": false
-              },
+            "additionalProperties": false
+          },
 
-              "token": {
-                "title": "Word Token",
-                "description": "A <dfn>word token</dfn> is an individual instance of a word in context (as opposed to an abstract <dfn>word type</dfn> or <dfn>wordform</dfn>). Like phrases, each word token can be transcribed using different orthographies or conventions. The `Token` object holds all of those transcriptions of the individual token. The `Token` object is required, and must contain at least 1 representation of the token.",
-                "type": "object",
-                "minProperties": 1,
-
-                "patternProperties": {
-                  "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Representation" }
-                },
-
-                "additionalProperties": false
-              },
-
-              "tags": {
-                "type": "array",
-                "uniqueItems": true,
-                "items": { "$ref": "#/definitions/tag" }
-              },
-
-              "morphemes": {
-
-                "type": "array",
-                "uniqueItems": false,
-                "items": {
-
-                  "title": "Morpheme",
-                  "description": "A <dfn>morpheme</dfn> is generally defined as the smallest grammatical unit, or unit of meaning, in a language. Each `Morpheme` object within a `Text` represents a linguistic token of that morpheme, rather than a type. A `Morpheme` consists minimally of `'token'` and `'gloss'` strings.",
-                  "type": "object",
-                  "required": ["token", "glosses"],
-                  "additionalProperties": true,
-
-                  "properties": {
-
-                    "note": { "type": "string" },
-
-                    "token": {
-                      "title": "Morpheme Token",
-                      "description": "A <dfn>morpheme token</dfn> is a specific instance of a morpheme in context (as opposed to an abstract <dfn>morpheme type</dfn> that you might find in a dictionary). The `Morphme Token` object contains all the representations/transcriptions of a particular morpheme token. The `Morpheme Token` object is required, and must have at least 1 representation of the token in it.",
-                      "type": "object",
-                      "minProperties": 1,
-
-                      "patternProperties": {
-                        "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Representation" }
-                      },
-
-                      "additionalProperties": false
-                    },
-
-                    "glosses": {
-                      "title": "Morpheme Glosses",
-                      "description": "A <dfn>morpheme gloss</dfn> is a brief annotation of the meaning of a morpheme. The `Morpheme Glosses` object contains all the glosses for a given morpheme. The attribute (key, field name) for each gloss is the type of gloss, e.g. 'pedagogical' or 'Leipzig', while the value for the gloss is the gloss itself, e.g. '<span style='font-variant: small-caps;'>DET</span>' or 'hand' or '<span style='font-variant: small-caps;'>CAUS</span>'. Each `Morpheme` requires a gloss, even if the field is an empty string.",
-                      "type": "object",
-                      "minProperties": 1,
-
-                      "patternProperties": {
-                        "^[(a-z)|(A-Z)|(0-9)]+$": { "type": "string", "title": "Gloss" }
-                      },
-
-                      "additionalProperties": false
-                    },
-
-                    "tags": {
-                      "type": "array",
-                      "uniqueItems": true,
-                      "items": { "$ref": "#/definitions/tag" }
-                    }
-                  }
-                }
-              }
-            }
+          "tags": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": { "$ref": "#/definitions/tag" }
           }
         }
       }
