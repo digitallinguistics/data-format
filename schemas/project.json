@@ -5,9 +5,126 @@
   "type": "object",
   "description": "An object containing information about a project. Projects are purely organizational objects containing references to various associated resoures.",
 
-  "required": [],
+  "required": [
+    "bundles",
+    "contributors",
+    "languages",
+    "lexicons",
+    "locations",
+    "media",
+    "speakers",
+    "texts"
+  ],
 
   "properties": {
-    "access": {}
+
+    "abbreviation": {
+      "title": "Abbreviation",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+    },
+
+    "access": {
+      "title": "Access",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+    },
+
+    "bundles": {
+      "title": "Bundles",
+      "description": "A collection of bundles associated with this project.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Bundle",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/bundle#"
+      }
+    },
+
+    "contributors": {
+      "title": "Contributors",
+      "description": "A collection of people who have contributed to this project, and their role.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Contributor",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor#"
+      }
+    },
+
+    "languages": {
+      "title": "Languages",
+      "description": "A collection of languages that are included in this project. A dialectology project might included many languages here, whereas a project aimed at documenting a particular language variety might include just one or two.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Language",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language#"
+      }
+    },
+
+    "lexicons": {
+      "title": "Lexicons",
+      "description": "A collection of lexicons that are included in this project.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Lexicon",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexicon#"
+      }
+    },
+
+    "locations": {
+      "title": "Locations",
+      "description": "A collection of locations associated with this project.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Location",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
+      }
+    },
+
+    "media": {
+      "title": "Media",
+      "description": "A collection of media objects associated with this project.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Media Files",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#"
+      }
+    },
+
+    "speakers": {
+      "title": "Speakers",
+      "description": "A collection of speakers associated with this project.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Speaker",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
+      }
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+    },
+
+    "texts": {
+      "title": "Texts",
+      "description": "A collection of texts associated with this project.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "title": "Text",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/text#"
+      }
+    },
+
+    "url": {
+      "title": "URL",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    }
+
   }
 }
