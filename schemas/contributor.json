@@ -37,8 +37,6 @@
       "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
     }
 
-  },
-
-  "default": {}
+  }
 
 }
