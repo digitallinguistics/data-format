@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/word-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/word-1.0.0.json#",
 
   "title": "Word",
   "description": "In the DLx framework, a word refers to a specific token in context, rather than an abstract type. Each word maps to one or more morphemes.",
