@@ -25,10 +25,15 @@
       "$ref": "http://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
     },
 
-    "role": {
-      "title": "Role",
-      "description": "The role that this person played in this text, e.g. `speaker` or `recorder`.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+    "roles": {
+      "title": "Roles",
+      "description": "The roles that this person played in this text, e.g. `speaker` or `recorder`.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Role",
+        "description": "A role that this person fulfilled in relation to the resource, e.g. `speaker`, `editor`, `translator`, etc.",
+        "type": "string"
+      }
     },
 
     "person": {
