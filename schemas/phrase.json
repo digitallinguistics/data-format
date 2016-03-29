@@ -1,12 +1,89 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/phrase-0.1.0.json#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/phrase-1.0.0.json#",
 
   "title": "Phrase",
+  "description": "A phrase is a segmentation of a text above the word level. The DLx framework imposes no requirements regarding how this segmentation should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase object consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
+
+  "type": "object",
+  "required": [
+    "transcription",
+    "translation",
+    "words"
+  ],
+  "dependencies": {
+    "startTime": ["endTime"],
+    "endTime": ["startTime"]
+  },
+  "additionalProperties": true,
 
   "properties": {
 
-    "breadcrumb": {}
+    "endTime": {
+      "title": "End Time",
+      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).",
+      "type": "number"
+    },
+
+    "language": {},
+
+    "notes": {},
+
+    "speaker": {
+      "title": "Speaker",
+      "description": "The name or abbreviation person who produced (uttered, signed, spoke, sung) this phrase. The value of this field must match the name or abbreviation of one of the persons listed in the `contributors` array of the text. If the text has a single contributor with the role of `speaker`, then the `speaker` attribute on the phrase may be omitted. In this case, programs should assume that all phrases were produced by that speaker. If multiple contributors with a `speaker` role are included in a text, each phrase must have its `speaker` attribute specified."
+    },
+
+    "startTime": {
+      "title": "Start Time",
+      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).",
+      "type": "number"
+    },
+
+    "tags": {
+      "title": "Tags",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+    },
+
+    "transcription": {
+      "title": "Transcription",
+      "description": "The transcription for this phrase, optionally in multiple orthographies.",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+    },
+
+    "translation": {
+      "title": "Translation",
+      "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
+      "allOf": [
+        { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#" },
+        {
+          "properties": {
+            "type": {
+              "title": "Translation Type",
+              "description": "The type of translation. Value must be either `free` or `literal`.",
+              "type": "string",
+              "enum": ["free", "literal"]
+            }
+          }
+        }
+      ]
+    },
+
+    "url": {
+      "title": "URL",
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+    },
+
+    "words": {
+      "title": "Words",
+      "description": "A collection of the word tokens contained in this phrase.",
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "title": "Word",
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/word#"
+      }
+    }
 
   }
 }
