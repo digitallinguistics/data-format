@@ -16,13 +16,13 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
     },
 
     "name": {
       "title": "Name",
       "description": "The name of this person. If the person is using a pseudonym in your data, you should use that pseudonym in this field.",
-      "$ref": "http://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+      "$ref": "http://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
     },
 
     "roles": {
@@ -39,7 +39,7 @@
     "person": {
       "title": "Person",
       "description": "A DLx person object containing more detailed information about this person.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person-latest.json#"
     }
 
   }

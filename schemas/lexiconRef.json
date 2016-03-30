@@ -15,7 +15,7 @@
 
     "lexiconUrl": {
       "title": "Referenced Lexicon URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     },
 
     "lexeme": {
@@ -26,7 +26,7 @@
 
     "lexemeUrl": {
       "title": "Referenced Lexeme URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     },
 
     "sense": {

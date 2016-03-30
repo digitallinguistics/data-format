@@ -14,7 +14,7 @@
     "notes": {
       "title": "Access Notes",
       "description": "Notes about access rights for this resource, or any other special considerations regarding who should have access.",
-      "$ref": "https://digitallinguistics.blobl.core.windows.net/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
     },
 
     "custom": {
