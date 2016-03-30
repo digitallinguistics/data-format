@@ -20,12 +20,12 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access-latest.json#"
     },
 
     "bundles": {
@@ -35,7 +35,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Bundle",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/bundle#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/bundle-latest.json#"
       }
     },
 
@@ -46,7 +46,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Contributor",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor-latest.json#"
       }
     },
 
@@ -57,7 +57,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Language",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language-latest.json#"
       }
     },
 
@@ -68,7 +68,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Lexicon",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexicon#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexicon-latest.json#"
       }
     },
 
@@ -79,7 +79,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Location",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location-latest.json#"
       }
     },
 
@@ -90,7 +90,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Media Files",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media-latest.json#"
       }
     },
 
@@ -101,13 +101,13 @@
       "uniqueItems": true,
       "items": {
         "title": "Speaker",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person-latest.json#"
       }
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
     },
 
     "texts": {
@@ -117,13 +117,13 @@
       "uniqueItems": true,
       "items": {
         "title": "Text",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/text#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/text-latest.json#"
       }
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     }
 
   }

@@ -21,7 +21,7 @@
       "uniqueItems": false,
       "items": {
         "title": "Lexicon Item",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef-latest.json#"
       }
     },
 
@@ -38,30 +38,30 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
       }
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
     },
 
     "transcription": {
       "title": "Transcription",
       "description": "A transcription of this word, optionally in multiple orthographies.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
     },
 
     "translation": {
       "title": "Translation",
       "description": "A translation of this word, optionally in multiple languages/orthographies. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     }
 
   }
