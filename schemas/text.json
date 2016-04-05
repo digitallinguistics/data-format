@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-1.1.0#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-1.1.0.json#",
 
   "title": "Text",
   "type": "object",
