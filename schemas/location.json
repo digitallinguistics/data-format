@@ -20,34 +20,34 @@
         "abbreviation": {
           "title": "Abbreviation",
           "description": "An abbreviation for this location.",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
         },
 
         "access": {
           "title": "Access Rights",
           "description": "Since locations sometimes contain personal information like addresses, it is important to consider the proper access management policy for them.",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access-latest.json#"
         },
 
         "address": {
           "title": "Address",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/address#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/address-latest.json#"
         },
 
         "dateCreated": {
           "title": "Date Created",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated-latest.json#"
         },
 
         "dateModified": {
           "title": "Date Modified",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified-latest.json#"
         },
 
         "name": {
           "title": "Name",
           "description": "A name for this location, e.g. `Susan's House` or `Valley High School`, or `Shenandoah River`.",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
         },
 
         "notes": {
@@ -57,7 +57,7 @@
           "uniqueItems": true,
           "items": {
             "title": "Note",
-            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
           }
         },
 
@@ -68,19 +68,19 @@
           "uniqueItems": true,
           "items": {
             "title": "Reference",
-            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#"
+            "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference-latest.json#"
           }
         },
 
         "tags": {
           "title": "Tags",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
         },
 
         "url": {
           "title": "URL",
           "description": "The URL where information about this location can be retrieved.",
-          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+          "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
         }
 
       }

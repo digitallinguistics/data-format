@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-1.1.0#",
+  "id": "https://digitallinguistics.blob.core.windows.net/schemas/text-1.1.0.json#",
 
   "title": "Text",
   "type": "object",
@@ -18,12 +18,12 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access-latest.json#"
     },
 
     "contributors": {
@@ -32,23 +32,23 @@
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
       "items": {
         "title": "Contributor",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor-latest.json#"
       }
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated-latest.json#"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified-latest.json#"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateRecorded#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateRecorded-latest.json#"
     },
 
     "discourseType": {
@@ -63,13 +63,13 @@
       "type": "string",
       "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
       "minLength": 1,
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/genre#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/genre-latest.json#"
     },
 
     "location": {
       "title": "Location",
       "description": "The location where this text was recorded.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location-latest.json#"
     },
 
     "media": {
@@ -79,7 +79,7 @@
       "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
       "items": {
         "title": "Media Items",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media-latest.json#"
       }
     },
 
@@ -90,7 +90,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
       }
     },
 
@@ -100,7 +100,7 @@
       "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
       "items": {
         "title": "Phrase",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/phrase-latest.json#"
       },
       "minItems": 1
     },
@@ -111,18 +111,18 @@
       "description": "A list of any bibliographic references concerning or relating to this text.",
       "items": {
         "title": "Reference",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/CreativeWork#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference-latest.json#"
       }
     },
 
     "status": {
       "title": "Status",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/status#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/status-latest.json#"
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
     },
 
     "title": {
@@ -142,7 +142,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     }
 
   }

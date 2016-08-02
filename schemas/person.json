@@ -13,17 +13,17 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access-latest.json#"
     },
 
     "address": {
       "title": "Address",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/address#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/address-latest.json#"
     },
 
     "birthDate": {
@@ -36,7 +36,7 @@
     "birthPlace": {
       "title": "Birth Place",
       "description": "This person's place of birth, as a location object.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location-latest.json#"
     },
 
     "email": {
@@ -73,7 +73,7 @@
 
         "title": "Language Spoken",
         "allOf": [
-          { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language#" },
+          { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language-latest.json#" },
           {
             "additionalProperties": true,
             "properties": {
@@ -91,7 +91,7 @@
                 "description": "Notes about this person's use of this language.",
                 "items": {
                   "title": "Note",
-                  "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+                  "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
                 }
               },
 
@@ -117,7 +117,7 @@
     "notes": {
       "title": "Notes",
       "description": "Notes about this person.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
     },
 
     "phone": {
@@ -134,12 +134,12 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     }
 
   }

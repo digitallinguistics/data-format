@@ -42,20 +42,20 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
     },
 
     "transcription": {
       "title": "Transcription",
       "description": "The transcription for this phrase, optionally in multiple orthographies.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
     },
 
     "translation": {
       "title": "Translation",
       "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
       "allOf": [
-        { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString#" },
+        { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#" },
         {
           "properties": {
             "type": {
@@ -71,7 +71,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
     },
 
     "words": {
@@ -81,7 +81,7 @@
       "uniqueItems": false,
       "items": {
         "title": "Word",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/word#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/word-latest.json#"
       }
     }
 

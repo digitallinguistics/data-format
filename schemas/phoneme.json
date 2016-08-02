@@ -159,7 +159,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
       }
     },
 
@@ -193,7 +193,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Reference",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference#"
+        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference-latest.json#"
       }
     },
 
@@ -201,7 +201,7 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags#"
+      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
     },
 
     "target1": {
