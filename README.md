@@ -4,11 +4,14 @@ A collection of JSON Schemas for representing scientific linguistic data.
 ## Introduction
 The canonical way that linguists represent linguistic data in their publications is through an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and parts of words inside the phrase, what each of those pieces means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
 
-*`Wetkx hus naancaakamankx weyt hi hokmiqi.`* // Transcription
-`wetkx` | `hus` | `naancaaka‑mank‑x` | `weyt` | `hi`    | `hok‑mi‑qi`    | Word breakdown
+*`Wetkx hus naancaakamankx weyt hi hokmiqi.`* <-- Transcription
+
+`wetkx` | `hus` | `naancaaka‑mank‑x` | `weyt` | `hi`    | `hok‑mi‑qi`    | <-- Word breakdown
 ------- | ----- | ------------------ | ------ | ------- | -------------- | ---
-`then`  | `his` | `brother-PL-TOP`   | `he`   | `there` | `leave-PL-3sg` | Glosses
-'Then he left his brothers there.' // Translation
+`then`  | `his` | `brother-PL-TOP`   | `he`   | `there` | `leave‑PL‑3sg` | <-- Glosses
+`'Then he left his brothers there.'` <-- Translation
+
+While humans can look at a representation like this and see which parts are associated with which, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics Data Format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.
 
 There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as `"lang"` or `"language"`?
 
