@@ -2,6 +2,14 @@
 A collection of JSON Schemas for representing scientific linguistic data.
 
 ## Introduction
+The canonical way that linguists represent linguistic data in their publications is through an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and parts of words inside the phrase, what each of those pieces means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
+
+*`Wetkx hus naancaakamankx weyt hi hokmiqi.`*
+
+`wetkx  hus  naancaaka‑mank‑x  weyt  hi     hok‑mi‑qi`
+
+`then   his  brother‑PL‑TOP    DEM   there  leave-PL-3sg`
+
 There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as `"lang"` or `"language"`?
 
 The Digital Linguistics (DLx) project recommends a data format called [**JSON**](http://json.org/) (JavaScript Object Notation) for digitally representing your linguistic data, and in particular, the DLx project has drafted a recommended format for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as *text*, *morpheme*, *orthography*, etc. For instance, this schema is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This simple capacity actually turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.
