@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/bundle-1.1.0.json#",
+  "id": "https://cdn.digitallinguistics.org/schemas/bundle-1.1.0.json#",
   "title": "Bundle",
   "type": "object",
   "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
@@ -14,22 +14,22 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this bundle.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/access-latest.json#"
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#"
     },
 
     "locations": {
@@ -39,7 +39,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Location",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/location-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/location-latest.json#"
       }
     },
 
@@ -50,14 +50,14 @@
       "uniqueItems": true,
       "items": {
         "title": "Media File",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/media-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/media-latest.json#"
       }
     },
 
     "name": {
       "title": "Name",
       "description": "A name for this bundle.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
     },
 
     "notes": {
@@ -67,7 +67,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#"
       }
     },
 
@@ -78,13 +78,13 @@
       "uniqueItems": true,
       "items": {
         "title": "Person",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/person-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/person-latest.json#"
       }
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
     },
 
     "texts": {
@@ -94,13 +94,13 @@
       "uniqueItems": true,
       "items": {
         "title": "Text",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/text-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/text-latest.json#"
       }
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
     }
 
   }

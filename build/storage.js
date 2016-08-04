@@ -1,39 +1,51 @@
-const Storage = require('azure-storage');
-require('../../credentials/dlx-spec');
+/* eslint-disable no-console */
+const fs = require('fs');
+const path = require('path');
+const Storage = require('azure-storage'); // Azure Storage SDK
 
-const storage = Storage.createBlobService();
+// Add Azure credentials to environment variable when testing locally
+if (process.env.NODE_ENV === 'local') {
+  require('../../credentials/dlx-spec');
+}
 
-// Stores a file in Azure Blob Storage by running the following command:
-// `node build/storage.js store abbreviation.json`
-// This will parse the file `abbreviation.json` in the `/schemas` folder,
-//   read the version number from the `id` field of the schema,
-//   and upload a new blob whose filename includes the version number.
+const storage = Storage.createBlobService(); // create the Blob Service
 
-if (process.argv[2] === 'store') {
+const readSchema = filename => new Promise((resolve, reject) => {
 
-  const schema = require(`../schemas/${process.argv[3]}`);
-  const filename = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
-  const text = JSON.stringify(schema, null, 2);
+  const filepath = path.join(__dirname, '../schemas', filename);
 
-  const opts = {
-    contentEncoding: 'utf-8',
-    contentType: 'application/schema+json'
-  };
-
-  storage.createBlockBlobFromText('schemas', filename, text, opts, (err) => {
-    if (err) { console.error(err); }
-    else {
-
-      console.log('Current version stored successfully.');
-
-      const filename = process.argv[3].replace(/\.json$/, '-latest.json');
-
-      storage.createBlockBlobFromText('schemas', filename, text, opts, err => {
-        if (err) { console.error(err); }
-        else { console.log('Latest version stored successfully.'); }
-      });
-
-    }
+  fs.readFile(filepath, 'utf8', (err, text) => {
+    if (err) { reject(err); }
+    resolve(text);
   });
 
-}
+});
+
+const runGenerator = (generator, generatorArgs) => {
+
+  const args = Array.isArray(generatorArgs) ? generatorArgs : [generatorArgs];
+  const iterator = generator(...args);
+  let result;
+
+  (function iterate(val) {
+
+    result = iterator.next(val);
+
+    if (!result.done) {
+      if (result.value instanceof Promise) {
+        result.value.then(iterate);
+      } else {
+        setTimeout(() => { iterate(result.value); }, 0);
+      }
+    }
+
+  }());
+
+};
+
+const uploadSchema = function* uploadSchema(filename) {
+  const text = yield readSchema(filename);
+  const schema = JSON.parse(text);
+};
+
+runGenerator(uploadSchema, ['abbreviation.json']);

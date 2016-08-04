@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexiconRef-1.0.0.json#",
+  "id": "https://cdn.digitallinguistics.org/schemas/lexiconRef-1.0.0.json#",
   "title": "Lexicon Reference",
   "type": "object",
   "description": "A reference to an item in a lexicon.",
@@ -15,7 +15,7 @@
 
     "lexiconUrl": {
       "title": "Referenced Lexicon URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
     },
 
     "lexeme": {
@@ -26,7 +26,7 @@
 
     "lexemeUrl": {
       "title": "Referenced Lexeme URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
     },
 
     "sense": {

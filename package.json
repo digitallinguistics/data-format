@@ -28,7 +28,6 @@
   },
   "dependencies": {},
   "scripts": {
-    "test": "jasmine JASMINE_CONFIG_PATH=build/jasmine.json",
-    "start": "node build/docgen.js"
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   }
 }
