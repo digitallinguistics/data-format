@@ -39,6 +39,7 @@ const readSchema = filename => new Promise((resolve, reject) => {
 });
 
 // TODO: listen for errors in promises, and throw the error with iterator.throw
+// TODO: add runGenerator() to your utilities.js file
 const runGenerator = (generator, generatorArgs) => {
 
   const args = Array.isArray(generatorArgs) ? generatorArgs : [generatorArgs];
