@@ -44,7 +44,7 @@
     "default-case": "error",
     "dot-location": ["error", "property"],
     "dot-notation": ["error", { "allowKeywords": true }],
-    "eqeqeq": ["error", "always"],
+    "eqeqeq": ["warn", "always"],
     "eol-last": "error",
     "func-names": ["error", "always"],
     "func-style": ["error", "expression", { "allowArrowFunctions": true }],
