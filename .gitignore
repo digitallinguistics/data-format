@@ -214,5 +214,3 @@ pip-log.txt
 .mr.developer.cfg
 
 node_modules/
-credentials.js
-.jshintrc
