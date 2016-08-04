@@ -8,13 +8,26 @@ if (process.env.NODE_ENV === 'local') {
   require('../../credentials/dlx-spec');
 }
 
+let blobList;
 const storage = Storage.createBlobService(); // create the Blob Service
 
-const readSchema = filename => new Promise((resolve, reject) => {
+// TODO: need to handle continuation tokens
+const getBlobList = () => new Promise(resolve => {
+  storage.listBlobsSegmented('schemas', null, (err, res) => {
+    if (err) {
+      console.error('Unable to list blobs.');
+      console.error(err, err.stack);
+    }
+    const blobList = [...res.entries.map(entry => entry.name)];
+    resolve(blobList);
+  });
+});
 
-  // FIXME: `filename` currently stores the blobName from Azure
-  // It needs to store the local filename instead
-  // This means you'll have to read the schemas folder *as well as* the blobs list in Azure
+const getFileList = () => new Promise((resolve, reject) => {
+  // TODO: read /schemas directory with fs.readDir()
+});
+
+const readSchema = filename => new Promise((resolve, reject) => {
 
   const filepath = path.join(__dirname, '../schemas', filename);
 
@@ -48,6 +61,27 @@ const runGenerator = (generator, generatorArgs) => {
 
 };
 
+const updateSchema = filename => new Promise((resolve, reject) => {
+  // TODO: use a try-catch to handle errors
+  runGenerator(function* update() {
+    const text = yield readSchema(filename);
+    const schema = JSON.parse(text);
+    const blobName = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
+    const blobExists = blobList.includes(blobName);
+
+    if (blobExists) {
+      console.log(`Schema ${blobName} up to date.`);
+    } else if (!blobExists) {
+      yield uploadVersionedSchema(blobName, filepath, schema);
+      yield uploadLatestSchema(blobName, filepath, schema);
+    }
+
+  }, [filename]);
+});
+
+// TODO: this needs to be split into two functions:
+// - uploadVersionedSchema
+// - uploadLatestSchema
 /*
 const uploadSchema = (blobName, filepath, schema) => new Promise((resolve, reject) => {
 
@@ -58,60 +92,17 @@ const uploadSchema = (blobName, filepath, schema) => new Promise((resolve, rejec
 });
 */
 
-const updateSchema = filename => new Promise((resolve, reject) => {
+runGenerator(function* main() {
 
-  // TODO: use a try-catch to handle errors
-  runGenerator(function* update() {
-    const text = yield readSchema(filename);
-    const schema = JSON.parse(text);
-    const blobName = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
-    const blobExists = blobList.includes(blobName);
+  const fileList = yield getFileList();
 
-    if (blobExists) {
+  blobList = yield getBlobList();
 
-      console.log(`Schema ${blobName} up to date.`);
-
-    } else if (!blobExists) {
-
-      const uploaded = yield uploadSchema(blobName, filepath, schema);
-
-      if (uploaded) {
-        console.log(`Schema ${blobName} uploaded successfully.`);
-      } else if (!uploaded) {
-        console.error(`Schema ${blobName} could not be uploaded.`);
-      }
-
-    }
-  }, [filename]);
-
-});
-
-// TODO: need to handle continuation tokens
-const getBlobList = () => new Promise(resolve => {
-  storage.listBlobsSegmented('schemas', null, (err, res) => {
-    if (err) {
-      console.error('Unable to list blobs.');
+  yield Promise.all(fileList.map(updateSchema))
+    .then(() => console.log(`All schemas successfully updated.`))
+    .catch(err => {
+      console.error(`There was an error updating the schemas.`);
       console.error(err, err.stack);
-    }
-    const blobList = [...res.entries.map(entry => entry.name)];
-    resolve(blobList);
-  });
-});
+    });
 
-const updateSchemas = blobList => Promise.all(blobList.map(updateSchema));
-
-// TODO: This actually needs to have 3 steps:
-// 1. getBlobList (from Azure Storage)
-// 2. getFileList (from /schemas)
-// 3. updateSchemas
-// 4. Log success
-// 5. Log errors
-// Because this is now 3 steps rather than 2, and requires saving some data,
-// (the blob/file lists), use a generator here insetad
-getBlobList()
-.then(updateSchemas)
-.then(() => console.log(`All schemas successfully updated.`))
-.catch(err => {
-  console.error(`An error occurred during update.`);
-  console.error(err, err.stack);
 });
