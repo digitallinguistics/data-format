@@ -1,6 +1,6 @@
 {
   "$schema": "http://digitallinguistics.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/access-1.0.0.json#",
+  "id": "https://cdn.digitallinguistics.org/schemas/access-1.0.1.json#",
   "title": "Access Rights",
   "description": "The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and a custom option is available as well. Additional access protocols may also be added by simply adding an attribute with the name of the relevant archive.",
   "type": "object",
@@ -14,7 +14,7 @@
     "notes": {
       "title": "Access Notes",
       "description": "Notes about access rights for this resource, or any other special considerations regarding who should have access.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
     },
 
     "custom": {

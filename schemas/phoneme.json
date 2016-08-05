@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/phoneme-1.0.0.json#",
+  "id": "https://cdn.digitallinguistics.org/schemas/phoneme-1.0.0.json#",
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones.",
@@ -159,7 +159,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#"
       }
     },
 
@@ -193,7 +193,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Reference",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/reference-latest.json#"
       }
     },
 
@@ -201,7 +201,7 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
     },
 
     "target1": {

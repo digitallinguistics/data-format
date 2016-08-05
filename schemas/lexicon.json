@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://digitallinguistics.blob.core.windows.net/schemas/lexicon-1.0.1.json#",
+  "id": "https://cdn.digitallinguistics.org/schemas/lexicon-1.0.1.json#",
 
   "title": "Lexicon",
   "description": "A lexicon is a collection of the linguistic signs, or *lexemes*, of a particular language at a particular point in time. Each entry in the lexicon provides information on the formal, semantic, behavioral/syntagmatic, and pragmatic/sociocultural properties of a single lexeme. Each lexeme in turn includes various *lexeme forms* - the different formal realizations of the word (e.g. *ran* vs. *run) - and *senses* - the different meanings that a lexeme can have.\n\nLexicons differ from dictionaries in that dictionaries may be thought of as lexicons that have been filtered and formatted for a specific audience. Lexicons, on the other hand, contain the raw, unfiltered data, and do not contain information about presentational format. This distinction allows for the creation of many different dictionaries, with different audiences, from a single lexicon.",
@@ -17,12 +17,12 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this lexicon.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/abbreviation-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/access-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/access-latest.json#"
     },
 
     "contributors": {
@@ -30,26 +30,26 @@
       "type": "array",
       "description": "A collection of people who contributed to the creation or curation of this lexicon in some way.",
       "uniqueItems": true,
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/contributor-latest.json#" },
+      "items": { "$ref": "https://cdn.digitallinguistics.org/schemas/contributor-latest.json#" },
       "default": []
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateCreated-latest.json#",
+      "$ref": "https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#",
       "default": ""
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/dateModified-latest.json#",
+      "$ref": "https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#",
       "default": ""
     },
 
     "language": {
       "title": "Language",
       "description": "A language object describing the language of the items in this lexicon. The language object must contain at least the `name` property.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/language-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/language-latest.json#"
     },
 
     "lexemes": {
@@ -59,14 +59,14 @@
       "uniqueItems": true,
       "items": {
         "title": "Lexeme",
-        "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/lexeme-latest.json#"
+        "$ref": "https://cdn.digitallinguistics.org/schemas/lexeme-latest.json#"
       }
     },
 
     "name": {
       "title": "Name",
       "description": "A name for this lexicon.",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/multiLangString-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
     },
 
     "notes": {
@@ -74,7 +74,7 @@
       "type": "array",
       "description": "A collection of notes about this lexicon.",
       "uniqueItems": true,
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/note-latest.json#" },
+      "items": { "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#" },
       "default": []
     },
 
@@ -83,18 +83,18 @@
       "type": "array",
       "uniqueItems": true,
       "description": "A collection of any bibliographic references concerning or relating to this lexicon.",
-      "items": { "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/reference-latest.json#" },
+      "items": { "$ref": "https://cdn.digitallinguistics.org/schemas/reference-latest.json#" },
       "default": []
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/tags-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://digitallinguistics.blob.core.windows.net/schemas/url-latest.json#"
+      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
     }
 
   },
