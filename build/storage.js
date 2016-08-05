@@ -24,7 +24,8 @@ runGenerator(function* main() {
         throw new Error('Unable to list blobs');
       }
 
-      blobList.push(...res.entries.map(entry => entry.name));
+      const blobNames = res.entries.map(entry => entry.name);
+      blobList.push(...blobNames);
 
       if (res.continuationToken) {
         getBlobList(res.continuationToken);
@@ -82,18 +83,21 @@ runGenerator(function* main() {
         console.log(`Schema ${versionedBlobName} up to date.`);
       } else if (!blobExists) {
 
-        const version = schema.id.match(/-([^/]+)\.json/)[1];
-        const opts = {
-          metadata: { version },
+        const schemaVersion = schema.id.match(/-([^/]+)\.json/)[1];
+
+        const blobStorageOpts = {
+          metadata: {
+            version: schemaVersion,
+          },
           contentSettings: {
-            contentType: 'application/json',
+            contentType:     'application/json',
             contentEncoding: 'utf8',
           },
         };
 
         try {
-          yield uploadSchema(versionedBlobName, opts, text).catch(logError);
-          yield uploadSchema(latestBlobName, opts, text).catch(logError);
+          yield uploadSchema(versionedBlobName, blobStorageOpts, text).catch(logError);
+          yield uploadSchema(latestBlobName, blobStorageOpts, text).catch(logError);
         } catch (err) {
           console.error(`Error updating schema: ${filename}.`);
           reject(err);

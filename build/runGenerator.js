@@ -1,5 +1,5 @@
 const runGenerator = (generator, generatorArgs) => new Promise(resolve => {
-  const args = Array.isArray(generatorArgs) ? generatorArgs : [generatorArgs];
+  const args = Array.isArray(generatorArgs) ? generatorArgs : Array.from(generatorArgs);
   const iterator = generator(...args);
   let result;
 

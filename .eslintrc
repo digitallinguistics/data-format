@@ -221,7 +221,7 @@
     "no-warning-comments": "warn",
     "no-whitespace-before-property": "error",
     "no-with": "warn",
-    "object-curly-newline": ["error", { "multiline": true }],
+    "object-curly-newline": ["warn", { "multiline": true }],
     "object-curly-spacing": ["error", "always", {
       "objectsInObjects": true,
       "arraysInObjects": true
