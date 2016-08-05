@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://digitallinguistics.blob.core.windows.net/schemas/clientApp-0.1.0.json#",
+  "id": "http://digitallinguistics.blob.core.windows.net/schemas/clientApp-0.1.1.json#",
   "title": "Client App",
   "description": "A third-party application that uses the DLx API.",
   "required": [

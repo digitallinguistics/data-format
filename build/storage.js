@@ -1,5 +1,7 @@
+/* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
+const runGenerator = require('./runGenerator');
 const Storage = require('azure-storage');
 
 if (process.env.NODE_ENV === 'local') {
@@ -8,104 +10,124 @@ if (process.env.NODE_ENV === 'local') {
 
 const blobList = [];
 const storage = Storage.createBlobService();
+const uploadedStatus = 201;
 
-const getBlobList = (continuationToken) => new Promise(resolve => {
-  storage.listBlobsSegmented('schemas', null, (err, res) => {
-
-    if (err) {
-      console.error(err, err.stack);
-      throw new Error('Unable to list blobs');
-    }
-
-    blobList.push(...res.entries.map(entry => entry.name));
-
-    if (res.continuationToken) {
-      getBlobList(res.continuationToken);
-    } else {
-      resolve();
-    }
-
-  });
-});
-
-const getFileList = () => new Promise((resolve, reject) => {
-  // TODO: read /schemas directory with fs.readDir()
-});
-
-const readSchema = filename => new Promise((resolve, reject) => {
-
-  const filepath = path.join(__dirname, '../schemas', filename);
-
-  fs.readFile(filepath, 'utf8', (err, text) => {
-    if (err) { reject(err); }
-    resolve(text);
-  });
-
-});
-
-// TODO: listen for errors in promises, and throw the error with iterator.throw
-// TODO: add runGenerator() to your utilities.js file
-const runGenerator = (generator, generatorArgs) => {
-
-  const args = Array.isArray(generatorArgs) ? generatorArgs : [generatorArgs];
-  const iterator = generator(...args);
-  let result;
-
-  (function iterate(val) {
-
-    result = iterator.next(val);
-
-    if (!result.done) {
-      if (result.value instanceof Promise) {
-        result.value.then(iterate);
-      } else {
-        setTimeout(() => { iterate(result.value); }, 0);
-      }
-    }
-
-  }());
-
-};
-
-const updateSchema = filename => new Promise((resolve, reject) => {
-  // TODO: use a try-catch to handle errors
-  runGenerator(function* update() {
-    const text = yield readSchema(filename);
-    const schema = JSON.parse(text);
-    const blobName = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
-    const blobExists = blobList.includes(blobName);
-
-    if (blobExists) {
-      console.log(`Schema ${blobName} up to date.`);
-    } else if (!blobExists) {
-      yield uploadVersionedSchema(blobName, filepath, schema);
-      yield uploadLatestSchema(blobName, filepath, schema);
-    }
-
-  }, [filename]);
-});
-
-// TODO: this needs to be split into two functions:
-// - uploadVersionedSchema
-// - uploadLatestSchema
-/*
-const uploadSchema = (blobName, filepath, schema) => new Promise((resolve, reject) => {
-
-  const metadata = { version: blobName.match(/-().json/)[1] };
-  console.log(metadata);
-
-  storage.createBlockBlobFromLocalFile('schemas', blobName, filepath);
-});
-*/
+const logError = err => console.error(err, err.stack);
 
 runGenerator(function* main() {
-  const fileList = yield getFileList();
 
-  yield getBlobList();
+  const getBlobList = continuationToken => new Promise(resolve => {
+    storage.listBlobsSegmented('schemas', continuationToken, (err, res) => {
+
+      if (err) {
+        logError(err);
+        throw new Error('Unable to list blobs');
+      }
+
+      blobList.push(...res.entries.map(entry => entry.name));
+
+      if (res.continuationToken) {
+        getBlobList(res.continuationToken);
+      }
+
+      resolve();
+
+    });
+  });
+
+  const getFileList = () => new Promise(resolve => {
+    const filepath = path.join(__dirname, '../schemas');
+
+    fs.readdir(filepath, 'utf8', (err, filenames) => {
+      if (err) {
+        logError(err);
+        throw new Error('Unable to list files in /schemas folder.');
+      }
+      resolve(filenames);
+    });
+  });
+
+  const readSchema = filename => new Promise((resolve, reject) => {
+
+    const filepath = path.join(__dirname, '../schemas', filename);
+
+    fs.readFile(filepath, 'utf8', (err, text) => {
+      if (err) {
+        console.error(`Unable to read schema from ${filename}`);
+        reject(err);
+      }
+      resolve(text);
+    });
+
+  });
+
+  const updateSchema = filename => new Promise((resolve, reject) => {
+    runGenerator(function* update() {
+
+      let text;
+
+      try {
+        text = yield readSchema(filename).catch(logError);
+      } catch (err) {
+        console.error(`Error reading schema: ${filename}.`);
+        reject(err);
+      }
+
+      const schema = JSON.parse(text);
+      const versionedBlobName = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
+      const latestBlobName = filename.replace('.json', '-latest.json');
+      const blobExists = blobList.includes(versionedBlobName);
+
+      if (blobExists) {
+        console.log(`Schema ${versionedBlobName} up to date.`);
+      } else if (!blobExists) {
+
+        const version = schema.id.match(/-([^/]+)\.json/)[1];
+        const opts = {
+          metadata: { version },
+          contentSettings: {
+            contentType: 'application/json',
+            contentEncoding: 'utf8',
+          },
+        };
+
+        try {
+          yield uploadSchema(versionedBlobName, opts, text).catch(logError);
+          yield uploadSchema(latestBlobName, opts, text).catch(logError);
+        } catch (err) {
+          console.error(`Error updating schema: ${filename}.`);
+          reject(err);
+        }
+
+      }
+
+    }, [filename]).catch(logError);
+  });
+
+  const uploadSchema = (blobName, opts, text) => new Promise((resolve, reject) => {
+    storage.createBlockBlobFromText('schemas', blobName, text, opts, (err, res, headers) => {
+
+      if (err) {
+        console.error(`Unable to upload schema for ${blobName}.`);
+        reject(err);
+      } else if (headers.statusCode != uploadedStatus) {
+        throw new Error(`Issue uploading schema for ${blobName}.`);
+      }
+
+      resolve();
+
+    });
+  });
+
+  const fileList = yield getFileList().catch(logError);
+
+  yield getBlobList().catch(logError);
+
   yield Promise.all(fileList.map(updateSchema))
     .then(() => console.log(`All schemas successfully updated.`))
     .catch(err => {
       console.error(`There was an error updating the schemas.`);
-      console.error(err, err.stack);
+      logError(err);
     });
-});
+
+}).catch(logError);
