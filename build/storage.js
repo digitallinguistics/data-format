@@ -1,25 +1,30 @@
-/* eslint-disable no-console */
 const fs = require('fs');
 const path = require('path');
-const Storage = require('azure-storage'); // Azure Storage SDK
+const Storage = require('azure-storage');
 
-// Add Azure credentials to environment variable when testing locally
 if (process.env.NODE_ENV === 'local') {
   require('../../credentials/dlx-spec');
 }
 
-let blobList;
-const storage = Storage.createBlobService(); // create the Blob Service
+const blobList = [];
+const storage = Storage.createBlobService();
 
-// TODO: need to handle continuation tokens
-const getBlobList = () => new Promise(resolve => {
+const getBlobList = (continuationToken) => new Promise(resolve => {
   storage.listBlobsSegmented('schemas', null, (err, res) => {
+
     if (err) {
-      console.error('Unable to list blobs.');
       console.error(err, err.stack);
+      throw new Error('Unable to list blobs');
     }
-    const blobList = [...res.entries.map(entry => entry.name)];
-    resolve(blobList);
+
+    blobList.push(...res.entries.map(entry => entry.name));
+
+    if (res.continuationToken) {
+      getBlobList(res.continuationToken);
+    } else {
+      resolve();
+    }
+
   });
 });
 
@@ -94,16 +99,13 @@ const uploadSchema = (blobName, filepath, schema) => new Promise((resolve, rejec
 */
 
 runGenerator(function* main() {
-
   const fileList = yield getFileList();
 
-  blobList = yield getBlobList();
-
+  yield getBlobList();
   yield Promise.all(fileList.map(updateSchema))
     .then(() => console.log(`All schemas successfully updated.`))
     .catch(err => {
       console.error(`There was an error updating the schemas.`);
       console.error(err, err.stack);
     });
-
 });
