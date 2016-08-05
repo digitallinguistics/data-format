@@ -1,6 +1,8 @@
 # The DLx Data Formats
 A collection of JSON Schemas for representing scientific linguistic data.
 
+[![Build Status](https://travis-ci.org/digitallinguistics/dlx-spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/dlx-spec)
+
 ## Introduction
 The canonical way that linguists represent linguistic data in their publications is through an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and parts of words inside the phrase, what each of those pieces means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
 
