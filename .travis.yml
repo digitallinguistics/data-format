@@ -1,3 +1,5 @@
 language: node_js
 node_js: node
-after_success: node build/storage.js
+script:
+  - npm test
+  - node build/storage.js
