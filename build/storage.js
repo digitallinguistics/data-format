@@ -2,14 +2,14 @@
 const fs = require('fs');
 const path = require('path');
 const runGenerator = require('./runGenerator');
-const Storage = require('azure-storage');
+const AzureStorage = require('azure-storage');
 
 if (process.env.NODE_ENV === 'local') {
   require('../../credentials/dlx-spec');
 }
 
 const blobList = [];
-const storage = Storage.createBlobService();
+const storage = AzureStorage.createBlobService();
 const uploadedStatus = 201;
 
 const logError = err => console.error(err, err.stack);
@@ -75,7 +75,8 @@ runGenerator(function* main() {
       }
 
       const schema = JSON.parse(text);
-      const versionedBlobName = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
+      const versionedBlobNameRegExp = /\/schemas\/([^/]+\.json)/;
+      const versionedBlobName = schema.id.match(versionedBlobNameRegExp)[1];
       const latestBlobName = filename.replace('.json', '-latest.json');
       const blobExists = blobList.includes(versionedBlobName);
 
@@ -83,7 +84,8 @@ runGenerator(function* main() {
         console.log(`Schema ${versionedBlobName} up to date.`);
       } else if (!blobExists) {
 
-        const schemaVersion = schema.id.match(/-([^/]+)\.json/)[1];
+        const versionRegExp = /-([^/]+)\.json/;
+        const schemaVersion = schema.id.match(versionRegExp)[1];
 
         const blobStorageOpts = {
           metadata: {
