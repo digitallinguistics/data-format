@@ -5,7 +5,7 @@ const path = require('path');
 
 const storage = AzureStorage.createBlobService();
 
-const file = process.argv[3];
+const file = `${process.argv[3]}.json`;
 const schema = JSON.parse(fs.readFileSync(path.join(__dirname, `/schemas/${file}`), 'utf8'));
 const versionedFile = schema.id.match(/\/schemas\/([^/]+\.json)/)[1];
 const latestFile = versionedFile.replace(/-[^/]+\.json/, '-latest.json');
@@ -28,7 +28,18 @@ if (process.argv.includes('get')) {
 
       console.log(res);
 
+      storage.getBlobProperties('schemas', versionedFile, (err, res) => {
+
+        if (err) {
+          throw new Error(err);
+        }
+
+        console.log(res);
+
+      });
+
     });
+
   });
 
 } else if (process.argv.includes('update')) {
@@ -48,17 +59,23 @@ if (process.argv.includes('get')) {
       throw new Error(err);
     } else {
 
+      console.log('.');
+
       storage.setBlobProperties('schemas', versionedFile, properties, err => {
 
         if (err) {
           throw new Error(err);
         }
 
+        console.log('.');
+
         storage.setBlobMetadata('schemas', latestFile, metadata, err => {
 
           if (err) {
             throw new Error(err);
           }
+
+          console.log('.');
 
           storage.setBlobProperties('schemas', latestFile, properties, err => {
 

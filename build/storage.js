@@ -4,6 +4,7 @@ const path = require('path');
 const runGenerator = require('./runGenerator');
 const AzureStorage = require('azure-storage');
 
+// remember to set the environment variable to 'local' when testing
 if (process.env.NODE_ENV === 'local') {
   require('../../credentials/dlx-spec');
 }
