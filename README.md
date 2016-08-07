@@ -1,6 +1,7 @@
 # The DLx Data Formats
 A collection of JSON Schemas for representing scientific linguistic data.
 
+[![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec)
 [![Build Status](https://travis-ci.org/digitallinguistics/dlx-spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/dlx-spec)
 
 ## Introduction
