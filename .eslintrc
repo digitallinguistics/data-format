@@ -302,7 +302,7 @@
         "func": "function",
         "host": "external",
         "property": "prop",
-        "return": "returns",
+        "returns": "return",
         "virtual": "abstract"
       },
       "preferType": {
