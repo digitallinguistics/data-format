@@ -1,5 +1,5 @@
 {
-  "name": "dlx-spec",
+  "name": "@digitallinguistics/dlx-spec",
   "version": "1.0.0-alpha",
   "description": "The DLx data format specification for representing linguistic data in JSON.",
   "keywords": [
