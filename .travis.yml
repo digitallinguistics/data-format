@@ -1,7 +1,0 @@
-language: node_js
-node_js: node
-script:
-  - npm test
-  - node build/storage.js
-notifications:
-  - slack: digitallinguistics:HjiPdzNVfENli9r5cbIRnpGY
