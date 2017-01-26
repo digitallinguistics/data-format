@@ -7,39 +7,49 @@
     <title>Schemas</title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="jschemer.css" type=text/css>
+    <link rel=stylesheet href=gfm.css type=text/css>
   </head>
 
   <body>
 
-    <main><h1>The DLx Data Formats</h1>
-
+    <main class=markdown-body><h1>The DLx Data Formats</h1>
 <p>A collection of JSON Schemas for representing scientific linguistic data.</p>
-
-<p><a href="https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec"><img alt="npm version" src="https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec.svg"/></a>
-<a href="https://travis-ci.org/digitallinguistics/dlx-spec"><img alt="Build Status" src="https://travis-ci.org/digitallinguistics/dlx-spec.svg?branch=master"/></a>
-<a href="https://zenodo.org/badge/latestdoi/23641/digitallinguistics/dlx-spec"><img alt="DOI" src="https://zenodo.org/badge/23641/digitallinguistics/dlx-spec.svg"/></a></p>
-
+<p><a href="https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec"><img src="https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec.svg" alt="npm version"></a>
+<a href="https://travis-ci.org/digitallinguistics/dlx-spec"><img src="https://travis-ci.org/digitallinguistics/dlx-spec.svg?branch=master" alt="Build Status"></a>
+<a href="https://zenodo.org/badge/latestdoi/23641/digitallinguistics/dlx-spec"><img src="https://zenodo.org/badge/23641/digitallinguistics/dlx-spec.svg" alt="DOI"></a></p>
 <h2>Introduction</h2>
-
 <p>The canonical way that linguists represent linguistic data in their publications is through an <a href="https://en.wikipedia.org/wiki/Interlinear_gloss">interlinear gloss</a>. This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and parts of words inside the phrase, what each of those pieces means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:</p>
-
 <p><em><code>Wetkx hus naancaakamankx weyt hi hokmiqi.</code></em> &lt;-- Transcription</p>
-
-<p><code>wetkx</code> | <code>hus</code> | <code>naancaaka‑mank‑x</code> | <code>weyt</code> | <code>hi</code>    | <code>hok‑mi‑qi</code>    | &lt;-- Word breakdown
-------- | ----- | ------------------ | ------ | ------- | -------------- | ---
-<code>then</code>  | <code>his</code> | <code>brother-PL-TOP</code>   | <code>he</code>   | <code>there</code> | <code>leave‑PL‑3sg</code> | &lt;-- Glosses
-<code>&#39;Then he left his brothers there.&#39;</code> &lt;-- Translation</p>
-
+<table>
+<thead>
+<tr>
+<th><code>wetkx</code></th>
+<th><code>hus</code></th>
+<th><code>naancaaka‑mank‑x</code></th>
+<th><code>weyt</code></th>
+<th><code>hi</code></th>
+<th><code>hok‑mi‑qi</code></th>
+<th>&lt;-- Word breakdown</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>then</code></td>
+<td><code>his</code></td>
+<td><code>brother-PL-TOP</code></td>
+<td><code>he</code></td>
+<td><code>there</code></td>
+<td><code>leave‑PL‑3sg</code></td>
+<td>&lt;-- Glosses</td>
+</tr>
+</tbody>
+</table>
+<p><code>'Then he left his brothers there.'</code> &lt;-- Translation</p>
 <p>While humans can look at a representation like this and see which parts are associated with which, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics Data Format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.</p>
-
 <p>There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as <code>&quot;lang&quot;</code> or <code>&quot;language&quot;</code>?</p>
-
 <p>The Digital Linguistics (DLx) project recommends a data format called <a href="http://json.org/"><strong>JSON</strong></a> (JavaScript Object Notation) for digitally representing your linguistic data, and in particular, the DLx project has drafted a recommended format for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as <em>text</em>, <em>morpheme</em>, <em>orthography</em>, etc. For instance, this schema is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This simple capacity actually turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.</p>
-
 <p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even without understanding how the format works, you can see the hierarchical relationship between phrases, words, and morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
-
-<p><code>
-{
+<pre><code>{
   &quot;transcription&quot;: {
     &quot;spa&quot;: &quot;Hola, me llamo Daniel.&quot;
   },
@@ -89,51 +99,126 @@
     }
   ]
 }
-</code></p>
-
+</code></pre>
 <p>JSON format is incredibly easy to learn. It consists of just a few simple rules:</p>
-
-<ul><li><p>All data in JSON is represented as either an Object, represented by curly braces <code>{ }</code>, or a Collection of Objects (also called an Array), represented by square brackets <code>[ ]</code>.</p></li><li><p>Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single phrase.</p></li><li><p>Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes <code>&quot; &quot;</code> and separated by a colon <code>:</code>. Pairs of properties and values are separated by commas <code>,</code>. In the example above, the phrase has a property called <code>&quot;transcription&quot;</code>, and the value of that property is <code>&quot;Hola, me llamo Daniel.&quot;</code></p></li><li><p>Arrays are a collection of Objects separated by commas <code>,</code>. The items in an Array can be strings of text <code>&quot;hola&quot;</code>, numbers (with no quotes), <code>17</code>, Objects <code>{ }</code>, or even other Arrays <code>[ ]</code>. In the example above, the phrase has a collection called <code>&quot;words&quot;</code> containing a list of all the words in the phrase. Notice each word in turn has its own collection, called <code>&quot;morphemes&quot;</code>. This nesting of arrays and objects allows us to capture the hierarchical nature of linguistic data.</p></li></ul>
-
-<p>Another great feature of JSON is that adding new properties to an Object doesn&#39;t change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you&#39;ve transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data <em>format</em> just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called <code>&quot;startTime&quot;</code> and <code>&quot;endTime&quot;</code> to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting, because the data hasn&#39;t been altered, just extended. The underlying format is all the same.</p>
-
+<ul>
+<li>
+<p>All data in JSON is represented as either an Object, represented by curly braces <code>{ }</code>, or a Collection of Objects (also called an Array), represented by square brackets <code>[ ]</code>.</p>
+</li>
+<li>
+<p>Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single phrase.</p>
+</li>
+<li>
+<p>Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes <code>&quot; &quot;</code> and separated by a colon <code>:</code>. Pairs of properties and values are separated by commas <code>,</code>. In the example above, the phrase has a property called <code>&quot;transcription&quot;</code>, and the value of that property is <code>&quot;Hola, me llamo Daniel.&quot;</code></p>
+</li>
+<li>
+<p>Arrays are a collection of Objects separated by commas <code>,</code>. The items in an Array can be strings of text <code>&quot;hola&quot;</code>, numbers (with no quotes), <code>17</code>, Objects <code>{ }</code>, or even other Arrays <code>[ ]</code>. In the example above, the phrase has a collection called <code>&quot;words&quot;</code> containing a list of all the words in the phrase. Notice each word in turn has its own collection, called <code>&quot;morphemes&quot;</code>. This nesting of arrays and objects allows us to capture the hierarchical nature of linguistic data.</p>
+</li>
+</ul>
+<p>Another great feature of JSON is that adding new properties to an Object doesn't change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you've transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data <em>format</em> just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called <code>&quot;startTime&quot;</code> and <code>&quot;endTime&quot;</code> to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting, because the data hasn't been altered, just extended. The underlying format is all the same.</p>
 <h2>Schemas</h2>
-
 <h3>Linguistic Schemas</h3>
-
 <p>The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification.</p>
-
-<ul><li><a href="http://digitallinguistics.github.io/dlx-spec/language.html">language</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/lexeme.html">lexeme</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/lexicon.html">lexicon</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/orthography.html">orthography</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/phoneme.html">phoneme</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/phrase.html">phrase</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/text.html">text</a></li><li><a href="http://digitallinguistics.github.io/dlx-spec/word.html">word</a></li></ul>
-
+<ul>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/language.html">language</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/lexeme.html">lexeme</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/lexicon.html">lexicon</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/orthography.html">orthography</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/phoneme.html">phoneme</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/phrase.html">phrase</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/text.html">text</a></li>
+<li><a href="http://digitallinguistics.github.io/dlx-spec/word.html">word</a></li>
+</ul>
 <h3>Non-Linguistic Schemas</h3>
-
 <p>Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):</p>
-
-<p>Schema                  | Description
------------------------ | -----------
-<a href="http://digitallinguistics.github.io/dlx-spec/abbreviation.html"><code>abbreviation</code></a>     | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
-<a href="http://digitallinguistics.github.io/dlx-spec/access.html"><code>access</code></a>           | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
-<a href="http://digitallinguistics.github.io/dlx-spec/address.html"><code>address</code></a>         | A postal address.
-<a href="http://digitallinguistics.github.io/dlx-spec/bundle.html"><code>bundle</code></a>           | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
-<a href="http://digitallinguistics.github.io/dlx-spec/contributor.html"><code>contributor</code></a>      | Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of <code>speaker</code> specified.
-<a href="http://digitallinguistics.github.io/dlx-spec/dateCreated.html"><code>dateCreated</code></a>     | The date a database resource was created (<em>not</em> the date the item was recorded).
-<a href="http://digitallinguistics.github.io/dlx-spec/dateModified.html"><code>dateModified</code></a>    | The date a database resource was last modified.
-<a href="http://digitallinguistics.github.io/dlx-spec/dateRecorded.html"><code>dateRecorded</code></a>    | The date a database resource (usually a text) was recorded.
-<a href="http://digitallinguistics.github.io/dlx-spec/lexiconRef.html"><code>lexiconRef</code></a>      | An object that contains a reference to any item in a lexicon.
-<a href="http://digitallinguistics.github.io/dlx-spec/location.html"><code>location</code></a>        | A location with optional geographic coordinates.
-<a href="http://digitallinguistics.github.io/dlx-spec/media.html"><code>media</code></a>            | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
-<a href="http://digitallinguistics.github.io/dlx-spec/multiLangString.html"><code>multiLangString</code></a> | An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.
-<a href="http://digitallinguistics.github.io/dlx-spec/note.html"><code>note</code></a>             | Most DLx resources allow you to add notes in different languages, of different types.
-<a href="http://digitallinguistics.github.io/dlx-spec/person.html"><code>person</code></a>           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
-<a href="http://digitallinguistics.github.io/dlx-spec/project.html"><code>project</code></a>          | Information about a project. Projects may contain multiple languages and lexicons, e.g &#39;Comparative Mixtec Dialectology&#39; or &#39;Documenting Ékegusií Folktales&#39;.
-<a href="http://digitallinguistics.github.io/dlx-spec/reference.html"><code>reference</code></a>       | A bibliographic reference.
-<a href="http://digitallinguistics.github.io/dlx-spec/tags.html"><code>tags</code></a>             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
-<a href="http://digitallinguistics.github.io/dlx-spec/url.html"><code>url</code></a>             | A URL.</p></main>
+<table>
+<thead>
+<tr>
+<th>Schema</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/abbreviation.html"><code>abbreviation</code></a></td>
+<td>A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/access.html"><code>access</code></a></td>
+<td>Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/address.html"><code>address</code></a></td>
+<td>A postal address.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/bundle.html"><code>bundle</code></a></td>
+<td>A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/contributor.html"><code>contributor</code></a></td>
+<td>Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of <code>speaker</code> specified.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/dateCreated.html"><code>dateCreated</code></a></td>
+<td>The date a database resource was created (<em>not</em> the date the item was recorded).</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/dateModified.html"><code>dateModified</code></a></td>
+<td>The date a database resource was last modified.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/dateRecorded.html"><code>dateRecorded</code></a></td>
+<td>The date a database resource (usually a text) was recorded.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/lexiconRef.html"><code>lexiconRef</code></a></td>
+<td>An object that contains a reference to any item in a lexicon.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/location.html"><code>location</code></a></td>
+<td>A location with optional geographic coordinates.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/media.html"><code>media</code></a></td>
+<td>Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/multiLangString.html"><code>multiLangString</code></a></td>
+<td>An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/note.html"><code>note</code></a></td>
+<td>Most DLx resources allow you to add notes in different languages, of different types.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/person.html"><code>person</code></a></td>
+<td>Information about a person, e.g. speaker, linguist, editor, translator, etc.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/project.html"><code>project</code></a></td>
+<td>Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/reference.html"><code>reference</code></a></td>
+<td>A bibliographic reference.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/tags.html"><code>tags</code></a></td>
+<td>A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.</td>
+</tr>
+<tr>
+<td><a href="http://digitallinguistics.github.io/dlx-spec/url.html"><code>url</code></a></td>
+<td>A URL.</td>
+</tr>
+</tbody>
+</table>
+</main>
 
     <nav>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="schemas/abbreviation.html">Abbreviation</a></li><li><a href="schemas/address.html">Address</a></li><li><a href="schemas/bundle.html">Bundle</a></li><li><a href="schemas/access.html">Access Rights</a></li><li><a href="schemas/contributor.html">Contributor</a></li><li><a href="schemas/dateCreated.html">Date Created</a></li><li><a href="schemas/dateRecorded.html">Date Recorded</a></li><li><a href="schemas/dateModified.html">Date Modified</a></li><li><a href="schemas/lexicon.html">Lexicon</a></li><li><a href="schemas/language.html">Language</a></li><li><a href="schemas/lexiconRef.html">Lexicon Reference</a></li><li><a href="schemas/lexeme.html">Lexeme</a></li><li><a href="schemas/location.html">Location</a></li><li><a href="schemas/media.html">Media File</a></li><li><a href="schemas/multiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/note.html">Note</a></li><li><a href="schemas/orthography.html">Orthography</a></li><li><a href="schemas/phrase.html">Phrase</a></li><li><a href="schemas/person.html">Person</a></li><li><a href="schemas/phoneme.html">Phoneme</a></li><li><a href="schemas/project.html">Project</a></li><li><a href="schemas/reference.html">Bibliographic Reference</a></li><li><a href="schemas/tags.html">Tags</a></li><li><a href="schemas/text.html">Text</a></li><li><a href="schemas/word.html">Word</a></li><li><a href="schemas/url.html">URL</a></li>
+        <li><a href="schemas/abbreviation.html">Abbreviation</a></li><li><a href="schemas/access.html">Access Rights</a></li><li><a href="schemas/address.html">Address</a></li><li><a href="schemas/bundle.html">Bundle</a></li><li><a href="schemas/contributor.html">Contributor</a></li><li><a href="schemas/dateModified.html">Date Modified</a></li><li><a href="schemas/dateCreated.html">Date Created</a></li><li><a href="schemas/dateRecorded.html">Date Recorded</a></li><li><a href="schemas/lexeme.html">Lexeme</a></li><li><a href="schemas/language.html">Language</a></li><li><a href="schemas/lexiconRef.html">Lexicon Reference</a></li><li><a href="schemas/lexicon.html">Lexicon</a></li><li><a href="schemas/location.html">Location</a></li><li><a href="schemas/media.html">Media File</a></li><li><a href="schemas/multiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/note.html">Note</a></li><li><a href="schemas/orthography.html">Orthography</a></li><li><a href="schemas/phoneme.html">Phoneme</a></li><li><a href="schemas/person.html">Person</a></li><li><a href="schemas/project.html">Project</a></li><li><a href="schemas/phrase.html">Phrase</a></li><li><a href="schemas/reference.html">Bibliographic Reference</a></li><li><a href="schemas/text.html">Text</a></li><li><a href="schemas/tags.html">Tags</a></li><li><a href="schemas/url.html">URL</a></li><li><a href="schemas/word.html">Word</a></li>
       </ul>
     </nav>
 
