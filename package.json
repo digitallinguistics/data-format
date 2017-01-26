@@ -21,6 +21,7 @@
   ],
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "devDependencies": {
+    "ajv": "^4.11.2",
     "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.7"
   },
