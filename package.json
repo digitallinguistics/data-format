@@ -27,7 +27,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "build": "jschemer schemas -o docs -r README.md",
+    "build": "jschemer schemas -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json"
   }
 }
