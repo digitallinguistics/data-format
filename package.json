@@ -21,11 +21,9 @@
   ],
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "devDependencies": {
-    "jschemer": "^2.0.0-alpha.4"
-  },
-  "dependencies": {
     "jschemer": "^2.0.0-alpha.7"
   },
+  "dependencies": {},
   "scripts": {
     "build": "jschemer schemas -o docs -r README.md"
   }
