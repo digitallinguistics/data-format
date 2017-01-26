@@ -23,7 +23,9 @@
   "devDependencies": {
     "jschemer": "^2.0.0-alpha.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jschemer": "^2.0.0-alpha.5"
+  },
   "scripts": {
     "build": "jschemer schemas -o docs -r README.md"
   }
