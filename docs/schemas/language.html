@@ -1,0 +1,694 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Language
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Language</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>https://cdn.digitallinguistics.org/schemas/language-1.0.2.json#</code></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The DLx framework uses the term <code>language</code> to refer broadly to any language variety - whether conceptualized as a language, dialect, or idiolect - at a particular point in time.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>name</code></li>
+        </ul>
+      </div>
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#>https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Language Codes: <code>"codes"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An object containing any ISO 639-3 and Glottolog language codes for this language.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>iso</code></li>
+            <li><code>glottolog</code></li>
+        </ul>
+      </div>
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>ISO 639-3 Codes: <code>"iso"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of ISO 639-3 codes that are applicable to this language variety.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>ISO 639-3 Code</h1>
+              </summary>
+          
+          
+          
+          
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>[a-z]{3}</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Glottolog Codes: <code>"glottolog"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of Glottolog codes that are applicable to this language variety.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Glottolog Code</h1>
+              </summary>
+          
+          
+          
+          
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>[a-z]{4}[0-9]{4}</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Created: <code>"dateCreated"</code></h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#>https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#>https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Locations: <code>"locations"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>Geographic locations where this language variety is spoken, optionally with geographic coordinate data.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Location</h1>
+              </summary>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/location-latest.json#>https://cdn.digitallinguistics.org/schemas/location-latest.json#</a></p>
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Language Name: <code>"name"</code></h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Phonemes: <code>"phomemes"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The phonological inventory for this language, i.e. a collection of phonemes.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Phoneme</h1>
+              </summary>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/phoneme-latest.json#>https://cdn.digitallinguistics.org/schemas/phoneme-latest.json#</a></p>
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Orthographies: <code>"orthographies"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of orthographies used to represent this language.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Orthography</h1>
+              </summary>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/orthography-latest.json#>https://cdn.digitallinguistics.org/schemas/orthography-latest.json#</a></p>
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/url-latest.json#>https://cdn.digitallinguistics.org/schemas/url-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+
+
+
+
+
+
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>{
+  &quot;abbreviation&quot;: &quot;&quot;,
+  &quot;codes&quot;: {
+    &quot;iso&quot;: [],
+    &quot;glottolog&quot;: []
+  },
+  &quot;name&quot;: &quot;&quot;,
+  &quot;phonemes&quot;: [],
+  &quot;orthographies&quot;: []
+}</pre>
+      </div>
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="media.html">Media File</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="note.html">Note</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="location.html">Location</a></li><li><a href="project.html">Project</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li><li><a href="person.html">Person</a></li><li><a href="text.html">Text</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>

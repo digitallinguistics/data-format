@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Location
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Location</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>https://cdn.digitallinguistics.org/schemas/location-1.1.0.json#</code></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A location, optionally with accompanying geographic coordinate data. Each location should also be a valid GeoJSON geometry object.</p>
+</p>
+      </div>
+
+
+
+      <div class='all-of any prop'>
+        <h2>Validates Against (<code>allOf</code>)</h2>
+        <p>This schema must validate against all of the following schemas:</p>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>GeoJSON Geometry Object</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://raw.githubusercontent.com/dwhieb/geojson-schema/master/geojson-schema.json#/definitions/geometry>https://raw.githubusercontent.com/dwhieb/geojson-schema/master/geojson-schema.json#/definitions/geometry</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Abbreviation</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#>https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Access Rights</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/access-latest.json#>https://cdn.digitallinguistics.org/schemas/access-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Address</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/address-latest.json#>https://cdn.digitallinguistics.org/schemas/address-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Created</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#>https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Modified</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#>https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Name</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Notes</h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of notes about this location.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code></code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          <ul>
+              <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+              <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+          </ul>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Bibliographic References</h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of bibliographic references about this location.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code></code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          <ul>
+              <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+              <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+          </ul>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>URL</h1>
+    </summary>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/url-latest.json#>https://cdn.digitallinguistics.org/schemas/url-latest.json#</a></p>
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>name</code></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="media.html">Media File</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="note.html">Note</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="location.html">Location</a></li><li><a href="project.html">Project</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li><li><a href="person.html">Person</a></li><li><a href="text.html">Text</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>
