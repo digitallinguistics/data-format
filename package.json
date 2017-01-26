@@ -21,10 +21,12 @@
   ],
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "devDependencies": {
+    "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.7"
   },
   "dependencies": {},
   "scripts": {
-    "build": "jschemer schemas -o docs -r README.md"
+    "build": "jschemer schemas -o docs -r README.md",
+    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json"
   }
 }
