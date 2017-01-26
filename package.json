@@ -24,7 +24,7 @@
     "jschemer": "^2.0.0-alpha.4"
   },
   "dependencies": {
-    "jschemer": "^2.0.0-alpha.6"
+    "jschemer": "^2.0.0-alpha.7"
   },
   "scripts": {
     "build": "jschemer schemas -o docs -r README.md"

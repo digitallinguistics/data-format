@@ -26,7 +26,9 @@ ul,
 li,
 main,
 nav,
-section {
+section,
+summary,
+details {
   border: none;
   border-collapse: collapse;
   display: flex;
@@ -48,10 +50,12 @@ em,
 hr,
 i,
 img,
-p,
 strong,
 u {
   display: inline;
+}
+p {
+  display: block;
 }
 a {
   background: initial;
@@ -95,6 +99,10 @@ blockquote:after {
 ol,
 ul {
   list-style: none;
+}
+summary {
+  align-items: center;
+  flex-direction: row;
 }
 table {
   display: table;
@@ -191,10 +199,12 @@ nav ul li {
 .schema h2 {
   display: inline;
 }
-.schema > h1 {
+.schema summary {
+  padding-bottom: 0.5rem;
+}
+.schema summary h1 {
   font-size: 1.5rem;
   font-weight: bold;
-  padding-bottom: 0.5em;
 }
 .schema h2 {
   font-weight: bold;
