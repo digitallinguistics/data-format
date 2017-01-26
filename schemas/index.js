@@ -19,7 +19,6 @@ module.exports = {
   person: require('./person'),
   phoneme: require('./phoneme'),
   phrase: require('./phrase'),
-  project: require('./project'),
   reference: require('./reference'),
   tags: require('./tags'),
   text: require('./text'),
