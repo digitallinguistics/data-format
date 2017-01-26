@@ -1,0 +1,326 @@
+/* default stylesheet for jschemer documentation pages */
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+br,
+code,
+em,
+hr,
+img,
+strong,
+b,
+i,
+u,
+ol,
+ul,
+li,
+main,
+nav,
+section {
+  border: none;
+  border-collapse: collapse;
+  display: flex;
+  flex-direction: column;
+  font: inherit;
+  line-height: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+a,
+b,
+blockquote,
+br,
+code,
+em,
+hr,
+i,
+img,
+p,
+strong,
+u {
+  display: inline;
+}
+a {
+  background: initial;
+  color: #2a7ae2;
+  border-bottom: 1px solid white;
+  text-decoration: none;
+}
+a:visited {
+  color: #1756a9;
+}
+a:hover {
+  border-bottom: 1px solid #2a7ae2;
+}
+a:hover:visited {
+  border-bottom: 1px solid #1756a9;
+}
+a:active {
+  font-weight: bold;
+}
+body {
+  background-color: white;
+  font-family: 'Fira Sans', 'Droid Sans', 'Trebuchet MS', sans-serif;
+  font-size: 100%;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1.5rem;
+  margin: 1rem 1.5rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+blockquote {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after {
+  content: '';
+  content: none;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  display: table;
+}
+tbody {
+  display: table-row-group;
+}
+td,
+th {
+  display: table-cell;
+  vertical-align: middle;
+}
+th {
+  text-align: center;
+}
+thead {
+  display: table-header-group;
+}
+tr {
+  display: table-row;
+}
+.bulleted {
+  list-style: disc outside none;
+}
+.bulleted li {
+  display: list-item;
+  margin-left: 0.75rem;
+}
+.inline-schema:before {
+  background-image: url('json-schema.svg');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  content: '';
+  display: inline-block;
+  filter: drop-shadow(2px 2px #ccc);
+  height: 1.5rem;
+  margin-right: 0.5em;
+  min-width: 1.5rem;
+  width: 1.5rem;
+}
+.softBorder {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+}
+main > h1 {
+  align-self: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+nav {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  align-items: flex-start;
+  padding: 1rem;
+}
+nav h1 {
+  font-weight: bold;
+}
+nav h1 a {
+  border-bottom: 2px solid white;
+}
+nav h1 a:hover {
+  border-bottom: 2px solid #2a7ae2;
+}
+nav h1 a:hover:visited {
+  border-bottom: 1px solid #1756a9;
+}
+nav ul {
+  list-style: disc outside none;
+  margin-left: 0.5rem;
+}
+nav ul li {
+  display: list-item;
+  margin-left: 0.75rem;
+}
+.schema {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  margin: 0.5rem 0rem;
+  padding: 1rem;
+}
+.schema code,
+.schema pre {
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+  background-color: #eef;
+  font-family: 'Fira Sans Mono', 'Consolas', monospace;
+}
+.schema div.prop > :not(h2) {
+  padding-left: 0.5rem;
+}
+.schema h1,
+.schema h2 {
+  display: inline;
+}
+.schema > h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 0.5em;
+}
+.schema h2 {
+  font-weight: bold;
+}
+.schema p > code {
+  word-wrap: break-word;
+}
+.schema pre {
+  overflow-x: scroll;
+  padding: 0.5em 0.5em;
+}
+.schema .prop:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.schema .prop > .schema {
+  margin-left: 2.5rem;
+  position: relative;
+}
+.schema .prop > .schema:before {
+  margin-left: -2.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.schema strong {
+  font-weight: bold;
+}
+.schema .all-of > ul > li,
+.schema .any-of > ul > li,
+.schema .definitions > ul > li,
+.schema .dependencies > ul > li,
+.schema .items > ul > li,
+.schema .one-of > ul > li,
+.schema .pattern-properties > ul > li,
+.schema .properties > ul > li {
+  align-items: center;
+  flex-direction: row;
+}
+.schema .all-of > ul > li:before,
+.schema .any-of > ul > li:before,
+.schema .definitions > ul > li:before,
+.schema .dependencies > ul > li:before,
+.schema .items > ul > li:before,
+.schema .one-of > ul > li:before,
+.schema .pattern-properties > ul > li:before,
+.schema .properties > ul > li:before {
+  background-image: url('json-schema.svg');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  content: '';
+  display: inline-block;
+  filter: drop-shadow(2px 2px #ccc);
+  height: 1.5rem;
+  margin-right: 0.5em;
+  min-width: 1.5rem;
+  width: 1.5rem;
+}
+.schema .all-of > ul > li > .schema,
+.schema .any-of > ul > li > .schema,
+.schema .definitions > ul > li > .schema,
+.schema .dependencies > ul > li > .schema,
+.schema .items > ul > li > .schema,
+.schema .one-of > ul > li > .schema,
+.schema .pattern-properties > ul > li > .schema,
+.schema .properties > ul > li > .schema {
+  flex-grow: 1;
+}
+.schema .additional-items > .schema:before,
+.schema .items > .schema:before,
+.schema .not > .schema:before {
+  background-image: url('json-schema.svg');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  content: '';
+  display: inline-block;
+  filter: drop-shadow(2px 2px #ccc);
+  height: 1.5rem;
+  margin-right: 0.5em;
+  min-width: 1.5rem;
+  width: 1.5rem;
+}
+.schema .dependencies > ul > li > div {
+  flex-grow: 1;
+}
+.schema .dependencies > ul > li > div ul {
+  list-style: disc outside none;
+}
+.schema .dependencies > ul > li > div ul li {
+  display: list-item;
+  margin-left: 0.75rem;
+}
+.schema .dependencies .dependencies-list {
+  margin-left: 0.5rem;
+}
+.schema .enum > ul > li {
+  margin: 0.25rem 0rem;
+}
+.schema .required > ul {
+  list-style: disc outside none;
+}
+.schema .required > ul li {
+  display: list-item;
+  margin-left: 0.75rem;
+}
+@media screen and (max-width: 699px) {
+  body > nav {
+    order: 1;
+  }
+  body > main {
+    order: 2;
+  }
+}
+@media screen and (min-width: 700px) {
+  body {
+    flex-direction: row;
+  }
+  nav {
+    background-color: white;
+    margin: 1.5rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 10rem;
+    z-index: 1;
+  }
+  main {
+    margin-right: 13.75rem;
+  }
+}

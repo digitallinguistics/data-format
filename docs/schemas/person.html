@@ -1,0 +1,896 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Person
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Person</h1>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>https://cdn.digitallinguistics.org/schemas/person-1.0.0.json#</code></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An object providing information about a person.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#>https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Access Rights: <code>"access"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/access-latest.json#>https://cdn.digitallinguistics.org/schemas/access-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Address: <code>"address"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/address-latest.json#>https://cdn.digitallinguistics.org/schemas/address-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Birth Date: <code>"birthDate"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>This person&#39;s birth date, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date time format</a>.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+      <p class='format string prop'><strong>Format:</strong> date-time</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Birth Place: <code>"birthPlace"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/location-latest.json#>https://cdn.digitallinguistics.org/schemas/location-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Email: <code>"email"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>This person&#39;s email.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+      <p class='format string prop'><strong>Format:</strong> email</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Family Name(s) / Last Name(s): <code>"familyName"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>This person&#39;s family name(s) (last name(s)).</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Gender: <code>"gender"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>This person&#39;s self-reported gender identity.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Given Name(s) / First Name(s): <code>"givenName"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>This person&#39;s given name(s) (first name(s)), including middle name(s), if any.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Languages Spoken: <code>"languages"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of the languages that this person speaks. Each language should be a DLx Language object, optionally with a few additional properties such as <code>ageLearned</code>, etc. Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Language Spoken</h1>
+          
+          
+          
+          
+          
+          
+          
+                <div class='all-of any prop'>
+                  <h2>Validates Against (<code>allOf</code>)</h2>
+                  <p>This schema must validate against all of the following schemas:</p>
+                  <ul>
+                      <li>
+          <section class=schema>
+          
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/language-latest.json#>https://cdn.digitallinguistics.org/schemas/language-latest.json#</a></p>
+          
+          </section>
+          </li>
+                      <li>
+          <section class=schema>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <div class='properties object prop'>
+                  <h2>Properties</h2>
+                  <ul>
+                      <li>
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Age Learned</h1>
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The age at which this person learned this language.</p></p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+          </li>
+                      <li>
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Notes</h1>
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>Notes about this person&#39;s use of this language.</p></p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <p class='unique-items array prop'>
+                  <strong>Unique items:</strong> <code></code>
+                </p>
+          
+                <div class='items array prop'>
+          
+                  <h2>Items</h2>
+          
+                    <ul>
+                        <li>
+          <section class=schema>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+          </li>
+                        <li>
+          <section class=schema>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+          </li>
+                    </ul>
+          
+                </div>
+          
+          
+          
+          
+          </section>
+          </li>
+                      <li>
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Proficiency</h1>
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The proficiency level of this person in this language.</p></p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+          </li>
+                      <li>
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Years Known</h1>
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The number of years this person has known this language.</p></p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+          </li>
+                  </ul>
+                </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+          </li>
+                  </ul>
+                </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          </section>
+
+      </div>
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/note-latest.json#>https://cdn.digitallinguistics.org/schemas/note-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Phone Number: <code>"phone"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A phone number for this person.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Pseudonym: <code>"pseudonym"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A pseudonym for this person.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/url-latest.json#>https://cdn.digitallinguistics.org/schemas/url-latest.json#</a></p>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="address.html">Address</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="language.html">Language</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="location.html">Location</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="media.html">Media File</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="project.html">Project</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="word.html">Word</a></li><li><a href="url.html">URL</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>

@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Word
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Word</h1>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>https://cdn.digitallinguistics.org/schemas/word-1.0.0.json#</code></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>In the DLx framework, a word refers to a specific token in context, rather than an abstract type. Each word maps to one or more morphemes.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>transcription</code></li>
+            <li><code>translation</code></li>
+        </ul>
+      </div>
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Word Components: <code>"components"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Note that each component here is a reference to a lexicon item in a lexicon associated with this text. At a minimum, the reference must contain a unique lemma form, lexeme form, or lexeme key.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>false</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Lexicon Item</h1>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
+          
+          </section>
+
+      </div>
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Gloss: <code>"gloss"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A Leipzig-style gloss for this word. This does not always need to be supplied if it can be generated automatically from the glosses at the morpheme level.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of notes about this token.</p></p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+              <h1 class='title meta any prop'>Note</h1>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/note-latest.json#>https://cdn.digitallinguistics.org/schemas/note-latest.json#</a></p>
+          
+          </section>
+
+      </div>
+
+
+
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Transcription: <code>"transcription"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>Translation: <code>"translation"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+    <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/url-latest.json#>https://cdn.digitallinguistics.org/schemas/url-latest.json#</a></p>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+
+
+
+
+
+
+
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="address.html">Address</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="language.html">Language</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="location.html">Location</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="media.html">Media File</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="project.html">Project</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="word.html">Word</a></li><li><a href="url.html">URL</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>
