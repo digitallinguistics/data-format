@@ -6,34 +6,41 @@ A collection of JSON Schemas for representing scientific linguistic data.
 [![DOI](https://zenodo.org/badge/23641/digitallinguistics/dlx-spec.svg)](https://zenodo.org/badge/latestdoi/23641/digitallinguistics/dlx-spec)
 
 ## Introduction
-The canonical way that linguists represent linguistic data in their publications is through an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and parts of words inside the phrase, what each of those pieces means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
+The canonical way that linguists represent linguistic data in their publications is with an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
 
-*`Wetkx hus naancaakamankx weyt hi hokmiqi.`* <-- Transcription
+```
+Wetkx hus naancaakamankx weyt hi hokmiqi.                      (Transcription)
+wetkx   hus   naancaaka-mank-x   weyt   hi      hok-mi-qi      (Morpheme Breakdown)
+then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
+'Then he left his brothers there.'                             (Translation)
+```
 
-`wetkx` | `hus` | `naancaaka‑mank‑x` | `weyt` | `hi`    | `hok‑mi‑qi`    | <-- Word breakdown
-------- | ----- | ------------------ | ------ | ------- | -------------- | ---
-`then`  | `his` | `brother-PL-TOP`   | `he`   | `there` | `leave‑PL‑3sg` | <-- Glosses
-`'Then he left his brothers there.'` <-- Translation
-
-While humans can look at a representation like this and see which parts are associated with which, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics Data Format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.
+While humans look at a representation like this and can see which glosses are associated with which morphemes, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics Data Format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.
 
 There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as `"lang"` or `"language"`?
 
-The Digital Linguistics (DLx) project recommends a data format called [**JSON**](http://json.org/) (JavaScript Object Notation) for digitally representing your linguistic data, and in particular, the DLx project has drafted a recommended format for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as *text*, *morpheme*, *orthography*, etc. For instance, this schema is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This simple capacity actually turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.
+The Digital Linguistics (DLx) project recommends a data format called [**JSON**](http://json.org/) (JavaScript Object Notation) for digitally representing your linguistic data. Moreover, the DLx project has drafted recommendations for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as *text*, *morpheme*, *orthography*, etc. For instance, this format is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This functionality turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.
 
-The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even without understanding how the format works, you can see the hierarchical relationship between phrases, words, and morphemes, and you know which piece of data belongs to what kind of linguistic object.
+The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even if you don't understand how the format works, you can see the hierarchical relationship between phrases, words, and morphemes, and you know which piece of data belongs to what kind of linguistic object.
 
-```
+```json
 {
-  "transcription": {
-    "spa": "Hola, me llamo Daniel."
+  "transcriptions": {
+    "spa": "Hola, me llamo Daniel.",
+    "ipa": "ola me jamo dænjəl"
   },
-  "translation": {
-    "eng": "Hello, my name is Daniel."
+  "translations": {
+    "eng": "Hello, my name is Daniel.",
   },
   "words": [
     {
-      "token": "Hola",
+      "transcriptions": {
+        "spa": "hola",
+        "ipa": "ola"
+      },
+      "translations": {
+        "eng": "hello"
+      },
       "morphemes": [
         {
           "form": "hola",
@@ -42,16 +49,28 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "token": "me",
+      "transcriptions": {
+        "spa": "me",
+        "ipa": "me"
+      },
+      "translations": {
+        "eng": "me"
+      },
       "morphemes": [
         {
           "form": "me",
-          "gloss": "1sg.OBJ"
+          "gloss": "1sg.DO"
         }
       ]
     },
     {
-      "word": "llamo",
+      "transcriptions": {
+        "spa": "llamo",
+        "ipa": "jamo"
+      },
+      "translations": {
+        "eng": "I call"
+      },
       "morphemes": [
         {
           "form": "llam-",
@@ -64,7 +83,13 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "word": "Daniel",
+      "transcriptions": {
+        "spa": "Daniel",
+        "ipa": "dænjəl"
+      },
+      "translations": {
+        "eng": "Daniel"
+      },
       "morphemes": [
         {
           "form": "Daniel",
@@ -76,13 +101,13 @@ The DLx project recommends JSON because it has become the data interchange forma
 }
 ```
 
-JSON format is incredibly easy to learn. It consists of just a few simple rules:
+JSON format is easy to learn. It consists of just a few simple rules:
 
 * All data in JSON is represented as either an Object, represented by curly braces `{ }`, or a Collection of Objects (also called an Array), represented by square brackets `[ ]`.
 
 * Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single phrase.
 
-* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the phrase has a property called `"transcription"`, and the value of that property is `"Hola, me llamo Daniel."`
+* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the phrase has a property called `"transcriptions"`, and the value of that property is `"Hola, me llamo Daniel."`
 
 * Arrays are a collection of Objects separated by commas `,`. The items in an Array can be strings of text `"hola"`, numbers (with no quotes), `17`, Objects `{ }`, or even other Arrays `[ ]`. In the example above, the phrase has a collection called `"words"` containing a list of all the words in the phrase. Notice each word in turn has its own collection, called `"morphemes"`. This nesting of arrays and objects allows us to capture the hierarchical nature of linguistic data.
 
@@ -121,7 +146,6 @@ Schema                  | Description
 [`multiLangString`][14] | An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.
 [`note`][6]             | Most DLx resources allow you to add notes in different languages, of different types.
 [`person`][7]           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
-[`project`][8]          | Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.
 [`reference`][15]       | A bibliographic reference.
 [`tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
 [`url`][16]             | A URL.
@@ -133,7 +157,7 @@ Schema                  | Description
 [5]:  http://digitallinguistics.github.io/dlx-spec/media.html
 [6]:  http://digitallinguistics.github.io/dlx-spec/note.html
 [7]:  http://digitallinguistics.github.io/dlx-spec/person.html
-[8]:  http://digitallinguistics.github.io/dlx-spec/project.html
+
 [9]:  http://digitallinguistics.github.io/dlx-spec/tags.html
 [10]: http://digitallinguistics.github.io/dlx-spec/dateCreated.html
 [11]: http://digitallinguistics.github.io/dlx-spec/dateModified.html

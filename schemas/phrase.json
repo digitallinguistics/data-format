@@ -7,8 +7,8 @@
 
   "type": "object",
   "required": [
-    "transcription",
-    "translation",
+    "transcriptions",
+    "translations",
     "words"
   ],
   "dependencies": {
@@ -46,13 +46,13 @@
     },
 
     "transcription": {
-      "title": "Transcription",
-      "description": "The transcription for this phrase, optionally in multiple orthographies.",
+      "title": "Transcriptions",
+      "description": "The transcriptions for this phrase, optionally in multiple orthographies.",
       "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
     },
 
     "translation": {
-      "title": "Translation",
+      "title": "Translations",
       "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
       "allOf": [
         { "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#" },

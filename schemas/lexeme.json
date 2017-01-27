@@ -450,6 +450,7 @@
     },
 
     "lexicalRelation": {
+      "title": "Lexical Relation",
       "type": "object",
       "description": "A lexical relation between two lexemes or senses.",
       "required": ["referencedLexeme", "relation"],
