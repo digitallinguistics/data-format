@@ -18,47 +18,33 @@
 <a href="https://travis-ci.org/digitallinguistics/dlx-spec"><img src="https://travis-ci.org/digitallinguistics/dlx-spec.svg?branch=master" alt="Build Status"></a>
 <a href="https://zenodo.org/badge/latestdoi/23641/digitallinguistics/dlx-spec"><img src="https://zenodo.org/badge/23641/digitallinguistics/dlx-spec.svg" alt="DOI"></a></p>
 <h2>Introduction</h2>
-<p>The canonical way that linguists represent linguistic data in their publications is through an <a href="https://en.wikipedia.org/wiki/Interlinear_gloss">interlinear gloss</a>. This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and parts of words inside the phrase, what each of those pieces means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:</p>
-<p><em><code>Wetkx hus naancaakamankx weyt hi hokmiqi.</code></em> &lt;-- Transcription</p>
-<table>
-<thead>
-<tr>
-<th><code>wetkx</code></th>
-<th><code>hus</code></th>
-<th><code>naancaaka‑mank‑x</code></th>
-<th><code>weyt</code></th>
-<th><code>hi</code></th>
-<th><code>hok‑mi‑qi</code></th>
-<th>&lt;-- Word breakdown</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>then</code></td>
-<td><code>his</code></td>
-<td><code>brother-PL-TOP</code></td>
-<td><code>he</code></td>
-<td><code>there</code></td>
-<td><code>leave‑PL‑3sg</code></td>
-<td>&lt;-- Glosses</td>
-</tr>
-</tbody>
-</table>
-<p><code>'Then he left his brothers there.'</code> &lt;-- Translation</p>
-<p>While humans can look at a representation like this and see which parts are associated with which, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics Data Format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.</p>
+<p>The canonical way that linguists represent linguistic data in their publications is with an <a href="https://en.wikipedia.org/wiki/Interlinear_gloss">interlinear gloss</a>. This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:</p>
+<pre><code>Wetkx hus naancaakamankx weyt hi hokmiqi.                      (Transcription)
+wetkx   hus   naancaaka-mank-x   weyt   hi      hok-mi-qi      (Morpheme Breakdown)
+then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
+'Then he left his brothers there.'                             (Translation)
+</code></pre>
+<p>While humans look at a representation like this and can see which glosses are associated with which morphemes, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics Data Format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.</p>
 <p>There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as <code>&quot;lang&quot;</code> or <code>&quot;language&quot;</code>?</p>
-<p>The Digital Linguistics (DLx) project recommends a data format called <a href="http://json.org/"><strong>JSON</strong></a> (JavaScript Object Notation) for digitally representing your linguistic data, and in particular, the DLx project has drafted a recommended format for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as <em>text</em>, <em>morpheme</em>, <em>orthography</em>, etc. For instance, this schema is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This simple capacity actually turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.</p>
-<p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even without understanding how the format works, you can see the hierarchical relationship between phrases, words, and morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
-<pre><code>{
-  &quot;transcription&quot;: {
-    &quot;spa&quot;: &quot;Hola, me llamo Daniel.&quot;
+<p>The Digital Linguistics (DLx) project recommends a data format called <a href="http://json.org/"><strong>JSON</strong></a> (JavaScript Object Notation) for digitally representing your linguistic data. Moreover, the DLx project has drafted recommendations for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as <em>text</em>, <em>morpheme</em>, <em>orthography</em>, etc. For instance, this format is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This functionality turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.</p>
+<p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even if you don't understand how the format works, you can see the hierarchical relationship between phrases, words, and morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
+<pre><code class="language-json">{
+  &quot;transcriptions&quot;: {
+    &quot;spa&quot;: &quot;Hola, me llamo Daniel.&quot;,
+    &quot;ipa&quot;: &quot;ola me jamo dænjəl&quot;
   },
-  &quot;translation&quot;: {
-    &quot;eng&quot;: &quot;Hello, my name is Daniel.&quot;
+  &quot;translations&quot;: {
+    &quot;eng&quot;: &quot;Hello, my name is Daniel.&quot;,
   },
   &quot;words&quot;: [
     {
-      &quot;token&quot;: &quot;Hola&quot;,
+      &quot;transcriptions&quot;: {
+        &quot;spa&quot;: &quot;hola&quot;,
+        &quot;ipa&quot;: &quot;ola&quot;
+      },
+      &quot;translations&quot;: {
+        &quot;eng&quot;: &quot;hello&quot;
+      },
       &quot;morphemes&quot;: [
         {
           &quot;form&quot;: &quot;hola&quot;,
@@ -67,16 +53,28 @@
       ]
     },
     {
-      &quot;token&quot;: &quot;me&quot;,
+      &quot;transcriptions&quot;: {
+        &quot;spa&quot;: &quot;me&quot;,
+        &quot;ipa&quot;: &quot;me&quot;
+      },
+      &quot;translations&quot;: {
+        &quot;eng&quot;: &quot;me&quot;
+      },
       &quot;morphemes&quot;: [
         {
           &quot;form&quot;: &quot;me&quot;,
-          &quot;gloss&quot;: &quot;1sg.OBJ&quot;
+          &quot;gloss&quot;: &quot;1sg.DO&quot;
         }
       ]
     },
     {
-      &quot;word&quot;: &quot;llamo&quot;,
+      &quot;transcriptions&quot;: {
+        &quot;spa&quot;: &quot;llamo&quot;,
+        &quot;ipa&quot;: &quot;jamo&quot;
+      },
+      &quot;translations&quot;: {
+        &quot;eng&quot;: &quot;I call&quot;
+      },
       &quot;morphemes&quot;: [
         {
           &quot;form&quot;: &quot;llam-&quot;,
@@ -89,7 +87,13 @@
       ]
     },
     {
-      &quot;word&quot;: &quot;Daniel&quot;,
+      &quot;transcriptions&quot;: {
+        &quot;spa&quot;: &quot;Daniel&quot;,
+        &quot;ipa&quot;: &quot;dænjəl&quot;
+      },
+      &quot;translations&quot;: {
+        &quot;eng&quot;: &quot;Daniel&quot;
+      },
       &quot;morphemes&quot;: [
         {
           &quot;form&quot;: &quot;Daniel&quot;,
@@ -100,7 +104,7 @@
   ]
 }
 </code></pre>
-<p>JSON format is incredibly easy to learn. It consists of just a few simple rules:</p>
+<p>JSON format is easy to learn. It consists of just a few simple rules:</p>
 <ul>
 <li>
 <p>All data in JSON is represented as either an Object, represented by curly braces <code>{ }</code>, or a Collection of Objects (also called an Array), represented by square brackets <code>[ ]</code>.</p>
@@ -109,7 +113,7 @@
 <p>Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single phrase.</p>
 </li>
 <li>
-<p>Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes <code>&quot; &quot;</code> and separated by a colon <code>:</code>. Pairs of properties and values are separated by commas <code>,</code>. In the example above, the phrase has a property called <code>&quot;transcription&quot;</code>, and the value of that property is <code>&quot;Hola, me llamo Daniel.&quot;</code></p>
+<p>Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes <code>&quot; &quot;</code> and separated by a colon <code>:</code>. Pairs of properties and values are separated by commas <code>,</code>. In the example above, the phrase has a property called <code>&quot;transcriptions&quot;</code>, and the value of that property is <code>&quot;Hola, me llamo Daniel.&quot;</code></p>
 </li>
 <li>
 <p>Arrays are a collection of Objects separated by commas <code>,</code>. The items in an Array can be strings of text <code>&quot;hola&quot;</code>, numbers (with no quotes), <code>17</code>, Objects <code>{ }</code>, or even other Arrays <code>[ ]</code>. In the example above, the phrase has a collection called <code>&quot;words&quot;</code> containing a list of all the words in the phrase. Notice each word in turn has its own collection, called <code>&quot;morphemes&quot;</code>. This nesting of arrays and objects allows us to capture the hierarchical nature of linguistic data.</p>
@@ -196,10 +200,6 @@
 <td>Information about a person, e.g. speaker, linguist, editor, translator, etc.</td>
 </tr>
 <tr>
-<td><a href="http://digitallinguistics.github.io/dlx-spec/project.html"><code>project</code></a></td>
-<td>Information about a project. Projects may contain multiple languages and lexicons, e.g 'Comparative Mixtec Dialectology' or 'Documenting Ékegusií Folktales'.</td>
-</tr>
-<tr>
 <td><a href="http://digitallinguistics.github.io/dlx-spec/reference.html"><code>reference</code></a></td>
 <td>A bibliographic reference.</td>
 </tr>
@@ -218,7 +218,7 @@
     <nav>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="schemas/abbreviation.html">Abbreviation</a></li><li><a href="schemas/bundle.html">Bundle</a></li><li><a href="schemas/access.html">Access Rights</a></li><li><a href="schemas/contributor.html">Contributor</a></li><li><a href="schemas/address.html">Address</a></li><li><a href="schemas/dateCreated.html">Date Created</a></li><li><a href="schemas/dateRecorded.html">Date Recorded</a></li><li><a href="schemas/dateModified.html">Date Modified</a></li><li><a href="schemas/lexeme.html">Lexeme</a></li><li><a href="schemas/language.html">Language</a></li><li><a href="schemas/lexicon.html">Lexicon</a></li><li><a href="schemas/lexiconRef.html">Lexicon Reference</a></li><li><a href="schemas/location.html">Location</a></li><li><a href="schemas/media.html">Media File</a></li><li><a href="schemas/multiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/note.html">Note</a></li><li><a href="schemas/orthography.html">Orthography</a></li><li><a href="schemas/person.html">Person</a></li><li><a href="schemas/phoneme.html">Phoneme</a></li><li><a href="schemas/phrase.html">Phrase</a></li><li><a href="schemas/project.html">Project</a></li><li><a href="schemas/reference.html">Bibliographic Reference</a></li><li><a href="schemas/tags.html">Tags</a></li><li><a href="schemas/text.html">Text</a></li><li><a href="schemas/word.html">Word</a></li><li><a href="schemas/url.html">URL</a></li>
+        <li><a href="schemas/abbreviation.html">Abbreviation</a></li><li><a href="schemas/bundle.html">Bundle</a></li><li><a href="schemas/address.html">Address</a></li><li><a href="schemas/access.html">Access Rights</a></li><li><a href="schemas/contributor.html">Contributor</a></li><li><a href="schemas/dateCreated.html">Date Created</a></li><li><a href="schemas/dateModified.html">Date Modified</a></li><li><a href="schemas/language.html">Language</a></li><li><a href="schemas/dateRecorded.html">Date Recorded</a></li><li><a href="schemas/lexeme.html">Lexeme</a></li><li><a href="schemas/lexicon.html">Lexicon</a></li><li><a href="schemas/lexiconRef.html">Lexicon Reference</a></li><li><a href="schemas/location.html">Location</a></li><li><a href="schemas/media.html">Media File</a></li><li><a href="schemas/note.html">Note</a></li><li><a href="schemas/multiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/orthography.html">Orthography</a></li><li><a href="schemas/reference.html">Bibliographic Reference</a></li><li><a href="schemas/person.html">Person</a></li><li><a href="schemas/phrase.html">Phrase</a></li><li><a href="schemas/phoneme.html">Phoneme</a></li><li><a href="schemas/tags.html">Tags</a></li><li><a href="schemas/text.html">Text</a></li><li><a href="schemas/url.html">URL</a></li><li><a href="schemas/word.html">Word</a></li>
       </ul>
     </nav>
 
