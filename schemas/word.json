@@ -1,12 +1,14 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/word-1.0.0.json#",
+
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://cdn.digitallinguistics.io/schemas/word-1.1.0.json",
 
   "title": "Word",
+  "type": "object",
   "description": "A *word* refers to a specific token in context, rather than to an abstract lexeme. Each word contains one or more morphemes or components.",
 
-  "type": "object",
   "additionalProperties": true,
+  
   "required": [
     "transcription",
     "translation"
@@ -21,7 +23,7 @@
       "uniqueItems": false,
       "items": {
         "title": "Lexicon Item",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
       }
     },
 
