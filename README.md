@@ -25,20 +25,20 @@ The DLx project recommends JSON because it has become the data interchange forma
 
 ```json
 {
-  "transcriptions": {
+  "transcription": {
     "spa": "Hola, me llamo Daniel.",
     "ipa": "ola me jamo dænjəl"
   },
-  "translations": {
+  "translation": {
     "eng": "Hello, my name is Daniel.",
   },
   "words": [
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "hola",
         "ipa": "ola"
       },
-      "translations": {
+      "translation": {
         "eng": "hello"
       },
       "morphemes": [
@@ -49,11 +49,11 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "me",
         "ipa": "me"
       },
-      "translations": {
+      "translation": {
         "eng": "me"
       },
       "morphemes": [
@@ -64,11 +64,11 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "llamo",
         "ipa": "jamo"
       },
-      "translations": {
+      "translation": {
         "eng": "I call"
       },
       "morphemes": [
@@ -83,11 +83,11 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "Daniel",
         "ipa": "dænjəl"
       },
-      "translations": {
+      "translation": {
         "eng": "Daniel"
       },
       "morphemes": [
@@ -107,7 +107,7 @@ JSON format is easy to learn. It consists of just a few simple rules:
 
 * Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single phrase.
 
-* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the phrase has a property called `"transcriptions"`, and the value of that property is `"Hola, me llamo Daniel."`
+* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the phrase has a property called `"transcription"`, and the value of that property is `"Hola, me llamo Daniel."`
 
 * Arrays are a collection of Objects separated by commas `,`. The items in an Array can be strings of text `"hola"`, numbers (with no quotes), `17`, Objects `{ }`, or even other Arrays `[ ]`. In the example above, the phrase has a collection called `"words"` containing a list of all the words in the phrase. Notice each word in turn has its own collection, called `"morphemes"`. This nesting of arrays and objects allows us to capture the hierarchical nature of linguistic data.
 
@@ -140,7 +140,7 @@ Schema                  | Description
 [`dateCreated`][10]     | The date a database resource was created (*not* the date the item was recorded).
 [`dateModified`][11]    | The date a database resource was last modified.
 [`dateRecorded`][12]    | The date a database resource (usually a text) was recorded.
-[`lexiconRef`][13]      | An object that contains a reference to any item in a lexicon.
+[`lexemeReference`][13] | An object that contains a reference to any item in a lexicon.
 [`location`][17]        | A location with optional geographic coordinates.
 [`media`][5]            | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
 [`multiLangString`][14] | An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.
@@ -162,7 +162,7 @@ Schema                  | Description
 [10]: http://digitallinguistics.github.io/dlx-spec/dateCreated.html
 [11]: http://digitallinguistics.github.io/dlx-spec/dateModified.html
 [12]: http://digitallinguistics.github.io/dlx-spec/dateRecorded.html
-[13]: http://digitallinguistics.github.io/dlx-spec/lexiconRef.html
+[13]: http://digitallinguistics.github.io/dlx-spec/lexemeReference.html
 [14]: http://digitallinguistics.github.io/dlx-spec/multiLangString.html
 [15]: http://digitallinguistics.github.io/dlx-spec/reference.html
 [16]: http://digitallinguistics.github.io/dlx-spec/url.html

@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/dlx-spec",
-  "version": "0.9.1",
+  "version": "0.10.0",
   "description": "The DLx data format specification for representing linguistic data in JSON.",
   "keywords": [
     "DLx",
@@ -25,7 +25,9 @@
     "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.7"
   },
-  "dependencies": {},
+  "dependencies": {
+    "jschemer": "^2.0.0-alpha.8"
+  },
   "scripts": {
     "build": "jschemer schemas -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json"

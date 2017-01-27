@@ -5,7 +5,7 @@
   <head>
     <meta charset=utf-8>
     <title>
-      Note
+      Lexeme Reference
     </title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="../jschemer.css" type=text/css>
@@ -19,17 +19,17 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Note</h1>
+      <h1 class='title meta any prop'>Lexeme Reference</h1>
     </summary>
 
 
-      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema">http://json-schema.org/schema</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/note-1.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexemeReference-1.1.0.json</code></p>
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A note about this resource. Notes may also include <code>type</code> and <code>language</code> attributes.</p>
+        <p><p>A reference to an item in a lexicon.</p>
 </p>
       </div>
 
@@ -51,12 +51,6 @@
 
 
 
-      <div class='required object prop'>
-        <h2>Required Properties</h2>
-        <ul>
-            <li><code>note</code></li>
-        </ul>
-      </div>
 
 
 
@@ -70,7 +64,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Note Type: <code>"type"</code></h1>
+      <h1 class='title meta any prop'>Gloss: <code>"gloss"</code></h1>
     </summary>
 
 
@@ -78,74 +72,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of note.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='enum any prop'>
-        <h2>Allowed Values (<code>enum</code>)</h2>
-        <ul>
-            <li><pre>&quot;note-to-self&quot;</pre></li>
-            <li><pre>&quot;general&quot;</pre></li>
-            <li><pre>&quot;anthropological&quot;</pre></li>
-            <li><pre>&quot;discourse&quot;</pre></li>
-            <li><pre>&quot;encyclopedic&quot;</pre></li>
-            <li><pre>&quot;grammar&quot;</pre></li>
-            <li><pre>&quot;phonology&quot;</pre></li>
-            <li><pre>&quot;semantics&quot;</pre></li>
-            <li><pre>&quot;sociocultural&quot;</pre></li>
-        </ul>
-      </div>
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Note Text: <code>"note"</code></h1>
-    </summary>
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The text of the note itself.</p>
+        <p><p>The gloss of the sense being referenced. Should match the sense's gloss exactly.</p>
 </p>
       </div>
 
@@ -190,7 +117,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Note Language: <code>"lang"</code></h1>
+      <h1 class='title meta any prop'>Referenced Lexicon (Key/Abbr): <code>"lexicon"</code></h1>
     </summary>
 
 
@@ -198,7 +125,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A language code or language name of the language that this note is written in.</p>
+        <p><p>The abbreviation of the lexicon being referenced.</p>
 </p>
       </div>
 
@@ -243,17 +170,146 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Source (Person): <code>"source"</code></h1>
+      <h1 class='title meta any prop'>Referenced Lexicon (URL): <code>"lexiconUrl"</code></h1>
     </summary>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The person who is the source of this note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.</p>
+        <p><p>The URL of the lexicon being referenced.</p>
 </p>
       </div>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/person.json>http://cdn.digitallinguistics.io/schemas/person.json</a></p>
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/url.json>http://cdn.digitallinguistics.io/schemas/url.json</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Referenced Lexeme (Key): <code>"lexeme"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The key of the lexeme being referenced.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Referenced Lexeme (URL): <code>"lexemeUrl"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The URL of the lexeme being referenced.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/url.json>http://cdn.digitallinguistics.io/schemas/url.json</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Referenced Sense (Num): <code>"sense"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The number of the sense being referenced. The sense number is its index in the <code>senses</code> array on the lexeme.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </details>

@@ -1,0 +1,51 @@
+{
+
+  "$schema": "http://json-schema.org/schema",
+  "id": "http://cdn.digitallinguistics.io/schemas/lexemeReference-1.1.0.json",
+
+  "title": "Lexeme Reference",
+  "type": "object",
+  "description": "A reference to an item in a lexicon.",
+
+  "additionalProperties": false,
+
+  "properties": {
+
+    "gloss": {
+      "title": "Gloss",
+      "type": "string",
+      "description": "The gloss of the sense being referenced. Should match the sense's gloss exactly."
+    },
+
+    "lexicon": {
+      "title": "Referenced Lexicon (Key/Abbr)",
+      "type": "string",
+      "description": "The abbreviation of the lexicon being referenced."
+    },
+
+    "lexiconUrl": {
+      "title": "Referenced Lexicon (URL)",
+      "description": "The URL of the lexicon being referenced.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+    },
+
+    "lexeme": {
+      "title": "Referenced Lexeme (Key)",
+      "type": "string",
+      "description": "The key of the lexeme being referenced."
+    },
+
+    "lexemeUrl": {
+      "title": "Referenced Lexeme (URL)",
+      "description": "The URL of the lexeme being referenced.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+    },
+
+    "sense": {
+      "title": "Referenced Sense (Num)",
+      "type": "integer",
+      "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the lexeme."
+    }
+
+  }
+}

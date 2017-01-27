@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://cdn.digitallinguistics.org/schemas/phrase-1.0.0.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/phrase-1.0.0.json",
 
   "title": "Phrase",
   "description": "The term *phrase* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
@@ -18,6 +18,13 @@
   "additionalProperties": true,
 
   "properties": {
+
+    "key": {
+      "title": "Key",
+      "type": "string",
+      "description": "A key which uniquely identifies this phrase within the text. The key for a phrase consists of the abbreviation of the text, a period, and then the number of this phrase within the text (index starts at 1). For example, the third phrase of a text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus.",
+      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}$"
+    },
 
     "endTime": {
       "title": "End Time",
@@ -42,20 +49,20 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
     },
 
     "transcription": {
       "title": "Transcriptions",
       "description": "The transcriptions for this phrase, optionally in multiple orthographies.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "translation": {
       "title": "Translations",
       "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
       "allOf": [
-        { "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#" },
+        { "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"},
         {
           "properties": {
             "type": {
@@ -71,7 +78,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     },
 
     "words": {
@@ -81,7 +88,7 @@
       "uniqueItems": false,
       "items": {
         "title": "Word",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/word-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/word.json"
       }
     }
 

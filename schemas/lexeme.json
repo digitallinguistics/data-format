@@ -185,7 +185,21 @@
 
       "items": {
         "title": "Example Phrase",
-        "$ref": "https://cdn.digitallinguistics.io/schemas/phrase.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/phrase.json"
+      }
+
+    },
+
+    "features": {
+
+      "title": "Features",
+      "type": "object",
+      "description": "A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `noun class`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature `\"case\": \"accusative\"` (English) as well as `\"caso\": \"acusativo\"` (Spanish).",
+
+      "additionalProperties": {
+        "title": "Feature",
+        "type": "string",
+        "description": "A feature type and value."
       }
 
     },
@@ -208,7 +222,7 @@
     "key": {
       "title": "Lexeme Key",
       "type": "string",
-      "description": "A human-readable key that helps uniquely identify this lexeme within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
+      "description": "A human-readable key that uniquely identifies this lexeme within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
       "pattern": "^[^ ]+$"
     },
 
