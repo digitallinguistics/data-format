@@ -14,8 +14,8 @@
 
   "properties": {
 
-    "components": {
-      "title": "Word Components",
+    "morphemes": {
+      "title": "Morphemes / Components",
       "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Note that each component here is a reference to a lexicon item in a lexicon associated with this text. At a minimum, the reference must contain a unique lemma form, lexeme form, or lexeme key.",
       "type": "array",
       "uniqueItems": false,
