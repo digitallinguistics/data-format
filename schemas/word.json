@@ -31,6 +31,12 @@
       "type": "string"
     },
 
+    "key": {
+      "title": "Key",
+      "type": "string",
+      "description": "A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus."
+    },
+
     "notes": {
       "title": "Notes",
       "description": "A collection of notes about this token.",
