@@ -11,7 +11,7 @@
 
     {
       "title": "GeoJSON Geometry Object",
-      "$ref": "https://raw.githubusercontent.com/dwhieb/geojson-schema/master/geojson-schema.json#/definitions/geometry"
+      "$ref": "http://json.schemastore.org/geojson#"
     },
 
     {
