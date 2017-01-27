@@ -190,6 +190,20 @@
 
     },
 
+    "features": {
+
+      "title": "Features",
+      "type": "object",
+      "description": "A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `noun class`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature `\"case\": \"accusative\"` (English) as well as `\"caso\": \"acusativo\"` (Spanish).",
+
+      "additionalProperties": {
+        "title": "Feature",
+        "type": "string",
+        "description": "A feature type and value."
+      }
+
+    },
+
     "includedIn": {
 
       "title": "Included In",
