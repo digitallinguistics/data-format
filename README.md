@@ -118,14 +118,14 @@ Another great feature of JSON is that adding new properties to an Object doesn't
 ### Linguistic Schemas
 The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification.
 
-* [language](http://digitallinguistics.github.io/dlx-spec/language.html)
-* [lexeme](http://digitallinguistics.github.io/dlx-spec/lexeme.html)
-* [lexicon](http://digitallinguistics.github.io/dlx-spec/lexicon.html)
-* [orthography](http://digitallinguistics.github.io/dlx-spec/orthography.html)
-* [phoneme](http://digitallinguistics.github.io/dlx-spec/phoneme.html)
-* [phrase](http://digitallinguistics.github.io/dlx-spec/phrase.html)
-* [text](http://digitallinguistics.github.io/dlx-spec/text.html)
-* [word](http://digitallinguistics.github.io/dlx-spec/word.html)
+* [language](http://digitallinguistics.github.io/dlx-spec/schemas/language.html)
+* [lexeme](http://digitallinguistics.github.io/dlx-spec/schemas/lexeme.html)
+* [lexicon](http://digitallinguistics.github.io/dlx-spec/schemas/lexicon.html)
+* [orthography](http://digitallinguistics.github.io/dlx-spec/schemas/orthography.html)
+* [phoneme](http://digitallinguistics.github.io/dlx-spec/schemas/phoneme.html)
+* [phrase](http://digitallinguistics.github.io/dlx-spec/schemas/phrase.html)
+* [text](http://digitallinguistics.github.io/dlx-spec/schemas/text.html)
+* [word](http://digitallinguistics.github.io/dlx-spec/schemas/word.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
@@ -150,21 +150,21 @@ Schema                  | Description
 [`tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
 [`url`][16]             | A URL.
 
-[1]:  http://digitallinguistics.github.io/dlx-spec/abbreviation.html
-[2]:  http://digitallinguistics.github.io/dlx-spec/access.html
-[3]:  http://digitallinguistics.github.io/dlx-spec/bundle.html
-[4]:  http://digitallinguistics.github.io/dlx-spec/contributor.html
-[5]:  http://digitallinguistics.github.io/dlx-spec/media.html
-[6]:  http://digitallinguistics.github.io/dlx-spec/note.html
-[7]:  http://digitallinguistics.github.io/dlx-spec/person.html
+[1]:  http://digitallinguistics.github.io/dlx-spec/schemas/abbreviation.html
+[2]:  http://digitallinguistics.github.io/dlx-spec/schemas/access.html
+[3]:  http://digitallinguistics.github.io/dlx-spec/schemas/bundle.html
+[4]:  http://digitallinguistics.github.io/dlx-spec/schemas/contributor.html
+[5]:  http://digitallinguistics.github.io/dlx-spec/schemas/media.html
+[6]:  http://digitallinguistics.github.io/dlx-spec/schemas/note.html
+[7]:  http://digitallinguistics.github.io/dlx-spec/schemas/person.html
 
-[9]:  http://digitallinguistics.github.io/dlx-spec/tags.html
-[10]: http://digitallinguistics.github.io/dlx-spec/dateCreated.html
-[11]: http://digitallinguistics.github.io/dlx-spec/dateModified.html
-[12]: http://digitallinguistics.github.io/dlx-spec/dateRecorded.html
-[13]: http://digitallinguistics.github.io/dlx-spec/lexemeReference.html
-[14]: http://digitallinguistics.github.io/dlx-spec/multiLangString.html
-[15]: http://digitallinguistics.github.io/dlx-spec/reference.html
-[16]: http://digitallinguistics.github.io/dlx-spec/url.html
-[17]: http://digitallinguistics.github.io/dlx-spec/location.html
-[18]: http://digitallinguistics.github.io/dlx-spec/address.html
+[9]:  http://digitallinguistics.github.io/dlx-spec/schemas/tags.html
+[10]: http://digitallinguistics.github.io/dlx-spec/schemas/dateCreated.html
+[11]: http://digitallinguistics.github.io/dlx-spec/schemas/dateModified.html
+[12]: http://digitallinguistics.github.io/dlx-spec/schemas/dateRecorded.html
+[13]: http://digitallinguistics.github.io/dlx-spec/schemas/lexemeReference.html
+[14]: http://digitallinguistics.github.io/dlx-spec/schemas/multiLangString.html
+[15]: http://digitallinguistics.github.io/dlx-spec/schemas/reference.html
+[16]: http://digitallinguistics.github.io/dlx-spec/schemas/url.html
+[17]: http://digitallinguistics.github.io/dlx-spec/schemas/location.html
+[18]: http://digitallinguistics.github.io/dlx-spec/schemas/address.html
