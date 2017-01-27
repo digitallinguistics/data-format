@@ -29,7 +29,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A phrase is a segmentation of a text above the word level. The DLx framework imposes no requirements regarding how this segmentation should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase object consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).</p>
+        <p><p>The term <em>phrase</em> is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).</p>
 </p>
       </div>
 
@@ -57,6 +57,32 @@
             <li><code>transcriptions</code></li>
             <li><code>translations</code></li>
             <li><code>words</code></li>
+        </ul>
+      </div>
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+      <div class='dependencies object prop'>
+        <h2>Dependencies</h2>
+        <ul>
+            <li>
+                <div>
+                  <p>If the property <code>startTime</code> is present, the following properties must also be present:</p>
+                  <ul class=dependencies-list>
+                      <li><code>endTime</code></li>
+                  </ul>
+                </div>
+            </li>
+            <li>
+                <div>
+                  <p>If the property <code>endTime</code> is present, the following properties must also be present:</p>
+                  <ul class=dependencies-list>
+                      <li><code>startTime</code></li>
+                  </ul>
+                </div>
+            </li>
         </ul>
       </div>
 
@@ -325,7 +351,10 @@
       <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
     </summary>
 
+
+
     <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json#</a></p>
+
 
   </details>
 
@@ -340,7 +369,15 @@
       <h1 class='title meta any prop'>Transcriptions: <code>"transcription"</code></h1>
     </summary>
 
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The transcriptions for this phrase, optionally in multiple orthographies.</p>
+</p>
+      </div>
+
     <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
 
   </details>
 
@@ -376,7 +413,10 @@
   <details open>
 
 
+
+
     <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
 
   </details>
 
@@ -386,6 +426,8 @@
 <section class=schema>
 
   <details open>
+
+
 
 
 
@@ -451,6 +493,8 @@
 
 
 
+
+
       <div class='enum any prop'>
         <h2>Allowed Values (<code>enum</code>)</h2>
         <ul>
@@ -468,16 +512,12 @@
 
 
 
-
-
   </details>
 
 </section>
 </li>
         </ul>
       </div>
-
-
 
 
 
@@ -534,7 +574,10 @@
       <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
     </summary>
 
+
+
     <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/url-latest.json#>https://cdn.digitallinguistics.org/schemas/url-latest.json#</a></p>
+
 
   </details>
 
@@ -601,7 +644,10 @@
                 <h1 class='title meta any prop'>Word</h1>
               </summary>
           
+          
+          
               <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/word-latest.json#>https://cdn.digitallinguistics.org/schemas/word-latest.json#</a></p>
+          
           
             </details>
           
@@ -620,32 +666,6 @@
       </div>
 
 
-        <p class='additional-properties object prop'>
-          <strong>Additional properties:</strong> true
-        </p>
-
-      <div class='dependencies object prop'>
-        <h2>Dependencies</h2>
-        <ul>
-            <li>
-                <div>
-                  <p>If the property <code>startTime</code> is present, the following properties must also be present:</p>
-                  <ul class=dependencies-list>
-                      <li><code>endTime</code></li>
-                  </ul>
-                </div>
-            </li>
-            <li>
-                <div>
-                  <p>If the property <code>endTime</code> is present, the following properties must also be present:</p>
-                  <ul class=dependencies-list>
-                      <li><code>startTime</code></li>
-                  </ul>
-                </div>
-            </li>
-        </ul>
-      </div>
-
 
 
 
@@ -662,7 +682,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="address.html">Address</a></li><li><a href="access.html">Access Rights</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="language.html">Language</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="note.html">Note</a></li><li><a href="tags.html">Tags</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 
