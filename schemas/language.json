@@ -3,7 +3,7 @@
   "id": "https://cdn.digitallinguistics.org/schemas/language-1.0.2.json#",
   "title": "Language",
   "type": "object",
-  "description": "The DLx framework uses the term `language` to refer broadly to any language variety - whether conceptualized as a language, dialect, or idiolect - at a particular point in time.",
+  "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical lexicon. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
   "additionalProperties": true,
   "required": ["name"],
 

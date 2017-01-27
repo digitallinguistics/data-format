@@ -25,11 +25,11 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>https://cdn.digitallinguistics.org/schemas/lexeme-1.0.1.json#</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexeme-2.0.0.json</code></p>
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a construction, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or memorized chunk. A lexeme will often have multiple <em>senses</em> or meanings, and those are listed in the <code>senses</code> field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple forms, even before considering inflection. For example, the lexeme <code>run</code> in English has two base forms: <code>run</code> and <code>ran</code>. These different base forms of a lexeme are listed in the <code>forms</code> field. The <code>baseForms</code> field should <em>not</em> be used to list all the inflectional forms of a lexeme. NB: An entry in a dictionary does <em>not</em> represent a lexeme, but rather a lexeme form (see the <code>forms</code> attribute instead).</p>
+        <p><p>A <em>lexeme</em> is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple <em>senses</em> or meanings, and those are listed in the <code>senses</code> field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme <code>run</code> in English has two base forms: <code>run</code> and <code>ran</code>. The <code>run</code> form is listed as the headword or <em>lemma</em>, and <code>ran</code> is listed as a past tense variant. The <code>variants</code> field should <em>not</em> be used to list all the inflectional forms of a lexeme.</p>
 </p>
       </div>
 
@@ -39,82 +39,6 @@
         <h2>Definitions</h2>
         <p>The following schema definitions may be used by this schema:</p>
         <ul>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Included In: <code>"includedIn"</code></h1>
-    </summary>
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A list of references to lexemes or lexeme forms that this item is included in. For example, the lexeme <code>‑s</code> (English plural for nouns) would have a reference to the lexeme <code>pants</code>, among others.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Lexicon Reference</h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
-          
-            </details>
-          
-          </section>
-
-      </div>
-
-
-
-
-  </details>
-
-</section>
-</li>
             <li>
 <section class=schema>
 
@@ -154,10 +78,12 @@
       <div class='required object prop'>
         <h2>Required Properties</h2>
         <ul>
-            <li><code>referencedLexeme</code></li>
+            <li><code>lexeme</code></li>
             <li><code>relation</code></li>
         </ul>
       </div>
+
+
 
 
       <div class='properties object prop'>
@@ -169,46 +95,17 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Lexical Relation Type: <code>"relation"</code></h1>
+      <h1 class='title meta any prop'>Referenced Lexeme: <code>"lexeme"</code></h1>
     </summary>
-
-
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a <code>compare</code> relation) or historical relationships (a <code>derivedFrom</code> or <code>originOf</code> relation). Examples: <code>antonym</code>, <code>synonym</code>, <code>cognate</code>, <code>derivedFrom</code>, <code>originOf</code>, <code>compare</code>, <code>partOf</code>, <code>hypernymOf</code>, <code>hyponymOf</code>.</p>
+        <p><p>A reference to a lexeme or variant that the current lexeme has a lexical relation to. Includes cross-references.</p>
 </p>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
 
 
   </details>
@@ -221,10 +118,18 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Referenced Lexeme: <code>"referencedLexeme"</code></h1>
+      <h1 class='title meta any prop'>Lexical Relation Type: <code>"relation"</code></h1>
     </summary>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a <code>compare</code> relation) or historical relationships (a <code>derivedFrom</code> or <code>originOf</code> relation). Examples: <code>antonym</code>, <code>synonym</code>, <code>cognate</code>, <code>derivedFrom</code>, <code>originOf</code>, <code>compare</code>, <code>partOf</code>, <code>hypernymOf</code>, <code>hyponymOf</code>.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
+
 
   </details>
 
@@ -232,8 +137,6 @@
 </li>
         </ul>
       </div>
-
-
 
 
 
@@ -257,43 +160,13 @@
     </summary>
 
 
-
-
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The source(s) of information about this lexeme. This will often be the initials of a speaker.</p>
+        <p><p>The source of information about this lexeme or variant. This will often be the initials of a speaker, but could also be the title of the story the lexeme was found it, or other types of sources.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
 
 
   </details>
@@ -314,7 +187,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of variants of this lexeme / lexeme form / sense.</p>
+        <p><p>A collection of variants of this lexeme or sense.</p>
 </p>
       </div>
 
@@ -366,11 +239,13 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A reference to, and information about, a variant of the current lexeme / lexeme form / sense.</p>
+                  <p><p>A reference to a variant of the current lexeme or sense.</p>
           </p>
                 </div>
           
                 <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+          
+          
           
           
           
@@ -402,7 +277,15 @@
                 <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
               </summary>
           
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The type of variant.</p>
+          </p>
+                </div>
+          
               <p class='$ref any prop'>Must be an instance of the schema at <a href=variantType>variantType</a></p>
+          
           
             </details>
           
@@ -417,7 +300,15 @@
                 <h1 class='title meta any prop'>Referenced Lexeme: <code>"referencedLexeme"</code></h1>
               </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A reference to the variant lexeme.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
+          
           
             </details>
           
@@ -425,8 +316,6 @@
           </li>
                   </ul>
                 </div>
-          
-          
           
           
           
@@ -459,43 +348,13 @@
     </summary>
 
 
-
-
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of variant that this item is. Possible values might be a person's name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
+        <p><p>What type of variant this lexeme is. Possible values might be a person's name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
 
 
   </details>
@@ -528,6 +387,24 @@
         </ul>
       </div>
 
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+      <div class='dependencies object prop'>
+        <h2>Dependencies</h2>
+        <ul>
+            <li>
+                <div>
+                  <p>If the property <code>variantType</code> is present, the following properties must also be present:</p>
+                  <ul class=dependencies-list>
+                      <li><code>variantOf</code></li>
+                  </ul>
+                </div>
+            </li>
+        </ul>
+      </div>
+
 
       <div class='properties object prop'>
         <h2>Properties</h2>
@@ -538,10 +415,358 @@
   <details open>
 
     <summary>
+      <h1 class='title meta any prop'>Allomorphs: <code>"allomorphs"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of allomorphs of this lexeme.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Allomorph</h1>
+              </summary>
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>An allomorph of this lexeme.</p>
+          </p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                  <p class='additional-properties object prop'>
+                    <strong>Additional properties:</strong> true
+                  </p>
+          
+          
+          
+                <div class='properties object prop'>
+                  <h2>Properties</h2>
+                  <ul>
+                      <li>
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Transcription: <code>"transcription"</code></h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+          
+          
+            </details>
+          
+          </section>
+          </li>
+                      <li>
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Environments: <code>"environments"</code></h1>
+              </summary>
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A list of (morpho)phonological environments in which this allomorph occurs.</p>
+          </p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <p class='unique-items array prop'>
+                  <strong>Unique items:</strong> <code>true</code>
+                </p>
+          
+                <div class='items array prop'>
+          
+                  <h2>Items</h2>
+          
+                    
+                    <section class=schema>
+                    
+                      <details open>
+                    
+                        <summary>
+                          <h1 class='title meta any prop'>Environment</h1>
+                        </summary>
+                    
+                    
+                    
+                    
+                          <div class='description meta any prop'>
+                            <h2>Description</h2>
+                            <p><p>A formalization of a (morpho)phonologial environemnt, e.g. <code>_k</code>.</p>
+                    </p>
+                          </div>
+                    
+                          <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                      </details>
+                    
+                    </section>
+          
+                </div>
+          
+          
+          
+          
+            </details>
+          
+          </section>
+          </li>
+                  </ul>
+                </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
       <h1 class='title meta any prop'>Citation Form: <code>"citationForm"</code></h1>
     </summary>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. <code>to run</code>, even though <code>run</code> is typically used as its lemma form. The citation form usually serves as the headword in a dictionary as well. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Components: <code>"components"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of the morphemes or other lexical entries contained within the current form. For example, the form <code>gentlemen</code> in an English lexicon might have references to the form <code>gentle</code>, and the form <code>men</code> within the lexeme for <code>man</code>. Components may reference either an entire lexeme or a specific variant.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Referenced Lexeme</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The referenced component.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
 
   </details>
 
@@ -556,7 +781,15 @@
       <h1 class='title meta any prop'>Date Created: <code>"dateCreated"</code></h1>
     </summary>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#>https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#</a></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date and optionally time that this lexeme was created, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date-time format</a>.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/dateCreated.json>http://cdn.digitallinguistics.io/schemas/dateCreated.json</a></p>
+
 
   </details>
 
@@ -571,7 +804,15 @@
       <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
     </summary>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#>https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#</a></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date and optionally time that this lexeme was last modified, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date-time format</a>.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/dateModified.json>http://cdn.digitallinguistics.io/schemas/dateModified.json</a></p>
+
 
   </details>
 
@@ -638,7 +879,10 @@
                 <h1 class='title meta any prop'>Example Phrase</h1>
               </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/phrase-latest.json#>https://cdn.digitallinguistics.org/schemas/phrase-latest.json#</a></p>
+          
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.io/schemas/phrase.json>https://cdn.digitallinguistics.io/schemas/phrase.json</a></p>
+          
           
             </details>
           
@@ -659,7 +903,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Forms: <code>"forms"</code></h1>
+      <h1 class='title meta any prop'>Included In: <code>"includedIn"</code></h1>
     </summary>
 
 
@@ -667,7 +911,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The different base forms that this lexeme has, other than its lemma form. These are usually suppletive forms of a root or stem, e.g. <code>ran</code> as the past form of <code>run</code>, or <code>men</code> as the plural form of <code>man</code>. A lexeme form is generally what is listed as an entry in the dictionary. In the usual scenario, the main entry is listed under the lemma form, and contains detailed information about the lexeme, while entries for each of the different lexeme forms are simply pointers to the main entry. If the lemma has allomorphs, you should list the lemma form again here.</p>
+        <p><p>A list of references to lexemes or variants that this item is included in. For example, the lexeme <code>‑s</code> (English plural for nouns) would have a reference to the lexeme <code>pants</code>, among others.</p>
 </p>
       </div>
 
@@ -711,894 +955,12 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Lexeme Form</h1>
+                <h1 class='title meta any prop'>Lexicon Reference</h1>
               </summary>
           
           
           
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>One of the forms of a lexeme.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='required object prop'>
-                  <h2>Required Properties</h2>
-                  <ul>
-                      <li><code>form</code></li>
-                      <li><code>type</code></li>
-                  </ul>
-                </div>
-          
-          
-                <div class='properties object prop'>
-                  <h2>Properties</h2>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Allomorphs: <code>"allomorphs"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A list of allomorphs of this form.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Allomorph</h1>
-                        </summary>
-                    
-                    
-                    
-                    
-                          <div class='description meta any prop'>
-                            <h2>Description</h2>
-                            <p><p>An allomorph of this form.</p>
-                    </p>
-                          </div>
-                    
-                          <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                          <div class='properties object prop'>
-                            <h2>Properties</h2>
-                            <ul>
-                                <li>
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Transcription: <code>"transcription"</code></h1>
-                        </summary>
-                    
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
-                    
-                      </details>
-                    
-                    </section>
-                    </li>
-                                <li>
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Environments: <code>"environments"</code></h1>
-                        </summary>
-                    
-                    
-                    
-                    
-                          <div class='description meta any prop'>
-                            <h2>Description</h2>
-                            <p><p>A list of (morpho)phonological environments in which this allomorph occurs.</p>
-                    </p>
-                          </div>
-                    
-                          <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                          <p class='unique-items array prop'>
-                            <strong>Unique items:</strong> <code>true</code>
-                          </p>
-                    
-                          <div class='items array prop'>
-                    
-                            <h2>Items</h2>
-                    
-                              
-                              <section class=schema>
-                              
-                                <details open>
-                              
-                                  <summary>
-                                    <h1 class='title meta any prop'>Environment</h1>
-                                  </summary>
-                              
-                              
-                              
-                              
-                                    <div class='description meta any prop'>
-                                      <h2>Description</h2>
-                                      <p><p>A formalization of a (morpho)phonologial environemnt, e.g. <code>_k</code>.</p>
-                              </p>
-                                    </div>
-                              
-                                    <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                              
-                                </details>
-                              
-                              </section>
-                    
-                          </div>
-                    
-                    
-                    
-                    
-                      </details>
-                    
-                    </section>
-                    </li>
-                            </ul>
-                          </div>
-                    
-                    
-                            <p class='additional-properties object prop'>
-                              <strong>Additional properties:</strong> true
-                            </p>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Components: <code>"components"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A list of the forms contained within the current form. For example, the form <code>gentlemen</code> in an English lexicon might have references to the form <code>gentle</code>, and the form <code>men</code> within the lexeme for <code>man</code>. Components may reference either an entire lexeme or a specific lexeme form.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                    
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Examples: <code>"examples"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A collection of examples illustrating this form in use. Each example is a phrase.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Example Phrase</h1>
-                        </summary>
-                    
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/phrase-latest.json#>https://cdn.digitallinguistics.org/schemas/phrase-latest.json#</a></p>
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Headword: <code>"headword"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Gloss: <code>"gloss"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A Leipzig-style gloss for the entire lexeme. Use this field instead of (or in addition to) the gloss field within a sense when there is a single gloss that applies to all the senses for this lexeme.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Included In: <code>"includedIn"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=includedIn>includedIn</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A collection of notes about this lexeme form.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Note</h1>
-                        </summary>
-                    
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/note-latest.json#>https://cdn.digitallinguistics.org/schemas/note-latest.json#</a></p>
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Bibliographic References: <code>"references"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A collection of bibliographic references about this lexeme form, if it has been discussed in the literature.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Reference</h1>
-                        </summary>
-                    
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/reference-latest.json#>https://cdn.digitallinguistics.org/schemas/reference-latest.json#</a></p>
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Syllable Structure: <code>"syllableStructure"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An abstract representation of the syllable structure of this form, e.g. <code>CVC</code>.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json-latest.json#</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Tone: <code>"tone"</code></h1>
-              </summary>
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An abstract representation of the tonal pattern of this lexeme form. Examples: <code>HLH</code>, <code>323</code>, etc.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Transcription: <code>"transcription"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Lexeme Form Type: <code>"type"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Variant Of: <code>"variantOf"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Variants: <code>"variants"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=variants>variants</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
-              </summary>
-          
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=variantType>variantType</a></p>
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='default meta any prop'>
-                  <h2>Default Value</h2>
-                  <pre>{
-            &quot;form&quot;: {},
-            &quot;type&quot;: &quot;&quot;
-          }</pre>
-                </div>
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
           
           
             </details>
@@ -1609,21 +971,6 @@
 
 
 
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Included In: <code>"includedIn"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=includedIn>includedIn</a></p>
 
   </details>
 
@@ -1692,7 +1039,15 @@
       <h1 class='title meta any prop'>Lemma: <code>"lemma"</code></h1>
     </summary>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A <em>lemma</em> is the particular form conventionally used to represent a particular lexeme. It may differ drastically from the citation form or headword form. For example, the form <code>be</code> is typically used as the lemma form of the English verb <code>to be</code>, with its variants <code>am</code>, <code>are</code>, <code>is</code>, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+
 
   </details>
 
@@ -1712,7 +1067,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of the lexical relations that this lexeme has to other lexemes.</p>
+        <p><p>A list of the lexical relations that this lexeme has to other lexemes or variants.</p>
 </p>
       </div>
 
@@ -1759,7 +1114,10 @@
                 <h1 class='title meta any prop'>Lexical Relation</h1>
               </summary>
           
+          
+          
               <p class='$ref any prop'>Must be an instance of the schema at <a href=lexicalRelation>lexicalRelation</a></p>
+          
           
             </details>
           
@@ -1783,7 +1141,15 @@
       <h1 class='title meta any prop'>Literal Meaning: <code>"literalMeaning"</code></h1>
     </summary>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The literal meaning of the lexeme, optionally in multiple orthographies.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+
 
   </details>
 
@@ -1799,43 +1165,13 @@
     </summary>
 
 
-
-
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of morpheme or complex construction that this lexeme is. Examples: <code>root</code>, <code>stem</code>, <code>bipartite stem</code>, <code>enclitic</code>, <code>prefix</code>, <code>inflected word</code>, <code>phrase</code>, <code>circumfix</code></p>
+        <p><p>The type of morpheme or complex construction that this lexeme is. Examples: <code>root</code>, <code>stem</code>, <code>bipartite stem</code>, <code>enclitic</code>, <code>prefix</code>, <code>inflected word</code>, <code>phrase</code>, <code>circumfix</code>.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
 
 
   </details>
@@ -1899,8 +1235,19 @@
           
             <details open>
           
+              <summary>
+                <h1 class='title meta any prop'>Note</h1>
+              </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/note-latest.json#>https://cdn.digitallinguistics.org/schemas/note-latest.json#</a></p>
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A note about this lexeme, optionally in multiple orthographies.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/note.json>http://cdn.digitallinguistics.io/schemas/note.json</a></p>
+          
           
             </details>
           
@@ -1921,7 +1268,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>References: <code>"references"</code></h1>
+      <h1 class='title meta any prop'>Bibliographic References: <code>"references"</code></h1>
     </summary>
 
 
@@ -1929,7 +1276,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of bibliographic references relating to this lexeme. For example, a particular lexeme may have been discussed in detail in a published article.</p>
+        <p><p>A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.</p>
 </p>
       </div>
 
@@ -1972,8 +1319,19 @@
           
             <details open>
           
+              <summary>
+                <h1 class='title meta any prop'>Reference</h1>
+              </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/reference-latest.json#>https://cdn.digitallinguistics.org/schemas/reference-latest.json#</a></p>
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A bibliographic reference.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/reference.json>http://cdn.digitallinguistics.io/schemas/reference.json</a></p>
+          
           
             </details>
           
@@ -1982,6 +1340,308 @@
       </div>
 
 
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Sources: <code>"sources"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of attested sources for this lexeme or variant.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Source</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>an attested source for this lexeme.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=source>source</a></p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Syllable Structure: <code>"syllableStructure"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An abstract representation of the syllable structure of this form, e.g. <code>CVC</code>.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of tags for this lexeme or variant.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/tags.json>http://cdn.digitallinguistics.io/schemas/tags.json</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tone: <code>"tone"</code></h1>
+    </summary>
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An abstract representation of the tonal pattern of this lexeme or variant. Examples: <code>HLH</code>, <code>323</code>, etc.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The URL where this lexeme or variant is located.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/url.json>http://cdn.digitallinguistics.io/schemas/url.json</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Variant Of: <code>"variantOf"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>When this lexeme is a variant of another lexeme, this field should contain a reference to the other lexeme. Lexemes may only be variants of one other lexeme.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Variants: <code>"variants"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of variants on this lexeme.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=variants>variants</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The type of variant.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=variantType>variantType</a></p>
 
 
   </details>
@@ -2084,6 +1744,11 @@
                   </ul>
                 </div>
           
+                  <p class='additional-properties object prop'>
+                    <strong>Additional properties:</strong> true
+                  </p>
+          
+          
           
                 <div class='properties object prop'>
                   <h2>Properties</h2>
@@ -2151,43 +1816,13 @@
               </summary>
           
           
-          
-          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>The lexical category, part of speech, or morphosyntactic class for this lexeme. If the current lexeme is an affix or other grammatical (rather than lexical) morpheme, this field should be used to describe the category that the morpheme attaches to. Examples: the English verb suffix <code>‑s</code> would set this property to <code>verb</code>, and the English derivational suffix <code>‑ize</code> would set this property to <code>noun</code>.</p>
+                  <p><p>The lexical category, part of speech, or morphosyntactic class for this lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. Examples: the English verb suffix <code>‑s</code> would set this property to <code>verb</code>, and the English derivational suffix <code>‑ize</code> would set this property to <code>noun</code>.</p>
           </p>
                 </div>
           
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
           
           
             </details>
@@ -2203,7 +1838,15 @@
                 <h1 class='title meta any prop'>Definition: <code>"definition"</code></h1>
               </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The definition for this particular sense, optionally in multiple orthographies.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+          
           
             </details>
           
@@ -2219,43 +1862,13 @@
               </summary>
           
           
-          
-          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
                   <p><p>If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix <code>‑er</code> would have this property set to <code>noun</code>.</p>
           </p>
                 </div>
           
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
           
           
             </details>
@@ -2320,7 +1933,10 @@
                       <details open>
                     
                     
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/phrase-latest.json#>https://cdn.digitallinguistics.org/schemas/phrase-latest.json#</a></p>
+                    
+                    
+                        <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/phrase.json>http://cdn.digitallinguistics.io/schemas/phrase.json</a></p>
+                    
                     
                       </details>
                     
@@ -2345,43 +1961,13 @@
               </summary>
           
           
-          
-          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A short version of the definition, using Leipzig-style glossing notation.</p>
+                  <p><p>A Leipzig-style gloss for this sense.</p>
           </p>
                 </div>
           
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
           
           
             </details>
@@ -2398,43 +1984,13 @@
               </summary>
           
           
-          
-          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
                   <p><p>If this lexeme is a root or stem, this field indicates the inflectional class that the lexeme takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.</p>
           </p>
                 </div>
           
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
           
           
             </details>
@@ -2502,7 +2058,10 @@
                           <h1 class='title meta any prop'>Lexical Relation</h1>
                         </summary>
                     
+                    
+                    
                         <p class='$ref any prop'>Must be an instance of the schema at <a href=lexicalRelation>lexicalRelation</a></p>
+                    
                     
                       </details>
                     
@@ -2578,7 +2137,10 @@
                           <h1 class='title meta any prop'>Note</h1>
                         </summary>
                     
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/note-latest.json#>https://cdn.digitallinguistics.org/schemas/note-latest.json#</a></p>
+                    
+                    
+                        <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/note.json>http://cdn.digitallinguistics.io/schemas/note.json</a></p>
+                    
                     
                       </details>
                     
@@ -2654,7 +2216,10 @@
                           <h1 class='title meta any prop'>Reference</h1>
                         </summary>
                     
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/reference-latest.json#>https://cdn.digitallinguistics.org/schemas/reference-latest.json#</a></p>
+                    
+                    
+                        <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/reference.json>http://cdn.digitallinguistics.io/schemas/reference.json</a></p>
+                    
                     
                       </details>
                     
@@ -2728,10 +2293,76 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Source: <code>"source"</code></h1>
+                <h1 class='title meta any prop'>Sources: <code>"sources"</code></h1>
               </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=source>source</a></p>
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A list of attested sources for this sense.</p>
+          </p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <div class='items array prop'>
+          
+                  <h2>Items</h2>
+          
+                    
+                    <section class=schema>
+                    
+                      <details open>
+                    
+                        <summary>
+                          <h1 class='title meta any prop'>Source</h1>
+                        </summary>
+                    
+                    
+                          <div class='description meta any prop'>
+                            <h2>Description</h2>
+                            <p><p>An attested source for this sense.</p>
+                    </p>
+                          </div>
+                    
+                        <p class='$ref any prop'>Must be an instance of the schema at <a href=source>source</a></p>
+                    
+                    
+                      </details>
+                    
+                    </section>
+          
+                </div>
+          
+          
+          
           
             </details>
           
@@ -2746,7 +2377,15 @@
                 <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
               </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json#</a></p>
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A collection of tags for this lexeme.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/tags.json>http://cdn.digitallinguistics.io/schemas/tags.json</a></p>
+          
           
             </details>
           
@@ -2813,7 +2452,10 @@
                           <h1 class='title meta any prop'>Usage</h1>
                         </summary>
                     
-                        <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#>https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#</a></p>
+                    
+                    
+                        <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+                    
                     
                       </details>
                     
@@ -2837,7 +2479,15 @@
                 <h1 class='title meta any prop'>Variant Of: <code>"variantOf"</code></h1>
               </summary>
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>If this sense is a variant of another sense, a reference to the other sense should go here. For example, sometimes two speakers may use the same word with a slightly different set of senses. In American English, for instance, <em>Coke</em> is a specific brand of soda for most speakers, but a generic term for soda for other speakers. The generic sense would therefore be listed as a dialectal variant of the specific sense.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/lexemeReference.json>http://cdn.digitallinguistics.io/schemas/lexemeReference.json</a></p>
+          
           
             </details>
           
@@ -2852,7 +2502,15 @@
                 <h1 class='title meta any prop'>Variants: <code>"variants"</code></h1>
               </summary>
           
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A list of variants of this sense.</p>
+          </p>
+                </div>
+          
               <p class='$ref any prop'>Must be an instance of the schema at <a href=variants>variants</a></p>
+          
           
             </details>
           
@@ -2867,7 +2525,15 @@
                 <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
               </summary>
           
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>What type of variant this sense is.</p>
+          </p>
+                </div>
+          
               <p class='$ref any prop'>Must be an instance of the schema at <a href=variantType>variantType</a></p>
+          
           
             </details>
           
@@ -2877,11 +2543,6 @@
                 </div>
           
           
-                  <p class='additional-properties object prop'>
-                    <strong>Additional properties:</strong> true
-                  </p>
-          
-          
           
           
           
@@ -2902,117 +2563,9 @@
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Source: <code>"source"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=source>source</a></p>
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/tags-latest.json#>https://cdn.digitallinguistics.org/schemas/tags-latest.json#</a></p>
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/url-latest.json#>https://cdn.digitallinguistics.org/schemas/url-latest.json#</a></p>
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Variant Of: <code>"variantOf"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#>https://cdn.digitallinguistics.org/schemas/lexiconRef-latest.json#</a></p>
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Variants: <code>"variants"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=variants>variants</a></p>
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
-    </summary>
-
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=variantType>variantType</a></p>
-
-  </details>
-
-</section>
-</li>
         </ul>
       </div>
 
-
-        <p class='additional-properties object prop'>
-          <strong>Additional properties:</strong> true
-        </p>
-
-      <div class='dependencies object prop'>
-        <h2>Dependencies</h2>
-        <ul>
-            <li>
-                <div>
-                  <p>If the property <code>variantType</code> is present, the following properties must also be present:</p>
-                  <ul class=dependencies-list>
-                      <li><code>variantOf</code></li>
-                  </ul>
-                </div>
-            </li>
-        </ul>
-      </div>
 
 
 
@@ -3022,7 +2575,7 @@
       <div class='default meta any prop'>
         <h2>Default Value</h2>
         <pre>{
-  &quot;lemma&quot;: &quot;&quot;,
+  &quot;lemma&quot;: {},
   &quot;senses&quot;: []
 }</pre>
       </div>
@@ -3037,7 +2590,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="address.html">Address</a></li><li><a href="access.html">Access Rights</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="language.html">Language</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="note.html">Note</a></li><li><a href="tags.html">Tags</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="lexiconRef.html">Lexicon Reference</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 
