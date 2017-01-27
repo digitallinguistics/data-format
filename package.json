@@ -22,12 +22,11 @@
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "devDependencies": {
     "ajv": "^4.11.2",
+    "azure-storage": "^2.0.0",
     "jasmine": "^2.5.3",
-    "jschemer": "^2.0.0-alpha.7"
-  },
-  "dependencies": {
     "jschemer": "^2.0.0-alpha.8"
   },
+  "dependencies": {},
   "scripts": {
     "build": "jschemer schemas -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json"
