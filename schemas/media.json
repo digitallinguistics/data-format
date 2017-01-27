@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://cdn.digitallinguistics.org/schemas/media-1.0.0.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/media-1.0.0.json#",
 
   "title": "Media File",
   "type": "object",
@@ -20,18 +20,18 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for referring to this file.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/access-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/access-latest.json#"
     },
 
     "content": {
       "title": "Content",
       "description": "A description of the content of this file, optionally in multiple languages or orthographies.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/mulitLangString-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/mulitLangString-latest.json#"
     },
 
     "contentType": {
@@ -42,17 +42,17 @@
     "creator": {
       "title": "Creator",
       "description": "The person who created this specific file.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/person-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/person-latest.json#"
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated-latest.json#"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/dateRecorded-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateRecorded-latest.json#"
     },
 
     "endTime": {
@@ -87,7 +87,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Language",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/language-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/language-latest.json#"
       }
     },
 
@@ -100,13 +100,13 @@
     "location": {
       "title": "Location",
       "description": "The location where the content in this media file was recorded or produced.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/location-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/location-latest.json#"
     },
 
     "mediaUrl": {
       "title": "Media URL",
       "description": "The URL where the media file itself can be found.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
     },
 
     "notes": {
@@ -116,14 +116,14 @@
       "description": "A collection of notes about this media item.",
       "items": {
         "title": "Note",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/note-latest.json#"
       }
     },
 
     "original": {
       "title": "Original Media Item",
       "description": "The URL of the media object (*not* the URL to the media file itself) that this file is derived from.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
     },
 
     "persons": {
@@ -133,7 +133,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Person",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/person-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/person-latest.json#"
       }
     },
 
@@ -145,13 +145,13 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/tags-latest.json#"
     },
 
     "url": {
       "title": "URL",
       "description": "The URL where this media object can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaUrl` attribute).",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
     }
 
   }

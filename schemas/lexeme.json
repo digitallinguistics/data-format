@@ -185,7 +185,7 @@
 
       "items": {
         "title": "Example Phrase",
-        "$ref": "https://cdn.digitallinguistics.io/schemas/phrase.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/phrase.json"
       }
 
     },

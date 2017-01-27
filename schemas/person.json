@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://cdn.digitallinguistics.org/schemas/person-1.0.0.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/person-1.0.0.json#",
 
   "title": "Person",
   "type": "object",
@@ -16,17 +16,17 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/access-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/access-latest.json#"
     },
 
     "address": {
       "title": "Address",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/address-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/address-latest.json#"
     },
 
     "birthDate": {
@@ -39,7 +39,7 @@
     "birthPlace": {
       "title": "Birth Place",
       "description": "This person's place of birth, as a location object.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/location-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/location-latest.json#"
     },
 
     "email": {
@@ -76,7 +76,7 @@
 
         "title": "Language Spoken",
         "allOf": [
-          { "$ref": "https://cdn.digitallinguistics.org/schemas/language-latest.json#" },
+          { "$ref": "http://cdn.digitallinguistics.io/schemas/language-latest.json#" },
           {
             "additionalProperties": true,
             "properties": {
@@ -94,7 +94,7 @@
                 "description": "Notes about this person's use of this language.",
                 "items": {
                   "title": "Note",
-                  "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#"
+                  "$ref": "http://cdn.digitallinguistics.io/schemas/note-latest.json#"
                 }
               },
 
@@ -120,7 +120,7 @@
     "notes": {
       "title": "Notes",
       "description": "Notes about this person.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/note-latest.json#"
     },
 
     "phone": {
@@ -137,12 +137,12 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/tags-latest.json#"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
     }
 
   }

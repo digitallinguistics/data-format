@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://cdn.digitallinguistics.org/schemas/language-1.0.2.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/language-1.0.2.json#",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical lexicon. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -12,7 +12,7 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "A short, human-readable abbreviation for this language.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation-latest.json#"
     },
 
     "codes": {
@@ -52,12 +52,12 @@
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated-latest.json#"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified-latest.json#"
     },
 
     "locations": {
@@ -67,14 +67,14 @@
       "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data.",
       "items": {
         "title": "Location",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/location-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/location-latest.json#"
       }
     },
 
     "name": {
       "title": "Language Name",
       "description": "The name of this language, optionally in multiple orthographies.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString-latest.json#"
     },
 
     "phomemes": {
@@ -83,7 +83,7 @@
       "description": "The phonological inventory for this language, i.e. a collection of phonemes.",
       "items": {
         "title": "Phoneme",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/phoneme-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/phoneme-latest.json#"
       }
     },
 
@@ -94,13 +94,13 @@
       "description": "A collection of orthographies used to represent this language.",
       "items": {
         "title": "Orthography",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/orthography-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/orthography-latest.json#"
       }
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
     }
 
   },

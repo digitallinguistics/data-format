@@ -5,7 +5,7 @@
   <head>
     <meta charset=utf-8>
     <title>
-      Address
+      Lexicon Reference
     </title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="../jschemer.css" type=text/css>
@@ -19,17 +19,17 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Address</h1>
+      <h1 class='title meta any prop'>Lexicon Reference</h1>
     </summary>
 
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/address-1.0.1.json#</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexemeReference-1.0.0.json#</code></p>
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A postal address.</p>
+        <p><p>A reference to an item in a lexicon.</p>
 </p>
       </div>
 
@@ -64,7 +64,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Street Address: <code>"streetAddress"</code></h1>
+      <h1 class='title meta any prop'>Referenced Lexicon: <code>"lexicon"</code></h1>
     </summary>
 
 
@@ -72,7 +72,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The street address, not including apartment or unit number.</p>
+        <p><p>The abbreviation of the lexicon being referenced.</p>
 </p>
       </div>
 
@@ -117,7 +117,25 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Apartment / Unit Number: <code>"apartmentNumber"</code></h1>
+      <h1 class='title meta any prop'>Referenced Lexicon URL: <code>"lexiconUrl"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/url-latest.json#>http://cdn.digitallinguistics.io/schemas/url-latest.json#</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Referenced Lexeme Key: <code>"lexeme"</code></h1>
     </summary>
 
 
@@ -125,7 +143,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The apartment or unit number, along with any abbreviations, e.g. <code>Apt 20</code>.</p>
+        <p><p>The key of the lexeme being referenced.</p>
 </p>
       </div>
 
@@ -170,7 +188,25 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Postal Box Number: <code>"postalBoxNumber"</code></h1>
+      <h1 class='title meta any prop'>Referenced Lexeme URL: <code>"lexemeUrl"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/url-latest.json#>http://cdn.digitallinguistics.io/schemas/url-latest.json#</a></p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Referenced Sense: <code>"sense"</code></h1>
     </summary>
 
 
@@ -178,11 +214,11 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The postal box number.</p>
+        <p><p>The number of the sense being referenced. The sense number is its index in the <code>senses</code> array on the lexeme.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
 
 
 
@@ -223,7 +259,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Locality / City: <code>"locality"</code></h1>
+      <h1 class='title meta any prop'>Referenced Form: <code>"form"</code></h1>
     </summary>
 
 
@@ -231,170 +267,11 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The locality or city for this address.</p>
+        <p><p>The number of the form being referenced. The form number is its index in the <code>forms</code> array on the lexeme.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Region / State: <code>"region"</code></h1>
-    </summary>
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The region or state for this address.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Country: <code>"country"</code></h1>
-    </summary>
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The country this address is located in.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Postal Code: <code>"postalCode"</code></h1>
-    </summary>
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The postal code for this address (as a string rather than a number).</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
 
 
 

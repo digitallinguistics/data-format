@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://cdn.digitallinguistics.org/schemas/bundle-1.1.1.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/bundle-1.1.1.json#",
   "title": "Bundle",
   "type": "object",
   "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
@@ -14,22 +14,22 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this bundle.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation-latest.json#"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/access-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/access-latest.json#"
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/dateCreated-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated-latest.json#"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/dateModified-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified-latest.json#"
     },
 
     "locations": {
@@ -39,7 +39,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Location",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/location-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/location-latest.json#"
       }
     },
 
@@ -50,14 +50,14 @@
       "uniqueItems": true,
       "items": {
         "title": "Media File",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/media-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/media-latest.json#"
       }
     },
 
     "name": {
       "title": "Name",
       "description": "A name for this bundle.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/multiLangString-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString-latest.json#"
     },
 
     "notes": {
@@ -67,7 +67,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/note-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/note-latest.json#"
       }
     },
 
@@ -78,13 +78,13 @@
       "uniqueItems": true,
       "items": {
         "title": "Person",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/person-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/person-latest.json#"
       }
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/tags-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/tags-latest.json#"
     },
 
     "texts": {
@@ -94,13 +94,13 @@
       "uniqueItems": true,
       "items": {
         "title": "Text",
-        "$ref": "https://cdn.digitallinguistics.org/schemas/text-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/text-latest.json#"
       }
     },
 
     "url": {
       "title": "URL",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
     }
 
   }

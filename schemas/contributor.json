@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "https://cdn.digitallinguistics.org/schemas/contributor-1.0.1.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/contributor-1.0.1.json#",
 
   "title": "Contributor",
   "type": "object",
@@ -16,7 +16,7 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/abbreviation-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation-latest.json#"
     },
 
     "name": {
@@ -39,7 +39,7 @@
     "person": {
       "title": "Person",
       "description": "A DLx person object containing more detailed information about this person.",
-      "$ref": "https://cdn.digitallinguistics.org/schemas/person-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/person-latest.json#"
     }
 
   }
