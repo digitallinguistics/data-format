@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/text-1.1.0.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/text-1.1.0.json",
 
   "title": "Text",
   "type": "object",
@@ -18,12 +18,12 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/access-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/access.json"
     },
 
     "contributors": {
@@ -32,23 +32,23 @@
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
       "items": {
         "title": "Contributor",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/contributor-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/contributor.json"
       }
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateRecorded-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateRecorded.json"
     },
 
     "discourseType": {
@@ -63,13 +63,13 @@
       "type": "string",
       "description": "The genre of the text, e.g. folktale, personal narrative, or expository.",
       "minLength": 1,
-      "$ref": "http://cdn.digitallinguistics.io/schemas/genre-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/genre.json"
     },
 
     "location": {
       "title": "Location",
       "description": "The location where this text was recorded.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/location-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/location.json"
     },
 
     "media": {
@@ -79,7 +79,7 @@
       "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
       "items": {
         "title": "Media Items",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/media-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/media.json"
       }
     },
 
@@ -90,7 +90,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
       }
     },
 
@@ -100,7 +100,7 @@
       "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
       "items": {
         "title": "Phrase",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/phrase-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/phrase.json"
       },
       "minItems": 1
     },
@@ -111,18 +111,18 @@
       "description": "A list of any bibliographic references concerning or relating to this text.",
       "items": {
         "title": "Reference",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/reference-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
       }
     },
 
     "status": {
       "title": "Status",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/status-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/status.json"
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
     },
 
     "title": {
@@ -142,7 +142,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     }
 
   }

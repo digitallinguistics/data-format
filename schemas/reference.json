@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/reference-1.0.1.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/reference-1.0.1.json",
   "title": "Bibliographic Reference",
   "description": "A bibliographic reference. This schema borrows from Mendeley's API.",
   "required": ["title"],

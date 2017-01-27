@@ -8,7 +8,7 @@
   "description": "A *word* refers to a specific token in context, rather than to an abstract lexeme. Each word contains one or more morphemes or components.",
 
   "additionalProperties": true,
-  
+
   "required": [
     "transcription",
     "translation"
@@ -46,30 +46,30 @@
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note-latest.json#"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
       }
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
     },
 
     "transcription": {
       "title": "Transcription",
       "description": "A transcription of this word, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "translation": {
       "title": "Translation",
       "description": "A translation of this word, optionally in multiple languages/orthographies. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url-latest.json#"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     }
 
   }

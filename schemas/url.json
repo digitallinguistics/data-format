@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/url-1.0.1.json#",
+  "id": "http://cdn.digitallinguistics.io/schemas/url-1.0.1.json",
   "title": "URL",
   "type": "string",
   "format": "uri",
