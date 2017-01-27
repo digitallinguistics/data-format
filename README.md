@@ -25,20 +25,20 @@ The DLx project recommends JSON because it has become the data interchange forma
 
 ```json
 {
-  "transcriptions": {
+  "transcription": {
     "spa": "Hola, me llamo Daniel.",
     "ipa": "ola me jamo dænjəl"
   },
-  "translations": {
+  "translation": {
     "eng": "Hello, my name is Daniel.",
   },
   "words": [
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "hola",
         "ipa": "ola"
       },
-      "translations": {
+      "translation": {
         "eng": "hello"
       },
       "morphemes": [
@@ -49,11 +49,11 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "me",
         "ipa": "me"
       },
-      "translations": {
+      "translation": {
         "eng": "me"
       },
       "morphemes": [
@@ -64,11 +64,11 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "llamo",
         "ipa": "jamo"
       },
-      "translations": {
+      "translation": {
         "eng": "I call"
       },
       "morphemes": [
@@ -83,11 +83,11 @@ The DLx project recommends JSON because it has become the data interchange forma
       ]
     },
     {
-      "transcriptions": {
+      "transcription": {
         "spa": "Daniel",
         "ipa": "dænjəl"
       },
-      "translations": {
+      "translation": {
         "eng": "Daniel"
       },
       "morphemes": [
@@ -107,7 +107,7 @@ JSON format is easy to learn. It consists of just a few simple rules:
 
 * Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single phrase.
 
-* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the phrase has a property called `"transcriptions"`, and the value of that property is `"Hola, me llamo Daniel."`
+* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the phrase has a property called `"transcription"`, and the value of that property is `"Hola, me llamo Daniel."`
 
 * Arrays are a collection of Objects separated by commas `,`. The items in an Array can be strings of text `"hola"`, numbers (with no quotes), `17`, Objects `{ }`, or even other Arrays `[ ]`. In the example above, the phrase has a collection called `"words"` containing a list of all the words in the phrase. Notice each word in turn has its own collection, called `"morphemes"`. This nesting of arrays and objects allows us to capture the hierarchical nature of linguistic data.
 
