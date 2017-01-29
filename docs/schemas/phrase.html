@@ -27,6 +27,7 @@
 
       <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/phrase-1.0.0.json</code></p>
 
+
       <div class='description meta any prop'>
         <h2>Description</h2>
         <p><p>The term <em>phrase</em> is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).</p>
@@ -102,6 +103,7 @@
 
 
 
+
       <div class='description meta any prop'>
         <h2>Description</h2>
         <p><p>A key which uniquely identifies this phrase within the text. The key for a phrase consists of the abbreviation of the text, a period, and then the number of this phrase within the text (index starts at 1). For example, the third phrase of a text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
@@ -152,6 +154,7 @@
     <summary>
       <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
     </summary>
+
 
 
 
@@ -240,6 +243,7 @@
 
 
 
+
   </details>
 
 </section>
@@ -287,6 +291,7 @@
 
 
 
+
   </details>
 
 </section>
@@ -299,6 +304,7 @@
     <summary>
       <h1 class='title meta any prop'>Speaker: <code>"speaker"</code></h1>
     </summary>
+
 
 
 
@@ -355,6 +361,7 @@
 
 
 
+
       <div class='description meta any prop'>
         <h2>Description</h2>
         <p><p>The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).</p>
@@ -407,7 +414,7 @@
 
 
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/tags.json>http://cdn.digitallinguistics.io/schemas/tags.json</a></p>
+    <p class='$ref any prop'> Must be an instance of the <a href="tags.html">tags</a> schema.</p>
 
 
   </details>
@@ -430,7 +437,7 @@
 </p>
       </div>
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+    <p class='$ref any prop'> Must be an instance of the <a href="multiLangString.html">multiLangString</a> schema.</p>
 
 
   </details>
@@ -445,6 +452,7 @@
     <summary>
       <h1 class='title meta any prop'>Translations: <code>"translation"</code></h1>
     </summary>
+
 
 
 
@@ -469,7 +477,7 @@
 
 
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/multiLangString.json>http://cdn.digitallinguistics.io/schemas/multiLangString.json</a></p>
+    <p class='$ref any prop'> Must be an instance of the <a href=".html"></a> schema.</p>
 
 
   </details>
@@ -480,6 +488,7 @@
 <section class=schema>
 
   <details open>
+
 
 
 
@@ -518,6 +527,7 @@
     <summary>
       <h1 class='title meta any prop'>Translation Type</h1>
     </summary>
+
 
 
 
@@ -630,7 +640,7 @@
 
 
 
-    <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/url.json>http://cdn.digitallinguistics.io/schemas/url.json</a></p>
+    <p class='$ref any prop'> Must be an instance of the <a href="url.html">url</a> schema.</p>
 
 
   </details>
@@ -645,6 +655,7 @@
     <summary>
       <h1 class='title meta any prop'>Words: <code>"words"</code></h1>
     </summary>
+
 
 
 
@@ -700,7 +711,7 @@
           
           
           
-              <p class='$ref any prop'>Must be an instance of the schema at <a href=http://cdn.digitallinguistics.io/schemas/word.json>http://cdn.digitallinguistics.io/schemas/word.json</a></p>
+              <p class='$ref any prop'> Must be an instance of the <a href="word.html">word</a> schema.</p>
           
           
             </details>
@@ -736,7 +747,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="access.html">Access Rights</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="address.html">Address</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="language.html">Language</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="media.html">Media File</a></li><li><a href="location.html">Location</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li><li><a href="text.html">Text</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="language.html">Language</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="person.html">Person</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 

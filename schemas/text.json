@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/text-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/text-1.1.1.json",
 
   "title": "Text",
   "type": "object",
@@ -127,17 +127,8 @@
 
     "title": {
       "title": "Title",
-      "type": "object",
       "description": "A title is a human-readable prose description of the content of the text. The `title` object contains all the titles of the text, in one or more orthographies. Each attribute in the `title` object should be the abbreviation of an orthography, and its value should be the title of the text, in that orthography.",
-      "minProperties": 1,
-      "patternProperties": {
-        "^[(a-z)|(A-Z)|(0-9)]+$": {
-          "title": "Transcription",
-          "type": "string",
-          "description": "A transcription of the title, in the orthography specified by the field's attribute name.",
-          "minLength": 1
-        }
-      }
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "url": {
