@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-2.0.1.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -107,6 +107,7 @@
       "type": "array",
       "description": "A list of allomorphs of this lexeme.",
 
+      "minItems": 1,
       "uniqueItems": true,
 
       "items": {
@@ -114,6 +115,11 @@
         "title": "Allomorph",
         "type": "object",
         "description": "An allomorph of this lexeme.",
+
+        "required": [
+          "environments",
+          "transcription",
+        ],
 
         "additionalProperties": true,
 
@@ -129,7 +135,7 @@
 
             "title": "Environments",
             "type": "array",
-            "description": "A list of (morpho)phonological environments in which this allomorph occurs.",
+            "description": "A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.",
 
             "uniqueItems": true,
 

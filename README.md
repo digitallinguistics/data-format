@@ -116,7 +116,7 @@ Another great feature of JSON is that adding new properties to an Object doesn't
 ## Schemas
 
 ### Linguistic Schemas
-The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification.
+The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does *not* need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.
 
 * [language](http://digitallinguistics.github.io/dlx-spec/schemas/language.html)
 * [lexeme](http://digitallinguistics.github.io/dlx-spec/schemas/lexeme.html)
