@@ -7,6 +7,8 @@
   "type": "object",
   "description": "A reference to a Lexeme in a lexicon. May point to either a top-level Lexeme or a variant.",
 
+  "required": ["lexeme"],
+
   "additionalProperties": false,
 
   "properties": {
