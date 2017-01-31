@@ -5,7 +5,7 @@
 
   "title": "Lexeme Reference",
   "type": "object",
-  "description": "A reference to an item in a lexicon.",
+  "description": "A reference to a Lexeme in a lexicon. May point to either a top-level Lexeme or a variant.",
 
   "additionalProperties": false,
 
