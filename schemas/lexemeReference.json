@@ -15,8 +15,8 @@
 
     "gloss": {
       "title": "Gloss",
-      "type": "string",
-      "description": "The gloss of the sense being referenced. Should match the sense's gloss exactly."
+      "description": "The gloss of the sense being referenced. Should match the sense's gloss exactly.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "lexicon": {
