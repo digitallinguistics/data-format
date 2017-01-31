@@ -130,6 +130,7 @@
             "title": "Environments",
             "type": "array",
             "description": "A list of (morpho)phonological environments in which this allomorph occurs.",
+
             "uniqueItems": true,
 
             "items": {
@@ -153,14 +154,19 @@
     },
 
     "components": {
+
       "title": "Components",
       "type": "array",
       "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant.",
+
+      "uniqueItems": false,
+
       "items": {
         "title": "Referenced Lexeme",
         "description": "The referenced component.",
         "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
       }
+
     },
 
     "dateCreated": {
@@ -261,38 +267,51 @@
     },
 
     "notes": {
+
       "title": "Notes",
       "type": "array",
       "description": "A collection of notes about this lexeme.",
+
       "uniqueItems": true,
+
       "items": {
         "title": "Note",
         "description": "A note about this lexeme, optionally in multiple orthographies.",
         "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
       }
+
     },
 
     "references": {
+
       "title": "Bibliographic References",
-      "description": "A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.",
       "type": "array",
+      "description": "A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.",
+
       "uniqueItems": true,
+
       "items": {
         "title": "Reference",
         "description": "A bibliographic reference.",
         "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
       }
+
     },
 
     "sources": {
+
       "title": "Sources",
       "type": "array",
       "description": "A list of attested sources for this lexeme or variant.",
+
+      "uniqueItems": true,
+
       "items": {
         "title": "Source",
         "description": "an attested source for this lexeme.",
         "$ref": "#/definitions/source"
       }
+
     },
 
     "syllableStructure": {
@@ -456,6 +475,7 @@
             "title": "Sources",
             "type": "array",
             "description": "A list of attested sources for this sense.",
+            "uniqueItems": true,
             "items": {
               "title": "Source",
               "description": "An attested source for this sense.",
