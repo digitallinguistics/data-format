@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/phrase-1.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/phrase-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -97,6 +97,60 @@
   <details open>
 
     <summary>
+      <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
       <h1 class='title meta any prop'>Key: <code>"key"</code></h1>
     </summary>
 
@@ -152,7 +206,30 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
+      <h1 class='title meta any prop'>Language: <code>"language"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The key for the language used in this phrase, e.g. <code>spa</code> or <code>eng</code>. If the text is labeled with a language, all its phrases are assumed to be the same language unless labeled otherwise. Likewise, if a phrase is given a language, all its words are assumed to be the same language unless the word is labeled otherwise.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'> Must be an instance of the <a href="abbreviation.html">abbreviation</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
     </summary>
 
 
@@ -161,11 +238,11 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).</p>
+        <p><p>A collection of notes about this phrase.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
 
 
 
@@ -191,103 +268,38 @@
 
 
 
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
 
+      <div class='items array prop'>
 
+        <h2>Items</h2>
 
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Note</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A note about this phrase, optionally in multiple orthographies.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'> Must be an instance of the <a href="note.html">note</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
 
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>language: <code>"language"</code></h1>
-    </summary>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>notes: <code>"notes"</code></h1>
-    </summary>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      </div>
 
 
 
@@ -306,43 +318,13 @@
     </summary>
 
 
-
-
-
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The name or abbreviation person who produced (uttered, signed, spoke, sung) this phrase. The value of this field must match the name or abbreviation of one of the persons listed in the <code>contributors</code> array of the text. If the text has a single contributor with the role of <code>speaker</code>, then the <code>speaker</code> attribute on the phrase may be omitted. In this case, programs should assume that all phrases were produced by that speaker. If multiple contributors with a <code>speaker</code> role are included in a text, each phrase must have its <code>speaker</code> attribute specified.</p>
+        <p><p>The abbreviation of person who produced (uttered, signed, spoke, sung) this phrase. The value of this field must match the abbreviation of one of the persons listed in the <code>contributors</code> array of the text. If the text has a single contributor with the role of <code>speaker</code>, that speaker is assumed to be the speaker for all phrases in the text. If multiple contributors with a <code>speaker</code> role are included in a text, each phrase must have its <code>speaker</code> attribute specified.</p>
 </p>
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <p class='$ref any prop'> Must be an instance of the <a href="abbreviation.html">abbreviation</a> schema.</p>
 
 
   </details>
@@ -427,7 +409,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Transcriptions: <code>"transcription"</code></h1>
+      <h1 class='title meta any prop'>Transcription: <code>"transcription"</code></h1>
     </summary>
 
 
@@ -450,7 +432,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Translations: <code>"translation"</code></h1>
+      <h1 class='title meta any prop'>Translation: <code>"translation"</code></h1>
     </summary>
 
 
@@ -534,7 +516,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of translation. Value must be either <code>free</code> or <code>literal</code>.</p>
+        <p><p>The type of translation. Typical values are <code>free</code> or <code>literal</code>, but other values may be supplied.</p>
 </p>
       </div>
 
@@ -559,13 +541,6 @@
 
 
 
-      <div class='enum any prop'>
-        <h2>Allowed Values (<code>enum</code>)</h2>
-        <ul>
-            <li><pre>free</pre></li>
-            <li><pre>literal</pre></li>
-        </ul>
-      </div>
 
 
 
@@ -639,6 +614,11 @@
     </summary>
 
 
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The URL where this phrase can be retrieved in JSON format.</p>
+</p>
+      </div>
 
     <p class='$ref any prop'> Must be an instance of the <a href="url.html">url</a> schema.</p>
 
@@ -747,7 +727,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="language.html">Language</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="person.html">Person</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="address.html">Address</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="location.html">Location</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 

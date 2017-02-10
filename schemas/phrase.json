@@ -1,23 +1,32 @@
 {
+
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/phrase-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/phrase-2.0.0.json",
 
   "title": "Phrase",
+  "type": "object",
   "description": "The term *phrase* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
 
-  "type": "object",
   "required": [
     "transcriptions",
     "translations",
     "words"
   ],
+
   "dependencies": {
     "startTime": ["endTime"],
     "endTime": ["startTime"]
   },
+
   "additionalProperties": true,
 
   "properties": {
+
+    "endTime": {
+      "title": "End Time",
+      "type": "number",
+      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds)."
+    },
 
     "key": {
       "title": "Key",
@@ -26,25 +35,40 @@
       "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}$"
     },
 
-    "endTime": {
-      "title": "End Time",
-      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).",
-      "type": "number"
+    "language": {
+      "title": "Language",
+      "type": "string",
+      "description": "The key for the language used in this phrase, e.g. `spa` or `eng`. If the text is labeled with a language, all its phrases are assumed to be the same language unless labeled otherwise. Likewise, if a phrase is given a language, all its words are assumed to be the same language unless the word is labeled otherwise.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
     },
 
-    "language": {},
+    "notes": {
 
-    "notes": {},
+      "title": "Notes",
+      "type": "array",
+      "description": "A collection of notes about this phrase.",
+
+      "uniqueItems": true,
+
+      "items": {
+        "title": "Note",
+        "description": "A note about this phrase, optionally in multiple orthographies.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+      }
+
+    },
 
     "speaker": {
       "title": "Speaker",
-      "description": "The name or abbreviation person who produced (uttered, signed, spoke, sung) this phrase. The value of this field must match the name or abbreviation of one of the persons listed in the `contributors` array of the text. If the text has a single contributor with the role of `speaker`, then the `speaker` attribute on the phrase may be omitted. In this case, programs should assume that all phrases were produced by that speaker. If multiple contributors with a `speaker` role are included in a text, each phrase must have its `speaker` attribute specified."
+      "type": "string",
+      "description": "The abbreviation of person who produced (uttered, signed, spoke, sung) this phrase. The value of this field must match the abbreviation of one of the persons listed in the `contributors` array of the text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all phrases in the text. If multiple contributors with a `speaker` role are included in a text, each phrase must have its `speaker` attribute specified.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
     },
 
     "startTime": {
       "title": "Start Time",
-      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds).",
-      "type": "number"
+      "type": "number",
+      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds)."
     },
 
     "tags": {
@@ -53,13 +77,13 @@
     },
 
     "transcription": {
-      "title": "Transcriptions",
+      "title": "Transcription",
       "description": "The transcriptions for this phrase, optionally in multiple orthographies.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "translation": {
-      "title": "Translations",
+      "title": "Translation",
       "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
       "allOf": [
         { "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"},
@@ -67,9 +91,8 @@
           "properties": {
             "type": {
               "title": "Translation Type",
-              "description": "The type of translation. Value must be either `free` or `literal`.",
-              "type": "string",
-              "enum": ["free", "literal"]
+              "description": "The type of translation. Typical values are `free` or `literal`, but other values may be supplied.",
+              "type": "string"
             }
           }
         }
@@ -78,13 +101,14 @@
 
     "url": {
       "title": "URL",
+      "description": "The URL where this phrase can be retrieved in JSON format.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     },
 
     "words": {
       "title": "Words",
-      "description": "A collection of the word tokens contained in this phrase.",
       "type": "array",
+      "description": "A collection of the word tokens contained in this phrase.",
       "uniqueItems": false,
       "items": {
         "title": "Word",

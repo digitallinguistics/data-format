@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexemeReference-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/lexemeReference-2.0.0.json",
 
   "title": "Lexeme Reference",
   "type": "object",
@@ -12,12 +12,6 @@
   "additionalProperties": false,
 
   "properties": {
-
-    "gloss": {
-      "title": "Gloss",
-      "description": "The gloss of the sense being referenced. Should match the sense's gloss exactly.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
-    },
 
     "lexicon": {
       "title": "Referenced Lexicon (Key/Abbr)",

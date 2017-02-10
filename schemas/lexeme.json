@@ -118,7 +118,7 @@
 
         "required": [
           "environments",
-          "transcription",
+          "transcription"
         ],
 
         "additionalProperties": true,
@@ -163,8 +163,9 @@
 
       "title": "Components",
       "type": "array",
-      "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant.",
+      "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).",
 
+      "minItems": 1,
       "uniqueItems": false,
 
       "items": {
