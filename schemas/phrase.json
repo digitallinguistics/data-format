@@ -8,8 +8,8 @@
   "description": "The term *phrase* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, sentences, or any other appropriate subdivision. A DLx phrase consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
 
   "required": [
-    "transcriptions",
-    "translations",
+    "transcription",
+    "translation",
     "words"
   ],
 
