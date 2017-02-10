@@ -1,21 +1,17 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexemeReference-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/lexemeReference-2.0.0.json",
 
   "title": "Lexeme Reference",
   "type": "object",
-  "description": "A reference to an item in a lexicon.",
+  "description": "A reference to a Lexeme in a lexicon. May point to either a top-level Lexeme or a variant.",
+
+  "required": ["lexeme"],
 
   "additionalProperties": false,
 
   "properties": {
-
-    "gloss": {
-      "title": "Gloss",
-      "type": "string",
-      "description": "The gloss of the sense being referenced. Should match the sense's gloss exactly."
-    },
 
     "lexicon": {
       "title": "Referenced Lexicon (Key/Abbr)",

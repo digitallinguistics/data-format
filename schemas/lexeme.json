@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-2.0.1.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -107,6 +107,7 @@
       "type": "array",
       "description": "A list of allomorphs of this lexeme.",
 
+      "minItems": 1,
       "uniqueItems": true,
 
       "items": {
@@ -114,6 +115,11 @@
         "title": "Allomorph",
         "type": "object",
         "description": "An allomorph of this lexeme.",
+
+        "required": [
+          "environments",
+          "transcription"
+        ],
 
         "additionalProperties": true,
 
@@ -129,7 +135,8 @@
 
             "title": "Environments",
             "type": "array",
-            "description": "A list of (morpho)phonological environments in which this allomorph occurs.",
+            "description": "A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.",
+
             "uniqueItems": true,
 
             "items": {
@@ -153,14 +160,20 @@
     },
 
     "components": {
+
       "title": "Components",
       "type": "array",
-      "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant.",
+      "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).",
+
+      "minItems": 1,
+      "uniqueItems": false,
+
       "items": {
         "title": "Referenced Lexeme",
         "description": "The referenced component.",
         "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
       }
+
     },
 
     "dateCreated": {
@@ -222,7 +235,7 @@
     "key": {
       "title": "Lexeme Key",
       "type": "string",
-      "description": "A human-readable key that uniquely identifies this lexeme within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
+      "description": "A human-readable key that uniquely identifies this lexeme or variant within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
       "pattern": "^[^ ]+$"
     },
 
@@ -261,38 +274,51 @@
     },
 
     "notes": {
+
       "title": "Notes",
       "type": "array",
       "description": "A collection of notes about this lexeme.",
+
       "uniqueItems": true,
+
       "items": {
         "title": "Note",
         "description": "A note about this lexeme, optionally in multiple orthographies.",
         "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
       }
+
     },
 
     "references": {
+
       "title": "Bibliographic References",
-      "description": "A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.",
       "type": "array",
+      "description": "A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.",
+
       "uniqueItems": true,
+
       "items": {
         "title": "Reference",
         "description": "A bibliographic reference.",
         "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
       }
+
     },
 
     "sources": {
+
       "title": "Sources",
       "type": "array",
       "description": "A list of attested sources for this lexeme or variant.",
+
+      "uniqueItems": true,
+
       "items": {
         "title": "Source",
         "description": "an attested source for this lexeme.",
         "$ref": "#/definitions/source"
       }
+
     },
 
     "syllableStructure": {
@@ -456,6 +482,7 @@
             "title": "Sources",
             "type": "array",
             "description": "A list of attested sources for this sense.",
+            "uniqueItems": true,
             "items": {
               "title": "Source",
               "description": "An attested source for this sense.",

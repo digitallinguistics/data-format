@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexeme-2.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexeme-2.0.1.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -456,6 +456,7 @@
 
 
 
+      <p class='min-items array prop'><strong>Min items:</strong> <code>1</code></p>
 
 
       <p class='unique-items array prop'>
@@ -503,6 +504,13 @@
           
           
           
+                <div class='required object prop'>
+                  <h2>Required Properties</h2>
+                  <ul>
+                      <li><code>environments</code></li>
+                      <li><code>transcription</code></li>
+                  </ul>
+                </div>
           
                   <p class='additional-properties object prop'>
                     <strong>Additional properties:</strong> true
@@ -551,7 +559,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A list of (morpho)phonological environments in which this allomorph occurs.</p>
+                  <p><p>A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.</p>
           </p>
                 </div>
           
@@ -714,7 +722,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of the morphemes or other lexical entries contained within the current form. For example, the form <code>gentlemen</code> in an English lexicon might have references to the form <code>gentle</code>, and the form <code>men</code> within the lexeme for <code>man</code>. Components may reference either an entire lexeme or a specific variant.</p>
+        <p><p>A list of the morphemes or other lexical entries contained within the current form. For example, the form <code>gentlemen</code> in an English lexicon might have references to the form <code>gentle</code>, and the form <code>men</code> within the lexeme for <code>man</code>. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).</p>
 </p>
       </div>
 
@@ -742,8 +750,12 @@
 
 
 
+      <p class='min-items array prop'><strong>Min items:</strong> <code>1</code></p>
 
 
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>false</code>
+      </p>
 
       <div class='items array prop'>
 
@@ -1112,7 +1124,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A human-readable key that uniquely identifies this lexeme within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)</p>
+        <p><p>A human-readable key that uniquely identifies this lexeme or variant within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)</p>
 </p>
       </div>
 
@@ -1516,6 +1528,9 @@
 
 
 
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
 
       <div class='items array prop'>
 
@@ -2468,6 +2483,9 @@
           
           
           
+                <p class='unique-items array prop'>
+                  <strong>Unique items:</strong> <code>true</code>
+                </p>
           
                 <div class='items array prop'>
           
@@ -2728,7 +2746,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="language.html">Language</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="person.html">Person</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="address.html">Address</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="location.html">Location</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 
