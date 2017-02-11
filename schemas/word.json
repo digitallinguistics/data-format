@@ -1,11 +1,11 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/word-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/word-1.1.1.json",
 
   "title": "Word",
   "type": "object",
-  "description": "A *word* refers to a specific token in context, rather than to an abstract lexeme. Each word contains one or more morphemes or components.",
+  "description": "A Word object represents a specific token in a text, rather than to an abstract lexeme (see the Lexeme object for that).",
 
   "additionalProperties": true,
 
@@ -18,7 +18,7 @@
 
     "morphemes": {
       "title": "Morphemes / Components",
-      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Note that each component here is a reference to a lexicon item in a lexicon associated with this text. At a minimum, the reference must contain a unique lemma form, lexeme form, or lexeme key.",
+      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Each component is a reference to a lexicon item in a lexicon associated with this text.",
       "type": "array",
       "uniqueItems": false,
       "items": {
@@ -29,8 +29,8 @@
 
     "gloss": {
       "title": "Gloss",
-      "description": "A Leipzig-style gloss for this word. This does not always need to be supplied if it can be generated automatically from the glosses at the morpheme level.",
-      "type": "string"
+      "description": "A Leipzig-style gloss for this word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple orthographies.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
     },
 
     "key": {
@@ -52,6 +52,7 @@
 
     "tags": {
       "title": "Tags",
+      "description": "A set of tags for this word token.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
     },
 
@@ -69,6 +70,7 @@
 
     "url": {
       "title": "URL",
+      "description": "A URL where this word may be accessed.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     }
 
