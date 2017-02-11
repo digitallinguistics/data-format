@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/word-1.1.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/word-2.0.1.json",
 
   "title": "Word",
   "type": "object",
@@ -10,22 +10,11 @@
   "additionalProperties": true,
 
   "required": [
-    "transcription",
-    "translation"
+    "morphemes",
+    "transcription"
   ],
 
   "properties": {
-
-    "morphemes": {
-      "title": "Morphemes / Components",
-      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Each component is a reference to a lexicon item in a lexicon associated with this text.",
-      "type": "array",
-      "uniqueItems": false,
-      "items": {
-        "title": "Lexicon Item",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
-      }
-    },
 
     "gloss": {
       "title": "Gloss",
@@ -36,7 +25,19 @@
     "key": {
       "title": "Key",
       "type": "string",
-      "description": "A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus."
+      "description": "A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.",
+      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}\\.[0-9]{1,2}$"
+    },
+
+    "morphemes": {
+      "title": "Morphemes / Components",
+      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Each component is a reference to a lexicon item in a lexicon associated with this text.",
+      "type": "array",
+      "uniqueItems": false,
+      "items": {
+        "title": "Lexicon Item",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+      }
     },
 
     "notes": {
