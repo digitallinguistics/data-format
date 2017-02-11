@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema">http://json-schema.org/schema</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/word-1.1.1.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/word-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -55,6 +55,7 @@
       <div class='required object prop'>
         <h2>Required Properties</h2>
         <ul>
+            <li><code>morphemes</code></li>
             <li><code>transcription</code></li>
             <li><code>translation</code></li>
         </ul>
@@ -69,6 +70,84 @@
       <div class='properties object prop'>
         <h2>Properties</h2>
         <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Gloss: <code>"gloss"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A Leipzig-style gloss for this word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple orthographies.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="multiLangString.html">multiLangString</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Key: <code>"key"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
             <li>
 <section class=schema>
 
@@ -141,83 +220,6 @@
           </section>
 
       </div>
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Gloss: <code>"gloss"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A Leipzig-style gloss for this word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple orthographies.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="multiLangString.html">multiLangString</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Key: <code>"key"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -418,7 +420,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="language.html">Language</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="media.html">Media File</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="location.html">Location</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="text.html">Text</a></li><li><a href="tags.html">Tags</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="access.html">Access Rights</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="address.html">Address</a></li><li><a href="language.html">Language</a></li><li><a href="location.html">Location</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="media.html">Media File</a></li><li><a href="person.html">Person</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="url.html">URL</a></li><li><a href="tags.html">Tags</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="word.html">Word</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="text.html">Text</a></li>
       </ul>
     </nav>
 
