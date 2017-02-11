@@ -24,7 +24,7 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
     },
 
-    "lang": {
+    "language": {
       "title": "Note Language",
       "description": "A language code or language name of the language that this note is written in.",
       "type": "string"
