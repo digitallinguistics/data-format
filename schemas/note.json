@@ -1,36 +1,27 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/note-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/note-2.0.0.json",
 
   "title": "Note",
-  "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
   "type": "object",
-  "additionalProperties": false,
+  "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
+
   "required": ["note"],
+
+  "additionalProperties": false,
 
   "properties": {
 
-    "type": {
-      "title": "Note Type",
-      "description": "The type of note.",
-      "type": "string",
-      "enum": [
-        "note-to-self",
-        "general",
-        "anthropological",
-        "discourse",
-        "encyclopedic",
-        "grammar",
-        "phonology",
-        "semantics",
-        "sociocultural"
-      ]
+    "dateCreated": {
+      "title": "Date Created",
+      "description": "The date and optionally time that this note was created, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
     },
 
-    "note": {
-      "title": "Note Text",
-      "description": "The text of the note itself.",
-      "type": "string"
+    "dateModified": {
+      "title": "Date Modified",
+      "description": "The date and optionally time that this note was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
     },
 
     "lang": {
@@ -43,6 +34,29 @@
       "title": "Source (Person)",
       "description": "The person who is the source of this note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/person.json"
+    },
+
+    "text": {
+      "title": "Note Text",
+      "type": "string",
+      "description": "The text of the note itself."
+    },
+
+    "type": {
+      "title": "Note Type",
+      "type": "string",
+      "description": "The type of note. Common values include: ",
+      "enum": [
+        "note-to-self",
+        "general",
+        "anthropology",
+        "discourse",
+        "encyclopedic",
+        "grammar",
+        "phonology",
+        "semantics",
+        "sociocultural"
+      ]
     }
 
   }

@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/dlx-spec",
-  "version": "0.10.0",
+  "version": "0.10.0-alpha.1",
   "description": "The DLx data format specification for representing linguistic data in JSON.",
   "keywords": [
     "DLx",
@@ -24,7 +24,7 @@
     "ajv": "^4.11.2",
     "azure-storage": "^2.0.0",
     "jasmine": "^2.5.3",
-    "jschemer": "^2.0.0-alpha.8"
+    "jschemer": "^2.0.0-alpha.10"
   },
   "dependencies": {},
   "scripts": {
