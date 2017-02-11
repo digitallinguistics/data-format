@@ -25,7 +25,7 @@
     "endTime": {
       "title": "End Time",
       "type": "number",
-      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds)."
+      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
     },
 
     "key": {
@@ -68,7 +68,7 @@
     "startTime": {
       "title": "Start Time",
       "type": "number",
-      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MM (seconds and milliseconds)."
+      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
     },
 
     "tags": {
