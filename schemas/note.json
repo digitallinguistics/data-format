@@ -6,7 +6,7 @@
   "type": "object",
   "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
 
-  "required": ["note"],
+  "required": ["text"],
 
   "additionalProperties": false,
 
