@@ -9,7 +9,7 @@ module.exports = {
   DateCreated:     require('./DateCreated'),
   DateModified:    require('./DateModified'),
   DateRecorded:    require('./DateRecorded'),
-  Language:        require('./Lnguage'),
+  Language:        require('./Language'),
   Lexeme:          require('./Lexeme'),
   LexemeReference: require('./LexemeReference'),
   Lexicon:         require('./Lexicon'),
