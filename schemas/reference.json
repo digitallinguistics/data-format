@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/reference-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/reference-2.0.0.json",
   "title": "Bibliographic Reference",
-  "description": "A bibliographic reference. This schema borrows from Mendeley's API.",
+  "description": "A bibliographic reference.",
   "required": ["title"],
 
   "properties": {
@@ -12,7 +12,10 @@
       "type": "array",
       "description": "An array of authors for this reference.",
       "uniqueItems": true,
-      "items": { "$ref": "#/definitions/person" }
+      "items": {
+        "title": "Author",
+        "type": "string"
+      }
     },
 
     "city": {
@@ -32,19 +35,34 @@
       "type": "array",
       "description": "An array of editors for this reference.",
       "uniqueItems": true,
-      "items": { "$ref": "#/definitions/person" }
+      "items": {
+        "title": "Editor",
+        "type": "string"
+      }
     },
 
     "issue": {
       "title": "Issue",
-      "type": "integer",
+      "type": "string",
       "description": "The publication issue."
     },
 
-    "publisher": {
-      "title": "Publisher",
+    "pages": {
+      "title": "Pages",
       "type": "string",
-      "description": "The name of the publisher of this reference."
+      "description": "The page numbers of this reference."
+    },
+
+    "publication": {
+      "title": "Publication",
+      "type": "string",
+      "description": "The publication where this item was published."
+    },
+
+    "publisher": {
+      "title": "Publisher (or Institution)",
+      "type": "string",
+      "description": "The name of the publisher of this reference, or the institution where it was published."
     },
 
     "series": {
@@ -72,7 +90,7 @@
       "type": "string",
       "description": "The type of publication.",
       "enum": [
-        "journal",
+        "journal article",
         "book",
         "generic",
         "book section",
@@ -82,17 +100,18 @@
         "web page",
         "thesis",
         "magazine article",
-        "statue",
-        "patent",
         "newspaper article",
-        "computer program",
-        "hearing",
         "television broadcast",
         "encyclopedia article",
-        "case",
-        "film",
-        "bill"
+        "film"
       ]
+    },
+
+    "url": {
+      "title": "URL",
+      "type": "string",
+      "format": "uri",
+      "description": "A URL for this reference."
     },
 
     "volume": {
@@ -104,28 +123,10 @@
     "year": {
       "title": "Year",
       "type": "integer",
-      "description": "The year this item was published."
-    },
-
-    "definitions": {
-      "person": {
-        "title": "Person",
-        "type": "object",
-        "description": "An object representing a person.",
-        "required": ["lastName"],
-        "properties": {
-          "firstName": {
-            "title": "First Name / Given Name",
-            "type": "string",
-            "description": "The person's first name(s) or given name(s)."
-          },
-          "lastName": {
-            "title": "Last Name / Family Name",
-            "type": "string",
-            "description": "The person's last name(s) or family name(s)."
-          }
-        }
-      }
+      "description": "The year this item was published.",
+      "minimum": 0,
+      "exclusiveMinimum": true
     }
+
   }
 }
