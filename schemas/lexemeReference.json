@@ -37,6 +37,12 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     },
 
+    "relation": {
+      "title": "Relation Type",
+      "description": "The type of lexical relation that holds between the current item and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme).",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+    },
+
     "sense": {
       "title": "Referenced Sense (Num)",
       "type": "integer",

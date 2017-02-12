@@ -9,32 +9,6 @@
 
   "definitions": {
 
-    "lexicalRelation": {
-
-      "title": "Lexical Relation",
-      "type": "object",
-      "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object with an additional `relation` property.",
-
-      "allOf": [
-        {
-          "title": "Referenced Lexeme",
-          "description": "A reference to a lexeme or variant that the current lexeme has a lexical relation to. Includes cross-references.",
-          "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
-        },
-        {
-          "required": ["relation"],
-          "properties": {
-            "relation": {
-              "title": "Lexical Relation Type",
-              "description": "The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid abbreviation.",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
-            }
-          }
-        }
-      ]
-
-    },
-
     "source": {
       "title": "Source",
       "description": "The source of information about this lexeme or variant. This will often be the initials of a speaker, but could also be the title of the story the lexeme was found it, or other types of sources.",
@@ -257,8 +231,9 @@
       "uniqueItems": true,
 
       "items": {
-        "title": "Lexical Relation",
-        "$ref": "#/definitions/lexicalRelation"
+        "title": "Lexical Relation (Lexeme Reference)",
+        "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
       }
 
     },
@@ -438,8 +413,9 @@
             "uniqueItems": true,
 
             "items": {
-              "title": "Lexical Relation",
-              "$ref": "#/definitions/lexicalRelation"
+              "title": "Lexical Relation (Lexeme Reference)",
+              "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
             }
 
           },
