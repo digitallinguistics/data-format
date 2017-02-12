@@ -1,3 +1,5 @@
+// NB: the require statements must take a lowercase filename to work on Travis
+
 module.exports = {
   Abbreviation:    require('./abbreviation'),
   Access:          require('./access'),
