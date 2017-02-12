@@ -25,12 +25,12 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/reference-1.0.1.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/reference-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A bibliographic reference. This schema borrows from Mendeley's API.</p>
+        <p><p>A bibliographic reference.</p>
 </p>
       </div>
 
@@ -122,10 +122,44 @@
           
             <details open>
           
+              <summary>
+                <h1 class='title meta any prop'>Author</h1>
+              </summary>
           
           
           
-              <p class='$ref any prop'>Must be an instance of the <a href="#person.html">#person</a> schema.</p>
+          
+          
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
             </details>
@@ -307,10 +341,44 @@
           
             <details open>
           
+              <summary>
+                <h1 class='title meta any prop'>Editor</h1>
+              </summary>
           
           
           
-              <p class='$ref any prop'>Must be an instance of the <a href="#person.html">#person</a> schema.</p>
+          
+          
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
             </details>
@@ -345,7 +413,7 @@
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
 
@@ -386,7 +454,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Publisher: <code>"publisher"</code></h1>
+      <h1 class='title meta any prop'>Pages: <code>"pages"</code></h1>
     </summary>
 
 
@@ -395,7 +463,115 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The name of the publisher of this reference.</p>
+        <p><p>The page numbers of this reference.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Publication: <code>"publication"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The publication where this item was published.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Publisher (or Institution): <code>"publisher"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The name of the publisher of this reference, or the institution where it was published.</p>
 </p>
       </div>
 
@@ -662,7 +838,7 @@
       <div class='enum any prop'>
         <h2>Allowed Values (<code>enum</code>)</h2>
         <ul>
-            <li><pre>&quot;journal&quot;</pre></li>
+            <li><pre>&quot;journal article&quot;</pre></li>
             <li><pre>&quot;book&quot;</pre></li>
             <li><pre>&quot;generic&quot;</pre></li>
             <li><pre>&quot;book section&quot;</pre></li>
@@ -672,18 +848,67 @@
             <li><pre>&quot;web page&quot;</pre></li>
             <li><pre>&quot;thesis&quot;</pre></li>
             <li><pre>&quot;magazine article&quot;</pre></li>
-            <li><pre>&quot;statue&quot;</pre></li>
-            <li><pre>&quot;patent&quot;</pre></li>
             <li><pre>&quot;newspaper article&quot;</pre></li>
-            <li><pre>&quot;computer program&quot;</pre></li>
-            <li><pre>&quot;hearing&quot;</pre></li>
             <li><pre>&quot;television broadcast&quot;</pre></li>
             <li><pre>&quot;encyclopedia article&quot;</pre></li>
-            <li><pre>&quot;case&quot;</pre></li>
             <li><pre>&quot;film&quot;</pre></li>
-            <li><pre>&quot;bill&quot;</pre></li>
         </ul>
       </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A URL for this reference.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+      <p class='format string prop'><strong>Format:</strong> uri</p>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -780,54 +1005,9 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>definitions: <code>"definitions"</code></h1>
-    </summary>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      <p class='exclusive-minimum numeric prop'>
+        <strong>Exclusive minumum:</strong> <code>true</code>
+      </p>
 
 
 
@@ -874,7 +1054,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="address.html">Address</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="note.html">Note</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="person.html">Person</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="text.html">Text</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 

@@ -1,42 +1,43 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/word-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/word-2.0.1.json",
 
   "title": "Word",
   "type": "object",
-  "description": "A *word* refers to a specific token in context, rather than to an abstract lexeme. Each word contains one or more morphemes or components.",
+  "description": "A Word object represents a specific token in a text, rather than to an abstract lexeme (see the Lexeme object for that).",
 
   "additionalProperties": true,
 
   "required": [
-    "transcription",
-    "translation"
+    "morphemes",
+    "transcription"
   ],
 
   "properties": {
 
+    "gloss": {
+      "title": "Gloss",
+      "description": "A Leipzig-style gloss for this word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple orthographies.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+    },
+
+    "key": {
+      "title": "Key",
+      "type": "string",
+      "description": "A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.",
+      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}\\.[0-9]{1,2}$"
+    },
+
     "morphemes": {
       "title": "Morphemes / Components",
-      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Note that each component here is a reference to a lexicon item in a lexicon associated with this text. At a minimum, the reference must contain a unique lemma form, lexeme form, or lexeme key.",
+      "description": "A collection of the components (morphemes, lexicon items) in this word. Components may be repeated if the same morpheme appears twice in the word. Each component is a reference to a lexicon item in a lexicon associated with this text.",
       "type": "array",
       "uniqueItems": false,
       "items": {
         "title": "Lexicon Item",
         "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
       }
-    },
-
-    "gloss": {
-      "title": "Gloss",
-      "description": "A Leipzig-style gloss for this word. This does not always need to be supplied if it can be generated automatically from the glosses at the morpheme level.",
-      "type": "string"
-    },
-
-    "key": {
-      "title": "Key",
-      "type": "string",
-      "description": "A key that uniquely identifies this word token within the text. The key for a phrase consists of the abbreviation of the text, a period, the number of phrase within the text, another period, and then the number of this word within the phrase (indexing starts at 1). For example, for the fourth word of the third phrase of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus."
     },
 
     "notes": {
@@ -52,6 +53,7 @@
 
     "tags": {
       "title": "Tags",
+      "description": "A set of tags for this word token.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
     },
 
@@ -69,6 +71,7 @@
 
     "url": {
       "title": "URL",
+      "description": "A URL where this word may be accessed.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
     }
 

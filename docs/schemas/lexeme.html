@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexeme-2.0.1.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/lexeme-3.2.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -40,141 +40,6 @@
         <h2>Definitions</h2>
         <p>The following schema definitions may be used by this schema:</p>
         <ul>
-            <li id="lexicalRelation">
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Lexical Relation: <code>"lexicalRelation"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A lexical relation between two lexemes or senses.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='required object prop'>
-        <h2>Required Properties</h2>
-        <ul>
-            <li><code>lexeme</code></li>
-            <li><code>relation</code></li>
-        </ul>
-      </div>
-
-
-
-
-      <div class='properties object prop'>
-        <h2>Properties</h2>
-        <ul>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Referenced Lexeme: <code>"lexeme"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A reference to a lexeme or variant that the current lexeme has a lexical relation to. Includes cross-references.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="lexemeReference.html">lexemeReference</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Lexical Relation Type: <code>"relation"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a <code>compare</code> relation) or historical relationships (a <code>derivedFrom</code> or <code>originOf</code> relation). Examples: <code>antonym</code>, <code>synonym</code>, <code>cognate</code>, <code>derivedFrom</code>, <code>originOf</code>, <code>compare</code>, <code>partOf</code>, <code>hypernymOf</code>, <code>hyponymOf</code>.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="lexemeReference.html">lexemeReference</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-        </ul>
-      </div>
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li id="source">
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Source: <code>"source"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The source of information about this lexeme or variant. This will often be the initials of a speaker, but could also be the title of the story the lexeme was found it, or other types of sources.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="multiLangString.html">multiLangString</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
             <li id="variants">
 <section class=schema>
 
@@ -937,11 +802,45 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. <code>case</code>, <code>person</code>, <code>number</code>, <code>gender</code>, <code>noun class</code>, etc.), and its value should be the value for that feature, as a string (e.g. <code>nominative</code>, <code>1</code>, <code>singular</code>, <code>masculine</code>, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature <code>&quot;case&quot;: &quot;accusative&quot;</code> (English) as well as <code>&quot;caso&quot;: &quot;acusativo&quot;</code> (Spanish).</p>
+        <p><p>A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. <code>case</code>, <code>person</code>, <code>number</code>, <code>gender</code>, <code>nounClass</code>, etc.), and its value should be the value for that feature, as a string (e.g. <code>nominative</code>, <code>1</code>, <code>singular</code>, <code>masculine</code>, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature <code>&quot;case&quot;: &quot;accusative&quot;</code> (English) as well as <code>&quot;caso&quot;: &quot;acusativo&quot;</code> (Spanish).</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+      <div class='all-of any prop'>
+        <h2>Validates Against (<code>allOf</code>)</h2>
+        <p>This schema must validate against all of the following schemas:</p>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags</h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="tags.html">tags</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
 
 
 
@@ -975,11 +874,6 @@
           
           
           
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A feature type and value.</p>
-          </p>
-                </div>
           
                 <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
           
@@ -1016,6 +910,40 @@
           
           </section>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1249,12 +1177,17 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Lexical Relation</h1>
+                <h1 class='title meta any prop'>Lexical Relation (Lexeme Reference)</h1>
               </summary>
           
           
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the <code>relation</code> property required.</p>
+          </p>
+                </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="#lexicalRelation.html">#lexicalRelation</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="lexemeReference.html">lexemeReference</a> schema.</p>
           
           
             </details>
@@ -1549,13 +1482,44 @@
               </summary>
           
           
+          
+          
+          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>an attested source for this lexeme.</p>
+                  <p><p>An attested source for this lexeme or variant. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or other types of sources.</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="#source.html">#source</a> schema.</p>
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
             </details>
@@ -2206,12 +2170,17 @@
                       <details open>
                     
                         <summary>
-                          <h1 class='title meta any prop'>Lexical Relation</h1>
+                          <h1 class='title meta any prop'>Lexical Relation (Lexeme Reference)</h1>
                         </summary>
                     
                     
+                          <div class='description meta any prop'>
+                            <h2>Description</h2>
+                            <p><p>A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the <code>relation</code> property required.</p>
+                    </p>
+                          </div>
                     
-                        <p class='$ref any prop'>Must be an instance of the <a href="#lexicalRelation.html">#lexicalRelation</a> schema.</p>
+                        <p class='$ref any prop'>Must be an instance of the <a href="lexemeReference.html">lexemeReference</a> schema.</p>
                     
                     
                       </details>
@@ -2504,13 +2473,44 @@
                         </summary>
                     
                     
+                    
+                    
+                    
                           <div class='description meta any prop'>
                             <h2>Description</h2>
-                            <p><p>An attested source for this sense.</p>
+                            <p><p>An attested source for this sense. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or other types of sources.</p>
                     </p>
                           </div>
                     
-                        <p class='$ref any prop'>Must be an instance of the <a href="#source.html">#source</a> schema.</p>
+                          <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     
                     
                       </details>
@@ -2749,7 +2749,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="address.html">Address</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="note.html">Note</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="person.html">Person</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="text.html">Text</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
+        <li><a href="abbreviation.html">Abbreviation</a></li><li><a href="access.html">Access Rights</a></li><li><a href="address.html">Address</a></li><li><a href="bundle.html">Bundle</a></li><li><a href="contributor.html">Contributor</a></li><li><a href="dateCreated.html">Date Created</a></li><li><a href="dateModified.html">Date Modified</a></li><li><a href="dateRecorded.html">Date Recorded</a></li><li><a href="language.html">Language</a></li><li><a href="lexeme.html">Lexeme</a></li><li><a href="lexemeReference.html">Lexeme Reference</a></li><li><a href="lexicon.html">Lexicon</a></li><li><a href="location.html">Location</a></li><li><a href="media.html">Media File</a></li><li><a href="multiLangString.html">Multi-Language Text / String</a></li><li><a href="note.html">Note</a></li><li><a href="orthography.html">Orthography</a></li><li><a href="person.html">Person</a></li><li><a href="phoneme.html">Phoneme</a></li><li><a href="phrase.html">Phrase</a></li><li><a href="reference.html">Bibliographic Reference</a></li><li><a href="tags.html">Tags</a></li><li><a href="text.html">Text</a></li><li><a href="url.html">URL</a></li><li><a href="word.html">Word</a></li>
       </ul>
     </nav>
 

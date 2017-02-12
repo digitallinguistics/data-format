@@ -1,48 +1,13 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-2.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-3.2.0.json",
 
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a lexeme.",
 
   "definitions": {
-
-    "lexicalRelation": {
-
-      "title": "Lexical Relation",
-      "type": "object",
-      "description": "A lexical relation between two lexemes or senses.",
-
-      "required": [
-        "lexeme",
-        "relation"
-      ],
-
-      "properties": {
-
-        "lexeme": {
-          "title": "Referenced Lexeme",
-          "description": "A reference to a lexeme or variant that the current lexeme has a lexical relation to. Includes cross-references.",
-          "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
-        },
-
-        "relation": {
-          "title": "Lexical Relation Type",
-          "description": "The type of lexical relation that holds between the current lexeme and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`.",
-          "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
-        }
-
-      }
-
-    },
-
-    "source": {
-      "title": "Source",
-      "description": "The source of information about this lexeme or variant. This will often be the initials of a speaker, but could also be the title of the story the lexeme was found it, or other types of sources.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
-    },
 
     "variants": {
 
@@ -206,15 +171,20 @@
     "features": {
 
       "title": "Features",
-      "type": "object",
-      "description": "A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `noun class`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature `\"case\": \"accusative\"` (English) as well as `\"caso\": \"acusativo\"` (Spanish).",
+      "description": "A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature `\"case\": \"accusative\"` (English) as well as `\"caso\": \"acusativo\"` (Spanish).",
 
-      "additionalProperties": {
-        "title": "Feature",
-        "type": "string",
-        "description": "A feature type and value."
-      }
-
+      "allOf": [
+        {
+          "title": "Tags",
+          "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+        },
+        {
+          "additionalProperties": {
+            "title": "Feature",
+            "type": "string"
+          }
+        }
+      ]
     },
 
     "includedIn": {
@@ -255,8 +225,9 @@
       "uniqueItems": true,
 
       "items": {
-        "title": "Lexical Relation",
-        "$ref": "#/definitions/lexicalRelation"
+        "title": "Lexical Relation (Lexeme Reference)",
+        "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
       }
 
     },
@@ -315,8 +286,8 @@
 
       "items": {
         "title": "Source",
-        "description": "an attested source for this lexeme.",
-        "$ref": "#/definitions/source"
+        "type": "string",
+        "description": "An attested source for this lexeme or variant. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or other types of sources."
       }
 
     },
@@ -436,8 +407,9 @@
             "uniqueItems": true,
 
             "items": {
-              "title": "Lexical Relation",
-              "$ref": "#/definitions/lexicalRelation"
+              "title": "Lexical Relation (Lexeme Reference)",
+              "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
             }
 
           },
@@ -479,15 +451,19 @@
           },
 
           "sources": {
+
             "title": "Sources",
             "type": "array",
             "description": "A list of attested sources for this sense.",
+
             "uniqueItems": true,
+
             "items": {
               "title": "Source",
-              "description": "An attested source for this sense.",
-              "$ref": "#/definitions/source"
+              "type": "string",
+              "description": "An attested source for this sense. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or other types of sources."
             }
+
           },
 
           "tags": {
