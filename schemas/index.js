@@ -1,5 +1,5 @@
 module.exports = {
-  Abbreviation:    require('./Abbreviation'),
+  Abbreviation:    require('./Abbreviation.json'),
   Access:          require('./Access'),
   Address:         require('./Address'),
   Bundle:          require('./Bundle'),
