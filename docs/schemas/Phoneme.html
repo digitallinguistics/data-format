@@ -1,0 +1,1199 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Phoneme
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Phoneme</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Phoneme-1.0.0.json</code></p>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An object representing a single phoneme in a language, and its allophones.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>IPA</code></li>
+        </ul>
+      </div>
+
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Airstream Mechanism: <code>"airstream"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The airstream mechanism used to pronounce this Phoneme. <code>Pulmonic</code> (egressive) sounds are created by pushing air out of the lungs. <code>Ejective</code> sounds are glottalic egressive sounds where the air column is compressed by upward movement of the glottis. <code>Implosive</code> sounds are glottalic ingressives where air is pulled in by a downward movement of the glottis. <code>Click</code> sounds, i.e. lingual / velaric ingressive sounds, pull air in with a downward movement of the tongue.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;pulmonic&quot;</pre></li>
+            <li><pre>&quot;ejective&quot;</pre></li>
+            <li><pre>&quot;implosive&quot;</pre></li>
+            <li><pre>&quot;click&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Allophones: <code>"allophones"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of allophones of this phoneme, following the same format as for phoneme objects.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Allophone</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="#.html">#</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Backness: <code>"backness"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>Describes the backness of a vowel.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;front&quot;</pre></li>
+            <li><pre>&quot;near-front&quot;</pre></li>
+            <li><pre>&quot;central&quot;</pre></li>
+            <li><pre>&quot;near-back&quot;</pre></li>
+            <li><pre>&quot;back&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Features: <code>"features"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A list of the phonemically distinctive features of this Phoneme. These are what are listed under <code>diacritics</code> in the IPA chart. For example, if a language distinguishes between a palatalized <code>/t/</code> and a plain <code>/t/</code>, the first should include the feature <code>palatalized</code> and the second <code>plain</code> (or no features). Note that most features are also a manner of articulation as well, so it up to the linguist to decide when a given phonetic detail is a manner, or when it is a feature (i.e. a diacritic). For example, a language might distinguish phonemically between a palatal plosive <code>/c/</code> and a palatalized plosive <code>/tʲ/</code>. The first would list <code>palatal</code> as its place of articulation, while the second would list <code>palatalized</code> as a distinctive feature. Do not include features here if they are already used for manner, unless your analysis is that this feature is <em>both</em> a manner and a feature of this phoneme, e.g. a palatalized palatal stop. This field is used primarily for consonants, but may also apply to vowels as well (e.g. the <code>close</code> and <code>open</code> features).</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Feature</h1>
+              </summary>
+          
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A phonemically distinctive feature, taken from the set of features (diacritics) in the IPA chart.</p>
+          </p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <div class='enum any prop'>
+                  <h2>Allowed Values (<code>enum</code>)</h2>
+                  <ul>
+                      <li><pre>&quot;advanced&quot;</pre></li>
+                      <li><pre>&quot;advanced tongue root&quot;</pre></li>
+                      <li><pre>&quot;affricativized&quot;</pre></li>
+                      <li><pre>&quot;alveolar&quot;</pre></li>
+                      <li><pre>&quot;apical&quot;</pre></li>
+                      <li><pre>&quot;aspirated&quot;</pre></li>
+                      <li><pre>&quot;breathy&quot;</pre></li>
+                      <li><pre>&quot;centralized&quot;</pre></li>
+                      <li><pre>&quot;close&quot;</pre></li>
+                      <li><pre>&quot;creaky&quot;</pre></li>
+                      <li><pre>&quot;dental&quot;</pre></li>
+                      <li><pre>&quot;fortis&quot;</pre></li>
+                      <li><pre>&quot;fricativized&quot;</pre></li>
+                      <li><pre>&quot;labialized&quot;</pre></li>
+                      <li><pre>&quot;laminal&quot;</pre></li>
+                      <li><pre>&quot;lateral release&quot;</pre></li>
+                      <li><pre>&quot;lax&quot;</pre></li>
+                      <li><pre>&quot;lenis&quot;</pre></li>
+                      <li><pre>&quot;lightly aspirated&quot;</pre></li>
+                      <li><pre>&quot;linguolabial&quot;</pre></li>
+                      <li><pre>&quot;lowered&quot;</pre></li>
+                      <li><pre>&quot;mid-centralized&quot;</pre></li>
+                      <li><pre>&quot;nasal release&quot;</pre></li>
+                      <li><pre>&quot;nasalized&quot;</pre></li>
+                      <li><pre>&quot;no release&quot;</pre></li>
+                      <li><pre>&quot;non-syllabic&quot;</pre></li>
+                      <li><pre>&quot;open&quot;</pre></li>
+                      <li><pre>&quot;palatalized&quot;</pre></li>
+                      <li><pre>&quot;pharyngealized&quot;</pre></li>
+                      <li><pre>&quot;plain&quot;</pre></li>
+                      <li><pre>&quot;raised&quot;</pre></li>
+                      <li><pre>&quot;retracted&quot;</pre></li>
+                      <li><pre>&quot;retracted tongue root&quot;</pre></li>
+                      <li><pre>&quot;retroflexed&quot;</pre></li>
+                      <li><pre>&quot;rhotic&quot;</pre></li>
+                      <li><pre>&quot;rounded&quot;</pre></li>
+                      <li><pre>&quot;sibilant&quot;</pre></li>
+                      <li><pre>&quot;syllabic&quot;</pre></li>
+                      <li><pre>&quot;tense&quot;</pre></li>
+                      <li><pre>&quot;unrounded&quot;</pre></li>
+                      <li><pre>&quot;velarized&quot;</pre></li>
+                      <li><pre>&quot;voiced&quot;</pre></li>
+                      <li><pre>&quot;voiceless&quot;</pre></li>
+                      <li><pre>&quot;weakly aspirated&quot;</pre></li>
+                  </ul>
+                </div>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Height: <code>"height"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The height of a vowel.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;close&quot;</pre></li>
+            <li><pre>&quot;near-close&quot;</pre></li>
+            <li><pre>&quot;close-mid&quot;</pre></li>
+            <li><pre>&quot;mid&quot;</pre></li>
+            <li><pre>&quot;open-mid&quot;</pre></li>
+            <li><pre>&quot;near-open&quot;</pre></li>
+            <li><pre>&quot;open&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>IPA Transcription: <code>"IPA"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The IPA representation of this Phoneme.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Length: <code>"length"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The length of this phoneme, whether for consonants (e.g. <code>short</code> vs. <code>geminate</code>) or vowels.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;extra long&quot;</pre></li>
+            <li><pre>&quot;extra short&quot;</pre></li>
+            <li><pre>&quot;geminate&quot;</pre></li>
+            <li><pre>&quot;half long&quot;</pre></li>
+            <li><pre>&quot;long&quot;</pre></li>
+            <li><pre>&quot;short&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Manner of Articulation: <code>"manner"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The manner of articulation, for consonants. Only one manner of articulation may be listed. Additional manners must be listed under the <code>features</code> attribute. For example, the lateral fricative <code>ɬ</code> might have a <code>manner</code> set to <code>fricative</code> and a feature <code>lateral</code>, or vice versa, depending on the linguist's analysis.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;approximate&quot;</pre></li>
+            <li><pre>&quot;flap&quot;</pre></li>
+            <li><pre>&quot;fricative&quot;</pre></li>
+            <li><pre>&quot;lateral&quot;</pre></li>
+            <li><pre>&quot;nasal&quot;</pre></li>
+            <li><pre>&quot;plosive&quot;</pre></li>
+            <li><pre>&quot;tap&quot;</pre></li>
+            <li><pre>&quot;trill&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>Notes about this Phoneme.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Note</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Place of Articulation: <code>"place"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The place of articulation for consonants. Only one place of articulation may be listed. Additional places must be listed as features under the <code>features</code> attribute. For example, a palatalized alveolar <code>/tʲ/</code> would list <code>alveolar</code> under <code>manner</code>, and <code>palatalized</code> under <code>features</code>.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;bilabial&quot;</pre></li>
+            <li><pre>&quot;labiodental&quot;</pre></li>
+            <li><pre>&quot;labiovelar&quot;</pre></li>
+            <li><pre>&quot;dental&quot;</pre></li>
+            <li><pre>&quot;alveolar&quot;</pre></li>
+            <li><pre>&quot;lateral&quot;</pre></li>
+            <li><pre>&quot;post-alveolar&quot;</pre></li>
+            <li><pre>&quot;alveo-palatal&quot;</pre></li>
+            <li><pre>&quot;palato-alveolar&quot;</pre></li>
+            <li><pre>&quot;retroflex&quot;</pre></li>
+            <li><pre>&quot;palatal&quot;</pre></li>
+            <li><pre>&quot;velar&quot;</pre></li>
+            <li><pre>&quot;uvular&quot;</pre></li>
+            <li><pre>&quot;pharyngeal&quot;</pre></li>
+            <li><pre>&quot;glottal&quot;</pre></li>
+            <li><pre>&quot;epiglottal&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Bibliographic References: <code>"references"</code></h1>
+    </summary>
+
+
+
+
+
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Reference</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Reference.html">Reference</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>rounding: <code>"rounding"</code></h1>
+    </summary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Dipthong Target 1: <code>"target1"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>For diphthongs or triphthongs, this should be a phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="#.html">#</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Dipthong Target 2: <code>"target2"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>For diphthongs or thriphthongs, this should be a phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="#.html">#</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Dipthong Target 3: <code>"target3"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>For triphthongs, this should be a phoneme object representing the features of the third target in the pronunciation of the triphthong.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="#.html">#</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tone: <code>"tone"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An abstract representation of the tone of this phoneme, e.g. <code>H</code>, <code>13</code>, <code>falling</code>, etc.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Voicing: <code>"voicing"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>Whether the phoneme is voiced, voiceless, or partially voiced.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;voiced&quot;</pre></li>
+            <li><pre>&quot;voiceless&quot;</pre></li>
+            <li><pre>&quot;partially voiced&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Media.html">Media File</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Word.html">Word</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>

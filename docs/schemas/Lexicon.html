@@ -1,0 +1,645 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Lexicon
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Lexicon</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema">http://json-schema.org/schema</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.0.json</code></p>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A lexicon is a collection of the linguistic signs, or <em>lexemes</em>, of a particular language at a particular point in time. Each entry in the lexicon provides information on the formal, semantic, behavioral/syntagmatic, and pragmatic/sociocultural properties of a single Lexeme. Each lexeme in turn includes a number of <em>senses</em> - the different meanings that a lexeme can have - as well as <em>variants</em> - the different formal realizations of the word (e.g. <em>ran</em> vs. *run).</p>
+<p>Lexicons differ from dictionaries in that dictionaries may be thought of as lexicons that have been filtered and formatted for a specific audience. Lexicons, on the other hand, contain the raw, unfiltered data, and do not contain information about presentational format. This distinction allows for the creation of many different dictionaries, with different audiences, from a single Lexicon.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>language</code></li>
+            <li><code>lexemes</code></li>
+            <li><code>name</code></li>
+        </ul>
+      </div>
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A human-readable abbreviation for this Lexicon.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Access Rights: <code>"access"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An object describing who has what kinds of access rights to this Lexicon.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Access.html">Access</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Contributors: <code>"contributors"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of people who contributed to the creation or curation of this lexicon in some way.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Contributor</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A contributor to this Lexicon.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Contributor.html">Contributor</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>[]</pre>
+      </div>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Created: <code>"dateCreated"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date that this lexicon was created.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateCreated.html">DateCreated</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date that this lexicon was last modified.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateModified.html">DateModified</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Language: <code>"language"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A language object describing the language of the items in this Lexicon. The language object must contain at least the <code>name</code> property.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Language.html">Language</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Lexemes: <code>"lexemes"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The collection of lexemes in this Lexicon.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Lexeme</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A lexeme in this Lexicon.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Lexeme.html">Lexeme</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Name: <code>"name"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A name for this lexicon, e.g. <code>Tlahuapa Mixtec</code>, <code>Ancient Greek</code>, <code>Portuguese (Brazilian)</code>, etc.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="MultiLangString.html">MultiLangString</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of notes about this Lexicon.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Note</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A note about this Lexicon.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>[]</pre>
+      </div>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Bibliographic References: <code>"references"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of any bibliographic references concerning or relating to this Lexicon.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Reference</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A bibliographic reference concerning this Lexicon.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Reference.html">Reference</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>[]</pre>
+      </div>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A set of tags for this Lexicon.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A unique URL for this Lexicon.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Url.html">Url</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>{
+  &quot;access&quot;: {},
+  &quot;language&quot;: {},
+  &quot;lexemes&quot;: [],
+  &quot;name&quot;: &quot;&quot;
+}</pre>
+      </div>
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Media.html">Media File</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Word.html">Word</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>
