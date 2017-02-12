@@ -1,11 +1,11 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexicon-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.0.json",
 
   "title": "Lexicon",
   "type": "object",
-  "description": "A lexicon is a collection of the linguistic signs, or *lexemes*, of a particular language at a particular point in time. Each entry in the lexicon provides information on the formal, semantic, behavioral/syntagmatic, and pragmatic/sociocultural properties of a single lexeme. Each lexeme in turn includes a number of *senses* - the different meanings that a lexeme can have - as well as *variants* - the different formal realizations of the word (e.g. *ran* vs. *run).\n\nLexicons differ from dictionaries in that dictionaries may be thought of as lexicons that have been filtered and formatted for a specific audience. Lexicons, on the other hand, contain the raw, unfiltered data, and do not contain information about presentational format. This distinction allows for the creation of many different dictionaries, with different audiences, from a single lexicon.",
+  "description": "A lexicon is a collection of the linguistic signs, or *lexemes*, of a particular language at a particular point in time. Each entry in the lexicon provides information on the formal, semantic, behavioral/syntagmatic, and pragmatic/sociocultural properties of a single Lexeme. Each lexeme in turn includes a number of *senses* - the different meanings that a lexeme can have - as well as *variants* - the different formal realizations of the word (e.g. *ran* vs. *run).\n\nLexicons differ from dictionaries in that dictionaries may be thought of as lexicons that have been filtered and formatted for a specific audience. Lexicons, on the other hand, contain the raw, unfiltered data, and do not contain information about presentational format. This distinction allows for the creation of many different dictionaries, with different audiences, from a single Lexicon.",
 
   "additionalProperties": true,
 
@@ -19,14 +19,14 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "description": "A human-readable abbreviation for this lexicon.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "description": "A human-readable abbreviation for this Lexicon.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "access": {
       "title": "Access Rights",
-      "description": "An object describing who has what kinds of access rights to this lexicon.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/access.json"
+      "description": "An object describing who has what kinds of access rights to this Lexicon.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json"
     },
 
     "contributors": {
@@ -39,8 +39,8 @@
 
       "items": {
         "title": "Contributor",
-        "description": "A contributor to this lexicon.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/contributor.json"
+        "description": "A contributor to this Lexicon.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Contributor.json"
       },
 
       "default": []
@@ -50,35 +50,35 @@
     "dateCreated": {
       "title": "Date Created",
       "description": "The date that this lexicon was created.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
       "default": ""
     },
 
     "dateModified": {
       "title": "Date Modified",
       "description": "The date that this lexicon was last modified.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json",
       "default": ""
     },
 
     "language": {
       "title": "Language",
-      "description": "A language object describing the language of the items in this lexicon. The language object must contain at least the `name` property.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/language.json"
+      "description": "A language object describing the language of the items in this Lexicon. The language object must contain at least the `name` property.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json"
     },
 
     "lexemes": {
 
       "title": "Lexemes",
       "type": "array",
-      "description": "The collection of lexemes in this lexicon.",
+      "description": "The collection of lexemes in this Lexicon.",
 
       "uniqueItems": true,
 
       "items": {
         "title": "Lexeme",
-        "description": "A lexeme in this lexicon.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/lexeme.json"
+        "description": "A lexeme in this Lexicon.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Lexeme.json"
       }
 
     },
@@ -86,21 +86,21 @@
     "name": {
       "title": "Name",
       "description": "A name for this lexicon, e.g. `Tlahuapa Mixtec`, `Ancient Greek`, `Portuguese (Brazilian)`, etc.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "notes": {
 
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this lexicon.",
+      "description": "A collection of notes about this Lexicon.",
 
       "uniqueItems": true,
 
       "items": {
         "title": "Note",
-        "description": "A note about this lexicon.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+        "description": "A note about this Lexicon.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
       },
 
       "default": []
@@ -111,14 +111,14 @@
 
       "title": "Bibliographic References",
       "type": "array",
-      "description": "A collection of any bibliographic references concerning or relating to this lexicon.",
+      "description": "A collection of any bibliographic references concerning or relating to this Lexicon.",
 
       "uniqueItems": true,
 
       "items": {
         "title": "Reference",
-        "description": "A bibliographic reference concerning this lexicon.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
+        "description": "A bibliographic reference concerning this Lexicon.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json"
       },
 
       "default": []
@@ -127,14 +127,14 @@
 
     "tags": {
       "title": "Tags",
-      "description": "A set of tags for this lexicon.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "description": "A set of tags for this Lexicon.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "url": {
       "title": "URL",
-      "description": "A unique URL for this lexicon.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "description": "A unique URL for this Lexicon.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     }
 
   },

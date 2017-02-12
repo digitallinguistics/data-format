@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/phoneme-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Phoneme-1.0.0.json",
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones.",
@@ -10,7 +10,7 @@
     "airstream": {
       "title": "Airstream Mechanism",
       "type": "string",
-      "description": "The airstream mechanism used to pronounce this phoneme. `Pulmonic` (egressive) sounds are created by pushing air out of the lungs. `Ejective` sounds are glottalic egressive sounds where the air column is compressed by upward movement of the glottis. `Implosive` sounds are glottalic ingressives where air is pulled in by a downward movement of the glottis. `Click` sounds, i.e. lingual / velaric ingressive sounds, pull air in with a downward movement of the tongue.",
+      "description": "The airstream mechanism used to pronounce this Phoneme. `Pulmonic` (egressive) sounds are created by pushing air out of the lungs. `Ejective` sounds are glottalic egressive sounds where the air column is compressed by upward movement of the glottis. `Implosive` sounds are glottalic ingressives where air is pulled in by a downward movement of the glottis. `Click` sounds, i.e. lingual / velaric ingressive sounds, pull air in with a downward movement of the tongue.",
       "enum": [
         "pulmonic",
         "ejective",
@@ -47,7 +47,7 @@
       "title": "Features",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of the phonemically distinctive features of this phoneme. These are what are listed under `diacritics` in the IPA chart. For example, if a language distinguishes between a palatalized `/t/` and a plain `/t/`, the first should include the feature `palatalized` and the second `plain` (or no features). Note that most features are also a manner of articulation as well, so it up to the linguist to decide when a given phonetic detail is a manner, or when it is a feature (i.e. a diacritic). For example, a language might distinguish phonemically between a palatal plosive `/c/` and a palatalized plosive `/tʲ/`. The first would list `palatal` as its place of articulation, while the second would list `palatalized` as a distinctive feature. Do not include features here if they are already used for manner, unless your analysis is that this feature is *both* a manner and a feature of this phoneme, e.g. a palatalized palatal stop. This field is used primarily for consonants, but may also apply to vowels as well (e.g. the `close` and `open` features).",
+      "description": "A list of the phonemically distinctive features of this Phoneme. These are what are listed under `diacritics` in the IPA chart. For example, if a language distinguishes between a palatalized `/t/` and a plain `/t/`, the first should include the feature `palatalized` and the second `plain` (or no features). Note that most features are also a manner of articulation as well, so it up to the linguist to decide when a given phonetic detail is a manner, or when it is a feature (i.e. a diacritic). For example, a language might distinguish phonemically between a palatal plosive `/c/` and a palatalized plosive `/tʲ/`. The first would list `palatal` as its place of articulation, while the second would list `palatalized` as a distinctive feature. Do not include features here if they are already used for manner, unless your analysis is that this feature is *both* a manner and a feature of this phoneme, e.g. a palatalized palatal stop. This field is used primarily for consonants, but may also apply to vowels as well (e.g. the `close` and `open` features).",
       "items": {
         "title": "Feature",
         "type": "string",
@@ -119,7 +119,7 @@
     "IPA": {
       "title": "IPA Transcription",
       "type": "string",
-      "description": "The IPA representation of this phoneme."
+      "description": "The IPA representation of this Phoneme."
     },
 
     "length": {
@@ -154,12 +154,12 @@
 
     "notes": {
       "title": "Notes",
-      "description": "Notes about this phoneme.",
+      "description": "Notes about this Phoneme.",
       "type": "array",
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
       }
     },
 
@@ -193,7 +193,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Reference",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json"
       }
     },
 
@@ -201,7 +201,7 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "target1": {

@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/language-1.0.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-1.0.2.json",
   "title": "Language",
   "type": "object",
-  "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical lexicon. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
+  "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical Lexicon. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
   "additionalProperties": true,
   "required": ["name"],
 
@@ -11,14 +11,14 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "description": "A short, human-readable abbreviation for this language.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "description": "A short, human-readable abbreviation for this Language.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "codes": {
       "title": "Language Codes",
       "type": "object",
-      "description": "An object containing any ISO 639-3 and Glottolog language codes for this language.",
+      "description": "An object containing any ISO 639-3 and Glottolog language codes for this Language.",
       "required": ["iso", "glottolog"],
       "additionalProperties": false,
       "properties": {
@@ -52,12 +52,12 @@
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
     },
 
     "locations": {
@@ -67,14 +67,14 @@
       "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data.",
       "items": {
         "title": "Location",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/location.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json"
       }
     },
 
     "name": {
       "title": "Language Name",
       "description": "The name of this language, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "phomemes": {
@@ -83,7 +83,7 @@
       "description": "The phonological inventory for this language, i.e. a collection of phonemes.",
       "items": {
         "title": "Phoneme",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/phoneme.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Phoneme.json"
       }
     },
 
@@ -91,16 +91,16 @@
       "title": "Orthographies",
       "type": "array",
       "uniqueItems": true,
-      "description": "A collection of orthographies used to represent this language.",
+      "description": "A collection of orthographies used to represent this Language.",
       "items": {
         "title": "Orthography",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/orthography.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Orthography.json"
       }
     },
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     }
 
   },

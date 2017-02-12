@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/reference-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.0.0.json",
   "title": "Bibliographic Reference",
-  "description": "A bibliographic reference.",
+  "description": "A bibliographic Reference.",
   "required": ["title"],
 
   "properties": {
@@ -10,7 +10,7 @@
     "authors": {
       "title": "Authors",
       "type": "array",
-      "description": "An array of authors for this reference.",
+      "description": "An array of authors for this Reference.",
       "uniqueItems": true,
       "items": {
         "title": "Author",
@@ -27,13 +27,13 @@
     "edition": {
       "title": "Edition",
       "type": "integer",
-      "description": "The edition of this reference."
+      "description": "The edition of this Reference."
     },
 
     "editors": {
       "title": "Editors",
       "type": "array",
-      "description": "An array of editors for this reference.",
+      "description": "An array of editors for this Reference.",
       "uniqueItems": true,
       "items": {
         "title": "Editor",
@@ -50,7 +50,7 @@
     "pages": {
       "title": "Pages",
       "type": "string",
-      "description": "The page numbers of this reference."
+      "description": "The page numbers of this Reference."
     },
 
     "publication": {
@@ -80,7 +80,7 @@
     "translators": {
       "title": "Translators",
       "type": "array",
-      "description": "An array of translations for this reference.",
+      "description": "An array of translations for this Reference.",
       "uniqueItems": true,
       "items": { "$ref": "#/definitions/person" }
     },
@@ -111,7 +111,7 @@
       "title": "URL",
       "type": "string",
       "format": "uri",
-      "description": "A URL for this reference."
+      "description": "A URL for this Reference."
     },
 
     "volume": {

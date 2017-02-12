@@ -1,11 +1,11 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexemeReference-2.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.1.0.json",
 
   "title": "Lexeme Reference",
   "type": "object",
-  "description": "A reference to a Lexeme in a lexicon. May point to either a top-level Lexeme or a variant.",
+  "description": "A reference to a Lexeme in a Lexicon. May point to either a top-level Lexeme or a variant.",
 
   "required": ["lexeme"],
 
@@ -22,7 +22,7 @@
     "lexiconUrl": {
       "title": "Referenced Lexicon (URL)",
       "description": "The URL of the lexicon being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
     "lexeme": {
@@ -34,19 +34,19 @@
     "lexemeUrl": {
       "title": "Referenced Lexeme (URL)",
       "description": "The URL of the lexeme being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
     "relation": {
       "title": "Relation Type",
-      "description": "The type of lexical relation that holds between the current item and the referenced lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "description": "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid Abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme).",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "sense": {
       "title": "Referenced Sense (Num)",
       "type": "integer",
-      "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the lexeme."
+      "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme."
     }
 
   }
