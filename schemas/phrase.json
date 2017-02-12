@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/phrase-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Phrase-2.0.0.json",
 
   "title": "Phrase",
   "type": "object",
@@ -25,13 +25,13 @@
     "endTime": {
       "title": "End Time",
       "type": "number",
-      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
+      "description": "The time that the speaker finishes producing this phrase within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
     },
 
     "key": {
       "title": "Key",
       "type": "string",
-      "description": "A key which uniquely identifies this phrase within the text. The key for a phrase consists of the abbreviation of the text, a period, and then the number of this phrase within the text (index starts at 1). For example, the third phrase of a text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus.",
+      "description": "A key which uniquely identifies this phrase within the Text. The key for a phrase consists of the abbreviation of the text, a period, and then the number of this phrase within the text (index starts at 1). For example, the third phrase of a text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus.",
       "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}$"
     },
 
@@ -39,21 +39,21 @@
       "title": "Language",
       "type": "string",
       "description": "The key for the language used in this phrase, e.g. `spa` or `eng`. If the text is labeled with a language, all its phrases are assumed to be the same language unless labeled otherwise. Likewise, if a phrase is given a language, all its words are assumed to be the same language unless the word is labeled otherwise.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "notes": {
 
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this phrase.",
+      "description": "A collection of notes about this Phrase.",
 
       "uniqueItems": true,
 
       "items": {
         "title": "Note",
         "description": "A note about this phrase, optionally in multiple orthographies.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
       }
 
     },
@@ -61,32 +61,32 @@
     "speaker": {
       "title": "Speaker",
       "type": "string",
-      "description": "The abbreviation of person who produced (uttered, signed, spoke, sung) this phrase. The value of this field must match the abbreviation of one of the persons listed in the `contributors` array of the text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all phrases in the text. If multiple contributors with a `speaker` role are included in a text, each phrase must have its `speaker` attribute specified.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "description": "The abbreviation of person who produced (uttered, signed, spoke, sung) this Phrase. The value of this field must match the abbreviation of one of the persons listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all phrases in the Text. If multiple contributors with a `speaker` role are included in a text, each phrase must have its `speaker` attribute specified.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "startTime": {
       "title": "Start Time",
       "type": "number",
-      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
+      "description": "The time that the speaker begins producing this phrase within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "transcription": {
       "title": "Transcription",
       "description": "The transcriptions for this phrase, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "translation": {
       "title": "Translation",
       "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
       "allOf": [
-        { "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"},
+        { "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"},
         {
           "properties": {
             "type": {
@@ -102,17 +102,17 @@
     "url": {
       "title": "URL",
       "description": "The URL where this phrase can be retrieved in JSON format.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
     "words": {
       "title": "Words",
       "type": "array",
-      "description": "A collection of the word tokens contained in this phrase.",
+      "description": "A collection of the word tokens contained in this Phrase.",
       "uniqueItems": false,
       "items": {
         "title": "Word",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/word.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Word.json"
       }
     }
 

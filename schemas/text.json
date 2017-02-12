@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/text-1.1.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Text-1.1.1.json",
 
   "title": "Text",
   "type": "object",
 
-  "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of phrases with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
+  "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in conText. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of phrases with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
 
   "required": [
     "phrases",
@@ -18,12 +18,12 @@
 
     "abbreviation": {
       "title": "Abbreviation",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/access.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json"
     },
 
     "contributors": {
@@ -32,23 +32,23 @@
       "description": "A collection of people who contributed to the creation or analysis of this text in some way.",
       "items": {
         "title": "Contributor",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/contributor.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Contributor.json"
       }
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
     },
 
     "dateModified": {
       "title": "Date Modified",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateRecorded.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateRecorded.json"
     },
 
     "discourseType": {
@@ -69,38 +69,38 @@
     "location": {
       "title": "Location",
       "description": "The location where this text was recorded.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/location.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json"
     },
 
     "media": {
       "title": "Media",
       "type": "array",
       "uniqueItems": true,
-      "description": "An array of objects containing information about the media files associated with this text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the text.",
+      "description": "An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the Text.",
       "items": {
         "title": "Media Items",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/media.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Media.json"
       }
     },
 
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this text.",
+      "description": "A collection of notes about this Text.",
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
       }
     },
 
     "phrases": {
       "title": "Phrases",
       "type": "array",
-      "description": "A collection of all the phrases contained in this text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
+      "description": "A collection of all the phrases contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the Text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
       "items": {
         "title": "Phrase",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/phrase.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json"
       },
       "minItems": 1
     },
@@ -108,10 +108,10 @@
     "references": {
       "title": "References",
       "type": "array",
-      "description": "A list of any bibliographic references concerning or relating to this text.",
+      "description": "A list of any bibliographic references concerning or relating to this Text.",
       "items": {
         "title": "Reference",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json"
       }
     },
 
@@ -122,18 +122,18 @@
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "title": {
       "title": "Title",
-      "description": "A title is a human-readable prose description of the content of the text. The `title` object contains all the titles of the text, in one or more orthographies. Each attribute in the `title` object should be the abbreviation of an orthography, and its value should be the title of the text, in that orthography.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "description": "A title is a human-readable prose description of the content of the Text. The `title` object contains all the titles of the text, in one or more orthographies. Each attribute in the `title` object should be the abbreviation of an orthography, and its value should be the title of the text, in that Orthography.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     }
 
   }

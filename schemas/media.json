@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/media-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-1.0.0.json",
 
   "title": "Media File",
   "type": "object",
@@ -20,12 +20,12 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for referring to this file.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/access.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json"
     },
 
     "content": {
@@ -42,17 +42,17 @@
     "creator": {
       "title": "Creator",
       "description": "The person who created this specific file.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/person.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json"
     },
 
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateRecorded.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateRecorded.json"
     },
 
     "endTime": {
@@ -87,7 +87,7 @@
       "uniqueItems": true,
       "items": {
         "title": "Language",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/language.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json"
       }
     },
 
@@ -100,13 +100,13 @@
     "location": {
       "title": "Location",
       "description": "The location where the content in this media file was recorded or produced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/location.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json"
     },
 
     "mediaUrl": {
       "title": "Media URL",
       "description": "The URL where the media file itself can be found.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
     "notes": {
@@ -116,14 +116,14 @@
       "description": "A collection of notes about this media item.",
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
       }
     },
 
     "original": {
       "title": "Original Media Item",
       "description": "The URL of the media object (*not* the URL to the media file itself) that this file is derived from.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
     "persons": {
@@ -133,25 +133,25 @@
       "uniqueItems": true,
       "items": {
         "title": "Person",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/person.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json"
       }
     },
 
     "startTime": {
       "title": "Start Time",
-      "description": "Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. This may also be used to synchronize the starting point of multiple media files associated with a single text. For example, if the camera started recording five minutes before the speaker began speaking, the `Start Time` might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.",
+      "description": "Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. This may also be used to synchronize the starting point of multiple media files associated with a single Text. For example, if the camera started recording five minutes before the speaker began speaking, the `Start Time` might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.",
       "type": "number"
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "url": {
       "title": "URL",
       "description": "The URL where this media object can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaUrl` attribute).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     }
 
   }

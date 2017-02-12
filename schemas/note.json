@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/note-2.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Note-2.1.0.json",
 
   "title": "Note",
   "type": "object",
@@ -15,13 +15,13 @@
     "dateCreated": {
       "title": "Date Created",
       "description": "The date and optionally time that this note was created, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
     },
 
     "dateModified": {
       "title": "Date Modified",
       "description": "The date and optionally time that this note was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
     },
 
     "language": {
@@ -32,8 +32,8 @@
 
     "source": {
       "title": "Source (Person)",
-      "description": "The abbreviation of the person who is the source of the information in this note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "description": "The abbreviation of the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "text": {
@@ -45,7 +45,7 @@
     "type": {
       "title": "Note Type",
       "type": "string",
-      "description": "The type of note. Common values include: ",
+      "description": "The type of Note. Common values include: ",
       "enum": [
         "note-to-self",
         "general",

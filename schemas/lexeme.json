@@ -1,11 +1,11 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/lexeme-3.2.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-3.2.0.json",
 
   "title": "Lexeme",
   "type": "object",
-  "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a lexeme.",
+  "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected Phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
 
   "definitions": {
 
@@ -35,8 +35,8 @@
 
           "referencedLexeme": {
             "title": "Referenced Lexeme",
-            "description": "A reference to the variant lexeme.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+            "description": "A reference to the variant Lexeme.",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
           }
 
         }
@@ -48,7 +48,7 @@
     "variantType": {
       "title": "Variant Type",
       "description": "What type of variant this lexeme is. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
     }
 
   },
@@ -70,7 +70,7 @@
 
       "title": "Allomorphs",
       "type": "array",
-      "description": "A list of allomorphs of this lexeme.",
+      "description": "A list of allomorphs of this Lexeme.",
 
       "minItems": 1,
       "uniqueItems": true,
@@ -79,7 +79,7 @@
 
         "title": "Allomorph",
         "type": "object",
-        "description": "An allomorph of this lexeme.",
+        "description": "An allomorph of this Lexeme.",
 
         "required": [
           "environments",
@@ -93,7 +93,7 @@
           "transcription": {
             "title": "Transcription",
             "description": "A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "environments": {
@@ -121,7 +121,7 @@
     "citationForm": {
       "title": "Citation Form",
       "description": "The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. The citation form usually serves as the headword in a dictionary as well. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "components": {
@@ -136,7 +136,7 @@
       "items": {
         "title": "Referenced Lexeme",
         "description": "The referenced component.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
       }
 
     },
@@ -144,26 +144,26 @@
     "dateCreated": {
       "title": "Date Created",
       "description": "The date and optionally time that this lexeme was created, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateCreated.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
     },
 
     "dateModified": {
       "title": "Date Modified",
       "description": "The date and optionally time that this lexeme was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/dateModified.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
     },
 
     "examples": {
 
       "title": "Examples",
       "type": "array",
-      "description": "A collection of examples illustrating this lexeme in use. Each example is a phrase from a text.",
+      "description": "A collection of examples illustrating this lexeme in use. Each example is a phrase from a Text.",
 
       "uniqueItems": true,
 
       "items": {
         "title": "Example Phrase",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/phrase.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json"
       }
 
     },
@@ -171,12 +171,12 @@
     "features": {
 
       "title": "Features",
-      "description": "A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different language. For example, a morpheme may have the feature `\"case\": \"accusative\"` (English) as well as `\"caso\": \"acusativo\"` (Spanish).",
+      "description": "A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different Language. For example, a morpheme may have the feature `\"case\": \"accusative\"` (English) as well as `\"caso\": \"acusativo\"` (Spanish).",
 
       "allOf": [
         {
           "title": "Tags",
-          "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+          "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
         },
         {
           "additionalProperties": {
@@ -197,7 +197,7 @@
 
       "items": {
         "title": "Lexicon Reference",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
       }
 
     },
@@ -205,15 +205,15 @@
     "key": {
       "title": "Lexeme Key",
       "type": "string",
-      "description": "A human-readable key that uniquely identifies this lexeme or variant within its lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the lexicon. (Keys do not need to be unique across lexicons.)",
+      "description": "A human-readable key that uniquely identifies this lexeme or variant within its Lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the Lexicon. (Keys do not need to be unique across lexicons.)",
       "pattern": "^[^ ]+$"
     },
 
     "lemma": {
       "title": "Lemma",
-      "description": "A *lemma* is the particular form conventionally used to represent a particular lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be`, with its variants `am`, `are`, `is`, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
+      "description": "A *lemma* is the particular form conventionally used to represent a particular Lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be`, with its variants `am`, `are`, `is`, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "lexicalRelations": {
@@ -227,7 +227,7 @@
       "items": {
         "title": "Lexical Relation (Lexeme Reference)",
         "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
       }
 
     },
@@ -235,27 +235,27 @@
     "literalMeaning": {
       "title": "Literal Meaning",
       "description": "The literal meaning of the lexeme, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "morphemeType": {
       "title": "Morpheme Type",
       "description": "The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "notes": {
 
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this lexeme.",
+      "description": "A collection of notes about this Lexeme.",
 
       "uniqueItems": true,
 
       "items": {
         "title": "Note",
         "description": "A note about this lexeme, optionally in multiple orthographies.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
       }
 
     },
@@ -270,8 +270,8 @@
 
       "items": {
         "title": "Reference",
-        "description": "A bibliographic reference.",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
+        "description": "A bibliographic Reference.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json"
       }
 
     },
@@ -301,7 +301,7 @@
     "tags": {
       "title": "Tags",
       "description": "A collection of tags for this lexeme or variant.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "tone": {
@@ -313,18 +313,18 @@
     "url": {
       "title": "URL",
       "description": "The URL where this lexeme or variant is located.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
     "variantOf": {
       "title": "Variant Of",
-      "description": "When this lexeme is a variant of another lexeme, this field should contain a reference to the other lexeme. Lexemes may only be variants of one other lexeme.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+      "description": "When this lexeme is a variant of another lexeme, this field should contain a reference to the other Lexeme. Lexemes may only be variants of one other Lexeme.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
     },
 
     "variants": {
       "title": "Variants",
-      "description": "A list of variants on this lexeme.",
+      "description": "A list of variants on this Lexeme.",
       "$ref": "#/definitions/variants"
     },
 
@@ -338,7 +338,7 @@
 
       "title": "Senses",
       "type": "array",
-      "description": "A collection of senses for this lexeme.",
+      "description": "A collection of senses for this Lexeme.",
 
       "uniqueItems": true,
       "minItems": 1,
@@ -347,7 +347,7 @@
 
         "title": "Sense",
         "type": "object",
-        "description": "One of the meanings for this lexeme. Every lexeme must have at least 1 sense.",
+        "description": "One of the meanings for this Lexeme. Every lexeme must have at least 1 sense.",
 
         "required": ["gloss"],
         "additionalProperties": true,
@@ -357,45 +357,45 @@
           "argumentStructure": {
             "title": "Argument Structure",
             "type": "string",
-            "description": "An abstract representation of the argument structure for this word."
+            "description": "An abstract representation of the argument structure for this Word."
           },
 
           "category": {
             "title": "Lexical Category (Part of Speech, Morphosyntactic Class, etc.)",
-            "description": "The lexical category, part of speech, or morphosyntactic class for this lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. Examples: the English verb suffix `‑s` would set this property to `verb`, and the English derivational suffix `‑ize` would set this property to `noun`.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+            "description": "The lexical category, part of speech, or morphosyntactic class for this Lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. Examples: the English verb suffix `‑s` would set this property to `verb`, and the English derivational suffix `‑ize` would set this property to `noun`.",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "definition": {
             "title": "Definition",
             "description": "The definition for this particular sense, optionally in multiple orthographies.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "derives": {
             "title": "Derived Category",
             "description": "If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix `‑er` would have this property set to `noun`.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "examples": {
             "title": "Examples",
             "type": "array",
-            "description": "A collection of examples of this sense in use. Each example is a phrase.",
+            "description": "A collection of examples of this sense in use. Each example is a Phrase.",
             "uniqueItems": true,
-            "items": { "$ref": "http://cdn.digitallinguistics.io/schemas/phrase.json" }
+            "items": { "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json" }
           },
 
           "gloss": {
             "title": "Gloss",
             "description": "A Leipzig-style gloss for this sense.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "inflectionClass": {
             "title": "Inflectional Class",
             "description": "If this lexeme is a root or stem, this field indicates the inflectional class that the lexeme takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "lexicalRelations": {
@@ -409,7 +409,7 @@
             "items": {
               "title": "Lexical Relation (Lexeme Reference)",
               "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
             }
 
           },
@@ -424,7 +424,7 @@
 
             "items": {
               "title": "Note",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
             }
 
           },
@@ -439,7 +439,7 @@
 
             "items": {
               "title": "Reference",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/reference.json"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json"
             }
 
           },
@@ -468,8 +468,8 @@
 
           "tags": {
             "title": "Tags",
-            "description": "A collection of tags for this lexeme.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+            "description": "A collection of tags for this Lexeme.",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
           },
 
           "usages": {
@@ -482,7 +482,7 @@
 
             "items": {
               "title": "Usage",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/multiLangString.json"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
             }
 
           },
@@ -490,7 +490,7 @@
           "variantOf": {
             "title": "Variant Of",
             "description": "If this sense is a variant of another sense, a reference to the other sense should go here. For example, sometimes two speakers may use the same word with a slightly different set of senses. In American English, for instance, *Coke* is a specific brand of soda for most speakers, but a generic term for soda for other speakers. The generic sense would therefore be listed as a dialectal variant of the specific sense.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/lexemeReference.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
           },
 
           "variants": {

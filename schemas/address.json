@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/address-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Address-1.0.1.json",
   "title": "Address",
   "type": "object",
-  "description": "A postal address.",
+  "description": "A postal Address.",
   "properties": {
 
     "streetAddress": {
@@ -27,13 +27,13 @@
     "locality": {
       "title": "Locality / City",
       "type": "string",
-      "description": "The locality or city for this address."
+      "description": "The locality or city for this Address."
     },
 
     "region": {
       "title": "Region / State",
       "type": "string",
-      "description": " The region or state for this address."
+      "description": " The region or state for this Address."
     },
 
     "country": {

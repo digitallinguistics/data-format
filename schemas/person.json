@@ -1,10 +1,10 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/person-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.0.0.json",
 
   "title": "Person",
   "type": "object",
-  "description": "An object providing information about a person.",
+  "description": "An object providing information about a Person.",
 
   "required": [
     "familyName",
@@ -16,17 +16,17 @@
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/abbreviation.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
     "access": {
       "title": "Access Rights",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/access.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json"
     },
 
     "address": {
       "title": "Address",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/address.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Address.json"
     },
 
     "birthDate": {
@@ -39,7 +39,7 @@
     "birthPlace": {
       "title": "Birth Place",
       "description": "This person's place of birth, as a location object.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/location.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json"
     },
 
     "email": {
@@ -76,7 +76,7 @@
 
         "title": "Language Spoken",
         "allOf": [
-          { "$ref": "http://cdn.digitallinguistics.io/schemas/language.json"},
+          { "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json"},
           {
             "additionalProperties": true,
             "properties": {
@@ -84,30 +84,30 @@
               "ageLearned": {
                 "title": "Age Learned",
                 "type": "integer",
-                "description": "The age at which this person learned this language."
+                "description": "The age at which this person learned this Language."
               },
 
               "notes": {
                 "title": "Notes",
                 "type": "array",
                 "uniqueItems": true,
-                "description": "Notes about this person's use of this language.",
+                "description": "Notes about this person's use of this Language.",
                 "items": {
                   "title": "Note",
-                  "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+                  "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
                 }
               },
 
               "proficiency": {
                 "title": "Proficiency",
                 "type": "string",
-                "description": "The proficiency level of this person in this language."
+                "description": "The proficiency level of this person in this Language."
               },
 
               "yearsKnown": {
                 "title": "Years Known",
                 "type": "integer",
-                "description": "The number of years this person has known this language."
+                "description": "The number of years this person has known this Language."
               }
 
             }
@@ -119,30 +119,30 @@
 
     "notes": {
       "title": "Notes",
-      "description": "Notes about this person.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/note.json"
+      "description": "Notes about this Person.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
     },
 
     "phone": {
       "title": "Phone Number",
       "type": "string",
-      "description": "A phone number for this person."
+      "description": "A phone number for this Person."
     },
 
     "pseudonym": {
       "title": "Pseudonym",
       "type": "string",
-      "description": "A pseudonym for this person."
+      "description": "A pseudonym for this Person."
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     }
 
   }
