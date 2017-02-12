@@ -1,57 +1,11 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-3.2.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.0.json",
 
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected Phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
-
-  "definitions": {
-
-    "variants": {
-
-      "title": "Variants",
-      "type": "array",
-      "description": "A collection of variants of this lexeme or sense.",
-
-      "uniqueItems": true,
-
-      "items": {
-
-        "title": "Variant",
-        "type": "object",
-        "description": "A reference to a variant of the current lexeme or sense.",
-
-        "additionalProperties": false,
-
-        "properties": {
-
-          "variantType": {
-            "title": "Variant Type",
-            "description": "The type of variant.",
-            "$ref": "#/definitions/variantType"
-          },
-
-          "referencedLexeme": {
-            "title": "Referenced Lexeme",
-            "description": "A reference to the variant Lexeme.",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
-          }
-
-        }
-
-      }
-
-    },
-
-    "variantType": {
-      "title": "Variant Type",
-      "description": "What type of variant this lexeme is. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
-    }
-
-  },
 
   "required": [
     "lemma",
@@ -323,15 +277,25 @@
     },
 
     "variants": {
+
       "title": "Variants",
-      "description": "A list of variants on this Lexeme.",
-      "$ref": "#/definitions/variants"
+      "type": "array",
+      "description": "A list of variants of this Lexeme.",
+
+      "uniqueItems": true,
+
+      "items": {
+        "title": "Referenced Variant (Lexeme Reference)",
+        "description": "A reference to the variant of this lexeme. A Variant is simply a Lexeme Reference object, but with the `variantType` required.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
+      }
+
     },
 
     "variantType": {
       "title": "Variant Type",
-      "description": "The type of variant.",
-      "$ref": "#/definitions/variantType"
+      "type": "string",
+      "description": "If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
     },
 
     "senses": {
@@ -495,14 +459,22 @@
 
           "variants": {
             "title": "Variants",
+            "type": "array",
             "description": "A list of variants of this sense.",
-            "$ref": "#/definitions/variants"
+
+            "uniqueItems": true,
+
+            "items": {
+              "title": "Referenced Variant (Lexeme Reference)",
+              "description": "A reference to the variant of this sense. A Variant is simply a Lexeme Reference object, but with the `variantType` required.",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
+            }
           },
 
           "variantType": {
             "title": "Variant Type",
-            "description": "What type of variant this sense is.",
-            "$ref": "#/definitions/variantType"
+            "type": "string",
+            "description": "If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
           }
 
         }

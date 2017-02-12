@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexeme-3.2.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -36,205 +36,6 @@
 
       <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
 
-      <div class='definitions any prop'>
-        <h2>Definitions</h2>
-        <p>The following schema definitions may be used by this schema:</p>
-        <ul>
-            <li id="variants">
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Variants: <code>"variants"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of variants of this lexeme or sense.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Variant</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A reference to a variant of the current lexeme or sense.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                  <p class='additional-properties object prop'>
-                    <strong>Additional properties:</strong> false
-                  </p>
-          
-          
-          
-                <div class='properties object prop'>
-                  <h2>Properties</h2>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The type of variant.</p>
-          </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="#variantType.html">#variantType</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Referenced Lexeme: <code>"referencedLexeme"</code></h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A reference to the variant Lexeme.</p>
-          </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-
-      </div>
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li id="variantType">
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Variant Type: <code>"variantType"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>What type of variant this lexeme is. Possible values might be a person's name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-        </ul>
-      </div>
 
 
 
@@ -1722,13 +1523,75 @@
     </summary>
 
 
+
+
+
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of variants on this Lexeme.</p>
+        <p><p>A list of variants of this Lexeme.</p>
 </p>
       </div>
 
-    <p class='$ref any prop'>Must be an instance of the <a href="#variants.html">#variants</a> schema.</p>
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Referenced Variant (Lexeme Reference)</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A reference to the variant of this lexeme. A Variant is simply a Lexeme Reference object, but with the <code>variantType</code> required.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
 
 
   </details>
@@ -1745,13 +1608,44 @@
     </summary>
 
 
+
+
+
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of variant.</p>
+        <p><p>If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
 </p>
       </div>
 
-    <p class='$ref any prop'>Must be an instance of the <a href="#variantType.html">#variantType</a> schema.</p>
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </details>
@@ -2662,13 +2556,75 @@
               </summary>
           
           
+          
+          
+          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
                   <p><p>A list of variants of this sense.</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="#variants.html">#variants</a> schema.</p>
+                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+                <p class='unique-items array prop'>
+                  <strong>Unique items:</strong> <code>true</code>
+                </p>
+          
+                <div class='items array prop'>
+          
+                  <h2>Items</h2>
+          
+                    
+                    <section class=schema>
+                    
+                      <details open>
+                    
+                        <summary>
+                          <h1 class='title meta any prop'>Referenced Variant (Lexeme Reference)</h1>
+                        </summary>
+                    
+                    
+                          <div class='description meta any prop'>
+                            <h2>Description</h2>
+                            <p><p>A reference to the variant of this sense. A Variant is simply a Lexeme Reference object, but with the <code>variantType</code> required.</p>
+                    </p>
+                          </div>
+                    
+                        <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
+                    
+                    
+                      </details>
+                    
+                    </section>
+          
+                </div>
+          
+          
           
           
             </details>
@@ -2685,13 +2641,44 @@
               </summary>
           
           
+          
+          
+          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>What type of variant this sense is.</p>
+                  <p><p>If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="#variantType.html">#variantType</a> schema.</p>
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
           
           
             </details>
@@ -2749,7 +2736,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Media.html">Media File</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Word.html">Word</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Media.html">Media File</a></li><li><a href="Note.html">Note</a></li><li><a href="Person.html">Person</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
       </ul>
     </nav>
 
