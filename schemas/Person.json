@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.0.0-alpha.1.json",
 
   "title": "Person",
   "type": "object",

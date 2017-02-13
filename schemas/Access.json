@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Access-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Access-1.0.0-alpha.1.json",
   "title": "Access Rights",
   "description": "The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and a custom option is available as well. Additional access protocols may also be added by simply adding an attribute with the name of the relevant archive.",
   "type": "object",
