@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.0.0-alpha.1.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -294,8 +294,8 @@
 
     "variantType": {
       "title": "Variant Type",
-      "type": "string",
-      "description": "If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
+      "description": "If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "senses": {
@@ -320,7 +320,7 @@
           "argumentStructure": {
             "title": "Argument Structure",
             "type": "string",
-            "description": "An abstract representation of the argument structure for this Word."
+            "description": "An abstract representation of the argument structure for this sense."
           },
 
           "category": {
@@ -475,8 +475,8 @@
 
           "variantType": {
             "title": "Variant Type",
-            "type": "string",
-            "description": "If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
+            "description": "If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           }
 
         }
