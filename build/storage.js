@@ -1,6 +1,6 @@
 require('../../credentials/dlx-spec');
 
-const path      = require('path');
+const path    = require('path');
 const schemas = require('../schemas');
 const storage = require('azure-storage').createBlobService();
 
