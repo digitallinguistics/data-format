@@ -13,18 +13,6 @@
 
   "properties": {
 
-    "lexicon": {
-      "title": "Referenced Lexicon (Key/Abbr)",
-      "description": "The abbreviation of the lexicon being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
-    },
-
-    "lexiconUrl": {
-      "title": "Referenced Lexicon (URL)",
-      "description": "The URL of the lexicon being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
-    },
-
     "lexeme": {
       "title": "Referenced Lexeme (Key)",
       "type": "string",
@@ -35,6 +23,18 @@
     "lexemeUrl": {
       "title": "Referenced Lexeme (URL)",
       "description": "The URL of the lexeme being referenced.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+    },
+
+    "lexicon": {
+      "title": "Referenced Lexicon (Key/Abbr)",
+      "description": "The abbreviation of the lexicon being referenced.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
+    },
+
+    "lexiconUrl": {
+      "title": "Referenced Lexicon (URL)",
+      "description": "The URL of the lexicon being referenced.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
