@@ -22,7 +22,7 @@
   "repository": "https://github.com/digitallinguistics/dlx-spec.git",
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^4.11.2",
+    "ajv": "^4.11.3",
     "azure-storage": "^2.0.0",
     "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.10"
