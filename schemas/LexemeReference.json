@@ -52,8 +52,8 @@
 
     "variantType": {
       "title": "Variant Type",
-      "type": "string",
-      "description": "If this reference is to a variant of a lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
+      "description": "If this reference is to a variant of a lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     }
 
   }
