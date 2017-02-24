@@ -1,17 +1,17 @@
 {
-  "name": "@digitallinguistics/dlx-spec",
-  "version": "0.10.0-alpha.4",
-  "description": "The DLx data format specification for representing linguistic data in JSON.",
+  "name": "@digitallinguistics/spec",
+  "version": "0.10.0",
+  "description": "The DLx format for representing linguistic data in JSON",
   "keywords": [
     "DLx",
     "Digital Linguistics",
     "JSON",
     "linguistics",
-    "UCSB",
-    "University of California Santa Barbara"
+    "language",
+    "documentation"
   ],
-  "homepage": "https://github.com/digitallinguistics/dlx-spec#readme",
-  "bugs": "https://github.com/digitallinguistics/dlx-spec/issues",
+  "homepage": "https://github.com/digitallinguistics/spec#readme",
+  "bugs": "https://github.com/digitallinguistics/spec/issues",
   "license": "MIT",
   "contributors": [
     {
@@ -19,10 +19,10 @@
       "url": "http://danielhieber.com"
     }
   ],
-  "repository": "https://github.com/digitallinguistics/dlx-spec.git",
+  "repository": "https://github.com/digitallinguistics/spec.git",
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^4.11.2",
+    "ajv": "^4.11.3",
     "azure-storage": "^2.0.0",
     "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.10"

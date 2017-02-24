@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.0.0.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -294,8 +294,8 @@
 
     "variantType": {
       "title": "Variant Type",
-      "type": "string",
-      "description": "If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
+      "description": "If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "senses": {
@@ -305,13 +305,12 @@
       "description": "A collection of senses for this Lexeme.",
 
       "uniqueItems": true,
-      "minItems": 1,
 
       "items": {
 
         "title": "Sense",
         "type": "object",
-        "description": "One of the meanings for this Lexeme. Every lexeme must have at least 1 sense.",
+        "description": "One of the meanings for this Lexeme. For example, the lexeme `run` might have two senses: one with a definition of 'run in a race', and the other with a definition 'run water in a sink'.",
 
         "required": ["gloss"],
         "additionalProperties": true,
@@ -321,18 +320,18 @@
           "argumentStructure": {
             "title": "Argument Structure",
             "type": "string",
-            "description": "An abstract representation of the argument structure for this Word."
+            "description": "An abstract representation of the argument structure for this sense."
           },
 
           "category": {
             "title": "Lexical Category (Part of Speech, Morphosyntactic Class, etc.)",
-            "description": "The lexical category, part of speech, or morphosyntactic class for this Lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. Examples: the English verb suffix `‑s` would set this property to `verb`, and the English derivational suffix `‑ize` would set this property to `noun`.",
+            "description": "The lexical category, part of speech, or morphosyntactic class for this Lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix `‑s` would have this this property set to `verb`, and the English derivational suffix `‑ize` would have this property set to `noun`.",
             "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
           "definition": {
             "title": "Definition",
-            "description": "The definition for this particular sense, optionally in multiple orthographies.",
+            "description": "The definition for this particular sense, optionally in multiple languages.",
             "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
@@ -347,7 +346,10 @@
             "type": "array",
             "description": "A collection of examples of this sense in use. Each example is a Phrase.",
             "uniqueItems": true,
-            "items": { "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json" }
+            "items": {
+              "title": "Example Phrase",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json"
+            }
           },
 
           "gloss": {
@@ -358,7 +360,7 @@
 
           "inflectionClass": {
             "title": "Inflectional Class",
-            "description": "If this lexeme is a root or stem, this field indicates the inflectional class that the lexeme takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.",
+            "description": "If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.",
             "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           },
 
@@ -440,7 +442,7 @@
 
             "title": "Usages",
             "type": "array",
-            "description": "A list of the appropriate usages for this sense. Example: `formal`, `medicinal`, `informal`, etc.",
+            "description": "A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.",
 
             "uniqueItems": true,
 
@@ -473,8 +475,8 @@
 
           "variantType": {
             "title": "Variant Type",
-            "type": "string",
-            "description": "If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
+            "description": "If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
           }
 
         }
