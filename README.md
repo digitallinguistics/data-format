@@ -1,9 +1,9 @@
 # The DLx Data Formats
 A collection of JSON Schemas for representing scientific linguistic data.
 
-[![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fdlx-spec)
-[![Build Status](https://travis-ci.org/digitallinguistics/dlx-spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/dlx-spec)
-[![DOI](https://zenodo.org/badge/23641/digitallinguistics/dlx-spec.svg)](https://zenodo.org/badge/latestdoi/23641/digitallinguistics/dlx-spec)
+[![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
+[![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
+[![DOI]([![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632))
 
 ## Introduction
 The canonical way that linguists represent linguistic data in their publications is with an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
@@ -118,14 +118,14 @@ Another great feature of JSON is that adding new properties to an Object doesn't
 ### Linguistic Schemas
 The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does *not* need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.
 
-* [language](http://digitallinguistics.github.io/dlx-spec/schemas/Language.html)
-* [lexeme](http://digitallinguistics.github.io/dlx-spec/schemas/Lexeme.html)
-* [lexicon](http://digitallinguistics.github.io/dlx-spec/schemas/Lexicon.html)
-* [orthography](http://digitallinguistics.github.io/dlx-spec/schemas/Orthography.html)
-* [phoneme](http://digitallinguistics.github.io/dlx-spec/schemas/Phoneme.html)
-* [phrase](http://digitallinguistics.github.io/dlx-spec/schemas/Phrase.html)
-* [text](http://digitallinguistics.github.io/dlx-spec/schemas/Text.html)
-* [word](http://digitallinguistics.github.io/dlx-spec/schemas/Word.html)
+* [language](http://digitallinguistics.github.io/spec/schemas/Language.html)
+* [lexeme](http://digitallinguistics.github.io/spec/schemas/Lexeme.html)
+* [lexicon](http://digitallinguistics.github.io/spec/schemas/Lexicon.html)
+* [orthography](http://digitallinguistics.github.io/spec/schemas/Orthography.html)
+* [phoneme](http://digitallinguistics.github.io/spec/schemas/Phoneme.html)
+* [phrase](http://digitallinguistics.github.io/spec/schemas/Phrase.html)
+* [text](http://digitallinguistics.github.io/spec/schemas/Text.html)
+* [word](http://digitallinguistics.github.io/spec/schemas/Word.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
@@ -150,20 +150,20 @@ Schema                  | Description
 [`Tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
 [`Url`][16]             | A URL.
 
-[1]:  http://digitallinguistics.github.io/dlx-spec/schemas/Abbreviation.html
-[2]:  http://digitallinguistics.github.io/dlx-spec/schemas/Access.html
-[3]:  http://digitallinguistics.github.io/dlx-spec/schemas/Bundle.html
-[4]:  http://digitallinguistics.github.io/dlx-spec/schemas/Contributor.html
-[5]:  http://digitallinguistics.github.io/dlx-spec/schemas/Media.html
-[6]:  http://digitallinguistics.github.io/dlx-spec/schemas/Note.html
-[7]:  http://digitallinguistics.github.io/dlx-spec/schemas/Person.html
-[8]: http://digitallinguistics.github.io/dlx-spec/schemas/Address.html
-[9]:  http://digitallinguistics.github.io/dlx-spec/schemas/Tags.html
-[10]: http://digitallinguistics.github.io/dlx-spec/schemas/DateCreated.html
-[11]: http://digitallinguistics.github.io/dlx-spec/schemas/DateModified.html
-[12]: http://digitallinguistics.github.io/dlx-spec/schemas/DateRecorded.html
-[13]: http://digitallinguistics.github.io/dlx-spec/schemas/LexemeReference.html
-[14]: http://digitallinguistics.github.io/dlx-spec/schemas/MultiLangString.html
-[15]: http://digitallinguistics.github.io/dlx-spec/schemas/Reference.html
-[16]: http://digitallinguistics.github.io/dlx-spec/schemas/Url.html
-[17]: http://digitallinguistics.github.io/dlx-spec/schemas/Location.html
+[1]:  http://digitallinguistics.github.io/spec/schemas/Abbreviation.html
+[2]:  http://digitallinguistics.github.io/spec/schemas/Access.html
+[3]:  http://digitallinguistics.github.io/spec/schemas/Bundle.html
+[4]:  http://digitallinguistics.github.io/spec/schemas/Contributor.html
+[5]:  http://digitallinguistics.github.io/spec/schemas/Media.html
+[6]:  http://digitallinguistics.github.io/spec/schemas/Note.html
+[7]:  http://digitallinguistics.github.io/spec/schemas/Person.html
+[8]:  http://digitallinguistics.github.io/spec/schemas/Address.html
+[9]:  http://digitallinguistics.github.io/spec/schemas/Tags.html
+[10]: http://digitallinguistics.github.io/spec/schemas/DateCreated.html
+[11]: http://digitallinguistics.github.io/spec/schemas/DateModified.html
+[12]: http://digitallinguistics.github.io/spec/schemas/DateRecorded.html
+[13]: http://digitallinguistics.github.io/spec/schemas/LexemeReference.html
+[14]: http://digitallinguistics.github.io/spec/schemas/MultiLangString.html
+[15]: http://digitallinguistics.github.io/spec/schemas/Reference.html
+[16]: http://digitallinguistics.github.io/spec/schemas/Url.html
+[17]: http://digitallinguistics.github.io/spec/schemas/Location.html
