@@ -3,7 +3,7 @@ A collection of JSON Schemas for representing scientific linguistic data.
 
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
 [![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
-[![DOI](https://zenodo.org/badge/23641/digitallinguistics/spec.svg)](https://zenodo.org/badge/latestdoi/23641/digitallinguistics/spec)
+[![DOI]([![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632))
 
 ## Introduction
 The canonical way that linguists represent linguistic data in their publications is with an [interlinear gloss](https://en.wikipedia.org/wiki/Interlinear_gloss). This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
