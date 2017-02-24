@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/DateRecorded-1.0.0-alpha.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/DateRecorded-1.0.0.json",
   "type": "string",
   "title": "Date Recorded",
   "description": "The date this item was recorded, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
