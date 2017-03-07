@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.1.0.json",
 
   "title": "Word",
   "type": "object",
@@ -31,8 +31,8 @@
 
     "morphemes": {
       "title": "Morphemes / Components",
-      "description": "A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word.",
       "type": "array",
+      "description": "A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word.",
       "uniqueItems": false,
       "items": {
         "title": "Morpheme",
@@ -42,12 +42,40 @@
 
     "notes": {
       "title": "Notes",
-      "description": "A collection of notes about this token.",
       "type": "array",
+      "description": "A collection of notes about this token.",
       "uniqueItems": true,
       "items": {
         "title": "Note",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
+      }
+    },
+
+    "phonemes": {
+      "title": "Phonemes",
+      "type": "array",
+      "description": "An array of the phonemes in this word, in IPA.",
+      "uniqueItems": false,
+      "items": {
+        "title": "Phone (Phoneme Token)",
+        "type": "object",
+        "description": "An IPA representation of this phoneme. The `phoneme` field is required, but the `allophone` field is optional, for use only when you need to specify that this phoneme is being realized as a particular phoneme. Both `phoneme` and `allophone` must be in IPA rather than a practical orthography.",
+        "required": ["phoneme"],
+        "properties": {
+
+          "allophone": {
+            "title": "Allophone",
+            "type": "string",
+            "description": "This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA."
+          },
+
+          "phoneme": {
+            "title": "Phoneme",
+            "type": "string",
+            "description": "An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the `allophone` property for that insetad)."
+          }
+
+        }
       }
     },
 
