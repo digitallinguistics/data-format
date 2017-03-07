@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.0.1.json",
 
   "title": "Person",
   "type": "object",
@@ -10,6 +10,8 @@
     "familyName",
     "givenName"
   ],
+
+  "additionalProperties": true,
 
   "properties": {
 
@@ -119,8 +121,14 @@
 
     "notes": {
       "title": "Notes",
-      "description": "Notes about this Person.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
+      "type": "array",
+      "description": "An array of notes about this person.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Note",
+        "description": "A note about this person.",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
+      }
     },
 
     "phone": {

@@ -1,9 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Reference-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.0.0.json",
   "title": "Bibliographic Reference",
+  "type": "object",
   "description": "A bibliographic Reference.",
   "required": ["title"],
+
+  "additionalProperties": true,
 
   "properties": {
 
@@ -14,7 +17,21 @@
       "uniqueItems": true,
       "items": {
         "title": "Author",
-        "type": "string"
+        "type": "object",
+        "description": "An object representing an author.",
+        "additionalProperties": false,
+        "properties": {
+          "firstName": {
+            "title": "First Name",
+            "type": "string",
+            "description": "The first name(s) of this author."
+          },
+          "lastName": {
+            "title": "Last Name",
+            "type": "string",
+            "description": "The last name(s) of this author."
+          }
+        }
       }
     },
 
@@ -37,7 +54,21 @@
       "uniqueItems": true,
       "items": {
         "title": "Editor",
-        "type": "string"
+        "type": "object",
+        "description": "An object representing an editor.",
+        "additionalProperties": false,
+        "properties": {
+          "firstName": {
+            "title": "First Name",
+            "type": "string",
+            "description": "The first name(s) of this editor."
+          },
+          "lastName": {
+            "title": "Last Name",
+            "type": "string",
+            "description": "The last name(s) of this editor."
+          }
+        }
       }
     },
 

@@ -91,8 +91,8 @@
           "properties": {
             "type": {
               "title": "Translation Type",
-              "description": "The type of translation. Typical values are `free` or `literal`, but other values may be supplied.",
-              "type": "string"
+              "type": "string",
+              "description": "The type of translation. Typical values are `free` or `literal`, but other values may be supplied."
             }
           }
         }

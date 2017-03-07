@@ -50,15 +50,13 @@
     "dateCreated": {
       "title": "Date Created",
       "description": "The date that this lexicon was created.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
-      "default": ""
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
     },
 
     "dateModified": {
       "title": "Date Modified",
       "description": "The date that this lexicon was last modified.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json",
-      "default": ""
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
     },
 
     "language": {

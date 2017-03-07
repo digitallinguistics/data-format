@@ -1,14 +1,19 @@
 {
+
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Orthography-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Orthography-1.0.1.json",
+
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
+
   "required": [
     "abbreviation",
     "graphemes",
     "name"
   ],
+
+  "additionalProperties": true,
 
   "properties": {
 
@@ -29,6 +34,7 @@
         "type": "object",
         "description": "An object representing a grapheme.",
         "required": ["form"],
+        "additionalProperties": false,
         "properties": {
 
           "allographs": {
