@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.1.1.json",
 
   "title": "Word",
   "type": "object",
@@ -61,6 +61,7 @@
         "type": "object",
         "description": "An IPA representation of this phoneme. The `phoneme` field is required, but the `allophone` field is optional, for use only when you need to specify that this phoneme is being realized as a particular phoneme. Both `phoneme` and `allophone` must be in IPA rather than a practical orthography.",
         "required": ["phoneme"],
+        "additionalProperties": true,
         "properties": {
 
           "allophone": {
@@ -69,10 +70,27 @@
             "description": "This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA."
           },
 
+          "notes": {
+            "title": "Notes",
+            "type": "array",
+            "description": "A collection of notes about this phone.",
+            "uniqueItems": true,
+            "items": {
+              "title": "Note",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
+            }
+          },
+
           "phoneme": {
             "title": "Phoneme",
             "type": "string",
             "description": "An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the `allophone` property for that insetad)."
+          },
+
+          "tags": {
+            "title": "Tags",
+            "description": "A set of tags for this phone.",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
           }
 
         }
