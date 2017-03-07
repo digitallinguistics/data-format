@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Media-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-1.0.1.json",
 
   "title": "Media File",
   "type": "object",
@@ -36,6 +36,7 @@
 
     "contentType": {
       "title": "MIME Content Type",
+      "type": "string",
       "description": "The media type of the file. Examples: `audio/wav`, `application/pdf`, `video/mpeg`"
     },
 
@@ -57,8 +58,8 @@
 
     "endTime": {
       "title": "End Time",
-      "description": "Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.",
-      "type": "number"
+      "type": "number",
+      "description": "Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc."
     },
 
     "filename": {
@@ -139,8 +140,8 @@
 
     "startTime": {
       "title": "Start Time",
-      "description": "Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. This may also be used to synchronize the starting point of multiple media files associated with a single Text. For example, if the camera started recording five minutes before the speaker began speaking, the `Start Time` might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.",
-      "type": "number"
+      "type": "number",
+      "description": "Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. This may also be used to synchronize the starting point of multiple media files associated with a single Text. For example, if the camera started recording five minutes before the speaker began speaking, the `Start Time` might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc."
     },
 
     "tags": {

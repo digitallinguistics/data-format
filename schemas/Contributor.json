@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Contributor-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Contributor-1.0.1.json",
 
   "title": "Contributor",
   "type": "object",
@@ -27,6 +27,7 @@
 
     "roles": {
       "title": "Roles",
+      "type": "array",
       "description": "The roles that this person played in this text, e.g. `speaker` or `recorder`.",
       "uniqueItems": true,
       "items": {
