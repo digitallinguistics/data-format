@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.0.0.json",
 
   "title": "Word",
   "type": "object",
@@ -31,12 +31,12 @@
 
     "morphemes": {
       "title": "Morphemes / Components",
-      "description": "A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word. Each component is a reference to a lexicon item in a lexicon associated with this Text.",
+      "description": "A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word.",
       "type": "array",
       "uniqueItems": false,
       "items": {
-        "title": "Lexicon Item",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
+        "title": "Morpheme",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Morpheme.json"
       }
     },
 
