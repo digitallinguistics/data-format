@@ -15,6 +15,7 @@ module.exports = {
   Lexicon:         require('./Lexicon'),
   Location:        require('./Location'),
   Media:           require('./Media'),
+  Morpheme:        require('./Morpheme'),
   MultiLangString: require('./MultiLangString'),
   Note:            require('./Note'),
   Orthography:     require('./Orthography'),
