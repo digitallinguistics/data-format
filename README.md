@@ -43,8 +43,13 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": "hola",
-          "gloss": "hello"
+          "form": {
+            "spa": "hola",
+            "ipa": "ola"
+          },
+          "gloss": {
+            "eng": "hello"
+          }
         }
       ]
     },
@@ -58,8 +63,13 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": "me",
-          "gloss": "1sg.DO"
+          "form": {
+            "spa": "me",
+            "ipa": "me"
+          },
+          "gloss": {
+            "eng": "1sg.DO"
+          }
         }
       ]
     },
@@ -73,12 +83,22 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": "llam-",
-          "gloss": "call"
+          "form": {
+            "spa": "llam",
+            "ipa": "jam"
+          },
+          "gloss": {
+            "eng": "call"
+          }
         },
         {
-          "form": "-o",
-          "gloss": "1sg.PRES.IND.SUBJ"
+          "form": {
+            "spa": "o",
+            "ipa": "o"
+          },
+          "gloss": {
+            "eng": "1sg.PRES.IND.SUBJ"
+          }
         }
       ]
     },
@@ -92,8 +112,13 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": "Daniel",
-          "gloss": "Daniel"
+          "form": {
+            "spa": "Daniel",
+            "ipa": "dænjəl"
+          },
+          "gloss": {
+            "eng": "Daniel"
+          }
         }
       ]
     }
@@ -118,14 +143,15 @@ Another great feature of JSON is that adding new properties to an Object doesn't
 ### Linguistic Schemas
 The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does *not* need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.
 
-* [language](http://digitallinguistics.github.io/spec/schemas/Language.html)
-* [lexeme](http://digitallinguistics.github.io/spec/schemas/Lexeme.html)
-* [lexicon](http://digitallinguistics.github.io/spec/schemas/Lexicon.html)
-* [orthography](http://digitallinguistics.github.io/spec/schemas/Orthography.html)
-* [phoneme](http://digitallinguistics.github.io/spec/schemas/Phoneme.html)
-* [phrase](http://digitallinguistics.github.io/spec/schemas/Phrase.html)
-* [text](http://digitallinguistics.github.io/spec/schemas/Text.html)
-* [word](http://digitallinguistics.github.io/spec/schemas/Word.html)
+* [Language](http://developer.digitallinguistics.io/spec/schemas/Language.html)
+* [Orthography](http://developer.digitallinguistics.io/spec/schemas/Orthography.html)
+* [Text](http://developer.digitallinguistics.io/spec/schemas/Text.html)
+* [Phrase](http://developer.digitallinguistics.io/spec/schemas/Phrase.html)
+* [Word](http://developer.digitallinguistics.io/spec/schemas/Word.html)
+* [Morpheme](http://developer.digitallinguistics.io/spec/schemas/Morpheme.html)
+* [Phoneme](http://developer.digitallinguistics.io/spec/schemas/Phoneme.html)
+* [Lexicon](http://developer.digitallinguistics.io/spec/schemas/Lexicon.html)
+* [Lexeme](http://developer.digitallinguistics.io/spec/schemas/Lexeme.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
@@ -150,20 +176,20 @@ Schema                  | Description
 [`Tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
 [`Url`][16]             | A URL.
 
-[1]:  http://digitallinguistics.github.io/spec/schemas/Abbreviation.html
-[2]:  http://digitallinguistics.github.io/spec/schemas/Access.html
-[3]:  http://digitallinguistics.github.io/spec/schemas/Bundle.html
-[4]:  http://digitallinguistics.github.io/spec/schemas/Contributor.html
-[5]:  http://digitallinguistics.github.io/spec/schemas/Media.html
-[6]:  http://digitallinguistics.github.io/spec/schemas/Note.html
-[7]:  http://digitallinguistics.github.io/spec/schemas/Person.html
-[8]:  http://digitallinguistics.github.io/spec/schemas/Address.html
-[9]:  http://digitallinguistics.github.io/spec/schemas/Tags.html
-[10]: http://digitallinguistics.github.io/spec/schemas/DateCreated.html
-[11]: http://digitallinguistics.github.io/spec/schemas/DateModified.html
-[12]: http://digitallinguistics.github.io/spec/schemas/DateRecorded.html
-[13]: http://digitallinguistics.github.io/spec/schemas/LexemeReference.html
-[14]: http://digitallinguistics.github.io/spec/schemas/MultiLangString.html
-[15]: http://digitallinguistics.github.io/spec/schemas/Reference.html
-[16]: http://digitallinguistics.github.io/spec/schemas/Url.html
-[17]: http://digitallinguistics.github.io/spec/schemas/Location.html
+[1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
+[2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
+[3]:  http://developer.digitallinguistics.io/spec/schemas/Bundle.html
+[4]:  http://developer.digitallinguistics.io/spec/schemas/Contributor.html
+[5]:  http://developer.digitallinguistics.io/spec/schemas/Media.html
+[6]:  http://developer.digitallinguistics.io/spec/schemas/Note.html
+[7]:  http://developer.digitallinguistics.io/spec/schemas/Person.html
+[8]:  http://developer.digitallinguistics.io/spec/schemas/Address.html
+[9]:  http://developer.digitallinguistics.io/spec/schemas/Tags.html
+[10]: http://developer.digitallinguistics.io/spec/schemas/DateCreated.html
+[11]: http://developer.digitallinguistics.io/spec/schemas/DateModified.html
+[12]: http://developer.digitallinguistics.io/spec/schemas/DateRecorded.html
+[13]: http://developer.digitallinguistics.io/spec/schemas/LexemeReference.html
+[14]: http://developer.digitallinguistics.io/spec/schemas/MultiLangString.html
+[15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
+[16]: http://developer.digitallinguistics.io/spec/schemas/Url.html
+[17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
