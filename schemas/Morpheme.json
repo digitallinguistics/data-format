@@ -8,19 +8,13 @@
   "description": "A *morpheme token* is a particular instance of a morpheme in a text. In DLx, the primary function of the Morpheme object is to provide a concise, short description of each token of a morpheme in a corpus - its form, its gloss, and a reference to an item in a lexicon where more information can be found.",
 
   "required": [
-    "form",
+    "transcription",
     "gloss"
   ],
 
   "additionalProperties": true,
 
   "properties": {
-
-    "form": {
-      "title": "Form",
-      "description": "A transcription of this morpheme token. Should be a transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
-    },
 
     "gloss": {
       "title": "Gloss",
@@ -50,6 +44,12 @@
       "title": "Tags",
       "description": "A set of tags for this morpheme token.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
+    },
+
+    "transcription": {
+      "title": "Transcription",
+      "description": "A transcription of this morpheme token. Should be a transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     }
 
   },

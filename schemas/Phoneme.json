@@ -1,13 +1,13 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Phoneme-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Phoneme-2.0.0.json",
 
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones.",
 
-  "required": ["IPA"],
+  "required": ["ipa"],
 
   "additionalProperties": true,
 
@@ -29,7 +29,7 @@
       "title": "Allophones",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of allophones of this phoneme, following the same format as for phoneme objects.",
+      "description": "A list of allophones of this phoneme, following the same format as for Phoneme objects.",
       "items": {
         "title": "Allophone",
         "$ref": "#"
@@ -122,7 +122,7 @@
       ]
     },
 
-    "IPA": {
+    "ipa": {
       "title": "IPA Transcription",
       "type": "string",
       "description": "The IPA representation of this Phoneme."
@@ -203,7 +203,16 @@
       }
     },
 
-    "rounding": {},
+    "rounding": {
+      "title": "Rounding",
+      "description": "A description of the roundedness of a vowel. Only one type of roundedness may be listed. Rounded vowels may be listed as simply `rounded`, or more specifically as `protruded` or `compressed`.",
+      "enum": [
+        "compressed",
+        "protruded",
+        "rounded",
+        "unrounded"
+      ]
+    },
 
     "tags": {
       "title": "Tags",
@@ -212,19 +221,19 @@
 
     "target1": {
       "title": "Dipthong Target 1",
-      "description": "For diphthongs or triphthongs, this should be a phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.",
+      "description": "For diphthongs or triphthongs, this should be a Phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.",
       "$ref": "#"
     },
 
     "target2": {
       "title": "Dipthong Target 2",
-      "description": "For diphthongs or thriphthongs, this should be a phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.",
+      "description": "For diphthongs or thriphthongs, this should be a Phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.",
       "$ref": "#"
     },
 
     "target3": {
       "title": "Dipthong Target 3",
-      "description": "For triphthongs, this should be a phoneme object representing the features of the third target in the pronunciation of the triphthong.",
+      "description": "For triphthongs, this should be a Phoneme object representing the features of the third target in the pronunciation of the triphthong.",
       "$ref": "#"
     },
 

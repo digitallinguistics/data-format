@@ -26,8 +26,8 @@
     "graphemes": {
       "title": "Graphemes",
       "type": "array",
-      "uniqueItems": true,
       "description": "A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).",
+      "uniqueItems": true,
       "items": {
 
         "title": "Grapheme",
@@ -40,8 +40,8 @@
           "allographs": {
             "title": "Allographs",
             "type": "array",
-            "uniqueItems": true,
             "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `t` in an English orthography would have the allograph `T`.",
+            "uniqueItems": true,
             "items": {
               "title": "Allograph",
               "type": "string"
@@ -96,8 +96,8 @@
     "punctuation": {
       "title": "Punctuation",
       "type": "array",
-      "uniqueItems": true,
       "description": "A list of all the punctuation characters in this orthography, including white space and non-breaking characters.",
+      "uniqueItems": true,
       "items": {
         "title": "Punctuation Character",
         "type": "string"
