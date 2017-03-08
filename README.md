@@ -43,7 +43,7 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": {
+          "transcription": {
             "spa": "hola",
             "ipa": "ola"
           },
@@ -63,7 +63,7 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": {
+          "transcription": {
             "spa": "me",
             "ipa": "me"
           },
@@ -83,7 +83,7 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": {
+          "transcription": {
             "spa": "llam",
             "ipa": "jam"
           },
@@ -92,7 +92,7 @@ The DLx project recommends JSON because it has become the data interchange forma
           }
         },
         {
-          "form": {
+          "transcription": {
             "spa": "o",
             "ipa": "o"
           },
@@ -112,7 +112,7 @@ The DLx project recommends JSON because it has become the data interchange forma
       },
       "morphemes": [
         {
-          "form": {
+          "transcription": {
             "spa": "Daniel",
             "ipa": "dænjəl"
           },
