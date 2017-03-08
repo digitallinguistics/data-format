@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Phoneme-1.0.1.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Phoneme-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -55,7 +55,7 @@
       <div class='required object prop'>
         <h2>Required Properties</h2>
         <ul>
-            <li><code>IPA</code></li>
+            <li><code>ipa</code></li>
         </ul>
       </div>
 
@@ -146,7 +146,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of allophones of this phoneme, following the same format as for phoneme objects.</p>
+        <p><p>A list of allophones of this phoneme, following the same format as for Phoneme objects.</p>
 </p>
       </div>
 
@@ -512,7 +512,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>IPA Transcription: <code>"IPA"</code></h1>
+      <h1 class='title meta any prop'>IPA Transcription: <code>"ipa"</code></h1>
     </summary>
 
 
@@ -928,13 +928,18 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>rounding: <code>"rounding"</code></h1>
+      <h1 class='title meta any prop'>Rounding: <code>"rounding"</code></h1>
     </summary>
 
 
 
 
 
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A description of the roundedness of a vowel. Only one type of roundedness may be listed. Rounded vowels may be listed as simply <code>rounded</code>, or more specifically as <code>protruded</code> or <code>compressed</code>.</p>
+</p>
+      </div>
 
 
 
@@ -956,6 +961,15 @@
 
 
 
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;compressed&quot;</pre></li>
+            <li><pre>&quot;protruded&quot;</pre></li>
+            <li><pre>&quot;rounded&quot;</pre></li>
+            <li><pre>&quot;unrounded&quot;</pre></li>
+        </ul>
+      </div>
 
 
 
@@ -1000,7 +1014,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>For diphthongs or triphthongs, this should be a phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.</p>
+        <p><p>For diphthongs or triphthongs, this should be a Phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.</p>
 </p>
       </div>
 
@@ -1023,7 +1037,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>For diphthongs or thriphthongs, this should be a phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.</p>
+        <p><p>For diphthongs or thriphthongs, this should be a Phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.</p>
 </p>
       </div>
 
@@ -1046,7 +1060,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>For triphthongs, this should be a phoneme object representing the features of the third target in the pronunciation of the triphthong.</p>
+        <p><p>For triphthongs, this should be a Phoneme object representing the features of the third target in the pronunciation of the triphthong.</p>
 </p>
       </div>
 
@@ -1193,7 +1207,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Language.html">Language</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Media.html">Media File</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Location.html">Location</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Url.html">URL</a></li><li><a href="Text.html">Text</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
       </ul>
     </nav>
 
