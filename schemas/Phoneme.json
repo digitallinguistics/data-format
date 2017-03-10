@@ -18,10 +18,11 @@
       "type": "string",
       "description": "The airstream mechanism used to pronounce this Phoneme. `Pulmonic` (egressive) sounds are created by pushing air out of the lungs. `Ejective` sounds are glottalic egressive sounds where the air column is compressed by upward movement of the glottis. `Implosive` sounds are glottalic ingressives where air is pulled in by a downward movement of the glottis. `Click` sounds, i.e. lingual / velaric ingressive sounds, pull air in with a downward movement of the tongue.",
       "enum": [
-        "pulmonic",
+        "click",
         "ejective",
         "implosive",
-        "click"
+        "ingressive",
+        "pulmonic"
       ]
     },
 
@@ -133,12 +134,12 @@
       "type": "string",
       "description": "The length of this phoneme, whether for consonants (e.g. `short` vs. `geminate`) or vowels.",
       "enum": [
-        "extra long",
         "extra short",
-        "geminate",
+        "short",
         "half long",
         "long",
-        "short"
+        "extra long",
+        "geminate"
       ]
     },
 
@@ -205,6 +206,7 @@
 
     "rounding": {
       "title": "Rounding",
+      "type": "string",
       "description": "A description of the roundedness of a vowel. Only one type of roundedness may be listed. Rounded vowels may be listed as simply `rounded`, or more specifically as `protruded` or `compressed`.",
       "enum": [
         "compressed",
@@ -247,7 +249,11 @@
       "title": "Voicing",
       "type": "string",
       "description": "Whether the phoneme is voiced, voiceless, or partially voiced.",
-      "enum": ["voiced", "voiceless", "partially voiced"]
+      "enum": [
+        "semivoiced",
+        "voiced",
+        "voiceless"
+      ]
     }
 
   }

@@ -64,7 +64,7 @@
             "title": "Pronunciations",
             "type": "array",
             "uniqueItems": true,
-            "description": "A list of the possible pronunciations of this grapheme. It may be difficult or impossible to fill in this field for all orthographies (like English).",
+            "description": "A list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).",
             "items": {
               "title": "Pronunciation",
               "type": "string"
