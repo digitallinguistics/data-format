@@ -99,16 +99,6 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
-    "phomemes": {
-      "title": "Phonemes",
-      "type": "array",
-      "description": "The phonological inventory for this language, i.e. a collection of phonemes.",
-      "items": {
-        "title": "Phoneme",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Phoneme.json"
-      }
-    },
-
     "orthographies": {
       "title": "Orthographies",
       "type": "array",
@@ -117,6 +107,16 @@
       "items": {
         "title": "Orthography",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Orthography.json"
+      }
+    },
+
+    "phonemes": {
+      "title": "Phonemes",
+      "type": "array",
+      "description": "The phonological inventory for this language, i.e. a collection of phonemes.",
+      "items": {
+        "title": "Phoneme",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Phoneme.json"
       }
     },
 
