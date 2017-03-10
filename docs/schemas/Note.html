@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Note
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Note</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Note-1.0.0.json</code></p>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A note about this resource. Notes may also include <code>type</code> and <code>language</code> attributes.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>text</code></li>
+        </ul>
+      </div>
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> false
+        </p>
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Created: <code>"dateCreated"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date and optionally time that this note was created, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date-time format</a>.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateCreated.html">DateCreated</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date and optionally time that this note was last modified, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date-time format</a>.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateModified.html">DateModified</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Note Language: <code>"language"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A language code or language name of the language that this note is written in.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Source (Person): <code>"source"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The abbreviation of the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Note Text: <code>"text"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The text of the note itself.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Note Type: <code>"type"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The type of Note. Common values include:</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;note-to-self&quot;</pre></li>
+            <li><pre>&quot;general&quot;</pre></li>
+            <li><pre>&quot;anthropology&quot;</pre></li>
+            <li><pre>&quot;discourse&quot;</pre></li>
+            <li><pre>&quot;encyclopedic&quot;</pre></li>
+            <li><pre>&quot;grammar&quot;</pre></li>
+            <li><pre>&quot;phonology&quot;</pre></li>
+            <li><pre>&quot;semantics&quot;</pre></li>
+            <li><pre>&quot;sociocultural&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Language.html">Language</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Location.html">Location</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Media.html">Media File</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>

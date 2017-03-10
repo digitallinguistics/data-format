@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Access Rights
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Access Rights</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Access-2.0.0.json</code></p>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. <code>online: false</code> or <code>permission: 'researcher only'</code>, etc..</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class='additional-properties object prop'>
+          <h2>Additional Properties</h2>
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>additionalProperties: <code>"additionalProperties"</code></h1>
+              </summary>
+          
+          
+          
+          
+          
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </details>
+          
+          </section>
+        </div>
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Access Notes: <code>"notes"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>Notes about access rights for this resource, or any other special considerations regarding who should have Access.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="MultiLangString.html">MultiLangString</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>AILLA Access Level: <code>"AILLA"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>For users who are depositing their materials at The Archive of the Indigenous Languages of Latin America (AAILA) in Texas, an <code>AILLA</code> attribute may be added, and its value set to one of the access levels set forth by the archive.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;public access&quot;</pre></li>
+            <li><pre>&quot;password&quot;</pre></li>
+            <li><pre>&quot;time limit&quot;</pre></li>
+            <li><pre>&quot;depositor control&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>ELAR Access Level: <code>"ELAR"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an <code>ELAR</code> attribute may be added, and its value set to one of the access levels set forth by the archive.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;User&quot;</pre></li>
+            <li><pre>&quot;Researcher&quot;</pre></li>
+            <li><pre>&quot;Community Member&quot;</pre></li>
+            <li><pre>&quot;Subscriber&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Language.html">Language</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Location.html">Location</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Media.html">Media File</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>

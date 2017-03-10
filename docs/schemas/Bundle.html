@@ -1,0 +1,633 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Bundle
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Bundle</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Bundle-1.0.0.json</code></p>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>name</code></li>
+        </ul>
+      </div>
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An abbreviation for this bundle.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Access Rights: <code>"access"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Access.html">Access</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Created: <code>"dateCreated"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateCreated.html">DateCreated</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateModified.html">DateModified</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Locations: <code>"locations"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An array of locations included in this bundle (usually locations that were visited during a day or session).</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Location</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Location.html">Location</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Media: <code>"media"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An array of media files included in this bundle.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Media File</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Media.html">Media</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Name: <code>"name"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A name for this bundle.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="MultiLangString.html">MultiLangString</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of notes about this bundle.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Note</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Persons: <code>"persons"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An array of persons included in this bundle.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Person</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Person.html">Person</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Texts: <code>"texts"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An array of texts included in this bundle.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Text</h1>
+              </summary>
+          
+          
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Text.html">Text</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
+    </summary>
+
+
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Url.html">Url</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Language.html">Language</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Location.html">Location</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Media.html">Media File</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>
