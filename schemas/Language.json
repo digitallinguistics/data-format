@@ -31,45 +31,6 @@
       }
     },
 
-    "codes": {
-
-      "title": "Language Codes",
-      "type": "object",
-      "description": "An object containing any ISO 639-3 and Glottolog language codes for this Language.",
-
-      "required": ["iso", "glottolog"],
-
-      "additionalProperties": false,
-
-      "properties": {
-
-        "iso": {
-          "title": "ISO 639-3 Codes",
-          "type": "array",
-          "description": "A list of ISO 639-3 codes that are applicable to this language variety.",
-          "uniqueItems": true,
-          "items": {
-            "title": "ISO 639-3 Code",
-            "type": "string",
-            "pattern": "[a-z]{3}"
-          }
-        },
-
-        "glottolog": {
-          "title": "Glottolog Codes",
-          "type": "array",
-          "description": "A list of Glottolog codes that are applicable to this language variety.",
-          "uniqueItems": true,
-          "items": {
-            "title": "Glottolog Code",
-            "type": "string",
-            "pattern": "[a-z]{4}[0-9]{4}"
-          }
-        }
-
-      }
-    },
-
     "dateCreated": {
       "title": "Date Created",
       "description": "The date and optionally time that this Language object was created.",
@@ -80,6 +41,20 @@
       "title": "Date Modified",
       "description": "The date an optionally time that this Language object was last modified.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
+    },
+
+    "glottolog": {
+      "title": "Glottolog Code",
+      "type": "string",
+      "description": "The Glottolog code for this language variety, as a String in the format abcd1234.",
+      "pattern": "[a-z]{4}[0-9]{4}"
+    },
+
+    "iso": {
+      "title": "ISO 639-3 Code",
+      "type": "string",
+      "description": "The ISO 639-3 code for this language variety, as a 3-letter String.",
+      "pattern": "[a-z]{3}"
     },
 
     "locations": {
