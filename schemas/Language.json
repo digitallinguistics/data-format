@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-1.1.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-2.0.0.json",
 
   "title": "Language",
   "type": "object",
