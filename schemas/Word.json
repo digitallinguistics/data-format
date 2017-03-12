@@ -54,7 +54,7 @@
     "phonemes": {
       "title": "Phonemes",
       "type": "array",
-      "description": "An array of the phonemes in this word, in IPA.",
+      "description": "An array of the phones (phoneme tokens) in this word, in IPA.",
       "uniqueItems": false,
       "items": {
         "title": "Phone (Phoneme Token)",
