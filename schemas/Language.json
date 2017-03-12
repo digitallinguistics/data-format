@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-2.1.0.json",
 
   "title": "Language",
   "type": "object",
@@ -22,13 +22,19 @@
     "additionalNames": {
       "title": "Additional Names",
       "type": "array",
-      "description": "An array of additional names for this language.",
+      "description": "An array of additional names or spellings for this language. Only use this property if the 'name' property is not sufficent to describe the various names for this language.",
       "uniqueItems": true,
       "items": {
         "title": "Additional Name",
         "type": "string",
         "description": "An alternate name for this language."
       }
+    },
+
+    "autonym": {
+      "title": "Autonym",
+      "description": "The autonym for this language, optionally in multiple orthographies.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "dateCreated": {
@@ -47,14 +53,14 @@
       "title": "Glottolog Code",
       "type": "string",
       "description": "The Glottolog code for this language variety, as a String in the format abcd1234.",
-      "pattern": "[a-z]{4}[0-9]{4}"
+      "pattern": "^[a-z]{4}[0-9]{4}$"
     },
 
     "iso": {
       "title": "ISO 639-3 Code",
       "type": "string",
       "description": "The ISO 639-3 code for this language variety, as a 3-letter String.",
-      "pattern": "[a-z]{3}"
+      "pattern": "^[a-z]{3}$"
     },
 
     "locations": {
@@ -70,7 +76,7 @@
 
     "name": {
       "title": "Language Name",
-      "description": "The name of this language, optionally in multiple orthographies.",
+      "description": "The name of this language, optionally in multiple languages.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
