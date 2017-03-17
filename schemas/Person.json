@@ -156,6 +156,8 @@
 
     "roles": {
       "title": "Roles",
+      "type": "array",
+      "description": "An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.",
       "uniqueItems": true,
       "items": {
         "title": "Role",
