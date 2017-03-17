@@ -162,7 +162,6 @@ Schema                  | Description
 [`Access`][2]           | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA.
 [`Address`][8]          | A postal address.
 [`Bundle`][3]           | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
-[`Contributor`][4]      | Information about a person who contributed to the given resource, and the role they played. For example, most texts will have a contributor with the role of `speaker` specified.
 [`DateCreated`][10]     | The date a database resource was created (*not* the date the item was recorded).
 [`DateModified`][11]    | The date a database resource was last modified.
 [`DateRecorded`][12]    | The date a database resource (usually a text) was recorded.
@@ -179,7 +178,7 @@ Schema                  | Description
 [1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
 [2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
 [3]:  http://developer.digitallinguistics.io/spec/schemas/Bundle.html
-[4]:  http://developer.digitallinguistics.io/spec/schemas/Contributor.html
+[4]:  
 [5]:  http://developer.digitallinguistics.io/spec/schemas/Media.html
 [6]:  http://developer.digitallinguistics.io/spec/schemas/Note.html
 [7]:  http://developer.digitallinguistics.io/spec/schemas/Person.html

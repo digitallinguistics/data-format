@@ -5,7 +5,6 @@ module.exports = {
   Access:          require('./Access'),
   Address:         require('./Address'),
   Bundle:          require('./Bundle'),
-  Contributor:     require('./Contributor'),
   DateCreated:     require('./DateCreated'),
   DateModified:    require('./DateModified'),
   DateRecorded:    require('./DateRecorded'),
