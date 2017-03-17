@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.1.0.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -376,6 +376,22 @@
               "title": "Lexical Relation (Lexeme Reference)",
               "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.",
               "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json"
+            }
+
+          },
+
+          "media": {
+
+            "title": "Media",
+            "type": "array",
+            "description": "Media items associated with this lexeme, such as recordings of the word, pictures of the item the word refers to, or videos of the action being performed.",
+
+            "uniqueItems": true,
+
+            "items": {
+              "title": "Media Item",
+              "description": "A media item associated with this lexeme.",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Media.json"
             }
 
           },
