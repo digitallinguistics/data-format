@@ -7,10 +7,7 @@
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaUrl` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
 
-  "required": [
-    "filename",
-    "format"
-  ],
+  "required": ["filename"],
 
   "additionalProperties": true,
 
@@ -47,11 +44,19 @@
 
     "dateCreated": {
       "title": "Date Created",
+      "description": "The date that this metadata object was originally created. *Not* the date the media file was created. For that, see the `dateRecorded` property.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json"
+    },
+
+    "dateModified": {
+      "title": "Date Modified",
+      "description": "The date and optionally time that this metadata was last modified. *Not* the date that the media file was modified.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json"
     },
 
     "dateRecorded": {
       "title": "Date Recorded",
+      "description": "The date that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. *Not* the date that this metadata object was created. For that, see the `dateCreated` property.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/DateRecorded.json"
     },
 
@@ -83,11 +88,11 @@
     "languages": {
       "title": "Languages",
       "type": "array",
-      "description": "A collection of the languages that are used in this media file.",
+      "description": "An array of the languages that are used in this media file, as abbreviations",
       "uniqueItems": true,
       "items": {
-        "title": "Language",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json"
+        "title": "Language (Abbreviation)",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
       }
     },
 
@@ -126,7 +131,7 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
-    "persons": {
+    "people": {
       "title": "Persons in File",
       "type": "array",
       "description": "A list of all the people who appear in this file. Often a list of speakers.",

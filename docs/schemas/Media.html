@@ -56,7 +56,6 @@
         <h2>Required Properties</h2>
         <ul>
             <li><code>filename</code></li>
-            <li><code>format</code></li>
         </ul>
       </div>
 
@@ -220,8 +219,36 @@
     </summary>
 
 
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date that this metadata object was originally created. <em>Not</em> the date the media file was created. For that, see the <code>dateRecorded</code> property.</p>
+</p>
+      </div>
 
     <p class='$ref any prop'>Must be an instance of the <a href="DateCreated.html">DateCreated</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date and optionally time that this metadata was last modified. <em>Not</em> the date that the media file was modified.</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="DateModified.html">DateModified</a> schema.</p>
 
 
   </details>
@@ -238,6 +265,11 @@
     </summary>
 
 
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The date that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. <em>Not</em> the date that this metadata object was created. For that, see the <code>dateCreated</code> property.</p>
+</p>
+      </div>
 
     <p class='$ref any prop'>Must be an instance of the <a href="DateRecorded.html">DateRecorded</a> schema.</p>
 
@@ -478,7 +510,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of the languages that are used in this media file.</p>
+        <p><p>An array of the languages that are used in this media file, as abbreviations</p>
 </p>
       </div>
 
@@ -522,12 +554,12 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Language</h1>
+                <h1 class='title meta any prop'>Language (Abbreviation)</h1>
               </summary>
           
           
           
-              <p class='$ref any prop'>Must be an instance of the <a href="Language.html">Language</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
           
           
             </details>
@@ -752,7 +784,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Persons in File: <code>"persons"</code></h1>
+      <h1 class='title meta any prop'>Persons in File: <code>"people"</code></h1>
     </summary>
 
 
@@ -946,7 +978,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="Language.html">Language</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Location.html">Location</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
+        <li><a href="Access.html">Access Rights</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li>
       </ul>
     </nav>
 

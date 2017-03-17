@@ -25,12 +25,12 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Person-1.0.1.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Person-1.1.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>An object providing information about a Person.</p>
+        <p><p>An object providing information about a Person</p>
 </p>
       </div>
 
@@ -438,7 +438,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of the languages that this person speaks. Each language should be a DLx Language object, optionally with a few additional properties such as <code>ageLearned</code>, etc. Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.</p>
+        <p><p>A list of the languages that this person speaks. Each item should be a DLx Language object, optionally with a few additional properties such as <code>ageLearned</code>, etc., Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.</p>
 </p>
       </div>
 
@@ -1120,6 +1120,122 @@
   <details open>
 
     <summary>
+      <h1 class='title meta any prop'>Roles: <code>"roles"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An array of the roles that this person has in the context of the associated data, e.g. <code>speaker</code> or <code>transcriber</code>.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Role</h1>
+              </summary>
+          
+          
+          
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The role that this person has in the context of the associated data, e.g. <code>speaker</code> or <code>transcriber</code>.</p>
+          </p>
+                </div>
+          
+                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
       <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
     </summary>
 
@@ -1170,7 +1286,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="Language.html">Language</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Location.html">Location</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
+        <li><a href="Access.html">Access Rights</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li>
       </ul>
     </nav>
 
