@@ -1,6 +1,7 @@
 {
+
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Media-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-1.1.0.json",
 
   "title": "Media File",
   "type": "object",
@@ -8,9 +9,7 @@
 
   "required": [
     "filename",
-    "format",
-    "languages",
-    "mediaUrl"
+    "format"
   ],
 
   "additionalProperties": true,
@@ -106,7 +105,7 @@
 
     "mediaUrl": {
       "title": "Media URL",
-      "description": "The URL where the media file itself can be found.",
+      "description": "The URL where the media file can be found.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     },
 
@@ -146,12 +145,13 @@
 
     "tags": {
       "title": "Tags",
+      "description": "A set of tags for this media item",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
     },
 
     "url": {
       "title": "URL",
-      "description": "The URL where this media object can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaUrl` attribute).",
+      "description": "The URL where this media data can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaUrl` attribute).",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
     }
 
