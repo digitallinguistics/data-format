@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Text-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Text-1.1.0.json",
 
   "title": "Text",
   "type": "object",

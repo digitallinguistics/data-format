@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.1.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.2.0.json",
 
   "title": "Word",
   "type": "object",
