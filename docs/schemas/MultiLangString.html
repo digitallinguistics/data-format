@@ -25,12 +25,12 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/MultiLangString-1.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/MultiLangString-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>This object represents a piece of data or text in multiple languages or orthographies. For example, a transcription might be written in both a practical orthography and in IPA; or a translation might be given in both English and Spanish. Each representation of the piece of data should have its own attribute, where the attribute is the abbreviation for the language/orthography, and the value is the text itself (the transcription, the translation, etc.).</p>
+        <p><p>A piece of text in multiple languages. This is typically used for analyses rather than transcriptions of data (for that, see the Transcription schema). For example, a translation might be given in both English and Spanish; or the part of speech for a lexeme might be given as both English 'noun' and Spanish 'nombre'. Each key must be the abbreviation for a language (see the Abbreviation schema), and the value for that key is the string of text in that language.</p>
 </p>
       </div>
 
@@ -50,9 +50,6 @@
 
 
 
-      <p class='min-properties object prop'>
-        <strong>Min properties:</strong> <code>1</code>
-      </p>
 
 
 
@@ -72,7 +69,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Text / String</h1>
+      <h1 class='title meta any prop'>Text</h1>
     </summary>
 
 
@@ -82,7 +79,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The text for this Orthography.</p>
+        <p><p>The string of text in the specified language.</p>
 </p>
       </div>
 
@@ -140,7 +137,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Access.html">Access Rights</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Contributor.html">Contributor</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Word.html">Word</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Note.html">Note</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
       </ul>
     </nav>
 

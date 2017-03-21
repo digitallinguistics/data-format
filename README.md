@@ -152,6 +152,7 @@ The DLx project provides recommendations for how to format linguistic data in JS
 * [Phoneme](http://developer.digitallinguistics.io/spec/schemas/Phoneme.html)
 * [Lexicon](http://developer.digitallinguistics.io/spec/schemas/Lexicon.html)
 * [Lexeme](http://developer.digitallinguistics.io/spec/schemas/Lexeme.html)
+* [Transcription](http://developer.digitallinguistics.io/spec/schemas/Transcription.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
@@ -168,7 +169,7 @@ Schema                  | Description
 [`LexemeReference`][13] | An object that contains a reference to any item in a lexicon.
 [`Location`][17]        | A location with optional geographic coordinates.
 [`Media`][5]            | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
-[`MultiLangString`][14] | An object containing a string in multiple orthographies. Usually this is a transcription of some linguistic data.
+[`MultiLangString`][14] | An object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study.
 [`Note`][6]             | Most DLx resources allow you to add notes in different languages, of different types.
 [`Person`][7]           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
 [`Reference`][15]       | A bibliographic reference.

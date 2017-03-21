@@ -1,0 +1,20 @@
+{
+
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://cdn.digitallinguistics.io/schemas/Transcription-1.0.0.json",
+
+  "title": "Transcription",
+  "type": "object",
+  "description": "A transcription of a piece of data in a language, optionally in multiple orthographies. For example, a transcription might be written in both a practical orthography and in IPA. Each key must be the abbreviation for an orthography (see the Abbreviation schema), and the value for that key is the transcription of the data in that particular orthography.",
+
+  "additionalProperties": false,
+
+  "patternProperties": {
+    "^[(a-z)|(A-Z)|(0-9)]+$": {
+      "title": "Text",
+      "type": "string",
+      "description": "The transcription for the specified orthography."
+    }
+  }
+
+}

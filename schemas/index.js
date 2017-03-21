@@ -24,6 +24,7 @@ module.exports = {
   Reference:       require('./Reference'),
   Tags:            require('./Tags'),
   Text:            require('./Text'),
+  Transcription:   require('./Transcription'),
   Url:             require('./Url'),
   Word:            require('./Word'),
 };

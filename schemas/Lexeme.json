@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.2.0.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -47,7 +47,7 @@
           "transcription": {
             "title": "Transcription",
             "description": "A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+            "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
           },
 
           "environments": {
@@ -75,7 +75,7 @@
     "citationForm": {
       "title": "Citation Form",
       "description": "The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. The citation form usually serves as the headword in a dictionary as well. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "components": {
@@ -167,7 +167,7 @@
     "lemma": {
       "title": "Lemma",
       "description": "A *lemma* is the particular form conventionally used to represent a particular Lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be`, with its variants `am`, `are`, `is`, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "lexicalRelations": {
@@ -188,7 +188,7 @@
 
     "literalMeaning": {
       "title": "Literal Meaning",
-      "description": "The literal meaning of the lexeme, optionally in multiple orthographies.",
+      "description": "The literal meaning of the lexeme, optionally in multiple languages.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 

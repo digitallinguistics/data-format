@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-2.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-2.2.0.json",
 
   "title": "Language",
   "type": "object",
@@ -34,7 +34,7 @@
     "autonym": {
       "title": "Autonym",
       "description": "The autonym for this language, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "dateCreated": {
