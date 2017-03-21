@@ -18,7 +18,7 @@
 
     "gloss": {
       "title": "Gloss",
-      "description": "A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple orthographies.",
+      "description": "A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
@@ -106,12 +106,12 @@
     "transcription": {
       "title": "Transcription",
       "description": "A transcription of this word, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "translation": {
       "title": "Translation",
-      "description": "A translation of this word, optionally in multiple languages/orthographies. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.",
+      "description": "A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 

@@ -49,7 +49,7 @@
     "transcription": {
       "title": "Transcription",
       "description": "A transcription of this morpheme token. Should be a transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     }
 
   },

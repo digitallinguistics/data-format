@@ -34,7 +34,7 @@
     "autonym": {
       "title": "Autonym",
       "description": "The autonym for this language, optionally in multiple orthographies.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "dateCreated": {

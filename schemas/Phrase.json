@@ -79,18 +79,18 @@
     "transcript": {
       "title": "Transcript",
       "description": "A transcript of this phrase, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the `transcription` property). The transcript may be in multiple languages/orthographies, or representational systems (e.g. you might have a `CA` transcript and a `DT` transcript, for discourse transcripts using Conversationa Analysis and Discourse Transcription conventions respectively).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "transcription": {
       "title": "Transcription",
       "description": "The transcriptions for this phrase, optionally in multiple orthographies. This field is intended for use with purely phonemic / morphophonemic transcriptions. Punctuation should generally be avoided. To add punctuation and other discourse-level transcriptional features, use the `transcript` property.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
     },
 
     "translation": {
       "title": "Translation",
-      "description": "The translations for this phrase, optionally in multiple orthographies. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
+      "description": "The translations for this phrase, optionally in multiple languages. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.",
       "allOf": [
         { "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"},
         {
