@@ -5,7 +5,7 @@
   <head>
     <meta charset=utf-8>
     <title>
-      Date Recorded
+      Transcription
     </title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="../jschemer.css" type=text/css>
@@ -19,18 +19,67 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Date Recorded</h1>
+      <h1 class='title meta any prop'>Transcription</h1>
     </summary>
 
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/DateRecorded-1.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Transcription-1.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The date this item was recorded, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date-time format</a>.</p>
+        <p><p>A transcription of a piece of data in a language, optionally in multiple orthographies. For example, a transcription might be written in both a practical orthography and in IPA. Each key must be the abbreviation for an orthography (see the Abbreviation schema), and the value for that key is the transcription of the data in that particular orthography.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> false
+        </p>
+
+
+
+
+      <div class='pattern-properties object prop'>
+        <h2>Custom Properties (<code>patternProperties</code>)</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Text</h1>
+    </summary>
+
+
+
+
+      <p>Property name must match the regular expression: <code>^[(a-z)|(A-Z)|(0-9)]+$</code></p>
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The transcription for the specified orthography.</p>
 </p>
       </div>
 
@@ -46,7 +95,6 @@
 
 
 
-      <p class='format string prop'><strong>Format:</strong> date-time</p>
 
 
 
@@ -58,6 +106,20 @@
 
 
 
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
 
 
 
