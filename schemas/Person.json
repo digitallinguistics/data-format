@@ -84,7 +84,10 @@
 
         "allOf": [
 
-          { "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json"},
+          {
+            "title": "Language",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json"
+          },
 
           {
 
