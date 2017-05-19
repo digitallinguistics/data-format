@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Note-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Note-2.0.0.json",
 
   "title": "Note",
   "type": "object",
@@ -42,10 +42,10 @@
       "description": "The text of the note itself."
     },
 
-    "type": {
+    "noteType": {
       "title": "Note Type",
       "type": "string",
-      "description": "The type of Note. Common values include: ",
+      "description": "The type of Note.",
       "enum": [
         "note-to-self",
         "general",

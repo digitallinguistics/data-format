@@ -8,7 +8,6 @@
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
 
   "required": [
-    "abbreviation",
     "graphemes",
     "name"
   ],
@@ -40,7 +39,7 @@
           "allographs": {
             "title": "Allographs",
             "type": "array",
-            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `t` in an English orthography would have the allograph `T`.",
+            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `T` in an English orthography would have the allograph `t`.",
             "uniqueItems": true,
             "items": {
               "title": "Allograph",
@@ -57,7 +56,7 @@
           "name": {
             "title": "Grapheme Name",
             "type": "string",
-            "description": "The name of this grapheme, if any.)"
+            "description": "The name of this grapheme, if any."
           },
 
           "pronunciations": {
