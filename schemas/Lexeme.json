@@ -1,11 +1,11 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-1.2.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.0.0.json",
 
   "title": "Lexeme",
   "type": "object",
-  "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected Phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
+  "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
 
   "required": [
     "lemma",
@@ -111,13 +111,13 @@
 
       "title": "Examples",
       "type": "array",
-      "description": "A collection of examples illustrating this lexeme in use. Each example is a phrase from a Text.",
+      "description": "A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.",
 
       "uniqueItems": true,
 
       "items": {
-        "title": "Example Phrase",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json"
+        "title": "Example Sentence",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Sentence.json"
       }
 
     },
@@ -344,11 +344,11 @@
           "examples": {
             "title": "Examples",
             "type": "array",
-            "description": "A collection of examples of this sense in use. Each example is a Phrase.",
+            "description": "A collection of examples of this sense in use. Each example is a Sentence.",
             "uniqueItems": true,
             "items": {
-              "title": "Example Phrase",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json"
+              "title": "Example Sentence",
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Sentence.json"
             }
           },
 
