@@ -1,5 +1,3 @@
-// NB: the require statements must take a lowercase filename to work on Travis
-
 module.exports = {
   Abbreviation:    require('./Abbreviation'),
   Access:          require('./Access'),
@@ -20,8 +18,8 @@ module.exports = {
   Orthography:     require('./Orthography'),
   Person:          require('./Person'),
   Phoneme:         require('./Phoneme'),
-  Phrase:          require('./Phrase'),
   Reference:       require('./Reference'),
+  Sentence:        require('./Sentence'),
   Tags:            require('./Tags'),
   Text:            require('./Text'),
   Transcription:   require('./Transcription'),

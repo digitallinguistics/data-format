@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Text-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Text-2.0.0.json",
 
   "title": "Text",
   "type": "object",
-  "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of phrases with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
+  "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of sentences with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
 
   "required": [
-    "phrases",
+    "sentences",
     "title"
   ],
 
@@ -93,13 +93,13 @@
       }
     },
 
-    "phrases": {
-      "title": "Phrases",
+    "sentences": {
+      "title": "Sentences",
       "type": "array",
-      "description": "A collection of all the phrases contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the Text. Phrases do *not* have to be unique - a phrase may be repeated in a text, for example.,",
+      "description": "A collection of all the Sentences contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Sentences. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Sentences in the collection must reflect their actual order in the Text. Sentences do *not* have to be JSON unique - a Sentence may be repeated in a text, for example.,",
       "items": {
-        "title": "Phrase",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Phrase.json"
+        "title": "Sentence",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Sentence.json"
       },
       "minItems": 1
     },

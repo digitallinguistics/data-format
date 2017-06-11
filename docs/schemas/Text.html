@@ -25,12 +25,12 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Text-1.1.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Text-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A <em>text</em> is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of phrases with one or more transcriptions, translations, and optionally Leipzig-style glosses.</p>
+        <p><p>A <em>text</em> is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of sentences with one or more transcriptions, translations, and optionally Leipzig-style glosses.</p>
 </p>
       </div>
 
@@ -55,7 +55,7 @@
       <div class='required object prop'>
         <h2>Required Properties</h2>
         <ul>
-            <li><code>phrases</code></li>
+            <li><code>sentences</code></li>
             <li><code>title</code></li>
         </ul>
       </div>
@@ -503,7 +503,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Phrases: <code>"phrases"</code></h1>
+      <h1 class='title meta any prop'>Sentences: <code>"sentences"</code></h1>
     </summary>
 
 
@@ -512,7 +512,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of all the phrases contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into phrases. The linguist may decide to segment their text based on intonation units, turns, sentences, or any other appropriate linguistic subdivision. The order of phrases in the collection must reflect their actual order in the Text. Phrases do <em>not</em> have to be unique - a phrase may be repeated in a text, for example.,</p>
+        <p><p>A collection of all the Sentences contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Sentences. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Sentences in the collection must reflect their actual order in the Text. Sentences do <em>not</em> have to be JSON unique - a Sentence may be repeated in a text, for example.,</p>
 </p>
       </div>
 
@@ -554,12 +554,12 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Phrase</h1>
+                <h1 class='title meta any prop'>Sentence</h1>
               </summary>
           
           
           
-              <p class='$ref any prop'>Must be an instance of the <a href="Phrase.html">Phrase</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="Sentence.html">Sentence</a> schema.</p>
           
           
             </details>
@@ -749,7 +749,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Language.html">Language</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="Media.html">Media File</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Phrase.html">Phrase</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
       </ul>
     </nav>
 
