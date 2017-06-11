@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/spec",
-  "version": "0.16.1",
+  "version": "0.17.0",
   "description": "The DLx format for representing linguistic data in JSON",
   "keywords": [
     "DLx",
@@ -32,6 +32,6 @@
     "build": "npm run docs & npm run upload",
     "docs": "jschemer schemas -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
-    "upload": "node build/storage.js"
+    "upload": "node build/upload.js"
   }
 }
