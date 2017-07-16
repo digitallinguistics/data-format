@@ -176,6 +176,10 @@ Schema                  | Description
 [`Tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
 [`Url`][16]             | A URL.
 
+## Maintainers
+This repo is maintained by:
+- Daniel W. Hieber ([dhieber@umail.ucsb.edu](mailto:dhieber@umail.ucsb.edu))
+
 ## Want to Contribute?
 Check DLx's [general contributing guidelines][18].
 
