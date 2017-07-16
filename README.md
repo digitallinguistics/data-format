@@ -180,6 +180,9 @@ Schema                  | Description
 This repo is maintained by:
 - Daniel W. Hieber ([dhieber@umail.ucsb.edu](mailto:dhieber@umail.ucsb.edu))
 
+## Want to Contribute?
+Check DLx's [general contributing guidelines][18].
+
 [1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
 [2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
 [3]:  http://developer.digitallinguistics.io/spec/schemas/Bundle.html
@@ -197,3 +200,4 @@ This repo is maintained by:
 [15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
 [16]: http://developer.digitallinguistics.io/spec/schemas/Url.html
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
+[18]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
