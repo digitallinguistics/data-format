@@ -181,7 +181,7 @@ Check DLx's [general contributing guidelines][18].
 
 ## Maintainers
 This repo is maintained by:
-- Daniel W. Hieber ([dhieber@umail.ucsb.edu](mailto:dhieber@umail.ucsb.edu))
+- [Daniel W. Hieber][19]
 
 [1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
 [2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
@@ -201,3 +201,4 @@ This repo is maintained by:
 [16]: http://developer.digitallinguistics.io/spec/schemas/Url.html
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
+[19]: https://github.com/dwhieb/
