@@ -15,6 +15,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Location`.",
+      "enum": ["Location"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this Location.",
