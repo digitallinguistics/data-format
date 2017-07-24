@@ -1,5 +1,5 @@
 {
-  
+
   "$schema": "http://json-schema.org/schema#",
   "id": "http://cdn.digitallinguistics.io/schemas/Text-2.1.0.json",
 
@@ -15,6 +15,13 @@
   "additionalProperties": true,
 
   "properties": {
+
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Text`.",
+      "enum": ["Text"]
+    },
 
     "abbreviation": {
       "title": "Abbreviation",
