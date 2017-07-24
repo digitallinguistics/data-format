@@ -13,6 +13,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Language`.",
+      "enum": ["Language"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "A short, human-readable abbreviation for this Language.",
