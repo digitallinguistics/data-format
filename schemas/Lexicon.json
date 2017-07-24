@@ -17,6 +17,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Lexicon`.",
+      "enum": ["Lexicon"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "A human-readable abbreviation for this Lexicon.",
