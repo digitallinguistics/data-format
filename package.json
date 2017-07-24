@@ -29,7 +29,6 @@
   },
   "main": "schemas",
   "scripts": {
-    "build": "npm run docs & npm run upload",
     "docs": "jschemer schemas -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
