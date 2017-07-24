@@ -13,6 +13,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Phoneme`.",
+      "enum": ["Phoneme"]
+    },
+
     "airstream": {
       "title": "Airstream Mechanism",
       "type": "string",
