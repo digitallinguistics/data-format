@@ -11,6 +11,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Bundle`.",
+      "enum": ["Bundle"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this bundle.",
