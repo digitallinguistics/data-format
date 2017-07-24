@@ -1,4 +1,6 @@
 /* eslint-disable
+  array-bracket-newline,
+  array-element-newline,
   func-names,
   prefer-arrow-callback,
 */
@@ -53,6 +55,7 @@ const data = {
     `?`,
   ],
   tags: {},
+  type: `Orthography`,
 };
 
 describe(`Orthography`, function() {
@@ -64,12 +67,22 @@ describe(`Orthography`, function() {
   });
 
   it(`invalidates incorrectly-formatted data`, function() {
-    const data = {
+
+    const badGraphemes = {
       graphemes: [`a`, `aa`, `b`, `c`, `d`],
       name: { eng: `mod` },
     };
-    const valid = validate(data);
-    expect(valid).toBe(false);
+
+    expect(validate(badGraphemes)).toBe(false);
+
+    const badType = {
+      graphemes: [],
+      name: {},
+      type: `orthography`,
+    };
+
+    expect(validate(badType)).toBe(false);
+
   });
 
 });
