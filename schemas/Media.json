@@ -13,6 +13,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Media`.",
+      "enum": ["Media"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for referring to this file.",
