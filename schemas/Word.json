@@ -125,7 +125,7 @@
     "url": {
       "title": "URL",
       "description": "A URL where this word may be accessed.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   }

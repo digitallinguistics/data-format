@@ -183,7 +183,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   }

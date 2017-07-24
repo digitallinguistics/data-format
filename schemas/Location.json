@@ -91,7 +91,7 @@
     "url": {
       "title": "URL",
       "description": "The URL where information about this location can be retrieved.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   }

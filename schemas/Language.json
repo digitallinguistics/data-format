@@ -120,7 +120,7 @@
     "url": {
       "title": "URL",
       "description": "A URL where the JSON data for this language can be found.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   }

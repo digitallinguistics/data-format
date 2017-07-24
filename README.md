@@ -184,7 +184,7 @@ Schema                  | Description
 [`Person`][7]           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
 [`Reference`][15]       | A bibliographic reference.
 [`Tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
-[`Url`][16]             | A URL.
+[`URL`][16]             | A URL.
 
 ### Using the Schemas
 Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Sentence schema by making sure you include the `transcription`, `translation`, and `words` properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the `startTime` and `endTime` properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).
@@ -213,7 +213,7 @@ This repo is maintained by:
 [13]: http://developer.digitallinguistics.io/spec/schemas/LexemeReference.html
 [14]: http://developer.digitallinguistics.io/spec/schemas/MultiLangString.html
 [15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
-[16]: http://developer.digitallinguistics.io/spec/schemas/Url.html
+[16]: http://developer.digitallinguistics.io/spec/schemas/URL.html
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/

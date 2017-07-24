@@ -115,7 +115,7 @@
     "url": {
       "title": "URL",
       "description": "The URL where this Sentence can be retrieved in JSON format.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     },
 
     "words": {

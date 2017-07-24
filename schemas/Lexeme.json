@@ -274,7 +274,7 @@
     "url": {
       "title": "URL",
       "description": "The URL where this lexeme or variant is located.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     },
 
     "variantOf": {

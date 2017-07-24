@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.0.json",
 
   "title": "Lexeme Reference",
   "type": "object",
@@ -27,10 +27,10 @@
       "pattern": "^[^ ]+$"
     },
 
-    "lexemeUrl": {
+    "lexemeURL": {
       "title": "Referenced Lexeme (URL)",
       "description": "The URL of the lexeme being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     },
 
     "lexicon": {
@@ -39,10 +39,10 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
-    "lexiconUrl": {
+    "lexiconURL": {
       "title": "Referenced Lexicon (URL)",
       "description": "The URL of the lexicon being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     },
 
     "relation": {

@@ -139,7 +139,7 @@
     "url": {
       "title": "URL",
       "description": "A unique URL for this Lexicon.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   },
