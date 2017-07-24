@@ -20,6 +20,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Lexeme`.",
+      "enum": ["Lexeme"]
+    },
+
     "allomorphs": {
 
       "title": "Allomorphs",
