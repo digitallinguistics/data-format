@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.1.0.json",
 
   "title": "Sentence",
   "type": "object",

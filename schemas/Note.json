@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Note-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Note-2.1.0.json",
 
   "title": "Note",
   "type": "object",

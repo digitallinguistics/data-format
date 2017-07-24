@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Address-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Address-1.1.0.json",
   "title": "Address",
   "type": "object",
   "description": "A postal Address.",
