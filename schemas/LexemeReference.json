@@ -13,6 +13,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `LexemeReference`.",
+      "enum": ["LexemeReference"]
+    },
+
     "lexeme": {
       "title": "Referenced Lexeme (Key)",
       "type": "string",
