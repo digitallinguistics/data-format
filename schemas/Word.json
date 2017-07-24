@@ -16,6 +16,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Word`.",
+      "enum": ["Word"]
+    },
+
     "gloss": {
       "title": "Gloss",
       "description": "A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.",
