@@ -7,7 +7,7 @@
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
 
-  "required": ["name"],
+  "required": ["names"],
 
   "additionalProperties": true,
 
@@ -29,7 +29,7 @@
     "additionalNames": {
       "title": "Additional Names",
       "type": "array",
-      "description": "An array of additional names or spellings for this language. Only use this property if the 'name' property is not sufficent to describe the various names for this language.",
+      "description": "This property is deprecated. Use the `names` property instead.",
       "uniqueItems": true,
       "items": {
         "title": "Additional Name",
@@ -83,8 +83,17 @@
 
     "name": {
       "title": "Language Name",
-      "description": "The name of this language, optionally in multiple languages.",
+      "description": "This property is deprecated. Use the `names` property instead.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+    },
+
+    "names": {
+      "title": "Language Names",
+      "type": "array",
+      "description": "A list of names for this language.",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string" }
     },
 
     "orthographies": {
