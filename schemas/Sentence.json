@@ -22,6 +22,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Sentence`.",
+      "enum": ["Sentence"]
+    },
+
     "endTime": {
       "title": "End Time",
       "type": "number",
