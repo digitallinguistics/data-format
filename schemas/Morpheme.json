@@ -16,6 +16,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Morpheme`.",
+      "enum": ["Morpheme"]
+    },
+
     "gloss": {
       "title": "Gloss",
       "description": "A gloss for this morpheme, optionally in multiple languages.",
