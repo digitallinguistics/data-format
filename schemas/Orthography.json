@@ -16,6 +16,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Orthography`.",
+      "enum": ["Orthography"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this Orthography.",
