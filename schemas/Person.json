@@ -16,6 +16,13 @@
 
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Person`.",
+      "enum": ["Person"]
+    },
+
     "abbreviation": {
       "title": "Abbreviation",
       "description": "An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.",
