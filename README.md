@@ -189,6 +189,8 @@ Schema                  | Description
 ### Using the Schemas
 Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Sentence schema by making sure you include the `transcription`, `translation`, and `words` properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the `startTime` and `endTime` properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).
 
+Note that most schemas have a strongly-recommended (but optional) `type` property indicating the schema that that object adheres to.
+
 ## Want to Contribute?
 Check DLx's [general contributing guidelines][18].
 

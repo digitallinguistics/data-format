@@ -58,7 +58,7 @@ For this project in particular, you will want to include the following steps:
 
 1. In the `/test` folder, find (or create) the test file for the schema(s) you made changes to, and update the tests with valid (and invalid) sample data to test against your schema. The tests use the [`ajv` library][7] to validate data against schemas, and are run in Node.
 
-1. Make any necessary changes to the schemas. If adding a new schema, place it in the `/schemas` folder, and name the file with the name of the object, in SnakeCase.
+1. Make any necessary changes to the schemas. If adding a new schema, place it in the `/schemas` folder, and name the file with the name of the object, in SnakeCase. Make sure that object schemas have a `type` property.
 
 1. Run `npm test` from the command line to check that the schemas are valid and that your new / updated tests pass.
 

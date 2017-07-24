@@ -7,6 +7,13 @@
   "additionalProperties": true,
   "properties": {
 
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Address`.",
+      "enum": ["Address"]
+    },
+
     "streetAddress": {
       "title": "Street Address",
       "type": "string",
