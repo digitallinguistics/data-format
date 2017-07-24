@@ -12,4 +12,8 @@ Object.values(schemas).forEach(schema => {
   ajv.addSchema(schema, id);
 });
 
+const geojson = require('../schemas/GeoJSON.json');
+
+ajv.addSchema(geojson, `http://json.schemastore.org/geojson`);
+
 module.exports = ajv;
