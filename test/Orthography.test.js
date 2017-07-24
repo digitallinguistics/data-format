@@ -9,6 +9,7 @@ const validate        = ajv.compile(Orthography);
 
 const data = {
   abbreviation: `mod`,
+  direction: `ltr-ttb`,
   graphemes: [
     {
       allographs: [`a`],

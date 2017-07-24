@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Orthography-1.1.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Orthography-1.2.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -86,6 +86,75 @@
       </div>
 
     <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Text Direction: <code>"direction"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The direction that this orthography is typically written in. If an orthography can be written in more than one direction, you should create a second Orthography for each direction it can be written in. The value of the <code>direction</code> field consists of two parts: the horizontal direction and the vertical direction, separated by a hyphen. Horizontal direction may be <code>ltr</code> (left-to-right), <code>rtl</code> (right-to-left), or <code>boustrophedon</code> (alternately left-to-right and right-to-left). Vertical direction may be either <code>ttb</code> (top-to-bottom) or <code>btt</code> (bottom-to-top).</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;ltr-ttb&quot;</pre></li>
+            <li><pre>&quot;rtl-ttb&quot;</pre></li>
+            <li><pre>&quot;ltr-btt&quot;</pre></li>
+            <li><pre>&quot;rtl-btt&quot;</pre></li>
+            <li><pre>&quot;boustrophedon-ttb&quot;</pre></li>
+            <li><pre>&quot;boustrophedon-btt&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>&quot;ltr-ttb&quot;</pre>
+      </div>
 
 
   </details>
@@ -546,6 +615,10 @@
       </div>
 
 
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>[]</pre>
+      </div>
 
 
   </details>
@@ -649,6 +722,10 @@
       </div>
 
 
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>[]</pre>
+      </div>
 
 
   </details>
@@ -760,6 +837,10 @@
       </div>
 
 
+      <div class='default meta any prop'>
+        <h2>Default Value</h2>
+        <pre>[]</pre>
+      </div>
 
 
   </details>
@@ -804,7 +885,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Url.html">URL</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Word.html">Word</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Url.html">URL</a></li><li><a href="Word.html">Word</a></li>
       </ul>
     </nav>
 

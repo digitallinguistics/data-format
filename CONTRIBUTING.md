@@ -64,7 +64,7 @@ For this project in particular, you will want to include the following steps:
 
 1. Update any documentation again, if needed.
 
-1. Update the documentation by running `npm run docs` from the command line.
+1. Regenerate the documentation by running `npm run docs` from the command line.
 
 1. Add commit message that closes the related issue (e.g. `closes #167`).
 

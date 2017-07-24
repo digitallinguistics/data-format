@@ -22,11 +22,27 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
+    "direction": {
+      "title": "Text Direction",
+      "type": "string",
+      "description": "The direction that this orthography is typically written in. If an orthography can be written in more than one direction, you should create a second Orthography for each direction it can be written in. The value of the `direction` field consists of two parts: the horizontal direction and the vertical direction, separated by a hyphen. Horizontal direction may be `ltr` (left-to-right), `rtl` (right-to-left), or `boustrophedon` (alternately left-to-right and right-to-left). Vertical direction may be either `ttb` (top-to-bottom) or `btt` (bottom-to-top).",
+      "enum": [
+        "ltr-ttb",
+        "rtl-ttb",
+        "ltr-btt",
+        "rtl-btt",
+        "boustrophedon-ttb",
+        "boustrophedon-btt"
+      ],
+      "default": "ltr-ttb"
+    },
+
     "graphemes": {
       "title": "Graphemes",
       "type": "array",
       "description": "A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).",
       "uniqueItems": true,
+      "default": [],
       "items": {
 
         "title": "Grapheme",
@@ -78,7 +94,8 @@
     "name": {
       "title": "Orthography Name",
       "description": "The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "default": {}
     },
 
     "notes": {
@@ -89,7 +106,8 @@
       "items": {
         "title": "Note",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
-      }
+      },
+      "default": []
     },
 
     "punctuation": {
@@ -100,12 +118,14 @@
       "items": {
         "title": "Punctuation Character",
         "type": "string"
-      }
+      },
+      "default": []
     },
 
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "default": {}
     }
 
   }
