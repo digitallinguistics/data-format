@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.0.json",
 
   "title": "Lexeme",
   "type": "object",
@@ -19,6 +19,13 @@
   },
 
   "properties": {
+
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Lexeme`.",
+      "enum": ["Lexeme"]
+    },
 
     "allomorphs": {
 
@@ -267,7 +274,7 @@
     "url": {
       "title": "URL",
       "description": "The URL where this lexeme or variant is located.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     },
 
     "variantOf": {

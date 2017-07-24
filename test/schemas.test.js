@@ -1,3 +1,9 @@
+/* eslint-disable
+  func-names,
+  guard-for-in,
+  prefer-arrow-callback,
+*/
+
 const AJV = require('ajv');
 const schemas = require('../schemas');
 

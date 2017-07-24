@@ -1,12 +1,34 @@
 {
+
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.0.2.json",
   "title": "Bibliographic Reference",
   "type": "object",
-  "description": "A bibliographic Reference.",
+  "description": "A bibliographic Reference. Note: The `type` field in a reference refers to the type of reference, not the type of DLx object.",
   "required": ["title"],
 
   "additionalProperties": true,
+
+  "definitions": {
+    "person": {
+      "title": "Person",
+      "type": "object",
+      "description": "An object representing a Person.",
+      "additionalProperties": false,
+      "properties": {
+        "firstName": {
+          "title": "First Name",
+          "type": "string",
+          "description": "The first name(s) of this author."
+        },
+        "lastName": {
+          "title": "Last Name",
+          "type": "string",
+          "description": "The last name(s) of this author."
+        }
+      }
+    }
+  },
 
   "properties": {
 
@@ -15,24 +37,7 @@
       "type": "array",
       "description": "An array of authors for this Reference.",
       "uniqueItems": true,
-      "items": {
-        "title": "Author",
-        "type": "object",
-        "description": "An object representing an author.",
-        "additionalProperties": false,
-        "properties": {
-          "firstName": {
-            "title": "First Name",
-            "type": "string",
-            "description": "The first name(s) of this author."
-          },
-          "lastName": {
-            "title": "Last Name",
-            "type": "string",
-            "description": "The last name(s) of this author."
-          }
-        }
-      }
+      "items": { "$ref": "#/definitions/person" }
     },
 
     "city": {

@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexicon-1.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.0.json",
 
   "title": "Lexicon",
   "type": "object",
@@ -16,6 +16,13 @@
   ],
 
   "properties": {
+
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Lexicon`.",
+      "enum": ["Lexicon"]
+    },
 
     "abbreviation": {
       "title": "Abbreviation",
@@ -132,7 +139,7 @@
     "url": {
       "title": "URL",
       "description": "A unique URL for this Lexicon.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   },

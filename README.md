@@ -1,5 +1,15 @@
-# The DLx Data Formats
-A collection of JSON Schemas for representing scientific linguistic data.
+# The DLx Data Format
+This project aims to create a standardized, human-readable, web-compatible data format for representing linguistic data, and is aimed at anyone who manages a linguistic database. This repository contains a number of schemas which recommend ways of representing linguistic data in [JSON][23]. Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
+
+* Read the [Introduction](#introduction) below to understand how the format works.
+
+* Read the [Schemas](#schemas) section to get started with using the DLx format in your own projects.
+
+* Want additional help or to talk with other members of the DLx community? [Join the DLx Slack channel][20].
+
+* Need to report a bug or suggest a feature? [Open an issue on GitHub][21].
+
+* Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][22].
 
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
 [![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
@@ -19,7 +29,7 @@ While humans look at a representation like this and can see which glosses are as
 
 There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as `"lang"` or `"language"`?
 
-The Digital Linguistics (DLx) project recommends a data format called [**JSON**](http://json.org/) (JavaScript Object Notation) for digitally representing your linguistic data. Moreover, the DLx project has drafted recommendations for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as *text*, *morpheme*, *orthography*, etc. For instance, this format is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This functionality turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.
+The Digital Linguistics (DLx) project recommends a data format called [**JSON**][23] (JavaScript Object Notation) for digitally representing your linguistic data. Moreover, the DLx project has drafted recommendations for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as *text*, *morpheme*, *orthography*, etc. For instance, this format is capable of capturing the fact that a text contains sentences, sentences contain words, words contains morphemes, and morphemes contain phonemes. This functionality turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.
 
 The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even if you don't understand how the format works, you can see the hierarchical relationship between the sentence, its words, and their morphemes, and you know which piece of data belongs to what kind of linguistic object.
 
@@ -174,14 +184,19 @@ Schema                  | Description
 [`Person`][7]           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
 [`Reference`][15]       | A bibliographic reference.
 [`Tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
-[`Url`][16]             | A URL.
+[`URL`][16]             | A URL.
+
+### Using the Schemas
+Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Sentence schema by making sure you include the `transcription`, `translation`, and `words` properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the `startTime` and `endTime` properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).
+
+Note that most schemas have a strongly-recommended (but optional) `type` property indicating the schema that that object adheres to.
 
 ## Want to Contribute?
 Check DLx's [general contributing guidelines][18].
 
 ## Maintainers
 This repo is maintained by:
-- Daniel W. Hieber ([dhieber@umail.ucsb.edu](mailto:dhieber@umail.ucsb.edu))
+- [Daniel W. Hieber][19]
 
 [1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
 [2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
@@ -198,6 +213,11 @@ This repo is maintained by:
 [13]: http://developer.digitallinguistics.io/spec/schemas/LexemeReference.html
 [14]: http://developer.digitallinguistics.io/spec/schemas/MultiLangString.html
 [15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
-[16]: http://developer.digitallinguistics.io/spec/schemas/Url.html
+[16]: http://developer.digitallinguistics.io/spec/schemas/URL.html
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
+[19]: https://github.com/dwhieb/
+[20]: https://slack.digitallinguistics.io/
+[21]: https://github.com/digitallinguistics/spec
+[22]: https://github.com/digitallinguistics/spec/blob/master/CONTRIBUTING.md
+[23]: http://json.org/

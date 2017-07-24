@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/spec",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "The DLx format for representing linguistic data in JSON",
   "keywords": [
     "DLx",
@@ -22,14 +22,13 @@
   "repository": "https://github.com/digitallinguistics/spec.git",
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^4.11.5",
+    "ajv": "^4.11.8",
     "azure-storage": "^2.1.0",
     "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.10"
   },
   "main": "schemas",
   "scripts": {
-    "build": "npm run docs & npm run upload",
     "docs": "jschemer schemas -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"

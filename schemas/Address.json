@@ -1,11 +1,18 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Address-1.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Address-1.1.0.json",
   "title": "Address",
   "type": "object",
   "description": "A postal Address.",
   "additionalProperties": true,
   "properties": {
+
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Address`.",
+      "enum": ["Address"]
+    },
 
     "streetAddress": {
       "title": "Street Address",

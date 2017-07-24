@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.2.0.json",
 
   "title": "Person",
   "type": "object",
@@ -15,6 +15,13 @@
   "additionalProperties": true,
 
   "properties": {
+
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Person`.",
+      "enum": ["Person"]
+    },
 
     "abbreviation": {
       "title": "Abbreviation",
@@ -176,7 +183,7 @@
 
     "url": {
       "title": "URL",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Url.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
     }
 
   }

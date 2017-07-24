@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Morpheme-1.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Morpheme-1.2.0.json",
 
   "title": "Morpheme",
   "type": "object",
@@ -15,6 +15,13 @@
   "additionalProperties": true,
 
   "properties": {
+
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `Morpheme`.",
+      "enum": ["Morpheme"]
+    },
 
     "gloss": {
       "title": "Gloss",

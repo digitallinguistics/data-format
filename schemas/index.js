@@ -23,6 +23,6 @@ module.exports = {
   Tags:            require('./Tags'),
   Text:            require('./Text'),
   Transcription:   require('./Transcription'),
-  Url:             require('./Url'),
+  URL:             require('./URL'),
   Word:            require('./Word'),
 };
