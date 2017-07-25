@@ -26,18 +26,6 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
     },
 
-    "additionalNames": {
-      "title": "Additional Names",
-      "type": "array",
-      "description": "This property is deprecated. Use the `names` property instead.",
-      "uniqueItems": true,
-      "items": {
-        "title": "Additional Name",
-        "type": "string",
-        "description": "An alternate name for this language."
-      }
-    },
-
     "autonym": {
       "title": "Autonym",
       "description": "The autonym for this language, optionally in multiple orthographies.",
