@@ -69,12 +69,6 @@
       }
     },
 
-    "name": {
-      "title": "Language Name",
-      "description": "This property is deprecated. Use the `names` property instead.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
-    },
-
     "names": {
       "title": "Language Names",
       "type": "array",
