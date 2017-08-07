@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-3.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-4.0.0.json",
 
   "title": "Language",
   "type": "object",
@@ -24,18 +24,6 @@
       "title": "Abbreviation",
       "description": "A short, human-readable abbreviation for this Language.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
-    },
-
-    "additionalNames": {
-      "title": "Additional Names",
-      "type": "array",
-      "description": "This property is deprecated. Use the `names` property instead.",
-      "uniqueItems": true,
-      "items": {
-        "title": "Additional Name",
-        "type": "string",
-        "description": "An alternate name for this language."
-      }
     },
 
     "autonym": {
@@ -79,12 +67,6 @@
         "title": "Location",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json"
       }
-    },
-
-    "name": {
-      "title": "Language Name",
-      "description": "This property is deprecated. Use the `names` property instead.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "names": {
