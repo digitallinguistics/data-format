@@ -1,13 +1,13 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-4.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-5.0.0.json",
 
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
 
-  "required": ["names"],
+  "required": ["name"],
 
   "additionalProperties": true,
 
@@ -24,6 +24,17 @@
       "title": "Abbreviation",
       "description": "A short, human-readable abbreviation for this Language.",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
+    },
+
+    "additionalNames": {
+      "title": "Additional Names",
+      "type": "array",
+      "description": "An Array of additional names for this Language.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Additional Language Name",
+        "type": "string"
+      }
     },
 
     "autonym": {
@@ -69,13 +80,10 @@
       }
     },
 
-    "names": {
-      "title": "Language Names",
-      "type": "array",
-      "description": "A list of names for this language.",
-      "minItems": 1,
-      "uniqueItems": true,
-      "items": { "type": "string" }
+    "name": {
+      "title": "Language Name",
+      "type": "string",
+      "description": "The common name for this Language. Use the `additionalNames` field to list other names for this Language."
     },
 
     "orthographies": {

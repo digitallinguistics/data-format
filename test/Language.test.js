@@ -9,21 +9,20 @@ const { Language } = require('../schemas');
 const validate     = ajv.compile(Language);
 
 const data = {
-  abbreviation: `chiti`,
+  abbreviation:    `chiti`,
+  additionalNames: [`Sitimaxa`],
   autonym: {
     apa:    `Sitimaša`,
     ipa:    `Sitimaʃa`,
     modern: `Sitimaxa`,
   },
-  dateCreated:  `2017-07-24T17:41:18.539Z`,
-  dateModified: `2017-07-24T17:41:18.539Z`,
-  glottolog:    `chit1248`,
-  iso:          `iso`,
+  dateCreated:        `2017-07-24T17:41:18.539Z`,
+  dateModified:       `2017-07-24T17:41:18.539Z`,
+  defaultOrthography: `modern`,
+  glottolog:          `chit1248`,
+  iso:                `iso`,
   locations: [{ name: { eng: `Charenton` } }],
-  names: [
-    `Chitimacha`,
-    `Sitimaxa`,
-  ],
+  name: `Chitimacha`,
   orthographies: [],
   phonemes: [],
   type: `Language`,
@@ -40,11 +39,8 @@ describe(`Language`, function() {
 
   it(`invalidates incorrectly-formatted data`, function() {
 
-    const missingNames = {};
-    expect(validate(missingNames)).toBe(false);
-
-    const badNames = { names: [{}] };
-    expect(validate(badNames)).toBe(false);
+    const missingName = {};
+    expect(validate(missingName)).toBe(false);
 
   });
 
