@@ -26,7 +26,7 @@
   "dependencies": {},
   "devDependencies": {
     "ajv": "^4.11.8",
-    "azure-storage": "^2.1.0",
+    "azure-storage": "^2.2.2",
     "jasmine": "^2.5.3",
     "jschemer": "^2.0.0-alpha.10"
   },

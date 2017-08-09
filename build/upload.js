@@ -4,7 +4,7 @@
   no-extra-parens,
 */
 
-require('../../credentials/dlx-spec');
+require('../../credentials/azure-storage');
 
 const path    = require('path');
 const schemas = require('../schemas');
