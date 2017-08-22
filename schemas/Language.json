@@ -1,7 +1,7 @@
 {
 
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-5.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-6.0.0.json",
 
   "title": "Language",
   "type": "object",
@@ -29,7 +29,7 @@
     "additionalNames": {
       "title": "Additional Names",
       "type": "array",
-      "description": "An Array of additional names for this Language.",
+      "description": "An Array of additional names for this Language. Only use this property if the 'name' property is not sufficent to describe the various names for this language.",
       "uniqueItems": true,
       "items": {
         "title": "Additional Language Name",
@@ -82,8 +82,8 @@
 
     "name": {
       "title": "Language Name",
-      "type": "string",
-      "description": "The common name for this Language. Use the `additionalNames` field to list other names for this Language."
+      "description": "The name of this Language, optionally in multiple languages. Use the `additionalNames` field to list other names for this Language.",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
     },
 
     "orthographies": {
