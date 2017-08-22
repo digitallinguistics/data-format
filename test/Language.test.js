@@ -22,7 +22,7 @@ const data = {
   glottolog:          `chit1248`,
   iso:                `iso`,
   locations: [{ name: { eng: `Charenton` } }],
-  name: `Chitimacha`,
+  name: { eng: `Chitimacha` },
   orthographies: [],
   phonemes: [],
   type: `Language`,
@@ -39,8 +39,10 @@ describe(`Language`, function() {
 
   it(`invalidates incorrectly-formatted data`, function() {
 
+    const badName     = { name: `Chitimacha` };
     const missingName = {};
     expect(validate(missingName)).toBe(false);
+    expect(validate(badName)).toBe(false);
 
   });
 
