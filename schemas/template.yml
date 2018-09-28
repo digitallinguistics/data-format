@@ -9,6 +9,7 @@ type:    string
 # The "description" field for a top-level schema should contain complete sentences, ending in periods.
 # The "description" field for subschemas does not need to be a complete sentence, but if it is, it should
 # also end in a period.
+# Use capitals (e.g. `Language`) when referring to the schema or programming object, and lowercase when referring to the actual thing (e.g. `language`).
 description: 'This is a description of the schema.'
 
 required:
