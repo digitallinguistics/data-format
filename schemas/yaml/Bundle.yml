@@ -5,18 +5,74 @@ type: object
 description: 'A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.'
 additionalProperties: true
 required:
-    - name
+  - name
 properties:
-    type: {title: Type, type: string, description: 'The type of object. Must be set to `Bundle`.', enum: [Bundle]}
-    abbreviation: {title: Abbreviation, description: 'An abbreviation for this bundle.', $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'}
-    access: {title: 'Access Rights', $ref: 'http://cdn.digitallinguistics.io/schemas/Access.json'}
-    dateCreated: {title: 'Date Created', $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'}
-    dateModified: {title: 'Date Modified', $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'}
-    locations: {title: Locations, type: array, description: 'An array of locations included in this bundle (usually locations that were visited during a day or session).', uniqueItems: true, items: {title: Location, $ref: 'http://cdn.digitallinguistics.io/schemas/Location.json'}}
-    media: {title: Media, type: array, description: 'An array of media files included in this bundle.', uniqueItems: true, items: {title: 'Media File', $ref: 'http://cdn.digitallinguistics.io/schemas/Media.json'}}
-    name: {title: Name, description: 'A name for this bundle.', $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'}
-    notes: {title: Notes, type: array, description: 'A collection of notes about this bundle.', uniqueItems: true, items: {title: Note, $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'}}
-    persons: {title: Persons, type: array, description: 'An array of persons included in this bundle.', uniqueItems: true, items: {title: Person, $ref: 'http://cdn.digitallinguistics.io/schemas/Person.json'}}
-    tags: {title: Tags, $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'}
-    texts: {title: Texts, type: array, description: 'An array of texts included in this bundle.', uniqueItems: true, items: {title: Text, $ref: 'http://cdn.digitallinguistics.io/schemas/Text.json'}}
-    url: {title: URL, $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'}
+  type:
+    title: Type
+    type: string
+    description: 'The type of object. Must be set to `Bundle`.'
+    enum:
+      - Bundle
+  abbreviation:
+    title: Abbreviation
+    description: 'An abbreviation for this bundle.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+  access:
+    title: 'Access Rights'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Access.json'
+  dateCreated:
+    title: 'Date Created'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'
+  dateModified:
+    title: 'Date Modified'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'
+  locations:
+    title: Locations
+    type: array
+    description: 'An array of locations included in this bundle (usually locations that were visited during a day or session).'
+    uniqueItems: true
+    items:
+      title: Location
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Location.json'
+  media:
+    title: Media
+    type: array
+    description: 'An array of media files included in this bundle.'
+    uniqueItems: true
+    items:
+      title: 'Media File'
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Media.json'
+  name:
+    title: Name
+    description: 'A name for this bundle.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+  notes:
+    title: Notes
+    type: array
+    description: 'A collection of notes about this bundle.'
+    uniqueItems: true
+    items:
+      title: Note
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+  persons:
+    title: Persons
+    type: array
+    description: 'An array of persons included in this bundle.'
+    uniqueItems: true
+    items:
+      title: Person
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Person.json'
+  tags:
+    title: Tags
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+  texts:
+    title: Texts
+    type: array
+    description: 'An array of texts included in this bundle.'
+    uniqueItems: true
+    items:
+      title: Text
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Text.json'
+  url:
+    title: URL
+    $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'

@@ -1,7 +1,18 @@
 # This is a template for new schema files. Attributes in schema files should follow the order shown here.
 
-$schema:      'http://json-schema.org/draft-04/schema#'
-id:           'http://cdn.digitallinguistics.io/schemas/SchemaName-1.0.0.json'
-title:        SchemaName
-type:         string
-description:  'A description of the schema'
+$schema: 'http://json-schema.org/draft-04/schema#'
+id:      'http://cdn.digitallinguistics.io/schemas/SchemaName-1.0.0.json'
+title:   SchemaName
+type:    string
+
+description: 'A description of the schema'
+
+additionalProperties:
+  type: string
+
+properties:
+  notes:
+    title: Notes
+    type:  String
+    $ref:  http://cdn.digitallinguistics.io/schemas/Note.json
+    description: 'A description of the Notes field'

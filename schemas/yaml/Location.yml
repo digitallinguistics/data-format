@@ -4,18 +4,60 @@ title: Location
 type: object
 description: 'A location, optionally with accompanying geographic coordinate data.'
 required:
-    - name
+  - name
 additionalProperties: true
 properties:
-    type: {title: Type, type: string, description: 'The type of object. Must be set to `Location`.', enum: [Location]}
-    abbreviation: {title: Abbreviation, description: 'An abbreviation for this Location.', $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'}
-    access: {title: 'Access Rights', description: 'Since locations sometimes contain personal information like addresses, it is important to consider the proper access management policy for them.', $ref: 'http://cdn.digitallinguistics.io/schemas/Access.json'}
-    address: {title: Address, $ref: 'http://cdn.digitallinguistics.io/schemas/Address.json'}
-    dateCreated: {title: 'Date Created', $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'}
-    dateModified: {title: 'Date Modified', $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'}
-    geoJSON: {title: 'GeoJSON Geometry Object', description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: http://geojson.org/.', $ref: 'http://json.schemastore.org/geojson'}
-    name: {title: Name, description: 'A name for this location, e.g. `Susan''s House` or `Valley High School`, or `Shenandoah River`.', $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'}
-    notes: {title: Notes, type: array, description: 'A collection of notes about this Location.', uniqueItems: true, items: {title: Note, $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'}}
-    references: {title: 'Bibliographic References', type: array, description: 'A collection of bibliographic references about this Location.', uniqueItems: true, items: {title: Reference, $ref: 'http://cdn.digitallinguistics.io/schemas/Reference.json'}}
-    tags: {title: Tags, $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'}
-    url: {title: URL, description: 'The URL where information about this location can be retrieved.', $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'}
+  type:
+    title: Type
+    type: string
+    description: 'The type of object. Must be set to `Location`.'
+    enum:
+      - Location
+  abbreviation:
+    title: Abbreviation
+    description: 'An abbreviation for this Location.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+  access:
+    title: 'Access Rights'
+    description: 'Since locations sometimes contain personal information like addresses, it is important to consider the proper access management policy for them.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Access.json'
+  address:
+    title: Address
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Address.json'
+  dateCreated:
+    title: 'Date Created'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'
+  dateModified:
+    title: 'Date Modified'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'
+  geoJSON:
+    title: 'GeoJSON Geometry Object'
+    description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: http://geojson.org/.'
+    $ref: 'http://json.schemastore.org/geojson'
+  name:
+    title: Name
+    description: 'A name for this location, e.g. `Susan''s House` or `Valley High School`, or `Shenandoah River`.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+  notes:
+    title: Notes
+    type: array
+    description: 'A collection of notes about this Location.'
+    uniqueItems: true
+    items:
+      title: Note
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+  references:
+    title: 'Bibliographic References'
+    type: array
+    description: 'A collection of bibliographic references about this Location.'
+    uniqueItems: true
+    items:
+      title: Reference
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Reference.json'
+  tags:
+    title: Tags
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+  url:
+    title: URL
+    description: 'The URL where information about this location can be retrieved.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'

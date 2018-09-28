@@ -5,16 +5,86 @@ type: object
 description: 'A Word object represents a specific token in a text, rather than to an abstract lexeme (see the Lexeme object for that).'
 additionalProperties: true
 required:
-    - morphemes
-    - transcription
+  - morphemes
+  - transcription
 properties:
-    type: {title: Type, type: string, description: 'The type of object. Must be set to `Word`.', enum: [Word]}
-    gloss: {title: Gloss, description: 'A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.', $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'}
-    key: {title: Key, type: string, description: 'A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Sentence within the text, another period, and then the number of this word within the Sentence (indexing starts at 1). For example, for the fourth word of the third Sentence of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.', pattern: '^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$'}
-    morphemes: {title: 'Morphemes / Components', type: array, description: 'A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word.', uniqueItems: false, items: {title: Morpheme, $ref: 'http://cdn.digitallinguistics.io/schemas/Morpheme.json'}}
-    notes: {title: Notes, type: array, description: 'A collection of notes about this token.', uniqueItems: true, items: {title: Note, $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'}}
-    phonemes: {title: Phonemes, type: array, description: 'An array of the phones (phoneme tokens) in this word, in IPA.', uniqueItems: false, items: {title: 'Phone (Phoneme Token)', type: object, description: 'An IPA representation of this phoneme. The `phoneme` field is required, but the `allophone` field is optional, for use only when you need to specify that this phoneme is being realized as a particular phoneme. Both `phoneme` and `allophone` must be in IPA rather than a practical orthography.', required: [phoneme], additionalProperties: true, properties: {allophone: {title: Allophone, type: string, description: 'This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA.'}, notes: {title: Notes, type: array, description: 'A collection of notes about this phone.', uniqueItems: true, items: {title: Note, $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'}}, phoneme: {title: Phoneme, type: string, description: 'An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the `allophone` property for that insetad).'}, tags: {title: Tags, description: 'A set of tags for this phone.', $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'}}}}
-    tags: {title: Tags, description: 'A set of tags for this word token.', $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'}
-    transcription: {title: Transcription, description: 'A transcription of this word, optionally in multiple orthographies.', $ref: 'http://cdn.digitallinguistics.io/schemas/Transcription.json'}
-    translation: {title: Translation, description: 'A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.', $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'}
-    url: {title: URL, description: 'A URL where this word may be accessed.', $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'}
+  type:
+    title: Type
+    type: string
+    description: 'The type of object. Must be set to `Word`.'
+    enum:
+      - Word
+  gloss:
+    title: Gloss
+    description: 'A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+  key:
+    title: Key
+    type: string
+    description: 'A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Sentence within the text, another period, and then the number of this word within the Sentence (indexing starts at 1). For example, for the fourth word of the third Sentence of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.'
+    pattern: '^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$'
+  morphemes:
+    title: 'Morphemes / Components'
+    type: array
+    description: 'A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word.'
+    uniqueItems: false
+    items:
+      title: Morpheme
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Morpheme.json'
+  notes:
+    title: Notes
+    type: array
+    description: 'A collection of notes about this token.'
+    uniqueItems: true
+    items:
+      title: Note
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+  phonemes:
+    title: Phonemes
+    type: array
+    description: 'An array of the phones (phoneme tokens) in this word, in IPA.'
+    uniqueItems: false
+    items:
+      title: 'Phone (Phoneme Token)'
+      type: object
+      description: 'An IPA representation of this phoneme. The `phoneme` field is required, but the `allophone` field is optional, for use only when you need to specify that this phoneme is being realized as a particular phoneme. Both `phoneme` and `allophone` must be in IPA rather than a practical orthography.'
+      required:
+        - phoneme
+      additionalProperties: true
+      properties:
+        allophone:
+          title: Allophone
+          type: string
+          description: 'This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA.'
+        notes:
+          title: Notes
+          type: array
+          description: 'A collection of notes about this phone.'
+          uniqueItems: true
+          items:
+            title: Note
+            $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+        phoneme:
+          title: Phoneme
+          type: string
+          description: 'An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the `allophone` property for that insetad).'
+        tags:
+          title: Tags
+          description: 'A set of tags for this phone.'
+          $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+  tags:
+    title: Tags
+    description: 'A set of tags for this word token.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+  transcription:
+    title: Transcription
+    description: 'A transcription of this word, optionally in multiple orthographies.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Transcription.json'
+  translation:
+    title: Translation
+    description: 'A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+  url:
+    title: URL
+    description: 'A URL where this word may be accessed.'
+    $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'
