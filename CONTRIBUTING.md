@@ -102,6 +102,12 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
     - Increment the version number of any schemas that you update, following [semantic versioning][6].
 
+        - `major`: When the schema is changed in a way that makes it incompatible with previous versions
+
+        - `minor`: When new properties are added, or optional properties removed, or other changes are made to the schema that are backwards-compatible
+
+        - `patch`: Typos, changes to descriptions, minor bugs and hotfixes, or other changes that do not address the functionality of the schema
+
 1. **Run the tests** using `npm test` in the command line. Fix any issues that arise.
 
 1. **Double-check the documentation** (`README.md`, `CONTRIBUTING.md`) to make sure it still reflects the changes you made.

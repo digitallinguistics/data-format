@@ -36,7 +36,7 @@ properties:
     $ref: 'http://json.schemastore.org/geojson'
   name:
     title: Name
-    description: 'A name for this location, e.g. `Susan''s House` or `Valley High School`, or `Shenandoah River`.'
+    description: 'A name for this location, e.g. `Susan’s House` or `Valley High School`, or `Shenandoah River`.'
     $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
   notes:
     title: Notes

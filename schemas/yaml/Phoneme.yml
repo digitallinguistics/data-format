@@ -125,7 +125,7 @@ properties:
   manner:
     title: 'Manner of Articulation'
     type: string
-    description: 'The manner of articulation, for consonants. Only one manner of articulation may be listed. Additional manners must be listed under the `features` attribute. For example, the lateral fricative `ɬ` might have a `manner` set to `fricative` and a feature `lateral`, or vice versa, depending on the linguist''s analysis.'
+    description: 'The manner of articulation, for consonants. Only one manner of articulation may be listed. Additional manners must be listed under the `features` attribute. For example, the lateral fricative `ɬ` might have a `manner` set to `fricative` and a feature `lateral`, or vice versa, depending on the linguist’s analysis.'
     enum:
       - approximate
       - flap

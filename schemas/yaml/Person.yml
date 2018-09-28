@@ -28,28 +28,28 @@ properties:
     title: 'Birth Date'
     type: string
     format: date-time
-    description: 'This person''s birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime).'
+    description: 'This person’s birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime).'
   birthPlace:
     title: 'Birth Place'
-    description: 'This person''s place of birth, as a location object.'
+    description: 'This person’s place of birth, as a location object.'
     $ref: 'http://cdn.digitallinguistics.io/schemas/Location.json'
   email:
     title: Email
     type: string
     format: email
-    description: 'This person''s email.'
+    description: 'This person’s email.'
   familyName:
     title: 'Family Name(s) / Last Name(s)'
     type: string
-    description: 'This person''s family name(s) (last name(s)).'
+    description: 'This person’s family name(s) (last name(s)).'
   gender:
     title: Gender
     type: string
-    description: 'This person''s self-reported gender identity.'
+    description: 'This person’s self-reported gender identity.'
   givenName:
     title: 'Given Name(s) / First Name(s)'
     type: string
-    description: 'This person''s given name(s) (first name(s)), including middle name(s), if any.'
+    description: 'This person’s given name(s) (first name(s)), including middle name(s), if any.'
   languages:
     title: 'Languages Spoken'
     type: array
@@ -72,7 +72,7 @@ properties:
               title: Notes
               type: array
               uniqueItems: true
-              description: 'Notes about this person''s use of this Language.'
+              description: 'Notes about this person’s use of this Language.'
               items:
                 title: Note
                 $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
