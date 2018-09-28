@@ -1,89 +1,113 @@
 $schema: 'http://json-schema.org/schema#'
-id: 'http://cdn.digitallinguistics.io/schemas/Sentence-1.1.0.json'
-title: Sentence
-type: object
+id:      'http://cdn.digitallinguistics.io/schemas/Sentence-1.1.1.json'
+title:   Sentence
+type:    object
+
 description: 'The term *sentence* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).'
+
 required:
   - transcription
   - translation
   - words
+
 dependencies:
   startTime:
     - endTime
   endTime:
     - startTime
+
 additionalProperties: true
+
 properties:
+
   type:
     title: Type
-    type: string
-    description: 'The type of object. Must be set to `Sentence`.'
+    type:  string
+    description: 'The type of object (must be set to `Sentence`)'
     enum:
       - Sentence
+
   endTime:
     title: 'End Time'
-    type: number
+    type:  number
     description: 'The time that the speaker finishes producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).'
+
   key:
     title: Key
-    type: string
+    type:  string
     description: 'A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus.'
     pattern: '^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}$'
+
   language:
     title: Language
-    type: string
+    type:  string
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
     description: 'The key for the Language used in this Sentence, e.g. `spa` or `eng`. If the text is labeled with a Language, all its Sentences are assumed to be the same Language unless labeled otherwise. Likewise, if a Sentence is given a Language, all its words are assumed to be the same Language unless the word is labeled otherwise.'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+
   notes:
     title: Notes
-    type: array
-    description: 'A collection of notes about this Sentence.'
+    type:  array
+    description: 'A collection of notes about this Sentence'
     uniqueItems: true
     items:
       title: Note
-      description: 'A note about this Sentence, optionally in multiple orthographies.'
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+      type:  object
+      $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
+      description: 'A note about this Sentence, optionally in multiple orthographies'
+
   speaker:
     title: Speaker
-    type: string
+    type:  string
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
     description: 'The abbreviation of person who produced (uttered, signed, spoke, sung) this Sentence. The value of this field must match the abbreviation of one of the persons listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Sentences in the Text. If multiple contributors with a `speaker` role are included in a text, each Sentence must have its `speaker` attribute specified.'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+
   startTime:
     title: 'Start Time'
-    type: number
+    type:  number
     description: 'The time that the speaker begins producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).'
+
   tags:
     title: Tags
+    type:  object
     $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    description: 'A set of tags for this Sentence'
+
   transcript:
     title: Transcript
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
     description: 'A transcript of this Sentence, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the `transcription` property). The transcript may be in multiple languages/orthographies, or representational systems (e.g. you might have a `CA` transcript and a `DT` transcript, for discourse transcripts using Conversation Analysis and Discourse Transcription conventions respectively).'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Transcription.json'
+
   transcription:
     title: Transcription
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
     description: 'The transcriptions for this Sentence, optionally in multiple orthographies. This field is intended for use with purely phonemic / morphophonemic transcriptions. Punctuation should generally be avoided. To add punctuation and other discourse-level transcriptional features, use the `transcript` property.'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Transcription.json'
+
   translation:
     title: Translation
     description: 'The translations for this Sentence, optionally in multiple languages. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.'
     allOf:
-      -
-        $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-      -
-        properties:
+      - $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+      - properties:
           type:
             title: 'Translation Type'
-            type: string
+            type:  string
             description: 'The type of translation. Typical values are `free` or `literal`, but other values may be supplied.'
+
   url:
     title: URL
-    description: 'The URL where this Sentence can be retrieved in JSON format.'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'
+    type:  string
+    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    description: 'The URL where this Sentence can be retrieved in JSON format'
+
   words:
     title: Words
-    type: array
-    description: 'A collection of the word tokens contained in this Sentence.'
+    type:  array
+    description: 'A collection of the word tokens contained in this Sentence'
     uniqueItems: false
     items:
       title: Word
+      type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Word.json'
+      description: 'A Word Object'
