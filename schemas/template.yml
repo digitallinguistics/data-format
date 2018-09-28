@@ -1,18 +1,42 @@
-# This is a template for new schema files. Attributes in schema files should follow the order shown here.
+# This is a template for new schema files.
+# Attributes in schema files should follow the order and formatting shown here.
 
 $schema: 'http://json-schema.org/draft-04/schema#'
 id:      'http://cdn.digitallinguistics.io/schemas/SchemaName-1.0.0.json'
 title:   SchemaName
 type:    string
 
-description: 'A description of the schema'
+# The "description" field for a top-level schema should contain complete sentences, ending in periods.
+# The "description" field for subschemas does not need to be a complete sentence, but if it is, it should
+# also end in a period.
+description: 'This is a description of the schema.'
+
+required:
+  - notes
 
 additionalProperties:
   type: string
 
 properties:
+
+  # The "type" attribute should be listed first
+  # Other attributes should be listed in alphabetical order below
+  type:
+    title: Type
+    type:  string
+    description: 'The type of object (must be set to `SchemaName`)'
+    enum:
+      - SchemaName
+
+  # Attributes with a "$ref" should still list the "title", "type", and "description". The "description" field should contain details about how the attribute should be interpreted or used in the context of the current schema
+  abbreviation:
+    title: Abbreviation
+    type:  String
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+    description: 'Some details about how the "abbreviation" field is to be interpreted or used in the SchemaName schema'
+
   notes:
     title: Notes
     type:  String
-    $ref:  http://cdn.digitallinguistics.io/schemas/Note.json
-    description: 'A description of the Notes field'
+    $ref: http://cdn.digitallinguistics.io/schemas/Note.json
+    description: 'Notes about this SchemaName'
