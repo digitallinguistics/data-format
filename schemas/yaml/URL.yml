@@ -1,6 +1,6 @@
 $schema: 'http://json-schema.org/schema#'
-id: 'http://cdn.digitallinguistics.io/schemas/URL-1.0.0.json'
-title: URL
-type: string
-format: uri
+id:      'http://cdn.digitallinguistics.io/schemas/URL-1.0.0.json'
+title:   URL
+type:    string
 description: 'A URL where this resource can be retrieved. The resource does not have to be publicly available at this URL; it may require permissions to Access. Best practice is to make the resource available at this URL in JSON format.'
+format: uri
