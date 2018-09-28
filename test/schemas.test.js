@@ -1,27 +1,30 @@
 /* eslint-disable
-  func-names,
   guard-for-in,
-  prefer-arrow-callback,
+  no-param-reassign,
 */
 
-const AJV = require('ajv');
-const schemas = require('../schemas');
+// IMPORTS
+const AJV            = require(`ajv`);
+const { getSchemas } = require('./utilities');
 
+// SETUP
 const ajv = new AJV();
 
-describe('schemas: ', function() {
+// VARIABLES
+let schemas;
 
-  for (const schema in schemas) {
+describe(`schemas`, () => {
 
-    it(`${schema} is valid against JSON Schema Draft 4`, function() {
+  beforeAll(async function loadSchemas() {
+    schemas = await getSchemas();
+  });
 
-      const valid = ajv.validateSchema(schemas[schema]);
-
+  it(`are valid against JSON Schema Draft 04`, () => {
+    for (const [, schema] of schemas) {
+      const valid = ajv.validateSchema(schema);
       if (valid) expect(valid).toBe(true);
       else fail(ajv.errorsText());
-
-    });
-
-  }
+    }
+  });
 
 });

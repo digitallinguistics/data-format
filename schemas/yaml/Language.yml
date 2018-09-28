@@ -1,0 +1,90 @@
+---
+"$schema": http://json-schema.org/schema#
+id: http://cdn.digitallinguistics.io/schemas/Language-6.0.0.json
+title: Language
+type: object
+description: DLx uses the term *language* broadly to refer to any speech variety -
+  whether a language, dialect, idiolect, or even a historical variety. The DLx `Language`
+  object groups together all the information about the language, including writing
+  systems, its phonological inventory, and metadata (e.g. names and language codes).
+required:
+- name
+additionalProperties: true
+properties:
+  type:
+    title: Type
+    type: string
+    description: The type of object. Must be set to `Language`.
+    enum:
+    - Language
+  abbreviation:
+    title: Abbreviation
+    description: A short, human-readable abbreviation for this Language.
+    "$ref": http://cdn.digitallinguistics.io/schemas/Abbreviation.json
+  additionalNames:
+    title: Additional Names
+    type: array
+    description: An Array of additional names for this Language. Only use this property
+      if the 'name' property is not sufficent to describe the various names for this
+      language.
+    uniqueItems: true
+    items:
+      title: Additional Language Name
+      type: string
+  autonym:
+    title: Autonym
+    description: The autonym for this language, optionally in multiple orthographies.
+    "$ref": http://cdn.digitallinguistics.io/schemas/Transcription.json
+  dateCreated:
+    title: Date Created
+    description: The date and optionally time that this Language object was created.
+    "$ref": http://cdn.digitallinguistics.io/schemas/DateCreated.json
+  dateModified:
+    title: Date Modified
+    description: The date an optionally time that this Language object was last modified.
+    "$ref": http://cdn.digitallinguistics.io/schemas/DateModified.json
+  glottolog:
+    title: Glottolog Code
+    type: string
+    description: The Glottolog code for this language variety, as a String in the
+      format abcd1234.
+    pattern: "^[a-z]{4}[0-9]{4}$"
+  iso:
+    title: ISO 639-3 Code
+    type: string
+    description: The ISO 639-3 code for this language variety, as a 3-letter String.
+    pattern: "^[a-z]{3}$"
+  locations:
+    title: Locations
+    type: array
+    uniqueItems: true
+    description: Geographic locations where this language variety is spoken, optionally
+      with geographic coordinate data.
+    items:
+      title: Location
+      "$ref": http://cdn.digitallinguistics.io/schemas/Location.json
+  name:
+    title: Language Name
+    description: The name of this Language, optionally in multiple languages. Use
+      the `additionalNames` field to list other names for this Language.
+    "$ref": http://cdn.digitallinguistics.io/schemas/MultiLangString.json
+  orthographies:
+    title: Orthographies
+    type: array
+    uniqueItems: true
+    description: A collection of orthographies used to represent this Language.
+    items:
+      title: Orthography
+      "$ref": http://cdn.digitallinguistics.io/schemas/Orthography.json
+  phonemes:
+    title: Phonemes
+    type: array
+    description: The phonological inventory for this language, i.e. a collection of
+      phonemes.
+    items:
+      title: Phoneme
+      "$ref": http://cdn.digitallinguistics.io/schemas/Phoneme.json
+  url:
+    title: URL
+    description: A URL where the JSON data for this language can be found.
+    "$ref": http://cdn.digitallinguistics.io/schemas/URL.json

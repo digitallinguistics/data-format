@@ -28,7 +28,8 @@
     "ajv": "^4.11.8",
     "azure-storage": "^2.10.1",
     "jasmine": "^3.2.0",
-    "jschemer": "^2.0.0-alpha.10"
+    "jschemer": "^2.0.0-alpha.10",
+    "yamljs": "^0.3.0"
   },
   "main": "schemas",
   "scripts": {

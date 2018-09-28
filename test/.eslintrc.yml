@@ -1,0 +1,12 @@
+extends: 'C:\Users\dwhieb\Coding\dev\.eslintrc.yml'
+parserOptions:
+  sourceType: script
+env:
+  browser: false
+  jasmine: true
+  node:    true
+
+rules:
+  max-nested-callbacks:
+    - warn
+    - 4
