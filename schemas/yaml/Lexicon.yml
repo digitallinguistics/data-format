@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.1.json'
 title:   Lexicon
 type:    object
 
@@ -14,7 +14,7 @@ required:
 
 properties:
 
-   type:
+  type:
     title: Type
     type:  string
     description: 'The type of object (must be set to `Lexicon`)'

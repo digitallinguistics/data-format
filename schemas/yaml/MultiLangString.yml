@@ -1,9 +1,12 @@
 $schema: 'http://json-schema.org/schema#'
-id: 'http://cdn.digitallinguistics.io/schemas/MultiLangString-2.0.1.json'
-title: 'Multi-Language Text / String'
-type: object
-description: 'A piece of text in multiple languages. This is typically used for analyses rather than transcriptions of data (for that, see the Transcription schema). For example, a translation might be given in both English and Spanish; or the part of speech for a lexeme might be given as both English "noun" and Spanish "nombre". Each key must be the abbreviation for a language (see the Abbreviation schema), and the value for that key is the string of text in that language. Note: MultiLangStrings do not have a `type` property.'
+id:      'http://cdn.digitallinguistics.io/schemas/MultiLangString-2.0.1.json'
+title:   'Multi-Language Text / String'
+type:    object
+
+description: 'A piece of text in multiple languages. This is typically used for analyses rather than transcriptions of data (for that, see the Transcription schema). For example, a translation might be given in both English and Spanish; or the part of speech for a lexeme might be given as both English "noun" and Spanish "nombre". Each key must be the abbreviation for a language (see the Abbreviation schema), and the value for that key is the string of text in that language. **Note:** MultiLangStrings do not have a `type` property.'
+
 additionalProperties: true
+
 patternProperties:
   '^[(a-z)|(A-Z)|(0-9)]+$':
     title: Text
