@@ -60,7 +60,7 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **[Open an issue][8]** with information about the feature, fix, or change you'd like to make. Follow the guidelines in the [Suggesting Features](#suggesting-features) section above.
 
-  **Note:** It is a good idea to wait until your suggested change is approved by a maintainer before writing any code.
+    **Note:** It is a good idea to wait until your suggested change is approved by a maintainer before writing any code.
 
 1. **Fork the repository** and clone it to your computer.
 
@@ -89,6 +89,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
     - The schemas are located in `schemas/yaml`. Do not update the schemas in `schemas/json`, or your changes will be overwritten.
 
     - The schemas use the [JSON Schema format][5] to describe how data should be structured. See the [latest version of the JSON Schema][11] for more details.
+
+    - Update the `"description"` field of any schemas that you change, as needed.
 
     - Increment the version number of any schemas that you update, following [semantic versioning][6].
 
