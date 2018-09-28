@@ -6,6 +6,7 @@ module.exports = {
   DateCreated:     require('./DateCreated'),
   DateModified:    require('./DateModified'),
   DateRecorded:    require('./DateRecorded'),
+  GeoJSON:         require('./GEOJson'),
   Language:        require('./Language'),
   Lexeme:          require('./Lexeme'),
   LexemeReference: require('./LexemeReference'),

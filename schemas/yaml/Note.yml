@@ -1,0 +1,16 @@
+$schema: 'http://json-schema.org/schema#'
+id: 'http://cdn.digitallinguistics.io/schemas/Note-2.1.0.json'
+title: Note
+type: object
+description: 'A note about this resource. Notes may also include `type` and `language` attributes.'
+required:
+    - text
+additionalProperties: false
+properties:
+    type: {title: Type, type: string, description: 'The type of object. Must be set to `Note`.', enum: [Note]}
+    dateCreated: {title: 'Date Created', description: 'The date and optionally time that this note was created, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).', $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'}
+    dateModified: {title: 'Date Modified', description: 'The date and optionally time that this note was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).', $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'}
+    language: {title: 'Note Language', type: string, description: 'A language code or language name of the language that this note is written in.'}
+    source: {title: 'Source (Person)', description: 'The abbreviation of the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.', $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'}
+    text: {title: 'Note Text', type: string, description: 'The text of the note itself.'}
+    noteType: {title: 'Note Type', type: string, description: 'The type of Note.', enum: [note-to-self, general, anthropology, discourse, encyclopedic, grammar, phonology, semantics, sociocultural]}
