@@ -1,97 +1,147 @@
 $schema: 'http://json-schema.org/schema#'
-id: 'http://cdn.digitallinguistics.io/schemas/Text-2.1.0.json'
-title: Text
-type: object
+id:      'http://cdn.digitallinguistics.io/schemas/Text-2.1.1.json'
+title:   Text
+type:    object
+
 description: 'A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of sentences with one or more transcriptions, translations, and optionally Leipzig-style glosses.'
+
 required:
   - sentences
   - title
+
 additionalProperties: true
+
 properties:
+
   type:
     title: Type
-    type: string
-    description: 'The type of object. Must be set to `Text`.'
+    type:  string
+    description: 'The type of object (must be set to `Text`)'
     enum:
       - Text
+
   abbreviation:
     title: Abbreviation
+    type:  string
     $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+    description: 'An abbreviation for this Text'
+
   access:
     title: 'Access Rights'
+    type:  object
     $ref: 'http://cdn.digitallinguistics.io/schemas/Access.json'
+    description: 'An Object describing the acess rights to this Text'
+
   contributors:
     title: Contributors
-    type: array
-    description: 'A collection of people who contributed to the creation or analysis of this text in some way.'
+    type:  array
+    description: 'A collection of people who contributed to the creation or analysis of this text in some way'
     items:
       title: Contributor
+      type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Contributor.json'
+      description: 'A Person Object that describes this contributor'
+
   dateCreated:
     title: 'Date Created'
+    type:  string
     $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'
+    description: 'The date that this Text was created in the database (**not** the date it was recorded; see the "dateRecorded" property instead)'
+
   dateModified:
     title: 'Date Modified'
+    type:  string
     $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'
+    description: 'The date that this Text Object was last modified (**not** the date that the recording of the text was modified)'
+
   dateRecorded:
     title: 'Date Recorded'
+    type:  string
     $ref: 'http://cdn.digitallinguistics.io/schemas/DateRecorded.json'
+    description: 'The date that this text was recorded'
+
   discourseType:
     title: 'Discourse Type'
-    type: string
-    description: 'The type of discourse event, e.g. monologue, dialogue, or song.'
+    type:  string
+    description: 'The type of discourse event, e.g. monologue, dialogue, or song'
     minLength: 1
+
   genre:
     title: Genre
-    type: string
-    description: 'The genre of the text, e.g. folktale, personal narrative, or expository.'
+    type:  string
+    $ref:  'http://cdn.digitallinguistics.io/schemas/genre.json'
+    description: 'The genre of the text, e.g. folktale, personal narrative, or expository'
     minLength: 1
-    $ref: 'http://cdn.digitallinguistics.io/schemas/genre.json'
+
   location:
     title: Location
-    description: 'The location where this text was recorded.'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Location.json'
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Location.json'
+    description: 'The location where this text was recorded'
+
   media:
     title: Media
-    type: array
+    type:  array
     uniqueItems: true
     description: 'An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the Text.'
     items:
       title: 'Media Items'
+      type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Media.json'
+      description: 'An object describing a media file'
+
   notes:
     title: Notes
-    type: array
-    description: 'A collection of notes about this Text.'
+    type:  array
+    description: 'A collection of notes about this Text'
     uniqueItems: true
     items:
       title: Note
+      type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
-  sentences:
-    title: Sentences
-    type: array
-    description: 'A collection of all the Sentences contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Sentences. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Sentences in the collection must reflect their actual order in the Text. Sentences do *not* have to be JSON unique - a Sentence may be repeated in a text, for example.,'
-    items:
-      title: Sentence
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Sentence.json'
-    minItems: 1
+      description: 'A Note Object'
+
   references:
     title: References
-    type: array
-    description: 'A list of any bibliographic references concerning or relating to this Text.'
+    type:  array
+    description: 'A list of any bibliographic references concerning or relating to this Text'
     items:
       title: Reference
+      type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Reference.json'
+      description: 'A bibliographic reference about this text'
+
+  sentences:
+    title: Sentences
+    type:  array
+    description: 'A collection of all the Sentences contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Sentences. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Sentences in the collection must reflect their actual order in the Text. Sentences do *not* have to be JSON unique - a Sentence may be repeated in a text, for example.,'
+    minItems: 1
+    items:
+      title: Sentence
+      type:  object
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Sentence.json'
+      description: 'A Sentence Object'
+
   status:
     title: Status
+    type:  string
     $ref: 'http://cdn.digitallinguistics.io/schemas/status.json'
+    description: 'The status of this text (in a fieldwork workflow)'
+
   tags:
     title: Tags
+    type:  object
     $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    description: 'A set of tags associated with this Text'
+
   title:
     title: Title
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
     description: 'A title is a human-readable prose description of the content of the Text. The `title` object contains all the titles of the text, in one or more languages. Each attribute in the `title` object should be the abbreviation of a language, and its value should be the title of the text in that language.'
-    $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+
   url:
     title: URL
+    type:  string
     $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'
+    description: 'The URL where this data can be retrieved in JSON format'
