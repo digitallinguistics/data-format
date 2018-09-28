@@ -2,7 +2,11 @@
 
 :star2: Thank you for contributing to DLx! :star2:
 
-Below is some information on how you can contribute to the DLx data format, and how to get started.
+Below is some information on how you can contribute to the DLx data format project, whatever your level of technical expertise.
+
+## Quick Links
+
+[Open an Issue][8] | [User Documentation][3] | [Pull Requests](#contributing-code--changes-to-the-schemas) | [DLx Contributing Guidelines][1] | [Code of Conduct][2]
 
 ## Contents
 
@@ -14,45 +18,45 @@ Below is some information on how you can contribute to the DLx data format, and 
 
 * [Reporting Bugs & Other Issues](#reporting-bugs--other-issues)
 
-* [Contributing Code / Changes to Schemas](contributing-code--changes-to-the-schemas)
+* [Contributing Code / Changes to Schemas](#contributing-code--changes-to-the-schemas)
 
 ## General Guidelines for DLx Projects
 
 Here are some general guidelines that apply to all DLx projects:
 
-* [Contributing Guidelines][1]
-
 * [Code of Conduct][2]
+
+* [Contributing Guidelines][1]
 
 ## Questions?
 
-Just have a question you need answered? Consider [joining the DLx Slack channel][3], where you can chat with other users and developers about various DLx projects.
+Check out the [user documentation][3].
 
-You can also ask a question by [opening an issue in this repository][4].
+You can also ask a question by [opening an issue in this repository][8].
+
+## Reporting Bugs & Other Issues
+
+Found a problem in the specification? [Open an issue on GitHub][8] describing the problem and its severity. Does the issue affect just a single schema, or several schemas? Does the issue have the potential to cause errors in applications using data in this format? Include as much detail as possible.
 
 ## Suggesting Features
 
 Have a feature you'd like to suggest? The project would especially benefit from the following types of suggestions (other suggestions are fine too):
 
-- Is there some part of the specification that could be structured more simply, without losing any information?
+  - Is there some part of the specification that could be structured more simply, without losing any information?
 
-- Is there a use case, property, or other piece of information that linguists commonly use that hasn't been included in the specification?
+  - Is there a use case, property, or other piece of information that linguists commonly use that hasn't been included in the specification?
 
-- Are there any parts of the specification that are unclear or could be made clearer?
+  - Are there any parts of the specification that are unclear or could be made clearer?
 
-- Is there a type of linguistic object or data that isn't included in the specification?
+  - Is there a type of linguistic object or data that isn't included in the specification?
 
-- Can the documentation be improved?
+  - Can the documentation be improved?
 
-To suggest a feature, simply [open an issue in the GitHub repository for this project][4], and explain your suggestion. You should provide an example in JSON of how your suggestion would work, and if possible a valid [JSON Schema][5] describing the new format.
+To suggest a feature, simply [open an issue in the GitHub repository for this project][8], and explain your suggestion. If you are able, consider providing an example in JSON of how your suggestion would work, and if possible a valid [JSON Schema][5] describing the new format.
 
 If you're suggesting an improvement to the documentation, please include the original wording and how you would change it, or at least a short description of what needs to be changed.
 
 When suggesting a feature, think about whether this would require a major, minor, or patch update to the specification (following [semantic versioning principles][6]), and include that in the comments for your issue.
-
-## Reporting Bugs & Other Issues
-
-Found a problem in the specification? [Open an issue on GitHub][4] describing the problem and its severity. Does the issue affect just a single schema, or several schemas? Does the issue have the potential to cause errors in applications using data in this format? Include as much detail as possible.
 
 ## Contributing Code / Changes to the Schemas
 
@@ -63,6 +67,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
     **Note:** It is a good idea to wait until your suggested change is approved by a maintainer before writing any code.
 
 1. **Fork the repository** and clone it to your computer.
+
+1. **Set up your development environment** by [installing Node.js][4].
 
 1. **Install project dependencies** by running `npm install` in the project folder from the command line.
 
@@ -116,10 +122,30 @@ _These steps are for maintainers only:_
 
 1. **Open a pull request** into the `master` branch, and include the release notes in the comments.
 
+1. **Run upload script**: `npm run upload`
+
+1. **Create a release**
+
+    - Title: vX.X.X
+
+    - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
+
+    - Each change should have one of the following labels:
+
+        - CHANGE
+        - DEV
+        - DOCS
+        - FIX
+        - NEW
+        - REMOVE
+        - TEST
+
+1. **Publish to npm**: `npm publish`
+
 [1]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
 [2]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CODE_OF_CONDUCT.md
-[3]: https://slack.digitallinguistics.io/
-[4]: https://github.com/digitallinguistics/spec/issues/
+[3]: https://digitallinguistics.github.io/spec/
+[4]: https://nodejs.org/en/
 [5]: http://json-schema.org/
 [6]: http://semver.org/
 [7]: https://www.npmjs.com/package/ajv
