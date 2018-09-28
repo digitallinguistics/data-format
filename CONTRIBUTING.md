@@ -12,9 +12,9 @@ Below is some information on how you can contribute to the DLx data format, and 
 
 * [Suggesting Features](#suggesting-features)
 
-* [Reporting Bugs & Other Issues](#reporting-bugs-other-issues)
+* [Reporting Bugs & Other Issues](#reporting-bugs--other-issues)
 
-* [Contributing Code / Changes to Schemas](#contributing-code)
+* [Contributing Code / Changes to Schemas](contributing-code--changes-to-the-schemas)
 
 ## General Guidelines for DLx Projects
 
@@ -70,27 +70,27 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Write or update tests** for the changes you are going to make.
 
-  - The tests are located in the `/test` folder. Each schema has one test file where all its tests are located. For example, the tests for the Language schema are located in `test/Language.test.js`.
+    - The tests are located in the `/test` folder. Each schema has one test file where all its tests are located. For example, the tests for the Language schema are located in `test/Language.test.js`.
 
-  - Tests are run using [Jasmine][9] for Node.js. See the [Jasmine documentation for Node.js][10] for more information on how to write tests in Jasmine.
+    - Tests are run using [Jasmine][9] for Node.js. See the [Jasmine documentation for Node.js][10] for more information on how to write tests in Jasmine.
 
-  - The tests use the [`ajv` library][7] to validate the schemas against the JSON Schema format, and validate the sample data against the DLx schema. See the [`ajv` documentation][7] for more information on how to use this library to validate schemas.
+    - The tests use the [`ajv` library][7] to validate the schemas against the JSON Schema format, and validate the sample data against the DLx schema. See the [`ajv` documentation][7] for more information on how to use this library to validate schemas.
 
-  - The file `schemas.test.js` checks that each schema is a valid JSON Schema. You should not need to change this file.
+    - The file `schemas.test.js` checks that each schema is a valid JSON Schema. You should not need to change this file.
 
-  - Each schema should be validated against *both* valid and invalid sample data. Each test file contains some valid sample data in the `data` variable near the top of the file. Update this sample data to match your proposed changes.
+    - Each schema should be validated against *both* valid and invalid sample data. Each test file contains some valid sample data in the `data` variable near the top of the file. Update this sample data to match your proposed changes.
 
-  - The first test in each file validates the sample data against its schema using `ajv`. You should not need to change this test.
+    - The first test in each file validates the sample data against its schema using `ajv`. You should not need to change this test.
 
-  - The remaining tests in each file check that the sample data does *not* validate against the schema if the data is formatted incorrectly. Each test generally checks one attribute in the schema. Update these tests as needed.
+    - The remaining tests in each file check that the sample data does *not* validate against the schema if the data is formatted incorrectly. Each test generally checks one attribute in the schema. Update these tests as needed.
 
 1. **Make changes to the schema(s)**.
 
-  - The schemas are located in `schemas/yaml`. Do not update the schemas in `schemas/json`, or your changes will be overwritten.
+    - The schemas are located in `schemas/yaml`. Do not update the schemas in `schemas/json`, or your changes will be overwritten.
 
-  - The schemas use the [JSON Schema format][5] to describe how data should be structured. See the [latest version of the JSON Schema][11] for more details.
+    - The schemas use the [JSON Schema format][5] to describe how data should be structured. See the [latest version of the JSON Schema][11] for more details.
 
-  - Increment the version number of any schemas that you update, following [semantic versioning][6].
+    - Increment the version number of any schemas that you update, following [semantic versioning][6].
 
 1. **Run the tests** using `npm test` in the command line. Fix any issues that arise.
 
@@ -110,7 +110,7 @@ _These steps are for maintainers only:_
 
 1. **Increment the version number** of the branch by running `npm version {major|minor|patch} -m "Your commit message"` from the command line.
 
-  - Include a note closing the associated issue (e.g. `closes #167`).
+    - Include a note closing the associated issue (e.g. `closes #167`).
 
 1. **Open a pull request** into the `master` branch, and include the release notes in the comments.
 
