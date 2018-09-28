@@ -11,7 +11,7 @@ const validate     = ajv.compile(Language);
 const data = {
   abbreviation:    `chiti`,
   additionalNames: [`Sitimaxa`],
-  autonym: {
+  autonym:         {
     apa:    `Sitimaša`,
     ipa:    `Sitimaʃa`,
     modern: `Sitimaxa`,
@@ -21,12 +21,12 @@ const data = {
   defaultOrthography: `modern`,
   glottolog:          `chit1248`,
   iso:                `iso`,
-  locations: [{ name: { eng: `Charenton` } }],
-  name: { eng: `Chitimacha` },
-  orthographies: [],
-  phonemes: [],
-  type: `Language`,
-  url: `https://api.digitallinguistics.io/languages/chitimacha/`,
+  locations:          [{ name: { eng: `Charenton` } }],
+  name:               { eng: `Chitimacha` },
+  orthographies:      [],
+  phonemes:           [],
+  type:               `Language`,
+  url:                `https://api.digitallinguistics.io/languages/chitimacha/`,
 };
 
 describe(`Language`, function() {
