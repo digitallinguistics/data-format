@@ -1,7 +1,8 @@
 $schema: 'http://json-schema.org/schema#'
-id: 'http://cdn.digitallinguistics.io/schemas/Location-2.1.1.json'
-title: Location
-type: object
+id:      'http://cdn.digitallinguistics.io/schemas/Location-2.1.1.json'
+title:   Location
+type:    object
+
 description: 'A location, optionally with accompanying geographic coordinate data'
 
 required:

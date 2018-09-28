@@ -1,7 +1,7 @@
 $schema: 'http://json-schema.org/schema'
-id: 'http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.0.json'
-title: Lexicon
-type: object
+id:      'http://cdn.digitallinguistics.io/schemas/Lexicon-1.1.0.json'
+title:   Lexicon
+type:    object
 
 description: "A lexicon is a collection of the linguistic signs, or *lexemes*, of a particular language at a particular point in time. Each entry in the lexicon provides information on the formal, semantic, behavioral/syntagmatic, and pragmatic/sociocultural properties of a single Lexeme. Each lexeme in turn includes a number of *senses* - the different meanings that a lexeme can have - as well as *variants* - the different formal realizations of the word (e.g. *ran* vs. *run).\n\nLexicons differ from dictionaries in that dictionaries may be thought of as lexicons that have been filtered and formatted for a specific audience. Lexicons, on the other hand, contain the raw, unfiltered data, and do not contain information about presentational format. This distinction allows for the creation of many different dictionaries, with different audiences, from a single Lexicon."
 

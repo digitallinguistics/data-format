@@ -1,7 +1,8 @@
 $schema: 'http://json-schema.org/schema'
-id: 'http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.0.json'
-title: 'Lexeme Reference'
-type: object
+id:      'http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.0.json'
+title:   'Lexeme Reference'
+type:    object
+
 description: 'A reference to a Lexeme in a Lexicon. May point to either a top-level Lexeme or a variant.'
 
 required:
