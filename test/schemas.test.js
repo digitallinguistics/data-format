@@ -1,21 +1,20 @@
 /* eslint-disable
   guard-for-in,
+  new-cap,
   no-param-reassign,
 */
 
 // IMPORTS
-const AJV            = require(`ajv`);
-const { getSchemas } = require('./utilities');
-
-// SETUP
-const ajv = new AJV();
+const { AJV, getSchemas } = require('./utilities');
 
 // VARIABLES
+let ajv;
 let schemas;
 
 describe(`schemas`, () => {
 
   beforeAll(async function loadSchemas() {
+    ajv     = await AJV();
     schemas = await getSchemas();
   });
 

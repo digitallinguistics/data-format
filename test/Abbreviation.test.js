@@ -1,22 +1,30 @@
-/* eslint-disable
-  func-names,
-  prefer-arrow-callback,
-*/
+// IMPORTS
+const { AJV, getSchemas } = require(`./utilities`);
 
-const ajv              = require('./ajv');
-const { Abbreviation } = require('../schemas');
-const validate         = ajv.compile(Abbreviation);
+// VARIABLES
+let ajv;
+let Abbreviation;
+let validate;
 
-describe(`Abbreviation`, function() {
+// VALID SAMPLE DATA
+const data = `chiti`;
 
-  it(`validates properly-formatted data`, function() {
-    const data  = `chiti`;
-    const valid = validate(data);
-    if (validate.errors) fail(JSON.stringify(validate.errors, null, 2));
-    expect(valid).toBe(true);
+describe(`Abbreviation`, () => {
+
+  beforeAll(async function loadSchema() {
+    ajv           = await AJV();
+    const schemas = await getSchemas();
+    Abbreviation  = schemas.get(`Abbreviation`);
+    validate      = ajv.compile(Abbreviation);
   });
 
-  it(`invalidates incorrectly-formatted data`, function() {
+  it(`validates`, () => {
+    const valid = validate(data);
+    if (valid) expect(valid).toBe(true);
+    fail(JSON.stringify(validate.errors, null, 2));
+  });
+
+  it(`invalidates`, () => {
 
     const badAbbr = `bad abbr`;
     expect(validate(badAbbr)).toBe(false);

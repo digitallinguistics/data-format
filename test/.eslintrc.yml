@@ -10,3 +10,4 @@ rules:
   max-nested-callbacks:
     - warn
     - 4
+  new-cap: off

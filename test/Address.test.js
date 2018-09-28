@@ -1,42 +1,42 @@
-/* eslint-disable
-  func-names,
-  prefer-arrow-callback,
-*/
+// IMPORTS
+const { AJV, getSchemas } = require(`./utilities`);
 
-const ajv         = require('./ajv');
-const { Address } = require('../schemas');
-const validate    = ajv.compile(Address);
+// VARIABLES
+let ajv;
+let Address;
+let validate;
 
+// VALID SAMPLE DATA
 const data = {
   apartmentNumber: `B`,
-  country: `United States`,
-  locality: `New York`,
+  country:         `United States`,
+  locality:        `New York`,
   postalBoxNumber: `1234`,
-  postalCode: `12345-1234`,
-  region: `New York`,
-  streetAddress: `555 Market St`,
-  type: `Address`,
+  postalCode:      `12345-1234`,
+  region:          `New York`,
+  streetAddress:   `555 Market St`,
+  type:            `Address`,
 };
 
-describe(`Address`, function() {
+describe(`Address`, () => {
 
-  it(`validates properly-formatted data`, function() {
-    const valid = validate(data);
-    if (validate.errors) fail(JSON.stringify(validate.errors, null, 2));
-    expect(valid).toBe(true);
+  beforeAll(async function loadSchema() {
+    ajv           = await AJV();
+    const schemas = await getSchemas();
+    Address       = schemas.get(`Address`);
+    validate      = ajv.compile(Address);
   });
 
-  it(`invalidates incorrectly-formatted data`, function() {
+  it(`validates`, () => {
+    const valid = validate(data);
+    if (valid) expect(valid).toBe(true);
+    fail(JSON.stringify(validate.errors, null, 2));
+  });
 
-    const badApt = { apartmentNumber: 12 };
-    expect(validate(badApt)).toBe(false);
-
-    const badPOBox = { postalBoxNumber: 1234 };
-    expect(validate(badPOBox)).toBe(false);
-
-    const badPostalCode = { postalCode: 12345 };
-    expect(validate(badPostalCode)).toBe(false);
-
+  it(`invalidates: bad type`, () => {
+    const badType = { type: `bad type` };
+    const badData = { ...data, ...badType };
+    expect(validate(badData)).toBe(false);
   });
 
 });

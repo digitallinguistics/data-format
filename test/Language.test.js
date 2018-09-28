@@ -1,13 +1,12 @@
-/* eslint-disable
-  array-element-newline,
-  func-names,
-  prefer-arrow-callback,
-*/
+// IMPORTS
+const { AJV, getSchemas } = require(`./utilities`);
 
-const ajv          = require('./ajv');
-const { Language } = require('../schemas');
-const validate     = ajv.compile(Language);
+// VARIABLES
+let ajv;
+let Language;
+let validate;
 
+// VALID SAMPLE DATA
 const data = {
   abbreviation:    `chiti`,
   additionalNames: [`Sitimaxa`],
@@ -29,21 +28,25 @@ const data = {
   url:                `https://api.digitallinguistics.io/languages/chitimacha/`,
 };
 
-describe(`Language`, function() {
+describe(`Language`, () => {
 
-  it(`validates properly-formatted data`, function() {
-    const valid = validate(data);
-    if (validate.errors) fail(JSON.stringify(validate.errors, null, 2));
-    expect(valid).toBe(true);
+  beforeAll(async function loadSchema() {
+    ajv           = await AJV();
+    const schemas = await getSchemas();
+    Language      = schemas.get(`Language`);
+    validate      = ajv.compile(Language);
   });
 
-  it(`invalidates incorrectly-formatted data`, function() {
+  it(`validates`, () => {
+    const valid = validate(data);
+    if (valid) expect(valid).toBe(true);
+    fail(JSON.stringify(validate.errors, null, 2));
+  });
 
-    const badName     = { name: `Chitimacha` };
-    const missingName = {};
-    expect(validate(missingName)).toBe(false);
-    expect(validate(badName)).toBe(false);
-
+  it(`invalidates: bad type`, () => {
+    const badType = { type: `bad type` };
+    const badData = { ...data, ...badType };
+    expect(validate(badData)).toBe(false);
   });
 
 });
