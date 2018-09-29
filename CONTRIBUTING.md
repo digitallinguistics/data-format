@@ -146,13 +146,14 @@ _These steps are for maintainers only:_
 
     - Each change should have one of the following labels:
 
-        - CHANGE
-        - DEV
-        - DOCS
-        - FIX
-        - NEW
-        - REMOVE
-        - TEST
+        - CHANGE: (breaking) changes
+        - DEV: changes to development environment
+        - DOCS: changes to docs
+        - FIX: bug fixes
+        - IMPROVE: code enhancements
+        - NEW: new features
+        - REMOVE: removed features
+        - TEST: changes to tests
 
 1. **Publish to npm**: `npm publish`
 
