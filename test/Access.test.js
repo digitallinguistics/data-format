@@ -1,9 +1,8 @@
 // IMPORTS
-const { AJV, getSchemas } = require(`./utilities`);
+const { AJV } = require(`./utilities`);
 
 // VARIABLES
 let ajv;
-let Access;
 let validate;
 
 // VALID SAMPLE DATA
@@ -16,23 +15,15 @@ const data  = {
 
 describe(`Access`, () => {
 
-  beforeAll(async function loadSchema() {
-    ajv           = await AJV();
-    const schemas = await getSchemas();
-    Access        = schemas.get(`Access`);
-    validate      = ajv.compile(Access);
+  beforeAll(async function setup() {
+    ajv = await AJV();
+    validate = d => ajv.validate(`Access`, d);
   });
 
   it(`validates`, () => {
     const valid = validate(data);
     if (valid) expect(valid).toBe(true);
-    fail(JSON.stringify(validate.errors, null, 2));
-  });
-
-  it(`invalidates: bad type`, () => {
-    const badType = { type: `bad type` };
-    const badData = { ...data, ...badType };
-    expect(validate(badData)).toBe(false);
+    else fail(ajv.errorsText());
   });
 
 });

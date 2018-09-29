@@ -1,9 +1,8 @@
 // IMPORTS
-const { AJV, getSchemas } = require(`./utilities`);
+const { AJV } = require(`./utilities`);
 
 // VARIABLES
 let ajv;
-let Language;
 let validate;
 
 // VALID SAMPLE DATA
@@ -30,17 +29,15 @@ const data = {
 
 describe(`Language`, () => {
 
-  beforeAll(async function loadSchema() {
-    ajv           = await AJV();
-    const schemas = await getSchemas();
-    Language      = schemas.get(`Language`);
-    validate      = ajv.compile(Language);
+  beforeAll(async function setup() {
+    ajv = await AJV();
+    validate = d => ajv.validate(`Language`, d);
   });
 
   it(`validates`, () => {
     const valid = validate(data);
     if (valid) expect(valid).toBe(true);
-    fail(JSON.stringify(validate.errors, null, 2));
+    else fail(ajv.errorsText());
   });
 
   it(`invalidates: bad type`, () => {

@@ -1,27 +1,39 @@
 // IMPORTS
-const AJV        = require('ajv');
+const AJV        = require(`ajv`);
 const getSchemas = require(`./getSchemas`);
 
 // SETUP
-const ajv = new AJV();
+const ajv = new AJV({ extendRefs: true });
 
 // VARIABLES
 let schemasLoaded = false;
 
 /**
- * Adds each of the schemas to AJV, so that they can be used to validate other schemas
- * @return {Promise<AJV>} Returns a Promise that resolves to the configured AJV Object
+ * Adds each of the schemas to AJV
+ * @return {Promise<AJV>}
  */
-async function setup() {
+async function loadSchemas() {
 
   if (schemasLoaded) return ajv;
 
   const schemas = await getSchemas();
 
   for (const [, schema] of schemas) {
+
+    // Extract the ID from the "id" property of the schema
     const IDRegExp = /schemas\/(?<id>.+)-/;
     const { id }   = IDRegExp.exec(schema.id).groups;
-    ajv.addSchema(schema, id);
+
+    // Remove version number from ID for local testing purposes
+    schema.id = schema.id.replace(/-.+?(\.json)/, `$1`);
+
+    try {
+      ajv.addSchema(schema, id);
+    } catch (e) {
+      console.error(`${id} schema is invalid.`);
+      console.error(e);
+    }
+
   }
 
   schemasLoaded = true;
@@ -29,4 +41,5 @@ async function setup() {
 
 }
 
-module.exports = setup;
+// EXPORT
+module.exports = loadSchemas;

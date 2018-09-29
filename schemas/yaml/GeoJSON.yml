@@ -215,7 +215,7 @@ definitions:
 
   coordinates:
     title: Coordinates
-    type:  Array
+    type:  array
     items:
       oneOf:
         - type: array

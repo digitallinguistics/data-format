@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Location-2.1.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Location-2.2.0.json'
 title:   Location
 type:    object
 
@@ -52,7 +52,7 @@ properties:
   geoJSON:
     title: 'GeoJSON Geometry Object'
     type:  object
-    $ref:  'http://json.schemastore.org/geojson'
+    $ref:  'http://cdn.digitallinguistics.io/schemas/GeoJSON.json'
     description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: http://geojson.org/.'
 
   name:

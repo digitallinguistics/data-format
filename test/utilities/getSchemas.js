@@ -17,12 +17,14 @@ async function getSchemas() {
 
   if (schemas) return schemas;
 
-  return filenames
+  schemas = filenames
   .map(filename => yamljs.load(path.join(schemasPath, filename)))
   .reduce((map, schema) => {
     map.set(schema.title, schema);
     return map;
   }, new Map);
+
+  return schemas;
 
 }
 
