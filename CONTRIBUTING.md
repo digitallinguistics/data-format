@@ -160,6 +160,8 @@ _These steps are for maintainers only:_
 
 1. **Publish to npm**: `npm publish`
 
+1. **Write a blog post** about the changes
+
 [1]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
 [2]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CODE_OF_CONDUCT.md
 [3]: https://digitallinguistics.github.io/spec/
