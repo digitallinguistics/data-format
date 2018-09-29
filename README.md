@@ -5,8 +5,6 @@ This project aims to create a standardized, human-readable, web-compatible data 
 
 * Read the [Schemas](#schemas) section to get started with using the DLx format in your own projects.
 
-* Want additional help or to talk with other members of the DLx community? [Join the DLx Slack channel][20].
-
 * Need to report a bug or suggest a feature? [Open an issue on GitHub][21].
 
 * Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][22].
@@ -218,7 +216,7 @@ This repo is maintained by:
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/spec/blob/master/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
-[20]: https://slack.digitallinguistics.io/
+
 [21]: https://github.com/digitallinguistics/spec
 [22]: https://github.com/digitallinguistics/spec/blob/master/CONTRIBUTING.md
 [23]: http://json.org/
