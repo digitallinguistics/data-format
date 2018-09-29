@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.2.0.json",
+  "title": "Location",
+  "type": "object",
+  "description": "A location, optionally with accompanying geographic coordinate data",
+  "required": [
+    "name"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object (must be set to `Location`)",
+      "enum": [
+        "Location"
+      ]
+    },
+    "abbreviation": {
+      "title": "Abbreviation",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "description": "An abbreviation for this Location"
+    },
+    "access": {
+      "title": "Access Rights",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
+      "description": "Since locations sometimes contain personal information like addresses, it is important to consider the proper access management policy for them."
+    },
+    "address": {
+      "title": "Address",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Address.json",
+      "description": "An address associated with this location"
+    },
+    "dateCreated": {
+      "title": "Date Created",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
+      "description": "The date that this Location object was created"
+    },
+    "dateModified": {
+      "title": "Date Modified",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json",
+      "description": "The date that this Location was last modified"
+    },
+    "geoJSON": {
+      "title": "GeoJSON Geometry Object",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/GeoJSON.json",
+      "description": "A GeoJSON object describing this Location. Must adhere to the GeoJSON format: http://geojson.org/."
+    },
+    "name": {
+      "title": "Name",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "description": "A name for this location, e.g. `Susan’s House` or `Valley High School`, or `Shenandoah River`"
+    },
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "description": "A collection of notes about this Location",
+      "uniqueItems": true,
+      "items": {
+        "title": "Note",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "description": "A note about this location"
+      }
+    },
+    "references": {
+      "title": "Bibliographic References",
+      "type": "array",
+      "description": "A collection of bibliographic references about this Location",
+      "uniqueItems": true,
+      "items": {
+        "title": "Reference",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json",
+        "description": "A bibliographic reference about this location"
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "description": "A set of tags for this Location"
+    },
+    "url": {
+      "title": "URL",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "description": "The URL where information about this location can be retrieved"
+    }
+  }
+}

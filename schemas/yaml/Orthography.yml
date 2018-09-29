@@ -1,0 +1,124 @@
+$schema: 'http://json-schema.org/schema#'
+id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.3.2.json'
+title:   Orthography
+type:    object
+
+description: 'An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.'
+
+required:
+  - graphemes
+  - name
+
+additionalProperties: true
+
+properties:
+
+  type:
+    title: Type
+    type:  string
+    description: 'The type of object (must be set to `Orthography`)'
+    enum:
+      - Orthography
+
+  abbreviation:
+    title: Abbreviation
+    type:  string
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+    description: 'An abbreviation for this Orthography'
+
+  direction:
+    title: 'Text Direction'
+    type:  string
+    description: 'The direction that this orthography is typically written in. If an orthography can be written in more than one direction, you should create a second Orthography for each direction it can be written in. The value of the `direction` field consists of two parts: the horizontal direction and the vertical direction, separated by a hyphen. Horizontal direction may be `ltr` (left-to-right), `rtl` (right-to-left), or `boustrophedon` (alternately left-to-right and right-to-left). Vertical direction may be either `ttb` (top-to-bottom) or `btt` (bottom-to-top).'
+    enum:
+      - ltr-ttb
+      - rtl-ttb
+      - ltr-btt
+      - rtl-btt
+      - boustrophedon-ttb
+      - boustrophedon-btt
+    default: ltr-ttb
+
+  graphemes:
+    title: Graphemes
+    type:  array
+    description: 'A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).'
+    uniqueItems: true
+    default: []
+    items:
+
+      title: Grapheme
+      type:  object
+
+      description: 'An object representing a grapheme'
+
+      required:
+        - form
+
+      additionalProperties: false
+
+      properties:
+
+        allographs:
+          title: Allographs
+          type:  array
+          description: 'A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `T` in an English orthography would have the allograph `t`.'
+          uniqueItems: true
+          items:
+            title: Allograph
+            type:  string
+
+        form:
+          title: 'Grapheme Form'
+          type:  string
+          description: 'The written form of this grapheme. Graphemes should include their diacritics. For example, `c` and `č` should be considered separate graphemes, unless they are allographs. Do not include graphemes for characters that only occur as part of a digraph (or trigraph, etc.). For example, standard Swahili orthography has a grapheme `ch`, but no grapheme `c` by itself, so `c` would not be listed as a grapheme, only `ch`.'
+
+        name:
+          title: 'Grapheme Name'
+          type:  string
+          description: 'The name of this grapheme, if any'
+
+        pronunciations:
+          title: Pronunciations
+          type:  array
+          uniqueItems: true
+          description: 'A list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).'
+          items:
+            title: Pronunciation
+            type:  string
+
+  name:
+    title: 'Orthography Name'
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    description: 'The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`)'
+    default: {}
+
+  notes:
+    title: Notes
+    type:  array
+    description: 'A collection of notes about this Orthography'
+    uniqueItems: true
+    items:
+      title: Note
+      type:  object
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+      description: 'A note about this orthography'
+    default: []
+
+  punctuation:
+    title: Punctuation
+    type:  array
+    description: 'A list of all the punctuation characters in this orthography, including white space and non-breaking characters.'
+    uniqueItems: true
+    items:
+      title: 'Punctuation Character'
+      type:  string
+    default: []
+
+  tags:
+    title: Tags
+    type:  object
+    $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    description: 'A set of tags for this orthography'
+    default: {}

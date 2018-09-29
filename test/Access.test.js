@@ -1,34 +1,29 @@
-/* eslint-disable
-  func-names,
-  prefer-arrow-callback,
-*/
+// IMPORTS
+const { AJV } = require(`./utilities`);
 
-const ajv              = require('./ajv');
-const { Access } = require('../schemas');
-const validate         = ajv.compile(Access);
+// VARIABLES
+let ajv;
+let validate;
 
-describe(`Access`, function() {
+// VALID SAMPLE DATA
+const data  = {
+  AILLA:   `password`,
+  ELAR:    `Community Member`,
+  notes:   { eng: `Speaker also requested that this text only be shared with family members.` },
+  speaker: `family`,
+};
 
-  it(`validates properly-formatted data`, function() {
+describe(`Access`, () => {
 
-    const data  = {
-      AILLA:   `password`,
-      ELAR:    `Community Member`,
-      notes:   { eng: `Speaker also requested that this text only be shared with family members.` },
-      speaker: `family`,
-    };
-
-    const valid = validate(data);
-    if (validate.errors) fail(JSON.stringify(validate.errors, null, 2));
-    expect(valid).toBe(true);
-
+  beforeAll(async function setup() {
+    ajv = await AJV();
+    validate = d => ajv.validate(`Access`, d);
   });
 
-  it(`invalidates incorrectly-formatted data`, function() {
-
-    const data = { family: true };
-    expect(validate(data)).toBe(false);
-
+  it(`validates`, () => {
+    const valid = validate(data);
+    if (valid) expect(valid).toBe(true);
+    else fail(ajv.errorsText());
   });
 
 });

@@ -192,7 +192,8 @@ Following the recommended data format in your own project is as easy as making s
 Note that most schemas have a strongly-recommended (but optional) `type` property indicating the schema that that object adheres to.
 
 ## Want to Contribute?
-Check DLx's [general contributing guidelines][18].
+
+Check out the [Contributing Guidelines][18] for this project.
 
 ## Maintainers
 This repo is maintained by:
@@ -215,7 +216,7 @@ This repo is maintained by:
 [15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
 [16]: http://developer.digitallinguistics.io/spec/schemas/URL.html
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
-[18]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
+[18]: https://github.com/digitallinguistics/spec/blob/master/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
 [20]: https://slack.digitallinguistics.io/
 [21]: https://github.com/digitallinguistics/spec

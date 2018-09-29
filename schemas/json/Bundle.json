@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://cdn.digitallinguistics.io/schemas/Bundle-1.1.1.json",
+  "title": "Bundle",
+  "type": "object",
+  "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
+  "required": [
+    "name"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object (must be set to `Bundle`)",
+      "enum": [
+        "Bundle"
+      ]
+    },
+    "abbreviation": {
+      "title": "Abbreviation",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "description": "An abbreviation for this bundle"
+    },
+    "access": {
+      "title": "Access Rights",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
+      "description": "An object describing the acess rights for this bundle"
+    },
+    "dateCreated": {
+      "title": "Date Created",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
+      "description": "The date that this bundle was created"
+    },
+    "dateModified": {
+      "title": "Date Modified",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json",
+      "description": "The date that this bundle was last modified"
+    },
+    "locations": {
+      "title": "Locations",
+      "type": "array",
+      "description": "An array of locations included in this bundle (usually locations that were visited during a day or session)",
+      "uniqueItems": true,
+      "items": {
+        "title": "Location",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json",
+        "description": "An object describing a location associated with this bundle"
+      }
+    },
+    "media": {
+      "title": "Media",
+      "type": "array",
+      "description": "An array of media files included in this bundle",
+      "uniqueItems": true,
+      "items": {
+        "title": "Media File",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Media.json",
+        "description": "An object describing a media file in this bundle"
+      }
+    },
+    "name": {
+      "title": "Name",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "description": "A name for this bundle, optionally in multiple languages"
+    },
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "description": "A collection of notes about this bundle",
+      "uniqueItems": true,
+      "items": {
+        "title": "Note",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "description": "A note about this bundle"
+      }
+    },
+    "persons": {
+      "title": "Persons",
+      "type": "array",
+      "description": "An array of persons associated with this bundle",
+      "uniqueItems": true,
+      "items": {
+        "title": "Person",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json",
+        "description": "A person associated with this bundle"
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "description": "A hash containing tags for this bundle"
+    },
+    "texts": {
+      "title": "Texts",
+      "type": "array",
+      "description": "An array of texts included in this bundle.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Text",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Text.json",
+        "description": "A Text included in this bundle"
+      }
+    },
+    "url": {
+      "title": "URL",
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "description": "The URL where this bundle may be accessed"
+    }
+  }
+}

@@ -1,17 +1,15 @@
-/* eslint-disable
-  array-element-newline,
-  func-names,
-  prefer-arrow-callback,
-*/
+// IMPORTS
+const { AJV } = require(`./utilities`);
 
-const ajv          = require('./ajv');
-const { Language } = require('../schemas');
-const validate     = ajv.compile(Language);
+// VARIABLES
+let ajv;
+let validate;
 
+// VALID SAMPLE DATA
 const data = {
   abbreviation:    `chiti`,
   additionalNames: [`Sitimaxa`],
-  autonym: {
+  autonym:         {
     apa:    `Sitimaša`,
     ipa:    `Sitimaʃa`,
     modern: `Sitimaxa`,
@@ -21,29 +19,31 @@ const data = {
   defaultOrthography: `modern`,
   glottolog:          `chit1248`,
   iso:                `iso`,
-  locations: [{ name: { eng: `Charenton` } }],
-  name: { eng: `Chitimacha` },
-  orthographies: [],
-  phonemes: [],
-  type: `Language`,
-  url: `https://api.digitallinguistics.io/languages/chitimacha/`,
+  locations:          [{ name: { eng: `Charenton` } }],
+  name:               { eng: `Chitimacha` },
+  orthographies:      [],
+  phonemes:           [],
+  type:               `Language`,
+  url:                `https://api.digitallinguistics.io/languages/chitimacha/`,
 };
 
-describe(`Language`, function() {
+describe(`Language`, () => {
 
-  it(`validates properly-formatted data`, function() {
-    const valid = validate(data);
-    if (validate.errors) fail(JSON.stringify(validate.errors, null, 2));
-    expect(valid).toBe(true);
+  beforeAll(async function setup() {
+    ajv = await AJV();
+    validate = d => ajv.validate(`Language`, d);
   });
 
-  it(`invalidates incorrectly-formatted data`, function() {
+  it(`validates`, () => {
+    const valid = validate(data);
+    if (valid) expect(valid).toBe(true);
+    else fail(ajv.errorsText());
+  });
 
-    const badName     = { name: `Chitimacha` };
-    const missingName = {};
-    expect(validate(missingName)).toBe(false);
-    expect(validate(badName)).toBe(false);
-
+  it(`invalidates: bad type`, () => {
+    const badType = { type: `bad type` };
+    const badData = { ...data, ...badType };
+    expect(validate(badData)).toBe(false);
   });
 
 });
