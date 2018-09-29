@@ -147,6 +147,7 @@ _These steps are for maintainers only:_
     - Each change should have one of the following labels:
 
         - CHANGE: (breaking) changes
+        - DEP: changes to dependencies
         - DEV: changes to development environment
         - DOCS: changes to docs
         - FIX: bug fixes
