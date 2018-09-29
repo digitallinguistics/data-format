@@ -23,6 +23,9 @@
     "access": "public"
   },
   "repository": "https://github.com/digitallinguistics/spec.git",
+  "engines": {
+    "node": ">=10.10.0"
+  },
   "dependencies": {},
   "devDependencies": {
     "ajv": "^4.11.8",
