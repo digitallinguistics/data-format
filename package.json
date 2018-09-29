@@ -33,7 +33,9 @@
   },
   "main": "schemas",
   "scripts": {
-    "docs": "jschemer schemas -o docs -r README.md -i index.js",
+    "build": "npm run convert & npm run docs & npm test",
+    "convert": "node build/convert.js",
+    "docs": "jschemer schemas/yaml -o docs -r README.md -i index.js",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
   }

@@ -114,7 +114,13 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Get the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
 
-1. **Regenerate the documentation website** by running `npm run docs` from the command line.
+1. **Run the build script** by running `npm run build` from the command line. This does the following steps for you automatically:
+
+    1. **Generate the JSON versions of the schemas** (`npm run convert`)
+
+    1. **Regenerate the documentation website** (`npm run docs`)
+
+    1. **Run the tests again** (`npm run test`)
 
 1. **Open a pull request**. See GitHub's advice on [How to write the perfect pull request][12].
 
