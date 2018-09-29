@@ -134,9 +134,11 @@ _These steps are for maintainers only:_
 
     - Include a note closing the associated issue (e.g. `closes #167`).
 
+1. **Run upload script**: `npm run upload`
+
 1. **Open a pull request** into the `master` branch, and include the release notes in the comments.
 
-1. **Run upload script**: `npm run upload`
+1. **Squash & merge** the PR into the `master` branch.
 
 1. **Create a release**
 
