@@ -1,25 +1,22 @@
 {
-
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Phoneme-2.1.1.json",
-
+  "id": "http://cdn.digitallinguistics.io/schemas/Phoneme-2.1.2.json",
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones.",
-
-  "required": ["ipa"],
-
+  "required": [
+    "ipa"
+  ],
   "additionalProperties": true,
-
   "properties": {
-
     "type": {
       "title": "Type",
       "type": "string",
-      "description": "The type of object. Must be set to `Phoneme`.",
-      "enum": ["Phoneme"]
+      "description": "The type of object (must be set to `Phoneme`)",
+      "enum": [
+        "Phoneme"
+      ]
     },
-
     "airstream": {
       "title": "Airstream Mechanism",
       "type": "string",
@@ -32,18 +29,18 @@
         "pulmonic"
       ]
     },
-
     "allophones": {
       "title": "Allophones",
       "type": "array",
-      "uniqueItems": true,
       "description": "A list of allophones of this phoneme, following the same format as for Phoneme objects.",
+      "uniqueItems": true,
       "items": {
         "title": "Allophone",
-        "$ref": "#"
+        "type": "object",
+        "$ref": "#",
+        "description": "An allophone of this phoneme. Allophones are formatted exactly the same way as Phoneme Objects."
       }
     },
-
     "backness": {
       "title": "Backness",
       "type": "string",
@@ -56,12 +53,11 @@
         "back"
       ]
     },
-
     "features": {
       "title": "Features",
       "type": "array",
-      "uniqueItems": true,
       "description": "A list of the phonemically distinctive features of this Phoneme. These are what are listed under `diacritics` in the IPA chart. For example, if a language distinguishes between a palatalized `/t/` and a plain `/t/`, the first should include the feature `palatalized` and the second `plain` (or no features). Note that most features are also a manner of articulation as well, so it up to the linguist to decide when a given phonetic detail is a manner, or when it is a feature (i.e. a diacritic). For example, a language might distinguish phonemically between a palatal plosive `/c/` and a palatalized plosive `/tʲ/`. The first would list `palatal` as its place of articulation, while the second would list `palatalized` as a distinctive feature. Do not include features here if they are already used for manner, unless your analysis is that this feature is *both* a manner and a feature of this phoneme, e.g. a palatalized palatal stop. This field is used primarily for consonants, but may also apply to vowels as well (e.g. the `close` and `open` features).",
+      "uniqueItems": true,
       "items": {
         "title": "Feature",
         "type": "string",
@@ -114,11 +110,10 @@
         ]
       }
     },
-
     "height": {
       "title": "Height",
       "type": "string",
-      "description": "The height of a vowel.",
+      "description": "The height of a vowel",
       "enum": [
         "close",
         "near-close",
@@ -129,17 +124,15 @@
         "open"
       ]
     },
-
     "ipa": {
       "title": "IPA Transcription",
       "type": "string",
-      "description": "The IPA representation of this Phoneme."
+      "description": "The IPA representation of this phoneme / allophone. Transcriptions of phonemes should contain only the phonemically contrastive sounds. Transcriptions of allophones should contain only the regularly-conditioned alternations."
     },
-
     "length": {
       "title": "Length",
       "type": "string",
-      "description": "The length of this phoneme, whether for consonants (e.g. `short` vs. `geminate`) or vowels.",
+      "description": "The length of this phoneme, whether for consonants (e.g. `short` vs. `geminate`) or vowels",
       "enum": [
         "extra short",
         "short",
@@ -149,11 +142,10 @@
         "geminate"
       ]
     },
-
     "manner": {
       "title": "Manner of Articulation",
       "type": "string",
-      "description": "The manner of articulation, for consonants. Only one manner of articulation may be listed. Additional manners must be listed under the `features` attribute. For example, the lateral fricative `ɬ` might have a `manner` set to `fricative` and a feature `lateral`, or vice versa, depending on the linguist's analysis.",
+      "description": "The manner of articulation, for consonants. Only one manner of articulation may be listed. Additional manners must be listed under the `features` attribute. For example, the lateral fricative `ɬ` might have a `manner` set to `fricative` and a feature `lateral`, or vice versa, depending on the linguist’s analysis.",
       "enum": [
         "approximate",
         "flap",
@@ -165,18 +157,18 @@
         "trill"
       ]
     },
-
     "notes": {
       "title": "Notes",
-      "description": "Notes about this Phoneme.",
       "type": "array",
+      "description": "Notes about this Phoneme",
       "uniqueItems": true,
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "description": "A Note about this Phoneme"
       }
     },
-
     "place": {
       "title": "Place of Articulation",
       "type": "string",
@@ -200,17 +192,17 @@
         "epiglottal"
       ]
     },
-
     "references": {
       "title": "Bibliographic References",
       "type": "array",
       "uniqueItems": true,
       "items": {
         "title": "Reference",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json"
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json",
+        "description": "A bibliographic reference"
       }
     },
-
     "rounding": {
       "title": "Rounding",
       "type": "string",
@@ -222,46 +214,44 @@
         "unrounded"
       ]
     },
-
     "tags": {
       "title": "Tags",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json"
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "description": "A set of tags for this phoneme"
     },
-
     "target1": {
       "title": "Dipthong / Triphthong Target 1",
-      "description": "For diphthongs or triphthongs, this should be a Phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.",
-      "$ref": "#"
+      "type": "object",
+      "$ref": "#",
+      "description": "For diphthongs or triphthongs, this should be a Phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong."
     },
-
     "target2": {
       "title": "Dipthong / Triphthong Target 2",
-      "description": "For diphthongs or thriphthongs, this should be a Phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.",
-      "$ref": "#"
+      "type": "object",
+      "$ref": "#",
+      "description": "For diphthongs or thriphthongs, this should be a Phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong."
     },
-
     "target3": {
       "title": "Triphthong Target 3",
-      "description": "For triphthongs, this should be a Phoneme object representing the features of the third target in the pronunciation of the triphthong.",
-      "$ref": "#"
+      "type": "object",
+      "$ref": "#",
+      "description": "For triphthongs, this should be a Phoneme object representing the features of the third target in the pronunciation of the triphthong."
     },
-
     "tone": {
       "title": "Tone",
       "type": "string",
       "description": "An abstract representation of the tone of this phoneme, e.g. `H`, `13`, `falling`, etc."
     },
-
     "voicing": {
       "title": "Voicing",
       "type": "string",
-      "description": "Whether the phoneme is voiced, voiceless, or partially voiced.",
+      "description": "Whether the phoneme is voiced, voiceless, or partially voiced",
       "enum": [
         "semivoiced",
         "voiced",
         "voiceless"
       ]
     }
-
   }
 }

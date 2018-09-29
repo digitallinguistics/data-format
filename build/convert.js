@@ -3,6 +3,10 @@
  * and saves them to /schemas/json
  */
 
+/* eslint-disable
+  no-shadow,
+*/
+
 // IMPORTS
 const path   = require(`path`);
 const yamljs = require(`yamljs`);
@@ -40,22 +44,37 @@ async function readSchema(filename) {
  * @param  {Object}  schema The schema as a JavaScript Object
  * @return {Promise}        Returns a Promise that resolves when complete
  */
-async function writeSchema({ name, schema }) { // eslint-disable-line no-shadow
-  await writeFile(`${name}.json`, JSON.stringify(schema, null, 2), `utf8`);
+async function writeSchema({ name, schema }) {
+  const schemaPath = path.join(schemasPath, `json/${name}.json`);
+  const json       = JSON.stringify(schema, null, 2);
+  await writeFile(schemaPath, json, `utf8`);
 }
 
 // TOP-LEVEL SCRIPT
 void async function convert() {
 
+  // Read all the schemas from their YAML files
   const filenames   = await readdir(path.join(schemasPath, `yaml`));
   const schemas = await Promise.all(filenames.map(readSchema));
 
+  // Parse each schema into JavaScript
   schemas.forEach(schema => {
     // eslint-disable-next-line no-param-reassign
     schema.schema = yamljs.parse(schema.schema);
   });
 
-
+  // Write the schemas to /schemas/json
   await Promise.all(schemas.map(writeSchema));
+
+  // Update schemas/json/index.js
+  const lines = schemas
+  .map(({ name }) => name)
+  .map(name => `  ${name}: require('./${name}'),`)
+  .join(`\n`);
+
+  const indexText = `module.exports = {\n${lines}\n};`;
+  const indexPath = path.join(schemasPath, `json/index.js`);
+
+  await writeFile(indexPath, indexText, `utf8`);
 
 }();

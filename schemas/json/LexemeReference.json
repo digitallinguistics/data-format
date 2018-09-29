@@ -1,67 +1,62 @@
 {
-
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.0.json",
-
+  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.1.json",
   "title": "Lexeme Reference",
   "type": "object",
   "description": "A reference to a Lexeme in a Lexicon. May point to either a top-level Lexeme or a variant.",
-
-  "required": ["lexeme"],
-
+  "required": [
+    "lexeme"
+  ],
   "additionalProperties": false,
-
   "properties": {
-
     "type": {
       "title": "Type",
       "type": "string",
-      "description": "The type of object. Must be set to `LexemeReference`.",
-      "enum": ["LexemeReference"]
+      "description": "The type of object (must be set to `LexemeReference`)",
+      "enum": [
+        "LexemeReference"
+      ]
     },
-
     "lexeme": {
       "title": "Referenced Lexeme (Key)",
       "type": "string",
-      "description": "The key of the lexeme being referenced.",
+      "description": "The key of the lexeme being referenced",
       "pattern": "^[^ ]+$"
     },
-
     "lexemeURL": {
       "title": "Referenced Lexeme (URL)",
-      "description": "The URL of the lexeme being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "description": "The URL of the lexeme being referenced"
     },
-
     "lexicon": {
       "title": "Referenced Lexicon (Key/Abbr)",
-      "description": "The abbreviation of the lexicon being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "description": "The abbreviation of the lexicon being referenced"
     },
-
     "lexiconURL": {
       "title": "Referenced Lexicon (URL)",
-      "description": "The URL of the lexicon being referenced.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json"
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "description": "The URL of the lexicon being referenced"
     },
-
     "relation": {
       "title": "Relation Type",
-      "description": "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid Abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme).",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json"
+      "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "description": "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid Abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme)."
     },
-
     "sense": {
       "title": "Referenced Sense (Num)",
       "type": "integer",
       "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme."
     },
-
     "variantType": {
       "title": "Variant Type",
-      "description": "If this reference is to a variant of a lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json"
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "description": "If this reference is to a variant of a lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc."
     }
-
   }
 }
