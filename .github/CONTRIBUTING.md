@@ -11,13 +11,9 @@ Below is some information on how you can contribute to the DLx data format proje
 ## Contents
 
 * [General Guidelines for DLx Projects](#general-guidelines-for-dlx-projects)
-
 * [Questions?](#questions)
-
 * [Suggesting Features](#suggesting-features)
-
 * [Reporting Bugs & Other Issues](#reporting-bugs--other-issues)
-
 * [Contributing Code / Changes to Schemas](#contributing-code--changes-to-the-schemas)
 
 ## General Guidelines for DLx Projects
@@ -25,7 +21,6 @@ Below is some information on how you can contribute to the DLx data format proje
 Here are some general guidelines that apply to all DLx projects:
 
 * [Code of Conduct][2]
-
 * [Contributing Guidelines][1]
 
 ## Questions?
@@ -124,9 +119,9 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Open a pull request**. See GitHub's advice on [How to write the perfect pull request][12].
 
-1. **Address any changes requested by the reviewer**.
+1. **Address any changes requested by the reviewer**
 
-1. **Wait for a maintainer to merge your changes!**
+1. **Wait for a maintainer to merge your changes**
 
 _These steps are for maintainers only:_
 
