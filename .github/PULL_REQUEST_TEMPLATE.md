@@ -59,7 +59,9 @@ _This section is for maintainers only_
 
 - [ ] **Run upload script**: `npm run upload`
 - [ ] **Write the release note** for the PR
-- [ ] **Squash & merge PR into `master`**: `LABEL: description (#000)`, and labeled change list
+- [ ] **Squash & merge PR into `master`**
+    - Title: `LABEL: description (#000)`
+    - Changelog: `LABEL: description (closes #000)`
 
 For releases:
 
