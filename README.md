@@ -10,9 +10,9 @@ Tools which follow this recommended format will be interoperable, allowing users
 
 * Read the [Schemas](#schemas) section to get started with using the DLx format in your own projects.
 
-* Need to report a bug or suggest a feature? [Open an issue on GitHub][21]. Check out the [contributing guidelines][22] for information on the best way to report a bug or request a feature.
+* Need to report a bug or suggest a feature? [Open an issue on GitHub][21]. Check out the [contributing guidelines][18] for information on the best way to report a bug or request a feature.
 
-* Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][22].
+* Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][18].
 
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
 [![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
@@ -220,9 +220,9 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
 [16]: http://developer.digitallinguistics.io/spec/schemas/URL.html
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
-[18]: https://github.com/digitallinguistics/spec/blob/master/CONTRIBUTING.md
+[18]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
 
 [21]: https://github.com/digitallinguistics/spec
-[22]: https://github.com/digitallinguistics/spec/blob/master/CONTRIBUTING.md
+
 [23]: http://json.org/
