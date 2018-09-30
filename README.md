@@ -8,6 +8,8 @@ This repository contains the specification for the Data Format for Digital Lingu
 
 Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
 
+This format also facilitates adherence to the [Austin Principles for Data Citation in Linguistics][22] by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.
+
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
 [![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
 [![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632)
@@ -17,8 +19,6 @@ Tools which follow this recommended format will be interoperable, allowing users
 * [About the Format](#about-the-format): learn what the DLx format is and how it works
 
 * [Schemas](#schemas): read the schemas and get started using the DLx format in your own projects
-
-* [Austin Principles of Data Citation](#austin-principles-of-data-citation): learn how the DLx format adheres to the Austin Principles of Data Citation in Linguistics
 
 * [Bugs & Feature Requests][20]: Need to report a bug or suggest a feature? [Open an issue on GitHub][21]. Check out the [contributing guidelines][18] for information on the best way to report a bug or request a feature.
 
@@ -201,10 +201,6 @@ Following the recommended data format in your own project is as easy as making s
 
 Note that most schemas have a strongly-recommended (but optional) `type` property indicating the schema that that object adheres to.
 
-## Austin Principles of Data Citation
-
-
-
 ## Want to Contribute?
 
 Check out the [Contributing Guidelines][18] for this project.
@@ -234,5 +230,6 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [19]: https://github.com/dwhieb/
 [20]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
 [21]: https://github.com/digitallinguistics/spec
-
+[22]: http://site.uit.no/linguisticsdatacitation/
 [23]: http://json.org/
+[24]: http://site.uit.no/linguisticsdatacitation/austinprinciples/
