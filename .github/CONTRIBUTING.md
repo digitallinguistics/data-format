@@ -15,6 +15,7 @@ Below is some information on how you can contribute to the DLx data format proje
 * [Suggesting Features](#suggesting-features)
 * [Reporting Bugs & Other Issues](#reporting-bugs--other-issues)
 * [Contributing Code / Changes to Schemas](#contributing-code--changes-to-the-schemas)
+* [GitHub Flow / Branching Model](#branching-model)
 
 ## General Guidelines for DLx Projects
 
@@ -162,6 +163,24 @@ _These steps are for maintainers only:_
 1. **Publish to npm**: `npm publish`
 
 1. **Write a blog post** about the changes
+
+## Branching Model
+
+This project uses the following branching model:
+
+* The `master` branch is always production-ready
+
+* Each issue receives its own branch
+
+* Each issue branch is tested thoroughly and must be production-ready before being merged
+
+* Issue branches are merged directly into the `master` branch
+
+* The `master` branch is periodically tagged for a release and GitHub release notes made, and the code published to npm at that point
+
+* Releases are managed using GitHub milestones to track when all the relevant issues are completed, and the `master` branch is ready for publishing on npm
+
+(If development needs to happen simultaneously on minor changes / hotfixes and major breaking changes, it may be necessary to switch to a release branch model.)
 
 [1]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
 [2]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CODE_OF_CONDUCT.md
