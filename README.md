@@ -1,11 +1,16 @@
 # The DLx Data Format
-This project aims to create a standardized, human-readable, web-compatible data format for representing linguistic data, and is aimed at anyone who manages a linguistic database. This repository contains a number of schemas which recommend ways of representing linguistic data in [JSON][23]. Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
+
+This project aims to create a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called Digital Linguistics (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
+
+This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil). This specification is a recommendation for how to store linguistic data in a way that is standardized, human-readable and web-compatible, using a popular data storage format on the web known as [JSON][23].
+
+Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
 
 * Read the [Introduction](#introduction) below to understand how the format works.
 
 * Read the [Schemas](#schemas) section to get started with using the DLx format in your own projects.
 
-* Need to report a bug or suggest a feature? [Open an issue on GitHub][21].
+* Need to report a bug or suggest a feature? [Open an issue on GitHub][21]. Check out the [contributing guidelines][22] for information on the best way to report a bug or request a feature.
 
 * Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][22].
 
@@ -14,6 +19,7 @@ This project aims to create a standardized, human-readable, web-compatible data 
 [![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632)
 
 ## Introduction
+
 The canonical way that linguists represent linguistic data in their publications is with an [interlinear gloss][4]. This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
 
 ```
@@ -194,8 +200,8 @@ Note that most schemas have a strongly-recommended (but optional) `type` propert
 Check out the [Contributing Guidelines][18] for this project.
 
 ## Maintainers
-This repo is maintained by:
-- [Daniel W. Hieber][19]
+
+This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 
 [1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
 [2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
