@@ -126,6 +126,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Open a pull request** from your issue branch into the `master` branch of the DLx repository. See GitHub's advice on [How to write the perfect pull request][12].
 
+    - While working on your pull request, you should write `[ci skip]` in each of your commit messages to skip automated testing, until you are ready to test your code.
+
 1. **Address any changes requested by the reviewer**
 
 1. **Wait for a maintainer to merge your changes**
