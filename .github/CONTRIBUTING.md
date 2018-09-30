@@ -66,6 +66,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Create an issue branch** for the particular issue you are addressing. You should only make changes to the code that are directly relevant to this issue.
 
+1. **(Optional) Open a pull request** to track your changes as you work. The pull request will have a simplified version of this checklist that you can follow while working on your code.
+
 1. **Set up your development environment** by [installing Node.js][4].
 
 1. **Install project dependencies** by running `npm install` in the project folder from the command line.
@@ -73,6 +75,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
 1. **Update the documentation** (`README.md`, `CONTRIBUTING.md`) to reflect the changes you plan to make.
 
 1. **Write or update tests** for the changes you are going to make.
+
+    - Make sure that your tests fail before writing other code.
 
     - The tests are located in the `/test` folder. Each schema has one test file where all its tests are located. For example, the tests for the Language schema are located in `test/Language.test.js`.
 
@@ -106,7 +110,7 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
         - `patch`: Typos, changes to descriptions, minor bugs and hotfixes, or other changes that do not address the functionality of the schema
 
-1. **Run the tests** using `npm test` in the command line. Fix any issues that arise.
+1. **Run the tests** using `npm test` in the command line. Fix any issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
 
 1. **Double-check the documentation** (`README.md`, `CONTRIBUTING.md`) to make sure it still reflects the changes you made.
 
