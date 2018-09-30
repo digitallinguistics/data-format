@@ -1,24 +1,30 @@
 # The DLx Data Format
 
+## Introduction
+
 This project aims to create a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called Digital Linguistics (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
 
 This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil). This specification is a recommendation for how to store linguistic data in a way that is standardized, human-readable and web-compatible, using a popular data storage format on the web known as [JSON][23].
 
 Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
 
-* Read the [Introduction](#introduction) below to understand how the format works.
-
-* Read the [Schemas](#schemas) section to get started with using the DLx format in your own projects.
-
-* Need to report a bug or suggest a feature? [Open an issue on GitHub][21]. Check out the [contributing guidelines][18] for information on the best way to report a bug or request a feature.
-
-* Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][18].
-
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
 [![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
 [![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632)
 
-## Introduction
+## Contents & Quick Links
+
+* [About the Format](#about-the-format): learn what the DLx format is and how it works
+
+* [Schemas](#schemas): read the schemas and get started using the DLx format in your own projects
+
+* [Austin Principles of Data Citation](#austin-principles-of-data-citation): learn how the DLx format adheres to the Austin Principles of Data Citation in Linguistics
+
+* [Bugs & Feature Requests][20]: Need to report a bug or suggest a feature? [Open an issue on GitHub][21]. Check out the [contributing guidelines][18] for information on the best way to report a bug or request a feature.
+
+* [Contributing][18]: Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][18].
+
+## About the DLx Format
 
 The canonical way that linguists represent linguistic data in their publications is with an [interlinear gloss][4]. This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
 
@@ -195,6 +201,10 @@ Following the recommended data format in your own project is as easy as making s
 
 Note that most schemas have a strongly-recommended (but optional) `type` property indicating the schema that that object adheres to.
 
+## Austin Principles of Data Citation
+
+
+
 ## Want to Contribute?
 
 Check out the [Contributing Guidelines][18] for this project.
@@ -222,7 +232,7 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
-
+[20]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
 [21]: https://github.com/digitallinguistics/spec
 
 [23]: http://json.org/
