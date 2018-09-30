@@ -63,6 +63,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Fork the repository** and clone it to your computer.
 
+1. **Create an issue branch** for the particular issue you are addressing. You should only make changes to the code that are directly relevant to this issue.
+
 1. **Set up your development environment** by [installing Node.js][4].
 
 1. **Install project dependencies** by running `npm install` in the project folder from the command line.
@@ -117,7 +119,7 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
     1. **Run the tests again** (`npm run test`)
 
-1. **Open a pull request**. See GitHub's advice on [How to write the perfect pull request][12].
+1. **Open a pull request** from your issue branch into the `master` branch of the DLx repository. See GitHub's advice on [How to write the perfect pull request][12].
 
 1. **Address any changes requested by the reviewer**
 
@@ -125,23 +127,15 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 _These steps are for maintainers only:_
 
-1. **Increment the version number** of the branch by running `npm version {major|minor|patch} -m "Your commit message"` from the command line.
-
-    - Include a note closing the associated issue (e.g. `closes #167`).
-
 1. **Run upload script**: `npm run upload`
 
-1. **Open a pull request** into the `master` branch, and include the release notes in the comments.
+1. **Write the release note** for the pull request
 
-1. **Squash & merge** the PR into the `master` branch.
+1. **Squash & merge** the PR into the `master` branch
 
-1. **Create a release**
+    - Include the release note(s) for the change, along with a note closing the associated issue (e.g. `closes #167`)
 
-    - Title: vX.X.X
-
-    - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
-
-    - Each change should have one of the following labels:
+    - The commit message should follow the format `LABEL: description (#000)`, where the number in parentheses is the issue that is closed, **not** the issue number of the pull request.
 
         - CHANGE: (breaking) changes
         - DEP: changes to dependencies
@@ -152,6 +146,18 @@ _These steps are for maintainers only:_
         - NEW: new features
         - REMOVE: removed features
         - TEST: changes to tests
+
+1. **Create a release** when the necessary features are ready
+
+    - **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead).
+
+    - **Write the release notes**
+
+        - Title: vX.X.X
+
+        - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
+
+        - Compile the list of changes from each of the commits on the master branch
 
 1. **Publish to npm**: `npm publish`
 
