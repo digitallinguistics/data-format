@@ -66,7 +66,7 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Create an issue branch** for the particular issue you are addressing. You should only make changes to the code that are directly relevant to this issue.
 
-1. **(Optional) Open a pull request** to track your changes as you work. The pull request will have a simplified version of this checklist that you can follow while working on your code.
+1. **(Optional) Open a pull request** to track your changes as you work. The pull request will have a simplified version of this checklist that you can follow while working on your code. You will need to make at least one small change before you can open a pull request.
 
 1. **Set up your development environment** by [installing Node.js][4].
 
