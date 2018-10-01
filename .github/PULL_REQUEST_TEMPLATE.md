@@ -61,6 +61,7 @@ _This section is for maintainers only_
 - [ ] **Write the release note** for the PR
 - [ ] **Squash & merge PR into `master`**
     - Title: `LABEL: description (#000)`
+    - Description
     - Changelog: `LABEL: description (closes #000)`
 
 For releases:
