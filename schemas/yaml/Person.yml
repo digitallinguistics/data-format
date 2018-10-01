@@ -82,7 +82,7 @@ properties:
         - title: Language
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/Language.json'
-          description: 'Each item in the "languages" Array must be a valid Language Object.'
+          description: 'Each item in the "languages" Array must be a valid Language object'
         - additionalProperties: true
           properties:
 

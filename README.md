@@ -125,6 +125,8 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * An exported database should be self-contained and human-readable in the sense that a user should be able to find and follow any cross-references easily. For example, if the Lexeme `book1` has a cross-reference to the Lexeme `book2`, the `book1` Lexeme should reference the other Lexeme as `book2` and not just a database ID like `d0e51fcb-84af-44aa-ba16-67561e21c793`. Moreover, both `book1.json` and `book2.json` should be included in the export.
 
+* Typically, if an optional property is present, it must have data in it. If the data in the property is empty (e.g. an empty Array, an empty String, an Object without properties, etc.), you should remove that property before saving the data. In other words, do not store empty Strings, empty Arrays, etc. unless those properties are required. This helps keep storage costs to a minimum, while reducing clutter and maintaining human-readability.
+
 * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when a Sentence appears in the `"sentences"` property of a Lexeme, it is an example sentence. When it appears in the `"sentences"` property of a Text, it is a transcribed sentence from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
 
 ## Tests

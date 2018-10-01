@@ -38,7 +38,7 @@
         "title": "Allophone",
         "type": "object",
         "$ref": "#",
-        "description": "An allophone of this phoneme. Allophones are formatted exactly the same way as Phoneme Objects."
+        "description": "An allophone of this phoneme. Allophones are formatted exactly the same way as Phoneme objects."
       }
     },
     "backness": {
