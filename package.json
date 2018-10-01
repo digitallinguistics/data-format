@@ -39,7 +39,7 @@
     "build": "npm run convert & npm run docs & npm test",
     "convert": "node build/convert.js",
     "docs": "jschemer schemas/json -o docs -r ./.github/README.md -i index.js",
-    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+    "test": "npm run convert & jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
   }
 }
