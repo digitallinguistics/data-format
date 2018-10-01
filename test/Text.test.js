@@ -13,6 +13,7 @@ const data = {
       givenName:  `Smith`,
     },
   ],
+  genre:        `mythological narrative`,
   sentences:    [],
   title:        `How the world began`,
 };
