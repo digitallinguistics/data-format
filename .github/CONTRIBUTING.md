@@ -86,7 +86,9 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
     - The file `schemas.test.js` checks that each schema is a valid JSON Schema. You should not need to change this file.
 
-    - Each schema should be validated against *both* valid and invalid sample data. Each test file contains some valid sample data in the `data` variable near the top of the file. Update this sample data to match your proposed changes.
+    - Each schema should be validated against sample data, provided in the `data` variable near the top of the test file. Update this sample data to match your proposed changes. There should be sample data for each optional or required property (but only for the top-level schema; items that reference another schema in the specification, only minimal example data should be provided).
+
+    - Schemas do not have to be tested against invalid sample data, unless testing for specific issues that have arisen in the past, or common errors that developers are likely to make.
 
     - The first test in each file validates the sample data against its schema using `ajv`. You should not need to change this test.
 
