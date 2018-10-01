@@ -38,7 +38,7 @@
         "title": "Author",
         "type": "object",
         "$ref": "#/definitions/person",
-        "description": "A Person Object representing an author"
+        "description": "A Person object representing an author"
       }
     },
     "city": {

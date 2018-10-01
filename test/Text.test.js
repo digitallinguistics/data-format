@@ -14,8 +14,16 @@ const data = {
     },
   ],
   genre:        `mythological narrative`,
-  sentences:    [],
-  title:        `How the world began`,
+  sentences:    [
+    {
+      transcription: {},
+      translation:   {},
+      words:         [],
+    },
+  ],
+  title: {
+    eng: `How the world began`,
+  },
 };
 
 describe(`Text`, () => {

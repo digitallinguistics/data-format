@@ -32,7 +32,7 @@
     "content": {
       "title": "Content",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/mulitLangString.json",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
       "description": "A description of the content of this file, optionally in multiple languages or orthographies"
     },
     "contentType": {

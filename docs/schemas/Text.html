@@ -164,7 +164,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>An Object describing the acess rights to this Text</p>
+        <p><p>An object describing the acess rights to this Text</p>
 </p>
       </div>
 
@@ -231,17 +231,17 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Contributor</h1>
+                <h1 class='title meta any prop'>Person</h1>
               </summary>
           
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A Person Object that describes this contributor</p>
+                  <p><p>A Person object that describes this contributor</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="Contributor.html">Contributor</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="Person.html">Person</a> schema.</p>
           
           
             </details>
@@ -292,7 +292,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The date that this Text Object was last modified (<strong>not</strong> the date that the recording of the text was modified)</p>
+        <p><p>The date that this Text object was last modified (<strong>not</strong> the date that the recording of the text was modified)</p>
 </p>
       </div>
 
@@ -391,13 +391,45 @@
     </summary>
 
 
+
+
+
       <div class='description meta any prop'>
         <h2>Description</h2>
         <p><p>The genre of the text, e.g. folktale, personal narrative, or expository</p>
 </p>
       </div>
 
-    <p class='$ref any prop'>Must be an instance of the <a href="genre.html">genre</a> schema.</p>
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='min-length string prop'><strong>Min length:</strong> <code>1</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   </details>
@@ -577,7 +609,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A Note Object</p>
+                  <p><p>A Note object</p>
           </p>
                 </div>
           
@@ -742,7 +774,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A Sentence Object</p>
+                  <p><p>A Sentence object</p>
           </p>
                 </div>
           
@@ -756,29 +788,6 @@
       </div>
 
 
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Status: <code>"status"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The status of this text (in a fieldwork workflow)</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="status.html">status</a> schema.</p>
 
 
   </details>
@@ -874,7 +883,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Address.html">Address</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Access.html">Access Rights</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 
