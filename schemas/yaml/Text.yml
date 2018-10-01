@@ -122,12 +122,6 @@ properties:
       $ref: 'http://cdn.digitallinguistics.io/schemas/Sentence.json'
       description: 'A Sentence Object'
 
-  status:
-    title: Status
-    type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/status.json'
-    description: 'The status of this text (in a fieldwork workflow)'
-
   tags:
     title: Tags
     type:  object
