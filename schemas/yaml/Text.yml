@@ -39,7 +39,7 @@ properties:
     items:
       title: Person
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Contributor.json'
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Person.json'
       description: 'A Person object that describes this contributor'
 
   dateCreated:
