@@ -167,16 +167,16 @@ Another great feature of JSON is that adding new properties to an Object doesn't
 ### Linguistic Schemas
 The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does *not* need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.
 
-* [Language](http://developer.digitallinguistics.io/spec/schemas/Language.html)
-* [Orthography](http://developer.digitallinguistics.io/spec/schemas/Orthography.html)
-* [Text](http://developer.digitallinguistics.io/spec/schemas/Text.html)
-* [Sentence](http://developer.digitallinguistics.io/spec/schemas/Sentence.html)
-* [Word](http://developer.digitallinguistics.io/spec/schemas/Word.html)
-* [Morpheme](http://developer.digitallinguistics.io/spec/schemas/Morpheme.html)
-* [Phoneme](http://developer.digitallinguistics.io/spec/schemas/Phoneme.html)
-* [Lexicon](http://developer.digitallinguistics.io/spec/schemas/Lexicon.html)
-* [Lexeme](http://developer.digitallinguistics.io/spec/schemas/Lexeme.html)
-* [Transcription](http://developer.digitallinguistics.io/spec/schemas/Transcription.html)
+* [Language](https://digitallinguistics.github.io/spec/schemas/Language.html)
+* [Orthography](https://digitallinguistics.github.io/spec/schemas/Orthography.html)
+* [Text](https://digitallinguistics.github.io/spec/schemas/Text.html)
+* [Sentence](https://digitallinguistics.github.io/spec/schemas/Sentence.html)
+* [Word](https://digitallinguistics.github.io/spec/schemas/Word.html)
+* [Morpheme](https://digitallinguistics.github.io/spec/schemas/Morpheme.html)
+* [Phoneme](https://digitallinguistics.github.io/spec/schemas/Phoneme.html)
+* [Lexicon](https://digitallinguistics.github.io/spec/schemas/Lexicon.html)
+* [Lexeme](https://digitallinguistics.github.io/spec/schemas/Lexeme.html)
+* [Transcription](https://digitallinguistics.github.io/spec/schemas/Transcription.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
@@ -213,23 +213,23 @@ Check out the [Contributing Guidelines][18] for this project.
 
 This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 
-[1]:  http://developer.digitallinguistics.io/spec/schemas/Abbreviation.html
-[2]:  http://developer.digitallinguistics.io/spec/schemas/Access.html
-[3]:  http://developer.digitallinguistics.io/spec/schemas/Bundle.html
+[1]:  https://digitallinguistics.github.io/spec/schemas/Abbreviation.html
+[2]:  https://digitallinguistics.github.io/spec/schemas/Access.html
+[3]:  https://digitallinguistics.github.io/spec/schemas/Bundle.html
 [4]:  https://en.wikipedia.org/wiki/Interlinear_gloss
-[5]:  http://developer.digitallinguistics.io/spec/schemas/Media.html
-[6]:  http://developer.digitallinguistics.io/spec/schemas/Note.html
-[7]:  http://developer.digitallinguistics.io/spec/schemas/Person.html
-[8]:  http://developer.digitallinguistics.io/spec/schemas/Address.html
-[9]:  http://developer.digitallinguistics.io/spec/schemas/Tags.html
-[10]: http://developer.digitallinguistics.io/spec/schemas/DateCreated.html
-[11]: http://developer.digitallinguistics.io/spec/schemas/DateModified.html
-[12]: http://developer.digitallinguistics.io/spec/schemas/DateRecorded.html
-[13]: http://developer.digitallinguistics.io/spec/schemas/LexemeReference.html
-[14]: http://developer.digitallinguistics.io/spec/schemas/MultiLangString.html
-[15]: http://developer.digitallinguistics.io/spec/schemas/Reference.html
-[16]: http://developer.digitallinguistics.io/spec/schemas/URL.html
-[17]: http://developer.digitallinguistics.io/spec/schemas/Location.html
+[5]:  https://digitallinguistics.github.io/spec/schemas/Media.html
+[6]:  https://digitallinguistics.github.io/spec/schemas/Note.html
+[7]:  https://digitallinguistics.github.io/spec/schemas/Person.html
+[8]:  https://digitallinguistics.github.io/spec/schemas/Address.html
+[9]:  https://digitallinguistics.github.io/spec/schemas/Tags.html
+[10]: https://digitallinguistics.github.io/spec/schemas/DateCreated.html
+[11]: https://digitallinguistics.github.io/spec/schemas/DateModified.html
+[12]: https://digitallinguistics.github.io/spec/schemas/DateRecorded.html
+[13]: https://digitallinguistics.github.io/spec/schemas/LexemeReference.html
+[14]: https://digitallinguistics.github.io/spec/schemas/MultiLangString.html
+[15]: https://digitallinguistics.github.io/spec/schemas/Reference.html
+[16]: https://digitallinguistics.github.io/spec/schemas/URL.html
+[17]: https://digitallinguistics.github.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
 [20]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
