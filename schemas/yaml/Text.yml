@@ -69,7 +69,6 @@ properties:
   genre:
     title: Genre
     type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/genre.json'
     description: 'The genre of the text, e.g. folktale, personal narrative, or expository'
     minLength: 1
 
