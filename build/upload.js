@@ -112,7 +112,7 @@ function uploadYAMLUnversioned(schemaName, yamlSchema) {
  * @return {Promise}
  */
 function uploadYAMLVersioned(schemaName, yamlSchema, version) {
-  return uploadBlob(`${schemaName}-${version}.yml`, yamlSchema, version);
+  return uploadBlob(`${schemaName}-${version}.yml`, yamlSchema, yamlMedia);
 }
 
 /**
