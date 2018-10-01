@@ -41,7 +41,7 @@ properties:
       title: Morpheme
       type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Morpheme.json'
-      description: 'An Object representing this morphem'
+      description: 'An object representing this morphem'
 
   notes:
     title: Notes

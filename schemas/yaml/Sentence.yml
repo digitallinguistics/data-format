@@ -110,4 +110,4 @@ properties:
       title: Word
       type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Word.json'
-      description: 'A Word Object'
+      description: 'A Word object'
