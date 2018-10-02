@@ -28,7 +28,7 @@ Please consider citing this specification in scholarly articles using this repos
 
 * [Contributing][18]: Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][18].
 
-* [Developer Readme][25]: Are you a developer who wants to work with the data format programmatically? Check out the [developer readme][25].
+* [Developer Readme][25]: Are you a developer who wants to work with the data format programmatically? Check out the [Developer Readme][25].
 
 ## About the DLx Format
 
