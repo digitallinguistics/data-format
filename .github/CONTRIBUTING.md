@@ -161,8 +161,14 @@ _These steps are for maintainers only:_
     - **Write the release notes**
 
         - Title: vX.X.X
+        
+        - Description: High-level overview of the changes
 
-        - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
+        - Changelog:
+        
+            - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
+            
+            - `LABEL: description (#000)`
 
         - Compile the list of changes from each of the commits on the master branch
     
