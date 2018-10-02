@@ -3,14 +3,17 @@
  */
 
 /* eslint-disable
+  no-await-in-loop,
   no-console,
 */
 
 // IMPORTS
 require(`../../credentials/azure-storage-dlx`);
 
+const chalk         = require(`chalk`);
 const path          = require(`path`);
 const { promisify } = require(`util`);
+const semverRegExp  = require(`semver-regex`)();
 const storage       = require(`azure-storage`).createBlobService();
 const yamljs        = require(`yamljs`);
 
@@ -20,7 +23,8 @@ const {
 } = require(`fs`).promises;
 
 // PROMISES
-const storeFile = promisify(storage.createBlockBlobFromText).bind(storage);
+const getBlobProperties = promisify(storage.getBlobProperties).bind(storage);
+const storeFile         = promisify(storage.createBlockBlobFromText).bind(storage);
 
 // VARIABLES
 const jsonMedia = `application/schema+json; charset=utf-8`;
@@ -33,86 +37,44 @@ const schemasPath      = path.join(__dirname, `../schemas/yaml`);
 
 /**
  * A Promisifed version of createBlockBlobFromText
- * @param  {String}  blobname                                               The name to upload the file as
- * @param  {String}  text                                                   The text of the file
+ * @param  {String}  blobName                                               The name to upload the file as
+ * @param  {String}  schema                                                 The text of the file
  * @param  {String}  [contentType=`application/schema+json; charset=utf-8`] Content type (MIME / media type)
  * @return {Promise}
  */
-function uploadBlob(blobname, text, contentType = jsonMedia) {
-  return storeFile(
-    `schemas`,
-    blobname,
-    text,
-    {
-      contentSettings: {
-        contentLanguage: `en-US`,
-        contentType,
-      },
+async function uploadBlob(blobName, schema, contentType = jsonMedia) {
+
+  let blobProperties;
+
+  // If file is versioned, check whether version already exists and throw a warning if it does
+  if (semverRegExp.test(blobName)) {
+    try {
+      blobProperties = await getBlobProperties(`schemas`, blobName);
+      console.warn(chalk.bgRed(`${blobName} already exists. Upload skipped.`));
+    } catch (e) {
+      // Don't handle exceptions; allow code to continue executing
     }
-  );
-}
+  }
 
-/**
- * Uploads the .json, unversioned, JSON version of the schema
- * @param  {String}       schemaName Name of the schema
- * @param  {String<JSON>} jsonSchema The schema as JSON text
- * @return {Promise}
- */
-function uploadJSONUnversioned(schemaName, jsonSchema) {
-  return uploadBlob(`${schemaName}.json`, jsonSchema);
-}
+  // Upload the file if its versioned form doesn't already exist
+  if (!blobProperties) {
 
-/**
- * Uploades the .json, versioned, JSON version of the schema
- * @param  {String}         schemaName Name of the schema
- * @param  {String<JSON>}   jsonSchema The schema as JSON text
- * @param  {String<semver>} version    The version as a semver String
- * @return {Promise}
- */
-function uploadJSONVersioned(schemaName, jsonSchema, version) {
-  return uploadBlob(`${schemaName}-${version}.json`, jsonSchema);
-}
+    await storeFile(
+      `schemas`,
+      blobName,
+      schema,
+      {
+        contentSettings: {
+          contentLanguage: `en-US`,
+          contentType,
+        },
+      }
+    );
 
-/**
- * Uploads the no-extension, unversioned, JSON version of the schema
- * @param  {String}       schemaName Name of the schema
- * @param  {String<JSON>} jsonSchema The schema as JSON text
- * @return {Promise}
- */
-function uploadPlainUnversioned(schemaName, jsonSchema) {
-  return uploadBlob(schemaName, jsonSchema);
-}
+    console.log(chalk.green(`${blobName} uploaded.`));
 
-/**
- * Uploads the no-extension, versioned, JSON version of the schema
- * @param  {String}         schemaName Name of the schema
- * @param  {String<JSON>}   jsonSchema The schema as JSON text
- * @param  {String<semver>} version    The version as a semver String
- * @return {Promise}
- */
-function uploadPlainVersioned(schemaName, jsonSchema, version) {
-  return uploadBlob(`${schemaName}-${version}`, jsonSchema);
-}
+  }
 
-/**
- * Uploads the .yml, unversioned, YAML version of the schema
- * @param  {String}       schemaName Name of the schema
- * @param  {String<YAML>} yamlSchema The schema as YAML text
- * @return {Promise}
- */
-function uploadYAMLUnversioned(schemaName, yamlSchema) {
-  return uploadBlob(`${schemaName}.yml`, yamlSchema, yamlMedia);
-}
-
-/**
- * Uploads the .yml, versioned, YAML version of the schema
- * @param  {String}         schemaName Name of the schema
- * @param  {String<YAML>}   yamlSchema The schema as YAML text
- * @param  {String<semver>} version    The version as a semver String
- * @return {Promise}
- */
-function uploadYAMLVersioned(schemaName, yamlSchema, version) {
-  return uploadBlob(`${schemaName}-${version}.yml`, yamlSchema, yamlMedia);
 }
 
 /**
@@ -132,21 +94,28 @@ async function uploadSchemaFiles(filename) {
     version,
   } = schemaNameRegExp.exec(schema.id).groups;
 
+  // blobName, schema, contentType = jsonMedia
+
   await Promise.all([
-    uploadPlainUnversioned(schemaName, jsonSchema),
-    uploadPlainVersioned(schemaName, jsonSchema, version),
-    uploadJSONUnversioned(schemaName, jsonSchema),
-    uploadJSONVersioned(schemaName, jsonSchema, version),
-    uploadYAMLUnversioned(schemaName, yamlSchema),
-    uploadYAMLVersioned(schemaName, yamlSchema, version),
+    uploadBlob(schemaName, jsonSchema),                                // plain unversioned
+    uploadBlob(`${schemaName}-${version}`, jsonSchema),                // plain versioned
+    uploadBlob(`${schemaName}.json`, jsonSchema),                      // JSON unversioned
+    uploadBlob(`${schemaName}-${version}.json`, jsonSchema),           // JSON versioned
+    uploadBlob(`${schemaName}.yml`, yamlSchema, yamlMedia),            // YAML unversioned
+    uploadBlob(`${schemaName}-${version}.yml`, yamlSchema, yamlMedia), // YAML versioned
   ]);
 
-  console.log(`${schemaName} schema uploaded`);
+  console.log(`${schemaName} schemas uploaded.`);
 
 }
 
 // TOP-LEVEL SCRIPT
 void async function upload() {
+
   const filenames = await readdir(schemasPath, `utf8`);
-  await Promise.all(filenames.map(uploadSchemaFiles));
+
+  for (const filename of filenames) {
+    await uploadSchemaFiles(filename);
+  }
+
 }();

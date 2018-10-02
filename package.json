@@ -30,8 +30,10 @@
   "devDependencies": {
     "ajv": "^4.11.8",
     "azure-storage": "^2.10.1",
+    "chalk": "^2.4.1",
     "jasmine": "^3.2.0",
     "jschemer": "^2.0.0-alpha.10",
+    "semver-regex": "^2.0.0",
     "yamljs": "^0.3.0"
   },
   "main": "schemas/json",
