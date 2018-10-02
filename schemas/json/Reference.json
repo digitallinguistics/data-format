@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.0.3.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.0.4.json",
   "title": "Bibliographic Reference",
   "type": "object",
   "description": "A bibliographic Reference. Note: The `type` field in a reference refers to the type of reference, not the type of DLx object.",
@@ -138,8 +138,8 @@
     "url": {
       "title": "URL",
       "type": "string",
-      "description": "A URL for this Reference",
-      "format": "uri"
+      "format": "uri",
+      "description": "A URL for this Reference"
     },
     "volume": {
       "title": "Volume",
@@ -149,8 +149,8 @@
     "year": {
       "title": "Year",
       "type": "integer",
-      "description": "The year this item was published",
       "minimum": 0,
+      "description": "The year this item was published",
       "exclusiveMinimum": true
     }
   }

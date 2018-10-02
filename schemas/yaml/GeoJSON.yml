@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/GeoJSON-1.0.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/GeoJSON-1.0.2.json'
 title:   'GeoJSON Object'
 type:    object
 
@@ -38,10 +38,10 @@ properties:
           - properties
         properties:
           type:
-            title: 'CRS Type'
-            type:  string
-            description: 'The value of the type member must be a string, indicating the type of CRS object.'
+            title:     'CRS Type'
+            type:      string
             minLength: 1
+            description: 'The value of the type member must be a string, indicating the type of CRS object.'
           properties:
             title: 'CRS Properties'
             type:  object
@@ -71,10 +71,10 @@ properties:
                   - href
                 properties:
                   href:
-                    title: href
-                    type:  string
-                    description: 'The value of the required `href` member must be a dereferenceable URI.'
+                    title:  href
+                    type:   string
                     format: uri
+                    description: 'The value of the required `href` member must be a dereferenceable URI.'
                   type:
                     title: 'Link Object Type'
                     type:  string

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Word-2.3.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Word-2.3.2.json'
 title:   Word
 type:    object
 
@@ -27,10 +27,10 @@ properties:
     description: 'A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.'
 
   key:
-    title: Key
-    type:  string
-    description: 'A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Sentence within the text, another period, and then the number of this word within the Sentence (indexing starts at 1). For example, for the fourth word of the third Sentence of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.'
+    title:   Key
+    type:    string
     pattern: '^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$'
+    description: 'A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Sentence within the text, another period, and then the number of this word within the Sentence (indexing starts at 1). For example, for the fourth word of the third Sentence of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.'
 
   morphemes:
     title: 'Morphemes / Components'

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Person-1.2.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Person-1.2.2.json'
 title:   Person
 type:    object
 
@@ -39,10 +39,10 @@ properties:
     description: 'The address for this person'
 
   birthDate:
-    title: 'Birth Date'
-    type:  string
-    description: 'This person’s birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime)'
+    title:  'Birth Date'
+    type:   string
     format: date-time
+    description: 'This person’s birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime)'
 
   birthPlace:
     title: 'Birth Place'
@@ -51,10 +51,10 @@ properties:
     description: 'This person’s place of birth, as a Location object'
 
   email:
-    title: Email
-    type:  string
-    description: 'This person’s email'
+    title:  Email
+    type:   string
     format: email
+    description: 'This person’s email'
 
   familyName:
     title: 'Family Name(s) / Last Name(s)'

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.2.json'
 title:   Lexeme
 type:    object
 
@@ -125,10 +125,10 @@ properties:
       description: 'A reference to a lexeme'
 
   key:
-    title: 'Lexeme Key'
-    type:  string
-    description: 'A human-readable key that uniquely identifies this lexeme or variant within its Lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the Lexicon. (Keys do not need to be unique across lexicons.)'
+    title:   'Lexeme Key'
+    type:    string
     pattern: '^[^ ]+$'
+    description: 'A human-readable key that uniquely identifies this lexeme or variant within its Lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the Lexicon. (Keys do not need to be unique across lexicons.)'
 
   lemma:
     title: Lemma

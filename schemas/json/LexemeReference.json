@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.2.json",
   "title": "Lexeme Reference",
   "type": "object",
   "description": "A reference to a Lexeme in a Lexicon. May point to either a top-level Lexeme or a variant.",
@@ -20,8 +20,8 @@
     "lexeme": {
       "title": "Referenced Lexeme (Key)",
       "type": "string",
-      "description": "The key of the lexeme being referenced",
-      "pattern": "^[^ ]+$"
+      "pattern": "^[^ ]+$",
+      "description": "The key of the lexeme being referenced"
     },
     "lexemeURL": {
       "title": "Referenced Lexeme (URL)",
