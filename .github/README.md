@@ -28,6 +28,8 @@ Please consider citing this specification in scholarly articles using this repos
 
 * [Contributing][18]: Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][18].
 
+* [Developer Readme[25]: Are you a developer who wants to work with the data format programmatically? Check out the [developer readme][25].
+
 ## About the DLx Format
 
 The canonical way that linguists represent linguistic data in their publications is with an [interlinear gloss][4]. This is typically a 3- or 4-line format that shows a phrase in the language of interest, the words and morphemes inside the phrase, what each of those morphemes means, and its overall translation. Here is a short example of an interlinear gloss for a phrase in a language called Chitimacha:
@@ -207,7 +209,7 @@ Note that most schemas have a strongly-recommended (but optional) `type` propert
 
 ## Want to Contribute?
 
-Check out the [Contributing Guidelines][18] for this project.
+Check out the [Contributing Guidelines][18] for this project, and the [Developer Readme][25].
 
 ## Maintainers
 
@@ -237,3 +239,4 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [22]: http://site.uit.no/linguisticsdatacitation/
 [23]: http://json.org/
 [24]: http://site.uit.no/linguisticsdatacitation/austinprinciples/
+[25:] https://github.com/digitallinguistics/spec/blob/master/.github/README.md
