@@ -8,6 +8,12 @@ let validate;
 // VALID SAMPLE DATA
 const data = {
   abbreviation:    `chiti`,
+  access:          {
+    AILLA: `password`,
+    notes: {
+      eng: `Materials on this language should not be made available to non-tribal members without permission.`,
+    },
+  },
   additionalNames: [`Sitimaxa`],
   autonym:         {
     apa:    `Sitimaša`,

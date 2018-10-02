@@ -25,6 +25,12 @@ properties:
     $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
     description: 'A short, human-readable abbreviation for this Language'
 
+  access:
+    title: 'Access Rights'
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Access.json'
+    description: 'An object describing who may have access to materials on this language.'
+
   additionalNames:
     title: 'Additional Names'
     type:  array
