@@ -6,7 +6,10 @@ let ajv;
 let validate;
 
 // VALID SAMPLE DATA
-const data = {};
+const data = {
+  lemma:  {},
+  senses: [],
+};
 
 describe(`Lexeme`, () => {
 
