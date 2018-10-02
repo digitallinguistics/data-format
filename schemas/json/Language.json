@@ -110,6 +110,17 @@
         "description": "A Phoneme object"
       }
     },
+    "references": {
+      "title": "Bibliographic References",
+      "type": "array",
+      "description": "A collection of bibliographic references about this language.",
+      "items": {
+        "title": "Bibliographic Reference",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json",
+        "description": "A bibliographic reference about this language."
+      }
+    },
     "url": {
       "title": "URL",
       "type": "string",

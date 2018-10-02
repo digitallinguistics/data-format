@@ -20,6 +20,20 @@ const data = {
     ipa:    `Sitimaʃa`,
     modern: `Sitimaxa`,
   },
+  contributors:       [
+    {
+      familyName: `Swadesh`,
+      givenName:  `Morris`,
+      roles:      [`researcher`],
+      type:       `Person`,
+    },
+    {
+      familyName: `Paul`,
+      givenName:  `Benjamin`,
+      roles:      [`speaker`],
+      type:       `Person`,
+    },
+  ],
   dateCreated:        `2017-07-24T17:41:18.539Z`,
   dateModified:       `2017-07-24T17:41:18.539Z`,
   defaultOrthography: `modern`,
@@ -29,6 +43,18 @@ const data = {
   name:               { eng: `Chitimacha` },
   orthographies:      [],
   phonemes:           [],
+  references:         [
+    {
+      authors:     [{ firstName: `Morris`, lastName: `Swadesh` }],
+      city:        `New York`,
+      editors:     [{ firstName: `Cornelius`, lastName: `Osgood` }],
+      pages:       `312-336`,
+      publication: `Linguistic Structures of Native America`,
+      title:       `Chitimacha`,
+      type:        `book section`,
+      year:        1946,
+    },
+  ],
   type:               `Language`,
   url:                `https://api.digitallinguistics.io/languages/chitimacha/`,
 };
