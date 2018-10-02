@@ -60,6 +60,9 @@ const data = {
       year:        1946,
     },
   ],
+  tags: {
+    morphologicalType: `synthetic`,
+  },
   type:               `Language`,
   url:                `https://api.digitallinguistics.io/languages/chitimacha/`,
 };

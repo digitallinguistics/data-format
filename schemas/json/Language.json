@@ -159,8 +159,14 @@
         "title": "Bibliographic Reference",
         "type": "object",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json",
-        "description": "A bibliographic reference about this language."
+        "description": "A bibliographic reference about this language"
       }
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "description": "A set of tags for this Language"
     },
     "url": {
       "title": "URL",
