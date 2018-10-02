@@ -44,10 +44,11 @@ const schemasPath      = path.join(__dirname, `../schemas/yaml`);
  */
 async function uploadBlob(blobName, schema, contentType = jsonMedia) {
 
+  const hasVersion = semverRegExp.test(blobName);
   let blobProperties;
 
   // If file is versioned, check whether version already exists and throw a warning if it does
-  if (semverRegExp.test(blobName)) {
+  if (hasVersion) {
     try {
       blobProperties = await getBlobProperties(`schemas`, blobName);
       console.warn(chalk.bgRed(`${blobName} already exists. Upload skipped.`));
@@ -71,7 +72,7 @@ async function uploadBlob(blobName, schema, contentType = jsonMedia) {
       }
     );
 
-    console.log(chalk.green(`${blobName} uploaded.`));
+    if (hasVersion) console.log(chalk.green(`${blobName} uploaded.`));
 
   }
 
