@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Bundle-1.1.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Bundle-1.1.2.json",
   "title": "Bundle",
   "type": "object",
   "description": "A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.",
@@ -44,8 +44,8 @@
     "locations": {
       "title": "Locations",
       "type": "array",
-      "description": "An array of locations included in this bundle (usually locations that were visited during a day or session)",
       "uniqueItems": true,
+      "description": "An array of locations included in this bundle (usually locations that were visited during a day or session)",
       "items": {
         "title": "Location",
         "type": "object",
@@ -56,8 +56,8 @@
     "media": {
       "title": "Media",
       "type": "array",
-      "description": "An array of media files included in this bundle",
       "uniqueItems": true,
+      "description": "An array of media files included in this bundle",
       "items": {
         "title": "Media File",
         "type": "object",
@@ -74,8 +74,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this bundle",
       "uniqueItems": true,
+      "description": "A collection of notes about this bundle",
       "items": {
         "title": "Note",
         "type": "object",
@@ -86,8 +86,8 @@
     "persons": {
       "title": "Persons",
       "type": "array",
-      "description": "An array of persons associated with this bundle",
       "uniqueItems": true,
+      "description": "An array of persons associated with this bundle",
       "items": {
         "title": "Person",
         "type": "object",
@@ -104,8 +104,8 @@
     "texts": {
       "title": "Texts",
       "type": "array",
-      "description": "An array of texts included in this bundle.",
       "uniqueItems": true,
+      "description": "An array of texts included in this bundle.",
       "items": {
         "title": "Text",
         "type": "object",

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Text-2.1.4.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Text-2.1.5.json'
 title:   Text
 type:    object
 
@@ -90,10 +90,10 @@ properties:
       description: 'An object describing a media file'
 
   notes:
-    title: Notes
-    type:  array
-    description: 'A collection of notes about this Text'
+    title:       Notes
+    type:        array
     uniqueItems: true
+    description: 'A collection of notes about this Text'
     items:
       title: Note
       type:  object

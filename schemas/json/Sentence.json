@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.1.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.1.3.json",
   "title": "Sentence",
   "type": "object",
   "description": "The term *sentence* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
@@ -47,8 +47,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this Sentence",
       "uniqueItems": true,
+      "description": "A collection of notes about this Sentence",
       "items": {
         "title": "Note",
         "type": "object",
@@ -112,8 +112,8 @@
     "words": {
       "title": "Words",
       "type": "array",
-      "description": "A collection of the word tokens contained in this Sentence",
       "uniqueItems": false,
+      "description": "A collection of the word tokens contained in this Sentence. Tokens do not need to be unique.",
       "items": {
         "title": "Word",
         "type": "object",

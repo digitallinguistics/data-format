@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.3.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
@@ -26,9 +26,9 @@
     "allomorphs": {
       "title": "Allomorphs",
       "type": "array",
-      "description": "A list of allomorphs of this Lexeme",
-      "minItems": 1,
       "uniqueItems": true,
+      "minItems": 1,
+      "description": "A list of allomorphs of this Lexeme",
       "items": {
         "title": "Allomorph",
         "type": "object",
@@ -48,8 +48,8 @@
           "environments": {
             "title": "Environments",
             "type": "array",
-            "description": "A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.",
             "uniqueItems": true,
+            "description": "A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.",
             "items": {
               "title": "Environment",
               "type": "string",
@@ -68,9 +68,9 @@
     "components": {
       "title": "Components",
       "type": "array",
-      "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).",
-      "minItems": 1,
       "uniqueItems": false,
+      "minItems": 1,
+      "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).",
       "items": {
         "title": "Referenced Lexeme",
         "type": "object",
@@ -93,8 +93,8 @@
     "examples": {
       "title": "Examples",
       "type": "array",
-      "description": "A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.",
       "uniqueItems": true,
+      "description": "A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.",
       "items": {
         "title": "Example Sentence",
         "type": "object",
@@ -125,8 +125,8 @@
     "includedIn": {
       "title": "Included In",
       "type": "array",
-      "description": "A list of references to lexemes or variants that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
       "uniqueItems": true,
+      "description": "A list of references to lexemes or variants that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
       "items": {
         "title": "Lexicon Reference",
         "type": "object",
@@ -149,8 +149,8 @@
     "lexicalRelations": {
       "title": "Lexical Relations",
       "type": "array",
-      "description": "A list of the lexical relations that this lexeme has to other lexemes or variants",
       "uniqueItems": true,
+      "description": "A list of the lexical relations that this lexeme has to other lexemes or variants",
       "items": {
         "title": "Lexical Relation (Lexeme Reference)",
         "type": "object",
@@ -173,8 +173,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this Lexeme",
       "uniqueItems": true,
+      "description": "A collection of notes about this Lexeme",
       "items": {
         "title": "Note",
         "type": "object",
@@ -185,8 +185,8 @@
     "references": {
       "title": "Bibliographic References",
       "type": "array",
-      "description": "A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.",
       "uniqueItems": true,
+      "description": "A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.",
       "items": {
         "title": "Reference",
         "type": "object",
@@ -197,8 +197,8 @@
     "sources": {
       "title": "Sources",
       "type": "array",
-      "description": "A list of attested sources for this lexeme or variant",
       "uniqueItems": true,
+      "description": "A list of attested sources for this lexeme or variant",
       "items": {
         "title": "Source",
         "type": "string",
@@ -236,8 +236,8 @@
     "variants": {
       "title": "Variants",
       "type": "array",
-      "description": "A list of variants of this Lexeme",
       "uniqueItems": true,
+      "description": "A list of variants of this Lexeme",
       "items": {
         "title": "Referenced Variant (Lexeme Reference)",
         "type": "object",
@@ -254,8 +254,8 @@
     "senses": {
       "title": "Senses",
       "type": "array",
-      "description": "A collection of senses for this Lexeme",
       "uniqueItems": true,
+      "description": "A collection of senses for this Lexeme",
       "items": {
         "title": "Sense",
         "type": "object",
@@ -291,8 +291,8 @@
           "examples": {
             "title": "Examples",
             "type": "array",
-            "description": "A collection of examples of this sense in use. Each example is a Sentence.",
             "uniqueItems": true,
+            "description": "A collection of examples of this sense in use. Each example is a Sentence.",
             "items": {
               "title": "Example Sentence",
               "type": "object",
@@ -315,8 +315,8 @@
           "lexicalRelations": {
             "title": "Lexical Relations",
             "type": "array",
-            "description": "A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.",
             "uniqueItems": true,
+            "description": "A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.",
             "items": {
               "title": "Lexical Relation (Lexeme Reference)",
               "type": "object",
@@ -327,8 +327,8 @@
           "media": {
             "title": "Media",
             "type": "array",
-            "description": "Media items associated with this lexeme, such as recordings of the word, pictures of the item the word refers to, or videos of the action being performed.",
             "uniqueItems": true,
+            "description": "Media items associated with this lexeme, such as recordings of the word, pictures of the item the word refers to, or videos of the action being performed.",
             "items": {
               "title": "Media Item",
               "type": "object",
@@ -339,8 +339,8 @@
           "notes": {
             "title": "Notes",
             "type": "array",
-            "description": "A collection of notes about this sense",
             "uniqueItems": true,
+            "description": "A collection of notes about this sense",
             "items": {
               "title": "Note",
               "type": "object",
@@ -351,8 +351,8 @@
           "references": {
             "title": "Bibliographic References",
             "type": "array",
-            "description": "A collection of bibliographic references about this particular sense",
             "uniqueItems": true,
+            "description": "A collection of bibliographic references about this particular sense",
             "items": {
               "title": "Reference",
               "type": "object",
@@ -368,8 +368,8 @@
           "sources": {
             "title": "Sources",
             "type": "array",
-            "description": "A list of attested sources for this sense",
             "uniqueItems": true,
+            "description": "A list of attested sources for this sense",
             "items": {
               "title": "Source",
               "type": "string",
@@ -385,8 +385,8 @@
           "usages": {
             "title": "Usages",
             "type": "array",
-            "description": "A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.",
             "uniqueItems": true,
+            "description": "A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.",
             "items": {
               "title": "Usage",
               "type": "object",
@@ -403,8 +403,8 @@
           "variants": {
             "title": "Variants",
             "type": "array",
-            "description": "A list of variants of this sense",
             "uniqueItems": true,
+            "description": "A list of variants of this sense",
             "items": {
               "title": "Referenced Variant (Lexeme Reference)",
               "type": "object",

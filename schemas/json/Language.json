@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-6.0.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-6.1.0.json",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -23,11 +23,17 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
       "description": "A short, human-readable abbreviation for this Language"
     },
+    "access": {
+      "title": "Access Rights",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
+      "description": "An object describing who may have access to materials on this language."
+    },
     "additionalNames": {
       "title": "Additional Names",
       "type": "array",
-      "description": "An Array of additional names for this Language. Only use this property if the \"name\" property is not sufficent to describe the various names for this language.",
       "uniqueItems": true,
+      "description": "An Array of additional names for this Language. Only use this property if the \"name\" property is not sufficent to describe the various names for this language.",
       "items": {
         "title": "Additional Language Name",
         "type": "string"
@@ -36,13 +42,26 @@
     "autonym": {
       "title": "Autonym",
       "type": "object",
-      "description": "The autonym for this language, optionally in multiple orthographies",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
+      "description": "The autonym for this language, optionally in multiple orthographies"
+    },
+    "contributors": {
+      "title": "Contributors",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its \"roles\" property specified, so that the contribution of each person is known.",
+      "items": {
+        "title": "Contributor (Person)",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json",
+        "description": "A Person object describing a contributor"
+      }
     },
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
       "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
       "description": "The date and optionally time that this Language object was created"
     },
     "dateModified": {
@@ -63,11 +82,24 @@
       "pattern": "^[a-z]{3}$",
       "description": "The ISO 639-3 code for this language variety, as a 3-letter String"
     },
+    "lexemes": {
+      "title": "Lexemes",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "A collection of the lexemes in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Lexeme be stored as a separate JSON document.",
+      "items": {
+        "title": "Lexeme",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Lexeme.json",
+        "description": "A Lexeme object"
+      }
+    },
     "locations": {
       "title": "Locations",
       "type": "array",
-      "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data",
       "uniqueItems": true,
+      "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data",
       "items": {
         "title": "Location",
         "type": "object",
@@ -81,11 +113,24 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
       "description": "The name of this Language, optionally in multiple languages. Use the `additionalNames` field to list other names for this Language."
     },
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "A collection of notes about this language",
+      "items": {
+        "title": "Note",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "description": "A Note about this Language"
+      }
+    },
     "orthographies": {
       "title": "Orthographies",
       "type": "array",
-      "description": "A collection of orthographies used to represent this Language",
       "uniqueItems": true,
+      "description": "A collection of orthographies used to represent this Language",
       "items": {
         "title": "Orthography",
         "type": "object",
@@ -103,6 +148,32 @@
         "$ref": "http://cdn.digitallinguistics.io/schemas/Phoneme.json",
         "description": "A Phoneme object"
       }
+    },
+    "references": {
+      "title": "Bibliographic References",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.",
+      "items": {
+        "title": "Bibliographic Reference",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json",
+        "description": "A bibliographic reference about this language"
+      }
+    },
+    "tags": {
+      "title": "Tags",
+      "type": "object",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "description": "A set of tags for this Language"
+    },
+    "texts": {
+      "title": "Texts",
+      "type": "array",
+      "minItem": 1,
+      "uniqueItems": true,
+      "description": "A collection of texts in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Text be stored as a separate JSON document."
     },
     "url": {
       "title": "URL",

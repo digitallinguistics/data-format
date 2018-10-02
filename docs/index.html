@@ -22,9 +22,9 @@
 <blockquote>
 <p>Hieber, Daniel W. 2018. <em>Data Format for Digital Linguistics</em>. DOI:<a href="https://digitallinguistics.github.io/spec/schemas/Media.html">10.5281/zenodo.1438589</a></p>
 </blockquote>
-<p><img src="https://img.shields.io/npm/dt/@digitallinguistics/spec.svg" alt="npm downloads">
+<p><a href="https://www.npmjs.com/package/@digitallinguistics/spec"><img src="https://img.shields.io/npm/dt/@digitallinguistics/spec.svg" alt="npm downloads"></a>
 <a href="https://zenodo.org/badge/latestdoi/50221632"><img src="https://zenodo.org/badge/50221632.svg" alt="DOI"></a>
-<img src="https://img.shields.io/github/license/digitallinguistics/spec.svg" alt="license"></p>
+<a href="https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md"><img src="https://img.shields.io/github/license/digitallinguistics/spec.svg" alt="license"></a></p>
 <h2>Contents &amp; Quick Links</h2>
 <ul>
 <li>
@@ -38,6 +38,9 @@
 </li>
 <li>
 <p><a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Contributing</a>: Want to contribute to this project? :star2: Awesome! :star2: <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Check out the contributing guidelines to get started</a>.</p>
+</li>
+<li>
+<p><a href="https://github.com/digitallinguistics/spec/blob/master/.github/README.md">Developer Readme</a>: Are you a developer who wants to work with the data format programmatically? Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/README.md">Developer Readme</a>.</p>
 </li>
 </ul>
 <h2>About the DLx Format</h2>
@@ -263,7 +266,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <p>Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Sentence schema by making sure you include the <code>transcription</code>, <code>translation</code>, and <code>words</code> properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the <code>startTime</code> and <code>endTime</code> properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).</p>
 <p>Note that most schemas have a strongly-recommended (but optional) <code>type</code> property indicating the schema that that object adheres to.</p>
 <h2>Want to Contribute?</h2>
-<p>Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Contributing Guidelines</a> for this project.</p>
+<p>Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Contributing Guidelines</a> for this project, and the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/README.md">Developer Readme</a>.</p>
 <h2>Maintainers</h2>
 <p>This repository is maintained by <a href="https://github.com/dwhieb/">Daniel W. Hieber</a> (<a href="https://github.com/dwhieb/">@dwhieb</a>).</p>
 </main>
@@ -271,7 +274,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
     <nav>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/DateCreated.html">Date Created</a></li><li><a href="schemas/DateModified.html">Date Modified</a></li><li><a href="schemas/DateRecorded.html">Date Recorded</a></li><li><a href="schemas/Language.html">Language</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/LexemeReference.html">Lexeme Reference</a></li><li><a href="schemas/Lexicon.html">Lexicon</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/Morpheme.html">Morpheme</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Sentence.html">Sentence</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/URL.html">URL</a></li><li><a href="schemas/Word.html">Word</a></li><li><a href="schemas/GeoJSON.html">GeoJSON Object</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li>
+        <li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/DateModified.html">Date Modified</a></li><li><a href="schemas/DateCreated.html">Date Created</a></li><li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/DateRecorded.html">Date Recorded</a></li><li><a href="schemas/Language.html">Language</a></li><li><a href="schemas/LexemeReference.html">Lexeme Reference</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/Morpheme.html">Morpheme</a></li><li><a href="schemas/Lexicon.html">Lexicon</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Sentence.html">Sentence</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/URL.html">URL</a></li><li><a href="schemas/Word.html">Word</a></li><li><a href="schemas/GeoJSON.html">GeoJSON Object</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 

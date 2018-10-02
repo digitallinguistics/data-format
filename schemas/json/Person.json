@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.2.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.2.3.json",
   "title": "Person",
   "type": "object",
   "description": "An object providing information about a Person",
@@ -72,8 +72,8 @@
     "languages": {
       "title": "Languages Spoken",
       "type": "array",
-      "description": "A list of the languages that this person speaks. Each item should be a DLx Language object, optionally with a few additional properties such as `ageLearned`, etc., Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.",
       "uniqueItems": true,
+      "description": "A list of the languages that this person speaks. Each item should be a DLx Language object, optionally with a few additional properties such as `ageLearned`, etc., Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.",
       "items": {
         "title": "Language Spoken",
         "allOf": [
@@ -121,8 +121,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "An array of notes about this person",
       "uniqueItems": true,
+      "description": "An array of notes about this person",
       "items": {
         "title": "Note",
         "type": "object",
@@ -143,8 +143,8 @@
     "roles": {
       "title": "Roles",
       "type": "array",
-      "description": "An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`",
       "uniqueItems": true,
+      "description": "An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`",
       "items": {
         "title": "Role",
         "type": "string",
