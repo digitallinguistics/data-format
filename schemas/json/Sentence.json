@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.1.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.1.2.json",
   "title": "Sentence",
   "type": "object",
   "description": "The term *sentence* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).",
@@ -35,8 +35,8 @@
     "key": {
       "title": "Key",
       "type": "string",
-      "description": "A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus.",
-      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}$"
+      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}$",
+      "description": "A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus."
     },
     "language": {
       "title": "Language",
