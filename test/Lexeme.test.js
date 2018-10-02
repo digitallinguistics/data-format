@@ -7,8 +7,11 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  lemma:    {},
-  notes: [
+  lemma:        {},
+  morphemeType: {
+    eng: `root`,
+  },
+  notes:        [
     {
       noteType: `sociocultural`,
       text:     `Only used among western varieties`,

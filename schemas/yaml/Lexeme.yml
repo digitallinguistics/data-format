@@ -156,7 +156,7 @@ properties:
     title: 'Morpheme Type'
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-    description: 'The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`.'
+    description: 'The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`.'
 
   notes:
     title:       Notes
