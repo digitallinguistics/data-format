@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Text-2.1.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Text-2.1.4.json'
 title:   Text
 type:    object
 
@@ -35,7 +35,7 @@ properties:
   contributors:
     title: Contributors
     type:  array
-    description: 'A collection of people who contributed to the creation or analysis of this text in some way'
+    description: 'A collection of people who contributed to the creation or analysis of this text in some way. This includes the speakers who produced the text.'
     items:
       title: Person
       type:  object
