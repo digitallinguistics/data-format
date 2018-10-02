@@ -168,6 +168,13 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
       "description": "A set of tags for this Language"
     },
+    "texts": {
+      "title": "Texts",
+      "type": "array",
+      "minItem": 1,
+      "uniqueItems": true,
+      "description": "A collection of texts in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Text be stored as a separate JSON document."
+    },
     "url": {
       "title": "URL",
       "type": "string",
