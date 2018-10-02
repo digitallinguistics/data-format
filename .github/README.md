@@ -14,9 +14,9 @@ Please consider citing this specification in scholarly articles using this repos
 
 > Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][5]
 
-![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)
-[![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632)
-![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)
+[![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][26]
+[![DOI](https://zenodo.org/badge/50221632.svg)][27]
+[![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)][28]
 
 ## Contents & Quick Links
 
@@ -240,3 +240,6 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [23]: http://json.org/
 [24]: http://site.uit.no/linguisticsdatacitation/austinprinciples/
 [25]: https://github.com/digitallinguistics/spec/blob/master/.github/README.md
+[26]: https://www.npmjs.com/package/@digitallinguistics/spec
+[27]: https://zenodo.org/badge/latestdoi/50221632
+[28]: https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
