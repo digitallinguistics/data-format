@@ -6,7 +6,10 @@ let ajv;
 let validate;
 
 // VALID SAMPLE DATA
-const data = {};
+const data = {
+  title: ``,
+  year:  2000,
+};
 
 describe(`Reference`, () => {
 
@@ -21,7 +24,7 @@ describe(`Reference`, () => {
     else fail(ajv.errorsText());
   });
 
-  it(`validates: year`, () => {
+  it(`validates: negative years`, () => {
     const negativeYear     = { year: -196 };
     const negativeYearData = { ...data, ...negativeYear };
     expect(validate(negativeYearData)).toBe(true);
