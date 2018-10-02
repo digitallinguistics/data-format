@@ -66,4 +66,4 @@ For releases:
 - [ ] **Increment version**
 - [ ] **Create GitHub release**
 - [ ] **Publish to npm**
-- [ ] **Write a blog post**
+- [ ] **Write a blog post** (for major/minor releases only)
