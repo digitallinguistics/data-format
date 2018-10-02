@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Reference-2.0.5.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Reference-2.0.6.json'
 title:   'Bibliographic Reference'
 type:    object
 
@@ -30,10 +30,10 @@ definitions:
 properties:
 
   authors:
-    title: Authors
-    type:  array
-    description: 'An array of authors for this Reference'
+    title:       Authors
+    type:        array
     uniqueItems: true
+    description: 'An array of authors for this Reference'
     items:
       title: Author
       type:  object
@@ -51,10 +51,10 @@ properties:
     description: 'The edition of this Reference, formatted as an integer'
 
   editors:
-    title: Editors
-    type:  array
-    description: 'An array of editors for this Reference'
+    title:       Editors
+    type:        array
     uniqueItems: true
+    description: 'An array of editors for this Reference'
     items:
       title: Editor
       type:  object
@@ -101,10 +101,10 @@ properties:
     description: 'The title of this publication'
 
   translators:
-    title: Translators
-    type:  array
-    description: 'An array of translations for this Reference'
+    title:       Translators
+    type:        array
     uniqueItems: true
+    description: 'An array of translations for this Reference'
     items:
       $ref: '#/definitions/person'
 

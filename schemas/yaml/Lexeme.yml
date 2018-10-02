@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.2.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.3.json'
 title:   Lexeme
 type:    object
 
@@ -26,13 +26,12 @@ properties:
 
   allomorphs:
 
-    title: Allomorphs
-    type: array
+    title:       Allomorphs
+    type:        array
+    uniqueItems: true
+    minItems:    1
 
     description: 'A list of allomorphs of this Lexeme'
-
-    minItems:    1
-    uniqueItems: true
 
     items:
       title: Allomorph
@@ -49,10 +48,10 @@ properties:
           $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
           description: 'A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).'
         environments:
-          title: Environments
-          type:  array
-          description: 'A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.'
+          title:       Environments
+          type:        array
           uniqueItems: true
+          description: 'A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.'
           items:
             title: Environment
             type:  string
@@ -65,11 +64,11 @@ properties:
     description: 'The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. The citation form usually serves as the headword in a dictionary as well. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.'
 
   components:
-    title: Components
-    type:  array
-    description: 'A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).'
-    minItems:    1
+    title:       Components
+    type:        array
     uniqueItems: false
+    minItems:    1
+    description: 'A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).'
     items:
       title: 'Referenced Lexeme'
       type:  object
@@ -89,10 +88,10 @@ properties:
     description: 'The date and optionally time that this lexeme was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime)'
 
   examples:
-    title: Examples
-    type:  array
-    description: 'A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.'
+    title:       Examples
+    type:        array
     uniqueItems: true
+    description: 'A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.'
     items:
       title: 'Example Sentence'
       type:  object
@@ -114,10 +113,10 @@ properties:
           description: 'Individual features must be represented as Strings.'
 
   includedIn:
-    title: 'Included In'
-    type:  array
-    description: 'A list of references to lexemes or variants that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.'
+    title:       'Included In'
+    type:        array
     uniqueItems: true
+    description: 'A list of references to lexemes or variants that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.'
     items:
       title: 'Lexicon Reference'
       type:  object
@@ -137,10 +136,10 @@ properties:
     description: 'A *lemma* is the particular form conventionally used to represent a particular Lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be`, with its variants `am`, `are`, `is`, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).'
 
   lexicalRelations:
-    title: 'Lexical Relations'
-    type:  array
-    description: 'A list of the lexical relations that this lexeme has to other lexemes or variants'
+    title:       'Lexical Relations'
+    type:        array
     uniqueItems: true
+    description: 'A list of the lexical relations that this lexeme has to other lexemes or variants'
     items:
       title: 'Lexical Relation (Lexeme Reference)'
       type:  object
@@ -160,10 +159,10 @@ properties:
     description: 'The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`.'
 
   notes:
-    title: Notes
-    type:  array
-    description: 'A collection of notes about this Lexeme'
+    title:       Notes
+    type:        array
     uniqueItems: true
+    description: 'A collection of notes about this Lexeme'
     items:
       title: Note
       type:  object
@@ -171,10 +170,10 @@ properties:
       description: 'A note about this lexeme, optionally in multiple orthographies'
 
   references:
-    title: 'Bibliographic References'
-    type:  array
-    description: 'A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.'
+    title:       'Bibliographic References'
+    type:        array
     uniqueItems: true
+    description: 'A collection of bibliographic references relating to this lexeme or variant. For example, a particular lexeme may have been discussed in detail in a published article.'
     items:
       title: Reference
       type:  object
@@ -182,10 +181,10 @@ properties:
       description: 'A bibliographic Reference'
 
   sources:
-    title: Sources
-    type:  array
-    description: 'A list of attested sources for this lexeme or variant'
+    title:       Sources
+    type:        array
     uniqueItems: true
+    description: 'A list of attested sources for this lexeme or variant'
     items:
       title: Source
       type:  string
@@ -220,10 +219,10 @@ properties:
     description: 'When this lexeme is a variant of another lexeme, this field should contain a reference to the other Lexeme. Lexemes may only be variants of one other Lexeme.'
 
   variants:
-    title: Variants
-    type:  array
-    description: 'A list of variants of this Lexeme'
+    title:       Variants
+    type:        array
     uniqueItems: true
+    description: 'A list of variants of this Lexeme'
     items:
       title: 'Referenced Variant (Lexeme Reference)'
       type:  object
@@ -238,12 +237,11 @@ properties:
 
   senses:
 
-    title: Senses
-    type: array
+    title:       Senses
+    type:        array
+    uniqueItems: true
 
     description: 'A collection of senses for this Lexeme'
-
-    uniqueItems: true
 
     items:
 
@@ -283,10 +281,10 @@ properties:
           description: 'If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix `‑er` would have this property set to `noun`.'
 
         examples:
-          title: Examples
-          type:  array
-          description: 'A collection of examples of this sense in use. Each example is a Sentence.'
+          title:       Examples
+          type:        array
           uniqueItems: true
+          description: 'A collection of examples of this sense in use. Each example is a Sentence.'
           items:
             title: 'Example Sentence'
             type:  object
@@ -306,10 +304,10 @@ properties:
           description: 'If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.'
 
         lexicalRelations:
-          title: 'Lexical Relations'
-          type:  array
-          description: 'A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.'
+          title:       'Lexical Relations'
+          type:        array
           uniqueItems: true
+          description: 'A collection of lexical relations between this sense and other senses in this lexicon or other lexicons.'
           items:
             title: 'Lexical Relation (Lexeme Reference)'
             type:  object
@@ -317,10 +315,10 @@ properties:
             description: 'A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required.'
 
         media:
-          title: Media
-          type:  array
-          description: 'Media items associated with this lexeme, such as recordings of the word, pictures of the item the word refers to, or videos of the action being performed.'
+          title:       Media
+          type:        array
           uniqueItems: true
+          description: 'Media items associated with this lexeme, such as recordings of the word, pictures of the item the word refers to, or videos of the action being performed.'
           items:
             title: 'Media Item'
             type:  object
@@ -328,10 +326,10 @@ properties:
             description: 'A media item associated with this lexeme'
 
         notes:
-          title: Notes
-          type:  array
-          description: 'A collection of notes about this sense'
+          title:       Notes
+          type:        array
           uniqueItems: true
+          description: 'A collection of notes about this sense'
           items:
             title: Note
             type:  object
@@ -339,10 +337,10 @@ properties:
             description: 'A Note about this sense'
 
         references:
-          title: 'Bibliographic References'
-          type:  array
-          description: 'A collection of bibliographic references about this particular sense'
+          title:       'Bibliographic References'
+          type:        array
           uniqueItems: true
+          description: 'A collection of bibliographic references about this particular sense'
           items:
             title: Reference
             type:  object
@@ -355,10 +353,10 @@ properties:
           description: 'The scientific name for this item'
 
         sources:
-          title: Sources
-          type:  array
-          description: 'A list of attested sources for this sense'
+          title:       Sources
+          type:        array
           uniqueItems: true
+          description: 'A list of attested sources for this sense'
           items:
             title: Source
             type:  string
@@ -371,10 +369,10 @@ properties:
           description: 'A collection of tags for this Lexeme'
 
         usages:
-          title: Usages
-          type:  array
-          description: 'A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.'
+          title:       Usages
+          type:        array
           uniqueItems: true
+          description: 'A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.'
           items:
             title: Usage
             type:  object
@@ -388,10 +386,10 @@ properties:
           description: 'If this sense is a variant of another sense, a reference to the other sense should go here. For example, sometimes two speakers may use the same word with a slightly different set of senses. In American English, for instance, *Coke* is a specific brand of soda for most speakers, but a generic term for soda for other speakers. The generic sense would therefore be listed as a dialectal variant of the specific sense.'
 
         variants:
-          title: Variants
-          type:  array
-          description: 'A list of variants of this sense'
+          title:       Variants
+          type:        array
           uniqueItems: true
+          description: 'A list of variants of this sense'
           items:
             title: 'Referenced Variant (Lexeme Reference)'
             type:  object

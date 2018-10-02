@@ -32,10 +32,10 @@ properties:
     description: 'An object describing who may have access to materials on this language.'
 
   additionalNames:
-    title: 'Additional Names'
-    type:  array
-    description: 'An Array of additional names for this Language. Only use this property if the "name" property is not sufficent to describe the various names for this language.'
+    title:       'Additional Names'
+    type:        array
     uniqueItems: true
+    description: 'An Array of additional names for this Language. Only use this property if the "name" property is not sufficent to describe the various names for this language.'
     items:
       title: 'Additional Language Name'
       type:  string
@@ -47,10 +47,11 @@ properties:
     description: 'The autonym for this language, optionally in multiple orthographies'
 
   contributors:
-    title: Contributors
-    type:  array
-    description: 'A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its "roles" property specified, so that the contribution of each person is known.'
+    title:       Contributors
+    type:        array
     uniqueItems: true
+    minItems:    1
+    description: 'A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its "roles" property specified, so that the contribution of each person is known.'
     items:
       title: 'Contributor (Person)'
       type:  object
@@ -81,11 +82,23 @@ properties:
     pattern: '^[a-z]{3}$'
     description: 'The ISO 639-3 code for this language variety, as a 3-letter String'
 
-  locations:
-    title: Locations
-    type:  array
-    description: 'Geographic locations where this language variety is spoken, optionally with geographic coordinate data'
+  lexemes:
+    title:       Lexemes
+    type:        array
     uniqueItems: true
+    minItems:    1
+    description: 'A collection of the lexemes in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Lexeme be stored as a separate JSON document.'
+    items:
+      title: Lexeme
+      type:  object
+      $ref: 'http://cdn.digitallinguistics.io/schemas/Lexeme.json'
+      description: 'A Lexeme object'
+
+  locations:
+    title:       Locations
+    type:        array
+    uniqueItems: true
+    description: 'Geographic locations where this language variety is spoken, optionally with geographic coordinate data'
     items:
       title: Location
       type:  object
@@ -99,10 +112,10 @@ properties:
     description: 'The name of this Language, optionally in multiple languages. Use the `additionalNames` field to list other names for this Language.'
 
   orthographies:
-    title: Orthographies
-    type:  array
-    description: 'A collection of orthographies used to represent this Language'
+    title:       Orthographies
+    type:        array
     uniqueItems: true
+    description: 'A collection of orthographies used to represent this Language'
     items:
       title: Orthography
       type:  object
@@ -120,10 +133,11 @@ properties:
       description: 'A Phoneme object'
 
   references:
-    title: 'Bibliographic References'
-    type:  array
-    description: 'A collection of bibliographic references about this language.'
+    title:       'Bibliographic References'
+    type:        array
     uniqueItems: true
+    minItems:    1
+    description: 'A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.'
     items:
       title: 'Bibliographic Reference'
       type:  object

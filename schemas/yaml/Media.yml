@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Media-2.0.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Media-2.0.4.json'
 title:   'Media File'
 type:    object
 
@@ -88,10 +88,10 @@ properties:
     description: 'The format (file extension) of the media file, without a period. Examples: `wav`, `mp4`, `pdf`'
 
   languages:
-    title: Languages
-    type:  array
-    description: 'An array of the languages that are used in this media file, as abbreviations'
+    title:       Languages
+    type:        array
     uniqueItems: true
+    description: 'An array of the languages that are used in this media file, as abbreviations'
     items:
       title: 'Language (Abbreviation)'
       type:  string
@@ -116,10 +116,10 @@ properties:
     description: 'The URL where the media file can be found.'
 
   notes:
-    title: Notes
-    type:  array
-    description: 'A collection of notes about this media item.'
+    title:       Notes
+    type:        array
     uniqueItems: true
+    description: 'A collection of notes about this media item.'
     items:
       title: Note
       $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
@@ -131,10 +131,10 @@ properties:
     description: 'The URL of the Media object (*not* the URL to the media file itself) that this file is derived from'
 
   people:
-    title: 'Persons in File'
-    type:  array
-    description: 'A list of all the people who appear in this file. Often a list of speakers.'
+    title:       'Persons in File'
+    type:        array
     uniqueItems: true
+    description: 'A list of all the people who appear in this file. Often a list of speakers.'
     items:
       title: Person
       $ref: 'http://cdn.digitallinguistics.io/schemas/Person.json'
