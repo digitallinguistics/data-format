@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Reference-2.0.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Reference-2.0.4.json'
 title:   'Bibliographic Reference'
 type:    object
 
@@ -129,10 +129,10 @@ properties:
       - 'film'
 
   url:
-    title: URL
-    type:  string
-    description: 'A URL for this Reference'
+    title:  URL
+    type:   string
     format: uri
+    description: 'A URL for this Reference'
 
   volume:
     title: Volume
@@ -140,8 +140,8 @@ properties:
     description: 'The volume number for this publication'
 
   year:
-    title: Year
-    type:  integer
-    description: 'The year this item was published'
+    title:   Year
+    type:    integer
     minimum: 0
+    description: 'The year this item was published'
     exclusiveMinimum: true

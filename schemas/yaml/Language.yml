@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Language-6.0.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Language-6.0.2.json'
 title:   Language
 type:    object
 
@@ -53,16 +53,16 @@ properties:
     description: 'The date an optionally time that this Language object was last modified'
 
   glottolog:
-    title: 'Glottolog Code'
-    type:  string
-    description: 'The Glottolog code for this language variety, as a String in the format abcd1234'
+    title:   'Glottolog Code'
+    type:    string
     pattern: '^[a-z]{4}[0-9]{4}$'
+    description: 'The Glottolog code for this language variety, as a String in the format abcd1234'
 
   iso:
-    title: 'ISO 639-3 Code'
-    type:  string
-    description: 'The ISO 639-3 code for this language variety, as a 3-letter String'
+    title:   'ISO 639-3 Code'
+    type:    string
     pattern: '^[a-z]{3}$'
+    description: 'The ISO 639-3 code for this language variety, as a 3-letter String'
 
   locations:
     title: Locations
