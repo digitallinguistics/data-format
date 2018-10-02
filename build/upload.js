@@ -94,8 +94,6 @@ async function uploadSchemaFiles(filename) {
     version,
   } = schemaNameRegExp.exec(schema.id).groups;
 
-  // blobName, schema, contentType = jsonMedia
-
   await Promise.all([
     uploadBlob(schemaName, jsonSchema),                                // plain unversioned
     uploadBlob(`${schemaName}-${version}`, jsonSchema),                // plain versioned
@@ -104,8 +102,6 @@ async function uploadSchemaFiles(filename) {
     uploadBlob(`${schemaName}.yml`, yamlSchema, yamlMedia),            // YAML unversioned
     uploadBlob(`${schemaName}-${version}.yml`, yamlSchema, yamlMedia), // YAML versioned
   ]);
-
-  console.log(`${schemaName} schemas uploaded.`);
 
 }
 
