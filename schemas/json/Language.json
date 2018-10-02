@@ -42,13 +42,25 @@
     "autonym": {
       "title": "Autonym",
       "type": "object",
-      "description": "The autonym for this language, optionally in multiple orthographies",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
+      "description": "The autonym for this language, optionally in multiple orthographies"
+    },
+    "contributors": {
+      "title": "Contributors",
+      "type": "array",
+      "description": "A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its \"roles\" property specified, so that the contribution of each person is known.",
+      "uniqueItems": true,
+      "items": {
+        "title": "Contributor (Person)",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json",
+        "description": "A Person object describing a contributor"
+      }
     },
     "dateCreated": {
       "title": "Date Created",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
       "type": "string",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
       "description": "The date and optionally time that this Language object was created"
     },
     "dateModified": {
@@ -114,6 +126,7 @@
       "title": "Bibliographic References",
       "type": "array",
       "description": "A collection of bibliographic references about this language.",
+      "uniqueItems": true,
       "items": {
         "title": "Bibliographic Reference",
         "type": "object",
