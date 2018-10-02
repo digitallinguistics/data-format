@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.4.json'
 title:   Lexeme
 type:    object
 
