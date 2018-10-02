@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Orthography-1.3.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Orthography-1.3.3.json",
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
@@ -41,8 +41,8 @@
     "graphemes": {
       "title": "Graphemes",
       "type": "array",
-      "description": "A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).",
       "uniqueItems": true,
+      "description": "A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).",
       "default": [],
       "items": {
         "title": "Grapheme",
@@ -56,8 +56,8 @@
           "allographs": {
             "title": "Allographs",
             "type": "array",
-            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `T` in an English orthography would have the allograph `t`.",
             "uniqueItems": true,
+            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `T` in an English orthography would have the allograph `t`.",
             "items": {
               "title": "Allograph",
               "type": "string"
@@ -96,8 +96,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this Orthography",
       "uniqueItems": true,
+      "description": "A collection of notes about this Orthography",
       "items": {
         "title": "Note",
         "type": "object",
@@ -109,8 +109,8 @@
     "punctuation": {
       "title": "Punctuation",
       "type": "array",
-      "description": "A list of all the punctuation characters in this orthography, including white space and non-breaking characters.",
       "uniqueItems": true,
+      "description": "A list of all the punctuation characters in this orthography, including white space and non-breaking characters.",
       "items": {
         "title": "Punctuation Character",
         "type": "string"

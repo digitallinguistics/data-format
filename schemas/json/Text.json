@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Text-2.1.4.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Text-2.1.5.json",
   "title": "Text",
   "type": "object",
   "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of sentences with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
@@ -92,8 +92,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this Text",
       "uniqueItems": true,
+      "description": "A collection of notes about this Text",
       "items": {
         "title": "Note",
         "type": "object",

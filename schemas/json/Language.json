@@ -113,6 +113,19 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
       "description": "The name of this Language, optionally in multiple languages. Use the `additionalNames` field to list other names for this Language."
     },
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "A collection of notes about this language",
+      "items": {
+        "title": "Note",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "description": "A Note about this Language"
+      }
+    },
     "orthographies": {
       "title": "Orthographies",
       "type": "array",
@@ -141,7 +154,7 @@
       "type": "array",
       "uniqueItems": true,
       "minItems": 1,
-      "description": "A collection of bibliographic references about this language.",
+      "description": "A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.",
       "items": {
         "title": "Bibliographic Reference",
         "type": "object",

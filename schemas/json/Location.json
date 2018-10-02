@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.2.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.2.1.json",
   "title": "Location",
   "type": "object",
   "description": "A location, optionally with accompanying geographic coordinate data",
@@ -62,8 +62,8 @@
     "notes": {
       "title": "Notes",
       "type": "array",
-      "description": "A collection of notes about this Location",
       "uniqueItems": true,
+      "description": "A collection of notes about this Location",
       "items": {
         "title": "Note",
         "type": "object",
@@ -74,8 +74,8 @@
     "references": {
       "title": "Bibliographic References",
       "type": "array",
-      "description": "A collection of bibliographic references about this Location",
       "uniqueItems": true,
+      "description": "A collection of bibliographic references about this Location",
       "items": {
         "title": "Reference",
         "type": "object",

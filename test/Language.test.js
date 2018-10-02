@@ -31,7 +31,6 @@ const data = {
       familyName: `Paul`,
       givenName:  `Benjamin`,
       roles:      [`speaker`],
-      type:       `Person`,
     },
   ],
   dateCreated:        `2017-07-24T17:41:18.539Z`,
@@ -41,6 +40,12 @@ const data = {
   iso:                `iso`,
   locations:          [{ name: { eng: `Charenton` } }],
   name:               { eng: `Chitimacha` },
+  notes:              [
+    {
+      language: `eng`,
+      text:     `Chitimacha is a language isolate.`,
+    },
+  ],
   orthographies:      [],
   phonemes:           [],
   references:         [

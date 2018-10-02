@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/GeoJSON-1.0.2.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/GeoJSON-1.0.3.json",
   "title": "GeoJSON Object",
   "type": "object",
   "description": "This object represents a geometry, feature, or collection of features. It should be structured according to the [GeoJSON schema](http://geojson.org/).",
@@ -113,8 +113,8 @@
     "bbox": {
       "title": "Bounding Box",
       "type": "array",
-      "description": "To include information on the coordinate range for geometries, features, or feature collections, a GeoJSON object may have a member named `bbox`. The value of the bbox member must be a 2*n array where n is the number of dimensions represented in the contained geometries, with the lowest values for all axes followed by the highest values. The axes order of a bbox follows the axes order of geometries. In addition, the coordinate reference system for the bbox is assumed to match the coordinate reference system of the GeoJSON object of which it is a member.",
       "minItems": 4,
+      "description": "To include information on the coordinate range for geometries, features, or feature collections, a GeoJSON object may have a member named `bbox`. The value of the bbox member must be a 2*n array where n is the number of dimensions represented in the contained geometries, with the lowest values for all axes followed by the highest values. The axes order of a bbox follows the axes order of geometries. In addition, the coordinate reference system for the bbox is assumed to match the coordinate reference system of the GeoJSON object of which it is a member.",
       "items": {
         "type": "number"
       }
@@ -413,10 +413,10 @@
       "description": "A LinearRing is closed LineString with 4 or more positions. The first and last positions are equivalent (they represent equivalent points). Though a LinearRing is not explicitly represented as a GeoJSON geometry type, it is referred to in the Polygon geometry type definition.",
       "allOf": [
         {
-          "$ref": "#/definitions/lineStringCoordinates"
+          "minItems": 4
         },
         {
-          "minItems": 4
+          "$ref": "#/definitions/lineStringCoordinates"
         }
       ]
     },
@@ -452,8 +452,8 @@
     "position": {
       "title": "Position",
       "type": "array",
-      "description": "A position is the fundamental geometry construct. The `coordinates` member of a geometry object is composed of one position (in the case of a Point geometry), an array of positions (LineString or MultiPoint geometries), an array of arrays of positions (Polygons, MultiLineStrings), or a multidimensional array of positions (MultiPolygon).\n\nA position is represented by an array of numbers. There must be at least two elements, and may be more. The order of elements must follow x, y, z order (easting, northing, altitude for coordinates in a projected coordinate reference system, or longitude, latitude, altitude for coordinates in a geographic coordinate reference system). Any number of additional elements are allowed -- interpretation and meaning of additional elements is beyond the scope of this specification.",
       "minItems": 2,
+      "description": "A position is the fundamental geometry construct. The `coordinates` member of a geometry object is composed of one position (in the case of a Point geometry), an array of positions (LineString or MultiPoint geometries), an array of arrays of positions (Polygons, MultiLineStrings), or a multidimensional array of positions (MultiPolygon).\n\nA position is represented by an array of numbers. There must be at least two elements, and may be more. The order of elements must follow x, y, z order (easting, northing, altitude for coordinates in a projected coordinate reference system, or longitude, latitude, altitude for coordinates in a geographic coordinate reference system). Any number of additional elements are allowed -- interpretation and meaning of additional elements is beyond the scope of this specification.",
       "additionalItems": true,
       "items": {
         "type": "number"
