@@ -162,12 +162,30 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this Lexeme'
+    description: 'A collection of notes about this lexeme. Each Note object must have its "noteType" property specified. Notes with a note type of "private" are not intended for publication in dictionaries, while other types of notes are.'
     items:
-      title: Note
-      type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
-      description: 'A note about this lexeme, optionally in multiple orthographies'
+      allOf:
+        - title: Note
+          type:  object
+          $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
+          description: 'A note about this lexeme, optionally in multiple orthographies'
+        - required:
+            - noteType
+          properties:
+            noteType:
+              title: 'Note Type'
+              type:  string
+              description: 'The type of note about this lexeme'
+              enum:
+                - private
+                - general
+                - anthropology
+                - discourse
+                - encyclopedic
+                - grammar
+                - phonology
+                - semantics
+                - sociocultural
 
   references:
     title:       'Bibliographic References'

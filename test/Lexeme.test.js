@@ -7,8 +7,14 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  lemma:  {},
-  senses: [],
+  lemma:    {},
+  notes: [
+    {
+      noteType: `sociocultural`,
+      text:     `Only used among western varieties`,
+    },
+  ],
+  senses:   [],
 };
 
 describe(`Lexeme`, () => {
