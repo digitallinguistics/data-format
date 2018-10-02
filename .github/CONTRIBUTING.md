@@ -154,7 +154,7 @@ _These steps are for maintainers only:_
         - REMOVE: removed features
         - TEST: changes to tests
 
-1. **Create a release** when the necessary features are ready
+1. **Create a GitHub release** when the necessary features are ready
 
     - **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead).
 
@@ -165,10 +165,12 @@ _These steps are for maintainers only:_
         - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
 
         - Compile the list of changes from each of the commits on the master branch
+    
+    - **Publish the GitHub release**
 
 1. **Publish to npm**: `npm publish`
 
-1. **Write a blog post** about the changes
+1. **Write a blog post** about the changes (for major/minor updates only)
 
 ## Branching Model
 
