@@ -36,6 +36,11 @@ properties:
     type:  string
     description: 'A language code or language name of the language that this note is written in'
 
+  noteType:
+    title: 'Note Type'
+    type:  string
+    description: 'The type of Note. Required for notes on Lexemes.'
+
   source:
     title: 'Source (Person)'
     type:  string
