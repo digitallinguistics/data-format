@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+<html lang=en>
+
+  <head>
+    <meta charset=utf-8>
+    <title>
+      Annotation
+    </title>
+    <meta name=viewport content='width=device-width'>
+    <link rel=stylesheet href="../jschemer.css" type=text/css>
+  </head>
+
+  <body>
+
+    <main>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Annotation</h1>
+    </summary>
+
+
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Annotation-1.0.2.json</code></p>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>An annotation on a text. Annotations are useful for indicating properties of a text which are anchored in time, or which cross the boundaries of linguistic objects like utterances and words. Examples uses might include: annotating a period of time when a speaker is whispering; annotating a stretch of the text as being a particular episode in the text; annotating the text for turns or prosodic units. Annotations should generally be used as a last resort. Whenever possible, data should be attached to linguistic objects, and represented as attributes of those linguistic entities. For example, it would be bad practice to use a timespan annotation to indicate the start and end times of a word. Instead, you should add the custom properties <code>startTime</code> and <code>endTime</code> to each Word object. Each annotation must have either a <code>notes</code> or a <code>tags</code> property specified, in order to describe the annotation.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+
+
+      <div class='all-of any prop'>
+        <h2>Validates Against (<code>allOf</code>)</h2>
+        <p>This schema must validate against all of the following schemas:</p>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+      <div class='any-of any prop'>
+        <h2>Validates Against (<code>anyOf</code>)</h2>
+        <p>This schema must validate against at least one of the following schemas:</p>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>notes</code></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>tags</code></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+
+
+
+
+
+
+
+
+
+
+      <div class='one-of any prop'>
+        <h2>Validates Against (<code>oneOf</code>)</h2>
+        <p>This schema must validate against one and only one of the following schemas:</p>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Timespan Annotation</h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A timespan annotation is an annotation which spans a duration of time. This is particularly useful for annotating non-linguistic features of the text which are happening in the background.</p>
+</p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>ts</code></li>
+        </ul>
+      </div>
+
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Timestamp</h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The point in time that the annotation is about, formated in seconds and millseconds (SS.MMM)</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+
+
+
+
+
+
+
+
+      <p class='exclusive-minimum numeric prop'>
+        <strong>Exclusive minumum:</strong> <code>true</code>
+      </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Timestamp Annotation</h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.</p>
+</p>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>startTime</code></li>
+            <li><code>endTime</code></li>
+        </ul>
+      </div>
+
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Start Time</h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The time that the annotation starts, formated in seconds and milliseconds (SS.MMM)</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+
+
+
+
+
+
+
+
+      <p class='exclusive-minimum numeric prop'>
+        <strong>Exclusive minumum:</strong> <code>true</code>
+      </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>End Time</h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The time that the annotation ends, formatted in seconds and milliseconds (SS.MMM)</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+
+
+
+
+
+
+
+      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>0.001</code></p>
+
+      <p class='exclusive-minimum numeric prop'>
+        <strong>Exclusive minumum:</strong> <code>true</code>
+      </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='required object prop'>
+        <h2>Required Properties</h2>
+        <ul>
+            <li><code>annotationType</code></li>
+        </ul>
+      </div>
+
+        <p class='additional-properties object prop'>
+          <strong>Additional properties:</strong> true
+        </p>
+
+
+
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Annotation Type: <code>"annotationType"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The type of Annotation</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;timespan&quot;</pre></li>
+            <li><pre>&quot;timestamp&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of notes for this Annotation</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='min-items array prop'><strong>Min items:</strong> <code>1</code></p>
+
+
+      <p class='unique-items array prop'>
+        <strong>Unique items:</strong> <code>true</code>
+      </p>
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Note</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>A Note about this Annotation</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
+    </summary>
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A set of tags for this Annotation</p>
+</p>
+      </div>
+
+    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</main>
+
+    <nav>
+      <h1><a href=../index.html>Home</a></h1>
+      <h1>Schemas</h1>
+      <ul>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+      </ul>
+    </nav>
+
+  </body>
+
+</html>
