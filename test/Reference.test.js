@@ -7,6 +7,7 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
+  doi:   `10.1075/cal.20.02hie`,
   title: ``,
   year:  2000,
 };
