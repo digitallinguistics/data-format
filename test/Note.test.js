@@ -9,6 +9,9 @@ let validate;
 const data = {
   language: `eng`,
   source:   `DWH`,
+  tags:     {
+    status: `needs review`,
+  },
   text:     `This is a test note.`,
 };
 
