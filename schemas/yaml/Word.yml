@@ -20,6 +20,11 @@ properties:
     enum:
       - Word
 
+  endTime:
+    title: 'End Time'
+    type:  number
+    description: 'The point in time in the text at which the word token stop being spoken, formatted as seconds and milliseconds (SS.MMM). This property is useful for phonetic data analysis.'
+
   gloss:
     title: Gloss
     type:  object
@@ -81,6 +86,11 @@ properties:
           type:  string
           description: 'This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA.'
 
+        endTime:
+          title: 'End Time'
+          type:  number
+          description: 'The point in time in the text at which this phone stops being pronounced. This property is primarily useful for phonetic data analysis.'
+
         notes:
           title:       Notes
           type:        array
@@ -97,11 +107,21 @@ properties:
           type:  string
           description: 'An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the `allophone` property for that insetad).'
 
+        startTime:
+          title: 'Start Time'
+          type:  number
+          description: 'The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis.'
+
         tags:
           title: Tags
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/Tags.json'
           description: 'A set of tags for this phone'
+
+  startTime:
+    title: 'Start Time'
+    type:  number
+    description: 'The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis.'
 
   tags:
     title: Tags
