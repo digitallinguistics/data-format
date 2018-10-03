@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.4.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.5.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -668,7 +668,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. <code>case</code>, <code>person</code>, <code>number</code>, <code>gender</code>, <code>nounClass</code>, etc.), and its value should be the value for that feature, as a string (e.g. <code>nominative</code>, <code>1</code>, <code>singular</code>, <code>masculine</code>, etc.). Features may be written more than once, in a different Language. For example, a morpheme may have the feature <code>&quot;case&quot;: &quot;accusative&quot;</code> (English) as well as <code>&quot;caso&quot;: &quot;acusativo&quot;</code> (Spanish).</p>
+        <p><p>A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. <code>case</code>, <code>person</code>, <code>number</code>, <code>gender</code>, <code>nounClass</code>, etc.), and its value should be the value for that feature, as a string (e.g. <code>nominative</code>, <code>1</code>, <code>singular</code>, <code>masculine</code>, etc.). Features may be written more than once, in a different Language. For example, a morpheme may have the feature <code>case: accusative</code> (English) as well as <code>caso: acusativo</code> (Spanish).</p>
 </p>
       </div>
 
@@ -1064,7 +1064,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of morpheme or complex construction that this lexeme is. Examples: <code>root</code>, <code>stem</code>, <code>bipartite stem</code>, <code>enclitic</code>, <code>prefix</code>, <code>inflected word</code>, <code>phrase</code>, <code>circumfix</code>, <code>compound</code>, <code>complex</code>, <code>ideophonic</code>.</p>
+        <p><p>The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: <code>root</code>, <code>stem</code>, <code>bipartite stem</code>, <code>enclitic</code>, <code>prefix</code>, <code>inflected word</code>, <code>phrase</code>, <code>circumfix</code>, <code>compound</code>, <code>complex</code>, <code>ideophonic</code>.</p>
 </p>
       </div>
 
@@ -1090,7 +1090,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of notes about this lexeme. Each Note object must have its &quot;noteType&quot; property specified. Notes with a note type of &quot;private&quot; are not intended for publication in dictionaries, while other types of notes are.</p>
+        <p><p>A collection of notes about this lexeme. Each Note object must have its <code>noteType</code> property specified. Notes with a note type of <code>private</code> are not intended for publication in dictionaries, while other types of notes are.</p>
 </p>
       </div>
 
@@ -1810,7 +1810,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
+        <p><p>If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc. Optionally in multiple languages.</p>
 </p>
       </div>
 
@@ -1993,7 +1993,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>The lexical category, part of speech, or morphosyntactic class for this Lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix <code>‑s</code> would have this this property set to <code>verb</code>, and the English derivational suffix <code>‑ize</code> would have this property set to <code>noun</code>.</p>
+                  <p><p>The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix <code>‑s</code> would have this this property set to <code>verb</code>, and the English derivational suffix <code>‑ize</code> would have this property set to <code>noun</code>.</p>
           </p>
                 </div>
           
@@ -2039,7 +2039,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix <code>‑er</code> would have this property set to <code>noun</code>.</p>
+                  <p><p>If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix <code>‑er</code> would have this property set to <code>noun</code>. May be in multiple languages.</p>
           </p>
                 </div>
           
@@ -2170,7 +2170,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.</p>
+                  <p><p>If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form. May be written in multiple languages.</p>
           </p>
                 </div>
           
@@ -2779,7 +2779,7 @@
                     
                           <div class='description meta any prop'>
                             <h2>Description</h2>
-                            <p><p>An appropriate usage for this sense, optionally in multiple orthographies</p>
+                            <p><p>An appropriate usage for this sense, optionally in multiple languages</p>
                     </p>
                           </div>
                     
@@ -2919,7 +2919,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc.</p>
+                  <p><p>If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc. May be in multiple languages.</p>
           </p>
                 </div>
           
@@ -2981,7 +2981,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="URL.html">URL</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 
