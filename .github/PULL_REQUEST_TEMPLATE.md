@@ -12,7 +12,9 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 
 -->
 
-## Checklist (see [Contributing Guidelines](https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#contributing-code--changes-to-the-schemas))
+## Checklist
+
+[Contributing Guidelines](https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#contributing-code--changes-to-the-schemas)
 
 - [ ] **[Open an issue](https://github.com/digitallinguistics/spec/issues/new)** if you haven't already
 - [ ] **Fork the repository** and clone it to your computer
