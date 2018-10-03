@@ -2,6 +2,7 @@ module.exports = {
   Abbreviation: require('./Abbreviation'),
   Access: require('./Access'),
   Address: require('./Address'),
+  Annotation: require('./Annotation'),
   Bundle: require('./Bundle'),
   DateCreated: require('./DateCreated'),
   DateModified: require('./DateModified'),

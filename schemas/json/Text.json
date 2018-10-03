@@ -30,6 +30,19 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
       "description": "An object describing the acess rights to this Text"
     },
+    "annotations": {
+      "title": "Annotations",
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "description": "A collection of annotations on this text",
+      "items": {
+        "title": "Annotation",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Annotation.json",
+        "description": "An annotation on this text"
+      }
+    },
     "contributors": {
       "title": "Contributors",
       "type": "array",

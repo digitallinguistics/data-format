@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Annotation-1.1.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Annotation-1.0.0.json'
 title:   Annotation
 type:    object
 
@@ -40,9 +40,11 @@ properties:
 
 allOf:
 
-  - oneOf:
-    - required: notes
-    - required: tags
+  - anyOf:
+    - required:
+        - notes
+    - required:
+        - tags
 
   - oneOf:
 
@@ -55,7 +57,8 @@ allOf:
         ts:
           title:            Timestamp
           type:             number
-          exclusiveMinimum: 0
+          minimum:          0
+          exclusiveMinimum: true
           description: 'The point in time that the annotation is about, formated in seconds and millseconds (SS.MMM)'
 
     - title: 'Timestamp Annotation'
@@ -68,11 +71,13 @@ allOf:
         startTime:
           title:            'Start Time'
           type:             number
-          exclusiveMinimum: 0
+          minimum:          0
+          exclusiveMinimum: true
           description: 'The time that the annotation starts, formated in seconds and milliseconds (SS.MMM)'
 
         endTime:
           title:            'End Time'
           type:             number
-          exclusiveMinimum: 0.001
+          minimum:          0.001
+          exclusiveMinimum: true
           description: 'The time that the annotation ends, formatted in seconds and milliseconds (SS.MMM)'
