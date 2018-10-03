@@ -5,7 +5,7 @@
   <head>
     <meta charset=utf-8>
     <title>
-      Multi-Language Text / String
+      Translation
     </title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="../jschemer.css" type=text/css>
@@ -19,18 +19,18 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Multi-Language Text / String</h1>
+      <h1 class='title meta any prop'>Translation</h1>
     </summary>
 
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/MultiLangString-2.0.2.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Translation-1.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the <a href="https://digitallinguistics.github.io/spec/schemas/Transcription.html">Transcription</a> and <a href="https://digitallinguistics.github.io/spec/schemas/Translation.html">Translation</a> schemas). For example, the part of speech for a lexeme might be given as both English <em>noun</em> and Spanish <em>nombre</em>. Each key must be the abbreviation for a language (see the <a href="https://digitallinguistics.github.io/spec/schemas/Abbreviation.html">Abbreviation</a> schema), and the value for that key is the string of text in that language. <strong>Note:</strong> MultiLangStrings do not have a <code>type</code> property.</p>
+        <p><p>A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for an orthography (see the <a href="https://digitallinguistics.github.io/spec/schemas/Abbreviation.html">Abbreviation</a> schema), and the value for that key is the translation of the data in that particular language and orthography. <strong>Note:</strong> The Translation does not have a <code>type</code> property (though it does have a <code>translationType</code> property).</p>
 </p>
       </div>
 
@@ -59,6 +59,72 @@
 
 
 
+      <div class='properties object prop'>
+        <h2>Properties</h2>
+        <ul>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Translation Type: <code>"translationType"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>The type of translation. Must be set to either <code>free</code> or <code>literal</code>.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;free&quot;</pre></li>
+            <li><pre>&quot;literal&quot;</pre></li>
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+  </details>
+
+</section>
+</li>
+        </ul>
+      </div>
 
       <div class='pattern-properties object prop'>
         <h2>Custom Properties (<code>patternProperties</code>)</h2>
@@ -79,7 +145,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The string of text in the specified language</p>
+        <p><p>The transcription for the specified orthography</p>
 </p>
       </div>
 

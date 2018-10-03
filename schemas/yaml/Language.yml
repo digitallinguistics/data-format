@@ -35,7 +35,7 @@ properties:
     title:       'Additional Names'
     type:        array
     uniqueItems: true
-    description: 'An Array of additional names for this Language. Only use this property if the "name" property is not sufficent to describe the various names for this language.'
+    description: 'An Array of additional names for this Language. Only use this property if the `name` property is not sufficent to describe the various names for this language.'
     items:
       title: 'Additional Language Name'
       type:  string
@@ -51,7 +51,7 @@ properties:
     type:        array
     uniqueItems: true
     minItems:    1
-    description: 'A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its "roles" property specified, so that the contribution of each person is known.'
+    description: 'A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its `roles` property specified, so that the contribution of each person is known.'
     items:
       title: 'Contributor (Person)'
       type:  object

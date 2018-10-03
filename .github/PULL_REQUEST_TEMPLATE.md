@@ -39,9 +39,6 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 <!-- in 1-3 sentences, please provide a high-level overview of what changes were made. -->
 <!-- If appropriate, document your reasoning for why you made the changes the way you did. -->
 
-## Tests
-<!-- How have your changes been tested? (Delete this section if not relevant.) -->
-
 ## Changelog
 <!-- What specific changes were made? List each change as a bullet point with a label. -->
 <!-- See the issues tracker for a list of labels to use. -->

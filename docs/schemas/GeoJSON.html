@@ -370,18 +370,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A GeoJSON object with the type <code>Feature</code> is a feature object.</p>
-<ul>
-<li>
-<p>A feature object must have a member with the name <code>geometry</code>. The value of the geometry member is a geometry object as defined above or a JSON null value.</p>
-</li>
-<li>
-<p>A feature object must have a member with the name <code>properties</code>. The value of the properties member is an object (any JSON object or a JSON null value).</p>
-</li>
-<li>
-<p>If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name <code>id</code>.</p>
-</li>
-</ul>
+        <p><p>A GeoJSON object with the type <code>Feature</code> is a feature object.\n\n* A feature object must have a member with the name <code>geometry</code>. The value of the geometry member is a geometry object as defined above or a JSON null value.\n\n* A feature object must have a member with the name <code>properties</code>. The value of the properties member is an object (any JSON object or a JSON null value).\n\n* If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name <code>id</code>.</p>
 </p>
       </div>
 
@@ -1274,8 +1263,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A position is the fundamental geometry construct. The <code>coordinates</code> member of a geometry object is composed of one position (in the case of a Point geometry), an array of positions (LineString or MultiPoint geometries), an array of arrays of positions (Polygons, MultiLineStrings), or a multidimensional array of positions (MultiPolygon).</p>
-<p>A position is represented by an array of numbers. There must be at least two elements, and may be more. The order of elements must follow x, y, z order (easting, northing, altitude for coordinates in a projected coordinate reference system, or longitude, latitude, altitude for coordinates in a geographic coordinate reference system). Any number of additional elements are allowed -- interpretation and meaning of additional elements is beyond the scope of this specification.</p>
+        <p><p>A position is the fundamental geometry construct. The <code>coordinates</code> member of a geometry object is composed of one position (in the case of a Point geometry), an array of positions (LineString or MultiPoint geometries), an array of arrays of positions (Polygons, MultiLineStrings), or a multidimensional array of positions (MultiPolygon).\n\nA position is represented by an array of numbers. There must be at least two elements, and may be more. The order of elements must follow x, y, z order (easting, northing, altitude for coordinates in a projected coordinate reference system, or longitude, latitude, altitude for coordinates in a geographic coordinate reference system). Any number of additional elements are allowed -- interpretation and meaning of additional elements is beyond the scope of this specification.</p>
 </p>
       </div>
 
@@ -1910,8 +1898,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>For type <code>LineString</code>, the <code>coordinates</code> member must be an array of two or more positions.</p>
-<p>A LinearRing is closed LineString with 4 or more positions. The first and last positions are equivalent (they represent equivalent points). Though a LinearRing is not explicitly represented as a GeoJSON geometry type, it is referred to in the Polygon geometry type definition.</p>
+        <p><p>For type <code>LineString</code>, the <code>coordinates</code> member must be an array of two or more positions.\n\nA LinearRing is closed LineString with 4 or more positions. The first and last positions are equivalent (they represent equivalent points). Though a LinearRing is not explicitly represented as a GeoJSON geometry type, it is referred to in the Polygon geometry type definition.</p>
 </p>
       </div>
 
@@ -2813,8 +2800,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A GeoJSON object with type <code>GeometryCollection</code> is a geometry object which represents a collection of geometry objects.</p>
-<p>A geometry collection must have a member with the name <code>geometries</code>. The value corresponding to <code>geometries</code> is an array. Each element in this array is a GeoJSON geometry object.</p>
+        <p><p>A GeoJSON object with type <code>GeometryCollection</code> is a geometry object which represents a collection of geometry objects.\n\nA geometry collection must have a member with the name <code>geometries</code>. The value corresponding to <code>geometries</code> is an array. Each element in this array is a GeoJSON geometry object.</p>
 </p>
       </div>
 
@@ -3067,8 +3053,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A GeoJSON object with the type <code>FeatureCollection</code> is a feature collection object.</p>
-<p>An object of type <code>FeatureCollection</code> must have a member with the name <code>features</code>. The value corresponding to <code>features</code> is an array. Each element in the array is a feature object as defined above.</p>
+        <p><p>A GeoJSON object with the type <code>FeatureCollection</code> is a feature collection object.\n\nAn object of type <code>FeatureCollection</code> must have a member with the name <code>features</code>. The value corresponding to <code>features</code> is an array. Each element in the array is a feature object as defined above.</p>
 </p>
       </div>
 
@@ -3384,30 +3369,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The coordinate reference system (CRS) of a GeoJSON object is determined by its <code>crs</code> member (referred to as the CRS object below). If an object has no crs member, then its parent or grandparent object’s crs member may be acquired. If no crs member can be so acquired, the default CRS shall apply to the GeoJSON object.</p>
-<ul>
-<li>
-<p>The default CRS is a geographic coordinate reference system, using the WGS84 datum, and with longitude and latitude units of decimal degrees.</p>
-</li>
-<li>
-<p>The value of a member named <code>crs</code> must be a JSON object (referred to as the CRS object below) or JSON null. If the value of CRS is null, no CRS can be assumed.</p>
-</li>
-<li>
-<p>The crs member should be on the top-level GeoJSON object in a hierarchy (in feature collection, feature, geometry order) and should not be repeated or overridden on children or grandchildren of the object.</p>
-</li>
-<li>
-<p>A non-null CRS object has two mandatory members: <code>type</code> and <code>properties</code>.</p>
-</li>
-<li>
-<p>The value of the type member must be a string, indicating the type of CRS object.</p>
-</li>
-<li>
-<p>The value of the properties member must be an object.</p>
-</li>
-<li>
-<p>CRS shall not change coordinate ordering.</p>
-</li>
-</ul>
+        <p><p>The coordinate reference system (CRS) of a GeoJSON object is determined by its <code>crs</code> member (referred to as the CRS object below). If an object has no crs member, then its parent or grandparent object’s crs member may be acquired. If no crs member can be so acquired, the default CRS shall apply to the GeoJSON object.\n\n* The default CRS is a geographic coordinate reference system, using the WGS84 datum, and with longitude and latitude units of decimal degrees.\n\n* The value of a member named <code>crs</code> must be a JSON object (referred to as the CRS object below) or JSON null. If the value of CRS is null, no CRS can be assumed.\n\n* The crs member should be on the top-level GeoJSON object in a hierarchy (in feature collection, feature, geometry order) and should not be repeated or overridden on children or grandchildren of the object.\n\n* A non-null CRS object has two mandatory members: <code>type</code> and <code>properties</code>.\n\n* The value of the type member must be a string, indicating the type of CRS object.\n\n* The value of the properties member must be an object.\n\n* CRS shall not change coordinate ordering.</p>
 </p>
       </div>
 
@@ -4409,7 +4371,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="Location.html">Location</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Person.html">Person</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 

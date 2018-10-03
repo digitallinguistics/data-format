@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Word-2.3.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Word-2.4.0.json'
 title:   Word
 type:    object
 
@@ -113,13 +113,13 @@ properties:
     title: Transcription
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
-    description: 'A transcription of this word, optionally in multiple orthographies'
+    description: 'A transcription of this word token, optionally in multiple orthographies'
 
   translation:
     title: Translation
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-    description: 'A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.'
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Translation.json'
+    description: 'A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.'
 
   url:
     title: URL
