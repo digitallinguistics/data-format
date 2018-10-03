@@ -3,7 +3,7 @@ id:      'http://cdn.digitallinguistics.io/schemas/Access-2.0.2.json'
 title:   'Access Rights'
 type:    object
 
-description: 'The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: "researcher only"`, etc. **Note:** The Access object does not have a `type` property.'
+description: 'The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: researcher only`, etc. **Note:** The Access object does not have a `type` property.'
 
 additionalProperties:
   type: string

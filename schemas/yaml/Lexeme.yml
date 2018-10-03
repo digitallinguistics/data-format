@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.4.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.1.5.json'
 title:   Lexeme
 type:    object
 
@@ -101,7 +101,7 @@ properties:
   features:
     title: Features
     type:  object
-    description: 'A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different Language. For example, a morpheme may have the feature `"case": "accusative"` (English) as well as `"caso": "acusativo"` (Spanish).'
+    description: 'A set of inflectional features for this morpheme (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in a different Language. For example, a morpheme may have the feature `case: accusative` (English) as well as `caso: acusativo` (Spanish).'
     allOf:
       - title: Tags
         type:  object
@@ -156,13 +156,13 @@ properties:
     title: 'Morpheme Type'
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-    description: 'The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`.'
+    description: 'The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`.'
 
   notes:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this lexeme. Each Note object must have its "noteType" property specified. Notes with a note type of "private" are not intended for publication in dictionaries, while other types of notes are.'
+    description: 'A collection of notes about this lexeme. Each Note object must have its `noteType` property specified. Notes with a note type of `private` are not intended for publication in dictionaries, while other types of notes are.'
     items:
       allOf:
         - title: Note
@@ -251,7 +251,7 @@ properties:
     title: 'Variant Type'
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-    description: 'If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.'
+    description: 'If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.'
 
   senses:
 
@@ -284,7 +284,7 @@ properties:
           title: 'Lexical Category (Part of Speech, Morphosyntactic Class, etc.)'
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-          description: 'The lexical category, part of speech, or morphosyntactic class for this Lexeme. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix `‑s` would have this this property set to `verb`, and the English derivational suffix `‑ize` would have this property set to `noun`.'
+          description: 'The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix `‑s` would have this this property set to `verb`, and the English derivational suffix `‑ize` would have this property set to `noun`.'
 
         definition:
           title: Definition
@@ -296,7 +296,7 @@ properties:
           title: 'Derived Category'
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-          description: 'If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix `‑er` would have this property set to `noun`.'
+          description: 'If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix `‑er` would have this property set to `noun`. May be in multiple languages.'
 
         examples:
           title:       Examples
@@ -319,7 +319,7 @@ properties:
           title: 'Inflectional Class'
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-          description: 'If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form.'
+          description: 'If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form. May be written in multiple languages.'
 
         lexicalRelations:
           title:       'Lexical Relations'
@@ -395,7 +395,7 @@ properties:
             title: Usage
             type:  object
             $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-            description: 'An appropriate usage for this sense, optionally in multiple orthographies'
+            description: 'An appropriate usage for this sense, optionally in multiple languages'
 
         variantOf:
           title: 'Variant Of'
@@ -418,7 +418,7 @@ properties:
           title: 'Variant Type'
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-          description: 'If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.'
+          description: 'If sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages.'
 default:
   lemma: {}
   senses: []

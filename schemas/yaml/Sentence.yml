@@ -1,9 +1,9 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Sentence-1.1.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Sentence-1.2.0.json'
 title:   Sentence
 type:    object
 
-description: 'The term *sentence* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and an array of words (though the words array may be empty).'
+description: 'The term *sentence* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and a collection of words.'
 
 required:
   - transcription
@@ -76,7 +76,7 @@ properties:
     title: Transcript
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
-    description: 'A transcript of this Sentence, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the `transcription` property). The transcript may be in multiple languages/orthographies, or representational systems (e.g. you might have a `CA` transcript and a `DT` transcript, for discourse transcripts using Conversation Analysis and Discourse Transcription conventions respectively).'
+    description: 'A transcript of this Sentence, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the `transcription` property). The transcript may be in multiple orthographies, or representational systems (e.g. you might have a `CA` transcript and a `DT` transcript, for discourse transcripts using Conversation Analysis and Discourse Transcription conventions respectively).'
 
   transcription:
     title: Transcription
@@ -86,14 +86,9 @@ properties:
 
   translation:
     title: Translation
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Translation.json'
     description: 'The translations for this Sentence, optionally in multiple languages. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.'
-    allOf:
-      - $ref: 'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-      - properties:
-          type:
-            title: 'Translation Type'
-            type:  string
-            description: 'The type of translation. Typical values are `free` or `literal`, but other values may be supplied.'
 
   url:
     title: URL

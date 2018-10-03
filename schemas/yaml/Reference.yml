@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Reference-2.1.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Reference-2.1.1.json'
 title:   'Bibliographic Reference'
 type:    object
 
@@ -48,7 +48,7 @@ properties:
   doi:
     title: 'Digital Object Identifier (DOI)'
     type:  string
-    description: 'The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL (e.g. "10.1075/cal.20.02hie" not "https://doi.org/10.1075/cal.20.02hie").'
+    description: 'The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL (e.g. `10.1075/cal.20.02hie` not `https://doi.org/10.1075/cal.20.02hie`).'
 
   edition:
     title: Edition
@@ -109,9 +109,12 @@ properties:
     title:       Translators
     type:        array
     uniqueItems: true
-    description: 'An array of translations for this Reference'
+    description: 'An array of translators for this Reference'
     items:
+      title: Translator (Person)
+      type:  object
       $ref: '#/definitions/person'
+      description: A Person object representing a translator
 
   type:
     title: 'Publication Type'
