@@ -52,18 +52,3 @@ properties:
     title: 'Note Text'
     type:  string
     description: 'The text of the note itself'
-
-  noteType:
-    title: 'Note Type'
-    type:  string
-    description: 'The type of Note'
-    enum:
-      - note-to-self
-      - general
-      - anthropology
-      - discourse
-      - encyclopedic
-      - grammar
-      - phonology
-      - semantics
-      - sociocultural
