@@ -103,7 +103,7 @@
           "startTime": {
             "title": "Start Time",
             "type": "number",
-            "description": "The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis."
+            "description": "The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis. The `endTime` property is not necessarily required if the `startTime` property is present (this is useful when the endTime of one phone is the same as the startTime of the next)."
           },
           "tags": {
             "title": "Tags",
@@ -117,7 +117,7 @@
     "startTime": {
       "title": "Start Time",
       "type": "number",
-      "description": "The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis."
+      "description": "The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis. The `endTime` property is not necessarily required if the `startTime` property is present (this is useful when the endTime of one word token is the same as the startTime of the next)."
     },
     "tags": {
       "title": "Tags",
