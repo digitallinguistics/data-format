@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Annotation-1.0.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Annotation-1.0.1.json'
 title:   Annotation
 type:    object
 
