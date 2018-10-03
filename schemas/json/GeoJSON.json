@@ -27,7 +27,7 @@
     },
     "crs": {
       "title": "Coordinate Reference System (CRS)",
-      "description": "The coordinate reference system (CRS) of a GeoJSON object is determined by its `crs` member (referred to as the CRS object below). If an object has no crs member, then its parent or grandparent object’s crs member may be acquired. If no crs member can be so acquired, the default CRS shall apply to the GeoJSON object.\n\n* The default CRS is a geographic coordinate reference system, using the WGS84 datum, and with longitude and latitude units of decimal degrees.\n\n* The value of a member named `crs` must be a JSON object (referred to as the CRS object below) or JSON null. If the value of CRS is null, no CRS can be assumed.\n\n* The crs member should be on the top-level GeoJSON object in a hierarchy (in feature collection, feature, geometry order) and should not be repeated or overridden on children or grandchildren of the object.\n\n* A non-null CRS object has two mandatory members: `type` and `properties`.\n\n* The value of the type member must be a string, indicating the type of CRS object.\n\n* The value of the properties member must be an object.\n\n* CRS shall not change coordinate ordering.",
+      "description": "The coordinate reference system (CRS) of a GeoJSON object is determined by its `crs` member (referred to as the CRS object below). If an object has no crs member, then its parent or grandparent object’s crs member may be acquired. If no crs member can be so acquired, the default CRS shall apply to the GeoJSON object.\\n\\n* The default CRS is a geographic coordinate reference system, using the WGS84 datum, and with longitude and latitude units of decimal degrees.\\n\\n* The value of a member named `crs` must be a JSON object (referred to as the CRS object below) or JSON null. If the value of CRS is null, no CRS can be assumed.\\n\\n* The crs member should be on the top-level GeoJSON object in a hierarchy (in feature collection, feature, geometry order) and should not be repeated or overridden on children or grandchildren of the object.\\n\\n* A non-null CRS object has two mandatory members: `type` and `properties`.\\n\\n* The value of the type member must be a string, indicating the type of CRS object.\\n\\n* The value of the properties member must be an object.\\n\\n* CRS shall not change coordinate ordering.",
       "oneOf": [
         {
           "type": "null"
@@ -183,7 +183,7 @@
     },
     {
       "title": "Line String",
-      "description": "For type `LineString`, the `coordinates` member must be an array of two or more positions.\n\nA LinearRing is closed LineString with 4 or more positions. The first and last positions are equivalent (they represent equivalent points). Though a LinearRing is not explicitly represented as a GeoJSON geometry type, it is referred to in the Polygon geometry type definition.",
+      "description": "For type `LineString`, the `coordinates` member must be an array of two or more positions.\\n\\nA LinearRing is closed LineString with 4 or more positions. The first and last positions are equivalent (they represent equivalent points). Though a LinearRing is not explicitly represented as a GeoJSON geometry type, it is referred to in the Polygon geometry type definition.",
       "required": [
         "coordinates"
       ],
@@ -289,7 +289,7 @@
     },
     {
       "title": "Geometry Collection",
-      "description": "A GeoJSON object with type `GeometryCollection` is a geometry object which represents a collection of geometry objects.\n\nA geometry collection must have a member with the name `geometries`. The value corresponding to `geometries` is an array. Each element in this array is a GeoJSON geometry object.",
+      "description": "A GeoJSON object with type `GeometryCollection` is a geometry object which represents a collection of geometry objects.\\n\\nA geometry collection must have a member with the name `geometries`. The value corresponding to `geometries` is an array. Each element in this array is a GeoJSON geometry object.",
       "required": [
         "geometries"
       ],
@@ -318,7 +318,7 @@
     },
     {
       "title": "Feature Collection",
-      "description": "A GeoJSON object with the type `FeatureCollection` is a feature collection object.\n\nAn object of type `FeatureCollection` must have a member with the name `features`. The value corresponding to `features` is an array. Each element in the array is a feature object as defined above.",
+      "description": "A GeoJSON object with the type `FeatureCollection` is a feature collection object.\\n\\nAn object of type `FeatureCollection` must have a member with the name `features`. The value corresponding to `features` is an array. Each element in the array is a feature object as defined above.",
       "required": [
         "features"
       ],
@@ -372,7 +372,7 @@
     },
     "feature": {
       "title": "Feature",
-      "description": "A GeoJSON object with the type `Feature` is a feature object.\n\n* A feature object must have a member with the name `geometry`. The value of the geometry member is a geometry object as defined above or a JSON null value.\n\n* A feature object must have a member with the name `properties`. The value of the properties member is an object (any JSON object or a JSON null value).\n\n* If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name `id`.",
+      "description": "A GeoJSON object with the type `Feature` is a feature object.\\n\\n* A feature object must have a member with the name `geometry`. The value of the geometry member is a geometry object as defined above or a JSON null value.\\n\\n* A feature object must have a member with the name `properties`. The value of the properties member is an object (any JSON object or a JSON null value).\\n\\n* If a feature has a commonly used identifier, that identifier should be included as a member of the feature object with the name `id`.",
       "required": [
         "geometry",
         "properties"
@@ -453,7 +453,7 @@
       "title": "Position",
       "type": "array",
       "minItems": 2,
-      "description": "A position is the fundamental geometry construct. The `coordinates` member of a geometry object is composed of one position (in the case of a Point geometry), an array of positions (LineString or MultiPoint geometries), an array of arrays of positions (Polygons, MultiLineStrings), or a multidimensional array of positions (MultiPolygon).\n\nA position is represented by an array of numbers. There must be at least two elements, and may be more. The order of elements must follow x, y, z order (easting, northing, altitude for coordinates in a projected coordinate reference system, or longitude, latitude, altitude for coordinates in a geographic coordinate reference system). Any number of additional elements are allowed -- interpretation and meaning of additional elements is beyond the scope of this specification.",
+      "description": "A position is the fundamental geometry construct. The `coordinates` member of a geometry object is composed of one position (in the case of a Point geometry), an array of positions (LineString or MultiPoint geometries), an array of arrays of positions (Polygons, MultiLineStrings), or a multidimensional array of positions (MultiPolygon).\\n\\nA position is represented by an array of numbers. There must be at least two elements, and may be more. The order of elements must follow x, y, z order (easting, northing, altitude for coordinates in a projected coordinate reference system, or longitude, latitude, altitude for coordinates in a geographic coordinate reference system). Any number of additional elements are allowed -- interpretation and meaning of additional elements is beyond the scope of this specification.",
       "additionalItems": true,
       "items": {
         "type": "number"

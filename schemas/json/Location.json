@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.2.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.2.2.json",
   "title": "Location",
   "type": "object",
   "description": "A location, optionally with accompanying geographic coordinate data",
@@ -57,7 +57,7 @@
       "title": "Name",
       "type": "object",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
-      "description": "A name for this location, e.g. `Susan’s House` or `Valley High School`, or `Shenandoah River`"
+      "description": "A name for this location, e.g. `Susan’s House` or `Valley High School`, or `Shenandoah River`, optionally in multiple languages"
     },
     "notes": {
       "title": "Notes",

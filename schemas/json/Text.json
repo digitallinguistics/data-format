@@ -45,7 +45,7 @@
       "title": "Date Created",
       "type": "string",
       "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
-      "description": "The date that this Text was created in the database (**not** the date it was recorded; see the \"dateRecorded\" property instead)"
+      "description": "The date that this Text was created in the database (**not** the date it was recorded; see the `dateRecorded` property instead)"
     },
     "dateModified": {
       "title": "Date Modified",
