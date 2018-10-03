@@ -41,7 +41,6 @@ const data = {
       dateCreated:  `2017-07-24T17:41:18.539Z`,
       dateModified: `2017-07-24T17:41:18.539Z`,
       language:     `eng`,
-      noteType:     `general`,
       text:         `This orthography was originally created by Julian Granberry for the Chitimacha Tribe, and was based in part on the phonemic orthography utilized by Morris Swadesh. Daniel W. Hieber later suggested minor changes that were implemented during the Chitimacha Rosetta Stone project.`,
     },
   ],

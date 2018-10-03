@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Note-2.1.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Note-2.1.2.json'
 title:   Note
 type:    object
 
@@ -36,28 +36,24 @@ properties:
     type:  string
     description: 'A language code or language name of the language that this note is written in'
 
+  noteType:
+    title: 'Note Type'
+    type:  string
+    description: 'The type of Note. Required for notes on Lexemes.'
+
   source:
     title: 'Source (Person)'
     type:  string
     $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
     description: 'The abbreviation of the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.'
 
+  tags:
+    title: Tags
+    type:  object
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    description: 'A set of tags that apply to this Note. Useful for tagging notes that need review or responses, or marking a note as resolved.'
+
   text:
     title: 'Note Text'
     type:  string
     description: 'The text of the note itself'
-
-  noteType:
-    title: 'Note Type'
-    type:  string
-    description: 'The type of Note'
-    enum:
-      - note-to-self
-      - general
-      - anthropology
-      - discourse
-      - encyclopedic
-      - grammar
-      - phonology
-      - semantics
-      - sociocultural

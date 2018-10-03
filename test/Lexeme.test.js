@@ -13,6 +13,7 @@ const data = {
   },
   notes:        [
     {
+      language: `eng`,
       noteType: `sociocultural`,
       text:     `Only used among western varieties`,
     },
