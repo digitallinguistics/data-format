@@ -115,19 +115,31 @@ For example, you could access v1.0.0 of the `Language` schema in each of the fol
 
 The following is a list of principles and best practices to keep in mind when working with linguistic data in DLx format.
 
-* This specification describes how data should be _stored_, i.e. in a database or JSON file. It does **not** recommend how that data should be formatted when it is being managed or manipulated. Required properties could be missing during data entry, or data could be represented using an Object instead of an Array while the data is being manipulated. It is only when you _store_ that data in a file or database that it must be in valid DLx format.
+* **Storage vs. Use**
 
-* "unique" in this specification means _JSON unique_. An object is considered JSON unique if you can sort all of its properties (and subproperties) and serialize it as a JSON string with the result that that string is unique. If you sort the (sub)properties of two different objects and serialize them, and their strings are equal, they are not JSON unique.
+    * This specification describes how data should be _stored_, i.e. in a database or JSON file. It does **not** recommend how that data should be formatted when it is being managed or manipulated. Required properties could be missing during data entry, or data could be represented using an Object instead of an Array while the data is being manipulated. It is only when you _store_ that data in a file or database that it must be in valid DLx format.
 
-* This specification allows for different types of _reference data_ (cross-references between different items in a database). You can use unique database IDs, human-readable keys, or other uniquely identifying properties or combinations of properties. However, you should choose one style of reference data and use it consistently throughout your database.
+* **Uniqueness**
 
-* If your database depends on unique, opaque identifiers (e.g. a [UUID][11]), you should **also** use human-readable keys. For example, a Lexeme object representing the word "book" (the noun) might have an ID of `d0e51fcb-84af-44aa-ba16-67561e21c793`, but should also have a key `book1`. This helps users identify it as the lexeme "book", while simultaneously helping distinguish it from other "book" homonyms in the database (such as the word "book" used as verb, which might be `book2`).
+    * "unique" in this specification means _JSON unique_. An object is considered JSON unique if you can sort all of its properties (and subproperties) and serialize it as a JSON string with the result that that string is unique. If you sort the (sub)properties of two different objects and serialize them, and their strings are equal, they are not JSON unique.
 
-* An exported database should be self-contained and human-readable in the sense that a user should be able to find and follow any cross-references easily. For example, if the Lexeme `book1` has a cross-reference to the Lexeme `book2`, the `book1` Lexeme should reference the other Lexeme as `book2` and not just a database ID like `d0e51fcb-84af-44aa-ba16-67561e21c793`. Moreover, both `book1.json` and `book2.json` should be included in the export. The Text schema has optional `lexemes`, `orthographies`, and `texts` properties, allowing you to save/export all the data in a language corpus in a single file (if this is feasible for your project).
+* **IDs & Cross-References**
 
-* Typically, if an optional property is present, it must have data in it. If the data in the property is empty (e.g. an empty Array, an empty String, an Object without properties, etc.), you should remove that property before saving the data. In other words, do not store empty Strings, empty Arrays, etc. unless those properties are required. This helps keep storage costs to a minimum, while reducing clutter and maintaining human-readability.
+    * If your database depends on unique, opaque identifiers (e.g. a [UUID][11]), you should **also** use human-readable keys. For example, a Lexeme object representing the word "book" (the noun) might have an ID of `d0e51fcb-84af-44aa-ba16-67561e21c793`, but should also have a key `book1`. This helps users identify it as the lexeme "book", while simultaneously helping distinguish it from other "book" homonyms in the database (such as the word "book" used as verb, which might be `book2`).
 
-* Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when a Sentence appears in the `"sentences"` property of a Lexeme, it is an example sentence. When it appears in the `"sentences"` property of a Text, it is a transcribed sentence from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
+    * This specification allows for different types of _reference data_ (cross-references between different items in a database). You can use unique database IDs, human-readable keys, or other uniquely identifying properties or combinations of properties. However, you should choose one style of reference data and use it consistently throughout your database.
+
+* **Completeness**
+
+    * An exported database should be complete, self-contained, and human-readable in the sense that a user should be able to find and follow any cross-references easily. For example, if the Lexeme `book1` has a cross-reference to the Lexeme `book2`, the `book1` Lexeme should reference the other Lexeme as `book2` and not just a database ID like `d0e51fcb-84af-44aa-ba16-67561e21c793`. Moreover, both `book1.json` and `book2.json` should be included in the export. The Text schema has optional `lexemes`, `orthographies`, and `texts` properties, allowing you to save/export all the data in a language corpus in a single file (if this is feasible for your project).
+
+* **Optional & Empty Properties**
+
+    * Typically, if an optional property is present, it must have data in it. If the data in the property is empty (e.g. an empty Array, an empty String, an Object without properties, etc.), you should remove that property before saving the data. In other words, do not store empty Strings, empty Arrays, etc. unless those properties are required. This helps keep storage costs to a minimum, while reducing clutter and maintaining human-readability.
+
+* **Context**
+
+    * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when a Sentence appears in the `"sentences"` property of a Lexeme, it is an example sentence. When it appears in the `"sentences"` property of a Text, it is a transcribed sentence from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
 
 ## Tests
 
