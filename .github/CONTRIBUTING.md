@@ -110,6 +110,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
         - `patch`: Typos, changes to descriptions, minor bugs and hotfixes, or other changes that do not address the functionality of the schema
 
+1. **Increment the versions** of affected schemas if you didn't in the last step
+
 1. **Run the tests** using `npm test` in the command line. Fix any issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
 
 1. **Double-check the documentation** (`README.md`, `CONTRIBUTING.md`) to make sure it still reflects the changes you made.
@@ -161,17 +163,17 @@ _These steps are for maintainers only:_
     - **Write the release notes**
 
         - Title: vX.X.X
-        
+
         - Description: High-level overview of the changes
 
         - Changelog:
-        
+
             - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
-            
+
             - `LABEL: description (#000)`
 
         - Compile the list of changes from each of the commits on the master branch
-    
+
     - **Publish the GitHub release**
 
 1. **Publish to npm**: `npm publish`
