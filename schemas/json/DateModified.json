@@ -3,6 +3,13 @@
   "id": "http://cdn.digitallinguistics.io/schemas/DateModified-1.0.1.json",
   "title": "Date Modified",
   "type": "string",
-  "format": "date-time",
-  "description": "The date (and optionally time) that this object was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime)."
+  "description": "The date (and optionally time) that this object was last modified, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).",
+  "oneOf": [
+    {
+      "format": "date"
+    },
+    {
+      "format": "date-time"
+    }
+  ]
 }
