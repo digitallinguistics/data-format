@@ -1,7 +1,10 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/DateRecorded-1.0.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/DateRecorded-1.1.0.json'
 title:   'Date Recorded'
 type:    string
-format:  date-time
 
 description: 'The date this item was recorded, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime).'
+
+oneOf:
+  - format:  date
+  - format:  date-time

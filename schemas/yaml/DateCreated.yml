@@ -1,7 +1,10 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/DateCreated-1.0.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/DateCreated-1.1.0.json'
 title:   'Date Created'
 type:    string
-format:  date-time
 
 description: 'The date this database object was created, in [internet date-time format](https://www.w3.org/TR/NOTE-datetime) (*not* the date it was recorded; for that, see `dateRecorded`).'
+
+oneOf:
+  - format:  date
+  - format:  date-time
