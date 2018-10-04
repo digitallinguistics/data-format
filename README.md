@@ -147,6 +147,10 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when a Sentence appears in the `"sentences"` property of a Lexeme, it is an example sentence. When it appears in the `"sentences"` property of a Text, it is a transcribed sentence from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
 
+* **Dates**
+
+    The schemas support both [internet date and date-time formats][12], but date-time format is strongly recommended.
+
 ## Tests
 
 Tests are run using [Jasmine][10] in Node.js. Run them from the command line using `npm test`.
@@ -162,3 +166,4 @@ Tests are run using [Jasmine][10] in Node.js. Run them from the command line usi
 [9]: https://www.npmjs.com/package/ajv
 [10]: https://jasmine.github.io/
 [11]: https://www.uuidgenerator.net/
+[12]: https://www.w3.org/TR/NOTE-datetime
