@@ -24,6 +24,16 @@ properties:
     enum:
       - Lexeme
 
+  id:
+    title: ID
+    description: A unique database identifier for this Lexeme
+
+  key:
+    title:   'Lexeme Key'
+    type:    string
+    pattern: '^[^ ]+$'
+    description: 'A human-readable key that uniquely identifies this lexeme or variant within its Lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the Lexicon. (Keys do not need to be unique across lexicons.)'
+
   allomorphs:
 
     title:       Allomorphs
@@ -122,12 +132,6 @@ properties:
       type:  object
       $ref:  'http://cdn.digitallinguistics.io/schemas/LexemeReference.json'
       description: 'A reference to a lexeme'
-
-  key:
-    title:   'Lexeme Key'
-    type:    string
-    pattern: '^[^ ]+$'
-    description: 'A human-readable key that uniquely identifies this lexeme or variant within its Lexicon. Best practice is for the key to consist of the lemma form of the word in the default orthography, and if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique within the Lexicon. (Keys do not need to be unique across lexicons.)'
 
   lemma:
     title: Lemma

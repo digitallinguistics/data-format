@@ -19,6 +19,10 @@ properties:
     enum:
       - Language
 
+  id:
+    title: ID
+    description: A unique database identifier for this Language
+
   abbreviation:
     title: Abbreviation
     type:  string

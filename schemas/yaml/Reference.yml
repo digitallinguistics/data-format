@@ -29,6 +29,10 @@ definitions:
 
 properties:
 
+  id:
+    title: ID
+    description: A unique database identifier for this Reference
+
   authors:
     title:       Authors
     type:        array

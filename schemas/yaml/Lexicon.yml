@@ -21,6 +21,10 @@ properties:
     enum:
       - Lexicon
 
+  id:
+    title: ID
+    description: A unique database identifier for this Lexicon
+
   abbreviation:
     title: Abbreviation
     type:  string

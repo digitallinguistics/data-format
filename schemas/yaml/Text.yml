@@ -20,6 +20,10 @@ properties:
     enum:
       - Text
 
+  id:
+    title: ID
+    description: A unique database identifier for this Text
+
   abbreviation:
     title: Abbreviation
     type:  string

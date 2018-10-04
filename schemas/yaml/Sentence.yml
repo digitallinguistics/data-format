@@ -27,16 +27,16 @@ properties:
     enum:
       - Sentence
 
-  endTime:
-    title: 'End Time'
-    type:  number
-    description: 'The time that the speaker finishes producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).'
-
   key:
     title:   Key
     type:    string
     pattern: '^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}$'
     description: 'A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus.'
+
+  endTime:
+    title: 'End Time'
+    type:  number
+    description: 'The time that the speaker finishes producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).'
 
   language:
     title: Language
