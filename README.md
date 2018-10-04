@@ -32,7 +32,7 @@ Please consider citing this specification in scholarly articles using this repos
 
 ## Note on Versioning
 
-This project is using v0 for initial development. While the specification is largely stable, it may still change at any time, and should not yet be considered 100% production-ready. Once the specification has been tested in a production environment with a live project, its version will be incremented to v1.0.0, and the specification considered stable. Until that time, both major and minor changes will increment the minor version number (the second number), and patches / fixes will increment the patch version number (the third number).
+This project is using v0 for initial development. While the specification is largely stable, it may still change at any time, and should not yet be considered 100% production-ready. Once the specification has been tested in a production environment with a live project, its version will be incremented to v1.0.0, and the specification considered stable. Until that time, both major and minor changes will increment the minor version number (the second number), and patches / fixes will increment the patch version number (the third number). Individual schemas however start at v1.0.0.
 
 ## Basic Usage
 
