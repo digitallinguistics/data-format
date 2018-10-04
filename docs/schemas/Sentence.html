@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Sentence-1.2.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Sentence-1.3.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -157,7 +157,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
+      <h1 class='title meta any prop'>Key: <code>"key"</code></h1>
     </summary>
 
 
@@ -166,11 +166,11 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The time that the speaker finishes producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).</p>
+        <p><p>A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
 
@@ -183,6 +183,7 @@
 
 
 
+      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}$</code></p>
 
 
 
@@ -211,7 +212,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Key: <code>"key"</code></h1>
+      <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
     </summary>
 
 
@@ -220,11 +221,11 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
+        <p><p>The time that the speaker finishes producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
 
 
 
@@ -237,7 +238,6 @@
 
 
 
-      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}$</code></p>
 
 
 
@@ -665,7 +665,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Person.html">Person</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DateCreated.html">Date Created</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="DateModified.html">Date Modified</a></li><li><a href="DateRecorded.html">Date Recorded</a></li><li><a href="Language.html">Language</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Lexicon.html">Lexicon</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="URL.html">URL</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 
