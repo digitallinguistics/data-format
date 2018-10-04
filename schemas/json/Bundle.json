@@ -17,6 +17,10 @@
         "Bundle"
       ]
     },
+    "id": {
+      "title": "ID",
+      "description": "A unique database identifier for this Bundle"
+    },
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",

@@ -17,6 +17,10 @@
         "Location"
       ]
     },
+    "id": {
+      "title": "ID",
+      "description": "A unique database identifier for this Location"
+    },
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",

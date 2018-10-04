@@ -7,8 +7,7 @@
   "additionalProperties": true,
   "required": [
     "language",
-    "lexemes",
-    "name"
+    "lexemes"
   ],
   "properties": {
     "type": {
@@ -18,6 +17,10 @@
       "enum": [
         "Lexicon"
       ]
+    },
+    "id": {
+      "title": "ID",
+      "description": "A unique database identifier for this Lexicon"
     },
     "abbreviation": {
       "title": "Abbreviation",
@@ -35,14 +38,13 @@
       "title": "Contributors",
       "type": "array",
       "uniqueItems": true,
-      "description": "A collection of people who contributed to the creation or curation of this lexicon in some way.",
+      "description": "A collection of people who contributed to the creation or curation of this lexicon in some way. It is strongly recommended that each Person object have the `roles` property specified.",
       "items": {
-        "title": "Contributor",
+        "title": "Contributor (Person)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Contributor.json",
-        "description": "A contributor to this Lexicon"
-      },
-      "default": []
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json",
+        "description": "A Person object describing a contributor to this Lexicon"
+      }
     },
     "dateCreated": {
       "title": "Date Created",
