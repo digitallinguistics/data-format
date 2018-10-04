@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.3.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.4.0.json'
 title:   Orthography
 type:    object
 

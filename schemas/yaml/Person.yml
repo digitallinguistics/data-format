@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Person-1.2.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Person-1.3.0.json'
 title:   Person
 type:    object
 
