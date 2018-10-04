@@ -23,7 +23,8 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 - [ ] **Install project dependencies** by running `npm install` on the command line
 - [ ] **Update the documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you plan to make
 - [ ] **Write or update (failing) tests** for the changes you are going to make
-- [ ] **Make changes to the schemas or code** (don't forget to increment the schema version!)
+- [ ] **Make changes to the schemas or code**
+- [ ] **Increment version numbers** of schemas that changed
 - [ ] **Run the tests** using `npm test` on the command line, and fix issues that arise
 - [ ] **Double check the documentation** to ensure it still reflects your changes
 - [ ] **Pull the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
