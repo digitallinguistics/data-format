@@ -37,6 +37,7 @@ const data = {
   dateModified:       `2017-07-24T17:41:18.539Z`,
   defaultOrthography: `modern`,
   glottolog:          `chit1248`,
+  id:                 `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
   iso:                `iso`,
   locations:          [{ name: { eng: `Charenton` } }],
   name:               { eng: `Chitimacha` },

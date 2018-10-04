@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Media-2.0.5.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Media-2.1.0.json'
 title:   'Media File'
 type:    object
 
@@ -18,6 +18,10 @@ properties:
     description: 'The type of object (must be set to `Media`)'
     enum:
       - Media
+
+  id:
+    title: ID
+    description: A unique database identifier for this Media Item
 
   abbreviation:
     title: Abbreviation

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Language-6.1.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Language-6.2.0.json'
 title:   Language
 type:    object
 
@@ -18,6 +18,10 @@ properties:
     description: 'The type of object (must be set to `Language`)'
     enum:
       - Language
+
+  id:
+    title: ID
+    description: A unique database identifier for this Language
 
   abbreviation:
     title: Abbreviation

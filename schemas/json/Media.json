@@ -17,6 +17,10 @@
         "Media"
       ]
     },
+    "id": {
+      "title": "ID",
+      "description": "A unique database identifier for this Media Item"
+    },
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",

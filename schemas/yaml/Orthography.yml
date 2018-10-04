@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.3.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.4.0.json'
 title:   Orthography
 type:    object
 
@@ -19,6 +19,10 @@ properties:
     description: 'The type of object (must be set to `Orthography`)'
     enum:
       - Orthography
+
+  id:
+    title: ID
+    description: A unique database identifier for this Orthography
 
   abbreviation:
     title: Abbreviation

@@ -35,6 +35,7 @@ const data = {
       pronunciations: [`tˀ`],
     },
   ],
+  id:    `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
   name:  { eng: `Modern` },
   notes: [
     {
@@ -68,7 +69,6 @@ describe(`Orthography`, () => {
     if (valid) expect(valid).toBe(true);
     else fail(ajv.errorsText());
   });
-
 
   it(`invalidates: bad type`, () => {
     const badType = { type: `bad type` };
