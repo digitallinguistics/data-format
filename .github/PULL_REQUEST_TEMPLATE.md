@@ -55,8 +55,8 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 _This section is for maintainers only_
 
 - [ ] **Run upload script**: `npm run upload`
-- [ ] **Write the release note** for the PR
 - [ ] **Squash & merge PR into `master`**
     - Title: `LABEL: description (#000)`
     - Description
     - Changelog: `LABEL: description (closes #000)`
+- [ ] **Create or update the release notes** for the release that this PR will be part of
