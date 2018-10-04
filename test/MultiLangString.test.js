@@ -6,11 +6,13 @@ let ajv;
 let validate;
 
 // VALID SAMPLE DATA
-const data = {
+const objectData = {
   ctm: `Sitimaxa`,
   eng: `Chitimacha`,
   fra: `Chetimacha`,
 };
+
+const stringData = `Chitimacha`;
 
 describe(`MultiLangString`, () => {
 
@@ -19,8 +21,14 @@ describe(`MultiLangString`, () => {
     validate = d => ajv.validate(`MultiLangString`, d);
   });
 
-  it(`validates`, () => {
-    const valid = validate(data);
+  it(`validates: Object`, () => {
+    const valid = validate(objectData);
+    if (valid) expect(valid).toBe(true);
+    else fail(ajv.errorsText());
+  });
+
+  it(`validates: String`, () => {
+    const valid = validate(stringData);
     if (valid) expect(valid).toBe(true);
     else fail(ajv.errorsText());
   });
