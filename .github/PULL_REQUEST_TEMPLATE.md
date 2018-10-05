@@ -60,3 +60,4 @@ _This section is for maintainers only_
     - Description
     - Changelog: `LABEL: description (closes #000)`
 - [ ] **Create or update the release notes** for the release that this PR will be part of
+- [ ] **Delete issue branch**
