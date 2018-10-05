@@ -60,7 +60,7 @@
       "title": "Speaker",
       "type": "string",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
-      "description": "The abbreviation of person who produced (uttered, signed, spoke, sung) this Sentence. The value of this field must match the abbreviation of one of the persons listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Sentences in the Text. If multiple contributors with a `speaker` role are included in a text, each Sentence must have its `speaker` attribute specified."
+      "description": "The abbreviation of person who produced (uttered, signed, spoke, sung) this Sentence. The value of this field must match the abbreviation of one of the people listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Sentences in the Text. If multiple contributors with a `speaker` role are included in a text, each Sentence must have its `speaker` attribute specified."
     },
     "startTime": {
       "title": "Start Time",
