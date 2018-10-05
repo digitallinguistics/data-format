@@ -14,11 +14,11 @@ const data = {
   year:  2000,
 };
 
-describe(`Reference`, () => {
+describe(`BibliographicReference`, () => {
 
   beforeAll(async function setup() {
     ajv = await AJV();
-    validate = d => ajv.validate(`Reference`, d);
+    validate = d => ajv.validate(`BibliographicReference`, d);
   });
 
   it(`validates`, () => {

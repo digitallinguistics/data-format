@@ -227,7 +227,7 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 
 [13]: https://digitallinguistics.github.io/spec/schemas/LexemeReference.html
 [14]: https://digitallinguistics.github.io/spec/schemas/MultiLangString.html
-[15]: https://digitallinguistics.github.io/spec/schemas/Reference.html
+[15]: https://digitallinguistics.github.io/spec/schemas/BibliographicReference.html
 
 [17]: https://digitallinguistics.github.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
