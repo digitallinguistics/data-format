@@ -7,11 +7,13 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  doi:   `10.1075/cal.20.02hie`,
-  id:    `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
-  title: ``,
-  url:   `https://api.digitallinguistics.io/references/Hieber2018.json`,
-  year:  2000,
+  doi:             `10.1075/cal.20.02hie`,
+  id:              `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  publicationType: `book section`,
+  title:           ``,
+  type:            `BibliographicReference`,
+  url:             `https://api.digitallinguistics.io/references/Hieber2018.json`,
+  year:            2000,
 };
 
 describe(`BibliographicReference`, () => {

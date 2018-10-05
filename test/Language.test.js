@@ -51,14 +51,15 @@ const data = {
   phonemes:           [],
   references:         [
     {
-      authors:     [{ firstName: `Morris`, lastName: `Swadesh` }],
-      city:        `New York`,
-      editors:     [{ firstName: `Cornelius`, lastName: `Osgood` }],
-      pages:       `312-336`,
-      publication: `Linguistic Structures of Native America`,
-      title:       `Chitimacha`,
-      type:        `book section`,
-      year:        1946,
+      authors:         [{ firstName: `Morris`, lastName: `Swadesh` }],
+      city:            `New York`,
+      editors:         [{ firstName: `Cornelius`, lastName: `Osgood` }],
+      pages:           `312-336`,
+      publication:     `Linguistic Structures of Native America`,
+      publicationType: `book section`,
+      title:           `Chitimacha`,
+      type:            `BibliographicReference`,
+      year:            1946,
     },
   ],
   tags: {
