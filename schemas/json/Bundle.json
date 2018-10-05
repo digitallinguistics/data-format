@@ -36,7 +36,7 @@
     "dateCreated": {
       "title": "Date Created",
       "type": "string",
-      "description": "The date that this bundle was created",
+      "description": "The date and optionally time that this bundle was created",
       "oneOf": [
         {
           "format": "date"
@@ -49,7 +49,7 @@
     "dateModified": {
       "title": "Date Modified",
       "type": "string",
-      "description": "The date that this bundle was last modified",
+      "description": "The date and optionally time that this bundle was last modified",
       "oneOf": [
         {
           "format": "date"
