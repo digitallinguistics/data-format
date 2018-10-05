@@ -11,8 +11,8 @@ const data = {
   access:       {
     ELAR: `Researcher`,
   },
-  dateCreated:  `2018-10-04T01:49:30.148Z`,
-  dateModified: `2018-10-04T01:49:30.148Z`,
+  dateCreated:  `2018-10-04`,
+  dateModified: `2018-10-04`,
   id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
   locations:    [],
   media:        [],

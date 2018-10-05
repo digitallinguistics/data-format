@@ -7,8 +7,10 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  id:   `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
-  name: {
+  dateCreated:  `2018-10-05T15:26:23.070Z`,
+  dateModified: `2018-10-05T15:26:23.070Z`,
+  id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  name:         {
     ctm: `Kas Kec Namu`,
     eng: `Charenton`,
   },
