@@ -55,6 +55,7 @@ const data = {
   ],
   tags: {},
   type: `Orthography`,
+  url:  `https://api.digitallinguistics.io/languages/Chitimacha/orthographies/Modern.json`,
 };
 
 describe(`Orthography`, () => {
