@@ -28,6 +28,7 @@ const data = {
   title: {
     eng: `How the world began`,
   },
+  url: `https://api.digitallinguistics.io/languages/Chitimacha/texts/A1.json`,
 };
 
 describe(`Text`, () => {

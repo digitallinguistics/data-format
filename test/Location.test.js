@@ -14,6 +14,7 @@ const data = {
     ctm: `Kas Kec Namu`,
     eng: `Charenton`,
   },
+  url: `https://api.digitallinguistics.io/languages/Chitimacha/locations/Charenton.json`,
 };
 
 describe(`Location`, () => {

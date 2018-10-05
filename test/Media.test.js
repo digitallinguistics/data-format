@@ -12,6 +12,7 @@ const data = {
   dateRecorded: `2018-10-05`,
   filename:     `recording.wav`,
   id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  url:          `https://api.digitallinguistics.io/languages/Chitimacha/files/recording.wav`,
 };
 
 describe(`Media`, () => {
