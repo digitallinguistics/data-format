@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Sentence-1.3.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Sentence-1.4.0.json'
 title:   Sentence
 type:    object
 
@@ -91,9 +91,9 @@ properties:
     description: 'The translations for this Sentence, optionally in multiple languages. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation.'
 
   url:
-    title: URL
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  URL
+    type:   string
+    format: uri
     description: 'The URL where this Sentence can be retrieved in JSON format'
 
   words:
