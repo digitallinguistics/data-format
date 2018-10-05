@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Media-2.2.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-2.3.0.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
@@ -136,7 +136,7 @@
     "mediaURL": {
       "title": "Media URL",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "format": "uri",
       "description": "The URL where the media file can be found."
     },
     "notes": {
@@ -152,7 +152,7 @@
     "original": {
       "title": "Original Media Item",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "format": "uri",
       "description": "The URL of the Media object (*not* the URL to the media file itself) that this file is derived from"
     },
     "people": {
@@ -179,7 +179,7 @@
     "url": {
       "title": "URL",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "format": "uri",
       "description": "The URL where this media data can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaURL` attribute)."
     }
   }

@@ -120,9 +120,9 @@ properties:
     description: 'The location where the content in this media file was recorded or produced'
 
   mediaURL:
-    title: 'Media URL'
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  'Media URL'
+    type:   string
+    format: uri
     description: 'The URL where the media file can be found.'
 
   notes:
@@ -135,9 +135,9 @@ properties:
       $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
 
   original:
-    title: 'Original Media Item'
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  'Original Media Item'
+    type:   string
+    format: uri
     description: 'The URL of the Media object (*not* the URL to the media file itself) that this file is derived from'
 
   people:

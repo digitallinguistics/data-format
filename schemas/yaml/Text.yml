@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Text-2.3.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Text-2.4.0.json'
 title:   Text
 type:    object
 
@@ -156,7 +156,7 @@ properties:
     description: 'A title is a human-readable prose description of the content of the Text. The `title` object contains all the titles of the text, in one or more languages. Each attribute in the `title` object should be the abbreviation of a language, and its value should be the title of the text in that language.'
 
   url:
-    title: URL
-    type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  URL
+    type:   string
+    format: uri
     description: 'The URL where this data can be retrieved in JSON format'

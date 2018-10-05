@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.3.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.4.0.json",
   "title": "Person",
   "type": "object",
   "description": "An object providing information about a Person",
@@ -164,7 +164,7 @@
     "url": {
       "title": "URL",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/URL.json",
+      "format": "uri",
       "description": "The URL where the JSON data for this Person may be accessed"
     }
   }
