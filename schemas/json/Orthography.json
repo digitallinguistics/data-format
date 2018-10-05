@@ -127,6 +127,12 @@
       "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
       "description": "A set of tags for this orthography",
       "default": {}
+    },
+    "url": {
+      "title": "URL",
+      "type": "string",
+      "format": "uri",
+      "description": "A URL where this Orthography may be accessed in JSON format"
     }
   }
 }
