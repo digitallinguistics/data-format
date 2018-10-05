@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Media-2.1.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-2.2.0.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
@@ -53,20 +53,41 @@
     "dateCreated": {
       "title": "Date Created",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateCreated.json",
-      "description": "The date that this metadata object was originally created. *Not* the date the media file was created. For that, see the `dateRecorded` property."
+      "description": "The date and optionally time that this metadata object was originally created. *Not* the date the media file was created. For that, see the `dateRecorded` property.",
+      "oneOf": [
+        {
+          "format": "date"
+        },
+        {
+          "format": "date-time"
+        }
+      ]
     },
     "dateModified": {
       "title": "Date Modified",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateModified.json",
-      "description": "The date and optionally time that this metadata was last modified. *Not* the date that the media file was modified."
+      "description": "The date and optionally time that this metadata was last modified. *Not* the date that the media file was modified.",
+      "oneOf": [
+        {
+          "format": "date"
+        },
+        {
+          "format": "date-time"
+        }
+      ]
     },
     "dateRecorded": {
       "title": "Date Recorded",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DateRecorded.json",
-      "description": "The date that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. *Not* the date that this metadata object was created. For that, see the `dateCreated` property."
+      "description": "The date and optionally time that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. *Not* the date that this metadata object was created. For that, see the `dateCreated` property.",
+      "oneOf": [
+        {
+          "format": "date"
+        },
+        {
+          "format": "date-time"
+        }
+      ]
     },
     "endTime": {
       "title": "End Time",

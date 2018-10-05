@@ -7,9 +7,11 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  language: `eng`,
-  source:   `DWH`,
-  tags:     {
+  dateCreated:  `2018-10-05T15:26:23.070Z`,
+  dateModified: `2018-10-05T15:26:23.070Z`,
+  language:     `eng`,
+  source:       `DWH`,
+  tags:         {
     status: `needs review`,
   },
   text:     `This is a test note.`,

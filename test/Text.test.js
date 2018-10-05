@@ -13,9 +13,12 @@ const data = {
       givenName:  `Smith`,
     },
   ],
-  genre:     `mythological narrative`,
-  id:        `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
-  sentences: [
+  dateCreated:  `2018-10-05T15:26:23.070Z`,
+  dateModified: `2018-10-05T15:26:23.070Z`,
+  dateRecorded: `2018-10-05T15:26:23.070Z`,
+  genre:        `mythological narrative`,
+  id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  sentences:    [
     {
       transcription: {},
       translation:   {},

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Text-2.2.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Text-2.3.0.json'
 title:   Text
 type:    object
 
@@ -61,20 +61,26 @@ properties:
   dateCreated:
     title: 'Date Created'
     type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/DateCreated.json'
-    description: 'The date that this Text was created in the database (**not** the date it was recorded; see the `dateRecorded` property instead)'
+    description: 'The date and optionally time that this Text was created in the database (**not** the date it was recorded; see the `dateRecorded` property instead)'
+    oneOf:
+      - format: date
+      - format: date-time
 
   dateModified:
     title: 'Date Modified'
     type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/DateModified.json'
-    description: 'The date that this Text object was last modified (**not** the date that the recording of the text was modified)'
+    description: 'The date and optionally time that this Text object was last modified (**not** the date that the recording of the text was modified)'
+    oneOf:
+      - format: date
+      - format: date-time
 
   dateRecorded:
     title: 'Date Recorded'
     type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/DateRecorded.json'
-    description: 'The date that this text was recorded'
+    description: 'The date and optionally time that this text was recorded'
+    oneOf:
+      - format: date
+      - format: date-time
 
   discourseType:
     title:     'Discourse Type'

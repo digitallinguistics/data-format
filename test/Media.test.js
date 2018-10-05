@@ -7,8 +7,11 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  filename: `recording.wav`,
-  id:       `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  dateCreated:  `2018-10-05T15:26:23.070Z`,
+  dateModified: `2018-10-05T15:26:23.070Z`,
+  dateRecorded: `2018-10-05`,
+  filename:     `recording.wav`,
+  id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
 };
 
 describe(`Media`, () => {

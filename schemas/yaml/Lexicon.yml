@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexicon-1.2.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexicon-1.3.0.json'
 title:   Lexicon
 type:    object
 
@@ -50,14 +50,18 @@ properties:
   dateCreated:
     title: 'Date Created'
     type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/DateCreated.json'
     description: 'The date that this lexicon was created'
+    oneOf:
+      - format: date
+      - format: date-time
 
   dateModified:
     title: 'Date Modified'
     type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/DateModified.json'
     description: 'The date that this lexicon was last modified'
+    oneOf:
+      - format: date
+      - format: date-time
 
   language:
     title: Language
