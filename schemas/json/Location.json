@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.5.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.5.1.json",
   "title": "Location",
   "type": "object",
   "description": "A location, optionally with accompanying geographic coordinate data",
@@ -97,7 +97,7 @@
       "items": {
         "title": "Reference",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Reference.json",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/BibliographicReference.json",
         "description": "A bibliographic reference about this location"
       }
     },

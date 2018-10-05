@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Phoneme-2.1.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Phoneme-2.1.4.json'
 title:   Phoneme
 type:    object
 
@@ -192,7 +192,7 @@ properties:
     items:
       title: Reference
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Reference.json'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/BibliographicReference.json'
       description: 'A bibliographic reference'
 
   rounding:
