@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Bundle-1.3.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Bundle-1.4.0.json'
 title:   Bundle
 type:    object
 
@@ -90,11 +90,11 @@ properties:
       $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
       description: 'A note about this bundle'
 
-  persons:
-    title:       Persons
+  people:
+    title:       People
     type:        array
     uniqueItems: true
-    description: 'An array of persons associated with this bundle'
+    description: 'An array of people associated with this bundle'
     items:
       title: Person
       type:  object

@@ -19,12 +19,12 @@ const data = {
   name:         {
     eng: `Elicitation Day 1`,
   },
-  notes:   [],
-  persons: [],
-  tags:    {},
-  texts:   [],
-  type:    `Bundle`,
-  url:     `https://mylanguage.com/bundles/day1.json`,
+  notes:  [],
+  people: [],
+  tags:   {},
+  texts:  [],
+  type:   `Bundle`,
+  url:    `https://mylanguage.com/bundles/day1.json`,
 };
 
 describe(`Bundle`, () => {
