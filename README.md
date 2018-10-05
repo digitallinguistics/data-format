@@ -135,6 +135,10 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * This specification allows for different types of _reference data_ (cross-references between different items in a database). You can use unique database IDs, human-readable keys, or other uniquely identifying properties or combinations of properties. However, you should choose one style of reference data and use it consistently throughout your database.
 
+* **URLs**
+
+    * Top-level schemas include a `url` property which should be used to indicate a URL where that resource can be retrieved in JSON format. It should not be used for the URL of a human-readable presentation of the resource (the `link` property should be used for this purpose). The resource does not have to be publicly available at this URL; it may require permissions to access.
+
 * **Completeness**
 
     * An exported database should be complete, self-contained, and human-readable in the sense that a user should be able to find and follow any cross-references easily. For example, if the Lexeme `book1` has a cross-reference to the Lexeme `book2`, the `book1` Lexeme should reference the other Lexeme as `book2` and not just a database ID like `d0e51fcb-84af-44aa-ba16-67561e21c793`. Moreover, both `book1.json` and `book2.json` should be included in the export. The Text schema has optional `lexemes`, `orthographies`, and `texts` properties, allowing you to save/export all the data in a language corpus in a single file (if this is feasible for your project).

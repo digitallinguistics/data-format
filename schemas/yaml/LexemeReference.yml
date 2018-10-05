@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/LexemeReference-2.0.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/LexemeReference-2.1.0.json'
 title:   'Lexeme Reference'
 type:    object
 
@@ -26,9 +26,9 @@ properties:
     description: 'The key of the lexeme being referenced'
 
   lexemeURL:
-    title: 'Referenced Lexeme (URL)'
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  'Referenced Lexeme (URL)'
+    type:   string
+    format: uri
     description: 'The URL of the lexeme being referenced'
 
   lexicon:
@@ -38,9 +38,9 @@ properties:
     description: 'The abbreviation of the lexicon being referenced'
 
   lexiconURL:
-    title: 'Referenced Lexicon (URL)'
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  'Referenced Lexicon (URL)'
+    type:   string
+    format: uri
     description: 'The URL of the lexicon being referenced'
 
   relation:

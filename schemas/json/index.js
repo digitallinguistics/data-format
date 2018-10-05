@@ -23,6 +23,5 @@ module.exports = {
   Text: require('./Text'),
   Transcription: require('./Transcription'),
   Translation: require('./Translation'),
-  URL: require('./URL'),
   Word: require('./Word'),
 };

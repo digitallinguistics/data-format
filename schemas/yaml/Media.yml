@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Media-2.2.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Media-2.3.0.json'
 title:   'Media File'
 type:    object
 
@@ -120,9 +120,9 @@ properties:
     description: 'The location where the content in this media file was recorded or produced'
 
   mediaURL:
-    title: 'Media URL'
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  'Media URL'
+    type:   string
+    format: uri
     description: 'The URL where the media file can be found.'
 
   notes:
@@ -135,9 +135,9 @@ properties:
       $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
 
   original:
-    title: 'Original Media Item'
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  'Original Media Item'
+    type:   string
+    format: uri
     description: 'The URL of the Media object (*not* the URL to the media file itself) that this file is derived from'
 
   people:
@@ -161,7 +161,7 @@ properties:
     description: 'A set of tags for this media item'
 
   url:
-    title: URL
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  URL
+    type:   string
+    format: uri
     description: 'The URL where this media data can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaURL` attribute).'

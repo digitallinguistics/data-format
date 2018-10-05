@@ -179,12 +179,13 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <li><a href="https://digitallinguistics.github.io/spec/schemas/Orthography.html">Orthography</a></li>
 <li><a href="https://digitallinguistics.github.io/spec/schemas/Text.html">Text</a></li>
 <li><a href="https://digitallinguistics.github.io/spec/schemas/Sentence.html">Sentence</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Word.html">Word</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Morpheme.html">Morpheme</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Phoneme.html">Phoneme</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Lexicon.html">Lexicon</a></li>
+<li><a href="https://digitallinguistics.github.io/spec/schemas/Word.html">Word Token</a></li>
+<li><a href="https://digitallinguistics.github.io/spec/schemas/Morpheme.html">Morpheme Token</a></li>
 <li><a href="https://digitallinguistics.github.io/spec/schemas/Lexeme.html">Lexeme</a></li>
+<li><a href="https://digitallinguistics.github.io/spec/schemas/Phoneme.html">Phoneme</a></li>
 <li><a href="https://digitallinguistics.github.io/spec/schemas/Transcription.html">Transcription</a></li>
+<li><a href="https://digitallinguistics.github.io/spec/schemas/Translation.html">Translation</a></li>
+<li><a href="https://digitallinguistics.github.io/spec/schemas/Annotation.html">Annotation</a></li>
 </ul>
 <h3>Non-Linguistic Schemas</h3>
 <p>Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):</p>
@@ -198,7 +199,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <tbody>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Abbreviation.html"><code>Abbreviation</code></a></td>
-<td>A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.</td>
+<td>A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Access.html"><code>Access</code></a></td>
@@ -206,59 +207,47 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Address.html"><code>Address</code></a></td>
-<td>A postal address.</td>
+<td>A postal address</td>
+</tr>
+<tr>
+<td><a href="https://digitallinguistics.github.io/spec/schemas/Reference.html"><code>Bibliographic Reference</code></a></td>
+<td>A bibliographic reference</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Bundle.html"><code>Bundle</code></a></td>
-<td>A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.</td>
+<td>A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/DateCreated.html"><code>DateCreated</code></a></td>
-<td>The date a database resource was created (<em>not</em> the date the item was recorded).</td>
-</tr>
-<tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/DateModified.html"><code>DateModified</code></a></td>
-<td>The date a database resource was last modified.</td>
-</tr>
-<tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/DateRecorded.html"><code>DateRecorded</code></a></td>
-<td>The date a database resource (usually a text) was recorded.</td>
+<td><a href="https://digitallinguistics.github.io/spec/schemas/GeoJSON.html"><code>Geospatial Coordinated</code></a></td>
+<td>A set of geospatial coordinates, in GeoJSON format</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/LexemeReference.html"><code>LexemeReference</code></a></td>
-<td>An Object that contains a reference to an item in a lexicon.</td>
+<td>An Object that contains a reference to an item in a lexicon</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Location.html"><code>Location</code></a></td>
-<td>A location with optional geographic coordinates.</td>
+<td>A location with optional geographic coordinates</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Media.html"><code>Media</code></a></td>
-<td>Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).</td>
+<td><a href="https://digitallinguistics.github.io/spec/schemas/Media.html"><code>Media File</code></a></td>
+<td>Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/MultiLangString.html"><code>MultiLangString</code></a></td>
-<td>An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study.</td>
+<td>An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Note.html"><code>Note</code></a></td>
-<td>Most DLx resources allow you to add notes in different languages, of different types.</td>
+<td>Most DLx resources allow you to add notes in different languages, of different types</td>
 </tr>
 <tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Person.html"><code>Person</code></a></td>
 <td>Information about a person, e.g. speaker, linguist, editor, translator, etc.</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Reference.html"><code>Reference</code></a></td>
-<td>A bibliographic reference.</td>
-</tr>
-<tr>
 <td><a href="https://digitallinguistics.github.io/spec/schemas/Tags.html"><code>Tags</code></a></td>
-<td>A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.</td>
-</tr>
-<tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/URL.html"><code>URL</code></a></td>
-<td>A URL.</td>
+<td>A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora</td>
 </tr>
 </tbody>
 </table>
@@ -274,7 +263,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
     <nav>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/Annotation.html">Annotation</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/Language.html">Language</a></li><li><a href="schemas/LexemeReference.html">Lexeme Reference</a></li><li><a href="schemas/Lexicon.html">Lexicon</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Morpheme.html">Morpheme Token</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Sentence.html">Sentence</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/Translation.html">Translation</a></li><li><a href="schemas/URL.html">URL</a></li><li><a href="schemas/Word.html">Word</a></li><li><a href="schemas/GeoJSON.html">GeoJSON Object</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li>
+        <li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/Annotation.html">Annotation</a></li><li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/Language.html">Language</a></li><li><a href="schemas/LexemeReference.html">Lexeme Reference</a></li><li><a href="schemas/Lexicon.html">Lexicon</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Morpheme.html">Morpheme Token</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Sentence.html">Sentence</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/Translation.html">Translation</a></li><li><a href="schemas/Word.html">Word</a></li><li><a href="schemas/GeoJSON.html">GeoJSON Object</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 

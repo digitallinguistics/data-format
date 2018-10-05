@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.3.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-2.4.0.json'
 title:   Lexeme
 type:    object
 
@@ -233,9 +233,9 @@ properties:
     description: 'An abstract representation of the tonal pattern of this lexeme or variant. Examples: `HLH`, `323`, etc.'
 
   url:
-    title: URL
-    type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/URL.json'
+    title:  URL
+    type:   string
+    format: uri
     description: 'The URL where this lexeme or variant is located'
 
   variantOf:
