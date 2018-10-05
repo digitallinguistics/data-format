@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-3.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.0.0.json",
   "title": "Bibliographic Reference",
   "type": "object",
-  "description": "A bibliographic Reference. Note: The `type` field in a reference refers to the type of reference, not the type of DLx object.",
+  "description": "A bibliographic Reference",
   "required": [
     "title"
   ],
@@ -32,6 +32,14 @@
     "id": {
       "title": "ID",
       "description": "A unique database identifier for this Reference"
+    },
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of object. Must be set to `BibliographicReference`.",
+      "enum": [
+        "BibliographicReference"
+      ]
     },
     "authors": {
       "title": "Authors",
@@ -99,6 +107,27 @@
       "type": "string",
       "description": "The publication where this item was published"
     },
+    "publicationType": {
+      "title": "Publication Type",
+      "type": "string",
+      "description": "The type of publication",
+      "enum": [
+        "journal article",
+        "book",
+        "generic",
+        "book section",
+        "conference proceedings",
+        "working paper",
+        "report",
+        "web page",
+        "thesis",
+        "magazine article",
+        "newspaper article",
+        "television broadcast",
+        "encyclopedia article",
+        "film"
+      ]
+    },
     "publisher": {
       "title": "Publisher (or Institution)",
       "type": "string",
@@ -125,27 +154,6 @@
         "$ref": "#/definitions/person",
         "description": "A Person object representing a translator"
       }
-    },
-    "type": {
-      "title": "Publication Type",
-      "type": "string",
-      "description": "The type of publication",
-      "enum": [
-        "journal article",
-        "book",
-        "generic",
-        "book section",
-        "conference proceedings",
-        "working paper",
-        "report",
-        "web page",
-        "thesis",
-        "magazine article",
-        "newspaper article",
-        "television broadcast",
-        "encyclopedia article",
-        "film"
-      ]
     },
     "url": {
       "title": "URL",
