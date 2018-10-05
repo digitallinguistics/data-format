@@ -173,34 +173,32 @@ The DLx project provides recommendations for how to format linguistic data in JS
 * [Orthography](https://digitallinguistics.github.io/spec/schemas/Orthography.html)
 * [Text](https://digitallinguistics.github.io/spec/schemas/Text.html)
 * [Sentence](https://digitallinguistics.github.io/spec/schemas/Sentence.html)
-* [Word](https://digitallinguistics.github.io/spec/schemas/Word.html)
-* [Morpheme](https://digitallinguistics.github.io/spec/schemas/Morpheme.html)
-* [Phoneme](https://digitallinguistics.github.io/spec/schemas/Phoneme.html)
-* [Lexicon](https://digitallinguistics.github.io/spec/schemas/Lexicon.html)
+* [Word Token](https://digitallinguistics.github.io/spec/schemas/Word.html)
+* [Morpheme Token](https://digitallinguistics.github.io/spec/schemas/Morpheme.html)
 * [Lexeme](https://digitallinguistics.github.io/spec/schemas/Lexeme.html)
+* [Phoneme](https://digitallinguistics.github.io/spec/schemas/Phoneme.html)
 * [Transcription](https://digitallinguistics.github.io/spec/schemas/Transcription.html)
+* [Translation](https://digitallinguistics.github.io/spec/schemas/Translation.html)
+* [Annotation](https://digitallinguistics.github.io/spec/schemas/Annotation.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
 
-Schema                  | Description
------------------------ | -----------
-[`Abbreviation`][1]     | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers.
-[`Access`][2]           | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA, or using a custom schema.
-[`Address`][8]          | A postal address.
-[`Bundle`][3]           | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day.
-[`DateCreated`][10]     | The date a database resource was created (*not* the date the item was recorded).
-[`DateModified`][11]    | The date a database resource was last modified.
-[`DateRecorded`][12]    | The date a database resource (usually a text) was recorded.
-[`LexemeReference`][13] | An Object that contains a reference to an item in a lexicon.
-[`Location`][17]        | A location with optional geographic coordinates.
-[`Media`][5]            | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.).
-[`MultiLangString`][14] | An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study.
-[`Note`][6]             | Most DLx resources allow you to add notes in different languages, of different types.
-[`Person`][7]           | Information about a person, e.g. speaker, linguist, editor, translator, etc.
-[`Reference`][15]       | A bibliographic reference.
-[`Tags`][9]             | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora.
-[`URL`][16]             | A URL.
+Schema                          | Description
+------------------------------- | -----------
+[`Abbreviation`][1]             | A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers
+[`Access`][2]                   | Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA, or using a custom schema.
+[`Address`][8]                  | A postal address
+[`Bibliographic Reference`][15] | A bibliographic reference
+[`Bundle`][3]                   | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day
+[`Geospatial Coordinated`][29]  | A set of geospatial coordinates, in GeoJSON format
+[`LexemeReference`][13]         | An Object that contains a reference to an item in a lexicon
+[`Location`][17]                | A location with optional geographic coordinates
+[`Media File`][5]               | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)
+[`MultiLangString`][14]         | An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study
+[`Note`][6]                     | Most DLx resources allow you to add notes in different languages, of different types
+[`Person`][7]                   | Information about a person, e.g. speaker, linguist, editor, translator, etc.
+[`Tags`][9]                     | A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora
 
 ### Using the Schemas
 Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Sentence schema by making sure you include the `transcription`, `translation`, and `words` properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the `startTime` and `endTime` properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).
@@ -224,13 +222,13 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [7]:  https://digitallinguistics.github.io/spec/schemas/Person.html
 [8]:  https://digitallinguistics.github.io/spec/schemas/Address.html
 [9]:  https://digitallinguistics.github.io/spec/schemas/Tags.html
-[10]: https://digitallinguistics.github.io/spec/schemas/DateCreated.html
-[11]: https://digitallinguistics.github.io/spec/schemas/DateModified.html
-[12]: https://digitallinguistics.github.io/spec/schemas/DateRecorded.html
+
+
+
 [13]: https://digitallinguistics.github.io/spec/schemas/LexemeReference.html
 [14]: https://digitallinguistics.github.io/spec/schemas/MultiLangString.html
 [15]: https://digitallinguistics.github.io/spec/schemas/Reference.html
-[16]: https://digitallinguistics.github.io/spec/schemas/URL.html
+
 [17]: https://digitallinguistics.github.io/spec/schemas/Location.html
 [18]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
@@ -238,8 +236,9 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [21]: https://github.com/digitallinguistics/spec
 [22]: http://site.uit.no/linguisticsdatacitation/
 [23]: http://json.org/
-[24]: http://site.uit.no/linguisticsdatacitation/austinprinciples/
+
 [25]: https://github.com/digitallinguistics/spec/blob/master/.github/README.md
 [26]: https://www.npmjs.com/package/@digitallinguistics/spec
 [27]: https://zenodo.org/badge/latestdoi/50221632
 [28]: https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
+[29]: https://digitallinguistics.github.io/spec/schemas/GeoJSON.html
