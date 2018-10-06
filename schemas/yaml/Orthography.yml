@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.6.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Orthography-1.6.1.json'
 title:   Orthography
 type:    object
 
@@ -99,7 +99,6 @@ properties:
 
   name:
     title: 'Orthography Name'
-    type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
     description: 'The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`)'
     default: {}

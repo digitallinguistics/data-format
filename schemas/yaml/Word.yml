@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Word-2.6.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Word-2.6.2.json'
 title:   Word
 type:    object
 
@@ -27,7 +27,6 @@ properties:
 
   gloss:
     title: Gloss
-    type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
     description: 'A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.'
 

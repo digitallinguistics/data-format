@@ -22,7 +22,23 @@ const data = {
       text:     `Only used among western varieties`,
     },
   ],
-  senses:   [],
+  senses:   [
+    {
+      gloss:    `man`,
+      variants: [
+        {
+          lexeme:      `man2`,
+          variantType: `dialectal`,
+        },
+      ],
+    },
+  ],
+  variants: [
+    {
+      lexeme:      `man2`,
+      variantType: `dialectal`,
+    },
+  ],
 };
 
 describe(`Lexeme`, () => {
