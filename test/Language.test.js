@@ -39,6 +39,7 @@ const data = {
   glottolog:          `chit1248`,
   id:                 `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
   iso:                `iso`,
+  link:               `https://data.digitallinguistics.io/languages/Chitimacha`,
   locations:          [{ name: { eng: `Charenton` } }],
   name:               { eng: `Chitimacha` },
   notes:              [
