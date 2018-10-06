@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Text-2.4.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Text-2.5.0.json'
 title:   Text
 type:    object
 
@@ -93,6 +93,12 @@ properties:
     type:      string
     minLength: 1
     description: 'The genre of the text, e.g. folktale, personal narrative, or expository'
+
+  link:
+    title:  Link
+    type:   string
+    format: uri
+    description: 'A URL where a presentational format for this resource may be viewed'
 
   location:
     title: Location

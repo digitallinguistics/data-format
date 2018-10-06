@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Person-1.4.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Person-1.5.0.json'
 title:   Person
 type:    object
 
@@ -115,6 +115,12 @@ properties:
               title: 'Years Known'
               type:  integer
               description: 'The number of years this person has known this Language'
+
+  link:
+    title:  Link
+    type:   string
+    format: uri
+    description: 'A URL where a presentational format for this resource may be viewed'
 
   notes:
     title:       Notes

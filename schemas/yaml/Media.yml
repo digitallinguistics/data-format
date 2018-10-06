@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Media-2.3.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Media-2.4.0.json'
 title:   'Media File'
 type:    object
 
@@ -112,6 +112,12 @@ properties:
     title: 'Length (in Time / Pages)'
     type:  number
     description: 'The length of the file, in seconds and milliseconds if an audio/video file (in `SS.MM` format), or pages if a document'
+
+  link:
+    title:  Link
+    type:   string
+    format: uri
+    description: 'A URL where a presentational format for this resource may be viewed'
 
   location:
     title: Location
