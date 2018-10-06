@@ -1,6 +1,6 @@
 {
   "name": "@digitallinguistics/spec",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "The DLx format for representing linguistic data in JSON",
   "keywords": [
     "DLx",
