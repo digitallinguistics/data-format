@@ -7,6 +7,7 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
+  contentType:  `audio/wav`,
   dateCreated:  `2018-10-05T15:26:23.070Z`,
   dateModified: `2018-10-05T15:26:23.070Z`,
   dateRecorded: `2018-10-05`,
