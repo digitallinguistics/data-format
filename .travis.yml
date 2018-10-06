@@ -7,7 +7,7 @@ deploy:
   email: dwhieb@gmail.com
   provider: npm
   on:
-    branch: master
+    tags: true
 language: node_js
 node_js: node
 notifications:
