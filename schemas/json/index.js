@@ -9,7 +9,6 @@ module.exports = {
   Language: require('./Language'),
   Lexeme: require('./Lexeme'),
   LexemeReference: require('./LexemeReference'),
-  Lexicon: require('./Lexicon'),
   Location: require('./Location'),
   Media: require('./Media'),
   Morpheme: require('./Morpheme'),
