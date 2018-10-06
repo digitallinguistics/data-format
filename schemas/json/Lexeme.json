@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.4.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-2.5.0.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
@@ -175,6 +175,12 @@
         "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
         "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required."
       }
+    },
+    "link": {
+      "title": "Link",
+      "type": "string",
+      "format": "uri",
+      "description": "A URL where a presentational format for this resource may be viewed"
     },
     "literalMeaning": {
       "title": "Literal Meaning",
