@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Sentence-1.5.0.json",
-  "title": "Sentence",
+  "id": "http://cdn.digitallinguistics.io/schemas/Utterance-2.0.0.json",
+  "title": "Utterance",
   "type": "object",
   "description": "The term *sentence* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and a collection of words.",
   "required": [

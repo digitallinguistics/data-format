@@ -19,17 +19,17 @@ const data = {
   genre:        `mythological narrative`,
   id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
   link:         `https://data.digitallinguistics.io/languages/Chitimacha/texts/A1`,
-  sentences:    [
+  title:        {
+    eng: `How the world began`,
+  },
+  url:        `https://api.digitallinguistics.io/languages/Chitimacha/texts/A1.json`,
+  utterances: [
     {
       transcription: {},
       translation:   {},
       words:         [],
     },
   ],
-  title: {
-    eng: `How the world began`,
-  },
-  url: `https://api.digitallinguistics.io/languages/Chitimacha/texts/A1.json`,
 };
 
 describe(`Text`, () => {
