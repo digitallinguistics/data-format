@@ -8,7 +8,6 @@ deploy:
   provider: npm
   on:
     branch: master
-    tags: true
 language: node_js
 node_js: node
 notifications:
