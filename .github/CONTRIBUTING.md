@@ -136,8 +136,6 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 _These steps are for maintainers only:_
 
-1. **Run upload script**: `npm run upload`
-
 1. **Write the release note** for the pull request
 
 1. **Squash & merge** the PR into the `master` branch
@@ -156,27 +154,23 @@ _These steps are for maintainers only:_
         - REMOVE: removed features
         - TEST: changes to tests
 
-1. **Create a GitHub release** when the necessary features are ready
+1. **Draft a GitHub release** when the necessary features are ready
 
-    - **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead).
+    - Title: vX.X.X
 
-    - **Write the release notes**
+    - Description: High-level overview of the changes
 
-        - Title: vX.X.X
+    - Changelog:
 
-        - Description: High-level overview of the changes
+        - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
 
-        - Changelog:
+        - `LABEL: description (#000)`
 
-            - List the changes for each schema separately under its own heading. General project changes get their own heading as well.
+    - Compile the list of changes from each of the commits on the master branch
 
-            - `LABEL: description (#000)`
+1. **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead). This will run the upload script and publish to npm.
 
-        - Compile the list of changes from each of the commits on the master branch
-
-    - **Publish the GitHub release**
-
-1. **Publish to npm**: `npm publish`
+1. **Publish the GitHub release**, using the tagged release from the `master` branch
 
 1. **Write a blog post** about the changes (for major/minor updates only)
 
