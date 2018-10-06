@@ -1,11 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Text-2.5.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Text-3.0.0.json",
   "title": "Text",
   "type": "object",
-  "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of sentences with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
+  "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of utterances with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
   "required": [
-    "sentences",
+    "utterances",
     "title"
   ],
   "additionalProperties": true,
@@ -156,16 +156,16 @@
         "description": "A bibliographic reference about this text"
       }
     },
-    "sentences": {
-      "title": "Sentences",
+    "utterances": {
+      "title": "Utterance",
       "type": "array",
       "minItems": 1,
-      "description": "A collection of all the Sentences contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Sentences. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Sentences in the collection must reflect their actual order in the Text. Sentences do *not* have to be JSON unique - a Sentence may be repeated in a text, for example.,",
+      "description": "A collection of all the Utterances contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Utterances. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Utterances in the collection must reflect their actual order in the Text. Utterances do *not* have to be JSON unique - an Utterance may be repeated in a text, for example.,",
       "items": {
-        "title": "Sentence",
+        "title": "Utterance",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Sentence.json",
-        "description": "A Sentence object"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
+        "description": "An Utterance object"
       }
     },
     "tags": {

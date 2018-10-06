@@ -6,7 +6,13 @@ let ajv;
 let validate;
 
 // VALID SAMPLE DATA
-const data = {};
+const data = {
+  transcription: {},
+  translation:   {
+    eng: `One day a man,`,
+  },
+  words: [],
+};
 
 describe(`Utterance`, () => {
 
