@@ -1,7 +1,4 @@
 before_deploy: 'npm run upload'
-branches:
-  only:
-    - master
 deploy:
   api_key: $NPM_KEY
   email: dwhieb@gmail.com
