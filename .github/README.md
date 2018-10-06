@@ -1,4 +1,4 @@
-# The DLx Data Format
+# [The Data Format for Digital Linguistics][10] (DaFoDiL)
 
 ## Introduction
 
@@ -222,7 +222,7 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [7]:  https://digitallinguistics.github.io/spec/schemas/Person.html
 [8]:  https://digitallinguistics.github.io/spec/schemas/Address.html
 [9]:  https://digitallinguistics.github.io/spec/schemas/Tags.html
-
+[10]: https://github.com/digitallinguistics/spec#readme
 
 
 [13]: https://digitallinguistics.github.io/spec/schemas/LexemeReference.html
@@ -237,7 +237,7 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [22]: http://site.uit.no/linguisticsdatacitation/
 [23]: http://json.org/
 
-[25]: https://github.com/digitallinguistics/spec/blob/master/.github/README.md
+[25]: https://github.com/digitallinguistics/spec/blob/master/README.md
 [26]: https://www.npmjs.com/package/@digitallinguistics/spec
 [27]: https://zenodo.org/badge/latestdoi/50221632
 [28]: https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
