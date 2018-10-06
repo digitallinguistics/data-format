@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Media-2.4.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-2.4.1.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
@@ -42,7 +42,7 @@
     "contentType": {
       "title": "MIME Content Type",
       "type": "string",
-      "description": "The media type of the file. Examples: `audio/wav`, `application/pdf`, `video/mpeg`"
+      "description": "The media type of the file. Must be a valid MIME type. Examples: `audio/wav`, `application/pdf`, `video/mpeg`"
     },
     "creator": {
       "title": "Creator",

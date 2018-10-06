@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Media-2.4.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Media-2.4.1.json'
 title:   'Media File'
 type:    object
 
@@ -44,7 +44,7 @@ properties:
   contentType:
     title: 'MIME Content Type'
     type:  string
-    description: 'The media type of the file. Examples: `audio/wav`, `application/pdf`, `video/mpeg`'
+    description: 'The media type of the file. Must be a valid MIME type. Examples: `audio/wav`, `application/pdf`, `video/mpeg`'
 
   creator:
     title: Creator
