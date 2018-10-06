@@ -12,6 +12,7 @@ const data = {
   familyName:   `Paul`,
   givenName:    `Benjamin`,
   id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  link:         `https://data.digitallinguistics.io/languages/Chitimacha/people/BP`,
   url:          `https://api.digitallinguistics.io/languages/Chitimacha/people/BP.json`,
 };
 

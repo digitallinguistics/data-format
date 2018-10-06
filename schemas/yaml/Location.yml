@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Location-2.5.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Location-2.6.0.json'
 title:   Location
 type:    object
 
@@ -62,6 +62,12 @@ properties:
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/GeoJSON.json'
     description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: http://geojson.org/.'
+
+  link:
+    title:  Link
+    type:   string
+    format: uri
+    description: 'A URL where a presentational format for this resource may be viewed'
 
   name:
     title: Name
