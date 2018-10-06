@@ -151,7 +151,7 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **Context**
 
-    * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when a Sentence appears in the `"sentences"` property of a Lexeme, it is an example sentence. When it appears in the `"sentences"` property of a Text, it is a transcribed sentence from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
+    * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when an Utterance appears in the `"utterances"` property of a Lexeme, it is an example utterance. When it appears in the `"utterances"` property of a Text, it is a transcribed utterance from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
 
 * **Dates**
 
