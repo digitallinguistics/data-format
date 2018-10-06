@@ -140,9 +140,9 @@ _These steps are for maintainers only:_
 
 1. **Squash & merge** the PR into the `master` branch
 
-    - Include the release note(s) for the change, along with a note closing the associated issue (e.g. `closes #167`)
-
-    - The commit message should follow the format `LABEL: description (#000)`, where the number in parentheses is the issue that is closed, **not** the issue number of the pull request.
+    - Title: `LABEL: description (#000)`
+    - Description
+    - Changelog: `LABEL: description (closes #000)`
 
         - CHANGE: (breaking) changes
         - DEP: changes to dependencies
@@ -154,7 +154,9 @@ _These steps are for maintainers only:_
         - REMOVE: removed features
         - TEST: changes to tests
 
-1. **Draft a GitHub release** when the necessary features are ready
+1. **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead). This will run the upload script and publish to npm.
+
+1. **Create a GitHub release** when the necessary features are ready
 
     - Title: vX.X.X
 
@@ -167,10 +169,6 @@ _These steps are for maintainers only:_
         - `LABEL: description (#000)`
 
     - Compile the list of changes from each of the commits on the master branch
-
-1. **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead). This will run the upload script and publish to npm.
-
-1. **Publish the GitHub release**, using the tagged release from the `master` branch
 
 1. **Write a blog post** about the changes (for major/minor updates only)
 
