@@ -1,6 +1,12 @@
+before_deploy: 'npm run upload'
+branches:
+  only:
+    - master
+deploy:
+  on:
+    branch: master
+    tags: true
 language: node_js
 node_js: node
-before_script:
-  - npm i --save jasmine ajv
 notifications:
   email: false
