@@ -154,9 +154,9 @@ _These steps are for maintainers only:_
         - REMOVE: removed features
         - TEST: changes to tests
 
-1. **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead). This will run the upload script and publish to npm.
+1. **Increment the version number** of the `master` branch by running `npm version {major|minor|patch}` from the command line, and commit the change. Do not include a commit message (it will default to the version number instead).
 
-1. **Create a GitHub release** when the necessary features are ready
+1. **Create a GitHub release** when the necessary features are ready. This will trigger Travis CI to run the upload script and publish to npm.
 
     - Title: vX.X.X
 

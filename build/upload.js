@@ -3,12 +3,15 @@
  */
 
 /* eslint-disable
+  global-require,
   no-await-in-loop,
   no-console,
 */
 
 // IMPORTS
-require(`../../credentials/azure-storage-dlx`);
+if (!process.env.AZURE_STORAGE_CONNECTION_STRING) {
+  require(`../../credentials/azure-storage-dlx`);
+}
 
 const chalk         = require(`chalk`);
 const path          = require(`path`);
