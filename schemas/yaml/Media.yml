@@ -44,7 +44,7 @@ properties:
   contentType:
     title: 'MIME Content Type'
     type:  string
-    description: 'The media type of the file. Examples: `audio/wav`, `application/pdf`, `video/mpeg`'
+    description: 'The media type of the file. Must be a valid MIME type. Examples: `audio/wav`, `application/pdf`, `video/mpeg`'
 
   creator:
     title: Creator
