@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Media-2.4.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Media-2.4.1.json'
 title:   'Media File'
 type:    object
 
