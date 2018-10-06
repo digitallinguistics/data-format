@@ -14,7 +14,15 @@ const data = {
       eng: `Materials on this language should not be made available to non-tribal members without permission.`,
     },
   },
-  additionalNames: [`Sitimaxa`],
+  additionalNames: [
+    {
+      name: `Chetimachas`,
+      note: {
+        source: `DWH`,
+        text:   `This is the name commonly used by the French.`,
+      },
+    },
+  ],
   autonym:         {
     apa:    `Sitimaša`,
     ipa:    `Sitimaʃa`,
