@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-3.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.0.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
@@ -118,12 +118,12 @@
       "title": "Examples",
       "type": "array",
       "uniqueItems": true,
-      "description": "A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.",
+      "description": "A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text.",
       "items": {
-        "title": "Example Sentence",
+        "title": "Example Utterance",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Sentence.json",
-        "description": "A Sentence object containing the example sentence"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
+        "description": "A Utterance object containing the example utterance"
       }
     },
     "features": {
@@ -357,12 +357,12 @@
             "title": "Examples",
             "type": "array",
             "uniqueItems": true,
-            "description": "A collection of examples of this sense in use. Each example is a Sentence.",
+            "description": "A collection of examples of this sense in use. Each example is an Utterance.",
             "items": {
-              "title": "Example Sentence",
+              "title": "Example Utterance",
               "type": "object",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/Sentence.json",
-              "description": "An example Sentence for this sense"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
+              "description": "An example Utterance for this sense"
             }
           },
           "gloss": {

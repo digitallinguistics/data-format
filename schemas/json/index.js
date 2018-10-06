@@ -17,10 +17,10 @@ module.exports = {
   Orthography: require('./Orthography'),
   Person: require('./Person'),
   Phoneme: require('./Phoneme'),
-  Sentence: require('./Sentence'),
   Tags: require('./Tags'),
   Text: require('./Text'),
   Transcription: require('./Transcription'),
   Translation: require('./Translation'),
+  Utterance: require('./Utterance'),
   Word: require('./Word'),
 };

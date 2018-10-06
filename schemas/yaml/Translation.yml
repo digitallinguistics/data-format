@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Translation-1.0.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Translation-1.0.1.json'
 title:   Translation
 type:    object
 
@@ -9,7 +9,7 @@ patternProperties:
   '^[(a-z)|(A-Z)|(0-9)]+$':
     title: Text
     type: string
-    description: 'The transcription for the specified orthography'
+    description: 'The translation in the specified language'
 
 additionalProperties: false
 

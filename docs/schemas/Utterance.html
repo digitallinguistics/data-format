@@ -5,7 +5,7 @@
   <head>
     <meta charset=utf-8>
     <title>
-      Sentence
+      Utterance
     </title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="../jschemer.css" type=text/css>
@@ -19,18 +19,18 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Sentence</h1>
+      <h1 class='title meta any prop'>Utterance</h1>
     </summary>
 
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Sentence-1.5.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Utterance-2.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The term <em>sentence</em> is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on intonation units, turns, or any other appropriate subdivision. A DLx Sentence consists minimally of a transcription, a translation, and a collection of words.</p>
+        <p><p>The term <em>utterance</em> is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision. A DLx Utterance consists minimally of a transcription, a translation, and a collection of words.</p>
 </p>
       </div>
 
@@ -106,7 +106,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of object (must be set to <code>Sentence</code>)</p>
+        <p><p>The type of object (must be set to <code>Utterance</code>)</p>
 </p>
       </div>
 
@@ -134,7 +134,7 @@
       <div class='enum any prop'>
         <h2>Allowed Values (<code>enum</code>)</h2>
         <ul>
-            <li><pre>&quot;Sentence&quot;</pre></li>
+            <li><pre>&quot;Utterance&quot;</pre></li>
         </ul>
       </div>
 
@@ -166,7 +166,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A key which uniquely identifies this Sentence within the Text. The key for a Sentence consists of the abbreviation of the Text, a period, and then the number of this Sentence within the Text (index starts at 1). For example, the third Sentence of a Text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
+        <p><p>A key which uniquely identifies this Utterance within the Text. The key for an Utterance consists of the abbreviation of the Text, a period, and then the number of this Utterance within the Text (index starts at 1). For example, the third Utterance of a Text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
 </p>
       </div>
 
@@ -221,7 +221,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The time that the speaker finishes producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).</p>
+        <p><p>The time that the speaker finishes producing this Utterance within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).</p>
 </p>
       </div>
 
@@ -272,7 +272,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The key for the Language used in this Sentence, e.g. <code>spa</code> or <code>eng</code>. If the text is labeled with a Language, all its Sentences are assumed to be the same Language unless labeled otherwise. Likewise, if a Sentence is given a Language, all its words are assumed to be the same Language unless the word is labeled otherwise.</p>
+        <p><p>The key for the Language used in this Utterance, e.g. <code>spa</code> or <code>eng</code>. If the text is labeled with a Language, all its Utterance are assumed to be the same Language unless labeled otherwise. Likewise, if a Utterance is given a Language, all its words are assumed to be the same Language unless the word is labeled otherwise.</p>
 </p>
       </div>
 
@@ -353,7 +353,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of notes about this Sentence</p>
+        <p><p>A collection of notes about this Utterance</p>
 </p>
       </div>
 
@@ -403,7 +403,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A note about this Sentence, optionally in multiple orthographies</p>
+                  <p><p>A note about this Utterance</p>
           </p>
                 </div>
           
@@ -435,7 +435,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The abbreviation of person who produced (uttered, signed, spoke, sung) this Sentence. The value of this field must match the abbreviation of one of the people listed in the <code>contributors</code> array of the Text. If the text has a single contributor with the role of <code>speaker</code>, that speaker is assumed to be the speaker for all Sentences in the Text. If multiple contributors with a <code>speaker</code> role are included in a text, each Sentence must have its <code>speaker</code> attribute specified.</p>
+        <p><p>The abbreviation of person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match the abbreviation of one of the people listed in the <code>contributors</code> array of the Text. If the text has a single contributor with the role of <code>speaker</code>, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a <code>speaker</code> role are included in a text, each Utterance must have its <code>speaker</code> attribute specified.</p>
 </p>
       </div>
 
@@ -461,7 +461,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The time that the speaker begins producing this Sentence within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).</p>
+        <p><p>The time that the speaker begins producing this Utterance within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).</p>
 </p>
       </div>
 
@@ -512,7 +512,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A set of tags for this Sentence</p>
+        <p><p>A set of tags for this Utterance</p>
 </p>
       </div>
 
@@ -535,7 +535,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A transcript of this Sentence, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the <code>transcription</code> property). The transcript may be in multiple orthographies, or representational systems (e.g. you might have a <code>CA</code> transcript and a <code>DT</code> transcript, for discourse transcripts using Conversation Analysis and Discourse Transcription conventions respectively).</p>
+        <p><p>A transcript of this Utterance, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the <code>transcription</code> property). The transcript may be in multiple orthographies, or representational systems (e.g. you might have a <code>CA</code> transcript and a <code>DT</code> transcript, for discourse transcripts using Conversation Analysis and Discourse Transcription conventions respectively).</p>
 </p>
       </div>
 
@@ -558,7 +558,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The transcriptions for this Sentence, optionally in multiple orthographies. This field is intended for use with purely phonemic / morphophonemic transcriptions. Punctuation should generally be avoided. To add punctuation and other discourse-level transcriptional features, use the <code>transcript</code> property.</p>
+        <p><p>The transcriptions for this Utterance, optionally in multiple orthographies. This field is intended for use with purely phonemic / morphophonemic transcriptions. Punctuation should generally be avoided. To add punctuation and other discourse-level transcriptional features, use the <code>transcript</code> property.</p>
 </p>
       </div>
 
@@ -581,7 +581,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The translations for this Sentence, optionally in multiple languages. Also includes an optional <code>type</code> attribute, for specifying things like <code>free</code> or <code>literal</code> translation.</p>
+        <p><p>The translations for this Utterance, optionally in multiple languages. Also includes an optional <code>type</code> attribute, for specifying things like <code>free</code> or <code>literal</code> translation.</p>
 </p>
       </div>
 
@@ -607,7 +607,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The URL where this Sentence can be retrieved in JSON format</p>
+        <p><p>The URL where this Utterance can be retrieved in JSON format</p>
 </p>
       </div>
 
@@ -662,7 +662,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of the word tokens contained in this Sentence. Tokens do not need to be unique.</p>
+        <p><p>A collection of the word tokens contained in this Utterance. Tokens do not need to be unique.</p>
 </p>
       </div>
 
@@ -752,7 +752,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Address.html">Address</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Sentence.html">Sentence</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Word.html">Word</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Language.html">Language</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="Media.html">Media File</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Text.html">Text</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="Language.html">Language</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 

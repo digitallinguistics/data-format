@@ -129,7 +129,7 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **IDs & Cross-References**
 
-    * The DLx schemas support unique identifiers in the form of opaque IDs or human-readable keys, or both (recommended - see below). Many schemas include an optional `id` field, which is meant to be representative of whatever opaque identifier scheme best suits your database. You could name this field `id`, `ID`, `dbid` (database ID), `localid`, `uuid`, etc. etc. Thus when the `id` property is referenced in the schemas, it should not be taken literally as being the `id` field. Instead it refers to whichever field your database uses for unique, opaque identifiers. Whichever name you choose for the property should be used consistently in place of the `id` fields. No restrictions are placed on the format of the ID field, although best practice is for this field to be a string (preferably a UUID) or a number.
+    * The DLx schemas support unique identifiers in the form of opaque IDs or human-readable keys, or both (recommended - see below). Many schemas include an optional `id` field, which is meant to be representative of whatever opaque identifier scheme best suits your database. You could name this field `id`, `ID`, `dbid` (database ID), `localid`, `uuid`, `uri`, etc. etc. Thus when the `id` property is referenced in the schemas, it should not be taken literally as being the `id` field. Instead it refers to whichever field your database uses for unique, opaque identifiers. Whichever name you choose for the property should be used consistently in place of the `id` fields. No restrictions are placed on the format of the ID field, although best practice is for this field to be a string (preferably a UUID) or a number.
 
     * If your database depends on unique, opaque identifiers (e.g. a [UUID][11]), you should **also** use human-readable keys. For example, a Lexeme object representing the word "book" (the noun) might have an ID of `d0e51fcb-84af-44aa-ba16-67561e21c793`, but should also have a key `book1`. This helps users identify it as the lexeme "book", while simultaneously helping distinguish it from other "book" homonyms in the database (such as the word "book" used as verb, which might be `book2`).
 
@@ -151,7 +151,7 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **Context**
 
-    * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when a Sentence appears in the `"sentences"` property of a Lexeme, it is an example sentence. When it appears in the `"sentences"` property of a Text, it is a transcribed sentence from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
+    * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when an Utterance appears in the `"utterances"` property of a Lexeme, it is an example utterance. When it appears in the `"utterances"` property of a Text, it is a transcribed utterance from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
 
 * **Dates**
 

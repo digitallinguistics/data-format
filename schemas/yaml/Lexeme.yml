@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-3.0.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.0.json'
 title:   Lexeme
 type:    object
 
@@ -105,12 +105,12 @@ properties:
     title:       Examples
     type:        array
     uniqueItems: true
-    description: 'A collection of examples illustrating this lexeme in use. Each example is a Sentence from a Text.'
+    description: 'A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text.'
     items:
-      title: 'Example Sentence'
+      title: 'Example Utterance'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Sentence.json'
-      description: 'A Sentence object containing the example sentence'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/Utterance.json'
+      description: 'A Utterance object containing the example utterance'
 
   features:
     title: Features
@@ -318,12 +318,12 @@ properties:
           title:       Examples
           type:        array
           uniqueItems: true
-          description: 'A collection of examples of this sense in use. Each example is a Sentence.'
+          description: 'A collection of examples of this sense in use. Each example is an Utterance.'
           items:
-            title: 'Example Sentence'
+            title: 'Example Utterance'
             type:  object
-            $ref:  'http://cdn.digitallinguistics.io/schemas/Sentence.json'
-            description: 'An example Sentence for this sense'
+            $ref:  'http://cdn.digitallinguistics.io/schemas/Utterance.json'
+            description: 'An example Utterance for this sense'
 
         gloss:
           title: Gloss
