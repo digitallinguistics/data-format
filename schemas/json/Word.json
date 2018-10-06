@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.6.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.6.1.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -39,7 +39,7 @@
       "title": "Morphemes / Components",
       "type": "array",
       "uniqueItems": false,
-      "description": "A collection of the components (morphemes, lexicon items) in this Word. Components may be repeated if the same morpheme appears twice in the Word.",
+      "description": "A collection of the components (morphemes, lexemes) in this Word. Components may be repeated if the same morpheme appears twice in the Word.",
       "items": {
         "title": "Morpheme",
         "type": "object",
