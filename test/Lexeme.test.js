@@ -7,12 +7,18 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  dateCreated:  `2018-10-05T15:25:46.045Z`,
-  dateModified: `2018-10-05T15:26:23.070Z`,
-  id:           `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
-  lemma:        {},
-  link:         `https://data.digitallinguistics.io/languages/Chitimacha/lexemes/qasi`,
-  morphemeType: {
+  dateCreated:      `2018-10-05T15:25:46.045Z`,
+  dateModified:     `2018-10-05T15:26:23.070Z`,
+  id:               `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  lemma:            {},
+  lexicalRelations: [
+    {
+      lexeme:   `man3`,
+      relation: `homonym`,
+    },
+  ],
+  link:             `https://data.digitallinguistics.io/languages/Chitimacha/lexemes/qasi`,
+  morphemeType:     {
     eng: `root`,
   },
   notes:        [
@@ -24,8 +30,14 @@ const data = {
   ],
   senses:   [
     {
-      gloss:    `man`,
-      variants: [
+      gloss:            `man`,
+      lexicalRelations: [
+        {
+          lexeme:   `man3`,
+          relation: `homonym`,
+        },
+      ],
+      variants:         [
         {
           lexeme:      `man2`,
           variantType: `dialectal`,
