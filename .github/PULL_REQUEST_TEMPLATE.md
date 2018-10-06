@@ -54,7 +54,6 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 ## Maintainer Checklist
 _This section is for maintainers only_
 
-- [ ] **Run upload script**: `npm run upload`
 - [ ] **Squash & merge PR into `master`**
     - Title: `LABEL: description (#000)`
     - Description
