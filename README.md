@@ -137,7 +137,9 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **URLs**
 
-    * Top-level schemas include a `url` property which should be used to indicate a URL where that resource can be retrieved in JSON format. It should not be used for the URL of a human-readable presentation of the resource (the `link` property should be used for this purpose). The resource does not have to be publicly available at this URL; it may require permissions to access.
+    * Top-level schemas (and some subschemas) include a `url` property which should be used to indicate a URL where that resource can be retrieved in JSON format. It should not be used for the URL of a human-readable presentation of the resource (the `link` property should be used for this purpose). The resource does not have to be publicly available at this URL; it may require permissions to access.
+
+    * Top-level schemas also include a `link` property. This is used to indicate a URL where a presentational format of the given resource can be viewed, for instance a text viewer or lexicon editor, etc.
 
 * **Completeness**
 
