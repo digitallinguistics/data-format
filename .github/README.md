@@ -191,7 +191,7 @@ Schema                          | Description
 [`Address`][8]                  | A postal address
 [`Bibliographic Reference`][15] | A bibliographic reference
 [`Bundle`][3]                   | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day
-[`Geospatial Coordinated`][29]  | A set of geospatial coordinates, in GeoJSON format
+[`Geospatial Coordinates`][29]  | A set of geospatial coordinates, in GeoJSON format
 [`LexemeReference`][13]         | An Object that contains a reference to an item in a lexicon
 [`Location`][17]                | A location with optional geographic coordinates
 [`Media File`][5]               | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)
