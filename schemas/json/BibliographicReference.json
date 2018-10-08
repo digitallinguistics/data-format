@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.1.0.json",
   "title": "Bibliographic Reference",
   "type": "object",
   "description": "A bibliographic Reference",
@@ -61,11 +61,13 @@
     "doi": {
       "title": "Digital Object Identifier (DOI)",
       "type": "string",
-      "description": "The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL (e.g. `10.1075/cal.20.02hie` not `https://doi.org/10.1075/cal.20.02hie`)."
+      "pattern": "^10.\\d{4,9}/[-._;()/:A-Za-z0-9]+$",
+      "description": "The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL, and should not include the `doi:` prefix (e.g. `10.1075/cal.20.02hie` not `https://doi.org/10.1075/cal.20.02hie` or `doi:10.1075/cal.20.02hie`)."
     },
     "edition": {
       "title": "Edition",
       "type": "integer",
+      "minimum": 1,
       "description": "The edition of this Reference, formatted as an integer"
     },
     "editors": {
@@ -76,20 +78,8 @@
       "items": {
         "title": "Editor",
         "type": "object",
-        "description": "An object representing an editor",
-        "additionalProperties": false,
-        "properties": {
-          "firstName": {
-            "title": "First Name",
-            "type": "string",
-            "description": "The first name(s) of this editor"
-          },
-          "lastName": {
-            "title": "Last Name",
-            "type": "string",
-            "description": "The last name(s) of this editor"
-          }
-        }
+        "$ref": "#/definitions/person",
+        "description": "A Person object representing an editor"
       }
     },
     "issue": {
@@ -141,6 +131,7 @@
     "title": {
       "title": "Title",
       "type": "string",
+      "minLength": 1,
       "description": "The title of this publication"
     },
     "translators": {
@@ -164,6 +155,7 @@
     "volume": {
       "title": "Volume",
       "type": "integer",
+      "minimum": 1,
       "description": "The volume number for this publication"
     },
     "year": {

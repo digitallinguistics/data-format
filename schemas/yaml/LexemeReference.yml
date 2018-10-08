@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/LexemeReference-2.2.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/LexemeReference-3.0.0.json'
 title:   'Lexeme Reference'
 type:    object
 
@@ -38,9 +38,10 @@ properties:
     description: 'The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid Abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme).'
 
   sense:
-    title: 'Referenced Sense (Num)'
-    type:  integer
-    description: 'The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme.'
+    title:   'Referenced Sense (Num)'
+    type:    integer
+    minimum: 1
+    description: 'The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme (index starts at 1, not 0).'
 
   variantType:
     title: 'Variant Type'

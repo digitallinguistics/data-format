@@ -24,9 +24,9 @@ properties:
     description: A unique database identifier for this Bundle
 
   abbreviation:
-    title:       Abbreviation
-    type:        string
-    $ref:        'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+    title: Abbreviation
+    type:  string
+    $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
     description: 'An abbreviation for this bundle'
 
   access:

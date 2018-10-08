@@ -22,7 +22,6 @@
       "title": "Notes",
       "type": "array",
       "uniqueItems": true,
-      "minItems": 1,
       "description": "A collection of notes for this Annotation",
       "items": {
         "title": "Note",

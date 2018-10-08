@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-4.0.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Lexeme-5.0.0.json'
 title:   Lexeme
 type:    object
 
@@ -39,7 +39,6 @@ properties:
     title:       Allomorphs
     type:        array
     uniqueItems: true
-    minItems:    1
 
     description: 'A list of allomorphs of this Lexeme'
 
@@ -63,8 +62,9 @@ properties:
           uniqueItems: true
           description: 'A list of (morpho)phonological environments in which this allomorph occurs. May be an empty array.'
           items:
-            title: Environment
-            type:  string
+            title:     Environment
+            type:      string
+            minLength: 1
             description: 'A formalization of a (morpho)phonologial environemnt, e.g. `_k`'
 
   citationForm:
@@ -77,7 +77,6 @@ properties:
     title:       Components
     type:        array
     uniqueItems: false
-    minItems:    1
     description: 'A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).'
     items:
       title: 'Referenced Lexeme'
@@ -122,8 +121,9 @@ properties:
         $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
         description: 'The Features object must be a Tags object.'
       - additionalProperties:
-          title: Feature
-          type:  string
+          title:     Feature
+          type:      string
+          minLength: 1
           description: 'Individual features must be represented as Strings.'
 
   includedIn:
@@ -147,7 +147,6 @@ properties:
     title:       'Lexical Relations'
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'A list of the lexical relations that this lexeme has to other lexemes or variants'
     items:
       allOf:
@@ -256,7 +255,6 @@ properties:
     title:       Variants
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'A list of variants of this Lexeme'
     items:
       allOf:
@@ -393,8 +391,9 @@ properties:
           uniqueItems: true
           description: 'A list of attested sources for this sense'
           items:
-            title: Source
-            type:  string
+            title:     Source
+            type:      string
+            minLength: 1
             description: 'An attested source for this sense. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or other types of sources.'
 
         tags:
@@ -424,7 +423,6 @@ properties:
           title:       Variants
           type:        array
           uniqueItems: true
-          minItems:    1
           description: 'A list of variants of this sense'
           items:
             allOf:

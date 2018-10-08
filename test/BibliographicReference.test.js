@@ -10,7 +10,7 @@ const data = {
   doi:             `10.1075/cal.20.02hie`,
   id:              `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
   publicationType: `book section`,
-  title:           ``,
+  title:           `Category genesis in Chitimacha`,
   type:            `BibliographicReference`,
   url:             `https://api.digitallinguistics.io/references/Hieber2018.json`,
   year:            2000,

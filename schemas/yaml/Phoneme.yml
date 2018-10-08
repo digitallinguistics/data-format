@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Phoneme-2.1.4.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Phoneme-3.0.0.json'
 title:   Phoneme
 type:    object
 
@@ -121,8 +121,9 @@ properties:
       - open
 
   ipa:
-    title: 'IPA Transcription'
-    type:  string
+    title:     'IPA Transcription'
+    type:      string
+    minLength: 1
     description: 'The IPA representation of this phoneme / allophone. Transcriptions of phonemes should contain only the phonemically contrastive sounds. Transcriptions of allophones should contain only the regularly-conditioned alternations.'
 
   length:
@@ -190,7 +191,7 @@ properties:
     uniqueItems: true
     description: 'A collection of bibliographic references about this phoneme'
     items:
-      title: Reference
+      title: 'Bibliographic Reference'
       type:  object
       $ref:  'http://cdn.digitallinguistics.io/schemas/BibliographicReference.json'
       description: 'A bibliographic reference'

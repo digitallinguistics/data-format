@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.0.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.1.0.json'
 title:   'Bibliographic Reference'
 type:    object
 
@@ -57,13 +57,15 @@ properties:
     description: 'The city in which this reference was published'
 
   doi:
-    title: 'Digital Object Identifier (DOI)'
-    type:  string
-    description: 'The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL (e.g. `10.1075/cal.20.02hie` not `https://doi.org/10.1075/cal.20.02hie`).'
+    title:   'Digital Object Identifier (DOI)'
+    type:    string
+    pattern: '^10.\d{4,9}/[-._;()/:A-Za-z0-9]+$'
+    description: 'The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL, and should not include the `doi:` prefix (e.g. `10.1075/cal.20.02hie` not `https://doi.org/10.1075/cal.20.02hie` or `doi:10.1075/cal.20.02hie`).'
 
   edition:
-    title: Edition
-    type: integer
+    title:   Edition
+    type:    integer
+    minimum: 1
     description: 'The edition of this Reference, formatted as an integer'
 
   editors:
@@ -74,17 +76,8 @@ properties:
     items:
       title: Editor
       type:  object
-      description: 'An object representing an editor'
-      additionalProperties: false
-      properties:
-        firstName:
-          title: 'First Name'
-          type:  string
-          description: 'The first name(s) of this editor'
-        lastName:
-          title: 'Last Name'
-          type:  string
-          description: 'The last name(s) of this editor'
+      $ref: '#/definitions/person'
+      description: 'A Person object representing an editor'
 
   issue:
     title: Issue
@@ -132,8 +125,9 @@ properties:
     description: 'The series in which this publication was published'
 
   title:
-    title: Title
-    type:  string
+    title:     Title
+    type:      string
+    minLength: 1
     description: 'The title of this publication'
 
   translators:
@@ -145,7 +139,7 @@ properties:
       title: Translator (Person)
       type:  object
       $ref: '#/definitions/person'
-      description: A Person object representing a translator
+      description: 'A Person object representing a translator'
 
   url:
     title:  URL
@@ -154,11 +148,12 @@ properties:
     description: 'A URL for this Reference'
 
   volume:
-    title: Volume
-    type:  integer
+    title:       Volume
+    type:        integer
+    minimum:     1
     description: 'The volume number for this publication'
 
   year:
-    title:   Year
-    type:    integer
+    title: Year
+    type:  integer
     description: 'The year this item was published. Use a positive integer for AD / ACE, and a negative integer for BC / BCE.'

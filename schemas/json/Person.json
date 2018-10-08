@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Person-1.5.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Person-2.0.0.json",
   "title": "Person",
   "type": "object",
   "description": "An object providing information about a Person",
@@ -93,6 +93,7 @@
               "ageLearned": {
                 "title": "Age Learned",
                 "type": "integer",
+                "minimum": 0,
                 "description": "The age at which this person learned this language"
               },
               "notes": {
@@ -158,6 +159,7 @@
       "items": {
         "title": "Role",
         "type": "string",
+        "minLength": 1,
         "description": "The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`"
       }
     },

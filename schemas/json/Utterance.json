@@ -1,13 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Utterance-2.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Utterance-3.0.0.json",
   "title": "Utterance",
   "type": "object",
-  "description": "The term *utterance* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision. A DLx Utterance consists minimally of a transcription, a translation, and a collection of words.",
+  "description": "The term *utterance* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision.",
   "required": [
     "transcription",
-    "translation",
-    "words"
+    "translation"
   ],
   "dependencies": {
     "startTime": [
@@ -36,6 +35,7 @@
     "endTime": {
       "title": "End Time",
       "type": "number",
+      "minimum": 0.001,
       "description": "The time that the speaker finishes producing this Utterance within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
     },
     "language": {
@@ -71,6 +71,7 @@
     "startTime": {
       "title": "Start Time",
       "type": "number",
+      "miniumum": 0,
       "description": "The time that the speaker begins producing this Utterance within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds)."
     },
     "tags": {
