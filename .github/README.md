@@ -191,7 +191,6 @@ Schema                          | Description
 [`Address`][8]                  | A postal address
 [`Bibliographic Reference`][15] | A bibliographic reference
 [`Bundle`][3]                   | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day
-[`Geospatial Coordinates`][29]  | A set of geospatial coordinates, in GeoJSON format
 [`LexemeReference`][13]         | An Object that contains a reference to a lexeme
 [`Location`][17]                | A location with optional geographic coordinates
 [`Media File`][5]               | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)
@@ -241,4 +240,3 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [26]: https://www.npmjs.com/package/@digitallinguistics/spec
 [27]: https://zenodo.org/badge/latestdoi/50221632
 [28]: https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
-[29]: https://digitallinguistics.github.io/spec/schemas/GeoJSON.html
