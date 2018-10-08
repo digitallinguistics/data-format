@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Word-2.6.3.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Word-3.0.0.json'
 title:   Word
 type:    object
 
@@ -8,7 +8,6 @@ description: 'A Word object represents a specific token in a text, rather than a
 additionalProperties: true
 
 required:
-  - morphemes
   - transcription
 
 properties:
@@ -21,8 +20,9 @@ properties:
       - Word
 
   endTime:
-    title: 'End Time'
-    type:  number
+    title:   'End Time'
+    type:    number
+    minimum: 0.001
     description: 'The point in time in the text at which the word token stop being spoken, formatted as seconds and milliseconds (SS.MMM). This property is useful for phonetic data analysis.'
 
   gloss:
@@ -86,8 +86,9 @@ properties:
           description: 'This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA.'
 
         endTime:
-          title: 'End Time'
-          type:  number
+          title:   'End Time'
+          type:    number
+          minimum: 0.001
           description: 'The point in time in the text at which this phone stops being pronounced. This property is primarily useful for phonetic data analysis.'
 
         notes:
@@ -107,8 +108,9 @@ properties:
           description: 'An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the `allophone` property for that insetad).'
 
         startTime:
-          title: 'Start Time'
-          type:  number
+          title:   'Start Time'
+          type:    number
+          minimum: 0
           description: 'The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis. The `endTime` property is not necessarily required if the `startTime` property is present (this is useful when the endTime of one phone is the same as the startTime of the next).'
 
         tags:
@@ -118,8 +120,9 @@ properties:
           description: 'A set of tags for this phone'
 
   startTime:
-    title: 'Start Time'
-    type:  number
+    title:   'Start Time'
+    type:    number
+    minimum: 0
     description: 'The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis. The `endTime` property is not necessarily required if the `startTime` property is present (this is useful when the endTime of one word token is the same as the startTime of the next).'
 
   tags:

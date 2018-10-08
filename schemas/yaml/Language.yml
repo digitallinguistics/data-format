@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Language-6.6.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Language-6.7.0.json'
 title:   Language
 type:    object
 
@@ -39,7 +39,6 @@ properties:
     title:       'Additional Names'
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'An Array of additional names for this Language. Only use this property if the `name` property is not sufficent to describe the various names for this language. Each additional name can be a plain string, or an object with two properties: `name` and `note`. The object format is preferred, since the `note` field provides a way to give a description of this additional name and where or by whom it was used.'
     items:
       title: 'Additional Language Name'
@@ -74,7 +73,6 @@ properties:
     title:       Contributors
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its `roles` property specified, so that the contribution of each person is known.'
     items:
       title: 'Contributor (Person)'
@@ -83,16 +81,16 @@ properties:
       description: 'A Person object describing a contributor'
 
   dateCreated:
-    title:       'Date Created'
-    type:        string
+    title: 'Date Created'
+    type:  string
     description: 'The date and optionally time that this Language object was created'
     oneOf:
       - format: date
       - format: date-time
 
   dateModified:
-    title:       'Date Modified'
-    type:        string
+    title: 'Date Modified'
+    type:  string
     description: 'The date an optionally time that this Language object was last modified'
     oneOf:
       - format: date
@@ -120,7 +118,6 @@ properties:
     title:       Lexemes
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'A collection of the lexemes in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Lexeme be stored as a separate JSON document.'
     items:
       title: Lexeme
@@ -148,7 +145,6 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'A collection of notes about this language'
     items:
       title: Note
@@ -181,7 +177,6 @@ properties:
     title:       'Bibliographic References'
     type:        array
     uniqueItems: true
-    minItems:    1
     description: 'A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.'
     items:
       title: 'Bibliographic Reference'
@@ -198,7 +193,6 @@ properties:
   texts:
     title:       Texts
     type:        array
-    minItem:     1
     uniqueItems: true
     description: 'A collection of texts in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Text be stored as a separate JSON document.'
 

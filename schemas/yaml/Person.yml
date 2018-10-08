@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Person-1.5.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Person-2.0.0.json'
 title:   Person
 type:    object
 
@@ -91,8 +91,9 @@ properties:
           properties:
 
             ageLearned:
-              title: 'Age Learned'
-              type:  integer
+              title:   'Age Learned'
+              type:    integer
+              minimum: 0
               description: 'The age at which this person learned this language'
 
             notes:
@@ -149,8 +150,9 @@ properties:
     uniqueItems: true
     description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`'
     items:
-      title: Role
-      type:  string
+      title:     Role
+      type:      string
+      minLength: 1
       description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`'
 
   tags:

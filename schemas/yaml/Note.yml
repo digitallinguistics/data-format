@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Note-2.2.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Note-3.0.0.json'
 title:   Note
 type:    object
 
@@ -58,6 +58,7 @@ properties:
     description: 'A set of tags that apply to this Note. Useful for tagging notes that need review or responses, or marking a note as resolved.'
 
   text:
-    title: 'Note Text'
-    type:  string
+    title:     'Note Text'
+    type:      string
+    minLength: 1
     description: 'The text of the note itself'
