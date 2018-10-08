@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/BibliographicReference-4.1.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -511,7 +511,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL (e.g. <code>10.1075/cal.20.02hie</code> not <code>https://doi.org/10.1075/cal.20.02hie</code>).</p>
+        <p><p>The Digtial Object Identifier (DOI) for this publication. This should be just the DOI itself, not a URL, and should not include the <code>doi:</code> prefix (e.g. <code>10.1075/cal.20.02hie</code> not <code>https://doi.org/10.1075/cal.20.02hie</code> or <code>doi:10.1075/cal.20.02hie</code>).</p>
 </p>
       </div>
 
@@ -528,6 +528,7 @@
 
 
 
+      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^10.\d{4,9}/[-._;()/:A-Za-z0-9]+$</code></p>
 
 
 
@@ -577,6 +578,7 @@
 
 
 
+      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>1</code></p>
 
 
 
@@ -667,160 +669,13 @@
               </summary>
           
           
-          
-          
-          
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>An object representing an editor</p>
+                  <p><p>A Person object representing an editor</p>
           </p>
                 </div>
           
-                <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                  <p class='additional-properties object prop'>
-                    <strong>Additional properties:</strong> false
-                  </p>
-          
-          
-          
-                <div class='properties object prop'>
-                  <h2>Properties</h2>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>First Name: <code>"firstName"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The first name(s) of this editor</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Last Name: <code>"lastName"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The last name(s) of this editor</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
+              <p class='$ref any prop'>Must be an instance of the <a href="#person.html">#person</a> schema.</p>
           
           
             </details>
@@ -1212,6 +1067,7 @@
 
 
 
+      <p class='min-length string prop'><strong>Min length:</strong> <code>1</code></p>
 
 
 
@@ -1400,6 +1256,7 @@
 
 
 
+      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>1</code></p>
 
 
 
@@ -1501,7 +1358,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="Media.html">Media File</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Text.html">Text</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="Language.html">Language</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Address.html">Address</a></li><li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Word.html">Word</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="GeoJSON.html">GeoJSON Object</a></li><li><a href="Language.html">Language</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 
