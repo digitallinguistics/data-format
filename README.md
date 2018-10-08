@@ -147,7 +147,7 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **Optional & Empty Properties**
 
-    * Typically, if an optional property is present, it must have data in it. If the data in the property is empty (e.g. an empty Array, an empty String, an Object without properties, etc.), you should remove that property before saving the data. In other words, do not store empty Strings, empty Arrays, etc. unless those properties are required. This helps keep storage costs to a minimum, while reducing clutter and maintaining human-readability.
+    * Typically, if an optional property is present, it must have data in it. If the data in the property is empty (e.g. an empty Array, an empty String, an Object without properties, etc.), you should remove that property before saving the data. In other words, do not store empty Strings, empty Arrays, etc. unless those properties are required. This helps keep storage costs to a minimum, while reducing clutter and maintaining human-readability. Some required properties in the schemas must also be non-empty.
 
 * **Context**
 
