@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Note-2.2.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Note-3.0.0.json",
   "title": "Note",
   "type": "object",
   "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
@@ -68,6 +68,7 @@
     "text": {
       "title": "Note Text",
       "type": "string",
+      "minLength": 1,
       "description": "The text of the note itself"
     }
   }

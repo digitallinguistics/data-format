@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-2.2.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/LexemeReference-3.0.0.json",
   "title": "Lexeme Reference",
   "type": "object",
   "description": "A reference to a Lexeme. May point to either a top-level Lexeme or a variant.",
@@ -38,7 +38,8 @@
     "sense": {
       "title": "Referenced Sense (Num)",
       "type": "integer",
-      "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme."
+      "minimum": 1,
+      "description": "The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme (index starts at 1, not 0)."
     },
     "variantType": {
       "title": "Variant Type",

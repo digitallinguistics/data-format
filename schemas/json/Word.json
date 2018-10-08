@@ -1,12 +1,11 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-2.6.3.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-3.0.0.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
   "additionalProperties": true,
   "required": [
-    "morphemes",
     "transcription"
   ],
   "properties": {
@@ -21,6 +20,7 @@
     "endTime": {
       "title": "End Time",
       "type": "number",
+      "minimum": 0.001,
       "description": "The point in time in the text at which the word token stop being spoken, formatted as seconds and milliseconds (SS.MMM). This property is useful for phonetic data analysis."
     },
     "gloss": {
@@ -80,6 +80,7 @@
           "endTime": {
             "title": "End Time",
             "type": "number",
+            "minimum": 0.001,
             "description": "The point in time in the text at which this phone stops being pronounced. This property is primarily useful for phonetic data analysis."
           },
           "notes": {
@@ -102,6 +103,7 @@
           "startTime": {
             "title": "Start Time",
             "type": "number",
+            "minimum": 0,
             "description": "The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis. The `endTime` property is not necessarily required if the `startTime` property is present (this is useful when the endTime of one phone is the same as the startTime of the next)."
           },
           "tags": {
@@ -116,6 +118,7 @@
     "startTime": {
       "title": "Start Time",
       "type": "number",
+      "minimum": 0,
       "description": "The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis. The `endTime` property is not necessarily required if the `startTime` property is present (this is useful when the endTime of one word token is the same as the startTime of the next)."
     },
     "tags": {

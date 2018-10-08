@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Orthography-1.6.1.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Orthography-2.0.0.json",
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
@@ -84,7 +84,8 @@
             "description": "A list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).",
             "items": {
               "title": "Pronunciation",
-              "type": "string"
+              "type": "string",
+              "minLength": 1
             }
           }
         }
@@ -122,7 +123,8 @@
       "description": "A list of all the punctuation characters in this orthography, including white space and non-breaking characters.",
       "items": {
         "title": "Punctuation Character",
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       },
       "default": []
     },
