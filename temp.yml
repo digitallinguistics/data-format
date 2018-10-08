@@ -1,36 +1,3 @@
-$schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/LexemeReference-3.0.0.json'
-title:   'Lexeme Reference'
-type:    object
-
-description: 'A reference to a Lexeme. May point to either a top-level Lexeme or a variant.'
-
-required:
-  - lexeme
-
-additionalProperties: false
-
-properties:
-
-  type:
-    title: Type
-    type:  string
-    description: 'The type of object (must be set to `LexemeReference`)'
-    enum:
-      - LexemeReference
-
-  lexeme:
-    title:   'Referenced Lexeme (Key)'
-    type:    string
-    pattern: '^[^ ]+$'
-    description: 'The key of the lexeme being referenced'
-
-  lexemeURL:
-    title:  'Referenced Lexeme (URL)'
-    type:   string
-    format: uri
-    description: 'The URL of the lexeme being referenced'
-
   relation:
     title: 'Relation Type'
     type:  string
