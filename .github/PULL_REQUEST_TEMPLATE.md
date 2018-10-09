@@ -58,6 +58,6 @@ _This section is for maintainers only_
     - Title: `LABEL: description (#000)`
     - Description
     - Changelog: `LABEL: description (closes #000)`
-- [ ] **Create or update the release notes** for the release that this PR will be part of
 - [ ] **Delete issue branch**
 - [ ] **Run upload script** from the `master` branch
+- [ ] **Create or update the release notes** for the release that this PR will be part of
