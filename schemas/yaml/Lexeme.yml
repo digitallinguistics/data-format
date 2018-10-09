@@ -79,10 +79,10 @@ properties:
     uniqueItems: false
     description: 'A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).'
     items:
-      title: 'Referenced Lexeme'
+      title: 'Lexeme (Database Reference)'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/LexemeReference.json'
-      description: 'The referenced component'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: 'A database reference to the component'
 
   dateCreated:
     title: 'Date Created'
@@ -134,7 +134,7 @@ properties:
     items:
       title: 'Lexeme (Database Reference)'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/LexemeReference.json'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
       description: 'A database reference to a lexeme'
 
   lemma:

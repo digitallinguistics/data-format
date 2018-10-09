@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Media-3.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Media-4.0.0.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
@@ -44,10 +44,10 @@
       "description": "The media type of the file. Must be a valid MIME type. Examples: `audio/wav`, `application/pdf`, `video/mpeg`"
     },
     "creator": {
-      "title": "Creator",
+      "title": "Creator (Person - Database Reference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json",
-      "description": "The person who created this specific file"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "description": "A database reference to the person who created this specific file"
     },
     "dateCreated": {
       "title": "Date Created",
@@ -115,12 +115,12 @@
       "title": "Languages",
       "type": "array",
       "uniqueItems": true,
-      "description": "An array of the languages that are used in this media file, as abbreviations",
+      "description": "An array of the languages that are used in this media file",
       "items": {
-        "title": "Language (Abbreviation)",
+        "title": "Language (Database Reference)",
         "type": "string",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
-        "description": "The abbreviation for this language"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to this language"
       }
     },
     "length": {
@@ -136,10 +136,10 @@
       "description": "A URL where a presentational format for this resource may be viewed"
     },
     "location": {
-      "title": "Location",
+      "title": "Location (Database Reference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json",
-      "description": "The location where the content in this media file was recorded or produced"
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "description": "A database reference to the location where the content in this media file was recorded or produced"
     },
     "mediaURL": {
       "title": "Media URL",
@@ -169,8 +169,10 @@
       "uniqueItems": true,
       "description": "A list of all the people who appear in this file. Often a list of speakers.",
       "items": {
-        "title": "Person",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json"
+        "title": "Person (Database Reference)",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to a person who appears in this file"
       }
     },
     "startTime": {

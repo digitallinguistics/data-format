@@ -33,7 +33,6 @@ const data = {
       familyName: `Swadesh`,
       givenName:  `Morris`,
       roles:      [`researcher`],
-      type:       `Person`,
     },
     {
       familyName: `Paul`,

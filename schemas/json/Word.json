@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-3.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Word-3.0.1.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -43,7 +43,7 @@
         "title": "Morpheme",
         "type": "object",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Morpheme.json",
-        "description": "An object representing this morphem"
+        "description": "An object representing this morpheme. This is *not* an object representing a lexeme (the abstract type). It represents the specific morpheme token (the particular instance in speech) instead."
       }
     },
     "notes": {

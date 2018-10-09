@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Language-6.7.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Language-7.0.0.json",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -81,10 +81,10 @@
       "uniqueItems": true,
       "description": "A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its `roles` property specified, so that the contribution of each person is known.",
       "items": {
-        "title": "Contributor (Person)",
+        "title": "Contributor (Person - Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Person.json",
-        "description": "A Person object describing a contributor"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to a Person object describing a contributor"
       }
     },
     "dateCreated": {
@@ -131,28 +131,16 @@
       "format": "uri",
       "description": "A URL where a presentational format for this resource may be viewed"
     },
-    "lexemes": {
-      "title": "Lexemes",
-      "type": "array",
-      "uniqueItems": true,
-      "description": "A collection of the lexemes in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Lexeme be stored as a separate JSON document.",
-      "items": {
-        "title": "Lexeme",
-        "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Lexeme.json",
-        "description": "A Lexeme object"
-      }
-    },
     "locations": {
       "title": "Locations",
       "type": "array",
       "uniqueItems": true,
       "description": "Geographic locations where this language variety is spoken, optionally with geographic coordinate data",
       "items": {
-        "title": "Location",
+        "title": "Location (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Location.json",
-        "description": "A Location object describing a location where this language variety is spoken"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to a Location object describing a location where this language variety is spoken"
       }
     },
     "name": {
@@ -212,12 +200,6 @@
       "type": "object",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
       "description": "A set of tags for this Language"
-    },
-    "texts": {
-      "title": "Texts",
-      "type": "array",
-      "uniqueItems": true,
-      "description": "A collection of texts in this language. This property is most useful when exporting all the items in a corpus as a single JSON Language file. Otherwise, it is strongly recommended that each Text be stored as a separate JSON document."
     },
     "url": {
       "title": "URL",
