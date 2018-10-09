@@ -1,16 +1,5 @@
-  relation:
-    title: 'Relation Type'
-    type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
-    description: 'The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`. The value of this field must be a valid Abbreviation. This property is sometimes required (for example, when the LexemeReference is part of the `lexicalRelations` field of the Lexeme).'
-
   sense:
     title:   'Referenced Sense (Num)'
     type:    integer
     minimum: 1
     description: 'The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme (index starts at 1, not 0).'
-
-  variantType:
-    title: 'Variant Type'
-    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-    description: 'If this reference is to a variant of a lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages.'
