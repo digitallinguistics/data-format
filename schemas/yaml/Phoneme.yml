@@ -15,9 +15,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Phoneme
     description: 'The type of object (must be set to `Phoneme`)'
-    enum:
-      - Phoneme
 
   airstream:
     title: 'Airstream Mechanism'

@@ -16,9 +16,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Orthography
     description: 'The type of object (must be set to `Orthography`)'
-    enum:
-      - Orthography
 
   id:
     title: ID

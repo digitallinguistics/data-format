@@ -36,9 +36,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: BibliographicReference
     description: 'The type of object. Must be set to `BibliographicReference`.'
-    enum:
-      - BibliographicReference
 
   authors:
     title:       Authors

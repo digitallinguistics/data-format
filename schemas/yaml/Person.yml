@@ -16,9 +16,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Person
     description: 'The type of object (must be set to `Person`)'
-    enum:
-      - Person
 
   id:
     title: ID

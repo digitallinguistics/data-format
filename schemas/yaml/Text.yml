@@ -16,9 +16,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Text
     description: 'The type of object (must be set to `Text`)'
-    enum:
-      - Text
 
   id:
     title: ID

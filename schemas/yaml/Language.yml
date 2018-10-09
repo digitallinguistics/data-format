@@ -15,9 +15,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Language
     description: 'The type of object (must be set to `Language`)'
-    enum:
-      - Language
 
   id:
     title: ID

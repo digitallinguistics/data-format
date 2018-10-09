@@ -12,9 +12,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Address
     description: 'The type of object (must be set to `Address`)'
-    enum:
-      - Address
 
   streetAddress:
     title: 'Street Address'

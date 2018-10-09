@@ -20,9 +20,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Lexeme
     description: 'The type of object (must be set to `Lexeme`)'
-    enum:
-      - Lexeme
 
   id:
     title: ID

@@ -22,9 +22,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Utterance
     description: 'The type of object (must be set to `Utterance`)'
-    enum:
-      - Utterance
 
   key:
     title:   Key

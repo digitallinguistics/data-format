@@ -15,9 +15,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Bundle
     description: 'The type of object (must be set to `Bundle`)'
-    enum:
-      - Bundle
 
   id:
     title: ID

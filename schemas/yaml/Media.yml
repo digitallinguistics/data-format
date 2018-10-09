@@ -15,9 +15,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Media
     description: 'The type of object (must be set to `Media`)'
-    enum:
-      - Media
 
   id:
     title: ID

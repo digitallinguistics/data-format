@@ -12,9 +12,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: DatabaseReference
     description: 'The type of object (must be set to `DatabaseReference`)'
-    enum:
-      - DatabaseReference
 
   id:
     title: 'Referenced ID'
