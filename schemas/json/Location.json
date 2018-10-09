@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Location-2.7.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Location-3.0.0.json",
   "title": "Location",
   "type": "object",
   "description": "A location, optionally with accompanying geographic coordinate data",
@@ -12,10 +12,8 @@
     "type": {
       "title": "Type",
       "type": "string",
-      "description": "The type of object (must be set to `Location`)",
-      "enum": [
-        "Location"
-      ]
+      "const": "Location",
+      "description": "The type of object (must be set to `Location`)"
     },
     "id": {
       "title": "ID",

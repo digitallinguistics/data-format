@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/DatabaseReference-3.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.0.0.json",
   "title": "Database Reference",
   "type": "object",
   "description": "A reference to an item in a database",
@@ -9,10 +9,8 @@
     "type": {
       "title": "Type",
       "type": "string",
-      "description": "The type of object (must be set to `DatabaseReference`)",
-      "enum": [
-        "DatabaseReference"
-      ]
+      "const": "DatabaseReference",
+      "description": "The type of object (must be set to `DatabaseReference`)"
     },
     "id": {
       "title": "Referenced ID",
