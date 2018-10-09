@@ -1,5 +1,0 @@
-  sense:
-    title:   'Referenced Sense (Num)'
-    type:    integer
-    minimum: 1
-    description: 'The number of the sense being referenced. The sense number is its index in the `senses` array on the Lexeme (index starts at 1, not 0).'

@@ -104,7 +104,7 @@ properties:
     title:       Examples
     type:        array
     uniqueItems: true
-    description: 'A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text.'
+    description: 'A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text. The Utterance number is indicated in the `index` field of the Database Reference object.'
     items:
       title: 'Example Utterance (Database Reference)'
       type:  object
@@ -331,7 +331,7 @@ properties:
           title:       Examples
           type:        array
           uniqueItems: true
-          description: 'A collection of examples of this sense in use. Each example is an Utterance.'
+          description: 'A collection of examples of this sense in use. Each example is an Utterance. The number of the Utterance is indicated by the `index` field of the Database Reference object.'
           items:
             title: 'Example Utterance (Database Reference)'
             type:  object
