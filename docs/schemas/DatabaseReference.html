@@ -5,7 +5,7 @@
   <head>
     <meta charset=utf-8>
     <title>
-      Address
+      Database Reference
     </title>
     <meta name=viewport content='width=device-width'>
     <link rel=stylesheet href="../jschemer.css" type=text/css>
@@ -19,18 +19,18 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Address</h1>
+      <h1 class='title meta any prop'>Database Reference</h1>
     </summary>
 
 
-      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
+      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema">http://json-schema.org/schema</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Address-1.1.2.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/DatabaseReference-3.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A postal Address</p>
+        <p><p>A reference to an item in a database</p>
 </p>
       </div>
 
@@ -77,7 +77,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The type of object (must be set to <code>Address</code>)</p>
+        <p><p>The type of object (must be set to <code>DatabaseReference</code>)</p>
 </p>
       </div>
 
@@ -105,7 +105,7 @@
       <div class='enum any prop'>
         <h2>Allowed Values (<code>enum</code>)</h2>
         <ul>
-            <li><pre>&quot;Address&quot;</pre></li>
+            <li><pre>&quot;DatabaseReference&quot;</pre></li>
         </ul>
       </div>
 
@@ -128,7 +128,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Street Address: <code>"streetAddress"</code></h1>
+      <h1 class='title meta any prop'>Referenced ID: <code>"id"</code></h1>
     </summary>
 
 
@@ -137,11 +137,10 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The street address, not including apartment or unit number</p>
+        <p><p>The ID of the referenced database item</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
 
@@ -182,7 +181,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Apartment / Unit Number: <code>"apartmentNumber"</code></h1>
+      <h1 class='title meta any prop'>Referenced Index: <code>"index"</code></h1>
     </summary>
 
 
@@ -191,11 +190,11 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The apartment or unit number, along with any abbreviations, e.g. <code>Apt 20</code></p>
+        <p><p>The index of the referenced database item. Indexes should start at 1 rather than 0 to increase human readability.</p>
 </p>
       </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+      <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
 
 
 
@@ -203,6 +202,7 @@
 
 
 
+      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>1</code></p>
 
 
 
@@ -236,7 +236,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Postal Box Number: <code>"postalBoxNumber"</code></h1>
+      <h1 class='title meta any prop'>Referenced Key: <code>"key"</code></h1>
     </summary>
 
 
@@ -245,7 +245,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The postal box number</p>
+        <p><p>The key of the referenced database item. If a key is not present for the item, the item's abbreviation may be used instead.</p>
 </p>
       </div>
 
@@ -262,6 +262,7 @@
 
 
 
+      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^[^\s]+$</code></p>
 
 
 
@@ -290,7 +291,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Locality / City: <code>"locality"</code></h1>
+      <h1 class='title meta any prop'>Referenced Item Type: <code>"referenceType"</code></h1>
     </summary>
 
 
@@ -299,7 +300,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The locality or city for this Address</p>
+        <p><p>The type of database item being referenced</p>
 </p>
       </div>
 
@@ -324,6 +325,24 @@
 
 
 
+      <div class='enum any prop'>
+        <h2>Allowed Values (<code>enum</code>)</h2>
+        <ul>
+            <li><pre>&quot;BibliographicReference&quot;</pre></li>
+            <li><pre>&quot;Bundle&quot;</pre></li>
+            <li><pre>&quot;Language&quot;</pre></li>
+            <li><pre>&quot;Lexeme&quot;</pre></li>
+            <li><pre>&quot;Location&quot;</pre></li>
+            <li><pre>&quot;Media&quot;</pre></li>
+            <li><pre>&quot;Morpheme&quot;</pre></li>
+            <li><pre>&quot;Orthography&quot;</pre></li>
+            <li><pre>&quot;Person&quot;</pre></li>
+            <li><pre>&quot;Sense&quot;</pre></li>
+            <li><pre>&quot;Text&quot;</pre></li>
+            <li><pre>&quot;Utterance&quot;</pre></li>
+            <li><pre>&quot;Word&quot;</pre></li>
+        </ul>
+      </div>
 
 
 
@@ -344,7 +363,7 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Region / State: <code>"region"</code></h1>
+      <h1 class='title meta any prop'>Referenced URL: <code>"url"</code></h1>
     </summary>
 
 
@@ -353,7 +372,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>The region or state for this Address</p>
+        <p><p>The URL of the referenced database item</p>
 </p>
       </div>
 
@@ -369,114 +388,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Country: <code>"country"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The country this address is located in</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Postal Code: <code>"postalCode"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The postal code for this address (as a string rather than a number)</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
+      <p class='format string prop'><strong>Format:</strong> uri</p>
 
 
 

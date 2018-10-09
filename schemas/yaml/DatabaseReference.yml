@@ -1,0 +1,58 @@
+$schema: 'http://json-schema.org/schema'
+id:      'http://cdn.digitallinguistics.io/schemas/DatabaseReference-3.0.0.json'
+title:   'Database Reference'
+type:    object
+
+description: 'A reference to an item in a database'
+
+additionalProperties: true
+
+properties:
+
+  type:
+    title: Type
+    type:  string
+    description: 'The type of object (must be set to `DatabaseReference`)'
+    enum:
+      - DatabaseReference
+
+  id:
+    title: 'Referenced ID'
+    description: 'The ID of the referenced database item'
+
+  index:
+    title:   'Referenced Index'
+    type:    integer
+    minimum: 1
+    description: 'The index of the referenced database item. Indexes should start at 1 rather than 0 to increase human readability.'
+
+  key:
+    title:   'Referenced Key'
+    type:    string
+    pattern: '^[^\s]+$'
+    description: "The key of the referenced database item. If a key is not present for the item, the item's abbreviation may be used instead."
+
+  referenceType:
+    title: 'Referenced Item Type'
+    type:  string
+    description: 'The type of database item being referenced'
+    enum:
+      - BibliographicReference
+      - Bundle
+      - Language
+      - Lexeme
+      - Location
+      - Media
+      - Morpheme
+      - Orthography
+      - Person
+      - Sense
+      - Text
+      - Utterance
+      - Word
+
+  url:
+    title:  'Referenced URL'
+    type:   string
+    format: uri
+    description: 'The URL of the referenced database item'

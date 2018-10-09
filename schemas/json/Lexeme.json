@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-5.0.0.json",
+  "id": "http://cdn.digitallinguistics.io/schemas/Lexeme-6.0.0.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
@@ -81,10 +81,10 @@
       "uniqueItems": false,
       "description": "A list of the morphemes or other lexical entries contained within the current form. For example, the form `gentlemen` in an English lexicon might have references to the form `gentle`, and the form `men` within the lexeme for `man`. Components may reference either an entire lexeme or a specific variant. Components do not have to be unique (useful when the same morpheme appears twice in a word).",
       "items": {
-        "title": "Referenced Lexeme",
+        "title": "Lexeme (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
-        "description": "The referenced component"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to the component"
       }
     },
     "dateCreated": {
@@ -117,12 +117,12 @@
       "title": "Examples",
       "type": "array",
       "uniqueItems": true,
-      "description": "A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text.",
+      "description": "A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text. The Utterance number is indicated in the `index` field of the Database Reference object.",
       "items": {
-        "title": "Example Utterance",
+        "title": "Example Utterance (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
-        "description": "A Utterance object containing the example utterance"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to an Utterance object"
       }
     },
     "features": {
@@ -150,12 +150,12 @@
       "title": "Included In",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of references to lexemes or variants that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
+      "description": "A list of lexemes or variants that this item is included in. For example, the lexeme `‑s` (English plural for nouns) would have a reference to the lexeme `pants`, among others.",
       "items": {
-        "title": "Lexicon Reference",
+        "title": "Lexeme (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
-        "description": "A reference to a lexeme"
+        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "description": "A database reference to a lexeme"
       }
     },
     "lemma": {
@@ -168,19 +168,27 @@
       "title": "Lexical Relations",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of the lexical relations that this lexeme has to other lexemes or variants",
+      "description": "A list of the lexical relations that this lexeme has to other lexemes or variants. Each item is a Database Reference, and must also have a property called `relation`, indicating the type of lexical relation.",
       "items": {
         "allOf": [
           {
-            "title": "Lexical Relation (Lexeme Reference)",
+            "title": "Lexeme (Database Reference)",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
-            "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required."
+            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+            "description": "A database reference representing a lexical relation between two lexemes or senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation."
           },
           {
             "required": [
               "relation"
-            ]
+            ],
+            "properties": {
+              "relation": {
+                "title": "Relation Type",
+                "type": "string",
+                "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+                "description": "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
+              }
+            }
           }
         ]
       }
@@ -288,7 +296,7 @@
     "variantOf": {
       "title": "Variant Of",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
+      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
       "description": "When this lexeme is a variant of another lexeme, this field should contain a reference to the other Lexeme. Lexemes may only be variants of one other Lexeme."
     },
     "variants": {
@@ -299,15 +307,22 @@
       "items": {
         "allOf": [
           {
-            "title": "Referenced Variant (Lexeme Reference)",
+            "title": "Variant (Database Reference)",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
-            "description": "A reference to the variant of this lexeme. A Variant is simply a Lexeme Reference object, but with the `variantType` required."
+            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+            "description": "A database reference to the variant of this lexeme. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant."
           },
           {
             "required": [
               "variantType"
-            ]
+            ],
+            "properties": {
+              "variantType": {
+                "title": "Variant Type",
+                "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+                "description": "This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages."
+              }
+            }
           }
         ]
       }
@@ -355,12 +370,12 @@
             "title": "Examples",
             "type": "array",
             "uniqueItems": true,
-            "description": "A collection of examples of this sense in use. Each example is an Utterance.",
+            "description": "A collection of examples of this sense in use. Each example is an Utterance. The number of the Utterance is indicated by the `index` field of the Database Reference object.",
             "items": {
-              "title": "Example Utterance",
+              "title": "Example Utterance (Database Reference)",
               "type": "object",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
-              "description": "An example Utterance for this sense"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+              "description": "A database reference to an example Utterance for this sense"
             }
           },
           "gloss": {
@@ -377,19 +392,27 @@
             "title": "Lexical Relations",
             "type": "array",
             "uniqueItems": true,
-            "description": "A collection of lexical relations between this sense and other senses in this language or other languages.",
+            "description": "A list of the lexical relations between this sense and other senses in this language. Each item is a Database Reference, and must also have a property called `relation`, indicating the type of lexical relation.",
             "items": {
               "allOf": [
                 {
-                  "title": "Lexical Relation (Lexeme Reference)",
+                  "title": "Lexeme (Database Reference)",
                   "type": "object",
-                  "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
-                  "description": "A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the `relation` property required."
+                  "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+                  "description": "A database reference representing a lexical relation between two lexemes or senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation."
                 },
                 {
                   "required": [
                     "relation"
-                  ]
+                  ],
+                  "properties": {
+                    "relation": {
+                      "title": "Relation Type",
+                      "type": "string",
+                      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+                      "description": "The type of lexical relation that holds between the current sense and the referenced sense. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
+                    }
+                  }
                 }
               ]
             }
@@ -402,8 +425,8 @@
             "items": {
               "title": "Media Item",
               "type": "object",
-              "$ref": "http://cdn.digitallinguistics.io/schemas/Media.json",
-              "description": "A media item associated with this lexeme"
+              "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+              "description": "A database reference to a media item associated with this lexeme"
             }
           },
           "notes": {
@@ -468,7 +491,7 @@
           "variantOf": {
             "title": "Variant Of",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
+            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
             "description": "If this sense is a variant of another sense, a reference to the other sense should go here. For example, sometimes two speakers may use the same word with a slightly different set of senses. In American English, for instance, *Coke* is a specific brand of soda for most speakers, but a generic term for soda for other speakers. The generic sense would therefore be listed as a dialectal variant of the specific sense."
           },
           "variants": {
@@ -479,15 +502,22 @@
             "items": {
               "allOf": [
                 {
-                  "title": "Referenced Variant (Lexeme Reference)",
+                  "title": "Referenced Variant (Database Reference)",
                   "type": "object",
-                  "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeReference.json",
-                  "description": "A reference to the variant of this sense. A Variant is simply a Lexeme Reference object, but with the `variantType` required."
+                  "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+                  "description": "A database reference to the variant of this sense. The database reference must have a `variantType` property."
                 },
                 {
                   "required": [
                     "variantType"
-                  ]
+                  ],
+                  "properties": {
+                    "variantType": {
+                      "title": "Variant Type",
+                      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+                      "description": "This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages."
+                    }
+                  }
                 }
               ]
             }

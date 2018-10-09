@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Address-1.1.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Address-1.1.2.json'
 title:   Address
 type:    object
 
@@ -39,7 +39,7 @@ properties:
   region:
     title: 'Region / State'
     type:  string
-    description: ' The region or state for this Address'
+    description: 'The region or state for this Address'
 
   country:
     title: Country

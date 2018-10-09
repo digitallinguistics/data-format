@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Person-2.0.0.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Person-3.0.0.json'
 title:   Person
 type:    object
 
@@ -49,10 +49,10 @@ properties:
     description: 'This person’s birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime)'
 
   birthPlace:
-    title: 'Birth Place'
+    title: 'Birth Place (Database Reference)'
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Location.json'
-    description: 'This person’s place of birth, as a Location object'
+    $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+    description: 'A database reference to this person’s place of birth, as a Location object'
 
   email:
     title:  Email
@@ -83,10 +83,12 @@ properties:
     items:
       title: 'Language Spoken'
       allOf:
+
         - title: Language
           type:  object
           $ref:  'http://cdn.digitallinguistics.io/schemas/Language.json'
           description: 'Each item in the `languages` Array must be a valid Language object'
+
         - additionalProperties: true
           properties:
 
