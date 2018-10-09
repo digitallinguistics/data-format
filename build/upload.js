@@ -96,7 +96,7 @@ async function uploadSchemaFiles(filename) {
   const {
     schemaName,
     version,
-  } = schemaNameRegExp.exec(schema.id).groups;
+  } = schemaNameRegExp.exec(schema.$id).groups;
 
   await Promise.all([
     uploadBlob(schemaName, jsonSchema),                                // plain unversioned
