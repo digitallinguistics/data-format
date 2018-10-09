@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Text-4.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Text-5.0.0.json'
 title:   Text
 type:    object
 
@@ -16,9 +16,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Text
     description: 'The type of object (must be set to `Text`)'
-    enum:
-      - Text
 
   id:
     title: ID

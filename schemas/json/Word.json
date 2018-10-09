@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "http://cdn.digitallinguistics.io/schemas/Word-3.0.1.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.0.0.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -12,10 +12,8 @@
     "type": {
       "title": "Type",
       "type": "string",
-      "description": "The type of object. Must be set to `Word`.",
-      "enum": [
-        "Word"
-      ]
+      "const": "Word",
+      "description": "The type of object. Must be set to `Word`."
     },
     "endTime": {
       "title": "End Time",

@@ -28,7 +28,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^4.11.8",
+    "ajv": "^6.5.4",
     "azure-storage": "^2.10.1",
     "chalk": "^2.4.1",
     "jasmine": "^3.2.0",

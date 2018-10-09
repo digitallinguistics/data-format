@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-id:      'http://cdn.digitallinguistics.io/schemas/Word-3.0.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Word-4.0.0.json'
 title:   Word
 type:    object
 
@@ -15,9 +15,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Word
     description: 'The type of object. Must be set to `Word`.'
-    enum:
-      - Word
 
   endTime:
     title:   'End Time'

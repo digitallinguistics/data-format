@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Access-2.0.3.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Access-3.0.0.json'
 title:   'Access Rights'
 type:    object
 

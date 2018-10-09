@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Utterance-3.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Utterance-4.0.0.json'
 title:   Utterance
 type:    object
 
@@ -22,9 +22,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Utterance
     description: 'The type of object (must be set to `Utterance`)'
-    enum:
-      - Utterance
 
   key:
     title:   Key
@@ -68,9 +67,9 @@ properties:
     description: 'The abbreviation of person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match the abbreviation of one of the people listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a `speaker` role are included in a text, each Utterance must have its `speaker` attribute specified.'
 
   startTime:
-    title:    'Start Time'
-    type:     number
-    miniumum: 0
+    title:   'Start Time'
+    type:    number
+    minimum: 0
     description: 'The time that the speaker begins producing this Utterance within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).'
 
   tags:

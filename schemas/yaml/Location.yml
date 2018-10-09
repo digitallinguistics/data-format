@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Location-2.7.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Location-3.0.0.json'
 title:   Location
 type:    object
 
@@ -15,9 +15,8 @@ properties:
   type:
     title: Type
     type:  string
+    const: Location
     description: 'The type of object (must be set to `Location`)'
-    enum:
-      - Location
 
   id:
     title: ID
