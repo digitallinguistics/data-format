@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Bundle-1.6.1.json'
+id:      'http://cdn.digitallinguistics.io/schemas/Bundle-2.0.0.json'
 title:   Bundle
 type:    object
 
@@ -61,12 +61,12 @@ properties:
     title:       Locations
     type:        array
     uniqueItems: true
-    description: 'An array of locations included in this bundle (usually locations that were visited during a day or session)'
+    description: 'An array of database references to locations included in this bundle (usually locations that were visited during a day or session)'
     items:
-      title: Location
+      title: 'Location (Database Reference)'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Location.json'
-      description: 'An object describing a location associated with this bundle'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: 'A database reference pointing to a location associated with this bundle'
 
   media:
     title:       Media
@@ -74,10 +74,10 @@ properties:
     uniqueItems: true
     description: 'An array of media files included in this bundle'
     items:
-      title: 'Media File'
+      title: 'Media File (Database Reference)'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Media.json'
-      description: 'An object describing a media file in this bundle'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: 'A database reference that points to an object describing a media file in this bundle'
 
   name:
     title: Name
@@ -101,10 +101,10 @@ properties:
     uniqueItems: true
     description: 'An array of people associated with this bundle'
     items:
-      title: Person
+      title: Person (Database Reference)
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Person.json'
-      description: 'A person associated with this bundle'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: 'A database reference that points to a person associated with this bundle'
 
   tags:
     title: Tags
@@ -118,10 +118,10 @@ properties:
     uniqueItems: true
     description: 'An array of texts included in this bundle.'
     items:
-      title: Text
+      title: 'Text (Database Reference)'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Text.json'
-      description: 'A Text included in this bundle'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: 'A database reference that points to a text included in this bundle'
 
   url:
     title:  URL

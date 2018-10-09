@@ -30,7 +30,7 @@ properties:
     title:   'Referenced Key'
     type:    string
     pattern: '^[^\s]+$'
-    description: 'The key of the referenced database item'
+    description: "The key of the referenced database item. If a key is not present for the item, the item's abbreviation may be used instead."
 
   referenceType:
     title: 'Referenced Item Type'
