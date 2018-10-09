@@ -25,7 +25,7 @@
 
       <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/schema#">http://json-schema.org/schema#</a></p>
 
-      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexeme-5.0.0.json</code></p>
+      <p class='id meta any prop'><strong>Schema ID:</strong> <code>http://cdn.digitallinguistics.io/schemas/Lexeme-6.0.0.json</code></p>
 
 
       <div class='description meta any prop'>
@@ -603,17 +603,17 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Referenced Lexeme</h1>
+                <h1 class='title meta any prop'>Lexeme (Database Reference)</h1>
               </summary>
           
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>The referenced component</p>
+                  <p><p>A database reference to the component</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
           
           
             </details>
@@ -948,7 +948,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text.</p>
+        <p><p>A collection of examples illustrating this lexeme in use. Each example is an Utterance from a Text. The Utterance number is indicated in the <code>index</code> field of the Database Reference object.</p>
 </p>
       </div>
 
@@ -992,17 +992,17 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Example Utterance</h1>
+                <h1 class='title meta any prop'>Example Utterance (Database Reference)</h1>
               </summary>
           
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A Utterance object containing the example utterance</p>
+                  <p><p>A database reference to an Utterance object</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="Utterance.html">Utterance</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
           
           
             </details>
@@ -1161,7 +1161,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of references to lexemes or variants that this item is included in. For example, the lexeme <code>‑s</code> (English plural for nouns) would have a reference to the lexeme <code>pants</code>, among others.</p>
+        <p><p>A list of lexemes or variants that this item is included in. For example, the lexeme <code>‑s</code> (English plural for nouns) would have a reference to the lexeme <code>pants</code>, among others.</p>
 </p>
       </div>
 
@@ -1205,17 +1205,17 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Lexicon Reference</h1>
+                <h1 class='title meta any prop'>Lexeme (Database Reference)</h1>
               </summary>
           
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A reference to a lexeme</p>
+                  <p><p>A database reference to a lexeme</p>
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
           
           
             </details>
@@ -1269,7 +1269,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A list of the lexical relations that this lexeme has to other lexemes or variants</p>
+        <p><p>A list of the lexical relations that this lexeme has to other lexemes or variants. Each item is a Database Reference, and must also have a property called <code>relation</code>, indicating the type of lexical relation.</p>
 </p>
       </div>
 
@@ -1330,13 +1330,13 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Lexical Relation (Lexeme Reference)</h1>
+                <h1 class='title meta any prop'>Lexeme (Database Reference)</h1>
               </summary>
           
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the <code>relation</code> property required.</p>
+                  <p><p>A database reference representing a lexical relation between two lexemes or senses. <strong>Note:</strong> The database reference must also have a <code>relation</code> property specified, indicating the type of lexical relation.</p>
           </p>
                 </div>
           
@@ -1385,6 +1385,34 @@
           
           
           
+                <div class='properties object prop'>
+                  <h2>Properties</h2>
+                  <ul>
+                      <li>
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Relation Type</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a <code>compare</code> relation) or historical relationships (a <code>derivedFrom</code> or <code>originOf</code> relation). Examples: <code>antonym</code>, <code>synonym</code>, <code>cognate</code>, <code>derivedFrom</code>, <code>originOf</code>, <code>compare</code>, <code>partOf</code>, <code>hypernymOf</code>, <code>hyponymOf</code>.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href=".html"></a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+          </li>
+                  </ul>
+                </div>
           
           
           
@@ -2205,7 +2233,7 @@
 </p>
       </div>
 
-    <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
+    <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
 
 
   </details>
@@ -2288,13 +2316,13 @@
             <details open>
           
               <summary>
-                <h1 class='title meta any prop'>Referenced Variant (Lexeme Reference)</h1>
+                <h1 class='title meta any prop'>Variant (Database Reference)</h1>
               </summary>
           
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A reference to the variant of this lexeme. A Variant is simply a Lexeme Reference object, but with the <code>variantType</code> required.</p>
+                  <p><p>A database reference to the variant of this lexeme. <strong>Note:</strong> The Database Reference object must have a <code>variantType</code> property, indicating the type of variant.</p>
           </p>
                 </div>
           
@@ -2343,6 +2371,34 @@
           
           
           
+                <div class='properties object prop'>
+                  <h2>Properties</h2>
+                  <ul>
+                      <li>
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Variant Type</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc. May be in multiple languages.</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href=".html"></a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+          </li>
+                  </ul>
+                </div>
           
           
           
@@ -2666,7 +2722,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A collection of examples of this sense in use. Each example is an Utterance.</p>
+                  <p><p>A collection of examples of this sense in use. Each example is an Utterance. The number of the Utterance is indicated by the <code>index</code> field of the Database Reference object.</p>
           </p>
                 </div>
           
@@ -2710,17 +2766,17 @@
                       <details open>
                     
                         <summary>
-                          <h1 class='title meta any prop'>Example Utterance</h1>
+                          <h1 class='title meta any prop'>Example Utterance (Database Reference)</h1>
                         </summary>
                     
                     
                           <div class='description meta any prop'>
                             <h2>Description</h2>
-                            <p><p>An example Utterance for this sense</p>
+                            <p><p>A database reference to an example Utterance for this sense</p>
                     </p>
                           </div>
                     
-                        <p class='$ref any prop'>Must be an instance of the <a href="Utterance.html">Utterance</a> schema.</p>
+                        <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
                     
                     
                       </details>
@@ -2797,7 +2853,7 @@
           
                 <div class='description meta any prop'>
                   <h2>Description</h2>
-                  <p><p>A collection of lexical relations between this sense and other senses in this language or other languages.</p>
+                  <p><p>A list of the lexical relations between this sense and other senses in this language. Each item is a Database Reference, and must also have a property called <code>relation</code>, indicating the type of lexical relation.</p>
           </p>
                 </div>
           
@@ -2858,13 +2914,13 @@
                       <details open>
                     
                         <summary>
-                          <h1 class='title meta any prop'>Lexical Relation (Lexeme Reference)</h1>
+                          <h1 class='title meta any prop'>Lexeme (Database Reference)</h1>
                         </summary>
                     
                     
                           <div class='description meta any prop'>
                             <h2>Description</h2>
-                            <p><p>A lexical relation between two lexemes or senses. A LexicalRelation object is just a LexemeReference object, but with the <code>relation</code> property required.</p>
+                            <p><p>A database reference representing a lexical relation between two lexemes or senses. <strong>Note:</strong> The database reference must also have a <code>relation</code> property specified, indicating the type of lexical relation.</p>
                     </p>
                           </div>
                     
@@ -2913,6 +2969,34 @@
                     
                     
                     
+                          <div class='properties object prop'>
+                            <h2>Properties</h2>
+                            <ul>
+                                <li>
+                    <section class=schema>
+                    
+                      <details open>
+                    
+                        <summary>
+                          <h1 class='title meta any prop'>Relation Type</h1>
+                        </summary>
+                    
+                    
+                          <div class='description meta any prop'>
+                            <h2>Description</h2>
+                            <p><p>The type of lexical relation that holds between the current sense and the referenced sense. Can also be used for general cross-references (a <code>compare</code> relation) or historical relationships (a <code>derivedFrom</code> or <code>originOf</code> relation). Examples: <code>antonym</code>, <code>synonym</code>, <code>cognate</code>, <code>derivedFrom</code>, <code>originOf</code>, <code>compare</code>, <code>partOf</code>, <code>hypernymOf</code>, <code>hyponymOf</code>.</p>
+                    </p>
+                          </div>
+                    
+                        <p class='$ref any prop'>Must be an instance of the <a href=".html"></a> schema.</p>
+                    
+                    
+                      </details>
+                    
+                    </section>
+                    </li>
+                            </ul>
+                          </div>
                     
                     
                     
@@ -3034,11 +3118,11 @@
                     
                           <div class='description meta any prop'>
                             <h2>Description</h2>
-                            <p><p>A media item associated with this lexeme</p>
+                            <p><p>A database reference to a media item associated with this lexeme</p>
                     </p>
                           </div>
                     
-                        <p class='$ref any prop'>Must be an instance of the <a href="Media.html">Media</a> schema.</p>
+                        <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
                     
                     
                       </details>
@@ -3519,7 +3603,7 @@
           </p>
                 </div>
           
-              <p class='$ref any prop'>Must be an instance of the <a href="LexemeReference.html">LexemeReference</a> schema.</p>
+              <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
           
           
             </details>
@@ -3602,13 +3686,13 @@
                       <details open>
                     
                         <summary>
-                          <h1 class='title meta any prop'>Referenced Variant (Lexeme Reference)</h1>
+                          <h1 class='title meta any prop'>Referenced Variant (Database Reference)</h1>
                         </summary>
                     
                     
                           <div class='description meta any prop'>
                             <h2>Description</h2>
-                            <p><p>A reference to the variant of this sense. A Variant is simply a Lexeme Reference object, but with the <code>variantType</code> required.</p>
+                            <p><p>A database reference to the variant of this sense. The database reference must have a <code>variantType</code> property.</p>
                     </p>
                           </div>
                     
@@ -3657,6 +3741,34 @@
                     
                     
                     
+                          <div class='properties object prop'>
+                            <h2>Properties</h2>
+                            <ul>
+                                <li>
+                    <section class=schema>
+                    
+                      <details open>
+                    
+                        <summary>
+                          <h1 class='title meta any prop'>Variant Type</h1>
+                        </summary>
+                    
+                    
+                          <div class='description meta any prop'>
+                            <h2>Description</h2>
+                            <p><p>This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply <code>idiolectal</code>, or <code>dialectal</code> (or the name of the dialect), or <code>rapid speech</code>, etc. May be in multiple languages.</p>
+                    </p>
+                          </div>
+                    
+                        <p class='$ref any prop'>Must be an instance of the <a href=".html"></a> schema.</p>
+                    
+                    
+                      </details>
+                    
+                    </section>
+                    </li>
+                            </ul>
+                          </div>
                     
                     
                     
@@ -3787,7 +3899,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="LexemeReference.html">Lexeme Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="Language.html">Language</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="GeoJSON.html">GeoJSON</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="Address.html">Address</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Language.html">Language</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="GeoJSON.html">GeoJSON</a></li>
       </ul>
     </nav>
 
