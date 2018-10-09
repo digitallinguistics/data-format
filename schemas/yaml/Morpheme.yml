@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Morpheme-2.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Morpheme-3.0.0.json'
 title:   'Morpheme Token'
 type:    object
 

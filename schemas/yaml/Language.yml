@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-id:      'http://cdn.digitallinguistics.io/schemas/Language-7.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.0.0.json'
 title:   Language
 type:    object
 
