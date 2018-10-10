@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Orthography-3.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Orthography-3.0.1.json",
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
@@ -44,8 +44,8 @@
       "title": "Graphemes",
       "type": "array",
       "uniqueItems": true,
+      "minItems": 1,
       "description": "A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the `punctuation` attribute instead).",
-      "default": [],
       "items": {
         "title": "Grapheme",
         "type": "object",
@@ -68,6 +68,7 @@
           "form": {
             "title": "Grapheme Form",
             "type": "string",
+            "minLength": 1,
             "description": "The written form of this grapheme. Graphemes should include their diacritics. For example, `c` and `č` should be considered separate graphemes, unless they are allographs. Do not include graphemes for characters that only occur as part of a digraph (or trigraph, etc.). For example, standard Swahili orthography has a grapheme `ch`, but no grapheme `c` by itself, so `c` would not be listed as a grapheme, only `ch`."
           },
           "name": {
@@ -98,8 +99,7 @@
     "name": {
       "title": "Orthography Name",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
-      "description": "The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`)",
-      "default": {}
+      "description": "The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`). The name of the orthography must be provided in at least one language."
     },
     "notes": {
       "title": "Notes",
@@ -111,8 +111,7 @@
         "type": "object",
         "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
         "description": "A note about this orthography"
-      },
-      "default": []
+      }
     },
     "punctuation": {
       "title": "Punctuation",
@@ -123,15 +122,13 @@
         "title": "Punctuation Character",
         "type": "string",
         "minLength": 1
-      },
-      "default": []
+      }
     },
     "tags": {
       "title": "Tags",
       "type": "object",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
-      "description": "A set of tags for this orthography",
-      "default": {}
+      "description": "A set of tags for this orthography"
     },
     "url": {
       "title": "URL",

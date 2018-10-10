@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.0.1.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -128,8 +128,9 @@
     "transcription": {
       "title": "Transcription",
       "type": "object",
+      "minProperties": 1,
       "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
-      "description": "A transcription of this word token, optionally in multiple orthographies"
+      "description": "A transcription of this word token, optionally in multiple orthographies. A transcription must be provided in at least one orthography."
     },
     "translation": {
       "title": "Translation",

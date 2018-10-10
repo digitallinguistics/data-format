@@ -54,8 +54,8 @@
       <div class='required object prop'>
         <h2>Required Properties</h2>
         <ul>
-            <li><code>utterances</code></li>
             <li><code>title</code></li>
+            <li><code>utterances</code></li>
         </ul>
       </div>
 
@@ -1288,88 +1288,6 @@
   <details open>
 
     <summary>
-      <h1 class='title meta any prop'>Utterance: <code>"utterances"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of all the Utterances contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Utterances. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Utterances in the collection must reflect their actual order in the Text. Utterances do <em>not</em> have to be JSON unique - an Utterance may be repeated in a text.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Utterance</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An Utterance object</p>
-          </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Utterance.html">Utterance</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-
-      </div>
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
       <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
     </summary>
 
@@ -1399,7 +1317,7 @@
 
       <div class='description meta any prop'>
         <h2>Description</h2>
-        <p><p>A title is a human-readable prose description of the content of the Text. The <code>title</code> object contains all the titles of the text, in one or more languages. Each attribute in the <code>title</code> object should be the abbreviation of a language, and its value should be the title of the text in that language.</p>
+        <p><p>A title is a human-readable prose description of the content of the Text. The <code>title</code> object contains all the titles of the text, in one or more languages (at least one must be provided). Each attribute in the <code>title</code> object should be the abbreviation of a language, and its value should be the title of the text in that language.</p>
 </p>
       </div>
 
@@ -1465,6 +1383,89 @@
 
 </section>
 </li>
+            <li>
+<section class=schema>
+
+  <details open>
+
+    <summary>
+      <h1 class='title meta any prop'>Utterance: <code>"utterances"</code></h1>
+    </summary>
+
+
+
+
+
+      <div class='description meta any prop'>
+        <h2>Description</h2>
+        <p><p>A collection of all the Utterances contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Utterances. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Utterances in the collection must reflect their actual order in the Text. Utterances do <em>not</em> have to be JSON unique - an Utterance may be repeated in a text. However, utterances are conceptually unique: each utterance represents a different token of speech.</p>
+</p>
+      </div>
+
+      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <p class='min-items array prop'><strong>Min items:</strong> <code>1</code></p>
+
+
+
+      <div class='items array prop'>
+
+        <h2>Items</h2>
+
+          
+          <section class=schema>
+          
+            <details open>
+          
+              <summary>
+                <h1 class='title meta any prop'>Utterance</h1>
+              </summary>
+          
+          
+                <div class='description meta any prop'>
+                  <h2>Description</h2>
+                  <p><p>An Utterance object</p>
+          </p>
+                </div>
+          
+              <p class='$ref any prop'>Must be an instance of the <a href="Utterance.html">Utterance</a> schema.</p>
+          
+          
+            </details>
+          
+          </section>
+
+      </div>
+
+
+
+
+  </details>
+
+</section>
+</li>
         </ul>
       </div>
 
@@ -1485,7 +1486,7 @@
       <h1><a href=../index.html>Home</a></h1>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Language.html">Language</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
+        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Language.html">Language</a></li><li><a href="Location.html">Location</a></li><li><a href="Media.html">Media File</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Person.html">Person</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Text.html">Text</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Lexeme.html">Lexeme</a></li>
       </ul>
     </nav>
 

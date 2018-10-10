@@ -17,7 +17,9 @@ const data = {
     },
   ],
   startTime:     1.000,
-  transcription: {},
+  transcription: {
+    APA: `ʔasi`,
+  },
 };
 
 describe(`Word`, () => {

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Access-3.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Access-3.0.1.json'
 title:   'Access Rights'
 type:    object
 
@@ -24,6 +24,7 @@ properties:
       - 'password'
       - 'time limit'
       - 'depositor control'
+    default: 'depository control'
 
   ELAR:
     title: 'ELAR Access Level'
@@ -34,3 +35,4 @@ properties:
       - 'Researcher'
       - 'Community Member'
       - 'Subscriber'
+    default: 'Researcher'

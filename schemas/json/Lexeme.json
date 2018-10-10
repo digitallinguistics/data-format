@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Lexeme-7.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Lexeme-7.0.1.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
@@ -71,7 +71,7 @@
       "title": "Citation Form",
       "type": "object",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
-      "description": "The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in English the citation form of a verb is typically the infinitive, e.g. `to run`, even though `run` is typically used as its lemma form. The citation form usually serves as the headword in a dictionary as well. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field."
+      "description": "The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in Swahili the citation form of a verb is typically the infinitive, e.g. *kuandika* `to write`, even though `‑andika` is typically used as its lemma form. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field."
     },
     "components": {
       "title": "Components",
@@ -160,7 +160,7 @@
       "title": "Lemma",
       "type": "object",
       "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
-      "description": "A *lemma* is the particular form conventionally used to represent a particular Lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be`, with its variants `am`, `are`, `is`, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs)."
+      "description": "A *lemma* is the particular form conventionally used to represent a particular Lexeme. It may differ drastically from the citation form or headword form. For example, the form `be` is typically used as the lemma form of the English verb `to be`, with its variants `am`, `are`, `is`, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs). The lemma must be provided in at least one language."
     },
     "lexicalRelations": {
       "title": "Lexical Relations",
@@ -334,6 +334,7 @@
       "title": "Senses",
       "type": "array",
       "uniqueItems": true,
+      "minItems": 1,
       "description": "A collection of senses for this Lexeme",
       "items": {
         "title": "Sense",
@@ -379,7 +380,7 @@
           "gloss": {
             "title": "Gloss",
             "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
-            "description": "A Leipzig-style gloss for this sense"
+            "description": "A Leipzig-style gloss for this sense. A gloss must be provided in at least one language."
           },
           "inflectionClass": {
             "title": "Inflectional Class",
@@ -528,9 +529,5 @@
         }
       }
     }
-  },
-  "default": {
-    "lemma": {},
-    "senses": []
   }
 }

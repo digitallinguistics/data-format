@@ -25,7 +25,9 @@ const data = {
   url:        `https://api.digitallinguistics.io/languages/Chitimacha/texts/A1.json`,
   utterances: [
     {
-      transcription: {},
+      transcription: {
+        Mod: `waxdungu qasi`,
+      },
       translation:   {},
       words:         [],
     },

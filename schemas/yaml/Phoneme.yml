@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Phoneme-4.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Phoneme-4.0.1.json'
 title:   Phoneme
 type:    object
 
@@ -28,6 +28,7 @@ properties:
       - implosive
       - ingressive
       - pulmonic
+    default: pulmonic
 
   allophones:
     title:       Allophones

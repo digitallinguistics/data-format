@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Text-5.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Text-5.0.1.json",
   "title": "Text",
   "type": "object",
   "description": "A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of utterances with one or more transcriptions, translations, and optionally Leipzig-style glosses.",
   "required": [
-    "utterances",
-    "title"
+    "title",
+    "utterances"
   ],
   "additionalProperties": true,
   "properties": {
@@ -151,17 +151,6 @@
         "description": "A bibliographic reference about this text"
       }
     },
-    "utterances": {
-      "title": "Utterance",
-      "type": "array",
-      "description": "A collection of all the Utterances contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Utterances. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Utterances in the collection must reflect their actual order in the Text. Utterances do *not* have to be JSON unique - an Utterance may be repeated in a text.",
-      "items": {
-        "title": "Utterance",
-        "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
-        "description": "An Utterance object"
-      }
-    },
     "tags": {
       "title": "Tags",
       "type": "object",
@@ -171,13 +160,25 @@
     "title": {
       "title": "Title",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
-      "description": "A title is a human-readable prose description of the content of the Text. The `title` object contains all the titles of the text, in one or more languages. Each attribute in the `title` object should be the abbreviation of a language, and its value should be the title of the text in that language."
+      "description": "A title is a human-readable prose description of the content of the Text. The `title` object contains all the titles of the text, in one or more languages (at least one must be provided). Each attribute in the `title` object should be the abbreviation of a language, and its value should be the title of the text in that language."
     },
     "url": {
       "title": "URL",
       "type": "string",
       "format": "uri",
       "description": "The URL where this data can be retrieved in JSON format"
+    },
+    "utterances": {
+      "title": "Utterance",
+      "type": "array",
+      "minItems": 1,
+      "description": "A collection of all the Utterances contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Utterances. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Utterances in the collection must reflect their actual order in the Text. Utterances do *not* have to be JSON unique - an Utterance may be repeated in a text. However, utterances are conceptually unique: each utterance represents a different token of speech.",
+      "items": {
+        "title": "Utterance",
+        "type": "object",
+        "$ref": "http://cdn.digitallinguistics.io/schemas/Utterance.json",
+        "description": "An Utterance object"
+      }
     }
   }
 }
