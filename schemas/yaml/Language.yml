@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.0.1.json'
 title:   Language
 type:    object
 
@@ -127,7 +127,7 @@ properties:
   name:
     title: 'Language Name'
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-    description: 'The name of this Language, optionally in multiple languages. Use the `additionalNames` field to list other names for this Language.'
+    description: 'The name of this Language, optionally in multiple languages. There must be a name provided in at least one language. Use the `additionalNames` field to list names for this language that need additional explanation or notes, or if there are multiple names for this variety in a language.'
 
   notes:
     title:       Notes

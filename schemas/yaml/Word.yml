@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-$id:     'http://cdn.digitallinguistics.io/schemas/Word-4.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Word-4.0.1.json'
 title:   Word
 type:    object
 
@@ -134,7 +134,7 @@ properties:
     title: Transcription
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
-    description: 'A transcription of this word token, optionally in multiple orthographies'
+    description: 'A transcription of this word token, optionally in multiple orthographies. A transcription must be provided in at least one orthography.'
 
   translation:
     title: Translation

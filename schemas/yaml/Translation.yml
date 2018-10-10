@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Translation-2.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Translation-2.0.1.json'
 title:   Translation
 type:    object
 
@@ -22,3 +22,4 @@ properties:
     enum:
       - free
       - literal
+    default: free
