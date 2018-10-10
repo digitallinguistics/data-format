@@ -128,6 +128,7 @@
     "transcription": {
       "title": "Transcription",
       "type": "object",
+      "minProperties": 1,
       "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
       "description": "A transcription of this word token, optionally in multiple orthographies. A transcription must be provided in at least one orthography."
     },

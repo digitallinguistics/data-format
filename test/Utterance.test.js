@@ -7,7 +7,9 @@ let validate;
 
 // VALID SAMPLE DATA
 const data = {
-  transcription: {},
+  transcription: {
+    Mod: `waxdungu qasi`,
+  },
   translation:   {
     eng: `One day a man,`,
   },
