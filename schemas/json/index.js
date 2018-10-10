@@ -6,7 +6,6 @@ module.exports = {
   BibliographicReference: require('./BibliographicReference'),
   Bundle: require('./Bundle'),
   DatabaseReference: require('./DatabaseReference'),
-  GeoJSON: require('./GeoJSON'),
   Language: require('./Language'),
   Lexeme: require('./Lexeme'),
   Location: require('./Location'),

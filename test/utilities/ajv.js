@@ -65,8 +65,8 @@ async function loadSchemas() {
   }
 
   // Load GeoJSON schema
-  // const GeoJSONSchema = await getGeoJSONSchema();
-  // ajv.addSchema(GeoJSONSchema, `GeoJSON`);
+  const GeoJSONSchema = await getGeoJSONSchema();
+  ajv.addSchema(GeoJSONSchema, `GeoJSON`);
 
   schemasLoaded = true;
   return ajv;
