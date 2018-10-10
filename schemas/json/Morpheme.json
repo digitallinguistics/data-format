@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Morpheme-3.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Morpheme-3.0.1.json",
   "title": "Morpheme Token",
   "type": "object",
   "description": "A *morpheme token* is a particular instance of a morpheme in a text. In DLx, the primary function of the Morpheme object is to provide a concise, short description of each token of a morpheme in a corpus - its form, its gloss, and a reference to a lexeme where more information can be found.",
@@ -19,7 +19,7 @@
     "gloss": {
       "title": "Gloss",
       "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
-      "description": "A gloss for this morpheme, optionally in multiple languages"
+      "description": "A gloss for this morpheme, optionally in multiple languages. The gloss must be provided in at least one language."
     },
     "lexeme": {
       "title": "Lexeme (Database Reference)",
@@ -48,12 +48,9 @@
     "transcription": {
       "title": "Transcription",
       "type": "object",
+      "minProperties": 1,
       "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
       "description": "A transcription of this morpheme token. Should be a transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs."
     }
-  },
-  "default": {
-    "form": {},
-    "gloss": {}
   }
 }

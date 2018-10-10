@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Translation-2.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Translation-2.0.1.json",
   "title": "Translation",
   "type": "object",
   "description": "A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for an orthography (see the [Abbreviation](https://digitallinguistics.github.io/spec/schemas/Abbreviation.html) schema), and the value for that key is the translation of the data in that particular language and orthography. **Note:** The Translation does not have a `type` property (though it does have a `translationType` property).",
@@ -20,7 +20,8 @@
       "enum": [
         "free",
         "literal"
-      ]
+      ],
+      "default": "free"
     }
   }
 }
