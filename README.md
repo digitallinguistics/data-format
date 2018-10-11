@@ -159,6 +159,10 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * The schemas support both [internet date and date-time formats][12], but date-time format is strongly recommended.
 
+* **Documents**
+
+    * The DLx format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
+
 ## Tests
 
 Tests are run using [Jasmine][10] in Node.js. Run them from the command line using `npm test`.
