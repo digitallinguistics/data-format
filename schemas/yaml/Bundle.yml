@@ -1,9 +1,10 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Bundle-3.0.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Bundle-3.0.2.json'
 title:   Bundle
 type:    object
 
 description: 'A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.'
+$comment: 'This is a top-level database object'
 
 required:
   - name
