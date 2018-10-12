@@ -10,6 +10,9 @@ const data = {
   dateCreated:      `2018-10-05T15:25:46.045Z`,
   dateModified:     `2018-10-05T15:26:23.070Z`,
   id:               `46d3ad45-d1b8-4656-b496-dcb39203c5a9`,
+  language:         {
+    abbreviation: `ctm`,
+  },
   lemma:            {},
   lexicalRelations: [
     {
