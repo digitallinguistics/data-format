@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Address-2.0.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Address-2.1.0.json",
   "title": "Address",
   "type": "object",
   "description": "A postal Address",
@@ -10,7 +10,8 @@
       "title": "Type",
       "type": "string",
       "const": "Address",
-      "description": "The type of object (must be set to `Address`)"
+      "readOnly": true,
+      "description": "The type of object. Must be set to `Address`."
     },
     "streetAddress": {
       "title": "Street Address",

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.0.1.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.1.0.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -13,6 +13,7 @@
       "title": "Type",
       "type": "string",
       "const": "Word",
+      "readOnly": true,
       "description": "The type of object. Must be set to `Word`."
     },
     "endTime": {
