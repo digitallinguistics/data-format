@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Person-4.0.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Person-4.1.0.json'
 title:   Person
 type:    object
 
@@ -15,10 +15,11 @@ additionalProperties: true
 properties:
 
   type:
-    title: Type
-    type:  string
-    const: Person
-    description: 'The type of object (must be set to `Person`)'
+    title:    Type
+    type:     string
+    const:    Person
+    readOnly: true
+    description: 'The type of object. Must be set to `Person`.'
 
   id:
     title: ID

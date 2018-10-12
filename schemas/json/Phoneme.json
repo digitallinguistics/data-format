@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Phoneme-4.0.1.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Phoneme-4.1.0.json",
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones.",
@@ -13,7 +13,8 @@
       "title": "Type",
       "type": "string",
       "const": "Phoneme",
-      "description": "The type of object (must be set to `Phoneme`)"
+      "readOnly": true,
+      "description": "The type of object. Must be set to `Phoneme`."
     },
     "airstream": {
       "title": "Airstream Mechanism",
