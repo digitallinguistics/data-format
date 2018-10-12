@@ -123,6 +123,10 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * This specification describes how data should be _stored_, i.e. in a database or JSON file. It does **not** recommend how that data should be formatted when it is being managed or manipulated. Required properties could be missing during data entry, or data could be represented using an Object instead of an Array while the data is being manipulated. It is only when you _store_ that data in a file or database that it must be in valid DLx format.
 
+* **Documents**
+
+    * The DLx format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
+
 * **Uniqueness**
 
     * "unique" in this specification means _JSON unique_. An object is considered JSON unique if you can sort all of its properties (and subproperties) and serialize it as a JSON string with the result that that string is unique. If you sort the (sub)properties of two different objects and serialize them, and their strings are equal, they are not JSON unique.
@@ -158,10 +162,6 @@ The following is a list of principles and best practices to keep in mind when wo
 * **Dates**
 
     * The schemas support both [internet date and date-time formats][12], but date-time format is strongly recommended.
-
-* **Documents**
-
-    * The DLx format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
 
 ## Tests
 
