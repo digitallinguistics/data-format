@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Morpheme-3.0.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Morpheme-3.1.0.json'
 title:   'Morpheme Token'
 type:    object
 
@@ -14,10 +14,11 @@ additionalProperties: true
 properties:
 
   type:
-    title: Type
-    type:  string
-    const: Morpheme
-    description: 'The type of object (must be set to `Morpheme`)'
+    title:    Type
+    type:     string
+    const:    Morpheme
+    readOnly: true
+    description: 'The type of object. Must be set to `Morpheme`.'
 
   gloss:
     title: Gloss

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Utterance-4.0.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Utterance-4.1.0.json'
 title:   Utterance
 type:    object
 
@@ -20,10 +20,11 @@ additionalProperties: true
 properties:
 
   type:
-    title: Type
-    type:  string
-    const: Utterance
-    description: 'The type of object (must be set to `Utterance`)'
+    title:    Type
+    type:     string
+    const:    Utterance
+    readOnly: true
+    description: 'The type of object. Must be set to `Utterance`.'
 
   key:
     title:   Key

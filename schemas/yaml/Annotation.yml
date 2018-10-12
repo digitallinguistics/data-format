@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.1.0.json'
 title:   Annotation
 type:    object
 
@@ -11,6 +11,13 @@ required:
 additionalProperties: true
 
 properties:
+
+  type:
+    title:    Type
+    type:     string
+    const:    Annotation
+    readOnly: true
+    description: 'The type of object. Must be set to `Annotation`.'
 
   annotationType:
     title: 'Annotation Type'
