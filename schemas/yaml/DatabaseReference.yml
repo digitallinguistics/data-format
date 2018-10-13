@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.1.1.json'
 title:   'Database Reference'
 type:    object
 
@@ -56,3 +56,18 @@ properties:
     type:   string
     format: uri
     description: 'The URL of the referenced database item'
+
+examples:
+
+  - id:            73384c91-6c15-42a4-81e3-9c7d03343bad
+    index:         2
+    referenceType: Utterance
+    type:          DatabaseReference
+    url:           https://api.digitallinguistics.io/languages/Chitimacha/texts/A1/utterances/2
+
+  - id:            6c4268c0-5249-408d-92ba-9daff1cab616
+    key:           Omoiseke
+    name:          Ómoíséké ósokérété chíséese
+    referenceType: Text
+    type:          DatabaseReference
+    url:           https://api.digitallinguistics.io/languages/Gusii/texts/Omoiseke
