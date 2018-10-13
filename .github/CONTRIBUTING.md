@@ -192,7 +192,7 @@ This project uses the following branching model:
 
 [1]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CONTRIBUTING.md
 [2]: https://github.com/digitallinguistics/digitallinguistics.github.io/blob/master/CODE_OF_CONDUCT.md
-[3]: https://digitallinguistics.github.io/spec/
+[3]: https://spec.digitallinguistics.io/
 [4]: https://nodejs.org/en/
 [5]: http://json-schema.org/
 [6]: http://semver.org/

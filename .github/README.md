@@ -169,17 +169,17 @@ Another great feature of JSON is that adding new properties to an Object doesn't
 ### Linguistic Schemas
 The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does *not* need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.
 
-* [Language](https://digitallinguistics.github.io/spec/schemas/Language.html)
-* [Orthography](https://digitallinguistics.github.io/spec/schemas/Orthography.html)
-* [Text](https://digitallinguistics.github.io/spec/schemas/Text.html)
-* [Utterance](https://digitallinguistics.github.io/spec/schemas/Utterance.html)
-* [Word Token](https://digitallinguistics.github.io/spec/schemas/Word.html)
-* [Morpheme Token](https://digitallinguistics.github.io/spec/schemas/Morpheme.html)
-* [Lexeme](https://digitallinguistics.github.io/spec/schemas/Lexeme.html)
-* [Phoneme](https://digitallinguistics.github.io/spec/schemas/Phoneme.html)
-* [Transcription](https://digitallinguistics.github.io/spec/schemas/Transcription.html)
-* [Translation](https://digitallinguistics.github.io/spec/schemas/Translation.html)
-* [Annotation](https://digitallinguistics.github.io/spec/schemas/Annotation.html)
+* [Language](https://spec.digitallinguistics.io/schemas/Language.html)
+* [Orthography](https://spec.digitallinguistics.io/schemas/Orthography.html)
+* [Text](https://spec.digitallinguistics.io/schemas/Text.html)
+* [Utterance](https://spec.digitallinguistics.io/schemas/Utterance.html)
+* [Word Token](https://spec.digitallinguistics.io/schemas/Word.html)
+* [Morpheme Token](https://spec.digitallinguistics.io/schemas/Morpheme.html)
+* [Lexeme](https://spec.digitallinguistics.io/schemas/Lexeme.html)
+* [Phoneme](https://spec.digitallinguistics.io/schemas/Phoneme.html)
+* [Transcription](https://spec.digitallinguistics.io/schemas/Transcription.html)
+* [Translation](https://spec.digitallinguistics.io/schemas/Translation.html)
+* [Annotation](https://spec.digitallinguistics.io/schemas/Annotation.html)
 
 ### Non-Linguistic Schemas
 Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):
@@ -212,23 +212,23 @@ Check out the [Contributing Guidelines][18] for this project, and the [Developer
 
 This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 
-[1]:  https://digitallinguistics.github.io/spec/schemas/Abbreviation.html
-[2]:  https://digitallinguistics.github.io/spec/schemas/Access.html
-[3]:  https://digitallinguistics.github.io/spec/schemas/Bundle.html
+[1]:  https://spec.digitallinguistics.io/schemas/Abbreviation.html
+[2]:  https://spec.digitallinguistics.io/schemas/Access.html
+[3]:  https://spec.digitallinguistics.io/schemas/Bundle.html
 [4]:  https://en.wikipedia.org/wiki/Interlinear_gloss
-[5]:  https://digitallinguistics.github.io/spec/schemas/Media.html
-[6]:  https://digitallinguistics.github.io/spec/schemas/Note.html
-[7]:  https://digitallinguistics.github.io/spec/schemas/Person.html
-[8]:  https://digitallinguistics.github.io/spec/schemas/Address.html
-[9]:  https://digitallinguistics.github.io/spec/schemas/Tags.html
+[5]:  https://spec.digitallinguistics.io/schemas/Media.html
+[6]:  https://spec.digitallinguistics.io/schemas/Note.html
+[7]:  https://spec.digitallinguistics.io/schemas/Person.html
+[8]:  https://spec.digitallinguistics.io/schemas/Address.html
+[9]:  https://spec.digitallinguistics.io/schemas/Tags.html
 [10]: https://github.com/digitallinguistics/spec#readme
 
 
-[13]: https://digitallinguistics.github.io/spec/schemas/DatabaseReference.html
-[14]: https://digitallinguistics.github.io/spec/schemas/MultiLangString.html
-[15]: https://digitallinguistics.github.io/spec/schemas/BibliographicReference.html
+[13]: https://spec.digitallinguistics.io/schemas/DatabaseReference.html
+[14]: https://spec.digitallinguistics.io/schemas/MultiLangString.html
+[15]: https://spec.digitallinguistics.io/schemas/BibliographicReference.html
 
-[17]: https://digitallinguistics.github.io/spec/schemas/Location.html
+[17]: https://spec.digitallinguistics.io/schemas/Location.html
 [18]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [19]: https://github.com/dwhieb/
 [20]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
