@@ -159,6 +159,8 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * Schemas sometimes have different uses or interpretations depending on the context in which they appear. For example, when an Utterance appears in the `"utterances"` property of a Lexeme, it is an example utterance. When it appears in the `"utterances"` property of a Text, it is a transcribed utterance from that Text. When a schema appears within another schema, its `"description"` field will tell you how it should be used in that context.
 
+    * Most schemas have an optional `type` field. This field is not required because it may conflict with database implementations which already make use of a `type` keyword for other purposes. The `type` field or some other similar field is however strongly recommended. If using the `type` field conflicts with your database model, `dlxType` is recommended instead.
+
 * **Dates**
 
     * The schemas support both [internet date and date-time formats][12], but date-time format is strongly recommended.

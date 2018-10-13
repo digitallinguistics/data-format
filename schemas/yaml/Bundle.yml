@@ -129,3 +129,61 @@ properties:
     type:   string
     format: uri
     description: 'The URL where this bundle may be accessed'
+
+examples:
+
+  - abbreviation: Day1
+    access:
+      ELAR:       depositor
+    dateCreated:  2018-10-13T15:48:11.496Z
+    dateModified: 2018-10-13T15:54:23.382Z
+    id:           aea46597-be32-48bb-9cb5-862c4f0a2081
+    link:         https://data.digitallinguistics.io/bundles/Day1
+    locations:
+      - key:      Kisii
+      - key:      KennedyFarm
+    media:
+      - key:      Helen1
+      - key:      Helen2
+    name:         Gusii Recording Day 1
+    notes:
+      - text:     "Texts recorded during the first day of recording in Kisii Town and Kennedy's farm."
+    people:
+      - key:      HM
+        name:     Helen Makana
+    tags:
+      analyze:    true
+    texts:
+      - key:      Omoiseke
+        name:     Ómoíséké ósokérété chíséese
+      - key:      Okando
+        name:     "Ókandó n'Ókanyang'aú"
+    type:         Bundle
+    url:          https://api.digitallinguistics.io/bundles/Day1
+
+  - abbreviation: Lexicon1
+    access:
+      AILLA:      public access
+    dateCreated:  2018-10-13T15:54:12.484Z
+    dateModified: 2018-10-13T15:54:48.916Z
+    id:           cd79381a-6a44-4c9a-a8c1-d33186c6d839
+    link:         https://data.digitallinguistics.io/bundles/Lexicon1
+    locations:
+      - key:      Charenton
+    media:
+      - key:      qasi1
+      - key:      qasi2
+      - key:      kici
+    name:
+      eng:        Lexicon Recording Day 1
+    notes:
+      - text:     First day of recording for the dictionary project.
+    people:
+      - key:      JMS
+        name:     John M. Smith
+      - key:      CB
+        name:     Chris Baker
+    tags:
+      lexicon:    true
+    type:         Bundle
+    url:          https://api.digitallinguistics.io/bundles/Lexicon1
