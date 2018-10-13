@@ -17,7 +17,7 @@ const chalk         = require(`chalk`);
 const path          = require(`path`);
 const { promisify } = require(`util`);
 const semverRegExp  = require(`semver-regex`)();
-const storage       = require(`azure-storage`).createBlobService();
+const storage       = require(`azure-storage`).createBlobService(process.env.AZURE_STORAGE_ACCOUNT, process.env.AZURE_STORAGE_ACCESS_KEY);
 const yamljs        = require(`yamljs`);
 
 const {
