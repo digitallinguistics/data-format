@@ -98,8 +98,6 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
     - The schemas use the [JSON Schema format][5] to describe how data should be structured. See the [latest version of the JSON Schema][11] for more details.
 
-    - Use the file `schemas/template.yml` as a guideline / model for other schemas.
-
     - Update the `"description"` field of any schemas that you change, as needed.
 
     - Increment the version number of any schemas that you update, following [semantic versioning][6].
