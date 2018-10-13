@@ -3,7 +3,7 @@
   "$id": "http://cdn.digitallinguistics.io/schemas/Transcription-2.0.0.json",
   "title": "Transcription",
   "type": "object",
-  "description": "A transcription of a piece of data in a language, optionally in multiple orthographies. For example, a transcription might be written in both a practical orthography and IPA. Each key must be the abbreviation for an orthography (see the [Abbreviation](https://digitallinguistics.github.io/spec/schemas/Abbreviation.html) schema), and the value for that key is the transcription of the data in that particular orthography. **Note:** The Transcription does not have a `type` property.",
+  "description": "A transcription of a piece of data in a language, optionally in multiple orthographies. For example, a transcription might be written in both a practical orthography and IPA. Each key must be the abbreviation for an orthography (see the [Abbreviation](https://spec.digitallinguistics.github.io/schemas/Abbreviation.html) schema), and the value for that key is the transcription of the data in that particular orthography. **Note:** The Transcription does not have a `type` property.",
   "additionalProperties": false,
   "patternProperties": {
     "^[(a-z)|(A-Z)|(0-9)]+$": {

@@ -18,9 +18,9 @@
 <p>This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil). This specification is a recommendation for how to store linguistic data in a way that is standardized, human-readable and web-compatible, using a popular data storage format on the web known as <a href="http://json.org/">JSON</a>.</p>
 <p>Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.</p>
 <p>This format also facilitates adherence to the <a href="http://site.uit.no/linguisticsdatacitation/">Austin Principles for Data Citation in Linguistics</a> by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.</p>
-<p>Please consider citing this specification in scholarly articles using this repository's <a href="https://digitallinguistics.github.io/spec/schemas/Note.html">Zenodo</a> DOI:</p>
+<p>Please consider citing this specification in scholarly articles using this repository's <a href="https://spec.digitallinguistics.io/schemas/Note.html">Zenodo</a> DOI:</p>
 <blockquote>
-<p>Hieber, Daniel W. 2018. <em>Data Format for Digital Linguistics</em>. DOI:<a href="https://digitallinguistics.github.io/spec/schemas/Media.html">10.5281/zenodo.1438589</a></p>
+<p>Hieber, Daniel W. 2018. <em>Data Format for Digital Linguistics</em>. DOI:<a href="https://spec.digitallinguistics.io/schemas/Media.html">10.5281/zenodo.1438589</a></p>
 </blockquote>
 <p><a href="https://www.npmjs.com/package/@digitallinguistics/spec"><img src="https://img.shields.io/npm/dt/@digitallinguistics/spec.svg" alt="npm downloads"></a>
 <a href="https://zenodo.org/badge/latestdoi/50221632"><img src="https://zenodo.org/badge/50221632.svg" alt="DOI"></a>
@@ -175,17 +175,17 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <h3>Linguistic Schemas</h3>
 <p>The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does <em>not</em> need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.</p>
 <ul>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Language.html">Language</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Orthography.html">Orthography</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Text.html">Text</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Utterance.html">Utterance</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Word.html">Word Token</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Morpheme.html">Morpheme Token</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Lexeme.html">Lexeme</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Phoneme.html">Phoneme</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Transcription.html">Transcription</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Translation.html">Translation</a></li>
-<li><a href="https://digitallinguistics.github.io/spec/schemas/Annotation.html">Annotation</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Language.html">Language</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Orthography.html">Orthography</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Text.html">Text</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Utterance.html">Utterance</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Word.html">Word Token</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Morpheme.html">Morpheme Token</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Lexeme.html">Lexeme</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Phoneme.html">Phoneme</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Transcription.html">Transcription</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Translation.html">Translation</a></li>
+<li><a href="https://spec.digitallinguistics.io/schemas/Annotation.html">Annotation</a></li>
 </ul>
 <h3>Non-Linguistic Schemas</h3>
 <p>Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):</p>
@@ -198,51 +198,51 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 </thead>
 <tbody>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Abbreviation.html"><code>Abbreviation</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Abbreviation.html"><code>Abbreviation</code></a></td>
 <td>A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Access.html"><code>Access</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Access.html"><code>Access</code></a></td>
 <td>Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA, or using a custom schema.</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Address.html"><code>Address</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Address.html"><code>Address</code></a></td>
 <td>A postal address</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/BibliographicReference.html"><code>Bibliographic Reference</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/BibliographicReference.html"><code>Bibliographic Reference</code></a></td>
 <td>A bibliographic reference</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Bundle.html"><code>Bundle</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Bundle.html"><code>Bundle</code></a></td>
 <td>A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/DatabaseReference.html"><code>DatabaseReference</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/DatabaseReference.html"><code>DatabaseReference</code></a></td>
 <td>An Object that contains a reference to another item in the database</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Location.html"><code>Location</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Location.html"><code>Location</code></a></td>
 <td>A location with optional geographic coordinates</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Media.html"><code>Media File</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Media.html"><code>Media File</code></a></td>
 <td>Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/MultiLangString.html"><code>MultiLangString</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/MultiLangString.html"><code>MultiLangString</code></a></td>
 <td>An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Note.html"><code>Note</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Note.html"><code>Note</code></a></td>
 <td>Most DLx resources allow you to add notes in different languages, of different types</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Person.html"><code>Person</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Person.html"><code>Person</code></a></td>
 <td>Information about a person, e.g. speaker, linguist, editor, translator, etc.</td>
 </tr>
 <tr>
-<td><a href="https://digitallinguistics.github.io/spec/schemas/Tags.html"><code>Tags</code></a></td>
+<td><a href="https://spec.digitallinguistics.io/schemas/Tags.html"><code>Tags</code></a></td>
 <td>A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora</td>
 </tr>
 </tbody>
@@ -259,7 +259,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
     <nav>
       <h1>Schemas</h1>
       <ul>
-        <li><a href="schemas/Annotation.html">Annotation</a></li><li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/BibliographicReference.html">Bibliographic Reference</a></li><li><a href="schemas/DatabaseReference.html">Database Reference</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/Morpheme.html">Morpheme Token</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/Translation.html">Translation</a></li><li><a href="schemas/Language.html">Language</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li><li><a href="schemas/Utterance.html">Utterance</a></li><li><a href="schemas/Word.html">Word</a></li>
+        <li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Annotation.html">Annotation</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/DatabaseReference.html">Database Reference</a></li><li><a href="schemas/BibliographicReference.html">Bibliographic Reference</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Morpheme.html">Morpheme Token</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/Translation.html">Translation</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Language.html">Language</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li><li><a href="schemas/Utterance.html">Utterance</a></li><li><a href="schemas/Word.html">Word</a></li>
       </ul>
     </nav>
 
