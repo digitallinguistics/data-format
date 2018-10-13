@@ -13,7 +13,7 @@ const data = {
   title:           `Category genesis in Chitimacha`,
   type:            `BibliographicReference`,
   url:             `https://api.digitallinguistics.io/references/Hieber2018.json`,
-  year:            2000,
+  year:            2018,
 };
 
 describe(`BibliographicReference`, () => {

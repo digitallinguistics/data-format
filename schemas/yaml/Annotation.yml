@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.1.1.json'
 title:   Annotation
 type:    object
 
@@ -55,7 +55,7 @@ allOf:
 
   - oneOf:
 
-    - title: 'Timespan Annotation'
+    - title: 'Timestamp Annotation'
       description: 'A timespan annotation is an annotation which spans a duration of time. This is particularly useful for annotating non-linguistic features of the text which are happening in the background.'
       required:
         - ts
@@ -67,7 +67,7 @@ allOf:
           minimum: 0
           description: 'The point in time that the annotation is about, formated in seconds and millseconds (SS.MMM)'
 
-    - title: 'Timestamp Annotation'
+    - title: 'Timespan Annotation'
       description: 'A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.'
       required:
         - startTime
@@ -85,3 +85,18 @@ allOf:
           type:    number
           minimum: 0.001
           description: 'The time that the annotation ends, formatted in seconds and milliseconds (SS.MMM)'
+
+examples:
+
+  - type:           Annotation
+    annotationType: timespan
+    startTime:      1.000
+    endTime:        2.000
+    tags:
+      creakyVoice: true
+
+  - type:           Annotation
+    annotationType: timestamp
+    ts:             1.234
+    notes:
+      text: 'Speaker points to listener here.'

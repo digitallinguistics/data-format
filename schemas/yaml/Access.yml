@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Access-3.0.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Access-3.0.2.json'
 title:   'Access Rights'
 type:    object
 
@@ -36,3 +36,14 @@ properties:
       - 'Community Member'
       - 'Subscriber'
     default: 'Researcher'
+
+examples:
+
+  - AILLA: 'password'
+    ELAR:  'Community Member'
+    notes:
+      eng: 'Speaker also requested that this text only be shared with family members.'
+    speaker: 'family'
+
+  - notes:
+      eng: 'The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members.'
