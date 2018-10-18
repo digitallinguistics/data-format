@@ -1,10 +1,9 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Orthography-3.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Orthography-3.1.1.json'
 title:   Orthography
 type:    object
 
 description: 'An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.'
-$comment: 'This is a top-level database object'
 
 required:
   - graphemes
@@ -68,7 +67,7 @@ properties:
           title:       Allographs
           type:        array
           uniqueItems: true
-          description: 'A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `T` in an English orthography would have the allograph `t`.'
+          description: 'A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `t` in an English orthography would have the allograph `T`. Generally the lowercase form of a letter should be used as the default.'
           items:
             title: Allograph
             type:  string
