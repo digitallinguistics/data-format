@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Location-3.2.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Location-3.2.1.json",
   "title": "Location",
   "type": "object",
   "description": "A location, optionally with accompanying geographic coordinate data",
@@ -118,5 +118,50 @@
       "format": "uri",
       "description": "The URL where information about this location can be retrieved"
     }
-  }
+  },
+  "examples": [
+    {
+      "abbreviation": "Charenton",
+      "access": {
+        "notes": {
+          "eng": "There are no restrictions on access to this location."
+        }
+      },
+      "dateCreated": "2018-10-30T01:54:19.901Z",
+      "dateModified": "2018-10-30T01:54:39.394Z",
+      "geoJSON": {
+        "type": "Point",
+        "coordinates": [
+          29.874408,
+          -91.547868
+        ]
+      },
+      "id": "ed15e19a-1ba0-437d-9adf-61f4cca1ff3a",
+      "name": "Charenton",
+      "notes": [
+        {
+          "text": "Built on the site of the Chitimacha village Kas Kec Namu.",
+          "language": "eng"
+        }
+      ],
+      "type": "Location",
+      "url": "https://api.digitallinguistics.io/locations/Charenton"
+    },
+    {
+      "abbreviation": "Kisii",
+      "dateCreated": "2018-10-30T01:54:19.901Z",
+      "dateModified": "2018-10-30T01:54:39.394Z",
+      "geoJSON": {
+        "type": "Point",
+        "coordinates": [
+          -0.67677,
+          34.77905
+        ]
+      },
+      "id": "226118c2-3e03-40cd-ab4a-d4e832140408",
+      "name": "Kisii",
+      "type": "Location",
+      "url": "https://api.digitallinguistics.io/locations/Kisii"
+    }
+  ]
 }

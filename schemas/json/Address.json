@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Address-2.1.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Address-2.1.1.json",
   "title": "Address",
   "type": "object",
   "description": "A postal Address",
@@ -48,5 +48,16 @@
       "type": "string",
       "description": "The postal code for this address (as a string rather than a number)"
     }
-  }
+  },
+  "examples": [
+    {
+      "locality": "Kisii Town",
+      "country": "Kenya"
+    },
+    {
+      "locality": "Charenton",
+      "region": "Louisiana",
+      "country": "United States"
+    }
+  ]
 }

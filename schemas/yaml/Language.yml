@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.1.1.json'
 title:   Language
 type:    object
 
@@ -68,7 +68,7 @@ properties:
     title: Autonym
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
-    description: 'The autonym for this language, optionally in multiple orthographies'
+    description: 'The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.'
 
   contributors:
     title:       Contributors
@@ -185,3 +185,232 @@ properties:
     type:   string
     format: uri
     description: 'A URL where the JSON data for this language can be found'
+
+examples:
+
+  - abbreviation: chiti
+    access:
+      AILLA: password
+      notes:
+        eng: Materials on this language should not be made available to non-tribal members without permission.
+    additionalNames:
+      - name: Shetimashas
+        note:
+          source: DWH
+          text:   This is the name commonly used for the language by French colonials.
+      - Chetimachas
+    autonym:
+      APA:  sitimaša
+      IPA:  sitimaʃa
+      Mod:  sitimaxa
+      Swad: sitimaša
+    contributors:
+      - abbreviation: DWH
+        roles:
+          - researcher
+      - abbreviation: BP
+        roles:
+          - speaker
+      - abbreviation: Swad
+        roles:
+          - researcher
+    dateCreated:  2018-10-13T18:16:57.497Z
+    dateModified: 2018-10-13T18:17:06.515Z
+    glottolog:    chit1248
+    id:           4d633ee3-25ba-4add-83cf-b588ba51f758
+    iso:          ctm
+    link:         https://data.digitallinguistics.io/languages/Chitimacha
+    locations:
+      - key:      Charenton
+    name:
+      eng:        Chitimacha
+      fra:        Chitimachas
+      spa:        chitimacha
+    notes:
+      - text:     The best documentary materials on this language are those compiled by Morris Swadesh in 1930–1934.
+    orthographies:
+
+      - abbreviation: Mod
+        graphemes:
+          - form: a
+            pronunciations:
+              - a
+          - form: aa
+            pronunciations:
+              - aː
+          - form: b
+            pronunciations:
+              - pˀ
+          - form: c
+            pronunciations:
+              - t͡ʃ
+          - form: d
+            pronunciations:
+              - tˀ
+          - form: dz
+            pronunciations:
+              - t͡sˀ
+          - form: e
+            pronunciations:
+              - e
+          - form: ee
+            pronunciations:
+              - eː
+          - form: g
+            pronunciations:
+              - kˀ
+          - form: h
+            pronunciations:
+              - h
+          - form: j
+            pronunciations:
+              - t͡ʃˀ
+          - form: k
+            pronunciations:
+              - k
+          - form: m
+            pronunciations:
+              - m
+          - form: mq
+            pronunciations:
+              - ˀm
+          - form: n
+            pronunciations:
+              - n
+          - form: nq
+            pronunciations:
+              - ˀn
+          - form: o
+            pronunciations:
+              - o
+          - form: oo
+            pronunciations:
+              - oː
+          - form: p
+            pronunciations:
+              - p
+          - form: q
+            pronunciations:
+              - ʔ
+          - form: s
+            pronunciations:
+              - s
+          - form: t
+            pronunciations:
+              - t
+          - form: ts
+            pronunciations:
+              - t͡s
+          - form: u
+            pronunciations:
+              - u
+          - form: uu
+            pronunciations:
+              - uː
+          - form: w
+            pronunciations:
+              - w
+          - form: x
+            pronunciations:
+              - ʃ
+          - form: y
+            pronunciations:
+              - j
+        link:         https://data.digitallinguistics.io/languages/Chitimacha/orthographies/Modern
+        name:         Modern
+        notes:
+          - text:     This is the official orthography used by the Chitimacha Tribe.
+        punctuation:
+          - .
+          - ?
+          - !
+
+      - abbreviation: APA
+        graphemes:
+        link:         https://data.digitallinguistics.io/languages/Chitimacha/orthographies/APA
+        name:         Americanist
+        punctuation:
+
+    phonemes:
+      - airstream: pulmonic
+        ipa:       t
+        manner:    plosive
+        place:     alveolar
+        voicing:   voiceless
+      - airstream: pulmonic
+        ipa:       t͡ʃ
+        manner:    affricate
+        place:     post-alveolar
+        voicing:   voiceless
+      - airstream: ejective
+        ipa:       t͡ʃˀ
+        manner:    affricate
+        place:     post-alveolar
+        voicing:   voiceless
+    type: Language
+
+  - abbreviation: gusii
+    access:
+      notes:
+        eng: Unless otherwise noted, materials for this language may be made publicly accessible, and the speakers in the content identified.
+    additionalNames:
+      - name: Kikisii
+        note:
+          source: DWH
+          text:   This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
+    autonym:
+      IPA: ékeɣusií
+      Gus: ékegusií
+      Swa: ekegusii
+    contributors:
+      - abbreviation: KB
+        roles:
+          - lexicographer
+          - speaker
+      - abbreviation: GM
+        roles:
+          - lexicographer
+          - reviewer
+          - speaker
+      - abbreviation: DWH
+        roles:
+          - researcher
+    dateCreated:  2018-10-13T18:17:24.477Z
+    dateModified: 2018-10-13T18:17:34.512Z
+    glottolog:    gusi1247
+    id:           708d1bd4-84f6-42e5-8b09-5c64493441b3
+    iso:          guz
+    link:         https://data.digitallinguistics.io/languages/Gusii
+    locations:
+      - key:      Kisii Town
+    name:
+      eng:        Gusii
+      spa:        gusii
+      swa:        Kisii
+    notes:
+      - text:     In older versions of your notes, you referred to this language as Kisii rather than Gusii.
+        type:     private
+    orthographies:
+
+      - abbreviation: Practical
+        direction:    ltr-ttb
+        graphemes:
+        link:         https://data.digitallinguistics.io/languages/Gusii/orthographies/Practical
+        punctuation:
+          - .
+          - ?
+          - !
+
+      - abbreviation: Swahili
+        direction:    ltr-ttb
+        graphemes:
+        link:         https://data.digitallinguistics.io/languages/Gusii/orthographies/Swahili
+        notes:
+          - text:     This orthography represents the way that the language is written when using the Swahili orthography. Tone is omitted from this orthography.
+        punctuation:
+          - .
+          - ?
+          - !
+
+    phonemes:
+    type:         Language

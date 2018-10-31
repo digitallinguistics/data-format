@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Text-5.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Text-5.1.1.json'
 title:   Text
 type:    object
 
@@ -51,12 +51,12 @@ properties:
   contributors:
     title: Contributors (People)
     type:  array
-    description: 'A collection of people who contributed to the creation or analysis of this text in some way. This includes the speakers who produced the text.'
+    description: 'A collection of people who contributed to the creation or analysis of this text in some way. This should miniimally include the speaker(s) who produced the text.'
     items:
-      title: Contributor (Person - Database Reference)
+      title: Contributor (Person - DatabaseReference)
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
-      description: 'A database reference to a Person object that describes this contributor'
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: 'A database reference to a Person object that describes this contributor.'
 
   dateCreated:
     title: 'Date Created'
@@ -163,3 +163,44 @@ properties:
       type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Utterance.json'
       description: 'An Utterance object'
+
+examples:
+
+  - abbreviation: A1
+    access:
+      notes:      This text may be disseminated publicly, provided proper attribution is given to Chief Benjamin Paul and the Chitimacha Tribe.
+    annotations:
+    contributors:
+      - familyName: Paul
+        givenName:  Benjamin
+        roles:
+          - speaker
+      - familyName: Swadesh
+        givenName:  Morris
+        roles:
+          - researcher
+    dateCreated:    2018-10-05T15:26:23.070Z`,
+    dateModified:   2018-10-05T15:26:23.070Z`,
+    discourseType:  monologue
+    genre:          folktale
+    id:             5790c2b7-579c-4bb5-aa5e-537ae1ac06ca
+    link:           https://explorer.digitallinguistics.io/languages/Chitimacha/texts/A1
+    location:
+      abbreviation: Charenton
+      address:
+        locality:   Charenton
+        region:     Louisiana
+        country:    United States
+      name:         Charenton
+    title:
+      eng:          How the Indian came (first telling)
+      ctm:          Qaxt Panx Pinikankx qap cuyi (1)
+    type:           Text
+    utterances:
+      - transcription:
+          Mod: waxdungu qasi
+        translation: One day a man,
+        transcript:
+          Mod: Waxdungu qasi,
+        words:
+    url:            https://data.digitallinguistics.io/languages/Chitimacha/texts/A1
