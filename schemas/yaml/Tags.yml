@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Tags-2.0.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Tags-2.0.1.json'
 title:   Tags
 type:    object
 
@@ -12,3 +12,10 @@ additionalProperties:
     - type: string
     - type: boolean
     - type: number
+
+examples:
+
+  - role:      subject
+    activated: true
+
+  - VOT: 0.012
