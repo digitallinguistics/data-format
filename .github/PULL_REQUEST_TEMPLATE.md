@@ -60,4 +60,5 @@ _This section is for maintainers only_
     - Changelog: `LABEL: description (closes #000)`
 - [ ] **Delete issue branch**
 - [ ] **Run upload script** from the `master` branch
+- [ ] **Increment version number** if necessary
 - [ ] **Create or update the release notes** for the release that this PR will be part of
