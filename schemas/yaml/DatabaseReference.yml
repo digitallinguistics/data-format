@@ -28,7 +28,7 @@ properties:
 
   filename:
     title: Filename
-    type:  String
+    type:  string
     description: If the reference database item is a media item, use this field for the name of the referenced file.
 
   index:
@@ -46,7 +46,7 @@ properties:
   name:
     title: Name
     type:  object
-    $ref:  https://cdn.digitallinguistics.io/schemas/MultiLangString.json
+    $ref:  http://cdn.digitallinguistics.io/schemas/MultiLangString.json
     description: The name of the referenced database item, optionally in multiple languages.
 
   referenceType:
