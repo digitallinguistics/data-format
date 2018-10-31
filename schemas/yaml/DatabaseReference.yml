@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.1.2.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.2.0.json'
 title:   'Database Reference'
 type:    object
 
@@ -26,6 +26,11 @@ properties:
     title: 'Referenced ID'
     description: 'The ID of the referenced database item'
 
+  filename:
+    title: Filename
+    type:  String
+    description: If the reference database item is a media item, use this field for the name of the referenced file.
+
   index:
     title:   'Referenced Index'
     type:    integer
@@ -36,7 +41,13 @@ properties:
     title:   'Referenced Key'
     type:    string
     pattern: '^[^\s]+$'
-    description: "The key of the referenced database item."
+    description: The key of the referenced database item
+
+  name:
+    title: Name
+    type:  object
+    $ref:  https://cdn.digitallinguistics.io/schemas/MultiLangString.json
+    description: The name of the referenced database item, optionally in multiple languages.
 
   referenceType:
     title: 'Referenced Item Type'
