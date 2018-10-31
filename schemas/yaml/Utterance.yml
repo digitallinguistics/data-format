@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Utterance-4.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Utterance-4.1.1.json'
 title:   Utterance
 type:    object
 
@@ -115,3 +115,13 @@ properties:
       type:  object
       $ref: 'http://cdn.digitallinguistics.io/schemas/Word.json'
       description: 'A Word object'
+
+examples:
+
+  - transcript:
+      Mod: Waxdungu qasi,
+    transcription:
+      Mod: waxdungu qasi
+    translation:
+      eng: One day a man,
+    words:
