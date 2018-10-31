@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Location-3.2.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Location-3.2.1.json'
 title:   Location
 type:    object
 

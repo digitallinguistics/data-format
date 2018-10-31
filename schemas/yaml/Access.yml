@@ -29,7 +29,7 @@ properties:
   ELAR:
     title: 'ELAR Access Level'
     type:  string
-    description: 'For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an `ELAR` attribute may be added, and its value set to one of the access levels set forth by the archive.'
+    description: For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an `ELAR` attribute may be added, and its value set to one of the access levels set forth by the archive. See [ELAR's protocols for access management](https://www.soas.ac.uk/elar/using-elar/access-protocol/) for more information.
     enum:
       - 'User'
       - 'Researcher'

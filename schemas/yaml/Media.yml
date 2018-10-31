@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Media-5.1.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Media-5.2.0.json'
 title:   'Media File'
 type:    object
 
@@ -80,19 +80,13 @@ properties:
     title:   'End Time'
     type:    number
     minimum: 0.001
-    description: 'Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.2`, or `167.78012`, etc.'
+    description: 'Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.234`, or `167.780`, etc.'
 
   filename:
     title:   Filename
     type:    string
     pattern: '^[^ ]+\.[^ ]+'
     description: 'The filename for this media item without spaces, but including the extension'
-
-  fileSize:
-    title:   'File Size'
-    type:    integer
-    minimum: 1
-    description: 'The size of the file, in bytes.'
 
   format:
     title: 'Format (File Extension)'
@@ -114,7 +108,7 @@ properties:
     title:   'Length (in Time / Pages)'
     type:    number
     minimum: 0.001
-    description: 'The length of the file, in seconds and milliseconds if an audio/video file (in `SS.MM` format), or pages if a document'
+    description: 'The length of the file, in seconds and milliseconds if an audio/video file (in `SS.MMM` format), or pages if a document'
 
   link:
     title:  Link
@@ -160,6 +154,12 @@ properties:
       $ref: 'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
       description: 'A database reference to a person who appears in this file'
 
+  size:
+    title:   'File Size'
+    type:    integer
+    minimum: 1
+    description: 'The size of the file, in bytes.'
+
   startTime:
     title:   'Start Time'
     type:    number
@@ -177,3 +177,61 @@ properties:
     type:   string
     format: uri
     description: 'The URL where this media data can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaURL` attribute).'
+
+examples:
+
+  - abbreviation: Omoiseke
+    access:
+      ELAR:       User
+    content:      A folktale told by Helen Makana about a girl who gets married to dogs.
+    contentType:  audio/wav
+    creator:
+      id:         791073ab-beec-484d-a608-a936abbf4e7c
+      key:        DWH
+    dateCreated:  2018-10-31T17:25:28.347Z
+    dateModified: 2018-10-31T17:25:46.239Z
+    dateRecorded: 2014-08-14
+    filename:     Gusii_HM_2014-08-14_Omoiseke.wav
+    format:       wav
+    id:           6519aafc-9ce6-4101-83c2-e1d32555ff03
+    languages:
+      - id:       434680a8-fd5a-4799-a5a7-e1f6f5d15d95
+        key:      Gusii
+        url:      https://api.digitallinguistics.io/languages/Gusii
+    length:       62.417
+    location:
+      id:         eaead014-2c97-47d7-a072-d09d8d7d80e8
+      key:        KennedyFarm
+    mediaURL:     https://files.digitallinguistics.io/audio/Gusii_HM_2014-08-14_Omoiseke.wav
+    people:
+      - id:       2491b3cd-2749-438a-9eeb-70427d24d5ad
+        key:      HM
+    size:         11010618
+    type:         Media
+    url:          https://api.digitallinguistics.io/languages/Gusii/media/Gusii_HM_2014-08-14_Omoiseke.wav
+
+  - abbreviation: enderema
+    access:
+      ELAR:       User
+    content:      Photo of *ɛ́ndɛrɛma* 'slippery vegetable vine'
+    contentType:  image/jpeg
+    creator:
+      id:         791073ab-beec-484d-a608-a936abbf4e7c
+      key:        DWH
+    dateCreated:  2018-10-31T17:25:28.347Z
+    dateModified: 2018-10-31T17:25:46.239Z
+    dateRecorded: 2014-08-04
+    filename:     Gusii_2014-08-04_enderema.jpg
+    format:       jpg
+    link:         https://files.digitallinguistics.io/images/Gusii_2014-08-04_enderema.jpg
+    location:
+      id:         eaead014-2c97-47d7-a072-d09d8d7d80e8
+      key:        KennedyFarm
+    mediaURL:     https://files.digitallinguistics.io/images/Gusii_2014-08-04_enderema.jpg
+    notes:
+      - text:     ɛ́ndɛrɛma 'slippery vegetable vine'
+    people:
+      - id:       b430dd0d-5c8c-4a66-99f0-f9a0cc7e1524
+        key:      JKM
+    size:         3374489
+    url:          https://api.digitallinguistics.io/languages/Gusii/media/enderema.jpg
