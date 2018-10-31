@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.1.2.json'
 title:   Language
 type:    object
 
@@ -214,20 +214,22 @@ examples:
       - abbreviation: Swad
         roles:
           - researcher
-    dateCreated:  2018-10-13T18:16:57.497Z
-    dateModified: 2018-10-13T18:17:06.515Z
-    glottolog:    chit1248
-    id:           4d633ee3-25ba-4add-83cf-b588ba51f758
-    iso:          ctm
-    link:         https://data.digitallinguistics.io/languages/Chitimacha
+    dateCreated:        '2018-10-13T18:16:57.497Z'
+    dateModified:       '2018-10-13T18:17:06.515Z'
+    defaultOrthography: modern
+    glottolog:          chit1248
+    id:                 4d633ee3-25ba-4add-83cf-b588ba51f758
+    iso:                ctm
+    link:               https://data.digitallinguistics.io/languages/Chitimacha
     locations:
-      - key:      Charenton
+      - name:            Charenton
     name:
-      eng:        Chitimacha
-      fra:        Chitimachas
-      spa:        chitimacha
+      eng:              Chitimacha
+      fra:              Chitimachas
+      spa:              chitimacha
     notes:
-      - text:     The best documentary materials on this language are those compiled by Morris Swadesh in 1930–1934.
+      - text: The best documentary materials on this language are those compiled by Morris Swadesh in 1930–1934.
+      - text: Chitimacha is a language isolate.
     orthographies:
 
       - abbreviation: Mod
@@ -321,15 +323,14 @@ examples:
         notes:
           - text:     This is the official orthography used by the Chitimacha Tribe.
         punctuation:
-          - .
-          - ?
-          - !
+          - '.'
+          - '?'
+          - '!'
 
       - abbreviation: APA
-        graphemes:
+        graphemes:    []
         link:         https://data.digitallinguistics.io/languages/Chitimacha/orthographies/APA
         name:         Americanist
-        punctuation:
 
     phonemes:
       - airstream: pulmonic
@@ -347,7 +348,23 @@ examples:
         manner:    affricate
         place:     post-alveolar
         voicing:   voiceless
-    type: Language
+    references:
+      - authors:
+          - firstName:   Morris
+            lastName:    Swadesh
+        city:            New York
+        editors:
+          - firstName:   Cornelius
+            lastName:    Osgood
+        pages:           '312-336'
+        publication:     Linguistic Structures of Native America
+        publicationType: book section
+        title:           Chitimacha
+        year:            1946
+    tags:
+      morphologicalType: synthetic
+    type:                Language
+    url:                 https://data.digitallinguistics.io/languages/Chitimacha
 
   - abbreviation: gusii
     access:
@@ -375,42 +392,43 @@ examples:
       - abbreviation: DWH
         roles:
           - researcher
-    dateCreated:  2018-10-13T18:17:24.477Z
-    dateModified: 2018-10-13T18:17:34.512Z
+    dateCreated:  '2018-10-13T18:17:24.477Z'
+    dateModified: '2018-10-13T18:17:34.512Z'
     glottolog:    gusi1247
     id:           708d1bd4-84f6-42e5-8b09-5c64493441b3
     iso:          guz
     link:         https://data.digitallinguistics.io/languages/Gusii
     locations:
-      - key:      Kisii Town
+      - key:      Kisii
     name:
       eng:        Gusii
       spa:        gusii
       swa:        Kisii
     notes:
       - text:     In older versions of your notes, you referred to this language as Kisii rather than Gusii.
-        type:     private
     orthographies:
 
       - abbreviation: Practical
         direction:    ltr-ttb
-        graphemes:
+        graphemes:    []
         link:         https://data.digitallinguistics.io/languages/Gusii/orthographies/Practical
+        name:         Practical
         punctuation:
-          - .
-          - ?
-          - !
+          - '.'
+          - '?'
+          - '!'
 
       - abbreviation: Swahili
         direction:    ltr-ttb
-        graphemes:
+        graphemes:    []
         link:         https://data.digitallinguistics.io/languages/Gusii/orthographies/Swahili
+        name:         Swahili
         notes:
           - text:     This orthography represents the way that the language is written when using the Swahili orthography. Tone is omitted from this orthography.
         punctuation:
-          - .
-          - ?
-          - !
+          - '.'
+          - '?'
+          - '!'
 
-    phonemes:
+    phonemes:     []
     type:         Language

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Media-5.2.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Media-5.2.1.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
@@ -112,7 +112,7 @@
       "description": "An array of the languages that are used in this media file",
       "items": {
         "title": "Language (Database Reference)",
-        "type": "string",
+        "type": "object",
         "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
         "description": "A database reference to this language"
       }
@@ -208,7 +208,7 @@
       },
       "dateCreated": "2018-10-31T17:25:28.347Z",
       "dateModified": "2018-10-31T17:25:46.239Z",
-      "dateRecorded": "2014-08-14T00:00:00.000Z",
+      "dateRecorded": "2014-08-14",
       "filename": "Gusii_HM_2014-08-14_Omoiseke.wav",
       "format": "wav",
       "id": "6519aafc-9ce6-4101-83c2-e1d32555ff03",
@@ -248,7 +248,7 @@
       },
       "dateCreated": "2018-10-31T17:25:28.347Z",
       "dateModified": "2018-10-31T17:25:46.239Z",
-      "dateRecorded": "2014-08-04T00:00:00.000Z",
+      "dateRecorded": "2014-08-04",
       "filename": "Gusii_2014-08-04_enderema.jpg",
       "format": "jpg",
       "link": "https://files.digitallinguistics.io/images/Gusii_2014-08-04_enderema.jpg",

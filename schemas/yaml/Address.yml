@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Address-2.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Address-2.1.2.json'
 title:   Address
 type:    object
 
@@ -59,3 +59,12 @@ examples:
   - locality: Charenton
     region:   Louisiana
     country:  'United States'
+
+  - apartmentNumber: B
+    country:         United States
+    locality:        New York
+    postalBoxNumber: '1234'
+    postalCode:      '12345-1234'
+    region:          New York
+    streetAddress:   555 Market St.
+    type:            Address

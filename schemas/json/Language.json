@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Language-8.1.1.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Language-8.1.2.json",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -255,13 +255,14 @@
       ],
       "dateCreated": "2018-10-13T18:16:57.497Z",
       "dateModified": "2018-10-13T18:17:06.515Z",
+      "defaultOrthography": "modern",
       "glottolog": "chit1248",
       "id": "4d633ee3-25ba-4add-83cf-b588ba51f758",
       "iso": "ctm",
       "link": "https://data.digitallinguistics.io/languages/Chitimacha",
       "locations": [
         {
-          "key": "Charenton"
+          "name": "Charenton"
         }
       ],
       "name": {
@@ -272,6 +273,9 @@
       "notes": [
         {
           "text": "The best documentary materials on this language are those compiled by Morris Swadesh in 1930–1934."
+        },
+        {
+          "text": "Chitimacha is a language isolate."
         }
       ],
       "orthographies": [
@@ -457,15 +461,14 @@
           "punctuation": [
             ".",
             "?",
-            null
+            "!"
           ]
         },
         {
           "abbreviation": "APA",
-          "graphemes": null,
+          "graphemes": [],
           "link": "https://data.digitallinguistics.io/languages/Chitimacha/orthographies/APA",
-          "name": "Americanist",
-          "punctuation": null
+          "name": "Americanist"
         }
       ],
       "phonemes": [
@@ -491,7 +494,33 @@
           "voicing": "voiceless"
         }
       ],
-      "type": "Language"
+      "references": [
+        {
+          "authors": [
+            {
+              "firstName": "Morris",
+              "lastName": "Swadesh"
+            }
+          ],
+          "city": "New York",
+          "editors": [
+            {
+              "firstName": "Cornelius",
+              "lastName": "Osgood"
+            }
+          ],
+          "pages": "312-336",
+          "publication": "Linguistic Structures of Native America",
+          "publicationType": "book section",
+          "title": "Chitimacha",
+          "year": 1946
+        }
+      ],
+      "tags": {
+        "morphologicalType": "synthetic"
+      },
+      "type": "Language",
+      "url": "https://data.digitallinguistics.io/languages/Chitimacha"
     },
     {
       "abbreviation": "gusii",
@@ -545,7 +574,7 @@
       "link": "https://data.digitallinguistics.io/languages/Gusii",
       "locations": [
         {
-          "key": "Kisii Town"
+          "key": "Kisii"
         }
       ],
       "name": {
@@ -555,27 +584,28 @@
       },
       "notes": [
         {
-          "text": "In older versions of your notes, you referred to this language as Kisii rather than Gusii.",
-          "type": "private"
+          "text": "In older versions of your notes, you referred to this language as Kisii rather than Gusii."
         }
       ],
       "orthographies": [
         {
           "abbreviation": "Practical",
           "direction": "ltr-ttb",
-          "graphemes": null,
+          "graphemes": [],
           "link": "https://data.digitallinguistics.io/languages/Gusii/orthographies/Practical",
+          "name": "Practical",
           "punctuation": [
             ".",
             "?",
-            null
+            "!"
           ]
         },
         {
           "abbreviation": "Swahili",
           "direction": "ltr-ttb",
-          "graphemes": null,
+          "graphemes": [],
           "link": "https://data.digitallinguistics.io/languages/Gusii/orthographies/Swahili",
+          "name": "Swahili",
           "notes": [
             {
               "text": "This orthography represents the way that the language is written when using the Swahili orthography. Tone is omitted from this orthography."
@@ -584,11 +614,11 @@
           "punctuation": [
             ".",
             "?",
-            null
+            "!"
           ]
         }
       ],
-      "phonemes": null,
+      "phonemes": [],
       "type": "Language"
     }
   ]

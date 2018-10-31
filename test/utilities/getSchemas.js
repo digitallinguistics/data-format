@@ -13,6 +13,7 @@ let schemas;
  */
 async function getSchemas() {
 
+  const IDRegExp = /schemas\/(?<schemaID>.+)-/;
   const filenames = await readdir(schemasPath, `utf8`);
 
   if (schemas) return schemas;
@@ -20,7 +21,8 @@ async function getSchemas() {
   schemas = filenames
   .map(filename => yamljs.load(path.join(schemasPath, filename)))
   .reduce((map, schema) => {
-    map.set(schema.title, schema);
+    const { schemaID } = IDRegExp.exec(schema.$id).groups;
+    map.set(schemaID, schema);
     return map;
   }, new Map);
 

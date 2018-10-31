@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Bundle-3.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Bundle-3.1.2.json'
 title:   Bundle
 type:    object
 
@@ -134,9 +134,9 @@ examples:
 
   - abbreviation: Day1
     access:
-      ELAR:       depositor
-    dateCreated:  2018-10-13T15:48:11.496Z
-    dateModified: 2018-10-13T15:54:23.382Z
+      ELAR:       Researcher
+    dateCreated:  '2018-10-13T15:48:11.496Z'
+    dateModified: '2018-10-13T15:54:23.382Z'
     id:           aea46597-be32-48bb-9cb5-862c4f0a2081
     link:         https://data.digitallinguistics.io/bundles/Day1
     locations:
@@ -164,8 +164,8 @@ examples:
   - abbreviation: Lexicon1
     access:
       AILLA:      public access
-    dateCreated:  2018-10-13T15:54:12.484Z
-    dateModified: 2018-10-13T15:54:48.916Z
+    dateCreated:  '2018-10-13T15:54:12.484Z'
+    dateModified: '2018-10-13T15:54:48.916Z'
     id:           cd79381a-6a44-4c9a-a8c1-d33186c6d839
     link:         https://data.digitallinguistics.io/bundles/Lexicon1
     locations:
