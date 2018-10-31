@@ -45,7 +45,6 @@ properties:
 
   name:
     title: Name
-    type:  object
     $ref:  http://cdn.digitallinguistics.io/schemas/MultiLangString.json
     description: The name of the referenced database item, optionally in multiple languages.
 
