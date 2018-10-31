@@ -1,9 +1,9 @@
 $schema: 'http://json-schema.org/schema'
-$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.1.2.json'
 title:   'Database Reference'
 type:    object
 
-description: 'A reference to an item in a database'
+description: 'A reference to an item in a database. In most cases, the actual object can be used instead of a database reference. For example, instead of making a reference to a separate Person file, you can simply include the data for that Person inline.'
 
 additionalProperties: true
 
@@ -15,6 +15,12 @@ properties:
     const:    DatabaseReference
     readOnly: true
     description: 'The type of object. Must be set to `DatabaseReference`.'
+
+  abbreviation:
+    title: Referenced Abbreviation
+    type:  string
+    $ref:  http://cdn.digitallinguistics.io/schemas/Abbreviation.json
+    description: The abbreviation of the referenced database item.
 
   id:
     title: 'Referenced ID'
@@ -30,7 +36,7 @@ properties:
     title:   'Referenced Key'
     type:    string
     pattern: '^[^\s]+$'
-    description: "The key of the referenced database item. If a key is not present for the item, the item's abbreviation may be used instead."
+    description: "The key of the referenced database item."
 
   referenceType:
     title: 'Referenced Item Type'
