@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Person-4.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Person-4.1.2.json'
 title:   Person
 type:    object
 
@@ -46,7 +46,7 @@ properties:
   birthDate:
     title:  'Birth Date'
     type:   string
-    format: date-time
+    format: date
     description: 'This person’s birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime)'
 
   birthPlace:
@@ -175,9 +175,9 @@ examples:
   - abbreviation: BP
     access:
       notes:      No access restrictions on this person's data.
-    birthDate:    1867-01-01
-    dateCreated:  2018-10-05T15:26:23.070Z
-    dateModified: 2018-10-05T15:26:23.070Z
+    birthDate:    '1867-01-01'
+    dateCreated:  '2018-10-05T15:26:23.070Z'
+    dateModified: '2018-10-05T15:26:23.070Z'
     familyName:   Paul
     gender:       male
     givenName:    Benjamin

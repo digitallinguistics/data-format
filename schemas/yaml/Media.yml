@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Media-5.2.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Media-5.2.1.json'
 title:   'Media File'
 type:    object
 
@@ -100,7 +100,7 @@ properties:
     description: 'An array of the languages that are used in this media file'
     items:
       title: 'Language (Database Reference)'
-      type:  string
+      type:  object
       $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
       description: 'A database reference to this language'
 
@@ -188,9 +188,9 @@ examples:
     creator:
       id:         791073ab-beec-484d-a608-a936abbf4e7c
       key:        DWH
-    dateCreated:  2018-10-31T17:25:28.347Z
-    dateModified: 2018-10-31T17:25:46.239Z
-    dateRecorded: 2014-08-14
+    dateCreated:  '2018-10-31T17:25:28.347Z'
+    dateModified: '2018-10-31T17:25:46.239Z'
+    dateRecorded: '2014-08-14'
     filename:     Gusii_HM_2014-08-14_Omoiseke.wav
     format:       wav
     id:           6519aafc-9ce6-4101-83c2-e1d32555ff03
@@ -218,9 +218,9 @@ examples:
     creator:
       id:         791073ab-beec-484d-a608-a936abbf4e7c
       key:        DWH
-    dateCreated:  2018-10-31T17:25:28.347Z
-    dateModified: 2018-10-31T17:25:46.239Z
-    dateRecorded: 2014-08-04
+    dateCreated:  '2018-10-31T17:25:28.347Z'
+    dateModified: '2018-10-31T17:25:46.239Z'
+    dateRecorded: '2014-08-04'
     filename:     Gusii_2014-08-04_enderema.jpg
     format:       jpg
     link:         https://files.digitallinguistics.io/images/Gusii_2014-08-04_enderema.jpg

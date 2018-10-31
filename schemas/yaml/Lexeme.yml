@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Lexeme-7.2.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Lexeme-7.2.2.json'
 title:   Lexeme
 type:    object
 
@@ -484,8 +484,8 @@ examples:
       APA:  ʔasi
       Mod:  qasi
       Swad: ʔasi
-    dateCreated:  2018-10-18T23:26:50.392Z
-    dateModified: 2018-10-18T23:27:00.859Z
+    dateCreated:  '2018-10-18T23:26:50.392Z'
+    dateModified: '2018-10-18T23:27:00.859Z'
     id:           b108db59-5d68-40a1-a30e-23e902011959
     features:
       number:     singular
@@ -506,16 +506,16 @@ examples:
         definition: a man
         gloss:      man
         source:
-          - Swadesh 1939c: 18
+          - 'Swadesh 1939c: 18'
 
       - category:   noun
         definition: a male
         gloss:      male
         source:
-          - Swadesh 1939c: 18
+          - 'Swadesh 1939c: 18'
 
       - category:   noun
         definition: a husband
         gloss:      husband
         sources:
-          - Swadesh 1939c: 18
+          - 'Swadesh 1939c: 18'

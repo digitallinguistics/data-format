@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.1.2.json'
 title:   Annotation
 type:    object
 
@@ -99,4 +99,21 @@ examples:
     annotationType: timestamp
     ts:             1.234
     notes:
-      text: 'Speaker points to listener here.'
+      - text: 'Speaker points to listener here.'
+
+  - type:           Annotation
+    annotationType: timestamp
+    notes:
+      - text: Points to door.
+    tags:
+      gestureType: point
+    ts: 12.345
+
+  - type:           Annotation
+    annotationType: timespan
+    endTime:        67.871
+    notes:
+      - text: Speaker 2 was not present for this part of the text.
+    startTime:      12.345
+    tags:
+      intonationContour: sharpRise

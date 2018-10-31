@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.1.1.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Word-4.1.2.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -152,6 +152,11 @@
           "lexeme": {
             "id": "06ed7bda-9923-4295-97da-8c9a24b98fd4",
             "key": "qasi"
+          },
+          "transcription": {
+            "APA": "ʔasi",
+            "IPA": "ʔasi",
+            "Mod": "qasi"
           }
         }
       ],

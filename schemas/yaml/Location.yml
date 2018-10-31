@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Location-3.2.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Location-3.2.2.json'
 title:   Location
 type:    object
 
@@ -115,8 +115,8 @@ examples:
     access:
       notes:
         eng:       There are no restrictions on access to this location.
-    dateCreated:   2018-10-30T01:54:19.901Z
-    dateModified:  2018-10-30T01:54:39.394Z
+    dateCreated:   '2018-10-30T01:54:19.901Z'
+    dateModified:  '2018-10-30T01:54:39.394Z'
     geoJSON:
       type:        Point
       coordinates:
@@ -131,8 +131,8 @@ examples:
     url:           https://api.digitallinguistics.io/locations/Charenton
 
   - abbreviation:  Kisii
-    dateCreated:   2018-10-30T01:54:19.901Z
-    dateModified:  2018-10-30T01:54:39.394Z
+    dateCreated:   '2018-10-30T01:54:19.901Z'
+    dateModified:  '2018-10-30T01:54:39.394Z'
     geoJSON:
       type:        Point
       coordinates:

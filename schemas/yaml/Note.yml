@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Note-4.2.0.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Note-4.2.1.json'
 title:   Note
 type:    object
 
@@ -64,15 +64,15 @@ properties:
 
 examples:
 
-  - dateCreated:  2018-10-31T18:00:09.433Z
-    dateModified: 2018-10-31T18:00:23.691Z
+  - dateCreated:  '2018-10-31T18:00:09.433Z'
+    dateModified: '2018-10-31T18:00:23.691Z'
     language:     swa
     source:       DWH
     text:         Msemaji huyu ni Janet Kerubo Momanyi.
     type:         Note
 
-  - dateCreated:  2018-10-31T18:00:09.433Z
-    dateModified: 2018-10-31T18:00:23.691Z
+  - dateCreated:  '2018-10-31T18:00:09.433Z'
+    dateModified: '2018-10-31T18:00:23.691Z'
     language:     eng
     noteType:     encyclopedic
     source:       Morris Swadesh

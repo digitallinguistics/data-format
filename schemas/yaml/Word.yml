@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema'
-$id:     'http://cdn.digitallinguistics.io/schemas/Word-4.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Word-4.1.2.json'
 title:   Word
 type:    object
 
@@ -155,6 +155,10 @@ examples:
         lexeme:
           id:   06ed7bda-9923-4295-97da-8c9a24b98fd4
           key:  qasi
+        transcription:
+          APA:  ʔasi
+          IPA:  ʔasi
+          Mod:  qasi
     phonemes:
       - phoneme: ʔ
       - phoneme: a
