@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Lexeme-7.2.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Lexeme-7.2.1.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is the set of all forms that share the same meaning. A lexeme is used broadly by DLx to refer to any collection of related senses and forms, whether the item is an individual word, a morpheme, or even a fully-inflected phrase. In other words, DLx lexeme objects can be used to describe anything that constitutes a lexical unit or construction. A lexeme will often have multiple *senses* or meanings, and those are listed in the `senses` field. It is up to the linguist to decide when two meanings are related, and therefore part of the same lexeme, or when they belong in different lexemes. A lexeme will also often have multiple variants. For example, the lexeme `run` in English has two base forms: `run` and `ran`. The `run` form is listed as the headword or *lemma*, and `ran` is listed as a past tense variant. The `variants` field should *not* be used to list all the inflectional forms of a Lexeme.",
@@ -37,7 +37,7 @@
       "title": "Allomorphs",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of allomorphs of this Lexeme",
+      "description": "A list of allomorphs (that is, phonologically-conditioned alternants) of this Lexeme",
       "items": {
         "title": "Allomorph",
         "type": "object",
@@ -537,5 +537,65 @@
         }
       }
     }
-  }
+  },
+  "examples": [
+    {
+      "citationForm": {
+        "APA": "ʔasi",
+        "Mod": "qasi",
+        "Swad": "ʔasi"
+      },
+      "dateCreated": "2018-10-18T23:26:50.392Z",
+      "dateModified": "2018-10-18T23:27:00.859Z",
+      "id": "b108db59-5d68-40a1-a30e-23e902011959",
+      "features": {
+        "number": "singular"
+      },
+      "key": "qasi",
+      "lemma": {
+        "APA": "ʔasi",
+        "Mod": "qasi",
+        "Swad": "ʔasi"
+      },
+      "link": "https://data.digitallinguistics.io/languages/Chitimacha/lexemes/qasi",
+      "morphemeType": "stem",
+      "sources": [
+        "Swadesh 1939c: 17"
+      ],
+      "syllableStructure": "CV.CV",
+      "type": "Lexeme",
+      "senses": [
+        {
+          "category": "noun",
+          "definition": "a man",
+          "gloss": "man",
+          "source": [
+            {
+              "Swadesh 1939c": 18
+            }
+          ]
+        },
+        {
+          "category": "noun",
+          "definition": "a male",
+          "gloss": "male",
+          "source": [
+            {
+              "Swadesh 1939c": 18
+            }
+          ]
+        },
+        {
+          "category": "noun",
+          "definition": "a husband",
+          "gloss": "husband",
+          "sources": [
+            {
+              "Swadesh 1939c": 18
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }

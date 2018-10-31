@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Annotation-2.1.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Annotation-2.1.1.json",
   "title": "Annotation",
   "type": "object",
   "description": "An annotation on a text. Annotations are useful for indicating properties of a text which are anchored in time, or which cross the boundaries of linguistic objects like utterances and words. Examples uses might include: annotating a period of time when a speaker is whispering; annotating a stretch of the text as being a particular episode in the text; annotating the text for turns or prosodic units. Annotations should generally be used as a last resort. Whenever possible, data should be attached to linguistic objects, and represented as attributes of those linguistic entities. For example, it would be bad practice to use a timespan annotation to indicate the start and end times of a word. Instead, you should add the custom properties `startTime` and `endTime` to each Word object. Each annotation must have either a `notes` or a `tags` property specified, in order to describe the annotation.",
@@ -62,7 +62,7 @@
     {
       "oneOf": [
         {
-          "title": "Timespan Annotation",
+          "title": "Timestamp Annotation",
           "description": "A timespan annotation is an annotation which spans a duration of time. This is particularly useful for annotating non-linguistic features of the text which are happening in the background.",
           "required": [
             "ts"
@@ -77,7 +77,7 @@
           }
         },
         {
-          "title": "Timestamp Annotation",
+          "title": "Timespan Annotation",
           "description": "A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.",
           "required": [
             "startTime",
@@ -99,6 +99,25 @@
           }
         }
       ]
+    }
+  ],
+  "examples": [
+    {
+      "type": "Annotation",
+      "annotationType": "timespan",
+      "startTime": 1,
+      "endTime": 2,
+      "tags": {
+        "creakyVoice": true
+      }
+    },
+    {
+      "type": "Annotation",
+      "annotationType": "timestamp",
+      "ts": 1.234,
+      "notes": {
+        "text": "Speaker points to listener here."
+      }
     }
   ]
 }

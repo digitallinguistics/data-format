@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Phoneme-4.1.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Phoneme-4.2.1.json",
   "title": "Phoneme",
   "type": "object",
   "description": "An object representing a single phoneme in a language, and its allophones.",
@@ -148,6 +148,7 @@
       "type": "string",
       "description": "The manner of articulation, for consonants. Only one manner of articulation may be listed. Additional manners must be listed under the `features` attribute. For example, the lateral fricative `ɬ` might have a `manner` set to `fricative` and a feature `lateral`, or vice versa, depending on the linguist’s analysis.",
       "enum": [
+        "affricate",
         "approximate",
         "flap",
         "fricative",
@@ -255,5 +256,28 @@
         "voiceless"
       ]
     }
-  }
+  },
+  "examples": [
+    {
+      "airstream": "pulmonic",
+      "ipa": "t",
+      "manner": "plosive",
+      "place": "alveolar",
+      "voicing": "voiceless"
+    },
+    {
+      "airstream": "pulmonic",
+      "ipa": "t͡ʃ",
+      "manner": "affricate",
+      "place": "post-alveolar",
+      "voicing": "voiceless"
+    },
+    {
+      "airstream": "ejective",
+      "ipa": "t͡ʃˀ",
+      "manner": "affricate",
+      "place": "post-alveolar",
+      "voicing": "voiceless"
+    }
+  ]
 }

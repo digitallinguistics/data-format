@@ -1,10 +1,9 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Orthography-3.1.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Orthography-3.1.2.json",
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
-  "$comment": "This is a top-level database object",
   "required": [
     "graphemes",
     "name"
@@ -61,7 +60,7 @@
             "title": "Allographs",
             "type": "array",
             "uniqueItems": true,
-            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `T` in an English orthography would have the allograph `t`.",
+            "description": "A list of all the allographs (graphical / writing variants) of the current grapheme. For example, `t` in an English orthography would have the allograph `T`. Generally the lowercase form of a letter should be used as the default.",
             "items": {
               "title": "Allograph",
               "type": "string"
@@ -138,5 +137,72 @@
       "format": "uri",
       "description": "A URL where this Orthography may be accessed in JSON format"
     }
-  }
+  },
+  "examples": [
+    {
+      "abbreviation": "Mod",
+      "direction": "ltr-ttb",
+      "graphemes": [
+        {
+          "allographs": [
+            "A"
+          ],
+          "form": "a",
+          "pronunciations": [
+            "a"
+          ]
+        },
+        {
+          "form": "aa",
+          "pronunciations": [
+            "aː"
+          ]
+        },
+        {
+          "allographs": [
+            "B"
+          ],
+          "form": "b",
+          "pronunciations": [
+            "pˀ"
+          ]
+        },
+        {
+          "allographs": [
+            "C"
+          ],
+          "form": "c",
+          "pronunciations": [
+            "t͡ʃ"
+          ]
+        },
+        {
+          "allographs": [
+            "D"
+          ],
+          "form": "d",
+          "pronunciations": [
+            "tˀ"
+          ]
+        }
+      ],
+      "id": "f7c84181-c84e-43d5-a007-651294dd83d0",
+      "name": "Modern",
+      "notes": [
+        {
+          "text": "This orthography was originally developed by Julien Granberry, and later modified in line with suggestions from Daniel W. Hieber."
+        }
+      ],
+      "punctuation": [
+        " ",
+        ".",
+        "?",
+        null,
+        "'",
+        "\""
+      ],
+      "type": "Orthography",
+      "url": "https://data.digitallinguistics.io/languages/Chitimacha/orthographies/Modern"
+    }
+  ]
 }

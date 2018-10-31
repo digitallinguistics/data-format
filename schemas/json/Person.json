@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Person-4.1.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Person-4.1.1.json",
   "title": "Person",
   "type": "object",
   "description": "An object providing information about a Person",
@@ -175,5 +175,36 @@
       "format": "uri",
       "description": "The URL where the JSON data for this Person may be accessed"
     }
-  }
+  },
+  "examples": [
+    {
+      "abbreviation": "BP",
+      "access": {
+        "notes": "No access restrictions on this person's data."
+      },
+      "birthDate": "1867-01-01T00:00:00.000Z",
+      "dateCreated": "2018-10-05T15:26:23.070Z",
+      "dateModified": "2018-10-05T15:26:23.070Z",
+      "familyName": "Paul",
+      "gender": "male",
+      "givenName": "Benjamin",
+      "id": "46d3ad45-d1b8-4656-b496-dcb39203c5a9",
+      "languages": [
+        {
+          "name": "Chitimacha",
+          "proficiency": "fluent"
+        },
+        {
+          "name": "English",
+          "proficiency": "fluent"
+        }
+      ],
+      "link": "https://data.digitallinguistics.io/languages/Chitimacha/people/BP",
+      "roles": [
+        "speaker"
+      ],
+      "type": "Person",
+      "url": "https://data.digitallinguistics.io/languages/Chitimacha/people/BP.json"
+    }
+  ]
 }

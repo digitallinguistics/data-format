@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-5.1.0.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-5.1.2.json",
   "title": "Bibliographic Reference",
   "type": "object",
   "description": "A bibliographic Reference",
@@ -163,5 +163,63 @@
       "type": "integer",
       "description": "The year this item was published. Use a positive integer for AD / ACE, and a negative integer for BC / BCE."
     }
-  }
+  },
+  "examples": [
+    {
+      "authors": [
+        {
+          "firstName": "Daniel W.",
+          "lastName": "Hieber"
+        }
+      ],
+      "city": "Amsterdam",
+      "doi": "10.1075/cal.20.02hie",
+      "editors": [
+        {
+          "firstName": "Kristel",
+          "lastName": "Van Goethem"
+        },
+        {
+          "firstName": "Muriel",
+          "lastName": "Norde"
+        },
+        {
+          "firstName": "Evie",
+          "lastName": "Coussé"
+        },
+        {
+          "firstName": "Gudrun",
+          "lastName": "Vanderbauwhede"
+        }
+      ],
+      "id": "46d3ad45-d1b8-4656-b496-dcb39203c5a9",
+      "publication": "Category change from a constructional perspective",
+      "publicationType": "book section",
+      "publisher": "John Benjamins",
+      "series": "Constructional approaches to language",
+      "title": "Catgory genesis in Chitimacha",
+      "type": "BibliographicReference",
+      "url": "https://api.digitallinguistics.io/references/Hieber2018.json",
+      "volume": 20,
+      "year": 2018
+    },
+    {
+      "authors": [
+        {
+          "firstName": "Daniel W.",
+          "lastName": "Hieber"
+        }
+      ],
+      "doi": "10.1515/lingty-2013-0013",
+      "id": "4b735346-d174-456d-9945-1b00d5ed776b",
+      "issue": 2,
+      "pages": "15–46",
+      "publication": "Linguistic Typology",
+      "publicationType": "journal article",
+      "title": "On linguistics, linguists, and our times: A linguist’s personal narrative reviewed",
+      "type": "BibliographicReference",
+      "url": "https://api.digitallinguistics.io/references/Hieber2013.json",
+      "year": 2013
+    }
+  ]
 }

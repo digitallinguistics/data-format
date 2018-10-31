@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Access-3.0.1.json",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Access-3.0.2.json",
   "title": "Access Rights",
   "type": "object",
   "description": "The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: researcher only`, etc. **Note:** The Access object does not have a `type` property.",
@@ -28,7 +28,7 @@
     "ELAR": {
       "title": "ELAR Access Level",
       "type": "string",
-      "description": "For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an `ELAR` attribute may be added, and its value set to one of the access levels set forth by the archive.",
+      "description": "For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an `ELAR` attribute may be added, and its value set to one of the access levels set forth by the archive. See [ELAR's protocols for access management](https://www.soas.ac.uk/elar/using-elar/access-protocol/) for more information.",
       "enum": [
         "User",
         "Researcher",
@@ -37,5 +37,20 @@
       ],
       "default": "Researcher"
     }
-  }
+  },
+  "examples": [
+    {
+      "AILLA": "password",
+      "ELAR": "Community Member",
+      "notes": {
+        "eng": "Speaker also requested that this text only be shared with family members."
+      },
+      "speaker": "family"
+    },
+    {
+      "notes": {
+        "eng": "The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members."
+      }
+    }
+  ]
 }
