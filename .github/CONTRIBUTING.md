@@ -78,19 +78,13 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
     - Make sure that your tests fail before writing other code.
 
-    - The tests are located in the `/test` folder. Each schema has one test file where all its tests are located. For example, the tests for the Language schema are located in `test/Language.test.js`.
+    - The tests are located in the `/test` folder. The file `schemas.test.js` checks that all the example data in the schemas is valid against its schema. Other tests only need to be added to check for issues that cannot be checked using the example data. Example data can be added or updated as necessary.
 
     - Tests are run using [Jasmine][9] for Node.js. See the [Jasmine documentation for Node.js][10] for more information on how to write tests in Jasmine.
 
     - The tests use the [`ajv` library][7] to validate the schemas against the JSON Schema format, and validate the sample data against the DLx schema. See the [`ajv` documentation][7] for more information on how to use this library to validate schemas.
 
-    - Each schema should be validated against sample data, provided in the `data` variable near the top of the test file. Update this sample data to match your proposed changes. There should be sample data for each optional or required property (but only for the top-level schema; items that reference another schema in the specification, only minimal example data should be provided).
-
     - Schemas do not have to be tested against invalid sample data, unless testing for specific issues that have arisen in the past, or common errors that developers are likely to make.
-
-    - The first test in each file validates the sample data against its schema using `ajv`. You should not need to change this test.
-
-    - The remaining tests in each file check that the sample data does *not* validate against the schema if the data is formatted incorrectly. Sometimes tests will check other ways of formatting valid data as well. Each test generally checks one attribute in the schema. Update these tests as needed.
 
 1. **Make changes to the schema(s)**.
 
