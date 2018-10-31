@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Orthography-3.1.1.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Orthography-3.1.2.json'
 title:   Orthography
 type:    object
 
@@ -136,3 +136,45 @@ properties:
     type:   string
     format: uri
     description: 'A URL where this Orthography may be accessed in JSON format'
+
+examples:
+
+  - abbreviation: Mod
+    direction:    ltr-ttb
+    graphemes:
+      - allographs:
+          - A
+        form: a
+        pronunciations:
+          - a
+      - form: aa
+        pronunciations:
+          - aː
+      - allographs:
+          - B
+        form: b
+        pronunciations:
+          - pˀ
+      - allographs:
+          - C
+        form: c
+        pronunciations:
+          - t͡ʃ
+      - allographs:
+          - D
+        form: d
+        pronunciations:
+          - tˀ
+    id:           f7c84181-c84e-43d5-a007-651294dd83d0
+    name:         Modern
+    notes:
+      - text:     This orthography was originally developed by Julien Granberry, and later modified in line with suggestions from Daniel W. Hieber.
+    punctuation:
+      - ' '
+      - .
+      - ?
+      - !
+      - "'"
+      - '"'
+    type:         Orthography
+    url:          https://data.digitallinguistics.io/languages/Chitimacha/orthographies/Modern
