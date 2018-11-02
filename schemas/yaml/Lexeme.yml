@@ -172,6 +172,18 @@ properties:
       $ref:  'http://cdn.digitallinguistics.io/schemas/BibliographicReference.json'
       description: A bibliographic Reference about this lexeme
 
+  senses:
+    title:       Senses
+    type:        array
+    minItems:    1
+    uniqueItems: true
+    description: A collection of meanings or *senses* for this lexeme. It is up to the linguist to decide whether two uses of a lexeme are distinct enough to be considered separate senses.
+    items:
+      title: Sense
+      type:  object
+      $ref:  'http://cdn.digitallinguistics.io/schemas/Sense.json'
+      description: A sense or meaning for this lexeme.
+
   sources:
     title:       Sources
     type:        array
