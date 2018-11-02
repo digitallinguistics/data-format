@@ -191,7 +191,7 @@ Schema                          | Description
 [`Address`][8]                  | A postal address
 [`Bibliographic Reference`][15] | A bibliographic reference
 [`Bundle`][3]                   | A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day
-[`DatabaseReference`][13]       | An Object that contains a reference to another item in the database
+[`Database Reference`][13]      | An Object that contains a reference to another item in the database
 [`Location`][17]                | A location with optional geographic coordinates
 [`Media File`][5]               | Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)
 [`MultiLangString`][14]         | An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study
