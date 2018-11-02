@@ -1,4 +1,4 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
+$schema: 'http://json-schema.org/schema#'
 $id:     'http://cdn.digitallinguistics.io/schemas/Sense-1.0.0.json'
 title:   Sense
 type:    object
@@ -9,6 +9,10 @@ required:
   - gloss
 
 additionalProperties: true
+
+dependencies:
+  variantType:
+    - variantOf
 
 properties:
 
@@ -22,15 +26,15 @@ properties:
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
     description: The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix *‑s* would have this this property set to `verb`, and the English derivational suffix *‑ize* would have this property set to `noun`.
 
-    definition:
-      title: Definition
-      $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-      description: The definition for this particular sense, optionally in multiple languages
+  definition:
+    title: Definition
+    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    description: The definition for this particular sense, optionally in multiple languages
 
-    derives:
-      title: Derived Category
-      $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-      description: If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix *‑er* would have this property set to `noun`, since this suffix derives nouns from verbs. May be in multiple languages.
+  derives:
+    title: Derived Category
+    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    description: If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix *‑er* would have this property set to `noun`, since this suffix derives nouns from verbs. May be in multiple languages.
 
   examples:
     title:       Examples
@@ -43,15 +47,15 @@ properties:
       $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
       description: A database reference to an Utterance object
 
-    gloss:
-      title: Gloss
-      $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
-      description: A Leipzig-style gloss for this sense. A gloss must be provided in at least one language.
-      oneOf:
-        - type:          string
-          minLength:     1
-        - type:          object
-          minProperties: 1
+  gloss:
+    title: Gloss
+    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    description: A Leipzig-style gloss for this sense. A gloss must be provided in at least one language.
+    oneOf:
+      - type:          string
+        minLength:     1
+      - type:          object
+        minProperties: 1
 
   lexicalRelations:
     title:       Lexical Relations
