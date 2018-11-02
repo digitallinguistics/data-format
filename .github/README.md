@@ -177,6 +177,7 @@ The DLx project provides recommendations for how to format linguistic data in JS
 * [Morpheme Token](https://spec.digitallinguistics.io/schemas/Morpheme.html)
 * [Lexeme](https://spec.digitallinguistics.io/schemas/Lexeme.html)
 * [Sense](https://spec.digitallinguistics.io/schemas/Sense.html)
+* [Lexeme Form](https://spec.digitallinguistics.io/schemas/LexemeForm.html)
 * [Phoneme](https://spec.digitallinguistics.io/schemas/Phoneme.html)
 * [Transcription](https://spec.digitallinguistics.io/schemas/Transcription.html)
 * [Translation](https://spec.digitallinguistics.io/schemas/Translation.html)

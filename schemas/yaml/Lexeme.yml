@@ -112,7 +112,7 @@ properties:
     title:       Lexical Relations
     type:        array
     uniqueItems: true
-    description: A list of the lexical relations that this lexeme has to other lexemes. Each item is a Database Reference, and must also have a property called `relation`, indicating the type of lexical relation.
+    description: A list of the lexical relations that this lexeme has to other lexemes. Each item is a Database Reference, and must also have a property called `relation`, indicating the type of lexical relation. For precision's sake, lexical relations should be specified for individual senses rather than the entire lexeme whenever possible.
     items:
       allOf:
 
@@ -140,6 +140,17 @@ properties:
     title: Literal Meaning
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
     description: The literal meaning of the lexeme, optionally in multiple languages
+
+  media:
+    title:       Media
+    type:        array
+    uniqueItems: true
+    description: Media items associated with this lexeme, such as recordings of the citation form of the word, pictures of the item this word refers to, or videos of the action being performed. If a media item pertains a specific sense or form, it should be placed in that sense or form's `media` field instead.
+    items:
+      title: Media Item (Database Reference)
+      type:  object
+      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      description: A database reference to a media item associated with this lexeme
 
   notes:
     title:       Notes
@@ -199,10 +210,11 @@ properties:
     title:       Sources
     type:        array
     uniqueItems: true
-    description: A list of attested sources for this lexeme, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it.
+    description: A list of attested sources for this lexeme, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible.
     items:
-      title: Source
-      type:  string
+      title:     Source
+      type:      string
+      minLength: 1
       description: An attested source for this lexeme. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or a citation to a published text in which the lexeme appears.
 
   tags:
