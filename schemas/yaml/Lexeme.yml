@@ -85,6 +85,17 @@ properties:
           minLength: 1
           description: Individual features must be represented as Strings
 
+  forms:
+    title:       Lexeme Base Forms
+    type:        array
+    uniqueItems: true
+    description: "A collection of base forms for this lexeme, i.e. the different forms that this lexeme or morpheme may take, exclusive of its regular inflectional variants. Each base form typically corresponds to a lexical entry in a dictionary. For example: the lexeme *man* would include the forms *man* and *men*; the lexeme *run* would include the forms *run* and *ran*, but not *runs* or *running*, because these are regularly-inflected and therefore predictable; the lexeme *be* would include *am*, *are*, *is*, etc., because these are irregular / suppletive forms, but would not include *being*."
+    items:
+      title: Lexeme Base Form
+      type:  object
+      $ref:  'http://cdn.digitallinguistics.io/schemas/LexemeForm.json'
+      description: One of the base forms of this lexeme
+
   language:
     title: Language (DatabaseReference)
     type:  object
