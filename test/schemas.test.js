@@ -22,7 +22,7 @@ describe(`schemas`, () => {
 
     schemas.forEach(schema => {
 
-      const IDRegExp     = /schemas\/(?<schemaID>.+).json/;
+      const IDRegExp     = /\.io\/(?<schemaID>.+).json/;
       const { schemaID } = IDRegExp.exec(schema.$id).groups;
 
       const validate = data => ajv.validate(schemaID, data);

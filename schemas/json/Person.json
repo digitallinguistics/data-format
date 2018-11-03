@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Person-4.1.3.json",
+  "$id": "http://schemas.digitallinguistics.io/Person-4.2.0.json",
   "title": "Person",
   "type": "object",
   "description": "An object providing information about a Person",
@@ -25,19 +25,19 @@
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
       "description": "An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials."
     },
     "access": {
       "title": "Access Rights",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
+      "$ref": "http://schemas.digitallinguistics.io/Access.json",
       "description": "The access rights for information about this person"
     },
     "address": {
       "title": "Address",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Address.json",
+      "$ref": "http://schemas.digitallinguistics.io/Address.json",
       "description": "The address for this person"
     },
     "birthDate": {
@@ -49,7 +49,7 @@
     "birthPlace": {
       "title": "Birth Place (Database Reference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "A database reference to this person’s place of birth, as a Location object"
     },
     "email": {
@@ -84,7 +84,7 @@
           {
             "title": "Language",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/Language.json",
+            "$ref": "http://schemas.digitallinguistics.io/Language.json",
             "description": "Each item in the `languages` Array must be a valid Language object"
           },
           {
@@ -104,7 +104,7 @@
                 "items": {
                   "title": "Note",
                   "type": "object",
-                  "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+                  "$ref": "http://schemas.digitallinguistics.io/Note.json",
                   "description": "A note about this person’s use of this language"
                 }
               },
@@ -137,7 +137,7 @@
       "items": {
         "title": "Note",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "$ref": "http://schemas.digitallinguistics.io/Note.json",
         "description": "A note about this person"
       }
     },
@@ -166,7 +166,7 @@
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this Person"
     },
     "url": {

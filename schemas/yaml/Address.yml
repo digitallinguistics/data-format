@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Address-2.1.3.json'
+$id:     'http://schemas.digitallinguistics.io/Address-2.2.0.json'
 title:   Address
 type:    object
 

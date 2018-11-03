@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Location-3.2.3.json'
+$id:     'http://schemas.digitallinguistics.io/Location-3.3.0.json'
 title:   Location
 type:    object
 
@@ -27,19 +27,19 @@ properties:
   abbreviation:
     title: Abbreviation
     type:  string
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+    $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
     description: 'An abbreviation for this Location'
 
   access:
     title: 'Access Rights'
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Access.json'
+    $ref:  'http://schemas.digitallinguistics.io/Access.json'
     description: 'Since locations sometimes contain personal information like addresses, it is important to consider the proper access management policy for them.'
 
   address:
     title: Address
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Address.json'
+    $ref:  'http://schemas.digitallinguistics.io/Address.json'
     description: 'An address associated with this location'
 
   dateCreated:
@@ -72,7 +72,7 @@ properties:
 
   name:
     title: Name
-    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'A name for this location, e.g. `Susan’s House` or `Valley High School`, or `Shenandoah River`, optionally in multiple languages. The name must be provided in at least one language.'
 
   notes:
@@ -83,7 +83,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
+      $ref:  'http://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this location'
 
   references:
@@ -94,13 +94,13 @@ properties:
     items:
       title: Reference
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/BibliographicReference.json'
+      $ref: 'http://schemas.digitallinguistics.io/BibliographicReference.json'
       description: 'A bibliographic reference about this location'
 
   tags:
     title: Tags
     type:  object
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    $ref: 'http://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this Location'
 
   url:

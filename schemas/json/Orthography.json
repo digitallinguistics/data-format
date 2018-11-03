@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Orthography-3.1.4.json",
+  "$id": "http://schemas.digitallinguistics.io/Orthography-3.2.0.json",
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
@@ -24,7 +24,7 @@
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
       "description": "An abbreviation for this Orthography"
     },
     "direction": {
@@ -98,7 +98,7 @@
     },
     "name": {
       "title": "Orthography Name",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`). The name of the orthography must be provided in at least one language."
     },
     "notes": {
@@ -109,7 +109,7 @@
       "items": {
         "title": "Note",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "$ref": "http://schemas.digitallinguistics.io/Note.json",
         "description": "A note about this orthography"
       }
     },
@@ -127,7 +127,7 @@
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this orthography"
     },
     "url": {

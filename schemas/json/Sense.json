@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Sense-1.0.1.json",
+  "$id": "http://schemas.digitallinguistics.io/Sense-1.1.0.json",
   "title": "Sense",
   "type": "object",
   "description": "A *sense* is one of the possible meanings of a lexeme. For example, the lexeme *run* has many different senses, such as as \"run in a race\" and \"run water in a sink\". It is up to the linguist to decide whether two particular uses of a lexeme count as the same sense or different senses.",
@@ -21,17 +21,17 @@
     },
     "category": {
       "title": "Lexical Category (Part of Speech, Morphosyntactic Class, etc.)",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix *‑s* would have this this property set to `verb`, and the English derivational suffix *‑ize* would have this property set to `noun`."
     },
     "definition": {
       "title": "Definition",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "The definition for this particular sense, optionally in multiple languages"
     },
     "derives": {
       "title": "Derived Category",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix *‑er* would have this property set to `noun`, since this suffix derives nouns from verbs. May be in multiple languages."
     },
     "examples": {
@@ -42,13 +42,13 @@
       "items": {
         "title": "Example Utterance (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to an Utterance object"
       }
     },
     "gloss": {
       "title": "Gloss",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "A Leipzig-style gloss for this sense. A gloss must be provided in at least one language.",
       "oneOf": [
         {
@@ -71,7 +71,7 @@
           {
             "title": "Lexeme (Database Reference)",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+            "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
             "description": "A database reference representing a lexical relation between two senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation."
           },
           {
@@ -82,7 +82,7 @@
               "relation": {
                 "title": "Relation Type",
                 "type": "string",
-                "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+                "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
                 "description": "The type of lexical relation that holds between the current sense and the referenced sense. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
               }
             }
@@ -104,7 +104,7 @@
       "items": {
         "title": "Media Item (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to a media item associated with this sense"
       }
     },
@@ -118,7 +118,7 @@
           {
             "title": "Note",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+            "$ref": "http://schemas.digitallinguistics.io/Note.json",
             "description": "A note about this sense"
           },
           {
@@ -155,7 +155,7 @@
       "items": {
         "title": "Reference",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/BibliographicReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/BibliographicReference.json",
         "description": "A bibliographic Reference about this sense"
       }
     },
@@ -179,7 +179,7 @@
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this sense"
     },
     "usages": {
@@ -189,14 +189,14 @@
       "description": "A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.",
       "items": {
         "title": "Usage",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+        "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
         "description": "An appropriate usage for this sense, optionally in multiple languages"
       }
     },
     "variantOf": {
       "title": "Variant Of",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "If this sense is a variant of another sense, a reference to the other sense should go here. For example, sometimes two speakers may use the same word with a slightly different set of senses. In American English, for instance, *Coke* is a specific brand of soda for most speakers, but a generic term for soda for other speakers. The generic sense would therefore be listed as a dialectal variant of the specific sense."
     },
     "variants": {
@@ -209,7 +209,7 @@
           {
             "title": "Variant (Database Reference)",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+            "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
             "description": "A database reference to a variant of this sense. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant."
           },
           {
@@ -219,7 +219,7 @@
             "properties": {
               "variantType": {
                 "title": "Variant Type",
-                "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+                "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
                 "description": "This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), etc. May be in multiple languages."
               }
             }
@@ -229,7 +229,7 @@
     },
     "variantType": {
       "title": "Variant Type",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "If this sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), etc. May be in multiple languages."
     }
   },

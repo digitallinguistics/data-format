@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Language-8.2.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Language-8.3.0.json",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -24,13 +24,13 @@
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
       "description": "A short, human-readable abbreviation for this Language"
     },
     "access": {
       "title": "Access Rights",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
+      "$ref": "http://schemas.digitallinguistics.io/Access.json",
       "description": "An object describing who may have access to materials on this language."
     },
     "additionalNames": {
@@ -61,7 +61,7 @@
               "note": {
                 "title": "Additional Language Note",
                 "type": "object",
-                "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+                "$ref": "http://schemas.digitallinguistics.io/Note.json",
                 "description": "A note about this additional language, explaining where it is used and who uses it. You should use the `language` property of the Note to describe what language this additional name is in."
               }
             }
@@ -72,7 +72,7 @@
     "autonym": {
       "title": "Autonym",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
+      "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
       "description": "The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized."
     },
     "classification": {
@@ -93,7 +93,7 @@
       "items": {
         "title": "Contributor (Person - Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to a Person object describing a contributor"
       }
     },
@@ -149,13 +149,13 @@
       "items": {
         "title": "Location (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to a Location object describing a location where this language variety is spoken"
       }
     },
     "name": {
       "title": "Language Name",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "The name of this Language, optionally in multiple languages. There must be a name provided in at least one language. Use the `additionalNames` field to list names for this language that need additional explanation or notes, or if there are multiple names for this variety in a language."
     },
     "notes": {
@@ -166,7 +166,7 @@
       "items": {
         "title": "Note",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "$ref": "http://schemas.digitallinguistics.io/Note.json",
         "description": "A Note about this Language"
       }
     },
@@ -178,7 +178,7 @@
       "items": {
         "title": "Orthography",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Orthography.json",
+        "$ref": "http://schemas.digitallinguistics.io/Orthography.json",
         "description": "An orthography used to represent this language"
       }
     },
@@ -189,7 +189,7 @@
       "items": {
         "title": "Phoneme",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Phoneme.json",
+        "$ref": "http://schemas.digitallinguistics.io/Phoneme.json",
         "description": "A Phoneme object"
       }
     },
@@ -201,14 +201,14 @@
       "items": {
         "title": "Bibliographic Reference",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/BibliographicReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/BibliographicReference.json",
         "description": "A bibliographic reference about this language"
       }
     },
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this Language"
     },
     "url": {

@@ -49,7 +49,7 @@ async function loadSchemas() {
   for (const [, schema] of schemas) {
 
     // Extract the ID from the "id" property of the schema
-    const IDRegExp = /schemas\/(?<$id>.+)-/;
+    const IDRegExp = /\.io\/(?<$id>.+)-/;
     const { $id }   = IDRegExp.exec(schema.$id).groups;
 
     // Remove version number from ID for local testing purposes

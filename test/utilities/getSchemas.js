@@ -13,7 +13,7 @@ let schemas;
  */
 async function getSchemas() {
 
-  const IDRegExp = /schemas\/(?<schemaID>.+)-/;
+  const IDRegExp = /\.io\/(?<schemaID>.+)-/;
   const filenames = await readdir(schemasPath, `utf8`);
 
   if (schemas) return schemas;

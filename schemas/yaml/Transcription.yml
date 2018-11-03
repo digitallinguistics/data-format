@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Transcription-2.0.3.json'
+$id:     'http://schemas.digitallinguistics.io/Transcription-2.1.0.json'
 title:   Transcription
 type:    object
 

@@ -99,21 +99,21 @@ You can install the schemas to your computer using npm (`npm install @digitallin
 
 URL | Result
 --- | ------
-`https://cdn.digitallinguistics.io/schemas/{schema}` | latest version of the schema, as JSON
-`https://cdn.digitallinguistics.io/schemas/{schema}.json` | latest version of the schema, as JSON
-`https://cdn.digitallinguistics.io/schemas/{schema}.yml` | latest version of the schema, as YAML
-`https://cdn.digitallinguistics.io/schemas/{schema}-{X.X.X}` | specified version of the schema, as JSON
-`https://cdn.digitallinguistics.io/schemas/{schema}-{X.X.X}.json` | specified version of the schema, as JSON
-`https://cdn.digitallinguistics.io/schemas/{schema}-{X.X.X}.yml` | specified version of the schema, as YAML
+`https://schemas.digitallinguistics.io/{schema}` | latest version of the schema, as JSON
+`https://schemas.digitallinguistics.io/{schema}.json` | latest version of the schema, as JSON
+`https://schemas.digitallinguistics.io/{schema}.yml` | latest version of the schema, as YAML
+`https://schemas.digitallinguistics.io/{schema}-{X.X.X}` | specified version of the schema, as JSON
+`https://schemas.digitallinguistics.io/{schema}-{X.X.X}.json` | specified version of the schema, as JSON
+`https://schemas.digitallinguistics.io/{schema}-{X.X.X}.yml` | specified version of the schema, as YAML
 
 For example, you could access v1.0.0 of the `Language` schema in each of the following ways:
 
-* `https://cdn.digitallinguistics.io/schemas/Language`
-* `https://cdn.digitallinguistics.io/schemas/Language.json`
-* `https://cdn.digitallinguistics.io/schemas/Language.yml`
-* `https://cdn.digitallinguistics.io/schemas/Language-1.0.0`
-* `https://cdn.digitallinguistics.io/schemas/Language-1.0.0.json`
-* `https://cdn.digitallinguistics.io/schemas/Language-1.0.0.yml`
+* `https://schemas.digitallinguistics.io/Language`
+* `https://schemas.digitallinguistics.io/Language.json`
+* `https://schemas.digitallinguistics.io/Language.yml`
+* `https://schemas.digitallinguistics.io/Language-1.0.0`
+* `https://schemas.digitallinguistics.io/Language-1.0.0.json`
+* `https://schemas.digitallinguistics.io/Language-1.0.0.yml`
 
 ## Best Practices
 

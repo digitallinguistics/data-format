@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Access-3.0.3.json",
+  "$id": "http://schemas.digitallinguistics.io/Access-3.1.0.json",
   "title": "Access Rights",
   "type": "object",
   "description": "The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: researcher only`, etc. **Note:** The Access object does not have a `type` property.",
@@ -10,7 +10,7 @@
   "properties": {
     "notes": {
       "title": "Access Notes",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "Notes about access rights for this resource, or any other special considerations regarding who should have Access. This attribute should be a MultiLangString rather than an Array of Note objects."
     },
     "AILLA": {
