@@ -379,6 +379,15 @@ examples:
       IPA: ékeɣusií
       Gus: ékegusií
       Swa: ekegusii
+    classification:
+      - Niger-Congo
+      - Atlantic-Congo
+      - Benue-Congo
+      - Bantoid
+      - Bantu
+      - Northeast Bantu
+      - Great Lakes Bantu
+      - Logooli-Kuria (E40)
     contributors:
       - abbreviation: KB
         roles:
