@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Word-4.1.3.json'
+$id:     'http://schemas.digitallinguistics.io/Word-4.1.3.json'
 title:   Word
 type:    object
 
@@ -27,7 +27,7 @@ properties:
 
   gloss:
     title: Gloss
-    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.'
 
   key:
@@ -44,7 +44,7 @@ properties:
     items:
       title: Morpheme
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Morpheme.json'
+      $ref: 'http://schemas.digitallinguistics.io/Morpheme.json'
       description: 'An object representing this morpheme. This is *not* an object representing a lexeme (the abstract type). It represents the specific morpheme token (the particular instance in speech) instead.'
 
   notes:
@@ -55,7 +55,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+      $ref: 'http://schemas.digitallinguistics.io/Note.json'
       description: 'A Note about this token'
 
   phonemes:
@@ -99,7 +99,7 @@ properties:
           items:
             title: Note
             type:  object
-            $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+            $ref: 'http://schemas.digitallinguistics.io/Note.json'
             description: 'A note about this phone. Useful for one-time observations of interesting allophonic variation in the data.'
 
         phoneme:
@@ -116,7 +116,7 @@ properties:
         tags:
           title: Tags
           type:  object
-          $ref:  'http://cdn.digitallinguistics.io/schemas/Tags.json'
+          $ref:  'http://schemas.digitallinguistics.io/Tags.json'
           description: 'A set of tags for this phone'
 
   startTime:
@@ -128,20 +128,20 @@ properties:
   tags:
     title: Tags
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this word token'
 
   transcription:
     title:         Transcription
     type:          object
     minProperties: 1
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
+    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
     description: 'A transcription of this word token, optionally in multiple orthographies. A transcription must be provided in at least one orthography.'
 
   translation:
     title: Translation
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Translation.json'
+    $ref:  'http://schemas.digitallinguistics.io/Translation.json'
     description: 'A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.'
 
 examples:

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "id": "http://cdn.digitallinguistics.io/schemas/Reference-2.2.0.json",
+  "id": "http://schemas.digitallinguistics.io/Reference-2.2.0.json",
   "title": "Bibliographic Reference",
   "type": "object",
   "description": "A bibliographic Reference. Note: The `type` field in a reference refers to the type of reference, not the type of DLx object.",

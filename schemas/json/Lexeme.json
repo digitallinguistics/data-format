@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Lexeme-8.0.1.json",
+  "$id": "http://schemas.digitallinguistics.io/Lexeme-8.0.1.json",
   "title": "Lexeme",
   "type": "object",
   "description": "A *lexeme* is an abstract entity that represents all the various forms of a word. In DLx, a lexeme refers broadly to any bundle of related senses and forms, whether the item is an individual word, morpheme, idiom, etc. — anything that constitues a semantic unit. Examples of lexemes in English might include *be*, *run up*, and *‑ing*. A lexeme will typically have multiple *senses* or meanings, and those are listed in the `senses` property. It is up to the linguist to decide when two meanings are related, and therefore belong to the same lexeme, or when they belong to different lexemes. A lexeme often also has multiple base forms, such as suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc. These are listed in the `forms` field. The `forms` field should **not** be used to list all the regularly-inflected forms of a word. Individual base forms may have phonologically-conditioned allomorphs, and these are listed in the `allomorphs` field of the form. The lexeme and its forms and senses may also have variations, such as dialectal and idiolectal variants, rapid speech variants, register-based variants, variations in meaning, or even spelling variants. These are listed in the `variants` fields. By convention, one of the forms of a lexeme is typically chosen as a representative headword or *lemma*, and this is indicated by the `lemma` field. For example, the form *man* is typically used as the lemma/headword for the lexeme that includes the forms *man* and *men*. Note that the DLx Lexeme does **not** represent a lexical entry in a dictionary. Dictionaries typically list each base form of a lexeme as a separate lexical entry. The DLx Lexeme lists puts each of these lexical entries together in the `forms` field instead.",
@@ -37,7 +37,7 @@
     "citationForm": {
       "title": "Citation Form",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
+      "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
       "description": "The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in Swahili the citation form of a verb is typically the infinitive, e.g. *kuandika* `to write`, even though *‑andika* is typically used as its lemma form. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field."
     },
     "dateCreated": {
@@ -74,7 +74,7 @@
       "items": {
         "title": "Example Utterance (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to an Utterance object"
       }
     },
@@ -86,7 +86,7 @@
         {
           "title": "Tags",
           "type": "object",
-          "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+          "$ref": "http://schemas.digitallinguistics.io/Tags.json",
           "description": "The Features object must be a Tags object"
         },
         {
@@ -107,20 +107,20 @@
       "items": {
         "title": "Lexeme Base Form",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/LexemeForm.json",
+        "$ref": "http://schemas.digitallinguistics.io/LexemeForm.json",
         "description": "One of the base forms of this lexeme"
       }
     },
     "language": {
       "title": "Language (DatabaseReference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "The language of this Lexeme. This property is most useful when working with lexical data from multiple languages."
     },
     "lemma": {
       "title": "Lemma",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
+      "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
       "description": "A *lemma* is the form of a lexeme conventionally used to represent that Lexeme. It may differ drastically from the citation form. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs)."
     },
     "lexicalRelations": {
@@ -133,7 +133,7 @@
           {
             "title": "Lexeme (Database Reference)",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+            "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
             "description": "A database reference representing a lexical relation between two lexemes or senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation."
           },
           {
@@ -144,7 +144,7 @@
               "relation": {
                 "title": "Relation Type",
                 "type": "string",
-                "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+                "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
                 "description": "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
               }
             }
@@ -160,7 +160,7 @@
     },
     "literalMeaning": {
       "title": "Literal Meaning",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "The literal meaning of the lexeme, optionally in multiple languages"
     },
     "media": {
@@ -171,7 +171,7 @@
       "items": {
         "title": "Media Item (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to a media item associated with this lexeme"
       }
     },
@@ -185,7 +185,7 @@
           {
             "title": "Note",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+            "$ref": "http://schemas.digitallinguistics.io/Note.json",
             "description": "A note about this lexeme"
           },
           {
@@ -222,7 +222,7 @@
       "items": {
         "title": "Reference",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/BibliographicReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/BibliographicReference.json",
         "description": "A bibliographic Reference about this lexeme"
       }
     },
@@ -235,7 +235,7 @@
       "items": {
         "title": "Sense",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Sense.json",
+        "$ref": "http://schemas.digitallinguistics.io/Sense.json",
         "description": "A sense or meaning for this lexeme."
       }
     },
@@ -254,7 +254,7 @@
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this lexeme"
     },
     "url": {
@@ -266,7 +266,7 @@
     "variantOf": {
       "title": "Variant Of",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "If this lexeme is a variant of another lexeme, this field should contain a reference to the other Lexeme. Lexemes may only be variants of one other Lexeme."
     },
     "variants": {
@@ -279,7 +279,7 @@
           {
             "title": "Variant (Database Reference)",
             "type": "object",
-            "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+            "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
             "description": "A database reference to a variant of this lexeme. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant."
           },
           {
@@ -289,7 +289,7 @@
             "properties": {
               "variantType": {
                 "title": "Variant Type",
-                "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+                "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
                 "description": "This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages."
               }
             }
@@ -299,7 +299,7 @@
     },
     "variantType": {
       "title": "Variant Type",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages."
     }
   },

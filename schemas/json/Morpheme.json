@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Morpheme-3.1.2.json",
+  "$id": "http://schemas.digitallinguistics.io/Morpheme-3.1.2.json",
   "title": "Morpheme Token",
   "type": "object",
   "description": "A *morpheme token* is a particular instance of a morpheme in a text. In DLx, the primary function of the Morpheme object is to provide a concise, short description of each token of a morpheme in a corpus - its form, its gloss, and a reference to a lexeme where more information can be found.",
@@ -19,13 +19,13 @@
     },
     "gloss": {
       "title": "Gloss",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "A gloss for this morpheme, optionally in multiple languages. The gloss must be provided in at least one language."
     },
     "lexeme": {
       "title": "Lexeme (Database Reference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "A database reference to a lexeme where more information about this morpheme may be found"
     },
     "notes": {
@@ -36,21 +36,21 @@
       "items": {
         "title": "Note",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json",
+        "$ref": "http://schemas.digitallinguistics.io/Note.json",
         "description": "A note about this morpheme token"
       }
     },
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this morpheme token"
     },
     "transcription": {
       "title": "Transcription",
       "type": "object",
       "minProperties": 1,
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Transcription.json",
+      "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
       "description": "A transcription of this morpheme token. Should be a transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs."
     }
   },

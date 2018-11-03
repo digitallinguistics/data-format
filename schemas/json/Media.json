@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Media-5.2.2.json",
+  "$id": "http://schemas.digitallinguistics.io/Media-5.2.2.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",
@@ -24,18 +24,18 @@
     "abbreviation": {
       "title": "Abbreviation",
       "type": "string",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Abbreviation.json",
+      "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
       "description": "An abbreviation for referring to this file"
     },
     "access": {
       "title": "Access Rights",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Access.json",
+      "$ref": "http://schemas.digitallinguistics.io/Access.json",
       "description": "Access rights for this media file"
     },
     "content": {
       "title": "Content",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/MultiLangString.json",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
       "description": "A description of the content of this file, optionally in multiple languages"
     },
     "contentType": {
@@ -46,7 +46,7 @@
     "creator": {
       "title": "Creator (Person - Database Reference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "A database reference to the person who created this specific file"
     },
     "dateCreated": {
@@ -113,7 +113,7 @@
       "items": {
         "title": "Language (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to this language"
       }
     },
@@ -132,7 +132,7 @@
     "location": {
       "title": "Location (Database Reference)",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
       "description": "A database reference to the location where the content in this media file was recorded or produced"
     },
     "mediaURL": {
@@ -148,7 +148,7 @@
       "description": "A collection of notes about this media item.",
       "items": {
         "title": "Note",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/Note.json"
+        "$ref": "http://schemas.digitallinguistics.io/Note.json"
       }
     },
     "original": {
@@ -165,7 +165,7 @@
       "items": {
         "title": "Person (Database Reference)",
         "type": "object",
-        "$ref": "http://cdn.digitallinguistics.io/schemas/DatabaseReference.json",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
         "description": "A database reference to a person who appears in this file"
       }
     },
@@ -184,7 +184,7 @@
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this media item"
     },
     "url": {

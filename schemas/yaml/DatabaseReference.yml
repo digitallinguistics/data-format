@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/DatabaseReference-4.2.1.json'
+$id:     'http://schemas.digitallinguistics.io/DatabaseReference-4.2.1.json'
 title:   'Database Reference'
 type:    object
 
@@ -19,7 +19,7 @@ properties:
   abbreviation:
     title: Referenced Abbreviation
     type:  string
-    $ref:  http://cdn.digitallinguistics.io/schemas/Abbreviation.json
+    $ref:  http://schemas.digitallinguistics.io/Abbreviation.json
     description: The abbreviation of the referenced database item.
 
   id:
@@ -45,7 +45,7 @@ properties:
 
   name:
     title: Name
-    $ref:  http://cdn.digitallinguistics.io/schemas/MultiLangString.json
+    $ref:  http://schemas.digitallinguistics.io/MultiLangString.json
     description: The name of the referenced database item, optionally in multiple languages.
 
   referenceType:

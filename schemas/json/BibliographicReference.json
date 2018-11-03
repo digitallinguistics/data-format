@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/BibliographicReference-5.1.4.json",
+  "$id": "http://schemas.digitallinguistics.io/BibliographicReference-5.1.4.json",
   "title": "Bibliographic Reference",
   "type": "object",
   "description": "A bibliographic Reference",

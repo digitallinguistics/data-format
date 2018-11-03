@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Text-5.1.3.json'
+$id:     'http://schemas.digitallinguistics.io/Text-5.1.3.json'
 title:   Text
 type:    object
 
@@ -28,13 +28,13 @@ properties:
   abbreviation:
     title: Abbreviation
     type:  string
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Abbreviation.json'
+    $ref: 'http://schemas.digitallinguistics.io/Abbreviation.json'
     description: 'An abbreviation for this Text'
 
   access:
     title: 'Access Rights'
     type:  object
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Access.json'
+    $ref: 'http://schemas.digitallinguistics.io/Access.json'
     description: 'An object describing the acess rights to this Text'
 
   annotations:
@@ -45,7 +45,7 @@ properties:
     items:
       title: Annotation
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Annotation.json'
+      $ref:  'http://schemas.digitallinguistics.io/Annotation.json'
       description: 'An annotation on this text'
 
   contributors:
@@ -55,7 +55,7 @@ properties:
     items:
       title: Contributor (Person - DatabaseReference)
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
       description: 'A database reference to a Person object that describes this contributor.'
 
   dateCreated:
@@ -101,7 +101,7 @@ properties:
   location:
     title: Location
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
     description: 'A database reference to the location where this text was recorded'
 
   media:
@@ -112,7 +112,7 @@ properties:
     items:
       title: 'Media Items (Database Reference)'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/DatabaseReference.json'
+      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
       description: 'A database reference to an object describing a media file'
 
   notes:
@@ -123,7 +123,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Note.json'
+      $ref: 'http://schemas.digitallinguistics.io/Note.json'
       description: 'A Note object'
 
   references:
@@ -133,18 +133,18 @@ properties:
     items:
       title: Reference
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/BibliographicReference.json'
+      $ref: 'http://schemas.digitallinguistics.io/BibliographicReference.json'
       description: 'A bibliographic reference about this text'
 
   tags:
     title: Tags
     type:  object
-    $ref: 'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    $ref: 'http://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags associated with this Text'
 
   title:
     title: Title
-    $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
+    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'A title is a human-readable prose description of the content of the Text. The `title` object contains all the titles of the text, in one or more languages (at least one must be provided). Each attribute in the `title` object should be the abbreviation of a language, and its value should be the title of the text in that language.'
 
   url:
@@ -161,7 +161,7 @@ properties:
     items:
       title: Utterance
       type:  object
-      $ref: 'http://cdn.digitallinguistics.io/schemas/Utterance.json'
+      $ref: 'http://schemas.digitallinguistics.io/Utterance.json'
       description: 'An Utterance object'
 
 examples:

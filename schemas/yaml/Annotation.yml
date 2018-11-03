@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Annotation-2.1.3.json'
+$id:     'http://schemas.digitallinguistics.io/Annotation-2.1.3.json'
 title:   Annotation
 type:    object
 
@@ -35,13 +35,13 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
+      $ref:  'http://schemas.digitallinguistics.io/Note.json'
       description: 'A Note about this Annotation'
 
   tags:
     title: Tags
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this Annotation'
 
 allOf:

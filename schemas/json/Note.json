@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Note-4.2.2.json",
+  "$id": "http://schemas.digitallinguistics.io/Note-4.2.2.json",
   "title": "Note",
   "type": "object",
   "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
@@ -60,7 +60,7 @@
     "tags": {
       "title": "Tags",
       "type": "object",
-      "$ref": "http://cdn.digitallinguistics.io/schemas/Tags.json",
+      "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags that apply to this Note. Useful for tagging notes that need review or responses, or marking a note as resolved."
     },
     "text": {

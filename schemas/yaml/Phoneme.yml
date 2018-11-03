@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Phoneme-4.2.2.json'
+$id:     'http://schemas.digitallinguistics.io/Phoneme-4.2.2.json'
 title:   Phoneme
 type:    object
 
@@ -162,7 +162,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/Note.json'
+      $ref:  'http://schemas.digitallinguistics.io/Note.json'
       description: 'A Note about this Phoneme'
 
   place:
@@ -195,7 +195,7 @@ properties:
     items:
       title: 'Bibliographic Reference'
       type:  object
-      $ref:  'http://cdn.digitallinguistics.io/schemas/BibliographicReference.json'
+      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
       description: 'A bibliographic reference'
 
   rounding:
@@ -211,7 +211,7 @@ properties:
   tags:
     title: Tags
     type:  object
-    $ref:  'http://cdn.digitallinguistics.io/schemas/Tags.json'
+    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this phoneme'
 
   target1:
