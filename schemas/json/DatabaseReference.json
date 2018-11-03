@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/DatabaseReference-4.2.1.json",
+  "$id": "http://schemas.digitallinguistics.io/DatabaseReference-4.3.0.json",
   "title": "Database Reference",
   "type": "object",
   "description": "A reference to an item in a database, used when you wish to store an item separately in the database (following a relational database model), rather than inline. A disadvantage of this approach is that it often requires making multiple database calls. To avoid this, in most cases the actual object can be used instead of a database reference. For example, instead of making a reference to a separate Person file, you can simply include the Person object directly in place of the database reference. This is useful when you don't want to deal with cross references and multiple database calls. In this case, it is often a good idea to include just a minimal set of data. For a person, for example, you might include just the ID, abbreviation, family name, and given name. This prevents you from having to replicate all of the data about that Person each time it is used.",

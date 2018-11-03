@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Word-4.1.3.json",
+  "$id": "http://schemas.digitallinguistics.io/Word-4.2.0.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
