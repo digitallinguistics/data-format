@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Media-5.2.1.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Media-5.2.2.json",
   "title": "Media File",
   "type": "object",
   "description": "An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.",

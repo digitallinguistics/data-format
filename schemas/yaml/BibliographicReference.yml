@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/BibliographicReference-5.1.3.json'
+$schema: 'http://json-schema.org/draft-07/schema#'
+$id:     'http://cdn.digitallinguistics.io/schemas/BibliographicReference-5.1.4.json'
 title:   'Bibliographic Reference'
 type:    object
 
