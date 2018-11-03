@@ -203,3 +203,22 @@ properties:
     description: If this sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), etc. May be in multiple languages.
 
 examples:
+
+  - argumentStructure: eat(agent, patient)
+    category:          transitive verb
+    definition:        to eat
+    gloss:             eat
+    link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2
+
+  - category:   verb
+    definition: A suffix that derives transitive verbs from intransitive verbs
+    derives:    verb
+    gloss:      TR
+    link:       https://data.digitallinguistics.io/languages/Chitimacha/lexemes/t1/senses/1
+
+  - category:   noun
+    definition: a male
+    gloss:      male
+    media:
+      - id:       b032fe58-0deb-44fc-8001-e3ba63145417
+        filename: qasi-2.jpg

@@ -1,6 +1,6 @@
 $schema: 'http://json-schema.org/schema#'
 $id:     'http://cdn.digitallinguistics.io/schemas/LexemeForm-1.0.0.json'
-title:   Lexeme Base Form
+title:   Lexeme Form
 type:    object
 
 description: The *base forms* of a lexeme are the minimal set of forms needed to determine the full set of inflectional possibilities of a lexeme. These include suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc., while the lexeme *man* has the base forms *man* and *men*. A base form does **not** refer to a regularly-inflected, predictable form like *being* or *cats*. Principal parts of verbs in Latin are another example of base forms, since they are the minimal set of forms that someone must know to determine all the inflectional possibilities of a verb.
@@ -33,11 +33,6 @@ properties:
         - transcription
       additionalProperties: true
       properties:
-        transcription:
-          title: Transcription
-          type:  object
-          $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
-          description: A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
         environments:
           title:       Environments
           type:        array
@@ -48,6 +43,19 @@ properties:
             type:      string
             minLength: 1
             description: A formalization of a (morpho)phonologial environemnt, e.g. `_k`
+        syllableStructure:
+          title: Syllable Structure
+          type:  string
+          description: An abstract representation of the syllable structure of this allomorph, e.g. `CVC`
+        tone:
+          title: Tone
+          type:  string
+          description: "An abstract representation of the tonal pattern of this allomorph. Examples: `HLH`, `313`, `˦˨˦` etc."
+        transcription:
+          title: Transcription
+          type:  object
+          $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
+          description: A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
 
   components:
     title:       Components
@@ -180,7 +188,7 @@ properties:
   tone:
     title: Tone
     type:  string
-    description: "An abstract representation of the tonal pattern of this lexeme or variant. Examples: `HLH`, `313`, `˦˨˦` etc."
+    description: "An abstract representation of the tonal pattern of this lexeme form. Examples: `HLH`, `313`, `˦˨˦` etc."
 
   transcription:
     title: Transcription
@@ -221,3 +229,35 @@ properties:
     description: If this form is a variant of another lexeme form, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:
+  - allomorphs:
+      - environments:
+          - _m
+        syllableStructure: CVC
+        transcription:
+          APA:  kʼuš
+          IPA:  kˀuš
+          Mod:  gux
+          Swad: guš
+    components:
+      - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
+        key:           gux
+      - id:            797f0f6b-3024-4d0c-bbfc-a1bc7cc48b81
+        key:           't1'
+    inflectionClass:   main verb
+    link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/forms/guxt
+    media:
+      - id:            24a14428-f2e7-47a8-8d4f-00c4437f6c3a
+        filename:      guxt.wav
+    morphemeType:      stem
+    sources:
+      - Dur 13
+    syllableStructure: CVCC
+    transcription:
+      APA:  kʼušt
+      IPA:  kˀušt
+      Mod:  guxt
+      Swad: gušt
+    variants:
+      - id:          0f765e8d-1401-4c01-a88f-3092d077813b
+        key:         guxma
+        variantType: pluractional

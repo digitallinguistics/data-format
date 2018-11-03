@@ -260,3 +260,64 @@ properties:
     title: Variant Type
     $ref:  'http://cdn.digitallinguistics.io/schemas/MultiLangString.json'
     description: If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
+
+examples:
+  - citationForm:
+      APA:          kʼušti
+      IPA:          kˀušti
+      Mod:          guxti
+      Swad:         gušti
+    dateCreated:    '2018-11-03T00:23:55.842Z'
+    dateModified:   '2018-11-03T00:24:04.730Z'
+    id:             783cbaa8-befe-4049-bfe4-bb5688173780
+    key:            guxt
+    language:
+      abbreviation: chiti
+      id:           3d91a22d-005b-4ec5-8151-09e44629f58f
+    lemma:
+      APA:          kʼušt
+      IPA:          kˀušt
+      Mod:          guxt
+      Swad:         gušt
+    link:           https://explorer.digitallinguistics.io/languages/Chitimacha/lexemes/guxt
+    type:           Lexeme
+    url:            https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt
+    forms:
+      - allomorphs:
+          - environments:
+              - _m
+            syllableStructure: CVC
+            transcription:
+              APA:  kʼuš
+              IPA:  kˀuš
+              Mod:  gux
+              Swad: guš
+        components:
+          - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
+            key:           gux
+          - id:            797f0f6b-3024-4d0c-bbfc-a1bc7cc48b81
+            key:           't1'
+        inflectionClass:   main verb
+        link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/forms/guxt
+        media:
+          - id:            24a14428-f2e7-47a8-8d4f-00c4437f6c3a
+            filename:      guxt.wav
+        morphemeType:      stem
+        sources:
+          - Dur 13
+        syllableStructure: CVCC
+        transcription:
+          APA:  kʼušt
+          IPA:  kˀušt
+          Mod:  guxt
+          Swad: gušt
+        variants:
+          - id:          0f765e8d-1401-4c01-a88f-3092d077813b
+            key:         guxma
+            variantType: pluractional
+    senses:
+      - argumentStructure: eat(agent, patient)
+        category:          transitive verb
+        definition:        to eat
+        gloss:             eat
+        link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2
