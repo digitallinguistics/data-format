@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.0.1.json'
+$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.1.0.json'
 title:   Lexeme Form
 type:    object
 
