@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.1.3.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/Language-8.2.0.json'
 title:   Language
 type:    object
 
@@ -69,6 +69,15 @@ properties:
     type:  object
     $ref:  'http://cdn.digitallinguistics.io/schemas/Transcription.json'
     description: 'The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.'
+
+  classification:
+    title: Genetic Classification
+    type:  array
+    description: "The genetic classification of this language. This property must be an array of language families (in English), with larger family groupings listed before smaller ones. For example, Spanish might have an array of the following strings: `Indo-European`, `Romance`, `Ibero-Romance`. For language isolates, this property should be an array containing the single string, `isolate`."
+    items:
+      title: Language Family
+      type:  string
+      description: The name of a language family, as a string, in English.
 
   contributors:
     title:       Contributors
