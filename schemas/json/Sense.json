@@ -1,6 +1,6 @@
 {
-  "$schema": "http://json-schema.org/schema#",
-  "$id": "http://cdn.digitallinguistics.io/schemas/Sense-1.0.0.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://cdn.digitallinguistics.io/schemas/Sense-1.0.1.json",
   "title": "Sense",
   "type": "object",
   "description": "A *sense* is one of the possible meanings of a lexeme. For example, the lexeme *run* has many different senses, such as as \"run in a race\" and \"run water in a sink\". It is up to the linguist to decide whether two particular uses of a lexeme count as the same sense or different senses.",
