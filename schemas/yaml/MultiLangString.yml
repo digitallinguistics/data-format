@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://cdn.digitallinguistics.io/schemas/MultiLangString-4.0.2.json'
+$id:     'http://cdn.digitallinguistics.io/schemas/MultiLangString-4.0.3.json'
 title:   'Multi-Language Text / String'
 
 description: 'A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the [Transcription](https://spec.digitallinguistics.github.io/schemas/Transcription.html) and [Translation](https://spec.digitallinguistics.github.io/schemas/Translation.html) schemas). For example, the part of speech for a lexeme might be given as both English *noun* and Spanish *nombre*. Each key must be the abbreviation for a language (see the [Abbreviation](https://spec.digitallinguistics.github.io/schemas/Abbreviation.html) schema), and the value for that key is the string of text in that language. **Note:** MultiLangStrings do not have a `type` property.\n\nIf the text is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of `gloss: { eng: "M.SG" }` you can simply write `gloss: "M.SG"`.'
