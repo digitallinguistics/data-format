@@ -40,7 +40,7 @@
     "azure-storage": "^2.10.2",
     "chalk": "^2.4.1",
     "jasmine": "^3.3.0",
-    "jschemer": "^2.0.0-alpha.10",
+    "jschemer": "^3.0.2",
     "semver-regex": "^2.0.0",
     "yamljs": "^0.3.0"
   }
