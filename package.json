@@ -24,7 +24,7 @@
   },
   "repository": "https://github.com/digitallinguistics/spec.git",
   "engines": {
-    "node": ">=10.10.0"
+    "node": "10.x"
   },
   "dependencies": {},
   "devDependencies": {
