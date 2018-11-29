@@ -1,93 +1,243 @@
-
 <!DOCTYPE html>
-<html lang=en>
+<html lang=en dir=ltr>
 
   <head>
+
     <meta charset=utf-8>
-    <title>
-      Orthography
-    </title>
-    <meta name=viewport content='width=device-width'>
-    <link rel=stylesheet href="../jschemer.css" type=text/css>
+    <title>Orthography</title>
+    <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <link href=../schema-page.css rel=stylesheet>
+
   </head>
 
   <body>
 
+    <nav id=jschemer-nav aria-labelledby=jschemer-schemas-list-heading role=navigation>
+
+  <p><a href=../index.html>Home</a></p>
+
+  <h2 id=jschemer-schemas-list-heading>Schemas</h1>
+
+  <ul>
+      <li>
+        <p>
+          <a href='Abbreviation.html'>
+              Abbreviation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Access.html'>
+              Access Rights
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Address.html'>
+              Address
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Annotation.html'>
+              Annotation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Reference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='BibliographicReference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Bundle.html'>
+              Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='DatabaseReference.html'>
+              Database Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Language.html'>
+              Language
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Lexeme.html'>
+              Lexeme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='LexemeForm.html'>
+              Lexeme Form
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Location.html'>
+              Location
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Media.html'>
+              Media File
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Morpheme.html'>
+              Morpheme Token
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='MultiLangString.html'>
+              Multi-Language Text / String
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Note.html'>
+              Note
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Orthography.html'>
+              Orthography
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Person.html'>
+              Person
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Phoneme.html'>
+              Phoneme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Sense.html'>
+              Sense
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Tags.html'>
+              Tags
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Text.html'>
+              Text
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Transcription.html'>
+              Transcription
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Translation.html'>
+              Translation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Utterance.html'>
+              Utterance
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Word.html'>
+              Word
+          </a>
+        </p>
+      </li>
+  </ul>
+
+</nav>
+
     <main>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Orthography</h1>
-    </summary>
+      <section id=http://schemas.digitallinguistics.io/Orthography-3.2.0.json class=jschemer-schema>
 
 
-      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/draft-07/schema#">http://json-schema.org/draft-07/schema#</a></p>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Orthography
+          </h1>
+        </summary>
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.</p>
-</p>
-      </div>
+        <p class='$schema keyword'>
+          <b>Validate against:</b> <a href='http://json-schema.org/draft-07/schema#'>http://json-schema.org/draft-07/schema#</a>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+        <p class='$id keyword'>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Orthography-3.2.0.json</code>
+        </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='required object prop'>
-        <h2>Required Properties</h2>
-        <ul>
-            <li><code>graphemes</code></li>
-            <li><code>name</code></li>
-        </ul>
-      </div>
-
-        <p class='additional-properties object prop'>
-          <strong>Additional properties:</strong> true
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
-      <div class='properties object prop'>
-        <h2>Properties</h2>
-        <ul>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Type: <code>"type"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The type of object. Must be set to <code>Orthography</code>.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.</p>
+</div>
+        </section>
 
 
 
@@ -113,39 +263,133 @@
 
 
 
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>graphemes</code></li>
+                <li><code>name</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Type: <code>type</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+        <p class='readOnly keyword'>
+          <b>Read-only:</b> <code>true</code>
+        </p>
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The type of object. Must be set to <code>Orthography</code>.</p>
+</div>
+        </section>
 
 
 
 
 
-  </details>
+
+
+          <p>This item must have the following value:</p>
+          <pre><code>&quot;Orthography&quot;</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>ID: <code>"id"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A unique database identifier for this Orthography</p>
-</p>
-      </div>
+        <summary>
+          <h1 class='title keyword'>
+            ID: <code>id</code>
+          </h1>
+        </summary>
 
 
 
 
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A unique database identifier for this Orthography</p>
+</div>
+        </section>
 
 
 
@@ -171,60 +415,144 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An abbreviation for this Orthography</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Abbreviation: <code>abbreviation</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An abbreviation for this Orthography</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Abbreviation.json'>http://schemas.digitallinguistics.io/Abbreviation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Text Direction: <code>"direction"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The direction that this orthography is typically written in. If an orthography can be written in more than one direction, you should create a second Orthography for each direction it can be written in. The value of the <code>direction</code> field consists of two parts: the horizontal direction and the vertical direction, separated by a hyphen. Horizontal direction may be <code>ltr</code> (left-to-right), <code>rtl</code> (right-to-left), or <code>boustrophedon</code> (alternately left-to-right and right-to-left). Vertical direction may be either <code>ttb</code> (top-to-bottom) or <code>btt</code> (bottom-to-top).</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Text Direction: <code>direction</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The direction that this orthography is typically written in. If an orthography can be written in more than one direction, you should create a second Orthography for each direction it can be written in. The value of the <code>direction</code> field consists of two parts: the horizontal direction and the vertical direction, separated by a hyphen. Horizontal direction may be <code>ltr</code> (left-to-right), <code>rtl</code> (right-to-left), or <code>boustrophedon</code> (alternately left-to-right and right-to-left). Vertical direction may be either <code>ttb</code> (top-to-bottom) or <code>btt</code> (bottom-to-top).</p>
+</div>
+        </section>
 
 
 
@@ -233,23 +561,17 @@
 
 
 
-
-
-
-
-
-      <div class='enum any prop'>
-        <h2>Allowed Values (<code>enum</code>)</h2>
-        <ul>
-            <li><pre>&quot;ltr-ttb&quot;</pre></li>
-            <li><pre>&quot;rtl-ttb&quot;</pre></li>
-            <li><pre>&quot;ltr-btt&quot;</pre></li>
-            <li><pre>&quot;rtl-btt&quot;</pre></li>
-            <li><pre>&quot;boustrophedon-ttb&quot;</pre></li>
-            <li><pre>&quot;boustrophedon-btt&quot;</pre></li>
-        </ul>
-      </div>
-
+          <section class='enum keyword'>
+            <h2>Allowed Values</h2>
+            <ul>
+                <li><pre><code>&quot;ltr-ttb&quot;</code></pre></li>
+                <li><pre><code>&quot;rtl-ttb&quot;</code></pre></li>
+                <li><pre><code>&quot;ltr-btt&quot;</code></pre></li>
+                <li><pre><code>&quot;rtl-btt&quot;</code></pre></li>
+                <li><pre><code>&quot;boustrophedon-ttb&quot;</code></pre></li>
+                <li><pre><code>&quot;boustrophedon-btt&quot;</code></pre></li>
+            </ul>
+          </section>
 
 
 
@@ -257,43 +579,79 @@
 
 
 
-      <div class='default meta any prop'>
-        <h2>Default Value</h2>
-        <pre>&quot;ltr-ttb&quot;</pre>
-      </div>
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class='default keyword'>
+
+          <h2>Default Value</h2>
+
+          <p>The default value for this item is:</p>
+
+          <pre><code>&quot;ltr-ttb&quot;</code></pre>
+
+        </section>
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Graphemes: <code>"graphemes"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the <code>punctuation</code> attribute instead).</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Graphemes: <code>graphemes</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of graphemes, i.e. units of writing within a writing system, for this Orthography. Each grapheme is an attribute, and the value of that attribute is an object containing information about it. Punctuation characters should not be included in this collection (see the <code>punctuation</code> attribute instead).</p>
+</div>
+        </section>
 
 
 
@@ -306,461 +664,601 @@
 
 
 
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Grapheme</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An object representing a grapheme</p>
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='required object prop'>
-                  <h2>Required Properties</h2>
-                  <ul>
-                      <li><code>form</code></li>
-                  </ul>
-                </div>
-          
-                  <p class='additional-properties object prop'>
-                    <strong>Additional properties:</strong> false
-                  </p>
-          
-          
-          
-                <div class='properties object prop'>
-                  <h2>Properties</h2>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Allographs: <code>"allographs"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A list of all the allographs (graphical / writing variants) of the current grapheme. For example, <code>t</code> in an English orthography would have the allograph <code>T</code>. Generally the lowercase form of a letter should be used as the default.</p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Grapheme: <code>graphemes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An object representing a grapheme</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>form</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Allographs: <code>allographs</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of all the allographs (graphical / writing variants) of the current grapheme. For example, <code>t</code> in an English orthography would have the allograph <code>T</code>. Generally the lowercase form of a letter should be used as the default.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Allograph</h1>
-                        </summary>
-                    
-                    
-                    
-                    
-                    
-                    
-                          <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Allograph: <code>allographs</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
           </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Grapheme Form: <code>"form"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The written form of this grapheme. Graphemes should include their diacritics. For example, <code>c</code> and <code>č</code> should be considered separate graphemes, unless they are allographs. Do not include graphemes for characters that only occur as part of a digraph (or trigraph, etc.). For example, standard Swahili orthography has a grapheme <code>ch</code>, but no grapheme <code>c</code> by itself, so <code>c</code> would not be listed as a grapheme, only <code>ch</code>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Grapheme Form: <code>form</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The written form of this grapheme. Graphemes should include their diacritics. For example, <code>c</code> and <code>č</code> should be considered separate graphemes, unless they are allographs. Do not include graphemes for characters that only occur as part of a digraph (or trigraph, etc.). For example, standard Swahili orthography has a grapheme <code>ch</code>, but no grapheme <code>c</code> by itself, so <code>c</code> would not be listed as a grapheme, only <code>ch</code>.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minLength keyword'>
+            <b>Minimum length:</b> <code>1</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='min-length string prop'><strong>Min length:</strong> <code>1</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Grapheme Name: <code>"name"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The name of this grapheme, if any</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Grapheme Name: <code>name</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The name of this grapheme, if any</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Pronunciations: <code>pronunciations</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Pronunciations: <code>"pronunciations"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).</p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Pronunciation: <code>pronunciations</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minLength keyword'>
+            <b>Minimum length:</b> <code>1</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Pronunciation</h1>
-                        </summary>
-                    
-                    
-                    
-                    
-                    
-                    
-                          <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                          <p class='min-length string prop'><strong>Min length:</strong> <code>1</code></p>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
           </section>
 
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
+            </ul>
 
-  <details open>
+          </section>
 
-    <summary>
-      <h1 class='title meta any prop'>Link: <code>"link"</code></h1>
-    </summary>
+          <section class='additionalProperties keyword'>
 
+            <h2>Additional Properties</h2>
 
+            <p>Any additional properties must adhere to the following schema:</p>
 
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A URL where a presentational format for this resource may be viewed</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+            <section  class=jschemer-schema>
 
 
+      <p>No values are valid for this schema.</p>
 
 
+</section>
 
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
+          </section>
 
 
 
@@ -780,53 +1278,78 @@
 
 
 
-  </details>
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Orthography Name: <code>"name"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The name of this orthography (e.g. <code>Practical</code>, <code>Phonemic</code>), optionally in multiple languages (e.g. both <code>Phonemic</code> and <code>Fonémica</code>). The name of the orthography must be provided in at least one language.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="MultiLangString.html">MultiLangString</a> schema.</p>
+    <details open>
 
 
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
-    </summary>
+        <summary>
+          <h1 class='title keyword'>
+            Link: <code>link</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of notes about this Orthography</p>
-</p>
-      </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A URL where a presentational format for this resource may be viewed</p>
+</div>
+        </section>
 
 
 
@@ -852,73 +1375,144 @@
 
 
 
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
 
-      <div class='items array prop'>
 
-        <h2>Items</h2>
 
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Note</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A note about this orthography</p>
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
           </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
-          
-          
-            </details>
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Orthography Name: <code>name</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The name of this orthography (e.g. <code>Practical</code>, <code>Phonemic</code>), optionally in multiple languages (e.g. both <code>Phonemic</code> and <code>Fonémica</code>). The name of the orthography must be provided in at least one language.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
           </section>
 
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Punctuation: <code>"punctuation"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A list of all the punctuation characters in this orthography, including white space and non-breaking characters.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of notes about this Orthography</p>
+</div>
+        </section>
 
 
 
@@ -931,140 +1525,348 @@
 
 
 
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A note about this orthography</p>
+</div>
+        </section>
 
 
 
 
 
 
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Punctuation Character</h1>
-              </summary>
-          
-          
-          
-          
-          
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='min-length string prop'><strong>Min length:</strong> <code>1</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
           </section>
 
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A set of tags for this orthography</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Punctuation: <code>punctuation</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of all the punctuation characters in this orthography, including white space and non-breaking characters.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Punctuation Character: <code>punctuation</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minLength keyword'>
+            <b>Minimum length:</b> <code>1</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A URL where this Orthography may be accessed in JSON format</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Tags: <code>tags</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
 
 
 
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A set of tags for this orthography</p>
+</div>
+        </section>
 
 
 
 
 
 
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Tags.json'>http://schemas.digitallinguistics.io/Tags.json</a></p>
+          </section>
 
 
 
@@ -1078,12 +1880,66 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-        </ul>
-      </div>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            URL: <code>url</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A URL where this Orthography may be accessed in JSON format</p>
+</div>
+        </section>
 
 
 
@@ -1093,18 +1949,174 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
-</main>
+</li>
+            </ul>
 
-    <nav>
-      <h1><a href=../index.html>Home</a></h1>
-      <h1>Schemas</h1>
-      <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="LexemeForm.html">Lexeme Form</a></li><li><a href="Media.html">Media File</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Sense.html">Sense</a></li><li><a href="Text.html">Text</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="Language.html">Language</a></li>
-      </ul>
-    </nav>
+          </section>
+
+          <section class='additionalProperties keyword'>
+
+            <h2>Additional Properties</h2>
+
+            <p>Any additional properties must adhere to the following schema:</p>
+
+            <section  class=jschemer-schema>
+
+
+      <p>This schema imposes no restrictions. All values are valid.</p>
+
+
+</section>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class='examples keyword'>
+
+          <h2>Examples</h2>
+
+          <p>The following are example values for this schema:</p>
+
+          <ul>
+              <li>
+                <pre><code>{
+  &quot;abbreviation&quot;: &quot;Mod&quot;,
+  &quot;direction&quot;: &quot;ltr-ttb&quot;,
+  &quot;graphemes&quot;: [
+    {
+      &quot;allographs&quot;: [
+        &quot;A&quot;
+      ],
+      &quot;form&quot;: &quot;a&quot;,
+      &quot;pronunciations&quot;: [
+        &quot;a&quot;
+      ]
+    },
+    {
+      &quot;form&quot;: &quot;aa&quot;,
+      &quot;pronunciations&quot;: [
+        &quot;aː&quot;
+      ]
+    },
+    {
+      &quot;allographs&quot;: [
+        &quot;B&quot;
+      ],
+      &quot;form&quot;: &quot;b&quot;,
+      &quot;pronunciations&quot;: [
+        &quot;pˀ&quot;
+      ]
+    },
+    {
+      &quot;allographs&quot;: [
+        &quot;C&quot;
+      ],
+      &quot;form&quot;: &quot;c&quot;,
+      &quot;pronunciations&quot;: [
+        &quot;t͡ʃ&quot;
+      ]
+    },
+    {
+      &quot;allographs&quot;: [
+        &quot;D&quot;
+      ],
+      &quot;form&quot;: &quot;d&quot;,
+      &quot;pronunciations&quot;: [
+        &quot;tˀ&quot;
+      ]
+    }
+  ],
+  &quot;id&quot;: &quot;f7c84181-c84e-43d5-a007-651294dd83d0&quot;,
+  &quot;name&quot;: &quot;Modern&quot;,
+  &quot;notes&quot;: [
+    {
+      &quot;text&quot;: &quot;This orthography was originally developed by Julien Granberry, and later modified in line with suggestions from Daniel W. Hieber.&quot;
+    }
+  ],
+  &quot;punctuation&quot;: [
+    &quot; &quot;,
+    &quot;.&quot;,
+    &quot;?&quot;,
+    &quot;!&quot;,
+    &quot;&#x27;&quot;,
+    &quot;\&quot;&quot;
+  ],
+  &quot;type&quot;: &quot;Orthography&quot;,
+  &quot;url&quot;: &quot;https://data.digitallinguistics.io/languages/Chitimacha/orthographies/Modern&quot;
+}</code></pre>
+              </li>
+          </ul>
+
+        </section>
+
+    </details>
+
+
+</section>
+    </main>
 
   </body>
 

@@ -1,92 +1,249 @@
-
 <!DOCTYPE html>
-<html lang=en>
+<html lang=en dir=ltr>
 
   <head>
+
     <meta charset=utf-8>
-    <title>
-      Media File
-    </title>
-    <meta name=viewport content='width=device-width'>
-    <link rel=stylesheet href="../jschemer.css" type=text/css>
+    <title>Media File</title>
+    <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <link href=../schema-page.css rel=stylesheet>
+
   </head>
 
   <body>
 
+    <nav id=jschemer-nav aria-labelledby=jschemer-schemas-list-heading role=navigation>
+
+  <p><a href=../index.html>Home</a></p>
+
+  <h2 id=jschemer-schemas-list-heading>Schemas</h1>
+
+  <ul>
+      <li>
+        <p>
+          <a href='Abbreviation.html'>
+              Abbreviation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Access.html'>
+              Access Rights
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Address.html'>
+              Address
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Annotation.html'>
+              Annotation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Reference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='BibliographicReference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Bundle.html'>
+              Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='DatabaseReference.html'>
+              Database Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Language.html'>
+              Language
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Lexeme.html'>
+              Lexeme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='LexemeForm.html'>
+              Lexeme Form
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Location.html'>
+              Location
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Media.html'>
+              Media File
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Morpheme.html'>
+              Morpheme Token
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='MultiLangString.html'>
+              Multi-Language Text / String
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Note.html'>
+              Note
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Orthography.html'>
+              Orthography
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Person.html'>
+              Person
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Phoneme.html'>
+              Phoneme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Sense.html'>
+              Sense
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Tags.html'>
+              Tags
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Text.html'>
+              Text
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Transcription.html'>
+              Transcription
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Translation.html'>
+              Translation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Utterance.html'>
+              Utterance
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Word.html'>
+              Word
+          </a>
+        </p>
+      </li>
+  </ul>
+
+</nav>
+
     <main>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Media File</h1>
-    </summary>
+      <section id=http://schemas.digitallinguistics.io/Media-5.3.0.json class=jschemer-schema>
 
 
-      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/draft-07/schema#">http://json-schema.org/draft-07/schema#</a></p>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Media File
+          </h1>
+        </summary>
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An object containing information about a media file. The file itself should be stored at the URL indicated in the <code>mediaURL</code> field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.</p>
-</p>
-      </div>
+        <p class='$schema keyword'>
+          <b>Validate against:</b> <a href='http://json-schema.org/draft-07/schema#'>http://json-schema.org/draft-07/schema#</a>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+        <p class='$id keyword'>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Media-5.3.0.json</code>
+        </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='required object prop'>
-        <h2>Required Properties</h2>
-        <ul>
-            <li><code>filename</code></li>
-        </ul>
-      </div>
-
-        <p class='additional-properties object prop'>
-          <strong>Additional properties:</strong> true
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
-      <div class='properties object prop'>
-        <h2>Properties</h2>
-        <ul>
-            <li>
-<section class=schema>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An object containing information about a media file. The file itself should be stored at the URL indicated in the <code>mediaURL</code> field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.</p>
+</div>
+        </section>
 
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Type: <code>"type"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The type of object. Must be set to <code>Media</code>.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <section class='$comment keyword'>
+          <h2>Developer Notes</h2>
+          <div><p>This is a top-level database object</p>
+</div>
+        </section>
 
 
 
@@ -111,40 +268,132 @@
 
 
 
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>filename</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Type: <code>type</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+        <p class='readOnly keyword'>
+          <b>Read-only:</b> <code>true</code>
+        </p>
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The type of object. Must be set to <code>Media</code>.</p>
+</div>
+        </section>
 
 
 
 
 
 
-  </details>
+
+          <p>This item must have the following value:</p>
+          <pre><code>&quot;Media&quot;</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>ID: <code>"id"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A unique database identifier for this Media Item</p>
-</p>
-      </div>
+        <summary>
+          <h1 class='title keyword'>
+            ID: <code>id</code>
+          </h1>
+        </summary>
 
 
 
 
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A unique database identifier for this Media Item</p>
+</div>
+        </section>
 
 
 
@@ -170,106 +419,309 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An abbreviation for referring to this file</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Abbreviation: <code>abbreviation</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An abbreviation for referring to this file</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Abbreviation.json'>http://schemas.digitallinguistics.io/Abbreviation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Access Rights: <code>"access"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>Access rights for this media file</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Access.html">Access</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Access Rights: <code>access</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>Access rights for this media file</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Access.json'>http://schemas.digitallinguistics.io/Access.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Content: <code>"content"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A description of the content of this file, optionally in multiple languages</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="MultiLangString.html">MultiLangString</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Content: <code>content</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A description of the content of this file, optionally in multiple languages</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>MIME Content Type: <code>"contentType"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The media type of the file. Must be a valid MIME type. Examples: <code>audio/wav</code>, <code>application/pdf</code>, <code>video/mpeg</code></p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            MIME Content Type: <code>contentType</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The media type of the file. Must be a valid MIME type. Examples: <code>audio/wav</code>, <code>application/pdf</code>, <code>video/mpeg</code></p>
+</div>
+        </section>
 
 
 
@@ -293,65 +745,149 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Creator (Person - Database Reference): <code>"creator"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A database reference to the person who created this specific file</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Creator (Person - Database Reference): <code>creator</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A database reference to the person who created this specific file</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
+                <li><section  class=jschemer-schema>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Date Created: <code>"dateCreated"</code></h1>
-    </summary>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Date Created: <code>dateCreated</code>
+          </h1>
+        </summary>
 
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The date and optionally time that this metadata object was originally created. <em>Not</em> the date the media file was created. For that, see the <code>dateRecorded</code> property.</p>
-</p>
-      </div>
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The date and optionally time that this metadata object was originally created. <em>Not</em> the date the media file was created. For that, see the <code>dateRecorded</code> property.</p>
+</div>
+        </section>
 
 
-      <div class='one-of any prop'>
-        <h2>Validates Against (<code>oneOf</code>)</h2>
-        <p>This schema must validate against one and only one of the following schemas:</p>
-        <ul>
-            <li>
-<section class=schema>
 
-  <details open>
 
 
 
@@ -370,7 +906,6 @@
 
 
 
-      <p class='format string prop'><strong>Format:</strong> date</p>
 
 
 
@@ -390,20 +925,19 @@
 
 
 
-  </details>
 
-</section>
-</li>
-            <li>
-<section class=schema>
 
-  <details open>
 
 
+          <section class='oneOf'>
 
+            <p>This item must also validate against exactly one of the following schemas:</p>
 
+            <ul>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
 
@@ -416,7 +950,6 @@
 
 
 
-      <p class='format string prop'><strong>Format:</strong> date-time</p>
 
 
 
@@ -436,12 +969,7 @@
 
 
 
-  </details>
 
-</section>
-</li>
-        </ul>
-      </div>
 
 
 
@@ -450,601 +978,41 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Date Modified: <code>"dateModified"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The date and optionally time that this metadata was last modified. <em>Not</em> the date that the media file was modified.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-      <div class='one-of any prop'>
-        <h2>Validates Against (<code>oneOf</code>)</h2>
-        <p>This schema must validate against one and only one of the following schemas:</p>
-        <ul>
-            <li>
-<section class=schema>
-
-  <details open>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> date</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> date-time</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-        </ul>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Date Recorded: <code>"dateRecorded"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The date and optionally time that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. <em>Not</em> the date that this metadata object was created. For that, see the <code>dateCreated</code> property.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-      <div class='one-of any prop'>
-        <h2>Validates Against (<code>oneOf</code>)</h2>
-        <p>This schema must validate against one and only one of the following schemas:</p>
-        <ul>
-            <li>
-<section class=schema>
-
-  <details open>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> date</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> date-time</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-        </ul>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the <code>End Time</code> would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. <code>12.573</code>, or <code>1.234</code>, or <code>167.780</code>, etc.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
-
-
-
-
-
-
-
-      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>0.001</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Filename: <code>"filename"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The filename for this media item without spaces, but including the extension</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^[^ ]+\.[^ ]+</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Format (File Extension): <code>"format"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The format (file extension) of the media file, without a period. Examples: <code>wav</code>, <code>mp4</code>, <code>pdf</code></p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Languages: <code>"languages"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An array of the languages that are used in this media file</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Language (Database Reference)</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A database reference to this language</p>
+          <p class='format keyword'>
+            <b>Format:</b> <code>date</code>
           </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
+                <li><section  class=jschemer-schema>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Length (in Time / Pages): <code>"length"</code></h1>
-    </summary>
+    <details open>
 
 
 
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The length of the file, in seconds and milliseconds if an audio/video file (in <code>SS.MMM</code> format), or pages if a document</p>
-</p>
-      </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
 
 
 
@@ -1052,7 +1020,6 @@
 
 
 
-      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>0.001</code></p>
 
 
 
@@ -1076,391 +1043,73 @@
 
 
 
-  </details>
 
-</section>
-</li>
-            <li>
-<section class=schema>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Link: <code>"link"</code></h1>
-    </summary>
 
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A URL where a presentational format for this resource may be viewed</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Location (Database Reference): <code>"location"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A database reference to the location where the content in this media file was recorded or produced</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Media URL: <code>"mediaURL"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The URL where the media file can be found.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of notes about this media item.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Note</h1>
-              </summary>
-          
-          
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-
-      </div>
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Original Media Item: <code>"original"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The URL of the Media object (<em>not</em> the URL to the media file itself) that this file is derived from</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Persons in File: <code>"people"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A list of all the people who appear in this file. Often a list of speakers.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Person (Database Reference)</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A database reference to a person who appears in this file</p>
+          <p class='format keyword'>
+            <b>Format:</b> <code>date-time</code>
           </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
-          
-          
-            </details>
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
           </section>
 
-      </div>
 
 
 
 
-  </details>
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>File Size: <code>"size"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The size of the file, in bytes.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Date Modified: <code>dateModified</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
-      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>1</code></p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The date and optionally time that this metadata was last modified. <em>Not</em> the date that the media file was modified.</p>
+</div>
+        </section>
 
 
 
@@ -1484,30 +1133,105 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='oneOf'>
+
+            <p>This item must also validate against exactly one of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>date</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Start Time: <code>"startTime"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. This may also be used to synchronize the starting point of multiple media files associated with a single Text. For example, if the camera started recording five minutes before the speaker began speaking, the <code>Start Time</code> might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. <code>12.573</code>, or <code>1.2</code>, or <code>167.78012</code>, etc.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+    <details open>
 
 
 
@@ -1538,65 +1262,79 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>date-time</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
+            </ul>
 
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-    </summary>
+          </section>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A set of tags for this media item</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
 
 
-  </details>
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The URL where this media data can be retrieved. <em>NOT</em> the URL of the media file itself (for that, see the <code>mediaURL</code> attribute).</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Date Recorded: <code>dateRecorded</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The date and optionally time that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. <em>Not</em> the date that this metadata object was created. For that, see the <code>dateCreated</code> property.</p>
+</div>
+        </section>
 
 
 
@@ -1616,12 +1354,109 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='oneOf'>
+
+            <p>This item must also validate against exactly one of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>date</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-        </ul>
-      </div>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
 
 
 
@@ -1631,18 +1466,1710 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>date-time</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
-</main>
+</li>
+            </ul>
 
-    <nav>
-      <h1><a href=../index.html>Home</a></h1>
-      <h1>Schemas</h1>
-      <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="LexemeForm.html">Lexeme Form</a></li><li><a href="Media.html">Media File</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Sense.html">Sense</a></li><li><a href="Text.html">Text</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="Language.html">Language</a></li>
-      </ul>
-    </nav>
+          </section>
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            End Time: <code>endTime</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the <code>End Time</code> would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. <code>12.573</code>, or <code>1.234</code>, or <code>167.780</code>, etc.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0.001</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Filename: <code>filename</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The filename for this media item without spaces, but including the extension</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='pattern keyword'>
+            <b>Regular expression to match:</b> <code>^[^ ]+\.[^ ]+</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Format (File Extension): <code>format</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The format (file extension) of the media file, without a period. Examples: <code>wav</code>, <code>mp4</code>, <code>pdf</code></p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Languages: <code>languages</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An array of the languages that are used in this media file</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Language (Database Reference): <code>languages</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A database reference to this language</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Length (in Time / Pages): <code>length</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The length of the file, in seconds and milliseconds if an audio/video file (in <code>SS.MMM</code> format), or pages if a document</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0.001</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Link: <code>link</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A URL where a presentational format for this resource may be viewed</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Location (Database Reference): <code>location</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A database reference to the location where the content in this media file was recorded or produced</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Media URL: <code>mediaURL</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The URL where the media file can be found.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of notes about this media item.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Original Media Item: <code>original</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The URL of the Media object (<em>not</em> the URL to the media file itself) that this file is derived from</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Persons in File: <code>people</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of all the people who appear in this file. Often a list of speakers.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Person (Database Reference): <code>people</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A database reference to a person who appears in this file</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            File Size: <code>size</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>integer</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The size of the file, in bytes.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>1</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Start Time: <code>startTime</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>Within an audiovisual file, the time at which the relevant linguistic data starts, or the time at which an offset should be calibrated from. This may also be used to synchronize the starting point of multiple media files associated with a single Text. For example, if the camera started recording five minutes before the speaker began speaking, the <code>Start Time</code> might be 5 minutes from the start of the file (so 300.00 seconds). The time stamp should be in seconds and milliseconds, separated by a period, e.g. <code>12.573</code>, or <code>1.2</code>, or <code>167.78012</code>, etc.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Tags: <code>tags</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A set of tags for this media item</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Tags.json'>http://schemas.digitallinguistics.io/Tags.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            URL: <code>url</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The URL where this media data can be retrieved. <em>NOT</em> the URL of the media file itself (for that, see the <code>mediaURL</code> attribute).</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+          <section class='additionalProperties keyword'>
+
+            <h2>Additional Properties</h2>
+
+            <p>Any additional properties must adhere to the following schema:</p>
+
+            <section  class=jschemer-schema>
+
+
+      <p>This schema imposes no restrictions. All values are valid.</p>
+
+
+</section>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class='examples keyword'>
+
+          <h2>Examples</h2>
+
+          <p>The following are example values for this schema:</p>
+
+          <ul>
+              <li>
+                <pre><code>{
+  &quot;abbreviation&quot;: &quot;Omoiseke&quot;,
+  &quot;access&quot;: {
+    &quot;ELAR&quot;: &quot;User&quot;
+  },
+  &quot;content&quot;: &quot;A folktale told by Helen Makana about a girl who gets married to dogs.&quot;,
+  &quot;contentType&quot;: &quot;audio/wav&quot;,
+  &quot;creator&quot;: {
+    &quot;id&quot;: &quot;791073ab-beec-484d-a608-a936abbf4e7c&quot;,
+    &quot;key&quot;: &quot;DWH&quot;
+  },
+  &quot;dateCreated&quot;: &quot;2018-10-31T17:25:28.347Z&quot;,
+  &quot;dateModified&quot;: &quot;2018-10-31T17:25:46.239Z&quot;,
+  &quot;dateRecorded&quot;: &quot;2014-08-14&quot;,
+  &quot;filename&quot;: &quot;Gusii_HM_2014-08-14_Omoiseke.wav&quot;,
+  &quot;format&quot;: &quot;wav&quot;,
+  &quot;id&quot;: &quot;6519aafc-9ce6-4101-83c2-e1d32555ff03&quot;,
+  &quot;languages&quot;: [
+    {
+      &quot;id&quot;: &quot;434680a8-fd5a-4799-a5a7-e1f6f5d15d95&quot;,
+      &quot;key&quot;: &quot;Gusii&quot;,
+      &quot;url&quot;: &quot;https://api.digitallinguistics.io/languages/Gusii&quot;
+    }
+  ],
+  &quot;length&quot;: 62.417,
+  &quot;location&quot;: {
+    &quot;id&quot;: &quot;eaead014-2c97-47d7-a072-d09d8d7d80e8&quot;,
+    &quot;key&quot;: &quot;KennedyFarm&quot;
+  },
+  &quot;mediaURL&quot;: &quot;https://files.digitallinguistics.io/audio/Gusii_HM_2014-08-14_Omoiseke.wav&quot;,
+  &quot;people&quot;: [
+    {
+      &quot;id&quot;: &quot;2491b3cd-2749-438a-9eeb-70427d24d5ad&quot;,
+      &quot;key&quot;: &quot;HM&quot;
+    }
+  ],
+  &quot;size&quot;: 11010618,
+  &quot;type&quot;: &quot;Media&quot;,
+  &quot;url&quot;: &quot;https://api.digitallinguistics.io/languages/Gusii/media/Gusii_HM_2014-08-14_Omoiseke.wav&quot;
+}</code></pre>
+              </li>
+              <li>
+                <pre><code>{
+  &quot;abbreviation&quot;: &quot;enderema&quot;,
+  &quot;access&quot;: {
+    &quot;ELAR&quot;: &quot;User&quot;
+  },
+  &quot;content&quot;: &quot;Photo of *ɛ́ndɛrɛma* &#x27;slippery vegetable vine&#x27;&quot;,
+  &quot;contentType&quot;: &quot;image/jpeg&quot;,
+  &quot;creator&quot;: {
+    &quot;id&quot;: &quot;791073ab-beec-484d-a608-a936abbf4e7c&quot;,
+    &quot;key&quot;: &quot;DWH&quot;
+  },
+  &quot;dateCreated&quot;: &quot;2018-10-31T17:25:28.347Z&quot;,
+  &quot;dateModified&quot;: &quot;2018-10-31T17:25:46.239Z&quot;,
+  &quot;dateRecorded&quot;: &quot;2014-08-04&quot;,
+  &quot;filename&quot;: &quot;Gusii_2014-08-04_enderema.jpg&quot;,
+  &quot;format&quot;: &quot;jpg&quot;,
+  &quot;link&quot;: &quot;https://files.digitallinguistics.io/images/Gusii_2014-08-04_enderema.jpg&quot;,
+  &quot;location&quot;: {
+    &quot;id&quot;: &quot;eaead014-2c97-47d7-a072-d09d8d7d80e8&quot;,
+    &quot;key&quot;: &quot;KennedyFarm&quot;
+  },
+  &quot;mediaURL&quot;: &quot;https://files.digitallinguistics.io/images/Gusii_2014-08-04_enderema.jpg&quot;,
+  &quot;notes&quot;: [
+    {
+      &quot;text&quot;: &quot;ɛ́ndɛrɛma &#x27;slippery vegetable vine&#x27;&quot;
+    }
+  ],
+  &quot;people&quot;: [
+    {
+      &quot;id&quot;: &quot;b430dd0d-5c8c-4a66-99f0-f9a0cc7e1524&quot;,
+      &quot;key&quot;: &quot;JKM&quot;
+    }
+  ],
+  &quot;size&quot;: 3374489,
+  &quot;url&quot;: &quot;https://api.digitallinguistics.io/languages/Gusii/media/enderema.jpg&quot;
+}</code></pre>
+              </li>
+          </ul>
+
+        </section>
+
+    </details>
+
+
+</section>
+    </main>
 
   </body>
 
