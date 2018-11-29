@@ -127,10 +127,6 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * The DLx format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
 
-* **Uniqueness**
-
-    * "unique" in this specification means _JSON unique_. An object is considered JSON unique if you can sort all of its properties (and subproperties) and serialize it as a JSON string with the result that that string is unique. If you sort the (sub)properties of two different objects and serialize them, and their strings are equal, they are not JSON unique.
-
 * **IDs & Cross-References**
 
     * The DLx schemas support unique identifiers in the form of opaque IDs or human-readable keys, or both (recommended - see below). Many schemas include an optional `id` field, which is meant to be representative of whatever opaque identifier scheme best suits your database. You could name this field `id`, `ID`, `dbid` (database ID), `localid`, `uuid`, `uri`, etc. etc. Thus when the `id` property is referenced in the schemas, it should not be taken literally as being the `id` field. Instead it refers to whichever field your database uses for unique, opaque identifiers. Whichever name you choose for the property should be used consistently in place of the `id` fields. No restrictions are placed on the format of the ID field other than that it must be non-empty, although best practice is for this field to be a string (preferably a UUID) or a number.
