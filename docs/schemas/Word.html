@@ -1,92 +1,251 @@
-
 <!DOCTYPE html>
-<html lang=en>
+<html lang=en dir=ltr>
 
   <head>
+
     <meta charset=utf-8>
-    <title>
-      Word
-    </title>
-    <meta name=viewport content='width=device-width'>
-    <link rel=stylesheet href="../jschemer.css" type=text/css>
+    <title>Word</title>
+    <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <link href=../schema-page.css rel=stylesheet>
+
   </head>
 
   <body>
 
+    <nav id=jschemer-nav aria-labelledby=jschemer-schemas-list-heading role=navigation>
+
+  <p><a href=../index.html>Home</a></p>
+
+  <h2 id=jschemer-schemas-list-heading>Schemas</h1>
+
+  <ul>
+      <li>
+        <p>
+          <a href='Abbreviation.html'>
+              Abbreviation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Access.html'>
+              Access Rights
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Address.html'>
+              Address
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Annotation.html'>
+              Annotation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Reference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='BibliographicReference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Bundle.html'>
+              Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='DatabaseReference.html'>
+              Database Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Language.html'>
+              Language
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Lexeme.html'>
+              Lexeme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='LexemeForm.html'>
+              Lexeme Form
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Location.html'>
+              Location
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Media.html'>
+              Media File
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Morpheme.html'>
+              Morpheme Token
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='MultiLangString.html'>
+              Multi-Language Text / String
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Note.html'>
+              Note
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Orthography.html'>
+              Orthography
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Person.html'>
+              Person
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Phoneme.html'>
+              Phoneme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Sense.html'>
+              Sense
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Tags.html'>
+              Tags
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Text.html'>
+              Text
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Transcription.html'>
+              Transcription
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Translation.html'>
+              Translation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Utterance.html'>
+              Utterance
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Word.html'>
+              Word
+          </a>
+        </p>
+      </li>
+  </ul>
+
+</nav>
+
     <main>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Word</h1>
-    </summary>
+      <section id=http://schemas.digitallinguistics.io/Word-4.2.0.json class=jschemer-schema>
 
 
-      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/draft-07/schema#">http://json-schema.org/draft-07/schema#</a></p>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Word
+          </h1>
+        </summary>
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).</p>
-</p>
-      </div>
+        <p class='$schema keyword'>
+          <b>Validate against:</b> <a href='http://json-schema.org/draft-07/schema#'>http://json-schema.org/draft-07/schema#</a>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+        <p class='$id keyword'>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.2.0.json</code>
+        </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='required object prop'>
-        <h2>Required Properties</h2>
-        <ul>
-            <li><code>transcription</code></li>
-        </ul>
-      </div>
-
-        <p class='additional-properties object prop'>
-          <strong>Additional properties:</strong> true
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
-      <div class='properties object prop'>
-        <h2>Properties</h2>
-        <ul>
-            <li>
-<section class=schema>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).</p>
+</div>
+        </section>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Type: <code>"type"</code></h1>
-    </summary>
 
 
 
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The type of object. Must be set to <code>Word</code>.</p>
-</p>
-      </div>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
 
@@ -104,268 +263,135 @@
 
 
 
+          <section class='required keyword'>
 
+            <h2>Required Properties</h2>
 
+            <ul>
+                <li><code>transcription</code></li>
+            </ul>
 
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The point in time in the text at which the word token stop being spoken, formatted as seconds and milliseconds (SS.MMM). This property is useful for phonetic data analysis.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
-
-
-
-
-
-
-
-      <p class='minimum numeric prop'><strong>Minimum:</strong> <code>0.001</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Gloss: <code>"gloss"</code></h1>
-    </summary>
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="MultiLangString.html">MultiLangString</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Key: <code>"key"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Utterance within the text, another period, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='pattern string prop'><strong>Regular expression pattern:</strong> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Morphemes / Components: <code>"morphemes"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of the components (morphemes, lexemes) in this Word. Components may be repeated if the same morpheme appears twice in the Word.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>false</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Morpheme</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An object representing this morpheme. This is <em>not</em> an object representing a lexeme (the abstract type). It represents the specific morpheme token (the particular instance in speech) instead.</p>
-          </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Morpheme.html">Morpheme</a> schema.</p>
-          
-          
-            </details>
-          
           </section>
 
-      </div>
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Type: <code>type</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+        <p class='readOnly keyword'>
+          <b>Read-only:</b> <code>true</code>
+        </p>
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The type of object. Must be set to <code>Word</code>.</p>
+</div>
+        </section>
 
 
 
 
-  </details>
+
+
+
+          <p>This item must have the following value:</p>
+          <pre><code>&quot;Word&quot;</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A collection of notes about this token</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            End Time: <code>endTime</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The point in time in the text at which the word token stop being spoken, formatted as seconds and milliseconds (SS.MMM). This property is useful for phonetic data analysis.</p>
+</div>
+        </section>
 
 
 
@@ -383,529 +409,152 @@
 
 
 
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Note</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A Note about this token</p>
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0.001</code>
           </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Phonemes: <code>"phonemes"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An array of the phones (phoneme tokens) in this word, in IPA. Each phone should appear in order, and does not have to be unique.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Gloss: <code>gloss</code>
+          </h1>
+        </summary>
 
 
 
 
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A Leipzig-style gloss for this Word. This does not need to be supplied if it can be generated automatically from the glosses at the morpheme level. May be in multiple languages.</p>
+</div>
+        </section>
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>false</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Phone (Phoneme Token)</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An IPA representation of this phoneme. The <code>phoneme</code> field is required, but the <code>allophone</code> field is optional, for use only when you need to specify that this phoneme is being realized as a particular phoneme. Both <code>phoneme</code> and <code>allophone</code> must be in IPA rather than a practical orthography.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='required object prop'>
-                  <h2>Required Properties</h2>
-                  <ul>
-                      <li><code>phoneme</code></li>
-                  </ul>
-                </div>
-          
-                  <p class='additional-properties object prop'>
-                    <strong>Additional properties:</strong> true
-                  </p>
-          
-          
-          
-                <div class='properties object prop'>
-                  <h2>Properties</h2>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Allophone: <code>"allophone"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>End Time: <code>"endTime"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The point in time in the text at which this phone stops being pronounced. This property is primarily useful for phonetic data analysis.</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
-          
-          
-          
-          
-          
-          
-          
-                <p class='minimum numeric prop'><strong>Minimum:</strong> <code>0.001</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A collection of notes about this phone</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code>true</code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    
-                    <section class=schema>
-                    
-                      <details open>
-                    
-                        <summary>
-                          <h1 class='title meta any prop'>Note</h1>
-                        </summary>
-                    
-                    
-                          <div class='description meta any prop'>
-                            <h2>Description</h2>
-                            <p><p>A note about this phone. Useful for one-time observations of interesting allophonic variation in the data.</p>
-                    </p>
-                          </div>
-                    
-                        <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
-                    
-                    
-                      </details>
-                    
-                    </section>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Phoneme: <code>"phoneme"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the <code>allophone</code> property for that insetad).</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Start Time: <code>"startTime"</code></h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis. The <code>endTime</code> property is not necessarily required if the <code>startTime</code> property is present (this is useful when the endTime of one phone is the same as the startTime of the next).</p>
-          </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A set of tags for this phone</p>
-          </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
           </section>
 
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Start Time: <code>"startTime"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis. The <code>endTime</code> property is not necessarily required if the <code>startTime</code> property is present (this is useful when the endTime of one word token is the same as the startTime of the next).</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>number</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Key: <code>key</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Utterance within the text, another period, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
+</div>
+        </section>
 
 
 
@@ -929,81 +578,613 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='pattern keyword'>
+            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A set of tags for this word token</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Morphemes / Components: <code>morphemes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of the components (morphemes, lexemes) in this Word. Components may be repeated if the same morpheme appears twice in the Word.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>false</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Morpheme: <code>morphemes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An object representing this morpheme. This is <em>not</em> an object representing a lexeme (the abstract type). It represents the specific morpheme token (the particular instance in speech) instead.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Morpheme.json'>http://schemas.digitallinguistics.io/Morpheme.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Transcription: <code>"transcription"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A transcription of this word token, optionally in multiple orthographies. A transcription must be provided in at least one orthography.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Transcription.html">Transcription</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of notes about this token</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A Note about this token</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Translation: <code>"translation"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Translation.html">Translation</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Phonemes: <code>phonemes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An array of the phones (phoneme tokens) in this word, in IPA. Each phone should appear in order, and does not have to be unique.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>false</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Phone (Phoneme Token): <code>phonemes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An IPA representation of this phoneme. The <code>phoneme</code> field is required, but the <code>allophone</code> field is optional, for use only when you need to specify that this phoneme is being realized as a particular phoneme. Both <code>phoneme</code> and <code>allophone</code> must be in IPA rather than a practical orthography.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>phoneme</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Allophone: <code>allophone</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>This property may be used to specify which allophone this particular phoneme token is. Must be written in IPA.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-        </ul>
-      </div>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            End Time: <code>endTime</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The point in time in the text at which this phone stops being pronounced. This property is primarily useful for phonetic data analysis.</p>
+</div>
+        </section>
 
 
 
@@ -1013,18 +1194,997 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0.001</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
-</main>
+</li>
+                <li><section  class=jschemer-schema>
 
-    <nav>
-      <h1><a href=../index.html>Home</a></h1>
-      <h1>Schemas</h1>
-      <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="LexemeForm.html">Lexeme Form</a></li><li><a href="Media.html">Media File</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Sense.html">Sense</a></li><li><a href="Text.html">Text</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="Language.html">Language</a></li>
-      </ul>
-    </nav>
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of notes about this phone</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A note about this phone. Useful for one-time observations of interesting allophonic variation in the data.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Phoneme: <code>phoneme</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An IPA representation of this phoneme token. Must be a representation of the abstract phoneme rather than the particular allophone (use the <code>allophone</code> property for that insetad).</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Start Time: <code>startTime</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The point in time in the text at which this phone starts being pronounced. This property is primarily useful for phonetic data analysis. The <code>endTime</code> property is not necessarily required if the <code>startTime</code> property is present (this is useful when the endTime of one phone is the same as the startTime of the next).</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Tags: <code>tags</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A set of tags for this phone</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Tags.json'>http://schemas.digitallinguistics.io/Tags.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+          <section class='additionalProperties keyword'>
+
+            <h2>Additional Properties</h2>
+
+            <p>Any additional properties must adhere to the following schema:</p>
+
+            <section  class=jschemer-schema>
+
+
+      <p>This schema imposes no restrictions. All values are valid.</p>
+
+
+</section>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Start Time: <code>startTime</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>number</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The point in time in the text at which this word token starts being uttered, formatted as seconds and milliseconds (SS.MMM). This property is primarily useful for phonetic data analysis. The <code>endTime</code> property is not necessarily required if the <code>startTime</code> property is present (this is useful when the endTime of one word token is the same as the startTime of the next).</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Tags: <code>tags</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A set of tags for this word token</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Tags.json'>http://schemas.digitallinguistics.io/Tags.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Transcription: <code>transcription</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A transcription of this word token, optionally in multiple orthographies. A transcription must be provided in at least one orthography.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Transcription.json'>http://schemas.digitallinguistics.io/Transcription.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minProperties keyword'>
+            <b>Minimum number of properties:</b> <code>1</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Translation: <code>translation</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Translation.json'>http://schemas.digitallinguistics.io/Translation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+          <section class='additionalProperties keyword'>
+
+            <h2>Additional Properties</h2>
+
+            <p>Any additional properties must adhere to the following schema:</p>
+
+            <section  class=jschemer-schema>
+
+
+      <p>This schema imposes no restrictions. All values are valid.</p>
+
+
+</section>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class='examples keyword'>
+
+          <h2>Examples</h2>
+
+          <p>The following are example values for this schema:</p>
+
+          <ul>
+              <li>
+                <pre><code>{
+  &quot;type&quot;: &quot;Word&quot;,
+  &quot;endtime&quot;: 1.01,
+  &quot;gloss&quot;: &quot;man&quot;,
+  &quot;key&quot;: &quot;A1.1.2&quot;,
+  &quot;morphemes&quot;: [
+    {
+      &quot;gloss&quot;: &quot;man&quot;,
+      &quot;lexeme&quot;: {
+        &quot;id&quot;: &quot;06ed7bda-9923-4295-97da-8c9a24b98fd4&quot;,
+        &quot;key&quot;: &quot;qasi&quot;
+      },
+      &quot;transcription&quot;: {
+        &quot;APA&quot;: &quot;ʔasi&quot;,
+        &quot;IPA&quot;: &quot;ʔasi&quot;,
+        &quot;Mod&quot;: &quot;qasi&quot;
+      }
+    }
+  ],
+  &quot;phonemes&quot;: [
+    {
+      &quot;phoneme&quot;: &quot;ʔ&quot;
+    },
+    {
+      &quot;phoneme&quot;: &quot;a&quot;
+    },
+    {
+      &quot;phoneme&quot;: &quot;s&quot;
+    },
+    {
+      &quot;phoneme&quot;: &quot;i&quot;
+    }
+  ],
+  &quot;startTime&quot;: 1,
+  &quot;tags&quot;: {
+    &quot;role&quot;: &quot;subject&quot;
+  },
+  &quot;transcription&quot;: {
+    &quot;APA&quot;: &quot;ʔasi&quot;,
+    &quot;IPA&quot;: &quot;ʔasi&quot;,
+    &quot;Mod&quot;: &quot;qasi&quot;
+  },
+  &quot;translation&quot;: {
+    &quot;eng&quot;: &quot;a man&quot;
+  }
+}</code></pre>
+              </li>
+          </ul>
+
+        </section>
+
+    </details>
+
+
+</section>
+    </main>
 
   </body>
 

@@ -24,24 +24,24 @@
   },
   "repository": "https://github.com/digitallinguistics/spec.git",
   "engines": {
-    "node": ">=10.10.0"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "ajv": "^6.5.4",
-    "azure-storage": "^2.10.1",
-    "chalk": "^2.4.1",
-    "jasmine": "^3.2.0",
-    "jschemer": "^2.0.0-alpha.10",
-    "semver-regex": "^2.0.0",
-    "yamljs": "^0.3.0"
+    "node": "10.x"
   },
   "main": "schemas/json",
   "scripts": {
     "build": "npm test & npm run docs",
     "convert": "node build/convert.js",
-    "docs": "jschemer schemas/json -o docs -r ./.github/README.md -i index.js",
+    "docs": "jschemer -o docs -s schemas/json -r ./.github/README.md",
     "test": "npm run convert & jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ajv": "^6.6.1",
+    "azure-storage": "^2.10.2",
+    "chalk": "^2.4.1",
+    "jasmine": "^3.3.0",
+    "jschemer": "^3.0.2",
+    "semver-regex": "^2.0.0",
+    "yamljs": "^0.3.0"
   }
 }

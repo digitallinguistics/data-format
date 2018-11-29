@@ -1,16 +1,210 @@
-
 <!DOCTYPE html>
-<html lang=en>
+<html lang=en dir=ltr>
 
   <head>
+
     <meta charset=utf-8>
     <title>Schemas</title>
-    <meta name=viewport content='width=device-width'>
-    <link rel=stylesheet href="jschemer.css" type=text/css>
-    <link rel=stylesheet href=gfm.css type=text/css>
+    <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <link href=home.css rel=stylesheet>
+
   </head>
 
   <body>
+
+    <nav id=jschemer-nav aria-labelledby=jschemer-schemas-list-heading role=navigation>
+    
+      
+    
+      <h2 id=jschemer-schemas-list-heading>Schemas</h1>
+    
+      <ul>
+          <li>
+            <p>
+              <a href='schemas/Abbreviation.html'>
+                  Abbreviation
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Access.html'>
+                  Access Rights
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Address.html'>
+                  Address
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Annotation.html'>
+                  Annotation
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Reference.html'>
+                  Bibliographic Reference
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/BibliographicReference.html'>
+                  Bibliographic Reference
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Bundle.html'>
+                  Bundle
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/DatabaseReference.html'>
+                  Database Reference
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Language.html'>
+                  Language
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Lexeme.html'>
+                  Lexeme
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/LexemeForm.html'>
+                  Lexeme Form
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Location.html'>
+                  Location
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Media.html'>
+                  Media File
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Morpheme.html'>
+                  Morpheme Token
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/MultiLangString.html'>
+                  Multi-Language Text / String
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Note.html'>
+                  Note
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Orthography.html'>
+                  Orthography
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Person.html'>
+                  Person
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Phoneme.html'>
+                  Phoneme
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Sense.html'>
+                  Sense
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Tags.html'>
+                  Tags
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Text.html'>
+                  Text
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Transcription.html'>
+                  Transcription
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Translation.html'>
+                  Translation
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Utterance.html'>
+                  Utterance
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href='schemas/Word.html'>
+                  Word
+              </a>
+            </p>
+          </li>
+      </ul>
+    
+    </nav>
 
     <main class=markdown-body><h1><a href="https://github.com/digitallinguistics/spec#readme">The Data Format for Digital Linguistics</a> (DaFoDiL)</h1>
 <h2>Introduction</h2>
@@ -18,7 +212,7 @@
 <p>This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil). This specification is a recommendation for how to store linguistic data in a way that is standardized, human-readable and web-compatible, using a popular data storage format on the web known as <a href="http://json.org/">JSON</a>.</p>
 <p>Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.</p>
 <p>This format also facilitates adherence to the <a href="http://site.uit.no/linguisticsdatacitation/">Austin Principles for Data Citation in Linguistics</a> by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.</p>
-<p>Please consider citing this specification in scholarly articles using this repository's <a href="https://spec.digitallinguistics.io/schemas/Note.html">Zenodo</a> DOI:</p>
+<p>Please consider citing this specification in scholarly articles using this repository’s <a href="https://spec.digitallinguistics.io/schemas/Note.html">Zenodo</a> DOI:</p>
 <blockquote>
 <p>Hieber, Daniel W. 2018. <em>Data Format for Digital Linguistics</em>. DOI:<a href="https://spec.digitallinguistics.io/schemas/Media.html">10.5281/zenodo.1438589</a></p>
 </blockquote>
@@ -53,7 +247,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <p>While humans look at a representation like this and can see which glosses are associated with which morphemes, computers cannot rely on visual layouts in this way, and require more explicit structure. The purpose of the Digital Linguistics data format is to define a standard for representing interlinear glosses (as well as other linguistic information, such as dictionary entries) in a digital, computer-readable way.</p>
 <p>There are many ways a linguist could choose to represent their data in digital form. Not only are many formats are available (a relational database, XML, a tabular spreadsheet, JSON, etc.), but there is significant flexibility in deciding what properties to include in your data and what to call them. For example, does the data about a text have a property specifying the language it was spoken in, and should that property be represented as <code>&quot;lang&quot;</code> or <code>&quot;language&quot;</code>?</p>
 <p>The Digital Linguistics (DLx) project recommends a data format called <a href="http://json.org/"><strong>JSON</strong></a> (JavaScript Object Notation) for digitally representing your linguistic data. Moreover, the DLx project has drafted recommendations for how to structure linguistic data using JSON. This recommended format was designed to capture hierarchical linguistic data in a way that aligns with the descriptive categories that linguists actually use, relying on fundamental linguistic notions such as <em>text</em>, <em>morpheme</em>, <em>orthography</em>, etc. For instance, this format is capable of capturing the fact that a text contains utterances, utterances contain words, words contains morphemes, and morphemes contain phonemes. This functionality turns out to be a crucial factor in inputting, editing, searching, and analyzing linguistic data. At the same time, the DLx format is computer-readable, easily searchable, and is natively supported by all modern web-based tools.</p>
-<p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even if you don't understand how the format works, you can see the hierarchical relationship between the utterance, its words, and their morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
+<p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even if you don’t understand how the format works, you can see the hierarchical relationship between the utterance, its words, and their morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
 <pre><code class="language-json">{
   &quot;transcription&quot;: {
     &quot;spa&quot;: &quot;hola me llamo Daniel&quot;,
@@ -170,7 +364,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <p>Arrays are a collection of Objects separated by commas <code>,</code>. The items in an Array can be strings of text (e.g. <code>&quot;hola&quot;</code>), numbers (with no quotes, e.g. <code>17</code>), Objects (e.g. <code>{ }</code>), or even other Arrays (e.g. <code>[ ]</code>). In the example above, the Utterance has a collection called <code>&quot;words&quot;</code> containing a list of all the words in the phrase. Notice each word in turn has its own collection, called <code>&quot;morphemes&quot;</code>. This nesting of Arrays and Objects allows us to capture the hierarchical nature of linguistic data.</p>
 </li>
 </ul>
-<p>Another great feature of JSON is that adding new properties to an Object doesn't change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you've transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data <em>format</em> just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called <code>&quot;startTime&quot;</code> and <code>&quot;endTime&quot;</code> to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting. The data hasn't been altered, just extended. The underlying format is all the same.</p>
+<p>Another great feature of JSON is that adding new properties to an Object doesn’t change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you’ve transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data <em>format</em> just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called <code>&quot;startTime&quot;</code> and <code>&quot;endTime&quot;</code> to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting. The data hasn’t been altered, just extended. The underlying format is all the same.</p>
 <h2>Schemas</h2>
 <h3>Linguistic Schemas</h3>
 <p>The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does <em>not</em> need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.</p>
@@ -257,13 +451,6 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <h2>Maintainers</h2>
 <p>This repository is maintained by <a href="https://github.com/dwhieb/">Daniel W. Hieber</a> (<a href="https://github.com/dwhieb/">@dwhieb</a>).</p>
 </main>
-
-    <nav>
-      <h1>Schemas</h1>
-      <ul>
-        <li><a href="schemas/Abbreviation.html">Abbreviation</a></li><li><a href="schemas/Address.html">Address</a></li><li><a href="schemas/Bundle.html">Bundle</a></li><li><a href="schemas/Access.html">Access Rights</a></li><li><a href="schemas/Annotation.html">Annotation</a></li><li><a href="schemas/BibliographicReference.html">Bibliographic Reference</a></li><li><a href="schemas/DatabaseReference.html">Database Reference</a></li><li><a href="schemas/Location.html">Location</a></li><li><a href="schemas/Morpheme.html">Morpheme Token</a></li><li><a href="schemas/MultiLangString.html">Multi-Language Text / String</a></li><li><a href="schemas/Note.html">Note</a></li><li><a href="schemas/Orthography.html">Orthography</a></li><li><a href="schemas/Person.html">Person</a></li><li><a href="schemas/Tags.html">Tags</a></li><li><a href="schemas/Reference.html">Bibliographic Reference</a></li><li><a href="schemas/Translation.html">Translation</a></li><li><a href="schemas/Transcription.html">Transcription</a></li><li><a href="schemas/Utterance.html">Utterance</a></li><li><a href="schemas/Word.html">Word</a></li><li><a href="schemas/LexemeForm.html">Lexeme Form</a></li><li><a href="schemas/Media.html">Media File</a></li><li><a href="schemas/Phoneme.html">Phoneme</a></li><li><a href="schemas/Sense.html">Sense</a></li><li><a href="schemas/Text.html">Text</a></li><li><a href="schemas/Lexeme.html">Lexeme</a></li><li><a href="schemas/Language.html">Language</a></li>
-      </ul>
-    </nav>
 
   </body>
 

@@ -1,93 +1,249 @@
-
 <!DOCTYPE html>
-<html lang=en>
+<html lang=en dir=ltr>
 
   <head>
+
     <meta charset=utf-8>
-    <title>
-      Person
-    </title>
-    <meta name=viewport content='width=device-width'>
-    <link rel=stylesheet href="../jschemer.css" type=text/css>
+    <title>Person</title>
+    <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+
+    <link href=../schema-page.css rel=stylesheet>
+
   </head>
 
   <body>
 
+    <nav id=jschemer-nav aria-labelledby=jschemer-schemas-list-heading role=navigation>
+
+  <p><a href=../index.html>Home</a></p>
+
+  <h2 id=jschemer-schemas-list-heading>Schemas</h1>
+
+  <ul>
+      <li>
+        <p>
+          <a href='Abbreviation.html'>
+              Abbreviation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Access.html'>
+              Access Rights
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Address.html'>
+              Address
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Annotation.html'>
+              Annotation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Reference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='BibliographicReference.html'>
+              Bibliographic Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Bundle.html'>
+              Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='DatabaseReference.html'>
+              Database Reference
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Language.html'>
+              Language
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Lexeme.html'>
+              Lexeme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='LexemeForm.html'>
+              Lexeme Form
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Location.html'>
+              Location
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Media.html'>
+              Media File
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Morpheme.html'>
+              Morpheme Token
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='MultiLangString.html'>
+              Multi-Language Text / String
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Note.html'>
+              Note
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Orthography.html'>
+              Orthography
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Person.html'>
+              Person
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Phoneme.html'>
+              Phoneme
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Sense.html'>
+              Sense
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Tags.html'>
+              Tags
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Text.html'>
+              Text
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Transcription.html'>
+              Transcription
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Translation.html'>
+              Translation
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Utterance.html'>
+              Utterance
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Word.html'>
+              Word
+          </a>
+        </p>
+      </li>
+  </ul>
+
+</nav>
+
     <main>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Person</h1>
-    </summary>
+      <section id=http://schemas.digitallinguistics.io/Person-4.2.0.json class=jschemer-schema>
 
 
-      <p class='$schema meta any prop'><strong>Validate against:</strong> <a href="http://json-schema.org/draft-07/schema#">http://json-schema.org/draft-07/schema#</a></p>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Person
+          </h1>
+        </summary>
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An object providing information about a Person</p>
-</p>
-      </div>
+        <p class='$schema keyword'>
+          <b>Validate against:</b> <a href='http://json-schema.org/draft-07/schema#'>http://json-schema.org/draft-07/schema#</a>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>object</code></p>
+        <p class='$id keyword'>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Person-4.2.0.json</code>
+        </p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <div class='required object prop'>
-        <h2>Required Properties</h2>
-        <ul>
-            <li><code>familyName</code></li>
-            <li><code>givenName</code></li>
-        </ul>
-      </div>
-
-        <p class='additional-properties object prop'>
-          <strong>Additional properties:</strong> true
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
-      <div class='properties object prop'>
-        <h2>Properties</h2>
-        <ul>
-            <li>
-<section class=schema>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An object providing information about a Person</p>
+</div>
+        </section>
 
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Type: <code>"type"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The type of object. Must be set to <code>Person</code>.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <section class='$comment keyword'>
+          <h2>Developer Notes</h2>
+          <div><p>This is a top-level database object</p>
+</div>
+        </section>
 
 
 
@@ -112,40 +268,133 @@
 
 
 
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>familyName</code></li>
+                <li><code>givenName</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Type: <code>type</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+        <p class='readOnly keyword'>
+          <b>Read-only:</b> <code>true</code>
+        </p>
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The type of object. Must be set to <code>Person</code>.</p>
+</div>
+        </section>
 
 
 
 
 
 
-  </details>
+
+          <p>This item must have the following value:</p>
+          <pre><code>&quot;Person&quot;</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>ID: <code>"id"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A unique database identifier for this Person</p>
-</p>
-      </div>
+        <summary>
+          <h1 class='title keyword'>
+            ID: <code>id</code>
+          </h1>
+        </summary>
 
 
 
 
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A unique database identifier for this Person</p>
+</div>
+        </section>
 
 
 
@@ -171,101 +420,312 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Abbreviation: <code>"abbreviation"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Abbreviation.html">Abbreviation</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Abbreviation: <code>abbreviation</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Abbreviation.json'>http://schemas.digitallinguistics.io/Abbreviation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Access Rights: <code>"access"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The access rights for information about this person</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Access.html">Access</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Access Rights: <code>access</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The access rights for information about this person</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Access.json'>http://schemas.digitallinguistics.io/Access.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Address: <code>"address"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The address for this person</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Address.html">Address</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Address: <code>address</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The address for this person</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Address.json'>http://schemas.digitallinguistics.io/Address.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
+                <li><section  class=jschemer-schema>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Birth Date: <code>"birthDate"</code></h1>
-    </summary>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Birth Date: <code>birthDate</code>
+          </h1>
+        </summary>
 
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>This person’s birth date, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date time format</a></p>
-</p>
-      </div>
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>This person’s birth date, in <a href="https://www.w3.org/TR/NOTE-datetime">internet date time format</a></p>
+</div>
+        </section>
 
 
 
@@ -275,7 +735,6 @@
 
 
 
-      <p class='format string prop'><strong>Format:</strong> date</p>
 
 
 
@@ -295,878 +754,965 @@
 
 
 
-  </details>
 
-</section>
-</li>
-            <li>
-<section class=schema>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Birth Place (Database Reference): <code>"birthPlace"</code></h1>
-    </summary>
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A database reference to this person’s place of birth, as a Location object</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="DatabaseReference.html">DatabaseReference</a> schema.</p>
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Email: <code>"email"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>This person’s email</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> email</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Family Name(s) / Last Name(s): <code>"familyName"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>This person’s family name(s) (last name(s))</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Gender: <code>"gender"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>This person’s self-reported gender identity</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Given Name(s) / First Name(s): <code>"givenName"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>This person’s given name(s) (first name(s)), including middle name(s), if any</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Languages Spoken: <code>"languages"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A list of the languages that this person speaks. Each item should be a DLx Language object, optionally with a few additional properties such as <code>ageLearned</code>, etc., Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Language Spoken</h1>
-              </summary>
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='all-of any prop'>
-                  <h2>Validates Against (<code>allOf</code>)</h2>
-                  <p>This schema must validate against all of the following schemas:</p>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Language</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>Each item in the <code>languages</code> Array must be a valid Language object</p>
+          <p class='format keyword'>
+            <b>Format:</b> <code>date</code>
           </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href=".html"></a> schema.</p>
-          
-          
-            </details>
-          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Birth Place (Database Reference): <code>birthPlace</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A database reference to this person’s place of birth, as a Location object</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
           </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <div class='properties object prop'>
-                  <h2>Properties</h2>
-                  <ul>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Age Learned</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The age at which this person learned this language</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Email: <code>email</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>This person’s email</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>email</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Notes</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>Notes about this person’s use of this language</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Family Name(s) / Last Name(s): <code>familyName</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>This person’s family name(s) (last name(s))</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Gender: <code>gender</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>This person’s self-reported gender identity</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Given Name(s) / First Name(s): <code>givenName</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>This person’s given name(s) (first name(s)), including middle name(s), if any</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Languages Spoken: <code>languages</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of the languages that this person speaks. Each item should be a DLx Language object, optionally with a few additional properties such as <code>ageLearned</code>, etc., Because the DLx Language object consist minimally of just the language name, not all details about the language need to be provided here.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='unique-items array prop'>
-                  <strong>Unique items:</strong> <code></code>
-                </p>
-          
-                <div class='items array prop'>
-          
-                  <h2>Items</h2>
-          
-                    <ul>
-                        <li>
-          <section class=schema>
-          
-            <details open>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Language Spoken: <code>languages</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='allOf keyword'>
+
+            <p>This item must also validate against all of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Language
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>Each item in the <code>languages</code> Array must be a valid Language object</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Language.json'>http://schemas.digitallinguistics.io/Language.json</a></p>
           </section>
-          </li>
-                        <li>
-          <section class=schema>
-          
-            <details open>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                        <li>
-          <section class=schema>
-          
-            <details open>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                        <li>
-          <section class=schema>
-          
-            <details open>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                    </ul>
-          
-                </div>
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Proficiency</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The proficiency level of this person in this Language</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Age Learned: <code>ageLearned</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>integer</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The age at which this person learned this language</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                      <li>
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Years Known</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The number of years this person has known this Language</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>Notes about this person’s use of this language</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>integer</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
-          </section>
-          </li>
-                  </ul>
-                </div>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A note about this person’s use of this language</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
           </section>
 
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Link: <code>"link"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A URL where a presentational format for this resource may be viewed</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Proficiency: <code>proficiency</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The proficiency level of this person in this Language</p>
+</div>
+        </section>
 
 
 
@@ -1186,37 +1732,66 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Notes: <code>"notes"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An array of notes about this person</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Years Known: <code>yearsKnown</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>integer</code>
+        </p>
 
 
 
-
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The number of years this person has known this Language</p>
+</div>
+        </section>
 
 
 
@@ -1235,68 +1810,249 @@
 
 
 
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
 
-      <div class='items array prop'>
 
-        <h2>Items</h2>
 
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Note</h1>
-              </summary>
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>A note about this person</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+          <section class='additionalProperties keyword'>
+
+            <h2>Additional Properties</h2>
+
+            <p>Any additional properties must adhere to the following schema:</p>
+
+            <section  class=jschemer-schema>
+
+
+      <p>This schema imposes no restrictions. All values are valid.</p>
+
+
+</section>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Link: <code>link</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A URL where a presentational format for this resource may be viewed</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
           </p>
-                </div>
-          
-              <p class='$ref any prop'>Must be an instance of the <a href="Note.html">Note</a> schema.</p>
-          
-          
-            </details>
-          
-          </section>
-
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
+                <li><section  class=jschemer-schema>
 
-  <details open>
 
-    <summary>
-      <h1 class='title meta any prop'>Phone Number: <code>"phone"</code></h1>
-    </summary>
+    <details open>
 
 
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
 
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A phone number for this Person</p>
-</p>
-      </div>
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
 
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
 
 
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An array of notes about this person</p>
+</div>
+        </section>
 
 
 
@@ -1309,252 +2065,248 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Pseudonym: <code>"pseudonym"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A pseudonym for this Person</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </details>
-
-</section>
-</li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Roles: <code>"roles"</code></h1>
-    </summary>
-
-
-
-
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>An array of the roles that this person has in the context of the associated data, e.g. <code>speaker</code> or <code>transcriber</code></p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>array</code></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <p class='unique-items array prop'>
-        <strong>Unique items:</strong> <code>true</code>
-      </p>
-
-      <div class='items array prop'>
-
-        <h2>Items</h2>
-
-          
-          <section class=schema>
-          
-            <details open>
-          
-              <summary>
-                <h1 class='title meta any prop'>Role</h1>
-              </summary>
-          
-          
-          
-          
-          
-                <div class='description meta any prop'>
-                  <h2>Description</h2>
-                  <p><p>The role that this person has in the context of the associated data, e.g. <code>speaker</code> or <code>transcriber</code></p>
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
           </p>
-                </div>
-          
-                <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-                <p class='min-length string prop'><strong>Min length:</strong> <code>1</code></p>
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-            </details>
-          
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A note about this person</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
           </section>
 
-      </div>
 
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>Tags: <code>"tags"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>A set of tags for this Person</p>
-</p>
-      </div>
-
-    <p class='$ref any prop'>Must be an instance of the <a href="Tags.html">Tags</a> schema.</p>
+    <details open>
 
 
-  </details>
+        <summary>
+          <h1 class='title keyword'>
+            Phone Number: <code>phone</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A phone number for this Person</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-            <li>
-<section class=schema>
-
-  <details open>
-
-    <summary>
-      <h1 class='title meta any prop'>URL: <code>"url"</code></h1>
-    </summary>
+                <li><section  class=jschemer-schema>
 
 
+    <details open>
 
 
-
-      <div class='description meta any prop'>
-        <h2>Description</h2>
-        <p><p>The URL where the JSON data for this Person may be accessed</p>
-</p>
-      </div>
-
-      <p class='type any prop'><strong>Type:</strong> <code>string</code></p>
+        <summary>
+          <h1 class='title keyword'>
+            Pseudonym: <code>pseudonym</code>
+          </h1>
+        </summary>
 
 
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
 
 
 
-
-
-
-
-
-      <p class='format string prop'><strong>Format:</strong> uri</p>
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A pseudonym for this Person</p>
+</div>
+        </section>
 
 
 
@@ -1574,12 +2326,66 @@
 
 
 
-  </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
 </li>
-        </ul>
-      </div>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Roles: <code>roles</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An array of the roles that this person has in the context of the associated data, e.g. <code>speaker</code> or <code>transcriber</code></p>
+</div>
+        </section>
 
 
 
@@ -1589,18 +2395,395 @@
 
 
 
-  </details>
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Role: <code>roles</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The role that this person has in the context of the associated data, e.g. <code>speaker</code> or <code>transcriber</code></p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minLength keyword'>
+            <b>Minimum length:</b> <code>1</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
 
 </section>
-</main>
 
-    <nav>
-      <h1><a href=../index.html>Home</a></h1>
-      <h1>Schemas</h1>
-      <ul>
-        <li><a href="Abbreviation.html">Abbreviation</a></li><li><a href="Address.html">Address</a></li><li><a href="Bundle.html">Bundle</a></li><li><a href="Access.html">Access Rights</a></li><li><a href="Annotation.html">Annotation</a></li><li><a href="BibliographicReference.html">Bibliographic Reference</a></li><li><a href="DatabaseReference.html">Database Reference</a></li><li><a href="Location.html">Location</a></li><li><a href="Morpheme.html">Morpheme Token</a></li><li><a href="MultiLangString.html">Multi-Language Text / String</a></li><li><a href="Note.html">Note</a></li><li><a href="Orthography.html">Orthography</a></li><li><a href="Person.html">Person</a></li><li><a href="Tags.html">Tags</a></li><li><a href="Reference.html">Bibliographic Reference</a></li><li><a href="Translation.html">Translation</a></li><li><a href="Transcription.html">Transcription</a></li><li><a href="Utterance.html">Utterance</a></li><li><a href="Word.html">Word</a></li><li><a href="LexemeForm.html">Lexeme Form</a></li><li><a href="Media.html">Media File</a></li><li><a href="Phoneme.html">Phoneme</a></li><li><a href="Sense.html">Sense</a></li><li><a href="Text.html">Text</a></li><li><a href="Lexeme.html">Lexeme</a></li><li><a href="Language.html">Language</a></li>
-      </ul>
-    </nav>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Tags: <code>tags</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A set of tags for this Person</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Tags.json'>http://schemas.digitallinguistics.io/Tags.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            URL: <code>url</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The URL where the JSON data for this Person may be accessed</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>uri</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+          <section class='additionalProperties keyword'>
+
+            <h2>Additional Properties</h2>
+
+            <p>Any additional properties must adhere to the following schema:</p>
+
+            <section  class=jschemer-schema>
+
+
+      <p>This schema imposes no restrictions. All values are valid.</p>
+
+
+</section>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class='examples keyword'>
+
+          <h2>Examples</h2>
+
+          <p>The following are example values for this schema:</p>
+
+          <ul>
+              <li>
+                <pre><code>{
+  &quot;abbreviation&quot;: &quot;BP&quot;,
+  &quot;access&quot;: {
+    &quot;notes&quot;: &quot;No access restrictions on this person&#x27;s data.&quot;
+  },
+  &quot;birthDate&quot;: &quot;1867-01-01&quot;,
+  &quot;dateCreated&quot;: &quot;2018-10-05T15:26:23.070Z&quot;,
+  &quot;dateModified&quot;: &quot;2018-10-05T15:26:23.070Z&quot;,
+  &quot;familyName&quot;: &quot;Paul&quot;,
+  &quot;gender&quot;: &quot;male&quot;,
+  &quot;givenName&quot;: &quot;Benjamin&quot;,
+  &quot;id&quot;: &quot;46d3ad45-d1b8-4656-b496-dcb39203c5a9&quot;,
+  &quot;languages&quot;: [
+    {
+      &quot;name&quot;: &quot;Chitimacha&quot;,
+      &quot;proficiency&quot;: &quot;fluent&quot;
+    },
+    {
+      &quot;name&quot;: &quot;English&quot;,
+      &quot;proficiency&quot;: &quot;fluent&quot;
+    }
+  ],
+  &quot;link&quot;: &quot;https://data.digitallinguistics.io/languages/Chitimacha/people/BP&quot;,
+  &quot;roles&quot;: [
+    &quot;speaker&quot;
+  ],
+  &quot;type&quot;: &quot;Person&quot;,
+  &quot;url&quot;: &quot;https://data.digitallinguistics.io/languages/Chitimacha/people/BP.json&quot;
+}</code></pre>
+              </li>
+          </ul>
+
+        </section>
+
+    </details>
+
+
+</section>
+    </main>
 
   </body>
 
