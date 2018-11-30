@@ -16,19 +16,20 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 
 [Contributing Guidelines](https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#contributing-code--changes-to-the-schemas)
 
-- [ ] **[Open an issue](https://github.com/digitallinguistics/spec/issues/new)** if you haven't already
+- [ ] **[Open an issue](https://github.com/digitallinguistics/spec/issues/new)**
 - [ ] **Fork the repository** and clone it to your computer
-- [ ] **Create an issue branch** for the issue you are working on
-- [ ] **Set up development environment** by installing [Node.js](https://nodejs.org/en/)
-- [ ] **Install project dependencies** by running `npm install` on the command line
+- [ ] **Create an issue branch**
+- [ ] **Set up development environment**: install [Node.js](https://nodejs.org/en/)
+- [ ] **Install project dependencies**: `npm install`
+- [ ] **Update project dependencies**: `npm outdated`
 - [ ] **Update the documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you plan to make
 - [ ] **Write or update (failing) tests** for the changes you are going to make
 - [ ] **Make changes to the schemas or code**
 - [ ] **Increment version numbers** of schemas that changed
-- [ ] **Run the tests** using `npm test` on the command line, and fix issues that arise
+- [ ] **Run the tests** and fix issues that arise: `npm test`
 - [ ] **Double check the documentation** to ensure it still reflects your changes
 - [ ] **Pull the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
-- [ ] **Run the build script** by running `npm run build` on the command line and commit changes
+- [ ] **Run the build script**: `npm run build`
 - [ ] **Fill out this pull request template** and use an @ mention to let a reviewer know your pull request is ready
 - [ ] **Wait for a reviewer to provide feedback**
 - [ ] **Address any changes requested by the reviewer**

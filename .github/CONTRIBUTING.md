@@ -72,6 +72,8 @@ If you'd like to contribute changes to the code or the schemas in the repository
 
 1. **Install project dependencies** by running `npm install` in the project folder from the command line.
 
+1. **Update project dependencies** by running `npm outdated` in the project folder from the command line.
+
 1. **Update the documentation** (`README.md`, `CONTRIBUTING.md`) to reflect the changes you plan to make.
 
 1. **Write or update tests** for the changes you are going to make.
