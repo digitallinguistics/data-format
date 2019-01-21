@@ -30,6 +30,7 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 - [ ] **Double check the documentation** to ensure it still reflects your changes
 - [ ] **Pull the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
 - [ ] **Run the build script**: `npm run build`
+- [ ] **Check the user documentation for your changes** (`/docs`)
 - [ ] **Fill out this pull request template** and use an @ mention to let a reviewer know your pull request is ready
 - [ ] **Wait for a reviewer to provide feedback**
 - [ ] **Address any changes requested by the reviewer**
