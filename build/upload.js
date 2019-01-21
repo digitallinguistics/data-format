@@ -10,7 +10,7 @@
 
 // IMPORTS
 if (!process.env.AZURE_STORAGE_CONNECTION_STRING) {
-  require(`../../credentials/azure-storage-dlx`);
+  process.env.AZURE_STORAGE_CONNECTION_STRING = require(`../../credentials/azure-storage`);
 }
 
 const chalk         = require(`chalk`);
