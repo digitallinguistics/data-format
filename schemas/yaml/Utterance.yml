@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Utterance-4.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/Utterance-4.3.0.json'
 title:   Utterance
 type:    object
 
@@ -37,6 +37,40 @@ properties:
     type:    number
     minimum: 0.001
     description: 'The time that the speaker finishes producing this Utterance within the media file(s) associated with this Text. The timestamp should be formatted in SS.MMM (seconds and milliseconds).'
+
+  judgments:
+    title:       Grammaticality & Acceptability judgments
+    type:        array
+    uniqueItems: true
+    description: An array of grammaticality judgments or acceptability judgments for this utterance.
+    items:
+      title: Grammaticality / Acceptability judgment
+      type:  object
+      description: A judgment of the grammaticality or acceptability of the utterance. Some linguists distinguish between grammaticality and acceptability, such that some utterances may be considered grammatical but not acceptable. Unacceptable utterances are typically those which are semantically or pragmatically odd in context. It is strongly recommended that a note be included with each judgment, and the source of the judgment indicated in the note.
+      required:
+        - judgment
+        - judgmentType
+      additionalProperties: false
+      properties:
+
+        judgment:
+          title: Grammaticality / Acceptability judgment
+          type:  number
+          description: The grammaticality / acceptability judgment for this utterance, represented as a value between 0 (completely ungrammatical / unacceptable) and 1 (completely grammatical / acceptable). Simple binary judgments ("good" vs. "bad", "grammatical" vs. "ungrammatical") can simply use the values `0` and `1`. Scalar judgments should be normalized to a value between `0` and `1`. For example, a scale of 1-3 asterisks for grammaticality could be represented as follows: `0.00` = `***`, `0.33` = `**`, `0.66` = `*`, `1.00` = completely grammatical.
+
+        judgmentType:
+          title: judgment Type
+          type:  string
+          description: Indicates whether the judgment is an `acceptability` judgment or a `grammaticality` judgment.
+          enum:
+            - acceptability
+            - grammaticality
+
+        note:
+          title: judgment Note
+          type:  object
+          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          description: A note about this judgment. It is strongly recommended that every judgment be accompanied by a note, indicating the speaker / source of the judgment, and if possible an explanation for unacceptable or ungrammatical judgments.
 
   language:
     title: Language
@@ -118,7 +152,13 @@ properties:
 
 examples:
 
-  - transcript:
+  - judgments:
+      - judgment:     0.66
+        judgmentType: acceptability
+        note:
+          source: BP
+          text:   Speaker B found this utterance odd because the first two words were contracted.
+    transcript:
       Mod: Waxdungu qasi,
     transcription:
       Mod: waxdungu qasi

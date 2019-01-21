@@ -36,11 +36,12 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^6.6.1",
+    "ajv": "^6.7.0",
     "azure-storage": "^2.10.2",
-    "chalk": "^2.4.1",
-    "jasmine": "^3.3.0",
-    "jschemer": "^3.0.2",
+    "chalk": "^2.4.2",
+    "eslint": "^5.12.1",
+    "jasmine": "^3.3.1",
+    "jschemer": "^3.0.3",
     "semver-regex": "^2.0.0",
     "yamljs": "^0.3.0"
   }
