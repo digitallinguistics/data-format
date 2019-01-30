@@ -7,7 +7,7 @@ This repository contains the specification of the data format, in the form of a 
 
 See the [documentation][1] for human-readable versions of the schemas, and an example of the schema in use.
 
-Please consider citing this specification in scholarly articles using this repository's [Zenodo][6] DOI:
+Please consider citing this specification in scholarly articles using this repository's [Zenodo][5] DOI:
 
 > Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][5]
 

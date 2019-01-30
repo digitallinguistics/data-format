@@ -11,9 +11,9 @@ Tools which follow this recommended format will be interoperable, allowing users
 
 This format also facilitates adherence to the [Austin Principles for Data Citation in Linguistics][22] by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.
 
-Please consider citing this specification in scholarly articles using this repository's [Zenodo][6] DOI:
+Please consider citing this specification in scholarly articles using this repository's [Zenodo][11] DOI:
 
-> Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][5]
+> Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][11]
 
 [![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][26]
 [![DOI](https://zenodo.org/badge/50221632.svg)][27]
@@ -225,7 +225,7 @@ This repository is maintained by [Daniel W. Hieber][19] ([@dwhieb][19]).
 [8]:  https://spec.digitallinguistics.io/schemas/Address.html
 [9]:  https://spec.digitallinguistics.io/schemas/Tags.html
 [10]: https://github.com/digitallinguistics/spec#readme
-
+[11]: http://doi.org/10.5281/zenodo.594557
 
 [13]: https://spec.digitallinguistics.io/schemas/DatabaseReference.html
 [14]: https://spec.digitallinguistics.io/schemas/MultiLangString.html
