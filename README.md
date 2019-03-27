@@ -1,31 +1,31 @@
 <!-- This readme is targeted at developers. The general user readme is in /.github/README.md -->
-# [Data Format for Digital Linguistics (DaFoDiL)][1]
+# Data Format for Digital Linguistics (DaFoDiL)
 
-The DLx data format is a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called [Digital Linguistics][3] (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
+The DLx data format is a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called [Digital Linguistics][About] (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
 
-This repository contains the specification of the data format, in the form of a number of schemas. There is one schema for each type of linguistic object (e.g. Language, Morpheme, Text, etc), and schemas for various non-linguistic objects as well (e.g. Person, Location, etc.). The schemas follow the [JSON Schema][2] format for describing the structure of JSON data.
+This repository contains the specification of the data format, in the form of a number of schemas. There is one schema for each type of linguistic object (e.g. Language, Morpheme, Text, etc), and schemas for various non-linguistic objects as well (e.g. Person, Location, etc.). The schemas follow the [JSON Schema][JSON Schema] format for describing the structure of JSON data.
 
-See the [documentation][1] for human-readable versions of the schemas, and an example of the schema in use.
+See the [documentation][Docs] for human-readable versions of the schemas, and an example of the schema in use.
 
-Please consider citing this specification in scholarly articles using this repository's [Zenodo][5] DOI:
+Please consider citing this specification in scholarly articles using this repository's [Zenodo][Zenodo] DOI:
 
-> Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][5]
+> Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][Zenodo]
 
-![GitHub stars](https://img.shields.io/github/stars/digitallinguistics/spec.svg?style=social&label=Stars)
-![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)
-![GitHub issues](https://img.shields.io/github/issues/digitallinguistics/spec.svg)
-[![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)](https://badge.fury.io/js/%40digitallinguistics%2Fspec)
-[![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)](https://travis-ci.org/digitallinguistics/spec)
-![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)
-[![DOI](https://zenodo.org/badge/50221632.svg)](https://zenodo.org/badge/latestdoi/50221632)
+[![GitHub stars](https://img.shields.io/github/stars/digitallinguistics/spec.svg?style=social&label=Stars)][GitHub]
+[![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][npm]
+[![GitHub issues](https://img.shields.io/github/issues/digitallinguistics/spec.svg)][Issues]
+[![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)][npm]
+[![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)][Travis]
+[![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)][License]
+[![DOI](https://zenodo.org/badge/50221632.svg)][Zenodo]
 
 ## Contents & Quick Links
 
 * [Open an Issue][4]
-* [Contributing Guidelines][7]
+* [Contributing Guidelines][Contributing]
 * [Basic Usage](#basic-usage)
 * [Data Validation](#data-validation)
-* [The Specification][1] (human-readable version)
+* [The Specification][Docs] (human-readable version)
 * [The Schemas](#schemas)
 * [Best Practices](#best-practices)
 * [Tests](#tests)
@@ -89,7 +89,7 @@ This project is using v0 for initial development. While the specification is lar
 
 ## Data Validation
 
-If you need to validate your linguistic data against the DLx schemas, you can use one of the [JSON Schema validators][8]. This project uses the [`ajv`][9] validator for testing.
+If you need to validate your linguistic data against the DLx schemas, you can use one of the [JSON Schema validators][Validators]. This project uses the [`ajv`][ajv] validator for testing.
 
 ## Schemas
 
@@ -131,7 +131,7 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * The DLx schemas support unique identifiers in the form of opaque IDs or human-readable keys, or both (recommended - see below). Many schemas include an optional `id` field, which is meant to be representative of whatever opaque identifier scheme best suits your database. You could name this field `id`, `ID`, `dbid` (database ID), `localid`, `uuid`, `uri`, etc. etc. Thus when the `id` property is referenced in the schemas, it should not be taken literally as being the `id` field. Instead it refers to whichever field your database uses for unique, opaque identifiers. Whichever name you choose for the property should be used consistently in place of the `id` fields. No restrictions are placed on the format of the ID field other than that it must be non-empty, although best practice is for this field to be a string (preferably a UUID) or a number.
 
-    * If your database depends on unique, opaque identifiers (e.g. a [UUID][11]), you should **also** use human-readable keys. For example, a Lexeme object representing the word "book" (the noun) might have an ID of `d0e51fcb-84af-44aa-ba16-67561e21c793`, but should also have a key `book1`. This helps users identify it as the lexeme "book", while simultaneously helping distinguish it from other "book" homonyms in the database (such as the word "book" used as verb, which might be `book2`).
+    * If your database depends on unique, opaque identifiers (e.g. a [UUID][UUID]), you should **also** use human-readable keys. For example, a Lexeme object representing the word "book" (the noun) might have an ID of `d0e51fcb-84af-44aa-ba16-67561e21c793`, but should also have a key `book1`. This helps users identify it as the lexeme "book", while simultaneously helping distinguish it from other "book" homonyms in the database (such as the word "book" used as verb, which might be `book2`).
 
     * Generally speaking, DLx data should be stored in denormalized (embedded) format whenever it is practical to do so. Sometimes, however, data needs to be normalized when embedding the data directly would be impractical or create infinite recursion. The DLx specification provides a `DatabaseReference` object for this purpose, used to reference other items in a database. For example, a Lexeme may have a reference to an Utterance in its `examples` field, and that Utterance might also have a reference to the Lexeme. Because it would be impossible to represent such a recursive relationship in a single JSON document, database references are used instead. Each DatabaseReference object contains `key`, `url`, `id`, `index`, and `referenceType` properties which allow you to uniquely identify other items in the database. Other properties are required or permitted as appropriate.
 
@@ -159,21 +159,24 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **Dates**
 
-    * The schemas support both [internet date and date-time formats][12], but date-time format is strongly recommended.
+    * The schemas support both [internet date and date-time formats][DateTime], but date-time format is strongly recommended.
 
 ## Tests
 
-Tests are run using [Jasmine][10] in Node.js. Run them from the command line using `npm test`.
+Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command line using `npm test`.
 
-[1]: https://github.com/digitallinguistics/spec#readme
-[2]: http://json-schema.org/
-[3]: https://digitallinguistics.io/about
-[4]: https://github.com/digitallinguistics/spec/issues
-[5]: http://doi.org/10.5281/zenodo.594557
-[6]: https://zenodo.org/
-[7]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
-[8]: http://json-schema.org/implementations.html#validators
-[9]: https://www.npmjs.com/package/ajv
-[10]: https://jasmine.github.io/
-[11]: https://www.uuidgenerator.net/
-[12]: https://www.w3.org/TR/NOTE-datetime
+[About]:        https://digitallinguistics.io/about
+[ajv]:          https://www.npmjs.com/package/ajv
+[Contributing]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
+[DateTime]:     https://www.w3.org/TR/NOTE-datetime
+[Docs]:         https://spec.digitallinguistics.io
+[GitHub]:       https://github.com/digitallinguistics/spec
+[Issues]:       https://github.com/digitallinguistics/spec/issues
+[Jasmine]:      https://jasmine.github.io/
+[License]:      https://github.com/digitallinguistics/spec/blob/master/LICENSE.md
+[npm]:          https://www.npmjs.com/package/@digitallinguistics/spec
+[JSON Schema]:  http://json-schema.org/
+[Travis]:       https://travis-ci.org/digitallinguistics/spec
+[UUID]:         https://www.uuidgenerator.net/
+[Validators]:   http://json-schema.org/implementations.html#validators
+[Zenodo]:       http://doi.org/10.5281/zenodo.594557
