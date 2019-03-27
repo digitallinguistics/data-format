@@ -1,4 +1,4 @@
-# ESLint v5.9.0
+# ESLint v5.15.2
 parserOptions:
   ecmaVersion: 10
   ecmaFeatures:
@@ -7,7 +7,7 @@ parserOptions:
 env:
   browser: true
   es6:     true
-  jasmine: true
+  jasmine: false
   node:    true
 rules:
   id-blacklist:
@@ -126,9 +126,9 @@ rules:
   key-spacing:
   - error
   - beforeColon: false
-    afterColon: true
-    mode: minimum
-    align: value
+    afterColon:  true
+    mode:        minimum
+    align:       value
   keyword-spacing:
   - error
   - before: true
@@ -408,6 +408,7 @@ rules:
     - classes: false
       functions: false
   no-useless-call: error
+  no-useless-catch: error
   no-useless-concat: error
   no-useless-computed-key: error
   no-useless-constructor: error
@@ -468,6 +469,7 @@ rules:
   - array: false
     object: true
   - enforceForRenamedProperties: false
+  prefer-named-capture-group: warn
   prefer-numeric-literals: warn
   prefer-object-spread: off
   prefer-promise-reject-errors:

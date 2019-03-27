@@ -56,7 +56,7 @@ properties:
         judgment:
           title: Grammaticality / Acceptability judgment
           type:  number
-          description: The grammaticality / acceptability judgment for this utterance, represented as a value between 0 (completely ungrammatical / unacceptable) and 1 (completely grammatical / acceptable). Simple binary judgments ("good" vs. "bad", "grammatical" vs. "ungrammatical") can simply use the values `0` and `1`. Scalar judgments should be normalized to a value between `0` and `1`. For example, a scale of 1-3 asterisks for grammaticality could be represented as follows: `0.00` = `***`, `0.33` = `**`, `0.66` = `*`, `1.00` = completely grammatical.
+          description: 'The grammaticality / acceptability judgment for this utterance, represented as a value between 0 (completely ungrammatical / unacceptable) and 1 (completely grammatical / acceptable). Simple binary judgments ("good" vs. "bad", "grammatical" vs. "ungrammatical") can simply use the values `0` and `1`. Scalar judgments should be normalized to a value between `0` and `1`. For example, a scale of 1-3 asterisks for grammaticality could be represented as follows: `0.00` = `***`, `0.33` = `**`, `0.66` = `*`, `1.00` = completely grammatical.'
 
         judgmentType:
           title: judgment Type

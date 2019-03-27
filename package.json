@@ -36,10 +36,10 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^6.7.0",
+    "ajv": "^6.10.0",
     "azure-storage": "^2.10.2",
     "chalk": "^2.4.2",
-    "eslint": "^5.12.1",
+    "eslint": "^5.15.3",
     "jasmine": "^3.3.1",
     "jschemer": "^3.0.3",
     "semver-regex": "^2.0.0",
