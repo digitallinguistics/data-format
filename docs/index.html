@@ -207,7 +207,7 @@
     </nav>
 
     <main class=markdown-body><!-- This readme is targeted at general users. The developer readme is located in the project root. -->
-<h1><a href="https://github.com/digitallinguistics/spec#readme">The Data Format for Digital Linguistics</a> (DaFoDiL)</h1>
+<h1>The Data Format for Digital Linguistics (DaFoDiL)</h1>
 <h2>Introduction</h2>
 <p>This project aims to create a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called Digital Linguistics (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.</p>
 <p>This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil). This specification is a recommendation for how to store linguistic data in a way that is standardized, human-readable and web-compatible, using a popular data storage format on the web known as <a href="http://json.org/">JSON</a>.</p>
@@ -218,7 +218,7 @@
 <p>Hieber, Daniel W. 2018. <em>Data Format for Digital Linguistics</em>. DOI:<a href="http://doi.org/10.5281/zenodo.594557">10.5281/zenodo.1438589</a></p>
 </blockquote>
 <p><a href="https://www.npmjs.com/package/@digitallinguistics/spec"><img src="https://img.shields.io/npm/dt/@digitallinguistics/spec.svg" alt="npm downloads"></a>
-<a href="https://zenodo.org/badge/latestdoi/50221632"><img src="https://zenodo.org/badge/50221632.svg" alt="DOI"></a>
+<a href="http://doi.org/10.5281/zenodo.594557"><img src="https://zenodo.org/badge/50221632.svg" alt="DOI"></a>
 <a href="https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md"><img src="https://img.shields.io/github/license/digitallinguistics/spec.svg" alt="license"></a></p>
 <h2>Contents &amp; Quick Links</h2>
 <ul>
@@ -229,13 +229,13 @@
 <p><a href="#schemas">Schemas</a>: read the schemas and get started using the DLx format in your own projects</p>
 </li>
 <li>
-<p><a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues">Bugs &amp; Feature Requests</a>: Need to report a bug or suggest a feature? <a href="https://github.com/digitallinguistics/spec">Open an issue on GitHub</a>. Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">contributing guidelines</a> for information on the best way to report a bug or request a feature.</p>
+<p><a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues">Bugs &amp; Feature Requests</a>: Need to report a bug or suggest a feature? <a href="https://github.com/digitallinguistics/spec/issues">Open an issue on GitHub</a>. Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">contributing guidelines</a> for information on the best way to report a bug or request a feature.</p>
 </li>
 <li>
 <p><a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Contributing</a>: Want to contribute to this project? :star2: Awesome! :star2: <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Check out the contributing guidelines to get started</a>.</p>
 </li>
 <li>
-<p><a href="https://github.com/digitallinguistics/spec/blob/master/README.md">Developer Readme</a>: Are you a developer who wants to work with the data format programmatically? Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/README.md">Developer Readme</a>.</p>
+<p>[Developer Readme][DevReadme]: Are you a developer who wants to work with the data format programmatically? Check out the [Developer Readme][DevReadme].</p>
 </li>
 </ul>
 <h2>About the DLx Format</h2>
@@ -368,89 +368,16 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <p>Another great feature of JSON is that adding new properties to an Object doesn’t change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you’ve transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data <em>format</em> just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called <code>&quot;startTime&quot;</code> and <code>&quot;endTime&quot;</code> to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting. The data hasn’t been altered, just extended. The underlying format is all the same.</p>
 <h2>Schemas</h2>
 <h3>Linguistic Schemas</h3>
-<p>The DLx project provides recommendations for how to format linguistic data in JSON for the following kinds of linguistic objects. Click each object to see its specification. Note that working data does <em>not</em> need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.</p>
-<ul>
-<li><a href="https://spec.digitallinguistics.io/schemas/Language.html">Language</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Orthography.html">Orthography</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Text.html">Text</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Utterance.html">Utterance</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Word.html">Word Token</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Morpheme.html">Morpheme Token</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Lexeme.html">Lexeme</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Sense.html">Sense</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/LexemeForm.html">Lexeme Form</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Phoneme.html">Phoneme</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Transcription.html">Transcription</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Translation.html">Translation</a></li>
-<li><a href="https://spec.digitallinguistics.io/schemas/Annotation.html">Annotation</a></li>
-</ul>
+<p>The DLx project provides recommendations for how to format linguistic data in JSON for various kinds of linguistic objects, such as Languages, Texts, Orthographies, Lexemes, Phonemes, and many others. Note that working data does <em>not</em> need to adhere to these schemas. Only data stored or exchanged in JSON format must follow these specifications. Developers may choose to represent the data internally in their software however they wish.</p>
 <h3>Non-Linguistic Schemas</h3>
-<p>Other non-linguistic objects are given specifications as well (click on the name of each to see its specification):</p>
-<table>
-<thead>
-<tr>
-<th>Schema</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Abbreviation.html"><code>Abbreviation</code></a></td>
-<td>A human-readable abbreviation, containing no spaces, and only letters A-Z or numbers</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Access.html"><code>Access</code></a></td>
-<td>Information about who should be allowed to access the current data. Access rights can be specified in many of the formats used by well-known linguistic archives such as ELAR or AILLA, or using a custom schema.</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Address.html"><code>Address</code></a></td>
-<td>A postal address</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/BibliographicReference.html"><code>Bibliographic Reference</code></a></td>
-<td>A bibliographic reference</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Bundle.html"><code>Bundle</code></a></td>
-<td>A collection of resources relating to a single event or task, such as all the files relating to a certain elicitation session, or all the field notes from a given day</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/DatabaseReference.html"><code>Database Reference</code></a></td>
-<td>An Object that contains a reference to another item in the database</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Location.html"><code>Location</code></a></td>
-<td>A location with optional geographic coordinates</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Media.html"><code>Media File</code></a></td>
-<td>Information and metadata about a media file (e.g. WAV, PDF, or JPEG files, etc.)</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/MultiLangString.html"><code>MultiLangString</code></a></td>
-<td>An Object containing a piece of text in multiple languages. Typically used for analyses (e.g. translations) rather than data in the language of study</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Note.html"><code>Note</code></a></td>
-<td>Most DLx resources allow you to add notes in different languages, of different types</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Person.html"><code>Person</code></a></td>
-<td>Information about a person, e.g. speaker, linguist, editor, translator, etc.</td>
-</tr>
-<tr>
-<td><a href="https://spec.digitallinguistics.io/schemas/Tags.html"><code>Tags</code></a></td>
-<td>A collection of tags on the given resource. Particularly useful for tagging instances of a phenomenon in your corpora</td>
-</tr>
-</tbody>
-</table>
+<p>Other non-linguistic objects are given specifications as well, including Abbreviations, Bundles, Locations, Media Files, Notes, Persons, Tags, and many others.</p>
 <h3>Using the Schemas</h3>
 <p>Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Utterance schema by making sure you include the <code>transcription</code>, <code>translation</code>, and <code>words</code> properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the <code>startTime</code> and <code>endTime</code> properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).</p>
 <p>Note that most schemas have a strongly-recommended (but optional) <code>type</code> property indicating the schema that that object adheres to.</p>
 <h2>Want to Contribute?</h2>
-<p>Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Contributing Guidelines</a> for this project, and the <a href="https://github.com/digitallinguistics/spec/blob/master/README.md">Developer Readme</a>.</p>
+<p>Check out the <a href="https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md">Contributing Guidelines</a> for this project, and the [Developer Readme][DevReadme].</p>
 <h2>Maintainers</h2>
-<p>This repository is maintained by <a href="https://github.com/dwhieb/">Daniel W. Hieber</a> (<a href="https://github.com/dwhieb/">@dwhieb</a>).</p>
+<p>This repository is maintained by <a href="https://github.com/dwhieb/">Daniel W. Hieber</a> ([@dwhieb][19]).</p>
 </main>
 
   </body>
