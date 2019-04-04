@@ -84,6 +84,12 @@ properties:
     format: uri
     description: 'A URL where a presentational format for this resource may be viewed'
 
+  literalTranslation:
+    title: Translation
+    type:  object
+    $ref:  'http://schemas.digitallinguistics.io/Translation.json'
+    description: 'The literal translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language.'
+
   notes:
     title:       Notes
     type:        array
