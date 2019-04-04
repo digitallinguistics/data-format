@@ -3,7 +3,7 @@
   "$id": "http://schemas.digitallinguistics.io/Utterance-4.3.0.json",
   "title": "Utterance",
   "type": "object",
-  "description": "The term *utterance* is intentially ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision.",
+  "description": "The term *utterance* is intentionally ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision.",
   "required": [
     "transcription",
     "translation"
@@ -87,6 +87,17 @@
       "format": "uri",
       "description": "A URL where a presentational format for this resource may be viewed"
     },
+    "literalTranslation": {
+      "title": "Literal Translation",
+      "type": "object",
+      "$ref": "http://schemas.digitallinguistics.io/Translation.json",
+      "description": "The literal translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language."
+    },
+    "phonetic": {
+      "title": "Phonetic",
+      "type": "string",
+      "description": "The phonetic transcription for this Utterance in IPA. The transcription should not include phonetic brackets."
+    },
     "notes": {
       "title": "Notes",
       "type": "array",
@@ -135,7 +146,7 @@
       "title": "Translation",
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Translation.json",
-      "description": "The translations for this Utterance, optionally in multiple languages. Also includes an optional `type` attribute, for specifying things like `free` or `literal` translation. The translation must be provided in at least one language."
+      "description": "The free translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language."
     },
     "url": {
       "title": "URL",
