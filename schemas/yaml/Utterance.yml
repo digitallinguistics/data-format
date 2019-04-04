@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Utterance-4.3.0.json'
+$id:     'http://schemas.digitallinguistics.io/Utterance-5.0.0.json'
 title:   Utterance
 type:    object
 
@@ -85,10 +85,15 @@ properties:
     description: 'A URL where a presentational format for this resource may be viewed'
 
   literalTranslation:
-    title: Translation
-    type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Translation.json'
+    title:  Literal Translation
+    type:   object
+    $ref:   'http://schemas.digitallinguistics.io/Translation.json'
     description: 'The literal translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language.'
+
+  phonetic:
+    title:  Phonetic 
+    type:   string
+    description: 'The phonetic transcription for this Utterance in IPA. The transcription should not include phonetic brackets.'
 
   notes:
     title:       Notes
