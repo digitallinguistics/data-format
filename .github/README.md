@@ -1,5 +1,5 @@
 <!-- This readme is targeted at general users. The developer readme is located in the project root. -->
-# The Data Format for Digital Linguistics (DaFoDiL)
+# The Data Format for Digital Linguistics (Daffodil)
 
 ## Introduction
 
