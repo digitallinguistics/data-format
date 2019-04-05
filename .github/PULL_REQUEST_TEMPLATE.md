@@ -39,14 +39,14 @@
 
 - [ ] **Update examples** in the affected schemas to reflect the changes you made.
 
-- [ ] **Run the tests** (`npm test`) and fix issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
-
 - [ ] **Get the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
 
-- [ ] **Build the project** (`npm run build`). This does the following:
+- [ ] **Build the project** (`npm run build`)
 
   - Generates JSON versions of the schemas
   - Regenerates the project documentation
+
+- [ ] **Run the tests** (`npm test`) and fix issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
 
 - [ ] **Check the project documentation** for your changes
 
