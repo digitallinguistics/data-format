@@ -21,7 +21,7 @@ Please consider citing this specification in scholarly articles using this repos
 
 ## Contents & Quick Links
 
-* [Open an Issue][4]
+* [Open an Issue][Issues]
 * [Contributing Guidelines][Contributing]
 * [Basic Usage](#basic-usage)
 * [Data Validation](#data-validation)
