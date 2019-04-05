@@ -19,7 +19,9 @@
 
 ## Releases
 
+- [ ] Check for outdated dependencies and make commits to update them as needed
 - [ ] Make a version commit
 - [ ] Run upload script from `master` branch
 - [ ] Travis CI deploys to npm
 - [ ] Travis CI uploads files to DLx CDN
+- [ ] Write a blog post

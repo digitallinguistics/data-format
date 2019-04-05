@@ -28,10 +28,10 @@
   },
   "main": "schemas/json",
   "scripts": {
-    "build": "npm test & npm run docs",
+    "build": "npm run convert & npm run docs",
     "convert": "node build/convert.js",
     "docs": "jschemer -o docs -s schemas/json -r ./.github/README.md",
-    "test": "npm run convert & jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
   },
   "dependencies": {},
