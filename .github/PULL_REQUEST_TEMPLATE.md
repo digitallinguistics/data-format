@@ -52,15 +52,3 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 <!-- DOCS: add documentation about new app.sync() method -->
 <!-- NEW: add app.sync() method to App object -->
 <!-- CHANGE: update app.init() to call app.sync() -->
-
-## Maintainer Checklist
-_This section is for maintainers only_
-
-- [ ] **Squash & merge PR into `master`**
-    - Title: `LABEL: description (#000)`
-    - Description
-    - Changelog: `LABEL: description (closes #000)`
-- [ ] **Delete issue branch**
-- [ ] **Run upload script** from the `master` branch
-- [ ] **Increment version number** if necessary
-- [ ] **Create or update the release notes** for the release that this PR will be part of
