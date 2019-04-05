@@ -39,12 +39,6 @@
 
 - [ ] **Update examples** in the affected schemas to reflect the changes you made.
 
-- [ ] **Increment version numbers** of schemas that changed.
-
-  - **major:** breaking changes to schemas / properties or functional changes to their descriptions
-  - **minor:** new properties added, optional properties removed, or other backwards-compatible changes
-  - **patch:** typos, non-functional changes to descriptions, minor bugs and hotfixes
-
 - [ ] **Run the tests** (`npm test`) and fix issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
 
 - [ ] **Get the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
