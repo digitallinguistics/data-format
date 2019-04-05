@@ -1,40 +1,4 @@
 <!--- Provide a general summary of your changes in the Title above -->
-<!--
-
-Thanks for your pull request!
-
-Be sure to check out the Contributing Guidelines (link below) for a helpful checklist of steps to take while working on your pull request. A simplified version of that checklist is below. You can check off each item as you complete it.
-
-Below the checklist is a pull request template. You can use this template as a guide for describing the changes in your pull request. Just follow the instructions in the comments.
-
-Contributing Guidelines:
-https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#contributing-code--changes-to-the-schemas
-
--->
-
-## Checklist
-
-[Contributing Guidelines](https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#contributing-code--changes-to-the-schemas)
-
-- [ ] **[Open an issue](https://github.com/digitallinguistics/spec/issues/new)**
-- [ ] **Fork the repository** and clone it to your computer
-- [ ] **Create an issue branch**
-- [ ] **Set up development environment**: install [Node.js](https://nodejs.org/en/)
-- [ ] **Install project dependencies**: `npm install`
-- [ ] **Update project dependencies**: `npm outdated`
-- [ ] **Update the documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you plan to make
-- [ ] **Write or update (failing) tests** for the changes you are going to make
-- [ ] **Make changes to the schemas or code**
-- [ ] **Increment version numbers** of schemas that changed
-- [ ] **Run the tests** and fix issues that arise: `npm test`
-- [ ] **Double check the documentation** to ensure it still reflects your changes
-- [ ] **Pull the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
-- [ ] **Run the build script**: `npm run build`
-- [ ] **Check the user documentation for your changes** (`/docs`)
-- [ ] **Fill out this pull request template** and use an @ mention to let a reviewer know your pull request is ready
-- [ ] **Wait for a reviewer to provide feedback**
-- [ ] **Address any changes requested by the reviewer**
-- [ ] **Celebrate!!!** :fireworks: Your work is complete! Thank you for your valuable contribution to DLx!
 
 ## Related Issue
 <!-- This project only accepts pull requests related to open issues. -->
@@ -53,14 +17,43 @@ https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#c
 <!-- NEW: add app.sync() method to App object -->
 <!-- CHANGE: update app.init() to call app.sync() -->
 
-## Maintainer Checklist
-_This section is for maintainers only_
+## Pull Request Checklist
 
-- [ ] **Squash & merge PR into `master`**
-    - Title: `LABEL: description (#000)`
-    - Description
-    - Changelog: `LABEL: description (closes #000)`
-- [ ] **Delete issue branch**
-- [ ] **Run upload script** from the `master` branch
-- [ ] **Increment version number** if necessary
-- [ ] **Create or update the release notes** for the release that this PR will be part of
+- [ ] **[Open an issue](https://github.com/digitallinguistics/spec/issues/new)** for the change, if one is not open already. **NOTE:** It is a good idea to wait until your suggested change is approved by a maintainer before writing any code.
+
+- [ ] **Fork the repository** and clone it to your computer.
+
+- [ ] **Create an issue branch** for the changes you are making. You should only make changes on this branch for the issue you are currently working on.
+
+- [ ] **Install [Node.js](https://nodejs.org/en/)**. Use the latest LTS release. If you need to manage multiple versions of Node.js on your computer, install [nvm](https://github.com/creationix/nvm) or [nvm windows](https://github.com/coreybutler/nvm-windows).
+
+- [ ] **Install project dependencies** by running `npm install` from the command line in the project root.
+
+- [ ] **Update the project documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you plan to make, if applicable.
+
+- [ ] **Write or update (failing) tests** for the changes you are going to make (if needed). Tests only need to be written for issues that cannot be checked using the example data in the schemas.
+
+- [ ] **Make changes to the schemas or code.** The schemas are located in `/schemas/yaml`. Do not update the schemas in `schemas/json`, or your changes will be overwritten.
+
+- [ ] **Update the `"description"` field** of any schemas / properties that you change.
+
+- [ ] **Update examples** in the affected schemas to reflect the changes you made.
+
+- [ ] **Run the tests** (`npm test`) and fix issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
+
+- [ ] **Get the latest changes from the `master` branch** and resolve any conflicts that arise. Run the tests again.
+
+- [ ] **Build the project** (`npm run build`). This does the following:
+
+  - Generates JSON versions of the schemas
+  - Regenerates the project documentation
+
+- [ ] **Check the project documentation** for your changes
+
+- [ ] **Open a pull request** from your issue branch into the `master` branch. See GitHub's advice on [How to write the perfect pull request](https://blog.github.com/2015-01-21-how-to-write-the-perfect-pull-request/).
+
+- [ ] **Wait for a reviewer to provide feedback**
+
+- [ ] **Address any changes requested by the reviewer**. While working on your pull request, you can write `[ci skip]` in each of your commit messages to skip automated testing, until you are ready to test your code.
+
+- [ ] **Celebrate!!!** :fireworks: Your work is complete! Thank you for your valuable contribution to DLx!
