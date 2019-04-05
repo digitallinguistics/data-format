@@ -56,4 +56,8 @@
 
 - [ ] **Address any changes requested by the reviewer**. While working on your pull request, you can write `[ci skip]` in each of your commit messages to skip automated testing, until you are ready to test your code.
 
+- [ ] **Wait for your pull request to be merged.**
+
+- [ ] **Delete your issue branch.**
+
 - [ ] **Celebrate!!!** :fireworks: Your work is complete! Thank you for your valuable contribution to DLx!
