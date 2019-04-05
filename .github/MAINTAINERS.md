@@ -1,14 +1,5 @@
 # Maintainers
 
-## Reviewing Pull Requests
-
-- [ ] Update documentation
-- [ ] Increment version number for affected schemas
-- [ ] Lint affected files
-- [ ] Update tests for issue
-- [ ] Run tests
-- [ ] Generate documentation
-
 ## Merging Pull Requests
 
 - [ ] Merge (or squash) pull request into `master`
