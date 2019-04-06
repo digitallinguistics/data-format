@@ -1,11 +1,13 @@
 <!-- This readme is targeted at developers. The general user readme is in /.github/README.md -->
-# Data Format for Digital Linguistics (DaFoDiL)
+# Data Format for Digital Linguistics (Daffodil)
 
 The DLx data format is a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called [Digital Linguistics][About] (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
 
 This repository contains the specification of the data format, in the form of a number of schemas. There is one schema for each type of linguistic object (e.g. Language, Morpheme, Text, etc), and schemas for various non-linguistic objects as well (e.g. Person, Location, etc.). The schemas follow the [JSON Schema][JSON Schema] format for describing the structure of JSON data.
 
 See the [documentation][Docs] for human-readable versions of the schemas, and an example of the schema in use.
+
+[View the code for this project on GitHub.][GitHub]
 
 Please consider citing this specification in scholarly articles using this repository's [Zenodo][Zenodo] DOI:
 
@@ -21,7 +23,7 @@ Please consider citing this specification in scholarly articles using this repos
 
 ## Contents & Quick Links
 
-* [Open an Issue][4]
+* [Open an Issue][Issues]
 * [Contributing Guidelines][Contributing]
 * [Basic Usage](#basic-usage)
 * [Data Validation](#data-validation)
@@ -123,9 +125,13 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * This specification describes how data should be _stored_, i.e. in a database or JSON file. It does **not** recommend how that data should be formatted when it is being managed or manipulated. Required properties could be missing during data entry, or data could be represented using (for instance) an Object instead of an Array while the data is being manipulated. It is only when you _store_ that data in a file or database that it must be in valid DLx format.
 
+* **YAML vs. JSON**
+
+    * The Daffodil schemas may be applied to either YAML or JSON documents. It may be easier to write your linguistic data in YAML format, and then convert it to JSON for storage in a database.
+
 * **Documents**
 
-    * The DLx format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
+    * The Daffodil format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
 
 * **IDs & Cross-References**
 

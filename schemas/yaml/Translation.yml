@@ -2,7 +2,7 @@ $schema: 'http://json-schema.org/draft-07/schema#'
 $id:     'http://schemas.digitallinguistics.io/Translation-3.0.0.json'
 title:   Translation
 type:    object
-description: 'A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for an orthography (see the [Abbreviation](https://spec.digitallinguistics.github.io/schemas/Abbreviation.html) schema), and the value for that key is the translation of the data in that particular language and orthography. **Note:** The Translation does not have a `type` property'
+description: 'A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for a language (see the [Abbreviation](https://spec.digitallinguistics.github.io/schemas/Abbreviation.html) schema), and the value for that key is the translation of the data in that particular language. **Note:** The Translation does not have a `type` property'
 
 
 patternProperties:

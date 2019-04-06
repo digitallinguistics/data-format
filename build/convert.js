@@ -1,80 +1,78 @@
-/**
- * Converts all the YAML versions of the DLx schemas to JSON,
- * and saves them to /schemas/json
- */
-
-/* eslint-disable
-  no-shadow,
-*/
-
 // IMPORTS
+
 const path   = require(`path`);
 const yamljs = require(`yamljs`);
 
 const {
-  readdir,
+  mkdirp:  createDir,
+  readdir: readDir,
   readFile,
+  remove:  removeDir,
   writeFile,
-} = require(`fs`).promises;
+} = require(`fs-extra`);
 
 // VARIABLES
-const schemasPath = path.join(__dirname, `../schemas`);
+
+const schemasDir = path.join(__dirname, `../schemas`);
+const jsonDir    = path.join(schemasDir, `json`);
+const yamlDir    = path.join(schemasDir, `yaml`);
 
 // METHODS
 
 /**
- * Reads a schema from a filename and returns an Object containing "name" and "schema" attributes
- * @param  {String} filename The filename of the schema to read
- * @return {Object}
+ * Create the index.js file for the /json directory
+ * @return {Promise}
  */
-async function readSchema(filename) {
+async function generateIndex() {
 
-  const schema = await readFile(path.join(schemasPath, `yaml`, filename), `utf8`);
+  const fileNames   = await readDir(jsonDir);
+  const schemaNames = fileNames.map(fileName => fileName.replace(`.json`, ``));
 
-  return {
-    name: filename.replace(`.yml`, ``),
-    schema,
-  };
+  const lines = schemaNames
+  .map(schemaName => `  ${schemaName}: require('./${schemaName}'),`)
+  .join(`\n`);
+
+  const indexText = `module.exports = {\n${lines}\n};`;
+  const indexPath = path.join(jsonDir, `index.js`);
+
+  await writeFile(indexPath, indexText, `utf8`);
 
 }
 
 /**
- * Writes a converted schema object to a JSON file in the /schemas/json folder
- * @param  {String}  name   The name of the schema
- * @param  {Object}  schema The schema as a JavaScript Object
- * @return {Promise}        Returns a Promise that resolves when complete
+ * Converts a single YAML schema to JSON
+ * @param  {String} filename The name of a file in the /yaml directory
+ * @return {Promise}
  */
-async function writeSchema({ name, schema }) {
-  const schemaPath = path.join(schemasPath, `json/${name}.json`);
-  const json       = JSON.stringify(schema, null, 2);
-  await writeFile(schemaPath, json, `utf8`);
+async function convertSchema(filename) {
+  const yaml   = await readFile(path.join(yamlDir, filename), `utf8`);
+  const schema = yamljs.parse(yaml);
+  const json   = JSON.stringify(schema, null, 2);
+  const jsonFileName = filename.replace(`.yml`, `.json`);
+  const jsonFilePath = path.join(jsonDir, jsonFileName);
+  await writeFile(jsonFilePath, json, `utf8`);
 }
 
 // TOP-LEVEL SCRIPT
-void async function convert() {
 
-  // Read all the schemas from their YAML files
-  const filenames   = await readdir(path.join(schemasPath, `yaml`));
-  const schemas = await Promise.all(filenames.map(readSchema));
+/**
+ * Converts each YAML schema in /schemas/yaml to a JSON file in /schemas/json
+ * @return {Promise}
+ */
+async function convert() {
+  try {
+    const filenames = await readDir(yamlDir);        // retrieve the list of YAML schemas to convert
+    await removeDir(jsonDir);                        // remove the /json directory
+    await createDir(jsonDir);                        // recreate the /json directory
+    await Promise.all(filenames.map(convertSchema)); // convert all YAML schemas to JSON
+    await generateIndex();                           // generate index.js for the JSON files
+  } catch (e) {
+    console.error(e);
+  }
+}
 
-  // Parse each schema into JavaScript
-  schemas.forEach(schema => {
-    // eslint-disable-next-line no-param-reassign
-    schema.schema = yamljs.parse(schema.schema);
-  });
+// Run the script if called directly from the command line
+if (require.main === module) convert();
 
-  // Write the schemas to /schemas/json
-  await Promise.all(schemas.map(writeSchema));
-
-  // Update schemas/json/index.js
-  const lines = schemas
-  .map(({ name }) => name)
-  .map(name => `  ${name}: require('./${name}'),`)
-  .join(`\n`);
-
-  const indexText = `module.exports = {\n${lines}\n};`;
-  const indexPath = path.join(schemasPath, `json/index.js`);
-
-  await writeFile(indexPath, indexText, `utf8`);
-
-}();
+// Export the convert() function if called from another script
+else module.exports = convert;

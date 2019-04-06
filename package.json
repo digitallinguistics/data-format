@@ -28,10 +28,11 @@
   },
   "main": "schemas/json",
   "scripts": {
-    "build": "npm test & npm run docs",
+    "build": "npm run convert & npm run docs",
     "convert": "node build/convert.js",
-    "docs": "jschemer -o docs -s schemas/json -r ./.github/README.md",
-    "test": "npm run convert & jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+    "docs": "node build/docs.js",
+    "prepare": "npm run build",
+    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
   },
   "dependencies": {},
@@ -40,6 +41,7 @@
     "azure-storage": "^2.10.2",
     "chalk": "^2.4.2",
     "eslint": "^5.15.3",
+    "fs-extra": "^7.0.1",
     "jasmine": "^3.3.1",
     "jschemer": "^3.0.3",
     "semver-regex": "^2.0.0",

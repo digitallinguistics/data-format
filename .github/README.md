@@ -1,5 +1,5 @@
 <!-- This readme is targeted at general users. The developer readme is located in the project root. -->
-# The Data Format for Digital Linguistics (DaFoDiL)
+# The Data Format for Digital Linguistics (Daffodil)
 
 ## Introduction
 
@@ -10,6 +10,8 @@ This repository contains the specification for the Data Format for Digital Lingu
 Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
 
 This format also facilitates adherence to the [Austin Principles for Data Citation in Linguistics][Austin] by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.
+
+[View this project on GitHub.][GitHub]
 
 Please consider citing this specification in scholarly articles using this repository's [Zenodo][Zenodo] DOI:
 
@@ -189,14 +191,15 @@ Check out the [Contributing Guidelines][Contributing] for this project, and the 
 
 This repository is maintained by [Daniel W. Hieber][Me] ([@dwhieb][19]).
 
-[Austin]: http://site.uit.no/linguisticsdatacitation/
-[Bugs]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
+[Austin]:       http://site.uit.no/linguisticsdatacitation/
+[Bugs]:         https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
 [Contributing]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
-[Developer]: https://github.com/digitallinguistics/spec/blob/master/README.md
-[IGL]:  https://en.wikipedia.org/wiki/Interlinear_gloss
-[Issues]: https://github.com/digitallinguistics/spec/issues
-[JSON]: http://json.org/
-[License]: https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
-[Me]: https://github.com/dwhieb/
-[npm]: https://www.npmjs.com/package/@digitallinguistics/spec
-[Zenodo]: http://doi.org/10.5281/zenodo.594557
+[Developer]:    https://github.com/digitallinguistics/spec/blob/master/README.md
+[GitHub]:       https://github.com/digitallinguistics/spec
+[IGL]:           https://en.wikipedia.org/wiki/Interlinear_gloss
+[Issues]:       https://github.com/digitallinguistics/spec/issues
+[JSON]:         http://json.org/
+[License]:      https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
+[Me]:           https://github.com/dwhieb/
+[npm]:          https://www.npmjs.com/package/@digitallinguistics/spec
+[Zenodo]:       http://doi.org/10.5281/zenodo.594557
