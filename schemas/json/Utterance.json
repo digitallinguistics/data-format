@@ -91,7 +91,7 @@
       "title": "Literal Translation",
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Translation.json",
-      "description": "The literal translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language."
+      "description": "The literal translations for this Utterance, optionally in multiple languages."
     },
     "phonetic": {
       "title": "Phonetic",
@@ -179,6 +179,10 @@
           }
         }
       ],
+      "literalTranslation": {
+        "eng": "one day a man"
+      },
+      "phonetic": "waʃtˀunkˀu ʔasi",
       "transcript": {
         "Mod": "Waxdungu qasi,"
       },
