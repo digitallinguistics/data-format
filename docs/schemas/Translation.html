@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Translation-3.0.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Translation-3.1.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,8 +217,75 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Translation-3.0.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Translation-3.1.0.json</code>
         </p>
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for a language (see the <a href="https://spec.digitallinguistics.github.io/schemas/Abbreviation.html">Abbreviation</a> schema), and the value for that key is the translation of the data in that particular language. <strong>Note:</strong> The Translation does not have a <code>type</code> property.</p>
+<p>If the translation is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of <code>gloss: { eng: &quot;M.SG&quot; }</code> you can simply write <code>gloss: &quot;M.SG&quot;</code>.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='oneOf'>
+
+            <p>This item must also validate against exactly one of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
 
         <p class='type keyword'>
           <b>Type:</b> <code>object</code>
@@ -226,11 +293,6 @@
 
 
 
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for a language (see the <a href="https://spec.digitallinguistics.github.io/schemas/Abbreviation.html">Abbreviation</a> schema), and the value for that key is the translation of the data in that particular language. <strong>Note:</strong> The Translation does not have a <code>type</code> property</p>
-</div>
-        </section>
 
 
 
@@ -383,6 +445,88 @@
 
 
 
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
         <section class='examples keyword'>
 
           <h2>Examples</h2>
@@ -390,6 +534,9 @@
           <p>The following are example values for this schema:</p>
 
           <ul>
+              <li>
+                <pre><code>&quot;man&quot;</code></pre>
+              </li>
               <li>
                 <pre><code>{
   &quot;eng&quot;: &quot;man&quot;,

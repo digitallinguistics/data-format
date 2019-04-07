@@ -1,18 +1,26 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Translation-3.0.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Translation-3.1.0.json",
   "title": "Translation",
-  "type": "object",
-  "description": "A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for a language (see the [Abbreviation](https://spec.digitallinguistics.github.io/schemas/Abbreviation.html) schema), and the value for that key is the translation of the data in that particular language. **Note:** The Translation does not have a `type` property",
-  "patternProperties": {
-    "^[(a-z)|(A-Z)|(0-9)]+$": {
-      "title": "Text",
-      "type": "string",
-      "description": "The translation in the specified language"
+  "description": "A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the abbreviation for a language (see the [Abbreviation](https://spec.digitallinguistics.github.io/schemas/Abbreviation.html) schema), and the value for that key is the translation of the data in that particular language. **Note:** The Translation does not have a `type` property.\n\nIf the translation is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of `gloss: { eng: \"M.SG\" }` you can simply write `gloss: \"M.SG\"`.",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[(a-z)|(A-Z)|(0-9)]+$": {
+          "title": "Text",
+          "type": "string",
+          "description": "The translation in the specified language"
+        }
+      }
+    },
+    {
+      "type": "string"
     }
-  },
-  "additionalProperties": false,
+  ],
   "examples": [
+    "man",
     {
       "eng": "man",
       "fra": "homme"
