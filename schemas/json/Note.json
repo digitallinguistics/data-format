@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Note-4.3.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Note-4.4.0.json",
   "title": "Note",
   "type": "object",
   "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
