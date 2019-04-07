@@ -14,7 +14,7 @@ const {
 /**
  * The contents of the CNAME file
  */
-const CNAME = `spec.digitallinguistics.io`;
+const CNAME = `format.digitallinguistics.io`;
 
 /**
  * The path to the /docs folder

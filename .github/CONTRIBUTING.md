@@ -31,5 +31,5 @@ The following scripts can be run from the command line:
 - `npm run upload`: upload the schemas to the DLx CDN
 
 [checklist]: ./PULL_REQUEST_TEMPLATE.md
-[docs]:      https://spec.digitallinguistics.io/
+[docs]:      https://format.digitallinguistics.io/
 [issue]:     https://github.com/digitallinguistics/spec/issues/new
