@@ -175,7 +175,7 @@ Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command lin
 [ajv]:          https://www.npmjs.com/package/ajv
 [Contributing]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [DateTime]:     https://www.w3.org/TR/NOTE-datetime
-[Docs]:         https://spec.digitallinguistics.io
+[Docs]:         https://format.digitallinguistics.io
 [GitHub]:       https://github.com/digitallinguistics/spec
 [Issues]:       https://github.com/digitallinguistics/spec/issues
 [Jasmine]:      https://jasmine.github.io/
