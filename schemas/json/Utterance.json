@@ -96,7 +96,7 @@
     "phonetic": {
       "title": "Phonetic",
       "type": "string",
-      "description": "The phonetic transcription for this Utterance in IPA. The transcription should not include phonetic brackets."
+      "description": "The phonetic transcription for this Utterance in IPA. Only valid IPA characters are allowed. The transcription should not include phonetic brackets."
     },
     "notes": {
       "title": "Notes",
