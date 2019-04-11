@@ -23,7 +23,7 @@ properties:
   gloss:
     title: Gloss
     $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
-    description: 'A gloss for this morpheme, optionally in multiple languages. The gloss must be provided in at least one language.'
+    description: 'A gloss for this morpheme, optionally in multiple languages. The gloss must be provided in at least one language. The gloss of a grammatical morpheme must be written in CAPS, for human readability.'
 
   lexeme:
     title: Lexeme (Database Reference)
@@ -53,7 +53,7 @@ properties:
     type:          object
     minProperties: 1
     $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
-    description: 'A transcription of this morpheme token. Should be a transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.'
+    description: 'A transcription of this morpheme token. Should be a phonemic transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.'
 
 examples:
 
