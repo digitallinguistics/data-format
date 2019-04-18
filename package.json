@@ -35,7 +35,9 @@
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ietf-language-tag-regex": "0.0.5"
+  },
   "devDependencies": {
     "ajv": "^6.10.0",
     "azure-storage": "^2.10.2",
