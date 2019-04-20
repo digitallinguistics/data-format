@@ -175,6 +175,11 @@
         "description": "A database reference to a media item associated with this lexeme"
       }
     },
+    "morphemeType": {
+      "title": "Morpheme type",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
+      "description": "The type of morpheme this lexeme is. Examples include root, stem, prefix, suffix, compound, phrasal verb etc."
+    },
     "notes": {
       "title": "Notes",
       "type": "array",
