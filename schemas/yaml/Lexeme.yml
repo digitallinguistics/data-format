@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Lexeme-8.1.0.json'
+$id:     'http://schemas.digitallinguistics.io/Lexeme-8.2.0.json'
 title:   Lexeme
 type:    object
 
@@ -159,6 +159,11 @@ properties:
       type:  object
       $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to a media item associated with this lexeme
+
+  morphemeType:
+    title: Morpheme Type
+    $ref: 'http://schemas.digitallinguistics.io/MultiLangString.json'
+    description: 'The morphological type for this lexeme. Example values might include `"root"`, `"stem"`, `"prefix"`, `"suffix"`, `"compound"`, `"phrasal verb"`, etc.'
 
   notes:
     title:       Notes
