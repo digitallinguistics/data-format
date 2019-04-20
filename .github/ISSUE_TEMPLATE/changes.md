@@ -1,6 +1,6 @@
 ---
 name: Request a change
-about: ''
+about: Request a change
 title: ''
 labels: schemas
 assignees: ''
