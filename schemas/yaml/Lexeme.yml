@@ -130,6 +130,14 @@ properties:
               $ref: 'http://schemas.digitallinguistics.io/Abbreviation.json'
               description: "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
 
+  lexemeType:
+    title: Lexeme type
+    type:  string
+    description: 'The type of lexeme this is (either lexical or grammatical). The primary purpose of this field is to make it easy to style interlinear glosses in small caps.'
+    enum:
+      - 'lexical'
+      - 'grammatical'
+
   link:
     title:  Link
     type:   string
