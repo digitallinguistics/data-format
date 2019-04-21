@@ -55,98 +55,98 @@ The DLx project recommends JSON because it has become the data interchange forma
 ```json
 {
   "transcription": {
-    "spa": "hola me llamo Daniel",
+    "sp": "hola me llamo Daniel",
     "ipa": "ola me jamo dænjəl"
   },
   "translation": {
-    "eng": "Hello, my name is Daniel.",
+    "en": "Hello, my name is Daniel.",
   },
   "words": [
     {
       "transcription": {
-        "spa": "hola",
+        "sp": "hola",
         "ipa": "ola"
       },
       "translation": {
-        "eng": "hello"
+        "en": "hello"
       },
       "morphemes": [
         {
           "transcription": {
-            "spa": "hola",
+            "sp": "hola",
             "ipa": "ola"
           },
           "gloss": {
-            "eng": "hello"
+            "en": "hello"
           }
         }
       ]
     },
     {
       "transcription": {
-        "spa": "me",
+        "sp": "me",
         "ipa": "me"
       },
       "translation": {
-        "eng": "me"
+        "en": "me"
       },
       "morphemes": [
         {
           "transcription": {
-            "spa": "me",
+            "sp": "me",
             "ipa": "me"
           },
           "gloss": {
-            "eng": "1sg.DO"
+            "en": "1sg.DO"
           }
         }
       ]
     },
     {
       "transcription": {
-        "spa": "llamo",
+        "sp": "llamo",
         "ipa": "jamo"
       },
       "translation": {
-        "eng": "I call"
+        "en": "I call"
       },
       "morphemes": [
         {
           "transcription": {
-            "spa": "llam",
+            "sp": "llam",
             "ipa": "jam"
           },
           "gloss": {
-            "eng": "call"
+            "en": "call"
           }
         },
         {
           "transcription": {
-            "spa": "o",
+            "sp": "o",
             "ipa": "o"
           },
           "gloss": {
-            "eng": "1sg.PRES.IND.SUBJ"
+            "en": "1sg.PRES.IND.SUBJ"
           }
         }
       ]
     },
     {
       "transcription": {
-        "spa": "Daniel",
+        "sp": "Daniel",
         "ipa": "dænjəl"
       },
       "translation": {
-        "eng": "Daniel"
+        "en": "Daniel"
       },
       "morphemes": [
         {
           "transcription": {
-            "spa": "Daniel",
+            "sp": "Daniel",
             "ipa": "dænjəl"
           },
           "gloss": {
-            "eng": "Daniel"
+            "en": "Daniel"
           }
         }
       ]
@@ -161,7 +161,7 @@ JSON format is easy to learn. It consists of just a few simple rules:
 
 * Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single Utterance.
 
-* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the Utterance has a property called `"transcription"`, and the value of that property is an Object containing transcriptions of the Utterance in different orthographies. For example, the `"spa"` property shows a transcription of the Utterance in standard Spanish orthography: `"Hola, me llamo Daniel."`.
+* Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes `" "` and separated by a colon `:`. Pairs of properties and values are separated by commas `,`. In the example above, the Utterance has a property called `"transcription"`, and the value of that property is an Object containing transcriptions of the Utterance in different orthographies. For example, the `"sp"` property shows a transcription of the Utterance in standard Spanish orthography: `"Hola, me llamo Daniel."`.
 
 * Arrays are a collection of Objects separated by commas `,`. The items in an Array can be strings of text (e.g. `"hola"`), numbers (with no quotes, e.g. `17`), Objects (e.g. `{ }`), or even other Arrays (e.g. `[ ]`). In the example above, the Utterance has a collection called `"words"` containing a list of all the words in the phrase. Notice each word in turn has its own collection, called `"morphemes"`. This nesting of Arrays and Objects allows us to capture the hierarchical nature of linguistic data.
 
