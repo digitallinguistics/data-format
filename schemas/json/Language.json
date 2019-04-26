@@ -37,7 +37,7 @@
       "title": "Additional Names",
       "type": "array",
       "uniqueItems": true,
-      "description": "An Array of additional names for this Language. Only use this property if the `name` property is not sufficent to describe the various names for this language. Each additional name can be a plain string, or an object with two properties: `name` and `note`. The object format is preferred, since the `note` field provides a way to give a description of this additional name and where or by whom it was used.",
+      "description": "An Array of additional names for this Language. Only use this property if the `name` property is not sufficient to describe the various names for this language. This field is especially useful when the Language has multiple spellings in historical documentation. Each additional name can be a plain string, or an object with two properties: `name` and `note`. The object format is preferred, since the `note` field provides a way to give a description of this additional name and where or by whom it was used.",
       "items": {
         "title": "Additional Language Name",
         "oneOf": [
