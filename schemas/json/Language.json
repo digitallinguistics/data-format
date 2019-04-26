@@ -123,6 +123,11 @@
         }
       ]
     },
+    "description": {
+      "title": "Description",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
+      "description": "A high-level overview of the Language and the sociohistorical and documentary context for the accompanying data."
+    },
     "glottolog": {
       "title": "Glottolog Code",
       "type": "string",
