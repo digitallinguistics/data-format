@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Lexeme-8.1.0.json'
+$id:     'http://schemas.digitallinguistics.io/Lexeme-8.2.0.json'
 title:   Lexeme
 type:    object
 
@@ -130,6 +130,14 @@ properties:
               $ref: 'http://schemas.digitallinguistics.io/Abbreviation.json'
               description: "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
 
+  lexemeType:
+    title: Lexeme Type
+    type:  string
+    description: 'The type of lexeme this is (either lexical or grammatical). The primary purpose of this field is to make it easy to style interlinear glosses in small caps.'
+    enum:
+      - 'lexical'
+      - 'grammatical'
+
   link:
     title:  Link
     type:   string
@@ -151,6 +159,11 @@ properties:
       type:  object
       $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to a media item associated with this lexeme
+
+  morphemeType:
+    title: Morpheme Type
+    $ref: 'http://schemas.digitallinguistics.io/MultiLangString.json'
+    description: 'The morphological type for this lexeme. Example values might include `"root"`, `"stem"`, `"prefix"`, `"suffix"`, `"compound"`, `"phrasal verb"`, etc.'
 
   notes:
     title:       Notes
