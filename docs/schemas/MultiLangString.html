@@ -225,7 +225,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the <a href="https://spec.digitallinguistics.github.io/schemas/Transcription.html">Transcription</a> and <a href="https://spec.digitallinguistics.github.io/schemas/Translation.html">Translation</a> schemas). For example, the part of speech for a lexeme might be given as both English <em>noun</em> and Spanish <em>nombre</em>. Each key must be the valid IETF language tag for a language (see the <a href="https://www.w3.org/International/articles/language-tags/">IETF</a> reference page), and the value for that key is the string of text in that language. <strong>Note:</strong> MultiLangStrings do not have a <code>type</code> property.</p>
+          <div><p>A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the <a href="https://spec.digitallinguistics.github.io/schemas/Transcription.html">Transcription</a> and <a href="https://spec.digitallinguistics.github.io/schemas/Translation.html">Translation</a> schemas). For example, the part of speech for a lexeme might be given as both English <em>noun</em> and Spanish <em>nombre</em>. Each key must be a valid IETF language tag for a language (see the <a href="https://www.w3.org/International/articles/language-tags/">IETF</a> reference page), and the value for that key must be the string of text in that language. <strong>Note:</strong> MultiLangStrings do not have a <code>type</code> property.</p>
 <p>If the text is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of <code>gloss: { en: &quot;M.SG&quot; }</code> you can simply write <code>gloss: &quot;M.SG&quot;</code>.</p>
 </div>
         </section>
@@ -351,7 +351,6 @@
         <section class='description keyword'>
           <h2>Description</h2>
           <div><p>The string of text in the specified language</p>
-<p>The IETF regex was created with the function found <a href="https://www.npmjs.com/package/ietf-language-tag-regex">here</a>.</p>
 </div>
         </section>
 

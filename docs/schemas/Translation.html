@@ -225,7 +225,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be the valid IETF language tag for a language (see the <a href="https://www.w3.org/International/articles/language-tags/">IETF</a> reference page), and the value for that key is the translation of the data in that particular language. <strong>Note:</strong> The Translation does not have a <code>type</code> property.</p>
+          <div><p>A translation of a piece of data in a language, optionally in multiple languages. For example, a translation might be written in both Spanish and English. Each key must be a valid IETF language tag for a language (see the <a href="https://www.w3.org/International/articles/language-tags/">IETF</a> reference page), and the value for that key must be the translation of the data in that particular language. <strong>Note:</strong> The Translation does not have a <code>type</code> property.</p>
 <p>If the translation is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of <code>gloss: { en &quot;M.SG&quot; }</code> you can simply write <code>gloss: &quot;M.SG&quot;</code>.</p>
 </div>
         </section>
@@ -351,7 +351,6 @@
         <section class='description keyword'>
           <h2>Description</h2>
           <div><p>The translation in the specified language</p>
-<p>The IETF regex was created with the function found <a href="https://www.npmjs.com/package/ietf-language-tag-regex">here</a>.</p>
 </div>
         </section>
 
