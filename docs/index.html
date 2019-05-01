@@ -245,98 +245,98 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <p>The DLx project recommends JSON because it has become the data interchange format for the modern web, and is natively supported by every major programming language. This makes it significantly easier for programmers to develop tools that use the DLx format, meaning that linguists will have a wider variety of options and helpful tools for managing their linguistic data. Moreover, JSON is extremely easy for humans to read. Below is a short phrase represented in JSON. Notice that, even if you don’t understand how the format works, you can see the hierarchical relationship between the utterance, its words, and their morphemes, and you know which piece of data belongs to what kind of linguistic object.</p>
 <pre><code class="language-json">{
   &quot;transcription&quot;: {
-    &quot;spa&quot;: &quot;hola me llamo Daniel&quot;,
-    &quot;ipa&quot;: &quot;ola me jamo dænjəl&quot;
+    &quot;es&quot;: &quot;hola me llamo Daniel&quot;,
+    &quot;es-fonipa&quot;: &quot;ola me jamo dænjəl&quot;
   },
   &quot;translation&quot;: {
-    &quot;eng&quot;: &quot;Hello, my name is Daniel.&quot;,
+    &quot;en&quot;: &quot;Hello, my name is Daniel.&quot;,
   },
   &quot;words&quot;: [
     {
       &quot;transcription&quot;: {
-        &quot;spa&quot;: &quot;hola&quot;,
-        &quot;ipa&quot;: &quot;ola&quot;
+        &quot;es&quot;: &quot;hola&quot;,
+        &quot;es-fonipa&quot;: &quot;ola&quot;
       },
       &quot;translation&quot;: {
-        &quot;eng&quot;: &quot;hello&quot;
+        &quot;en&quot;: &quot;hello&quot;
       },
       &quot;morphemes&quot;: [
         {
           &quot;transcription&quot;: {
-            &quot;spa&quot;: &quot;hola&quot;,
-            &quot;ipa&quot;: &quot;ola&quot;
+            &quot;es&quot;: &quot;hola&quot;,
+            &quot;es-fonipa&quot;: &quot;ola&quot;
           },
           &quot;gloss&quot;: {
-            &quot;eng&quot;: &quot;hello&quot;
+            &quot;en&quot;: &quot;hello&quot;
           }
         }
       ]
     },
     {
       &quot;transcription&quot;: {
-        &quot;spa&quot;: &quot;me&quot;,
-        &quot;ipa&quot;: &quot;me&quot;
+        &quot;es&quot;: &quot;me&quot;,
+        &quot;es-fonipa&quot;: &quot;me&quot;
       },
       &quot;translation&quot;: {
-        &quot;eng&quot;: &quot;me&quot;
+        &quot;en&quot;: &quot;me&quot;
       },
       &quot;morphemes&quot;: [
         {
           &quot;transcription&quot;: {
-            &quot;spa&quot;: &quot;me&quot;,
-            &quot;ipa&quot;: &quot;me&quot;
+            &quot;es&quot;: &quot;me&quot;,
+            &quot;es-fonipa&quot;: &quot;me&quot;
           },
           &quot;gloss&quot;: {
-            &quot;eng&quot;: &quot;1sg.DO&quot;
+            &quot;en&quot;: &quot;1sg.DO&quot;
           }
         }
       ]
     },
     {
       &quot;transcription&quot;: {
-        &quot;spa&quot;: &quot;llamo&quot;,
-        &quot;ipa&quot;: &quot;jamo&quot;
+        &quot;es&quot;: &quot;llamo&quot;,
+        &quot;es-fonipa&quot;: &quot;jamo&quot;
       },
       &quot;translation&quot;: {
-        &quot;eng&quot;: &quot;I call&quot;
+        &quot;en&quot;: &quot;I call&quot;
       },
       &quot;morphemes&quot;: [
         {
           &quot;transcription&quot;: {
-            &quot;spa&quot;: &quot;llam&quot;,
-            &quot;ipa&quot;: &quot;jam&quot;
+            &quot;es&quot;: &quot;llam&quot;,
+            &quot;es-fonipa&quot;: &quot;jam&quot;
           },
           &quot;gloss&quot;: {
-            &quot;eng&quot;: &quot;call&quot;
+            &quot;en&quot;: &quot;call&quot;
           }
         },
         {
           &quot;transcription&quot;: {
-            &quot;spa&quot;: &quot;o&quot;,
-            &quot;ipa&quot;: &quot;o&quot;
+            &quot;es&quot;: &quot;o&quot;,
+            &quot;es-fonipa&quot;: &quot;o&quot;
           },
           &quot;gloss&quot;: {
-            &quot;eng&quot;: &quot;1sg.PRES.IND.SUBJ&quot;
+            &quot;en&quot;: &quot;1sg.PRES.IND.SUBJ&quot;
           }
         }
       ]
     },
     {
       &quot;transcription&quot;: {
-        &quot;spa&quot;: &quot;Daniel&quot;,
-        &quot;ipa&quot;: &quot;dænjəl&quot;
+        &quot;es&quot;: &quot;Daniel&quot;,
+        &quot;es-fonipa&quot;: &quot;dænjəl&quot;
       },
       &quot;translation&quot;: {
-        &quot;eng&quot;: &quot;Daniel&quot;
+        &quot;en&quot;: &quot;Daniel&quot;
       },
       &quot;morphemes&quot;: [
         {
           &quot;transcription&quot;: {
-            &quot;spa&quot;: &quot;Daniel&quot;,
-            &quot;ipa&quot;: &quot;dænjəl&quot;
+            &quot;es&quot;: &quot;Daniel&quot;,
+            &quot;es-fonipa&quot;: &quot;dænjəl&quot;
           },
           &quot;gloss&quot;: {
-            &quot;eng&quot;: &quot;Daniel&quot;
+            &quot;en&quot;: &quot;Daniel&quot;
           }
         }
       ]
@@ -353,7 +353,7 @@ then    his   brother-PL-TOP     he     there   leave-PL-3sg   (Glosses)
 <p>Objects represent a single instance of a type of data. For instance, the example above is an Object that represents a single Utterance.</p>
 </li>
 <li>
-<p>Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes <code>&quot; &quot;</code> and separated by a colon <code>:</code>. Pairs of properties and values are separated by commas <code>,</code>. In the example above, the Utterance has a property called <code>&quot;transcription&quot;</code>, and the value of that property is an Object containing transcriptions of the Utterance in different orthographies. For example, the <code>&quot;spa&quot;</code> property shows a transcription of the Utterance in standard Spanish orthography: <code>&quot;Hola, me llamo Daniel.&quot;</code>.</p>
+<p>Objects contain a list of properties (also called attributes or fields) and their values, both placed in double quotes <code>&quot; &quot;</code> and separated by a colon <code>:</code>. Pairs of properties and values are separated by commas <code>,</code>. In the example above, the Utterance has a property called <code>&quot;transcription&quot;</code>, and the value of that property is an Object containing transcriptions of the Utterance in different orthographies. For example, the <code>&quot;es&quot;</code> property shows a transcription of the Utterance in standard Spanish orthography: <code>&quot;Hola, me llamo Daniel.&quot;</code>.</p>
 </li>
 <li>
 <p>Arrays are a collection of Objects separated by commas <code>,</code>. The items in an Array can be strings of text (e.g. <code>&quot;hola&quot;</code>), numbers (with no quotes, e.g. <code>17</code>), Objects (e.g. <code>{ }</code>), or even other Arrays (e.g. <code>[ ]</code>). In the example above, the Utterance has a collection called <code>&quot;words&quot;</code> containing a list of all the words in the phrase. Notice each word in turn has its own collection, called <code>&quot;morphemes&quot;</code>. This nesting of Arrays and Objects allows us to capture the hierarchical nature of linguistic data.</p>
