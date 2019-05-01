@@ -155,19 +155,13 @@ properties:
           minimumProperties: 1
           properties:
 
-            egids:
+            EGIDS:
               title: 'EGIDS'
-              type:  object
-              description: 'The Expanded Graded Intergenerational Disruption Scale, or EGIDS, status of this Demographic data'
-              properties:
-                level:
-                  title:   'Level'
-                  type:    string
-                  pattern: '^[0-9|10|6a|6b|8a|8b]$'
-                  description: 'The EGIDS number representing the level of this EGIDS status. This number should be a string.'
-                label:
-                  title:       'Label'
-                  enum:
+              type:  string
+              description: 'The Expanded Graded Intergenerational Disruption Scale, or EGIDS, status of this Demographic data. Either the official level or the official label representing the EGIDS status of the data, as a string.'
+              oneOf:
+                - pattern: '^[0-9|10|6a|6b|8a|8b]$'
+                - enum:
                   - International
                   - National
                   - Regional
@@ -181,10 +175,10 @@ properties:
                   - Nearly Extinct
                   - Dormant
                   - Extinct
-                  description: 'The EGIDS label representing this EGIDS status'
 
-            elcat:
+            ELCat:
               title:       'ELCat Level of Endangerment'
+              type:        string
               enum:
               - Safe
               - Vulnerable
@@ -194,15 +188,16 @@ properties:
               - Critically Endangered
               description: 'The ELCat status of this Demographic data. ELCat uses the Language Endangerment Index, or LEI, scale. This status should be the LEI level of endangerment of this Demographic data, as a string.'
 
-            gids:
+            GIDS:
               title: 'GIDS'
               type:  integer
               minimum: 1
               maximum: 8
               description: 'The Graded Intergenerational Disruption Scale, or GIDS, status of this Demographic data. This is the scale created by Thomas Fishman in his 1991 work *Reversing Language Shift*. The GIDS status should be represented by the integer, 1-8, that corresponds with the GIDS Stage of the data.'
 
-            unesco:
+            UNESCO:
               title:       'UNESCO'
+              type:        string
               enum:
               - Safe
               - Vulnerable
@@ -499,12 +494,10 @@ examples:
           - text: 'This population data is based on a 2015 census'
         population: 4,470
         status:
-          egids:
-            level: '7'
-            label: 'Shifting'
-          elcat:  'Severely Endangered'
-          gids:   7
-          unesco: 'Definitely Endangered'
+          EGIDS:  'Shifting'
+          ELCat:  'Severely Endangered'
+          GIDS:   7
+          UNESCO: 'Definitely Endangered'
 
   - abbreviation: gusii
     access:
