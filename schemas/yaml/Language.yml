@@ -205,7 +205,8 @@ examples:
     additionalNames:
       - name: Shetimashas
         note:
-          source: DWH
+          source: 
+            abbreviation: DWH
           text:   This is the name commonly used for the language by French colonials.
       - Chetimachas
     autonym:
@@ -382,7 +383,8 @@ examples:
     additionalNames:
       - name: Kikisii
         note:
-          source: DWH
+          source: 
+            abbreviation: DWH
           text:   This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
     autonym:
       IPA: ékeɣusií

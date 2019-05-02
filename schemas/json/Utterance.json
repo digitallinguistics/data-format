@@ -174,7 +174,9 @@
           "judgment": 0.66,
           "judgmentType": "acceptability",
           "note": {
-            "source": "BP",
+            "source": {
+              "abbreviation": "BP"
+            },
             "text": "Speaker B found this utterance odd because the first two words were contracted."
           }
         }
