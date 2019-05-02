@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Note-4.4.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Note-5.0.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Note-4.4.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Note-5.0.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -976,21 +976,21 @@
 
         <summary>
           <h1 class='title keyword'>
-            Source (Person): <code>source</code>
+            Source (Person - Database Reference): <code>source</code>
           </h1>
         </summary>
 
 
 
         <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The name or initials of the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.</p>
+          <div><p>A database reference to a Person Object describing the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.</p>
 </div>
         </section>
 
@@ -999,6 +999,11 @@
 
 
 
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
 
 
 
@@ -1262,7 +1267,9 @@
   &quot;dateCreated&quot;: &quot;2018-10-31T18:00:09.433Z&quot;,
   &quot;dateModified&quot;: &quot;2018-10-31T18:00:23.691Z&quot;,
   &quot;language&quot;: &quot;swa&quot;,
-  &quot;source&quot;: &quot;DWH&quot;,
+  &quot;source&quot;: {
+    &quot;abbreviation&quot;: &quot;DWH&quot;
+  },
   &quot;text&quot;: &quot;Msemaji huyu ni Janet Kerubo Momanyi.&quot;,
   &quot;type&quot;: &quot;Note&quot;
 }</code></pre>
@@ -1273,7 +1280,9 @@
   &quot;dateModified&quot;: &quot;2018-10-31T18:00:23.691Z&quot;,
   &quot;language&quot;: &quot;eng&quot;,
   &quot;noteType&quot;: &quot;encyclopedic&quot;,
-  &quot;source&quot;: &quot;Morris Swadesh&quot;,
+  &quot;source&quot;: {
+    &quot;name&quot;: &quot;Morris Swadesh&quot;
+  },
   &quot;text&quot;: &quot;Box turtles are known for eating strawberries.&quot;,
   &quot;type&quot;: &quot;Note&quot;
 }</code></pre>

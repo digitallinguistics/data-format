@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Note-4.4.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Note-5.0.0.json",
   "title": "Note",
   "type": "object",
   "description": "A note about this resource. Notes may also include `type` and `language` attributes.",
@@ -53,9 +53,10 @@
       "description": "The type of Note. Required for notes on Lexemes."
     },
     "source": {
-      "title": "Source (Person)",
-      "type": "string",
-      "description": "The name or initials of the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source."
+      "title": "Source (Person - Database Reference)",
+      "type": "object",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
+      "description": "A database reference to a Person Object describing the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source."
     },
     "tags": {
       "title": "Tags",
@@ -75,7 +76,9 @@
       "dateCreated": "2018-10-31T18:00:09.433Z",
       "dateModified": "2018-10-31T18:00:23.691Z",
       "language": "swa",
-      "source": "DWH",
+      "source": {
+        "abbreviation": "DWH"
+      },
       "text": "Msemaji huyu ni Janet Kerubo Momanyi.",
       "type": "Note"
     },
@@ -84,7 +87,9 @@
       "dateModified": "2018-10-31T18:00:23.691Z",
       "language": "eng",
       "noteType": "encyclopedic",
-      "source": "Morris Swadesh",
+      "source": {
+        "name": "Morris Swadesh"
+      },
       "text": "Box turtles are known for eating strawberries.",
       "type": "Note"
     }
