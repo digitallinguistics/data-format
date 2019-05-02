@@ -87,7 +87,7 @@
       "format": "uri",
       "description": "A URL where a presentational format for this resource may be viewed"
     },
-    "literalTranslation": {
+    "literal": {
       "title": "Literal Translation",
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Translation.json",
@@ -179,7 +179,7 @@
           }
         }
       ],
-      "literalTranslation": {
+      "literal": {
         "eng": "one day a man"
       },
       "phonetic": "waʃtˀunkˀu ʔasi",
