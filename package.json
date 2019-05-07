@@ -42,6 +42,7 @@
     "chalk": "^2.4.2",
     "eslint": "^5.15.3",
     "fs-extra": "^7.0.1",
+    "ietf-language-tag-regex": "0.0.5",
     "jasmine": "^3.3.1",
     "jschemer": "^3.0.3",
     "semver-regex": "^2.0.0",
