@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Utterance-5.0.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Utterance-5.1.0.json",
   "title": "Utterance",
   "type": "object",
   "description": "The term *utterance* is intentionally ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision.",
@@ -87,7 +87,7 @@
       "format": "uri",
       "description": "A URL where a presentational format for this resource may be viewed"
     },
-    "literalTranslation": {
+    "literal": {
       "title": "Literal Translation",
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Translation.json",
@@ -179,7 +179,7 @@
           }
         }
       ],
-      "literalTranslation": {
+      "literal": {
         "eng": "one day a man"
       },
       "phonetic": "waʃtˀunkˀu ʔasi",
