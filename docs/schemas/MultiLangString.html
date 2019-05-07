@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/MultiLangString-4.1.1.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/MultiLangString-5.0.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/MultiLangString-4.1.1.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/MultiLangString-5.0.0.json</code>
         </p>
 
 
@@ -225,8 +225,8 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the <a href="https://spec.digitallinguistics.github.io/schemas/Transcription.html">Transcription</a> and <a href="https://spec.digitallinguistics.github.io/schemas/Translation.html">Translation</a> schemas). For example, the part of speech for a lexeme might be given as both English <em>noun</em> and Spanish <em>nombre</em>. Each key must be the abbreviation for a language (see the <a href="https://spec.digitallinguistics.github.io/schemas/Abbreviation.html">Abbreviation</a> schema), and the value for that key is the string of text in that language. <strong>Note:</strong> MultiLangStrings do not have a <code>type</code> property.</p>
-<p>If the text is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of <code>gloss: { eng: &quot;M.SG&quot; }</code> you can simply write <code>gloss: &quot;M.SG&quot;</code>.</p>
+          <div><p>A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the <a href="https://spec.digitallinguistics.github.io/schemas/Transcription.html">Transcription</a> and <a href="https://spec.digitallinguistics.github.io/schemas/Translation.html">Translation</a> schemas). For example, the part of speech for a lexeme might be given as both English <em>noun</em> and Spanish <em>nombre</em>. Each key must be a valid IETF language tag for a language (see the <a href="https://www.w3.org/International/articles/language-tags/">IETF</a> reference page), and the value for that key must be the string of text in that language. <strong>Note:</strong> MultiLangStrings do not have a <code>type</code> property.</p>
+<p>If the text is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of <code>gloss: { en: &quot;M.SG&quot; }</code> you can simply write <code>gloss: &quot;M.SG&quot;</code>.</p>
 </div>
         </section>
 
@@ -336,7 +336,7 @@
 
         <summary>
           <h1 class='title keyword'>
-            Text: <code>^[(a-z)|(A-Z)|(0-9)]+$</code>
+            Text: <code>^(((en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+))$</code>
           </h1>
         </summary>
 
@@ -539,8 +539,8 @@
               </li>
               <li>
                 <pre><code>{
-  &quot;eng&quot;: &quot;man&quot;,
-  &quot;fra&quot;: &quot;homme&quot;
+  &quot;en&quot;: &quot;man&quot;,
+  &quot;fr&quot;: &quot;homme&quot;
 }</code></pre>
               </li>
           </ul>
