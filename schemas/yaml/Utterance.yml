@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Utterance-5.0.0.json'
+$id:     'http://schemas.digitallinguistics.io/Utterance-5.1.0.json'
 title:   Utterance
 type:    object
 
@@ -84,7 +84,7 @@ properties:
     format: uri
     description: 'A URL where a presentational format for this resource may be viewed'
 
-  literalTranslation:
+  literal:
     title:  Literal Translation
     type:   object
     $ref:   'http://schemas.digitallinguistics.io/Translation.json'
@@ -169,7 +169,7 @@ examples:
         note:
           source: BP
           text:   Speaker B found this utterance odd because the first two words were contracted.
-    literalTranslation:
+    literal:
       eng: one day a man
     phonetic:  "waʃtˀunkˀu ʔasi"
     transcript:
