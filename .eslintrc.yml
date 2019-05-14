@@ -7,7 +7,7 @@ parserOptions:
 env:
   browser: true
   es6:     true
-  jasmine: false
+  jasmine: true
   node:    true
 rules:
   id-blacklist:

@@ -1,7 +1,7 @@
 // IMPORTS
 const AJV        = require(`ajv`);
 const getSchemas = require(`./getSchemas`);
-const http       = require(`http`);
+const https      = require(`https`);
 
 // SETUP
 const ajv = new AJV({ extendRefs: true });
@@ -18,9 +18,9 @@ let schemasLoaded = false;
 function getGeoJSONSchema() {
   return new Promise(resolve => {
 
-    const GeoJSONURL = `http://geojson.org/schema/GeoJSON.json`;
+    const GeoJSONURL = `https://geojson.org/schema/GeoJSON.json`;
 
-    http.get(GeoJSONURL, async res => {
+    https.get(GeoJSONURL, async res => {
 
       let text = ``;
 
