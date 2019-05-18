@@ -244,88 +244,88 @@ examples:
       - abbreviation: Mod
         graphemes:
           - form: a
-            pronunciations:
+            pronunciation:
               - a
           - form: aa
-            pronunciations:
+            pronunciation:
               - aː
           - form: b
-            pronunciations:
+            pronunciation:
               - pˀ
           - form: c
-            pronunciations:
+            pronunciation:
               - t͡ʃ
           - form: d
-            pronunciations:
+            pronunciation:
               - tˀ
           - form: dz
-            pronunciations:
+            pronunciation:
               - t͡sˀ
           - form: e
-            pronunciations:
+            pronunciation:
               - e
           - form: ee
-            pronunciations:
+            pronunciation:
               - eː
           - form: g
-            pronunciations:
+            pronunciation:
               - kˀ
           - form: h
-            pronunciations:
+            pronunciation:
               - h
           - form: j
-            pronunciations:
+            pronunciation:
               - t͡ʃˀ
           - form: k
-            pronunciations:
+            pronunciation:
               - k
           - form: m
-            pronunciations:
+            pronunciation:
               - m
           - form: mq
-            pronunciations:
+            pronunciation:
               - ˀm
           - form: n
-            pronunciations:
+            pronunciation:
               - n
           - form: nq
-            pronunciations:
+            pronunciation:
               - ˀn
           - form: o
-            pronunciations:
+            pronunciation:
               - o
           - form: oo
-            pronunciations:
+            pronunciation:
               - oː
           - form: p
-            pronunciations:
+            pronunciation:
               - p
           - form: q
-            pronunciations:
+            pronunciation:
               - ʔ
           - form: s
-            pronunciations:
+            pronunciation:
               - s
           - form: t
-            pronunciations:
+            pronunciation:
               - t
           - form: ts
-            pronunciations:
+            pronunciation:
               - t͡s
           - form: u
-            pronunciations:
+            pronunciation:
               - u
           - form: uu
-            pronunciations:
+            pronunciation:
               - uː
           - form: w
-            pronunciations:
+            pronunciation:
               - w
           - form: x
-            pronunciations:
+            pronunciation:
               - ʃ
           - form: y
-            pronunciations:
+            pronunciation:
               - j
         link:         https://data.digitallinguistics.io/languages/Chitimacha/orthographies/Modern
         name:         Modern
