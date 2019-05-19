@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/BibliographicReference-5.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/BibliographicReference-5.3.0.json'
 title:   'Bibliographic Reference'
 type:    object
 
@@ -85,6 +85,12 @@ properties:
     type:  string
     description: 'The publication issue'
 
+  link:
+    title:       'Link'
+    type:        string
+    format:      uri
+    description: 'A link to a web page where this publication may be viewed or downloaded'
+
   pages:
     title: Pages
     type:  string
@@ -143,10 +149,10 @@ properties:
       description: 'A Person object representing a translator'
 
   url:
-    title:  URL
+    title:  'JSON URL'
     type:   string
     format: uri
-    description: 'A URL for this Reference'
+    description: 'A URL for the JSON data for this Reference'
 
   volume:
     title:       Volume
@@ -192,6 +198,7 @@ examples:
     doi:             '10.1515/lingty-2013-0013'
     id:              '4b735346-d174-456d-9945-1b00d5ed776b'
     issue:           '2'
+    link:            'http://www.TESTURL.com'
     pages:           '15–46'
     publication:     'Linguistic Typology'
     publicationType: 'journal article'
