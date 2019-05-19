@@ -9,6 +9,11 @@
     "transcription"
   ],
   "properties": {
+    "analysis": {
+      "title": "Analysis",
+      "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
+      "description": "The morpheme breakdown for the word"
+    },
     "type": {
       "title": "Type",
       "type": "string",
@@ -146,6 +151,9 @@
       "endtime": 1.01,
       "gloss": "man",
       "key": "A1.1.2",
+      "analysis": {
+        "transcription": "man"
+      },
       "morphemes": [
         {
           "gloss": "man",
