@@ -52,6 +52,11 @@ properties:
       $ref: '#/definitions/person'
       description: 'A Person object representing an author'
 
+  citationKey:
+    title:       'Citation Key'
+    $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
+    description: 'A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a reference.'
+
   city:
     title: City
     type:  string
@@ -170,6 +175,7 @@ examples:
   - authors:
       - firstName: 'Daniel W.'
         lastName:  'Hieber'
+    citationKey:     'CatChiti'
     city:            'Amsterdam'
     doi:             '10.1075/cal.20.02hie'
     editors:
@@ -186,7 +192,7 @@ examples:
     publicationType: 'book section'
     publisher:       'John Benjamins'
     series:          'Constructional approaches to language'
-    title:           'Catgory genesis in Chitimacha'
+    title:           'Category genesis in Chitimacha'
     type:            'BibliographicReference'
     url:             'https://api.digitallinguistics.io/references/Hieber2018.json'
     volume:          20
