@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Word-4.2.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Word-4.3.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.2.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.3.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -667,6 +667,87 @@
           <p class='pattern keyword'>
             <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$</code>
           </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Literal Translation: <code>literal</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A literal translation of the word at the level of the morpheme token</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Translation.json'>http://schemas.digitallinguistics.io/Translation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2096,7 +2177,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.</p>
+          <div><p>A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word. There is a separate field for literal translations.; use the gloss field for Leipzig-style glosses only.</p>
 </div>
         </section>
 
@@ -2211,6 +2292,7 @@
   &quot;analysis&quot;: {
     &quot;transcription&quot;: &quot;man&quot;
   },
+  &quot;literal&quot;: &quot;eng: man&quot;,
   &quot;morphemes&quot;: [
     {
       &quot;gloss&quot;: &quot;man&quot;,
