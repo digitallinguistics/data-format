@@ -41,7 +41,7 @@ properties:
     title: Alternative Analyses
     type: array
     uniqueItems: true
-    description: An array of alternative Lexeme objects for this lexeme. This can be useful when working with historical sources or research from other linguists.
+    description: An array of alternative Lexeme objects for this lexeme. This can be useful when working with historical sources or research from other linguists. It allows users to decide on their own analysis, while still maintaining a faithful record of the analyses of the original documentation.
     items:
       title: Alternative Analysis
       type: object
