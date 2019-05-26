@@ -287,7 +287,28 @@ properties:
     description: If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:
-  - citationForm:
+  - alternativeAnalyses:
+      forms:
+       - allomorphs:
+          - environments:
+              - _m
+            syllableStructure: CVC
+            transcription:
+              APA:  kʼuš
+              IPA:  kˀuš
+              Mod:  gux
+      lemma:
+        APA:  kʼuš
+        IPA:  kˀuš
+      senses:
+        - argumentStructure: eat(agent, patient)
+          category:          transitive verb
+          definition:        to eat
+          gloss:             eat
+          link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2
+      sources:
+        - "BW"
+    citationForm:
       APA:          kʼušti
       IPA:          kˀušti
       Mod:          guxti
