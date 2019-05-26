@@ -43,7 +43,7 @@ properties:
     uniqueItems: true
     description: An array of alternative Lexeme objects for this lexeme. This can be useful when working with historical sources or research from other linguists.
     items:
-      title: Alternative Lexeme
+      title: Alternative Analysis
       type: object
       $ref: 'http://schemas.digitallinguistics.io/Lexeme.json'
       description: A lexeme object representing an alternative analysis of this lexeme.
