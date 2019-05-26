@@ -229,11 +229,11 @@
       "title": "Usages",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of MultiLangStrings giving information about this lexemes social usage, regional information, register, dialect, and/or connotations. Common values might be \"archaic\", \"colloquial\", \"formal\", \"positive\", \"negative\", etc.",
+      "description": "A list of MultiLangStrings giving information about this form's social usage, regional information, register, dialect, and/or connotations. Common values might be \"archaic\", \"colloquial\", \"formal\", \"positive\", \"negative\", etc.",
       "items": {
         "title": "Usage",
         "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-        "description": "A MultiLangString giving information about this lexeme's usage"
+        "description": "A MultiLangString giving information about this form's usage"
       }
     },
     "variantOf": {
