@@ -193,11 +193,11 @@
       "title": "Usages",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.",
+      "description": "A list of MultiLangStrings giving information about this lexemes social usage, regional information, register, dialect, and/or connotations. Common values might be \"archaic\", \"colloquial\", \"formal\", \"positive\", \"negative\", etc.",
       "items": {
         "title": "Usage",
         "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-        "description": "An appropriate usage for this sense, optionally in multiple languages"
+        "description": "A MultiLangString giving information about this lexeme's usage"
       }
     },
     "variantOf": {
