@@ -236,6 +236,8 @@ examples:
   - category:   noun
     definition: a male
     gloss:      male
+    semanticDomains:
+      - human
     media:
       - id:       b032fe58-0deb-44fc-8001-e3ba63145417
         filename: qasi-2.jpg

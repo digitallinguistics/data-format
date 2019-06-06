@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Sense-1.1.1.json",
+  "$id": "http://schemas.digitallinguistics.io/Sense-1.1.2.json",
   "title": "Sense",
   "type": "object",
   "description": "A *sense* is one of the possible meanings of a lexeme. For example, the lexeme *run* has many different senses, such as as \"run in a race\" and \"run water in a sink\". It is up to the linguist to decide whether two particular uses of a lexeme count as the same sense or different senses.",
@@ -270,6 +270,9 @@
       "category": "noun",
       "definition": "a male",
       "gloss": "male",
+      "semanticDomains": [
+        "human"
+      ],
       "media": [
         {
           "id": "b032fe58-0deb-44fc-8001-e3ba63145417",
