@@ -42,6 +42,14 @@ properties:
     $ref:  'http://schemas.digitallinguistics.io/Address.json'
     description: 'An address associated with this location'
 
+  date:
+    title: 'Date'
+    type:  string
+    description: 'The date and optionally time that a language was spoken in this location'
+    oneOf:
+      - format: date
+      - format: date-time
+
   dateCreated:
     title: 'Date Created'
     type:  string
@@ -115,6 +123,7 @@ examples:
     access:
       notes:
         eng:       There are no restrictions on access to this location.
+    date:          '2018-10-30'
     dateCreated:   '2018-10-30T01:54:19.901Z'
     dateModified:  '2018-10-30T01:54:39.394Z'
     geoJSON:
@@ -131,6 +140,7 @@ examples:
     url:           https://api.digitallinguistics.io/locations/Charenton
 
   - abbreviation:  Kisii
+    date:          '2018-10-19'
     dateCreated:   '2018-10-30T01:54:19.901Z'
     dateModified:  '2018-10-30T01:54:39.394Z'
     geoJSON:
