@@ -40,7 +40,7 @@ properties:
   license:
     title: 'License'
     type:  string
-    description: 'The license under which you want to release this resource, most likely a SPDX abbreviation. If you don't want to release this data to others, set this to `UNLICENSED.` Otherwise, use choosealicense.com to decide which license is right for your usage.'
+    description: 'The license under which you want to release this resource, most likely a SPDX abbreviation. If you do not want to release this data to others, set this to `UNLICENSED.` Otherwise, use choosealicense.com to decide which license is right for your usage.'
     default: 'UNLICENSED'
 
 examples:
