@@ -37,10 +37,17 @@ properties:
       - 'Subscriber'
     default: 'Researcher'
 
+  license:
+    title: 'License'
+    type:  string
+    description: 'The license under which you want to release this resource, most likely a SPDX abbreviation. If you don't want to release this data to others, set this to `UNLICENSED.` Otherwise, use choosealicense.com to decide which license is right for your usage.'
+    default: 'UNLICENSED'
+
 examples:
 
   - AILLA: 'password'
     ELAR:  'Community Member'
+    license: 'UNLICENSED'
     notes:
       eng: 'Speaker also requested that this text only be shared with family members.'
     speaker: 'family'
