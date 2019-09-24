@@ -61,8 +61,8 @@ properties:
   geoJSON:
     title: 'GeoJSON Geometry Object'
     type:  object
-    $ref:  'http://geojson.org/schema/GeoJSON.json'
-    description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: http://geojson.org/.'
+    $ref:  'https://geojson.org/schema/GeoJSON.json'
+    description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: https://geojson.org/.'
 
   link:
     title:  Link
