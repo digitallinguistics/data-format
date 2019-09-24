@@ -14,8 +14,8 @@ describe(`Lexeme`, () => {
   beforeAll(async function setup() {
     const schemas = await getSchemas();
     const schema = schemas.get(`Lexeme`);
-    data     = schema.examples[0];
-    ajv      = await AJV();
+    data     = schema.examples[2];
+    ajv      = await AJV(); // eslint-disable-line new-cap
     validate = d => ajv.validate(`Lexeme`, d);
   });
 
