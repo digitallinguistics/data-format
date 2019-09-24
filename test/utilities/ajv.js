@@ -12,18 +12,6 @@ let schemasLoaded = false;
 // METHODS
 
 /**
- * Retrieves the GeoJSON schema from the GeoJSON.json file
- * @return {Promise}
- */
-function getGeoJSONSchema() {
-  return new Promise(resolve => {
-
-    resolve(GeoJSON);
-
-  });
-}
-
-/**
  * Adds each of the schemas to AJV
  * @return {Promise<AJV>}
  */
