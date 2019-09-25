@@ -11,7 +11,7 @@ See the [documentation][Docs] for human-readable versions of the schemas, and an
 
 Please consider citing this specification in scholarly articles using this repository's [Zenodo][Zenodo] DOI:
 
-> Hieber, Daniel W. 2018. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][Zenodo]
+> Hieber, Daniel W. 2019. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][Zenodo]
 
 [![GitHub stars](https://img.shields.io/github/stars/digitallinguistics/spec.svg?style=social&label=Stars)][GitHub]
 [![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][npm]
