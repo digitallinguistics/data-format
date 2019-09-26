@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Utterance-6.1.0.json'
+$id:     'http://schemas.digitallinguistics.io/Utterance-6.2.0.json'
 title:   Utterance
 type:    object
 
@@ -112,6 +112,12 @@ properties:
     $ref:  'http://schemas.digitallinguistics.io/Person.json'
     description: 'The Person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match one of the people listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a `speaker` role are included in a text, each Utterance must have its `speaker` attribute specified.'
 
+  source:
+    title:       'Source'
+    type:        object
+    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    description: 'The Source of an Utterance taken out of context such as sets of utterances to be used as examples in publications. This field is strongly recommended when an Utterance is not part of a Text.'
+
   startTime:
     title:   'Start Time'
     type:    number
@@ -175,6 +181,8 @@ examples:
     speaker:
         familyName: Paul
         givenName:  Benjamin
+    source: 
+      eng: Paul Benjamin
     transcript:
       Mod: Waxdungu qasi,
     transcription:
