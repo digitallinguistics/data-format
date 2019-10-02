@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Sense-1.1.1.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Sense-2.1.1.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Sense-1.1.1.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Sense-2.1.1.json</code>
         </p>
 
         <p class='type keyword'>
@@ -2497,7 +2497,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A list of attested sources for this sense, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it. For precision’s sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.</p>
+          <div><p>A list of attested sources for this sense, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision’s sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These Sources should be DatabaseReferences to either Person or BibliographicReference objects.</p>
 </div>
         </section>
 
@@ -2539,14 +2539,14 @@
 
 
         <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An attested source for this sense. This will often be the initials of a speaker, but could also be the abbreviation of the story the sense was found it, or a citation to a published text in which the sense appears.</p>
+          <div><p>An attested source for this sense. This will often be the initials of a speaker, but could also be a citation to a published text in which the sense appears.</p>
 </div>
         </section>
 
@@ -2555,6 +2555,11 @@
 
 
 
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
 
 
 
@@ -2582,9 +2587,6 @@
 
 
 
-          <p class='minLength keyword'>
-            <b>Minimum length:</b> <code>1</code>
-          </p>
 
 
 
