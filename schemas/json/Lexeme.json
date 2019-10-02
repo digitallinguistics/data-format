@@ -258,7 +258,7 @@
       "title": "Sources",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of attested sources for this lexeme, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to either Person BibliographicReference objects.",
+      "description": "A list of attested sources for this lexeme, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to either Person or BibliographicReference objects.",
       "items": {
         "title": "Source",
         "type": "object",
@@ -379,7 +379,9 @@
           ],
           "morphemeType": "stem",
           "sources": [
-            "Dur 13"
+            {
+              "source": "Dur 13"
+            }
           ],
           "syllableStructure": "CVCC",
           "transcription": {
