@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Lexeme-8.2.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Lexeme-9.2.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Lexeme-8.2.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Lexeme-9.2.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -3658,7 +3658,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A list of attested sources for this lexeme, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it. For precision’s sake, sources should be listed for specific senses or forms of a lexeme whenever possible.</p>
+          <div><p>A list of attested sources for this lexeme, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision’s sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to either Person BibliographicReference objects.</p>
 </div>
         </section>
 
@@ -3700,14 +3700,14 @@
 
 
         <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An attested source for this lexeme. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or a citation to a published text in which the lexeme appears.</p>
+          <div><p>An attested source for this lexeme. This will often be the initials of a speaker, but could also be a citation to a published text in which the lexeme appears.</p>
 </div>
         </section>
 
@@ -3716,6 +3716,11 @@
 
 
 
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
 
 
 
@@ -3743,9 +3748,6 @@
 
 
 
-          <p class='minLength keyword'>
-            <b>Minimum length:</b> <code>1</code>
-          </p>
 
 
 
