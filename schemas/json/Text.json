@@ -235,7 +235,10 @@
       "dateCreated": "2018-10-05T15:26:23.070Z",
       "dateModified": "2018-10-05T15:26:23.070Z",
       "discourseType": "monologue",
-      "genre": "folktale",
+      "genre": [
+        "folktale",
+        "personal narrative"
+      ],
       "id": "5790c2b7-579c-4bb5-aa5e-537ae1ac06ca",
       "link": "https://explorer.digitallinguistics.io/languages/Chitimacha/texts/A1",
       "location": {
