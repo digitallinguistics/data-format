@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Language-8.3.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Language-8.4.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Language-8.3.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Language-8.4.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -631,7 +631,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An Array of additional names for this Language. Only use this property if the <code>name</code> property is not sufficent to describe the various names for this language. Each additional name can be a plain string, or an object with two properties: <code>name</code> and <code>note</code>. The object format is preferred, since the <code>note</code> field provides a way to give a description of this additional name and where or by whom it was used.</p>
+          <div><p>An Array of additional names for this Language. Only use this property if the <code>name</code> property is not sufficient to describe the various names for this language. This field is especially useful when the Language has multiple spellings in historical documentation. Each additional name can be a plain string, or an object with two properties: <code>name</code> and <code>note</code>. The object format is preferred, since the <code>note</code> field provides a way to give a description of this additional name and where or by whom it was used.</p>
 </div>
         </section>
 
@@ -1779,7 +1779,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The date an optionally time that this Language object was last modified</p>
+          <div><p>The date and optionally time that this Language object was last modified</p>
 </div>
         </section>
 
@@ -1972,6 +1972,1427 @@
             </ul>
 
           </section>
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Demographics: <code>demographics</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An array of Demographic objects, each of which contain demographic information about the Language at a specific point in time, and/or at a specific location</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Demographic Data: <code>demographics</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The demographic data of this Language, at a specific point in time, and/or at a specific location</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Date: <code>date</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The date and optionally time that this Demographic data was created</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='oneOf'>
+
+            <p>This item must also validate against exactly one of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>date</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='format keyword'>
+            <b>Format:</b> <code>date-time</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Location: <code>location</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The geographic Location of this Demographic data</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Location.json'>http://schemas.digitallinguistics.io/Location.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Notes: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of notes about this Demographic data</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>notes</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A Note about this Demographic data</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Population: <code>population</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>integer</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The Population of speakers included in this Demographic data</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>0</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Status: <code>status</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO. The official status scales can be found <a href="http://langlxmelanesia.com/Paris%20-%20EGIDS%20The%20Expanded%20Graded%20Intergenerational%20Disrupt.pdf">here</a>.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            EGIDS: <code>EGIDS</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The Expanded Graded Intergenerational Disruption Scale, or EGIDS, status of this Demographic data. Either the official level or the official label representing the EGIDS status of the data, as a string.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='oneOf'>
+
+            <p>This item must also validate against exactly one of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='pattern keyword'>
+            <b>Regular expression to match:</b> <code>^[0-9|10|6a|6b|8a|8b]$</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='enum keyword'>
+            <h2>Allowed Values</h2>
+            <ul>
+                <li><pre><code>&quot;International&quot;</code></pre></li>
+                <li><pre><code>&quot;National&quot;</code></pre></li>
+                <li><pre><code>&quot;Regional&quot;</code></pre></li>
+                <li><pre><code>&quot;Trade&quot;</code></pre></li>
+                <li><pre><code>&quot;Educational&quot;</code></pre></li>
+                <li><pre><code>&quot;Written&quot;</code></pre></li>
+                <li><pre><code>&quot;Vigorous&quot;</code></pre></li>
+                <li><pre><code>&quot;Threatened&quot;</code></pre></li>
+                <li><pre><code>&quot;Shifting&quot;</code></pre></li>
+                <li><pre><code>&quot;Moribund&quot;</code></pre></li>
+                <li><pre><code>&quot;Nearly Extinct&quot;</code></pre></li>
+                <li><pre><code>&quot;Dormant&quot;</code></pre></li>
+                <li><pre><code>&quot;Extinct&quot;</code></pre></li>
+            </ul>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            ELCat Level of Endangerment: <code>ELCat</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The ELCat status of this Demographic data. ELCat uses the Language Endangerment Index, or LEI, scale. This status should be the LEI level of endangerment of this Demographic data, as a string.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+          <section class='enum keyword'>
+            <h2>Allowed Values</h2>
+            <ul>
+                <li><pre><code>&quot;Safe&quot;</code></pre></li>
+                <li><pre><code>&quot;Vulnerable&quot;</code></pre></li>
+                <li><pre><code>&quot;Threatened&quot;</code></pre></li>
+                <li><pre><code>&quot;Endangered&quot;</code></pre></li>
+                <li><pre><code>&quot;Severely Endangered&quot;</code></pre></li>
+                <li><pre><code>&quot;Critically Endangered&quot;</code></pre></li>
+            </ul>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            GIDS: <code>GIDS</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>integer</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The Graded Intergenerational Disruption Scale, or GIDS, status of this Demographic data. This is the scale created by Thomas Fishman in his 1991 work <em>Reversing Language Shift</em>. The GIDS status should be represented by the integer, 1-8, that corresponds with the GIDS Stage of the data.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='minimum keyword'>
+            <b>Minimum:</b> <code>1</code>
+          </p>
+
+
+          <p class='maximum keyword'>
+            <b>Maximum:</b> <code>8</code>
+          </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            UNESCO: <code>UNESCO</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The UNESCO Language Degree of Endangerment for this Demographic data. This status should be the string representation of the Degree of endangerment level.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+          <section class='enum keyword'>
+            <h2>Allowed Values</h2>
+            <ul>
+                <li><pre><code>&quot;Safe&quot;</code></pre></li>
+                <li><pre><code>&quot;Vulnerable&quot;</code></pre></li>
+                <li><pre><code>&quot;Definitely Endangered&quot;</code></pre></li>
+                <li><pre><code>&quot;Severely Endangered&quot;</code></pre></li>
+                <li><pre><code>&quot;Critically Endangered&quot;</code></pre></li>
+                <li><pre><code>&quot;Extinct&quot;</code></pre></li>
+            </ul>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Description: <code>description</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A high-level overview of the Language and the sociohistorical and documentary context for the accompanying data</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3704,6 +5125,40 @@
   },
   &quot;type&quot;: &quot;Language&quot;,
   &quot;url&quot;: &quot;https://data.digitallinguistics.io/languages/Chitimacha&quot;
+}</code></pre>
+              </li>
+              <li>
+                <pre><code>{
+  &quot;name&quot;: &quot;Shangaji&quot;,
+  &quot;description&quot;: &quot;Shangaji is spoken in three small villages in the Nampula province of Mozambique. The deposit focuses on the variant spoken in Naatthembo village, just west of the Sangage peninsula which begins north of Angoche town. Naatthembo has more or less 4000 inhabitants and represents the major Shangaji speaking centre with the two other locations; Nakonya village and the Likookha area in Mogincual adding more or less 500 and 700 speakers to this number of speakers which is in decline due to a lack of intergenerational language transfer. Nthamala village, some 10 km away from Naatthembo, no longer has Shangaji speakers because of a complete shift to the regional lingua franca Makhuwa (Enlai). The Shangaji deposit thus responds to an urgent documentation need, also because the language is one of four coastal languages that are believed to bear traces of the Swahili world which once stretched from Somalia to the south of Mozambique.&quot;
+}</code></pre>
+              </li>
+              <li>
+                <pre><code>{
+  &quot;name&quot;: &quot;Muskogee&quot;,
+  &quot;demographics&quot;: [
+    {
+      &quot;date&quot;: &quot;2015-01-01&quot;,
+      &quot;location&quot;: {
+        &quot;name&quot;: &quot;Oklahoma&quot;
+      },
+      &quot;notes&quot;: [
+        {
+          &quot;text&quot;: &quot;Musckogee is also spoken in Florida&quot;
+        },
+        {
+          &quot;text&quot;: &quot;This population data is based on a 2015 census&quot;
+        }
+      ],
+      &quot;population&quot;: 4470,
+      &quot;status&quot;: {
+        &quot;EGIDS&quot;: &quot;Shifting&quot;,
+        &quot;ELCat&quot;: &quot;Severely Endangered&quot;,
+        &quot;GIDS&quot;: 7,
+        &quot;UNESCO&quot;: &quot;Definitely Endangered&quot;
+      }
+    }
+  ]
 }</code></pre>
               </li>
               <li>
