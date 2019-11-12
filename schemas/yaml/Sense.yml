@@ -158,7 +158,7 @@ properties:
     items:
       title:       Domain
       $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
-      description: A domain that this sense belongs to
+      description: A domain that this sense belongs to, as a MultiLangString
 
   sources:
     title:       Sources
