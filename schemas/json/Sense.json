@@ -177,9 +177,9 @@
       "uniqueItems": true,
       "description": "A list of the semantic domains this sense belongs to. Examples include color, body part, clothing, etc. The colon character can be used to represent subdomains e.g. quality:color:primary, color:red, etc.",
       "items": {
-        "title": "Domain",
+        "title": "Semantic Domain",
         "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-        "description": "A domain that this sense belongs to"
+        "description": "A domain that this sense belongs to, as a MultiLangString"
       }
     },
     "sources": {
