@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Person-4.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/Person-4.3.0.json'
 title:   Person
 type:    object
 
@@ -158,6 +158,22 @@ properties:
       minLength: 1
       description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`'
 
+  startDate:
+    title:       'Start Date'
+    type:        string
+    description: 'The date a person began work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the Language.contributor and Text.contributor fields.'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  endDate:
+    title:       'End Date'
+    type:        string
+    description: 'The date a person finished work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the Language.contributor and Text.contributor fields.'
+    oneOf:
+      - format: date
+      - format: date-time
+
   tags:
     title: Tags
     type:  object
@@ -190,5 +206,7 @@ examples:
     link:         https://data.digitallinguistics.io/languages/Chitimacha/people/BP
     roles:
       - speaker
+    startDate:    '2018-10-05T15:26:23.070Z'
+    endDate:      '2018-10-05T15:26:23.070Z'
     type:         Person
     url:          https://data.digitallinguistics.io/languages/Chitimacha/people/BP.json
