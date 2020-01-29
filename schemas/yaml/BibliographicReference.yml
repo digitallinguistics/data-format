@@ -175,7 +175,7 @@ examples:
   - authors:
       - firstName: 'Daniel W.'
         lastName:  'Hieber'
-    citationKey:     'CatChiti'
+    citationKey:     'Hieber2018'
     city:            'Amsterdam'
     doi:             '10.1075/cal.20.02hie'
     editors:
