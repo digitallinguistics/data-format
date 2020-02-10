@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Sense-1.1.1.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Sense-1.1.2.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Sense-1.1.1.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Sense-1.1.2.json</code>
         </p>
 
         <p class='type keyword'>
@@ -2483,6 +2483,178 @@
 
         <summary>
           <h1 class='title keyword'>
+            Semantic Domains: <code>semanticDomains</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of the semantic domains this sense belongs to. Examples include color, body part, clothing, etc. The colon character can be used to represent subdomains e.g. quality:color:primary, color:red, etc.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Semantic Domain: <code>semanticDomains</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A domain that this sense belongs to, as a MultiLangString</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
             Sources: <code>sources</code>
           </h1>
         </summary>
@@ -2754,7 +2926,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A list of the appropriate usages for this sense. Examples include <code>formal</code>, <code>medicinal</code>, <code>informal</code>, etc.</p>
+          <div><p>A list of MultiLangStrings giving information about this sense’s social usage, regional information, register, dialect, and/or connotations. Common values might be “archaic”, “colloquial”, “formal”, “positive”, “negative”, etc.</p>
 </div>
         </section>
 
@@ -2800,7 +2972,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An appropriate usage for this sense, optionally in multiple languages</p>
+          <div><p>A MultiLangString giving information about this sense’s usage</p>
 </div>
         </section>
 
@@ -3556,6 +3728,9 @@
   &quot;category&quot;: &quot;noun&quot;,
   &quot;definition&quot;: &quot;a male&quot;,
   &quot;gloss&quot;: &quot;male&quot;,
+  &quot;semanticDomains&quot;: [
+    &quot;human&quot;
+  ],
   &quot;media&quot;: [
     {
       &quot;id&quot;: &quot;b032fe58-0deb-44fc-8001-e3ba63145417&quot;,
