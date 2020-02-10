@@ -15,7 +15,7 @@ This format also facilitates adherence to the [Austin Principles for Data Citati
 
 Please consider citing this specification in scholarly articles using this repository's [Zenodo][Zenodo] DOI:
 
-> Hieber, Daniel W. 2019. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][Zenodo]
+> Hieber, Daniel W. 2020. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][Zenodo]
 
 [![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][npm]
 [![DOI](https://zenodo.org/badge/50221632.svg)][Zenodo]
