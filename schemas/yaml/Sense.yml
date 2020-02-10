@@ -238,6 +238,8 @@ examples:
     gloss:      male
     semanticDomains:
       - human
+    usages:
+      - formal
     media:
       - id:       b032fe58-0deb-44fc-8001-e3ba63145417
         filename: qasi-2.jpg
