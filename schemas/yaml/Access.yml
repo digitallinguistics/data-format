@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Access-3.1.0.json'
+$id:     'http://schemas.digitallinguistics.io/Access-3.2.0.json'
 title:   'Access Rights'
 type:    object
 
@@ -37,10 +37,17 @@ properties:
       - 'Subscriber'
     default: 'Researcher'
 
+  license:
+    title: 'License'
+    type:  string
+    description: 'The license under which you want to release this resource, most likely a SPDX abbreviation. If you do not want to release this data to others, set this to `UNLICENSED.` Otherwise, use choosealicense.com to decide which license is right for your usage.'
+    default: 'UNLICENSED'
+
 examples:
 
   - AILLA: 'password'
     ELAR:  'Community Member'
+    license: 'UNLICENSED'
     notes:
       eng: 'Speaker also requested that this text only be shared with family members.'
     speaker: 'family'
