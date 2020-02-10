@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/BibliographicReference-5.2.0.json",
+  "$id": "http://schemas.digitallinguistics.io/BibliographicReference-5.3.0.json",
   "title": "Bibliographic Reference",
   "type": "object",
   "description": "A bibliographic Reference",
@@ -53,6 +53,11 @@
         "description": "A Person object representing an author"
       }
     },
+    "citationKey": {
+      "title": "Citation Key",
+      "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
+      "description": "A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a reference."
+    },
     "city": {
       "title": "City",
       "type": "string",
@@ -86,6 +91,12 @@
       "title": "Issue",
       "type": "string",
       "description": "The publication issue"
+    },
+    "link": {
+      "title": "Link",
+      "type": "string",
+      "format": "uri",
+      "description": "A link to a web page where this publication may be viewed or downloaded"
     },
     "pages": {
       "title": "Pages",
@@ -147,10 +158,10 @@
       }
     },
     "url": {
-      "title": "URL",
+      "title": "JSON URL",
       "type": "string",
       "format": "uri",
-      "description": "A URL for this Reference"
+      "description": "A URL for the JSON data for this Reference"
     },
     "volume": {
       "title": "Volume",
@@ -172,6 +183,7 @@
           "lastName": "Hieber"
         }
       ],
+      "citationKey": "CatChiti",
       "city": "Amsterdam",
       "doi": "10.1075/cal.20.02hie",
       "editors": [
@@ -197,7 +209,7 @@
       "publicationType": "book section",
       "publisher": "John Benjamins",
       "series": "Constructional approaches to language",
-      "title": "Catgory genesis in Chitimacha",
+      "title": "Category genesis in Chitimacha",
       "type": "BibliographicReference",
       "url": "https://api.digitallinguistics.io/references/Hieber2018.json",
       "volume": 20,
@@ -213,6 +225,7 @@
       "doi": "10.1515/lingty-2013-0013",
       "id": "4b735346-d174-456d-9945-1b00d5ed776b",
       "issue": "2",
+      "link": "http://www.TESTURL.com",
       "pages": "15–46",
       "publication": "Linguistic Typology",
       "publicationType": "journal article",
