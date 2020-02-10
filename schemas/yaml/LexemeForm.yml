@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.1.1.json'
+$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.2.0.json'
 title:   Lexeme Form
 type:    object
 
@@ -251,10 +251,10 @@ examples:
           - _m
         syllableStructure: CVC
         transcription:
-          APA:  kʼuš
-          IPA:  kˀuš
+          APA:  kʼuš
+          IPA:  kˀuš
           Mod:  gux
-          Swad: guš
+          Swad: guš
     components:
       - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
         key:           gux
@@ -270,10 +270,10 @@ examples:
       - Dur 13
     syllableStructure: CVCC
     transcription:
-      APA:  kʼušt
-      IPA:  kˀušt
+      APA:  kʼušt
+      IPA:  kˀušt
       Mod:  guxt
-      Swad: gušt
+      Swad: gušt
     usages:
       - colloquial
     variants:
