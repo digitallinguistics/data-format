@@ -332,41 +332,27 @@
   },
   "examples": [
     {
-      "alternativeAnalyses": {
-        "forms": [
-          {
-            "allomorphs": [
-              {
-                "environments": [
-                  "_m"
-                ],
-                "syllableStructure": "CVC",
-                "transcription": {
-                  "APA": "kʼuš",
-                  "IPA": "kˀuš",
-                  "Mod": "gux"
-                }
+      "alternativeAnalyses": [
+        {
+          "forms": [
+            {
+              "transcription": {
+                "APA": "kʼuš"
               }
-            ]
-          }
-        ],
-        "lemma": {
-          "APA": "kʼuš",
-          "IPA": "kˀuš"
-        },
-        "senses": [
-          {
-            "argumentStructure": "eat(agent, patient)",
-            "category": "transitive verb",
-            "definition": "to eat",
-            "gloss": "eat",
-            "link": "https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2"
-          }
-        ],
-        "sources": [
-          "BW"
-        ]
-      },
+            }
+          ],
+          "lemma": {
+            "APA": "kʼuš",
+            "IPA": "kˀuš"
+          },
+          "senses": [
+            {
+              "argumentStructure": "eat(agent, patient)",
+              "gloss": "eat"
+            }
+          ]
+        }
+      ],
       "citationForm": {
         "APA": "kʼušti",
         "IPA": "kˀušti",
