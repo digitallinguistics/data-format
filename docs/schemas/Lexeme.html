@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Lexeme-8.2.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Lexeme-8.3.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Lexeme-8.2.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Lexeme-8.3.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -525,6 +525,181 @@
           <p class='pattern keyword'>
             <b>Regular expression to match:</b> <code>^[^ ]+$</code>
           </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Alternative Analyses: <code>alternativeAnalyses</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An array of alternative Lexeme objects for this lexeme. This can be useful when working with historical sources or research from other linguists. It allows users to decide on their own analysis, while still maintaining a faithful record of the analyses of the original documentation.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Alternative Analysis: <code>alternativeAnalyses</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A lexeme object representing an alternative analysis of this lexeme.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Lexeme.json'>http://schemas.digitallinguistics.io/Lexeme.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4606,6 +4781,27 @@
           <ul>
               <li>
                 <pre><code>{
+  &quot;alternativeAnalyses&quot;: [
+    {
+      &quot;forms&quot;: [
+        {
+          &quot;transcription&quot;: {
+            &quot;APA&quot;: &quot;kʼuš&quot;
+          }
+        }
+      ],
+      &quot;lemma&quot;: {
+        &quot;APA&quot;: &quot;kʼuš&quot;,
+        &quot;IPA&quot;: &quot;kˀuš&quot;
+      },
+      &quot;senses&quot;: [
+        {
+          &quot;argumentStructure&quot;: &quot;eat(agent, patient)&quot;,
+          &quot;gloss&quot;: &quot;eat&quot;
+        }
+      ]
+    }
+  ],
   &quot;citationForm&quot;: {
     &quot;APA&quot;: &quot;kʼušti&quot;,
     &quot;IPA&quot;: &quot;kˀušti&quot;,
