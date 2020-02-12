@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/LexemeForm-2.0.0.json'
 title:   Lexeme Form
 type:    object
 
@@ -269,6 +269,8 @@ examples:
           IPA:  kˀuš
           Mod:  gux
           Swad: guš
+    bibliography:
+      - citation: Dur 13
     components:
       - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
         key:           gux
@@ -281,7 +283,7 @@ examples:
         filename:      guxt.wav
     morphemeType:      stem
     sources:
-      - source: Dur 13
+      - source: TEST
     syllableStructure: CVCC
     transcription:
       APA:  kʼušt

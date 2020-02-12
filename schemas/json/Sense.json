@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Sense-1.3.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Sense-2.0.0.json",
   "title": "Sense",
   "type": "object",
   "description": "A *sense* is one of the possible meanings of a lexeme. For example, the lexeme *run* has many different senses, such as as \"run in a race\" and \"run water in a sink\". It is up to the linguist to decide whether two particular uses of a lexeme count as the same sense or different senses.",
@@ -274,11 +274,21 @@
       "link": "https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2"
     },
     {
+      "bibliography": [
+        {
+          "citation": "Dur 13"
+        }
+      ],
       "category": "verb",
       "definition": "A suffix that derives transitive verbs from intransitive verbs",
       "derives": "verb",
       "gloss": "TR",
-      "link": "https://data.digitallinguistics.io/languages/Chitimacha/lexemes/t1/senses/1"
+      "link": "https://data.digitallinguistics.io/languages/Chitimacha/lexemes/t1/senses/1",
+      "sources": [
+        {
+          "source": "TEST"
+        }
+      ]
     },
     {
       "category": "noun",
