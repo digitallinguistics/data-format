@@ -50,7 +50,7 @@
       "title": "Bibliography",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of attested sources where this lexeme appears, as citations to published texts. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to a BibliographicReference object.",
+      "description": "A list of attested sources where this lexeme appears, as citations to published texts. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These sources should be DatabaseReferences to a BibliographicReference object.",
       "items": {
         "title": "Citation",
         "type": "object",
@@ -283,7 +283,7 @@
       "title": "Sources",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of the initials of the speaker or speakers who are the attested sources for this lexeme. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to a Person object.",
+      "description": "A list of the initials of the speaker or speakers who are the attested sources for this lexeme. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These sources should be DatabaseReferences to a Person object.",
       "items": {
         "title": "Source",
         "type": "object",
