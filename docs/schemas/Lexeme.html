@@ -727,6 +727,181 @@
 
         <summary>
           <h1 class='title keyword'>
+            Bibliography: <code>bibliography</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of attested sources where this lexeme appears, as citations to published texts. For precision’s sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to a BibliographicReference object.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Citation: <code>bibliography</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>An attested source for this lexeme. This will be a citation to a published text in which the lexeme appears.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
             Citation Form: <code>citationForm</code>
           </h1>
         </summary>
@@ -3833,7 +4008,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A list of attested sources for this lexeme, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision’s sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to either Person or BibliographicReference objects.</p>
+          <div><p>A list of the initials of the speaker or speakers who are the attested sources for this lexeme. For precision’s sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These Sources should be DatabaseReferences to a Person object.</p>
 </div>
         </section>
 
@@ -3882,7 +4057,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An attested source for this lexeme. This will often be the initials of a speaker, but could also be a citation to a published text in which the lexeme appears.</p>
+          <div><p>An attested source for this lexeme. This will often be the initials of a speaker.</p>
 </div>
         </section>
 
