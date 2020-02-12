@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Lexeme-9.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/Lexeme-8.3.0.json'
 title:   Lexeme
 type:    object
 
@@ -36,6 +36,17 @@ properties:
     type:    string
     pattern: '^[^ ]+$'
     description: A human-readable key that uniquely identifies this lexeme or variant within the language. Best practice is for the key to consist of a representation of the lemma form of the word without diacritics, and, if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique for the language. (Keys do not need to be unique across languages.)
+
+  alternativeAnalyses:
+    title: Alternative Analyses
+    type: array
+    uniqueItems: true
+    description: An array of alternative Lexeme objects for this lexeme. This can be useful when working with historical sources or research from other linguists. It allows users to decide on their own analysis, while still maintaining a faithful record of the analyses of the original documentation.
+    items:
+      title: Alternative Analysis
+      type: object
+      $ref: 'http://schemas.digitallinguistics.io/Lexeme.json'
+      description: A lexeme object representing an alternative analysis of this lexeme.
 
   citationForm:
     title: Citation Form
@@ -276,11 +287,21 @@ properties:
     description: If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:
-  - citationForm:
-      APA:          kʼušti
-      IPA:          kˀušti
+  - alternativeAnalyses:
+    - forms:
+      - transcription:
+          APA: kʼuš
+      lemma:
+        APA:  kʼuš
+        IPA:  kˀuš
+      senses:
+      - argumentStructure: eat(agent, patient)
+        gloss: eat
+    citationForm:
+      APA:          kʼušti
+      IPA:          kˀušti
       Mod:          guxti
-      Swad:         gušti
+      Swad:         gušti
     dateCreated:    '2018-11-03T00:23:55.842Z'
     dateModified:   '2018-11-03T00:24:04.730Z'
     id:             783cbaa8-befe-4049-bfe4-bb5688173780
@@ -289,10 +310,10 @@ examples:
       abbreviation: chiti
       id:           3d91a22d-005b-4ec5-8151-09e44629f58f
     lemma:
-      APA:          kʼušt
-      IPA:          kˀušt
+      APA:          kʼušt
+      IPA:          kˀušt
       Mod:          guxt
-      Swad:         gušt
+      Swad:         gušt
     link:           https://explorer.digitallinguistics.io/languages/Chitimacha/lexemes/guxt
     type:           Lexeme
     url:            https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt
@@ -302,10 +323,10 @@ examples:
               - _m
             syllableStructure: CVC
             transcription:
-              APA:  kʼuš
-              IPA:  kˀuš
+              APA:  kʼuš
+              IPA:  kˀuš
               Mod:  gux
-              Swad: guš
+              Swad: guš
         components:
           - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
             key:           gux
@@ -321,10 +342,10 @@ examples:
           - source: Dur 13
         syllableStructure: CVCC
         transcription:
-          APA:  kʼušt
-          IPA:  kˀušt
+          APA:  kʼušt
+          IPA:  kˀušt
           Mod:  guxt
-          Swad: gušt
+          Swad: gušt
         variants:
           - id:          0f765e8d-1401-4c01-a88f-3092d077813b
             key:         guxma

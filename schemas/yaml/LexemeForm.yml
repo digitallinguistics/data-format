@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-2.1.1.json'
+$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.2.0.json'
 title:   Lexeme Form
 type:    object
 
@@ -203,6 +203,16 @@ properties:
     $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
     description: A transcription of this lexeme form, optionally in multiple orthographies
 
+  usages:
+    title:       Usages
+    type:        array
+    uniqueItems: true
+    description: A list of MultiLangStrings giving information about this form's social usage, regional information, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
+    items:
+      title:       Usage
+      $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+      description: A MultiLangString giving information about this form's usage
+
   variantOf:
     title: Variant Of
     type:  object
@@ -241,10 +251,10 @@ examples:
           - _m
         syllableStructure: CVC
         transcription:
-          APA:  kʼuš
-          IPA:  kˀuš
+          APA:  kʼuš
+          IPA:  kˀuš
           Mod:  gux
-          Swad: guš
+          Swad: guš
     components:
       - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
         key:           gux
@@ -260,10 +270,12 @@ examples:
       - source: Dur 13
     syllableStructure: CVCC
     transcription:
-      APA:  kʼušt
-      IPA:  kˀušt
+      APA:  kʼušt
+      IPA:  kˀušt
       Mod:  guxt
-      Swad: gušt
+      Swad: gušt
+    usages:
+      - colloquial
     variants:
       - id:          0f765e8d-1401-4c01-a88f-3092d077813b
         key:         guxma

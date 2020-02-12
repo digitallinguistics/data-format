@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/LexemeForm-2.1.1.json",
+  "$id": "http://schemas.digitallinguistics.io/LexemeForm-1.2.0.json",
   "title": "Lexeme Form",
   "type": "object",
   "description": "The *base forms* of a lexeme are the minimal set of forms needed to determine the full set of inflectional possibilities of a lexeme. These include suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc., while the lexeme *man* has the base forms *man* and *men*. A base form does **not** refer to a regularly-inflected, predictable form like *being* or *cats*. Principal parts of verbs in Latin are another example of base forms, since they are the minimal set of forms that someone must know to determine all the inflectional possibilities of a verb.",
@@ -225,6 +225,17 @@
       "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
       "description": "A transcription of this lexeme form, optionally in multiple orthographies"
     },
+    "usages": {
+      "title": "Usages",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A list of MultiLangStrings giving information about this form's social usage, regional information, register, dialect, and/or connotations. Common values might be \"archaic\", \"colloquial\", \"formal\", \"positive\", \"negative\", etc.",
+      "items": {
+        "title": "Usage",
+        "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
+        "description": "A MultiLangString giving information about this form's usage"
+      }
+    },
     "variantOf": {
       "title": "Variant Of",
       "type": "object",
@@ -274,10 +285,10 @@
           ],
           "syllableStructure": "CVC",
           "transcription": {
-            "APA": "kʼuš",
-            "IPA": "kˀuš",
+            "APA": "kʼuš",
+            "IPA": "kˀuš",
             "Mod": "gux",
-            "Swad": "guš"
+            "Swad": "guš"
           }
         }
       ],
@@ -307,11 +318,14 @@
       ],
       "syllableStructure": "CVCC",
       "transcription": {
-        "APA": "kʼušt",
-        "IPA": "kˀušt",
+        "APA": "kʼušt",
+        "IPA": "kˀušt",
         "Mod": "guxt",
-        "Swad": "gušt"
+        "Swad": "gušt"
       },
+      "usages": [
+        "colloquial"
+      ],
       "variants": [
         {
           "id": "0f765e8d-1401-4c01-a88f-3092d077813b",
