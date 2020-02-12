@@ -46,10 +46,11 @@ properties:
     description: 'The type of Note. Required for notes on Lexemes.'
 
   source:
-    title: 'Source (Person - Database Reference)'
-    type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
-    description: 'A database reference to a Person Object describing the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.'
+    title:         'Source (Person - Database Reference)'
+    type:          object
+    $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    referenceType: Person
+    description: 'A database reference to a Person object describing the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.'
 
   tags:
     title: Tags
