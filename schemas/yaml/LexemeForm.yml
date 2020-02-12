@@ -64,6 +64,19 @@ properties:
           $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
           description: A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
 
+  bibliography:
+    title: Bibliography
+    type:  array
+    uniqueItems: true
+    description: A list of attested sources where this lexeme form appears, as citations to published texts. For precision's sake, sources should be listed for specific forms of a lexeme rather than the lexeme whenever possible. These Sources should be DatabaseReferences to a BibliographicReference object.
+    items:
+      title:         Citation
+      type:          object
+      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      referenceType: BibliographicReference
+      description:   An attested source for this lexeme form. This will be a citation to a published text in which the lexeme form appears.
+
+
   components:
     title:       Components
     type:        array
@@ -174,12 +187,13 @@ properties:
     title:       Sources
     type:        array
     uniqueItems: true
-    description: A list of attested sources for this lexeme form, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific forms of a lexeme rather than the lexeme whenever possible. These Sources should be DatabaseReferences to either Person or BibliographicReference objects.
+    description: A list of the initials of the speaker or speakers who are the attested sources for this lexeme. For precision's sake, sources should be listed for specific forms of a lexeme rather than the lexeme whenever possible. These Sources should be DatabaseReferences to a Person object.
     items:
-      title:     Source
-      type:      object
-      $ref:      'http://schemas.digitallinguistics.io/DatabaseReference.json'
-      description: An attested source for this lexeme form. This will often be the initials of a speaker, but could also be a citation to a published text in which the lexeme form appears.
+      title:         Source
+      type:          object
+      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      referenceType: Person
+      description:   An attested source for this lexeme form. This will often be the initials of a speaker.
 
   syllableStructure:
     title: Syllable Structure
