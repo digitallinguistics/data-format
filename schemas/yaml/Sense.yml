@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Sense-1.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/Sense-1.3.0.json'
 title:   Sense
 type:    object
 
@@ -181,11 +181,11 @@ properties:
     title:       Usages
     type:        array
     uniqueItems: true
-    description: A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.
+    description: A list of MultiLangStrings giving information about this sense's social usage, regional information, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
     items:
-      title: Usage
-      $ref: 'http://schemas.digitallinguistics.io/MultiLangString.json'
-      description: An appropriate usage for this sense, optionally in multiple languages
+      title:       Usage
+      $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+      description: A MultiLangString giving information about this sense's usage
 
   variantOf:
     title: Variant Of
@@ -238,6 +238,8 @@ examples:
     gloss:      male
     semanticDomains:
       - human
+    usages:
+      - formal
     media:
       - id:       b032fe58-0deb-44fc-8001-e3ba63145417
         filename: qasi-2.jpg
