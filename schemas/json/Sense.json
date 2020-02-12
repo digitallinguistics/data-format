@@ -26,6 +26,19 @@
       "type": "string",
       "description": "An abstract representation of the argument structure for this sense"
     },
+    "bibliography": {
+      "title": "Bibliography",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A list of attested sources where this sense appears, as citations to published texts. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a BibliographicReference object.",
+      "items": {
+        "title": "Citation",
+        "type": "object",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
+        "referenceType": "BibliographicReference",
+        "description": "An attested source for this sense. This will be a citation to a published text in which the sense appears."
+      }
+    },
     "category": {
       "title": "Lexical Category (Part of Speech, Morphosyntactic Class, etc.)",
       "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
@@ -186,12 +199,13 @@
       "title": "Sources",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of attested sources for this sense, such as a citation to a published text where it appears or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These Sources should be DatabaseReferences to either Person or BibliographicReference objects.",
+      "description": "A list of the initials of the speaker or speakers who are the attested sources for this sense. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a Person object.",
       "items": {
         "title": "Source",
         "type": "object",
         "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
-        "description": "An attested source for this sense. This will often be the initials of a speaker, but could also be a citation to a published text in which the sense appears."
+        "referenceType": "Person",
+        "description": "An attested source for this sense. This will often be the initials of a speaker."
       }
     },
     "tags": {
