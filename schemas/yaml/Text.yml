@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Text-5.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/Text-5.3.0.json'
 title:   Text
 type:    object
 
@@ -84,13 +84,27 @@ properties:
 
   discourseType:
     title:     'Discourse Type'
-    type:      string
-    description: 'The type of discourse event, e.g. monologue, dialogue, or song'
+    description: 'The type, or types, of discourse event, e.g. monologue, dialogue, or song'
+    oneOf:
+      - type: string
+      - type: array
+        uniqueItems: true
+        items:
+          title:     'Discourse Type'
+          type:      string
+          minLength: 1
 
   genre:
     title:     Genre
-    type:      string
-    description: 'The genre of the text, e.g. folktale, personal narrative, or expository'
+    description: 'The genre, or genres, of the text, e.g. folktale, personal narrative, or expository'
+    oneOf:
+      - type: string
+      - type: array
+        uniqueItems: true
+        items:
+          title:     Genre
+          type:      string
+          minLength: 1
 
   link:
     title:  Link
@@ -182,7 +196,9 @@ examples:
     dateCreated:    '2018-10-05T15:26:23.070Z'
     dateModified:   '2018-10-05T15:26:23.070Z'
     discourseType:  monologue
-    genre:          folktale
+    genre:
+     - folktale
+     - personal narrative
     id:             5790c2b7-579c-4bb5-aa5e-537ae1ac06ca
     link:           https://explorer.digitallinguistics.io/languages/Chitimacha/texts/A1
     location:

@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Orthography-3.2.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Orthography-3.3.0.json",
   "title": "Orthography",
   "type": "object",
   "description": "An orthography is a way of representing a particular language variety in writing. An orthography can include a set of acceptable graphemes (characters), punctuation, and word separators.",
@@ -65,6 +65,11 @@
               "type": "string"
             }
           },
+          "description": {
+            "title": "Description",
+            "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
+            "description": "A learner-friendly description of the pronunciation of this grapheme"
+          },
           "form": {
             "title": "Grapheme Form",
             "type": "string",
@@ -76,16 +81,23 @@
             "type": "string",
             "description": "The name of this grapheme, if any"
           },
-          "pronunciations": {
-            "title": "Pronunciations",
-            "type": "array",
-            "uniqueItems": true,
-            "description": "A list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).",
-            "items": {
-              "title": "Pronunciation",
-              "type": "string",
-              "minLength": 1
-            }
+          "pronunciation": {
+            "title": "Pronunciation",
+            "description": "The pronunciation, or, if there is more than one, a list of the possible pronunciations of this grapheme, in IPA. It may be difficult or impossible to fill in this field for all orthographies (like English).",
+            "oneOf": [
+              {
+                "type": "array",
+                "uniqueItems": true,
+                "items": {
+                  "title": "Pronunciation",
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              {
+                "type": "string"
+              }
+            ]
           }
         }
       }
@@ -146,14 +158,15 @@
           "allographs": [
             "A"
           ],
+          "description": "Pronounced like the a in 'hat'",
           "form": "a",
-          "pronunciations": [
+          "pronunciation": [
             "a"
           ]
         },
         {
           "form": "aa",
-          "pronunciations": [
+          "pronunciation": [
             "aː"
           ]
         },
@@ -162,7 +175,7 @@
             "B"
           ],
           "form": "b",
-          "pronunciations": [
+          "pronunciation": [
             "pˀ"
           ]
         },
@@ -171,7 +184,7 @@
             "C"
           ],
           "form": "c",
-          "pronunciations": [
+          "pronunciation": [
             "t͡ʃ"
           ]
         },
@@ -180,7 +193,7 @@
             "D"
           ],
           "form": "d",
-          "pronunciations": [
+          "pronunciation": [
             "tˀ"
           ]
         }
