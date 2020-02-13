@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Utterance-5.1.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Utterance-5.1.1.json",
   "title": "Utterance",
   "type": "object",
   "description": "The term *utterance* is intentionally ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision.",
@@ -28,8 +28,8 @@
     "key": {
       "title": "Key",
       "type": "string",
-      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}$",
-      "description": "A key which uniquely identifies this Utterance within the Text. The key for an Utterance consists of the abbreviation of the Text, a period, and then the number of this Utterance within the Text (index starts at 1). For example, the third Utterance of a Text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus."
+      "pattern": "^[(a-z)|(A-Z)|(0-9)]+[-_\\.][0-9]{1,3}$",
+      "description": "A key which uniquely identifies this Utterance within the Text. The key for an Utterance consists of the abbreviation of the Text, a period, dash, or underscore, and then the number of this Utterance within the Text (index starts at 1). For example, the third Utterance of a Text with the abbreviation `A` would be `A.3`. Keys should be unique within a corpus."
     },
     "endTime": {
       "title": "End Time",

@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Word-4.3.0.json'
+$id:     'http://schemas.digitallinguistics.io/Word-4.3.1.json'
 title:   Word
 type:    object
 
@@ -38,8 +38,8 @@ properties:
   key:
     title:   Key
     type:    string
-    pattern: '^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$'
-    description: 'A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Utterance within the text, another period, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.'
+    pattern: '^[(a-z)|(A-Z)|(0-9)]+[-_\.][0-9]{1,3}[-_\.][0-9]{1,2}$'
+    description: 'A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, dash, or underscore, the number of Utterance within the text, another period, dash, or underscore, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus.'
 
   literal:
     title: 'Literal Translation'
@@ -159,7 +159,7 @@ examples:
   - type:    Word
     endtime: 1.010
     gloss:   man
-    key:     A1.1.2
+    key:     A1_1_2
     analysis:
       transcription: man
     literal:         eng: man
