@@ -34,7 +34,7 @@ properties:
   key:
     title:   Lexeme Key
     type:    string
-    pattern: '^[^ ]+$'
+    pattern: '^[^\s]+$'
     description: A human-readable key that uniquely identifies this lexeme or variant within the language. Best practice is for the key to consist of a representation of the lemma form of the word without diacritics, and, if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique for the language. (Keys do not need to be unique across languages.)
 
   alternativeAnalyses:
@@ -321,7 +321,7 @@ examples:
     dateCreated:    '2018-11-03T00:23:55.842Z'
     dateModified:   '2018-11-03T00:24:04.730Z'
     id:             783cbaa8-befe-4049-bfe4-bb5688173780
-    key:            guxt
+    key:            guxt-(1)
     language:
       abbreviation: chiti
       id:           3d91a22d-005b-4ec5-8151-09e44629f58f

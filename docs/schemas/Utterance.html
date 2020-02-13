@@ -411,7 +411,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A key which uniquely identifies this Utterance within the Text. The key for an Utterance consists of the abbreviation of the Text, a period, and then the number of this Utterance within the Text (index starts at 1). For example, the third Utterance of a Text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
+          <div><p>A key which uniquely identifies this Utterance within the Text. The key for an Utterance consists of the abbreviation of the Text, a period, dash, or underscore, and then the number of this Utterance within the Text (index starts at 1). For example, the third Utterance of a Text with the abbreviation <code>A</code> would be <code>A.3</code>. Keys should be unique within a corpus.</p>
 </div>
         </section>
 
@@ -450,7 +450,7 @@
 
 
           <p class='pattern keyword'>
-            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}$</code>
+            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+[-_\.][0-9]{1,3}$</code>
           </p>
 
 
