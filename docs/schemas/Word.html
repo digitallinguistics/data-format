@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Word-4.3.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Word-4.3.1.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.3.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.3.1.json</code>
         </p>
 
         <p class='type keyword'>
@@ -626,7 +626,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Utterance within the text, another period, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
+          <div><p>A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, dash, or underscore, the number of Utterance within the text, another period, dash, or underscore, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
 </div>
         </section>
 
@@ -665,7 +665,7 @@
 
 
           <p class='pattern keyword'>
-            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$</code>
+            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+[-_\.][0-9]{1,3}[-_\.][0-9]{1,2}$</code>
           </p>
 
 
@@ -2288,7 +2288,7 @@
   &quot;type&quot;: &quot;Word&quot;,
   &quot;endtime&quot;: 1.01,
   &quot;gloss&quot;: &quot;man&quot;,
-  &quot;key&quot;: &quot;A1.1.2&quot;,
+  &quot;key&quot;: &quot;A1_1_2&quot;,
   &quot;analysis&quot;: {
     &quot;transcription&quot;: &quot;man&quot;
   },
