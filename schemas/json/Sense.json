@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Sense-1.1.1.json",
+  "$id": "http://schemas.digitallinguistics.io/Sense-1.3.0.json",
   "title": "Sense",
   "type": "object",
   "description": "A *sense* is one of the possible meanings of a lexeme. For example, the lexeme *run* has many different senses, such as as \"run in a race\" and \"run water in a sink\". It is up to the linguist to decide whether two particular uses of a lexeme count as the same sense or different senses.",
@@ -171,6 +171,17 @@
       "type": "string",
       "description": "The scientific name for this item"
     },
+    "semanticDomains": {
+      "title": "Semantic Domains",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A list of the semantic domains this sense belongs to. Examples include color, body part, clothing, etc. The colon character can be used to represent subdomains e.g. quality:color:primary, color:red, etc.",
+      "items": {
+        "title": "Semantic Domain",
+        "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
+        "description": "A domain that this sense belongs to, as a MultiLangString"
+      }
+    },
     "sources": {
       "title": "Sources",
       "type": "array",
@@ -193,11 +204,11 @@
       "title": "Usages",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of the appropriate usages for this sense. Examples include `formal`, `medicinal`, `informal`, etc.",
+      "description": "A list of MultiLangStrings giving information about this sense's social usage, regional information, register, dialect, and/or connotations. Common values might be \"archaic\", \"colloquial\", \"formal\", \"positive\", \"negative\", etc.",
       "items": {
         "title": "Usage",
         "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-        "description": "An appropriate usage for this sense, optionally in multiple languages"
+        "description": "A MultiLangString giving information about this sense's usage"
       }
     },
     "variantOf": {
@@ -259,6 +270,12 @@
       "category": "noun",
       "definition": "a male",
       "gloss": "male",
+      "semanticDomains": [
+        "human"
+      ],
+      "usages": [
+        "formal"
+      ],
       "media": [
         {
           "id": "b032fe58-0deb-44fc-8001-e3ba63145417",

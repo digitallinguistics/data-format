@@ -12,7 +12,7 @@
 
 - **major:** breaking changes to schemas / properties or functional changes to their descriptions
 - **minor:** new properties added, optional properties removed, or other backwards-compatible changes
-- **patch:** typos, non-functional changes to descriptions, minor bugs and hotfixes
+- **patch:** typos, non-functional changes to descriptions, minor bugs and hotfixes, updates to example data
 
 ## Releases
 

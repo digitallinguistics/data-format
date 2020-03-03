@@ -28,12 +28,12 @@
   },
   "main": "schemas/json",
   "scripts": {
-    "build":   "npm run convert & npm run docs",
+    "build": "npm run convert & npm run docs",
     "convert": "node build/convert.js",
-    "docs":    "node build/docs.js",
+    "docs": "node build/docs.js",
     "prepare": "npm run build",
-    "test":    "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
-    "upload":  "node build/upload.js"
+    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
+    "upload": "node build/upload.js"
   },
   "dependencies": {},
   "devDependencies": {
