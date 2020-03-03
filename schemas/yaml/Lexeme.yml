@@ -49,17 +49,16 @@ properties:
       description: A lexeme object representing an alternative analysis of this lexeme.
 
   bibliography:
-    title: Bibliography
-    type:  array
+    title:       Bibliography
+    type:        array
     uniqueItems: true
-    description: A list of attested sources where this lexeme appears, as citations to published texts. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These sources should be DatabaseReferences to a BibliographicReference object.
+    description: A list of citations to attested sources where this lexeme appears. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible.
     items:
       title:         Citation
       type:          object
-      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
-      referenceType: BibliographicReference
-      description:   An attested source for this lexeme. This will be a citation to a published text in which the lexeme appears.
-
+      $ref:          'http://schemas.digitallinguistics.io/Citation.json'
+      referenceType: Citation
+      description:   A citation to an attested source for this lexeme.
 
   citationForm:
     title: Citation Form
@@ -221,17 +220,6 @@ properties:
                 - sociocultural
                 - pragmatic
 
-  references:
-    title:       Bibliographic References
-    type:        array
-    uniqueItems: true
-    description: A collection of bibliographic references relating to this lexeme. For example, a particular lexeme may have been discussed in detail in a published article.
-    items:
-      title: Reference
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: A bibliographic Reference about this lexeme
-
   senses:
     title:       Senses
     type:        array
@@ -312,7 +300,7 @@ examples:
       - argumentStructure: eat(agent, patient)
         gloss: eat
     bibliography:
-      - citation: Dur 13
+      - citationKey: Duralde1802
     citationForm:
       APA:          kʼušti
       IPA:          kˀušti

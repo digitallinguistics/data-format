@@ -169,17 +169,6 @@ properties:
                 - semantics
                 - sociocultural
 
-  references:
-    title:       Bibliographic References
-    type:        array
-    uniqueItems: true
-    description: A collection of bibliographic sources relating to this lexeme form. For example, a particular form may have been discussed in detail in a published article.
-    items:
-      title: Reference
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Source.json'
-      description: A bibliographic source about this lexeme form
-
   sources:
     title:       Sources
     type:        array
@@ -267,7 +256,7 @@ examples:
           Mod:  gux
           Swad: guš
     bibliography:
-      - citation: Dur 13
+      - citationKey: Duralde1802
     components:
       - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
         key:           gux

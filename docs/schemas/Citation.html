@@ -4,7 +4,7 @@
   <head>
 
     <meta charset=utf-8>
-    <title>Multi-Language Text / String</title>
+    <title>Citation</title>
     <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
     <link href=../schema-page.css rel=stylesheet>
@@ -207,7 +207,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/MultiLangString-5.0.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Citation-1.0.0.json class=jschemer-schema>
 
 
     <details open>
@@ -215,7 +215,7 @@
 
         <summary>
           <h1 class='title keyword'>
-            Multi-Language Text / String
+            Citation
           </h1>
         </summary>
 
@@ -224,16 +224,18 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/MultiLangString-5.0.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Citation-1.0.0.json</code>
         </p>
 
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A piece of text in multiple languages. This is typically used for analyses, database properties, and information in metalanguages rather than transcriptions or translations of data (for those, see the <a href="https://spec.digitallinguistics.github.io/schemas/Transcription.html">Transcription</a> and <a href="https://spec.digitallinguistics.github.io/schemas/Translation.html">Translation</a> schemas). For example, the part of speech for a lexeme might be given as both English <em>noun</em> and Spanish <em>nombre</em>. Each key must be a valid IETF language tag for a language (see the <a href="https://www.w3.org/International/articles/language-tags/">IETF</a> reference page), and the value for that key must be the string of text in that language. <strong>Note:</strong> MultiLangStrings do not have a <code>type</code> property.</p>
-<p>If the text is in only one language and that language is English, it may be represented as a simple string instead of an object. Thus instead of <code>gloss: { en: &quot;M.SG&quot; }</code> you can simply write <code>gloss: &quot;M.SG&quot;</code>.</p>
+          <div><p>A citation to a bibliographic source. Citation objects consist of a <code>pages</code> property which indicates the relevant page numbers within the cited publication, and either a <code>citationKey</code> field or a <code>bibliographicSource</code> field. If the <code>citationKey</code> field is used, it contains a reference to the citation key of a bibliographic source stored elsewhere. If the <code>bibliographicSource</code> field is used, it contains an entire bibliographicSource. This allows developers to dereference their bibliographies, if they choose to.</p>
 </div>
         </section>
 
@@ -261,78 +263,24 @@
 
 
 
+          <section class='required keyword'>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <section class='oneOf'>
-
-            <p>This item must also validate against exactly one of the following schemas:</p>
+            <h2>Required Properties</h2>
 
             <ul>
-                <li><section  class=jschemer-schema>
+                <li><code>pages</code></li>
+            </ul>
 
-
-    <details open>
-
-
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>object</code>
-        </p>
+          </section>
 
 
 
 
+          <section class='properties keyword'>
 
+            <h2>Properties</h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <section class='patternProperties keyword'>
-
-            <h2>Regular Expression Properties</h2>
-
-            <p>Property names which match one of the following regular expressions must validate against the associated schema.</p>
+            <p>The following properties are defined for this object:</p>
 
             <ul>
                 <li><section  class=jschemer-schema>
@@ -343,7 +291,7 @@
 
         <summary>
           <h1 class='title keyword'>
-            Text: <code>^(((en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))|((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-(x(-[A-Za-z0-9]{1,8})+))?)|(x(-[A-Za-z0-9]{1,8})+))$</code>
+            Pages: <code>pages</code>
           </h1>
         </summary>
 
@@ -357,7 +305,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The string of text in the specified language</p>
+          <div><p>The relevant page numbers within the cited publication</p>
 </div>
         </section>
 
@@ -417,7 +365,6 @@
             </ul>
 
           </section>
-
 
           <section class='additionalProperties keyword'>
 
@@ -448,16 +395,11 @@
 
 
 
+          <section class='oneOf'>
 
+            <p>This item must also validate against exactly one of the following schemas:</p>
 
-
-
-
-    </details>
-
-
-</section>
-</li>
+            <ul>
                 <li><section  class=jschemer-schema>
 
 
@@ -467,9 +409,6 @@
 
 
 
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
 
 
 
@@ -479,6 +418,78 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>citationKey</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Citation Key: <code>citationKey</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The citation key for the bibliographic source being reference. Must be a valid Abbreviation.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Abbreviation.json'>http://schemas.digitallinguistics.io/Abbreviation.json</a></p>
+          </section>
 
 
 
@@ -534,25 +545,200 @@
 
 
 
-        <section class='examples keyword'>
 
-          <h2>Examples</h2>
 
-          <p>The following are example values for this schema:</p>
 
-          <ul>
-              <li>
-                <pre><code>&quot;man&quot;</code></pre>
-              </li>
-              <li>
-                <pre><code>{
-  &quot;en&quot;: &quot;man&quot;,
-  &quot;fr&quot;: &quot;homme&quot;
-}</code></pre>
-              </li>
-          </ul>
 
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>bibliographicSource</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Bibliographic Source: <code>bibliographicSource</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The bibliographic source being referenced.</p>
+</div>
         </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/BibliographicSource.json'>http://schemas.digitallinguistics.io/BibliographicSource.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
 
     </details>
 

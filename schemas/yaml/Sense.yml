@@ -29,15 +29,15 @@ properties:
     description: An abstract representation of the argument structure for this sense
 
   bibliography:
-    title: Bibliography
-    type:  array
+    title:       Bibliography
+    type:        array
     uniqueItems: true
-    description: A list of attested sources where this sense appears, as citations to published texts. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a BibliographicReference object.
+    description: A list of citations to attested sources where this sense appears. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.
     items:
       title:         Citation
       type:          object
-      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
-      referenceType: BibliographicReference
+      $ref:          'http://schemas.digitallinguistics.io/Citation.json'
+      referenceType: Citation
       description:   An attested source for this sense. This will be a citation to a published text in which the sense appears.
 
 
@@ -147,17 +147,6 @@ properties:
                 - semantics
                 - sociocultural
 
-  references:
-    title:       Bibliographic References
-    type:        array
-    uniqueItems: true
-    description: A collection of bibliographic references relating to this sense. For example, a particular sense may have been discussed in detail in a published article.
-    items:
-      title: Reference
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: A bibliographic Reference about this sense
-
   scientificName:
     title: Scientific Name
     type:  string
@@ -242,7 +231,7 @@ examples:
     link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2
 
   - bibliography:
-      - citation: Dur 13
+      - citationKey: Duralde1802
     category:   verb
     definition: A suffix that derives transitive verbs from intransitive verbs
     derives:    verb

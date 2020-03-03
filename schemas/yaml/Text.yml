@@ -48,6 +48,16 @@ properties:
       $ref:  'http://schemas.digitallinguistics.io/Annotation.json'
       description: 'An annotation on this text'
 
+  bibliography:
+    title: Bibliography
+    type:  array
+    description: A list of citations to any bibliographic sources concerning or relating to this Text
+    items:
+      title: Citation
+      type:  object
+      $ref: 'http://schemas.digitallinguistics.io/Citation.json'
+      description: A citation to a bibliographic source about this text
+
   contributors:
     title: Contributors (People)
     type:  array
@@ -139,16 +149,6 @@ properties:
       type:  object
       $ref: 'http://schemas.digitallinguistics.io/Note.json'
       description: 'A Note object'
-
-  references:
-    title: References
-    type:  array
-    description: 'A list of any bibliographic references concerning or relating to this Text'
-    items:
-      title: Reference
-      type:  object
-      $ref: 'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: 'A bibliographic reference about this text'
 
   tags:
     title: Tags

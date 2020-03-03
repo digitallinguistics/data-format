@@ -70,6 +70,16 @@ properties:
     $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
     description: 'The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.'
 
+  bibliography:
+    title:       Bibliography
+    type:        array
+    uniqueItems: true
+    description: A collection of citations to bibliographic references about this language.
+    items:
+      title: Citation
+      $ref:  'http://schemas.digitallinguistics.io/Citation.json'
+      description: A citation to a bibliographic source about this language
+
   classification:
     title: Genetic Classification
     type:  array
@@ -278,16 +288,6 @@ properties:
       $ref: 'http://schemas.digitallinguistics.io/Phoneme.json'
       description: 'A Phoneme object'
 
-  references:
-    title:       Bibliography
-    type:        array
-    uniqueItems: true
-    description: A collection of citations to bibliographic references about this language.
-    items:
-      title: Citation
-      $ref:  'http://schemas.digitallinguistics.io/Citation.json'
-      description: A citation to a bibliographic source about this language
-
   tags:
     title: Tags
     type:  object
@@ -319,6 +319,8 @@ examples:
       IPA:  sitimaʃa
       Mod:  sitimaxa
       Swad: sitimaša
+    bibliography:
+      - citationKey: Swadesh1946
     contributors:
       - abbreviation: DWH
         roles:
@@ -463,19 +465,6 @@ examples:
         manner:    affricate
         place:     post-alveolar
         voicing:   voiceless
-    references:
-      - authors:
-          - firstName:   Morris
-            lastName:    Swadesh
-        city:            New York
-        editors:
-          - firstName:   Cornelius
-            lastName:    Osgood
-        pages:           '312-336'
-        publication:     Linguistic Structures of Native America
-        publicationType: book section
-        title:           Chitimacha
-        year:            1946
     tags:
       morphologicalType: synthetic
     type:                Language

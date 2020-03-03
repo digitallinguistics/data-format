@@ -3,34 +3,35 @@ $id:     'http://schemas.digitallinguistics.io/Citation-1.0.0.json'
 title:   Citation
 type:    object
 
-description: 'A citation to a bibliographic source. Citation objects consist of a `pages` property which indicates the relevant page numbers within the cited publication, and either a `citationKey` field or a `bibliographicSource` field. If the `citationKey` field is used, it contains a reference to the citation key of a bibliographic source stored elsewhere. If the `bibliographicSource` field is used, it contains an entire bibliographicSource. This allows developers to dereference their bibliographies, if they choose to.'
+description: 'A citation to a bibliographic source. Citation objects consist of an optional `pages` property which indicates the relevant page numbers within the cited publication, and either a `citationKey` field or a `bibliographicSource` field. If the `citationKey` field is used, it contains a reference to the citation key of a bibliographic source stored elsewhere. If the `bibliographicSource` field is used, it contains an entire bibliographicSource. This allows developers to dereference their bibliographies, if they choose to.'
 
-additionalProperties: false
+allOf:
 
-required:
-  - pages
+  - properties:
+      pages:
+        title:       Pages
+        type:        string
+        description: The relevant page numbers within the cited publication
 
-properties:
+  - oneOf:
 
-  pages:
-    title:       Pages
-    type:        string
-    description: The relevant page numbers within the cited publication
+    - required:
+        - citationKey
+      properties:
+        citationKey:
+          title:       Citation Key
+          $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
+          description: The citation key for the bibliographic source being reference. Must be a valid Abbreviation.
 
-oneOf:
+    - required:
+        - bibliographicSource
+      properties:
+        bibliographicSource:
+          title:       Bibliographic Source
+          $ref:        'http://schemas.digitallinguistics.io/BibliographicSource.json'
+          description: The bibliographic source being referenced.
 
-  - required:
-      - citationKey
-    properties:
-      citationKey:
-        title:       Citation Key
-        $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
-        description: The citation key for the bibliographic source being reference. Must be a valid Abbreviation.
+examples:
 
-  - required:
-      - bibliographicSource
-    properties:
-      bibliographicSource:
-        title:       Bibliographic Source
-        $ref:        'http://schemas.digitallinguistics.io/BibliographicSource.json'
-        description: The bibliographic source being referenced.
+  - citationKey: Hieber2018
+    pages:       '1-15'
