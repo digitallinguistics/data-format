@@ -102,7 +102,7 @@ properties:
     items:
       title: Reference
       type:  object
-      $ref: 'http://schemas.digitallinguistics.io/Source.json'
+      $ref: 'http://schemas.digitallinguistics.io/BibliographicSource.json'
       description: 'A bibliographic source about this location'
 
   tags:

@@ -193,9 +193,9 @@ properties:
     uniqueItems: true
     description: 'A collection of bibliographic sources about this phoneme'
     items:
-      title: Source
+      title: Bibliographic Source
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Source.json'
+      $ref:  'http://schemas.digitallinguistics.io/BibliographicSource.json'
       description: A bibliographic source
 
   rounding:

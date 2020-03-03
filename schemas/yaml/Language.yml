@@ -279,15 +279,14 @@ properties:
       description: 'A Phoneme object'
 
   references:
-    title:       'Bibliographic References'
+    title:       Bibliography
     type:        array
     uniqueItems: true
-    description: 'A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.'
+    description: A collection of citations to bibliographic references about this language.
     items:
-      title: 'Bibliographic Reference'
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: 'A bibliographic reference about this language'
+      title: Citation
+      $ref:  'http://schemas.digitallinguistics.io/Citation.json'
+      description: A citation to a bibliographic source about this language
 
   tags:
     title: Tags

@@ -37,9 +37,9 @@ properties:
   type:
     title:    Type
     type:     string
-    const:    Source
+    const:    BibliographicSource
     readOnly: true
-    description: 'The type of object. Must be set to `Source`.'
+    description: 'The type of object. Must be set to `BibliographicSource`.'
 
   authors:
     title:       Authors
@@ -193,7 +193,7 @@ examples:
     publisher:       John Benjamins
     series:          Constructional approaches to language
     title:           Category genesis in Chitimacha
-    type:            Source
+    type:            BibliographicSource
     url:             'https://api.digitallinguistics.io/references/Hieber2018.json'
     volume:          20
     year:            2018
@@ -209,6 +209,6 @@ examples:
     publication:     Linguistic Typology
     publicationType: journal article
     title:           'On linguistics, linguists, and our times: A linguist’s personal narrative reviewed'
-    type:            Source
+    type:            BibliographicSource
     url:             'https://api.digitallinguistics.io/references/Hieber2013.json'
     year:            2013
