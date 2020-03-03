@@ -196,12 +196,12 @@
       "title": "Bibliographic References",
       "type": "array",
       "uniqueItems": true,
-      "description": "A collection of bibliographic references relating to this lexeme form. For example, a particular form may have been discussed in detail in a published article.",
+      "description": "A collection of bibliographic sources relating to this lexeme form. For example, a particular form may have been discussed in detail in a published article.",
       "items": {
         "title": "Reference",
         "type": "object",
-        "$ref": "http://schemas.digitallinguistics.io/BibliographicReference.json",
-        "description": "A bibliographic Reference about this lexeme form"
+        "$ref": "http://schemas.digitallinguistics.io/Source.json",
+        "description": "A bibliographic source about this lexeme form"
       }
     },
     "sources": {

@@ -111,12 +111,12 @@
       "title": "Bibliographic References",
       "type": "array",
       "uniqueItems": true,
-      "description": "A collection of bibliographic references about this Location",
+      "description": "A collection of bibliographic sources about this Location",
       "items": {
         "title": "Reference",
         "type": "object",
-        "$ref": "http://schemas.digitallinguistics.io/BibliographicReference.json",
-        "description": "A bibliographic reference about this location"
+        "$ref": "http://schemas.digitallinguistics.io/Source.json",
+        "description": "A bibliographic source about this location"
       }
     },
     "tags": {

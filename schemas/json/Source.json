@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/BibliographicReference-5.3.0.json",
-  "title": "Bibliographic Reference",
+  "$id": "http://schemas.digitallinguistics.io/Source-1.0.0.json",
+  "title": "Bibliographic Source",
   "type": "object",
-  "description": "A bibliographic Reference",
+  "description": "A bibliographic source, such as a book or journal article",
   "$comment": "This is a top-level database object",
   "required": [
     "title"
@@ -32,20 +32,20 @@
   "properties": {
     "id": {
       "title": "ID",
-      "description": "A unique database identifier for this Reference"
+      "description": "A unique database identifier for this source"
     },
     "type": {
       "title": "Type",
       "type": "string",
-      "const": "BibliographicReference",
+      "const": "Source",
       "readOnly": true,
-      "description": "The type of object. Must be set to `BibliographicReference`."
+      "description": "The type of object. Must be set to `Source`."
     },
     "authors": {
       "title": "Authors",
       "type": "array",
       "uniqueItems": true,
-      "description": "An array of authors for this Reference",
+      "description": "An array of authors for this source",
       "items": {
         "title": "Author",
         "type": "object",
@@ -56,12 +56,12 @@
     "citationKey": {
       "title": "Citation Key",
       "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
-      "description": "A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a reference."
+      "description": "A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a source."
     },
     "city": {
       "title": "City",
       "type": "string",
-      "description": "The city in which this reference was published"
+      "description": "The city in which this source was published"
     },
     "doi": {
       "title": "Digital Object Identifier (DOI)",
@@ -73,13 +73,13 @@
       "title": "Edition",
       "type": "integer",
       "minimum": 1,
-      "description": "The edition of this Reference, formatted as an integer"
+      "description": "The edition of this source, formatted as an integer"
     },
     "editors": {
       "title": "Editors",
       "type": "array",
       "uniqueItems": true,
-      "description": "An array of editors for this Reference",
+      "description": "An array of editors for this source",
       "items": {
         "title": "Editor",
         "type": "object",
@@ -101,12 +101,12 @@
     "pages": {
       "title": "Pages",
       "type": "string",
-      "description": "The page numbers of this Reference"
+      "description": "The page numbers of this publication"
     },
     "publication": {
       "title": "Publication",
       "type": "string",
-      "description": "The publication where this item was published"
+      "description": "The publication that this source is published in"
     },
     "publicationType": {
       "title": "Publication Type",
@@ -132,7 +132,7 @@
     "publisher": {
       "title": "Publisher (or Institution)",
       "type": "string",
-      "description": "The name of the publisher of this reference, or the institution where it was published"
+      "description": "The name of the publisher of this soruce, or the institution where it was published"
     },
     "series": {
       "title": "Series",
@@ -149,7 +149,7 @@
       "title": "Translators",
       "type": "array",
       "uniqueItems": true,
-      "description": "An array of translators for this Reference",
+      "description": "An array of translators for this source",
       "items": {
         "title": "Translator (Person)",
         "type": "object",
@@ -161,7 +161,7 @@
       "title": "JSON URL",
       "type": "string",
       "format": "uri",
-      "description": "A URL for the JSON data for this Reference"
+      "description": "A URL for the JSON data for this source"
     },
     "volume": {
       "title": "Volume",
@@ -210,7 +210,7 @@
       "publisher": "John Benjamins",
       "series": "Constructional approaches to language",
       "title": "Category genesis in Chitimacha",
-      "type": "BibliographicReference",
+      "type": "Source",
       "url": "https://api.digitallinguistics.io/references/Hieber2018.json",
       "volume": 20,
       "year": 2018
@@ -230,7 +230,7 @@
       "publication": "Linguistic Typology",
       "publicationType": "journal article",
       "title": "On linguistics, linguists, and our times: A linguist’s personal narrative reviewed",
-      "type": "BibliographicReference",
+      "type": "Source",
       "url": "https://api.digitallinguistics.io/references/Hieber2013.json",
       "year": 2013
     }
