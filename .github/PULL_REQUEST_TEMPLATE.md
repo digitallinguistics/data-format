@@ -35,8 +35,6 @@
 
 - [ ] **Make changes to the schemas or code.** The schemas are located in `/schemas/yaml`. Do not update the schemas in `schemas/json`, or your changes will be overwritten.
 
-- [ ] **Increment the version number** for any schemas you made changes to.
-
 - [ ] **Update the `"description"` field** of any schemas / properties that you change.
 
 - [ ] **Update examples** in the affected schemas to reflect the changes you made.
