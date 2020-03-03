@@ -200,7 +200,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Word-4.2.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Word-4.3.1.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +217,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.2.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Word-4.3.1.json</code>
         </p>
 
         <p class='type keyword'>
@@ -276,6 +276,87 @@
             <p>The following properties are defined for this object:</p>
 
             <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Analysis: <code>analysis</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The morpheme breakdown for the word</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Transcription.json'>http://schemas.digitallinguistics.io/Transcription.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
                 <li><section  class=jschemer-schema>
 
 
@@ -545,7 +626,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Utterance within the text, another period, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
+          <div><p>A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, dash, or underscore, the number of Utterance within the text, another period, dash, or underscore, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation <code>A</code>, the key would be <code>A.3.4</code>. Keys should be unique within a corpus.</p>
 </div>
         </section>
 
@@ -584,8 +665,89 @@
 
 
           <p class='pattern keyword'>
-            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+\.[0-9]{1,3}\.[0-9]{1,2}$</code>
+            <b>Regular expression to match:</b> <code>^[(a-z)|(A-Z)|(0-9)]+[-_\.][0-9]{1,3}[-_\.][0-9]{1,2}$</code>
           </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Literal Translation: <code>literal</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A literal translation of the word at the level of the morpheme token</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Translation.json'>http://schemas.digitallinguistics.io/Translation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2015,7 +2177,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only.</p>
+          <div><p>A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word. There is a separate field for literal translations.; use the gloss field for Leipzig-style glosses only.</p>
 </div>
         </section>
 
@@ -2126,7 +2288,11 @@
   &quot;type&quot;: &quot;Word&quot;,
   &quot;endtime&quot;: 1.01,
   &quot;gloss&quot;: &quot;man&quot;,
-  &quot;key&quot;: &quot;A1.1.2&quot;,
+  &quot;key&quot;: &quot;A1_1_2&quot;,
+  &quot;analysis&quot;: {
+    &quot;transcription&quot;: &quot;man&quot;
+  },
+  &quot;literal&quot;: &quot;eng: man&quot;,
   &quot;morphemes&quot;: [
     {
       &quot;gloss&quot;: &quot;man&quot;,

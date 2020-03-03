@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Lexeme-8.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/Lexeme-8.3.1.json'
 title:   Lexeme
 type:    object
 
@@ -34,8 +34,19 @@ properties:
   key:
     title:   Lexeme Key
     type:    string
-    pattern: '^[^ ]+$'
+    pattern: '^[^\s]+$'
     description: A human-readable key that uniquely identifies this lexeme or variant within the language. Best practice is for the key to consist of a representation of the lemma form of the word without diacritics, and, if the word is a homonym, the homonym number. However, any value is acceptable as long as it is unique for the language. (Keys do not need to be unique across languages.)
+
+  alternativeAnalyses:
+    title: Alternative Analyses
+    type: array
+    uniqueItems: true
+    description: An array of alternative Lexeme objects for this lexeme. This can be useful when working with historical sources or research from other linguists. It allows users to decide on their own analysis, while still maintaining a faithful record of the analyses of the original documentation.
+    items:
+      title: Alternative Analysis
+      type: object
+      $ref: 'http://schemas.digitallinguistics.io/Lexeme.json'
+      description: A lexeme object representing an alternative analysis of this lexeme.
 
   citationForm:
     title: Citation Form
@@ -276,7 +287,17 @@ properties:
     description: If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:
-  - citationForm:
+  - alternativeAnalyses:
+    - forms:
+      - transcription:
+          APA: kʼuš
+      lemma:
+        APA:  kʼuš
+        IPA:  kˀuš
+      senses:
+      - argumentStructure: eat(agent, patient)
+        gloss: eat
+    citationForm:
       APA:          kʼušti
       IPA:          kˀušti
       Mod:          guxti
@@ -284,7 +305,7 @@ examples:
     dateCreated:    '2018-11-03T00:23:55.842Z'
     dateModified:   '2018-11-03T00:24:04.730Z'
     id:             783cbaa8-befe-4049-bfe4-bb5688173780
-    key:            guxt
+    key:            guxt-(1)
     language:
       abbreviation: chiti
       id:           3d91a22d-005b-4ec5-8151-09e44629f58f
