@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Source-1.0.0.json'
+$id:     'http://schemas.digitallinguistics.io/BibliographicSource-1.0.0.json'
 title:   Bibliographic Source
 type:    object
 
@@ -32,7 +32,7 @@ properties:
 
   id:
     title:       ID
-    description: A unique database identifier for this source
+    description: A unique database identifier for this bibliographic source
 
   type:
     title:    Type
@@ -45,7 +45,7 @@ properties:
     title:       Authors
     type:        array
     uniqueItems: true
-    description: An array of authors for this source
+    description: An array of authors for this bibliographic source
     items:
       title: Author
       type:  object
@@ -60,7 +60,7 @@ properties:
   city:
     title:       City
     type:        string
-    description: The city in which this source was published
+    description: The city in which this bibliographic source was published
 
   doi:
     title:   Digital Object Identifier (DOI)
@@ -72,13 +72,13 @@ properties:
     title:       Edition
     type:        integer
     minimum:     1
-    description: The edition of this source, formatted as an integer
+    description: The edition of this publication, formatted as an integer
 
   editors:
     title:       Editors
     type:        array
     uniqueItems: true
-    description: An array of editors for this source
+    description: An array of editors for this bibliographic source
     items:
       title:       Editor
       type:        object
@@ -104,7 +104,7 @@ properties:
   publication:
     title:       Publication
     type:        string
-    description: The publication that this source is published in
+    description: The publication that this bibliographic source is published in
 
   publicationType:
     title:       Publication Type
@@ -146,7 +146,7 @@ properties:
     title:       Translators
     type:        array
     uniqueItems: true
-    description: An array of translators for this source
+    description: An array of translators for this bibliographic source
     items:
       title:       Translator (Person)
       type:        object
@@ -157,7 +157,7 @@ properties:
     title:       JSON URL
     type:        string
     format:      uri
-    description: A URL for the JSON data for this source
+    description: A URL for the JSON data for this bibliographic source
 
   volume:
     title:       Volume
