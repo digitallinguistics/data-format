@@ -24,7 +24,7 @@ properties:
       - password
       - time limit
       - depositor control
-    default: 'depository control'
+    default: depository control
 
   ELAR:
     title: ELAR Access Level
@@ -41,16 +41,16 @@ properties:
     title: License
     type:  string
     description: 'The license under which you want to release this resource, most likely a [SPDX abbreviation](https://spdx.org/licenses/). If you do not want to release this data to others, set this to `UNLICENSED.` Otherwise, use [choosealicense.com](https://choosealicense.com/) to decide which license is right for your usage.'
-    default: 'UNLICENSED'
+    default: UNLICENSED
 
 examples:
 
-  - AILLA:   'password'
-    ELAR:    'Community Member'
-    license: 'UNLICENSED'
-    notes:
-      eng: 'Speaker also requested that this text only be shared with family members.'
-    speaker: 'family'
+  - AILLA:   password
+    ELAR:    Community Member
+    license: UNLICENSED
+    note:
+      eng: Speaker also requested that this text only be shared with family members.
+    speaker: family
 
-  - notes:
-      eng: 'The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members.'
+  - note:
+      eng: The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members.

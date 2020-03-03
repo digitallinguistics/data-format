@@ -49,13 +49,13 @@
       "AILLA": "password",
       "ELAR": "Community Member",
       "license": "UNLICENSED",
-      "notes": {
+      "note": {
         "eng": "Speaker also requested that this text only be shared with family members."
       },
       "speaker": "family"
     },
     {
-      "notes": {
+      "note": {
         "eng": "The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members."
       }
     }
