@@ -13,16 +13,16 @@ additionalProperties: true
 properties:
 
   type:
-    title:    Type
-    type:     string
-    const:    Annotation
-    readOnly: true
+    title:       Type
+    type:        string
+    const:       Annotation
+    readOnly:    true
     description: 'The type of object. Must be set to `Annotation`.'
 
   annotationType:
-    title: 'Annotation Type'
-    type:  string
-    description: 'The type of Annotation'
+    title:       Annotation Type
+    type:        string
+    description: The type of Annotation
     enum:
       - timespan
       - timestamp
@@ -31,18 +31,18 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes for this Annotation'
+    description: A collection of notes for this Annotation
     items:
       title: Note
       type:  object
       $ref:  'http://schemas.digitallinguistics.io/Note.json'
-      description: 'A Note about this Annotation'
+      description: A Note about this Annotation
 
   tags:
     title: Tags
     type:  object
     $ref:  'http://schemas.digitallinguistics.io/Tags.json'
-    description: 'A set of tags for this Annotation'
+    description: A set of tags for this Annotation
 
 allOf:
 
@@ -55,8 +55,8 @@ allOf:
 
   - oneOf:
 
-    - title: 'Timestamp Annotation'
-      description: 'A timespan annotation is an annotation which spans a duration of time. This is particularly useful for annotating non-linguistic features of the text which are happening in the background.'
+    - title: Timestamp Annotation
+      description: A timespan annotation is an annotation which spans a duration of time. This is particularly useful for annotating non-linguistic features of the text which are happening in the background.
       required:
         - ts
       properties:
@@ -65,26 +65,26 @@ allOf:
           title:   Timestamp
           type:    number
           minimum: 0
-          description: 'The point in time that the annotation is about, formated in seconds and millseconds (SS.MMM)'
+          description: The point in time that the annotation is about, formated in seconds and millseconds (SS.MMM)
 
-    - title: 'Timespan Annotation'
-      description: 'A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.'
+    - title: Timespan Annotation
+      description: A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.
       required:
         - startTime
         - endTime
       properties:
 
         startTime:
-          title:   'Start Time'
+          title:   Start Time
           type:    number
           minimum: 0
-          description: 'The time that the annotation starts, formated in seconds and milliseconds (SS.MMM)'
+          description: The time that the annotation starts, formated in seconds and milliseconds (SS.MMM)
 
         endTime:
-          title:   'End Time'
+          title:   End Time
           type:    number
           minimum: 0.001
-          description: 'The time that the annotation ends, formatted in seconds and milliseconds (SS.MMM)'
+          description: The time that the annotation ends, formatted in seconds and milliseconds (SS.MMM)
 
 examples:
 
@@ -99,7 +99,7 @@ examples:
     annotationType: timestamp
     ts:             1.234
     notes:
-      - text: 'Speaker points to listener here.'
+      - text: Speaker points to listener here.
 
   - type:           Annotation
     annotationType: timestamp
