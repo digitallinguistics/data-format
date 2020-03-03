@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Word-4.2.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Word-4.3.1.json",
   "title": "Word",
   "type": "object",
   "description": "A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).",
@@ -9,6 +9,11 @@
     "transcription"
   ],
   "properties": {
+    "analysis": {
+      "title": "Analysis",
+      "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
+      "description": "The morpheme breakdown for the word"
+    },
     "type": {
       "title": "Type",
       "type": "string",
@@ -30,8 +35,13 @@
     "key": {
       "title": "Key",
       "type": "string",
-      "pattern": "^[(a-z)|(A-Z)|(0-9)]+\\.[0-9]{1,3}\\.[0-9]{1,2}$",
-      "description": "A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, the number of Utterance within the text, another period, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus."
+      "pattern": "^[(a-z)|(A-Z)|(0-9)]+[-_\\.][0-9]{1,3}[-_\\.][0-9]{1,2}$",
+      "description": "A key that uniquely identifies this word token within the Text. The key for a Word consists of the abbreviation of the text, a period, dash, or underscore, the number of Utterance within the text, another period, dash, or underscore, and then the number of this word within the Utterance (indexing starts at 1). For example, for the fourth word of the third Utterance of a text with the abbreviation `A`, the key would be `A.3.4`. Keys should be unique within a corpus."
+    },
+    "literal": {
+      "title": "Literal Translation",
+      "$ref": "http://schemas.digitallinguistics.io/Translation.json",
+      "description": "A literal translation of the word at the level of the morpheme token"
     },
     "morphemes": {
       "title": "Morphemes / Components",
@@ -137,7 +147,7 @@
       "title": "Translation",
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Translation.json",
-      "description": "A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for literal or free, natural language translations of a word; use the gloss field for Leipzig-style glosses only."
+      "description": "A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word. There is a separate field for literal translations.; use the gloss field for Leipzig-style glosses only."
     }
   },
   "examples": [
@@ -145,7 +155,11 @@
       "type": "Word",
       "endtime": 1.01,
       "gloss": "man",
-      "key": "A1.1.2",
+      "key": "A1_1_2",
+      "analysis": {
+        "transcription": "man"
+      },
+      "literal": "eng: man",
       "morphemes": [
         {
           "gloss": "man",
