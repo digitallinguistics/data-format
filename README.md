@@ -18,7 +18,7 @@ Please consider citing this specification in scholarly articles using this repos
 [![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][npm]
 [![GitHub issues](https://img.shields.io/github/issues/digitallinguistics/spec.svg)][Issues]
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)][npm]
-[![Build Status](https://github.com/digitallinguistics/spec/workflows/test/badge.svg)][Actions]
+[![Build Status](https://github.com/digitallinguistics/spec/workflows/tests/badge.svg)][Actions]
 [![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)][License]
 [![DOI](https://zenodo.org/badge/50221632.svg)][Zenodo]
 
