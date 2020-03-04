@@ -42,6 +42,17 @@ properties:
     $ref:  'http://schemas.digitallinguistics.io/Address.json'
     description: 'An address associated with this location'
 
+  bibliography:
+    title:       Bibliography
+    type:        array
+    uniqueItems: true
+    description: A collection of citations to bibliographic sources about this location
+    items:
+      title: Citation
+      type:  object
+      $ref: 'http://schemas.digitallinguistics.io/Citation.json'
+      description: A citation to a bibliographic source about this location
+
   date:
     title: 'Date'
     type:  string
@@ -93,17 +104,6 @@ properties:
       type:  object
       $ref:  'http://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this location'
-
-  references:
-    title:       'Bibliographic References'
-    type:        array
-    uniqueItems: true
-    description: 'A collection of bibliographic sources about this Location'
-    items:
-      title: Reference
-      type:  object
-      $ref: 'http://schemas.digitallinguistics.io/BibliographicSource.json'
-      description: 'A bibliographic source about this location'
 
   tags:
     title: Tags
