@@ -30,6 +30,7 @@ Please consider citing this specification in scholarly articles using this repos
 * [The Specification][Docs] (human-readable version)
 * [The Schemas](#schemas)
 * [Best Practices](#best-practices)
+* [NDJSON](#ndjson)
 * [Tests](#tests)
 
 ## Note on Versioning
@@ -167,6 +168,10 @@ The following is a list of principles and best practices to keep in mind when wo
 
     * The schemas support both [internet date and date-time formats][DateTime], but date-time format is strongly recommended.
 
+## NDJSON
+
+The DLx format is also compatible with the [Newline Delimited JSON (NDJSON) format][NDJSON], which is "a convenient format for storing or streaming structured data that may be processed one record at a time". For example, you could place an entire lexicon into a single JSON file, so that each line of the file is a Lexeme object, formatted to fit on a single line.
+
 ## Tests
 
 Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command line using `npm test`.
@@ -180,6 +185,7 @@ Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command lin
 [Issues]:       https://github.com/digitallinguistics/spec/issues
 [Jasmine]:      https://jasmine.github.io/
 [License]:      https://github.com/digitallinguistics/spec/blob/master/LICENSE.md
+[NDJSON]:       http://ndjson.org/
 [npm]:          https://www.npmjs.com/package/@digitallinguistics/spec
 [JSON Schema]:  http://json-schema.org/
 [Travis]:       https://travis-ci.org/digitallinguistics/spec
