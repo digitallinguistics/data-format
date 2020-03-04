@@ -159,7 +159,9 @@
       "analysis": {
         "transcription": "man"
       },
-      "literal": "eng: man",
+      "literal": {
+        "eng": "man"
+      },
       "morphemes": [
         {
           "gloss": "man",

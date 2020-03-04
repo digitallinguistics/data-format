@@ -318,7 +318,9 @@
       "morphemeType": "stem",
       "sources": [
         {
-          "source": "TEST"
+          "source": {
+            "abbreviation": "BP"
+          }
         }
       ],
       "syllableStructure": "CVCC",

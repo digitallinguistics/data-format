@@ -420,7 +420,9 @@
           "morphemeType": "stem",
           "sources": [
             {
-              "source": "TEST"
+              "source": {
+                "abbreviation": "DWH"
+              }
             }
           ],
           "syllableStructure": "CVCC",
