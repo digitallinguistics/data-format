@@ -343,7 +343,7 @@ examples:
             filename:      guxt.wav
         morphemeType:      stem
         sources:
-          - source: TEST
+          - source: { abbreviation: DWH }
         syllableStructure: CVCC
         transcription:
           APA:  kʼušt

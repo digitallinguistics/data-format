@@ -238,7 +238,7 @@ examples:
     gloss:      TR
     link:       https://data.digitallinguistics.io/languages/Chitimacha/lexemes/t1/senses/1
     sources:
-      - source: TEST
+      - abbreviation: DP
 
   - category:   noun
     definition: a male

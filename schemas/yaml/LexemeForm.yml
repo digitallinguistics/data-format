@@ -269,7 +269,7 @@ examples:
         filename:      guxt.wav
     morphemeType:      stem
     sources:
-      - source: TEST
+      - source: { abbreviation: BP }
     syllableStructure: CVCC
     transcription:
       APA:  kʼušt
