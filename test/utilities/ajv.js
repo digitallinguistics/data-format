@@ -1,25 +1,22 @@
-// IMPORTS
-const AJV        = require(`ajv.cjs`);
-const getSchemas = require(`./getSchemas.cjs`);
-const GeoJSON    = require(`./GeoJSON.json`);
+import AJV from 'ajv';
+import { createRequire } from 'module';
+import getSchemas from './getSchemas.js';
 
-// SETUP
+const require = createRequire(import.meta.url);
+
+const GeoJSON = require(`./GeoJSON.json`);
+
 const ajv = new AJV({ extendRefs: true });
 
-// VARIABLES
 let schemasLoaded = false;
-
-// METHODS
 
 /**
  * Adds each of the schemas to AJV
- * @return {Promise<AJV>}
  */
-async function loadSchemas() {
+async function createValidator() {
 
   if (schemasLoaded) return ajv;
 
-  // Load DLx schemas
   const schemas = await getSchemas();
 
   for (const [, schema] of schemas) {
@@ -43,10 +40,10 @@ async function loadSchemas() {
   // Load GeoJSON schema
   ajv.addSchema(GeoJSON, `GeoJSON`);
 
-  schemasLoaded = true;
+  schemasLoaded = true; // eslint-disable-line require-atomic-updates
+
   return ajv;
 
 }
 
-// EXPORT
-module.exports = loadSchemas;
+export default createValidator;
