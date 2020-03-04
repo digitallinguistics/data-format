@@ -146,7 +146,7 @@
       "title": "Lemma",
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Transcription.json",
-      "description": "A *lemma* is the form of a lexeme conventionally used to represent that Lexeme. It may differ drastically from the citation form. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs)."
+      "description": "A *lemma* is the form of a lexeme conventionally used to represent that lexeme. It is typically used as the headword in dictionary entries. It may differ drastically from the citation form. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs)."
     },
     "lexicalRelations": {
       "title": "Lexical Relations",
