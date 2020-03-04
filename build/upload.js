@@ -33,7 +33,7 @@ const storeFile         = promisify(storage.createBlockBlobFromText).bind(storag
 const jsonMedia = `application/schema+json; charset=utf-8`;
 const yamlMedia = `text/yaml; charset=utf-8`;
 
-const schemaNameRegExp = /\.io\/(?<schemaName>.+)-(?<version>.+).json/;
+const schemaNameRegExp = /\.io\/(?<schemaName>.+)-(?<version>.+).json/u;
 const schemasPath      = path.join(__dirname, `../schemas/yaml`);
 
 // METHODS

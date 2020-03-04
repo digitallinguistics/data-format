@@ -24,28 +24,27 @@
   },
   "repository": "https://github.com/digitallinguistics/spec.git",
   "engines": {
-    "node": "10.x"
+    "node": "13.x"
   },
   "main": "schemas/json",
   "scripts": {
     "build": "npm run convert & npm run docs",
     "convert": "node build/convert.js",
     "docs": "node build/docs.js",
-    "prepare": "npm run build",
     "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
     "upload": "node build/upload.js"
   },
   "dependencies": {},
   "devDependencies": {
-    "ajv": "^6.10.0",
-    "azure-storage": "^2.10.2",
-    "chalk": "^2.4.2",
-    "eslint": "^5.15.3",
-    "fs-extra": "^7.0.1",
+    "ajv": "^6.12.0",
+    "azure-storage": "^2.10.3",
+    "chalk": "^3.0.0",
+    "eslint": "^6.8.0",
+    "fs-extra": "^8.1.0",
     "ietf-language-tag-regex": "0.0.5",
-    "jasmine": "^3.3.1",
+    "jasmine": "^3.5.0",
     "jschemer": "^3.0.3",
-    "semver-regex": "^2.0.0",
+    "semver-regex": "^3.1.1",
     "yamljs": "^0.3.0"
   }
 }
