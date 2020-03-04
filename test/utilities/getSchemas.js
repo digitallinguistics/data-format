@@ -1,10 +1,11 @@
-// IMPORTS
-const path        = require(`path`);
-const { readdir } = require(`fs`).promises;
-const yamljs      = require(`yamljs`);
+import { fileURLToPath }      from 'url';
+import path                   from 'path';
+import { readdir as readDir } from 'fs';
+import yamljs                 from 'yamljs';
 
-// VARIABLES
-const schemasPath = path.join(__dirname, `../../schemas/yaml`);
+const currentDir  = path.dirname(fileURLToPath(import.meta.url));
+const schemasPath = path.join(currentDir, `../../schemas/yaml`);
+
 let schemas;
 
 /**
@@ -14,10 +15,10 @@ async function getSchemas() {
 
   if (schemas) return schemas;
 
-  const IDRegExp = /\.io\/(?<schemaID>.+)-/u;
-  const filenames = await readdir(schemasPath, `utf8`);
+  const IDRegExp  = /\.io\/(?<schemaID>.+)-/u;
+  const filenames = await readDir(schemasPath, `utf8`);
 
-  schemas = filenames
+  schemas = filenames // eslint-disable-line require-atomic-updates
   .map(filename => yamljs.load(path.join(schemasPath, filename)))
   .reduce((map, schema) => {
     const { schemaID } = IDRegExp.exec(schema.$id).groups;
@@ -29,4 +30,4 @@ async function getSchemas() {
 
 }
 
-module.exports = getSchemas;
+export default getSchemas;
