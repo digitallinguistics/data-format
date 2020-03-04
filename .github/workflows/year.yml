@@ -1,0 +1,16 @@
+name: year
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *' # run yearly on Jan 1
+
+jobs:
+  open-issue:
+    steps:
+
+      - name: create issue
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          filename: .github/PRIVATE_ISSUE_TEMPLATE/update-year.md
