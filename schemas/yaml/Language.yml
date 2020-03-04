@@ -312,18 +312,14 @@ examples:
       AILLA: password
       note:
         eng: Materials on this language should not be made available to non-tribal members without permission.
-    additionalNames:
-      - name: Shetimashas
+    autonyms:
+      - transcription:
+          APA:  sitimaša
+          IPA:  sitimaʃa
+          Mod:  sitimaxa
+          Swad: sitimaša
         note:
-          source:
-            abbreviation: DWH
-          text:   This is the name commonly used for the language by French colonials.
-      - Chetimachas
-    autonym:
-      APA:  sitimaša
-      IPA:  sitimaʃa
-      Mod:  sitimaxa
-      Swad: sitimaša
+          text: This is the traditional name used for the Chitimacha language by the Chitimacha people themselves. It most likely derives from _siit‑_ 'body of water' + _‑ma_ pluractional + _‑x_ topic marker, meaning 'people of the waters'. This is most likely a reference to the fact that the Chitimacha people live deep in the bayou waterways of Louisiana.
     bibliography:
       - citationKey: Swadesh1946
     contributors:
@@ -339,6 +335,11 @@ examples:
     dateCreated:        '2018-10-13T18:16:57.497Z'
     dateModified:       '2018-10-13T18:17:06.515Z'
     defaultOrthography: modern
+    exonyms:
+      - transcription: Shetimashas
+        note:
+          text: This is the name commonly used for the language by French colonials, borrowed from the Chitimacha name for the language, _Sitimaxa_.
+      - transcription: Chetimachas
     glottolog:          chit1248
     id:                 4d633ee3-25ba-4add-83cf-b588ba51f758
     iso:                ctm
@@ -497,16 +498,11 @@ examples:
     access:
       note:
         eng: Unless otherwise noted, materials for this language may be made publicly accessible, and the speakers in the content identified.
-    additionalNames:
-      - name: Kikisii
-        note:
-          source:
-            abbreviation: DWH
-          text:   This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
-    autonym:
-      IPA: ékeɣusií
-      Gus: ékegusií
-      Swa: ekegusii
+    autonyms:
+      - transcription:
+          IPA: ékeɣusií
+          Gus: ékegusií
+          Swa: ekegusii
     classification:
       - Niger-Congo
       - Atlantic-Congo
@@ -531,6 +527,15 @@ examples:
           - researcher
     dateCreated:  '2018-10-13T18:17:24.477Z'
     dateModified: '2018-10-13T18:17:34.512Z'
+    exonyms:
+      - transcription:
+          swa: Kisii
+        note:
+          text: This is the most typical way that Swahili speakers refer to the language.
+      - transcription:
+          swa: Kikisii
+        note:
+          text: This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
     glottolog:    gusi1247
     id:           708d1bd4-84f6-42e5-8b09-5c64493441b3
     iso:          guz
