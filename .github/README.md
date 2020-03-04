@@ -1,4 +1,5 @@
 <!-- This readme is targeted at general users. The developer readme is located in the project root. -->
+
 # The Data Format for Digital Linguistics (Daffodil)
 
 ## Introduction
@@ -17,6 +18,7 @@ Please consider citing this specification in scholarly articles using this repos
 
 > Hieber, Daniel W. 2020. _Data Format for Digital Linguistics_. DOI:[10.5281/zenodo.1438589][Zenodo]
 
+[![GitHub stars](https://img.shields.io/github/stars/digitallinguistics/spec.svg?style=social&label=Stars)][GitHub]
 [![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][npm]
 [![DOI](https://zenodo.org/badge/50221632.svg)][Zenodo]
 [![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)][License]
@@ -196,7 +198,7 @@ This repository is maintained by [Daniel W. Hieber][Me] ([@dwhieb][19]).
 [Contributing]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [Developer]:    https://github.com/digitallinguistics/spec/blob/master/README.md
 [GitHub]:       https://github.com/digitallinguistics/spec
-[IGL]:           https://en.wikipedia.org/wiki/Interlinear_gloss
+[IGL]:          https://en.wikipedia.org/wiki/Interlinear_gloss
 [Issues]:       https://github.com/digitallinguistics/spec/issues
 [JSON]:         http://json.org/
 [License]:      https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md

@@ -1,4 +1,5 @@
 <!-- This readme is targeted at developers. The general user readme is in /.github/README.md -->
+
 # Data Format for Digital Linguistics (Daffodil)
 
 The DLx data format is a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called [Digital Linguistics][About] (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
@@ -17,7 +18,7 @@ Please consider citing this specification in scholarly articles using this repos
 [![npm downloads](https://img.shields.io/npm/dt/@digitallinguistics/spec.svg)][npm]
 [![GitHub issues](https://img.shields.io/github/issues/digitallinguistics/spec.svg)][Issues]
 [![npm version](https://badge.fury.io/js/%40digitallinguistics%2Fspec.svg)][npm]
-[![Build Status](https://travis-ci.org/digitallinguistics/spec.svg?branch=master)][Travis]
+[![Build Status](https://github.com/digitallinguistics/spec/workflows/test/badge.svg)][Actions]
 [![license](https://img.shields.io/github/license/digitallinguistics/spec.svg)][License]
 [![DOI](https://zenodo.org/badge/50221632.svg)][Zenodo]
 
@@ -177,6 +178,7 @@ The DLx format is also compatible with the [Newline Delimited JSON (NDJSON) form
 Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command line using `npm test`.
 
 [About]:        https://digitallinguistics.io/about
+[Actions]:      https://github.com/digitallinguistics/spec/actions
 [ajv]:          https://www.npmjs.com/package/ajv
 [Contributing]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
 [DateTime]:     https://www.w3.org/TR/NOTE-datetime
@@ -188,7 +190,6 @@ Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command lin
 [NDJSON]:       http://ndjson.org/
 [npm]:          https://www.npmjs.com/package/@digitallinguistics/spec
 [JSON Schema]:  http://json-schema.org/
-[Travis]:       https://travis-ci.org/digitallinguistics/spec
 [UUID]:         https://www.uuidgenerator.net/
 [Validators]:   http://json-schema.org/implementations.html#validators
 [Zenodo]:       http://doi.org/10.5281/zenodo.594557
