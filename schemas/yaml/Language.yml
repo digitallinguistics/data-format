@@ -252,9 +252,10 @@ properties:
       description: 'A database reference to a Location object describing a location where this language variety is spoken'
 
   name:
-    title: 'Language Name'
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
-    description: 'The name of this Language, optionally in multiple languages. There must be a name provided in at least one language. Use the `additionalNames` field to list names for this language that need additional explanation or notes, or if there are multiple names for this variety in a language.'
+    title:         Language Name
+    $ref:          'http://schemas.digitallinguistics.io/MultiLangString.json'
+    minProperties: 1
+    description: The name of this Language, optionally in multiple languages. There must be a name provided in at least one language. Use the `additionalNames` field to list names for this language that need additional explanation or notes, or if there are multiple names for this variety in a language.
 
   notes:
     title:       Notes
