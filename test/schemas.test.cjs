@@ -10,7 +10,7 @@
 const {
   AJV,
   getSchemas,
-} = require(`./utilities`);
+} = require(`./utilities/index.cjs`);
 
 describe(`schemas`, () => {
 

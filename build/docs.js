@@ -1,13 +1,17 @@
-// IMPORTS
+// IMPORTS & GLOBALS
 
-const generateDocs = require(`jschemer`);
-const path         = require(`path`);
+import { fileURLToPath } from 'url';
+import fs                from 'fs-extra';
+import generateDocs      from 'jschemer';
+import path              from 'path';
 
 const {
   mkdirp: createDir,
   remove: removeDir,
   writeFile,
-} = require(`fs-extra`);
+} = fs;
+
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
 
 // VARIABLES
 
@@ -19,15 +23,15 @@ const CNAME = `format.digitallinguistics.io`;
 /**
  * The path to the /docs folder
  */
-const docsDir = path.join(__dirname, `../docs`);
+const docsDir = path.join(currentDir, `../docs`);
 
 /**
  * The options passed to jschemer
  */
 const jschemerOptions = {
-  out:     path.join(__dirname, `../docs`),
-  readme:  path.join(__dirname, `../.github/README.md`),
-  schemas: path.join(__dirname, `../schemas/json`),
+  out:     path.join(currentDir, `../docs`),
+  readme:  path.join(currentDir, `../.github/README.md`),
+  schemas: path.join(currentDir, `../schemas/json`),
 };
 
 // METHODS
@@ -50,17 +54,9 @@ async function generateCNAME() {
  * - adds the CNAME file (for GitHub pages) inside the /docs folder
  * @return {Promise}
  */
-async function buildDocs() {
+void async function buildDocs() {
   await removeDir(docsDir);
   await createDir(docsDir);
   await generateDocs(jschemerOptions);
   await generateCNAME();
-}
-
-// EXPORTS
-
-// Run this script if called directly from the command line
-if (require.main === module) buildDocs();
-
-// Export the buildDocs function if called from another script
-else module.exports = buildDocs;
+}();

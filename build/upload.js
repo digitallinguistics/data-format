@@ -3,27 +3,36 @@
  */
 
 /* eslint-disable
-  global-require,
   no-await-in-loop,
-  no-console,
 */
 
-// IMPORTS
+/* global
+  process
+*/
+
+// IMPORTS & GLOBALS
+
 if (!process.env.AZURE_STORAGE_CONNECTION_STRING) {
-  process.env.AZURE_STORAGE_CONNECTION_STRING = require(`../../credentials/azure-storage`);
+  throw new Error(`Please set the AZURE_STORAGE_CONNECTION_STRING variable.`);
 }
 
-const chalk         = require(`chalk`);
-const path          = require(`path`);
-const { promisify } = require(`util`);
-const semverRegExp  = require(`semver-regex`)();
-const storage       = require(`azure-storage`).createBlobService(process.env.AZURE_STORAGE_ACCOUNT, process.env.AZURE_STORAGE_ACCESS_KEY);
-const yamljs        = require(`yamljs`);
+import Azure              from 'azure-storage';
+import chalk              from 'chalk';
+import createSemverRegExp from 'semver-regex';
+import { fileURLToPath }  from 'url';
+import fs                 from 'fs';
+import path               from 'path';
+import { promisify }      from 'util';
+import yamljs             from 'yamljs';
 
 const {
-  readdir,
+  readdir: readDir,
   readFile,
-} = require(`fs`).promises;
+} = fs.promises;
+
+const currentDir   = path.dirname(fileURLToPath(import.meta.url));
+const semverRegExp = createSemverRegExp();
+const storage      = Azure.createBlobService();
 
 // PROMISES
 const getBlobProperties = promisify(storage.getBlobProperties).bind(storage);
@@ -33,17 +42,16 @@ const storeFile         = promisify(storage.createBlockBlobFromText).bind(storag
 const jsonMedia = `application/schema+json; charset=utf-8`;
 const yamlMedia = `text/yaml; charset=utf-8`;
 
-const schemaNameRegExp = /\.io\/(?<schemaName>.+)-(?<version>.+).json/;
-const schemasPath      = path.join(__dirname, `../schemas/yaml`);
+const schemaNameRegExp = /\.io\/(?<schemaName>.+)-(?<version>.+).json/u;
+const schemasPath      = path.join(currentDir, `../schemas/yaml`);
 
 // METHODS
 
 /**
  * A Promisifed version of createBlockBlobFromText
- * @param  {String}  blobName                                               The name to upload the file as
- * @param  {String}  schema                                                 The text of the file
- * @param  {String}  [contentType=`application/schema+json; charset=utf-8`] Content type (MIME / media type)
- * @return {Promise}
+ * @param {String} blobName                                               The name to upload the file as
+ * @param {String} schema                                                 The text of the file
+ * @param {String} [contentType=`application/schema+json; charset=utf-8`] Content type (MIME / media type)
  */
 async function uploadBlob(blobName, schema, contentType = jsonMedia) {
 
@@ -54,9 +62,8 @@ async function uploadBlob(blobName, schema, contentType = jsonMedia) {
   if (hasVersion) {
     try {
       blobProperties = await getBlobProperties(`schemas`, blobName);
+    } catch {
       console.warn(chalk.bgRed(`${blobName} already exists. Upload skipped.`));
-    } catch (e) {
-      // Don't handle exceptions; allow code to continue executing
     }
   }
 
@@ -72,10 +79,10 @@ async function uploadBlob(blobName, schema, contentType = jsonMedia) {
           contentLanguage: `en-US`,
           contentType,
         },
-      }
+      },
     );
 
-    if (hasVersion) console.log(chalk.green(`${blobName} uploaded.`));
+    if (hasVersion) console.info(chalk.green(`${blobName} uploaded.`));
 
   }
 
@@ -83,8 +90,7 @@ async function uploadBlob(blobName, schema, contentType = jsonMedia) {
 
 /**
  * Uploads each of the files associated with a single schema, based on the filename of the schema
- * @param  {String}  filename Filename of the schema (e.g. `Language.yml`)
- * @return {Promise}
+ * @param {String} filename Filename of the schema (e.g. `Language.yml`)
  */
 async function uploadSchemaFiles(filename) {
 
@@ -112,7 +118,7 @@ async function uploadSchemaFiles(filename) {
 // TOP-LEVEL SCRIPT
 void async function upload() {
 
-  const filenames = await readdir(schemasPath, `utf8`);
+  const filenames = await readDir(schemasPath, `utf8`);
 
   for (const filename of filenames) {
     await uploadSchemaFiles(filename);
