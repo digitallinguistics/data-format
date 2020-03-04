@@ -20,6 +20,16 @@ The project would especially benefit from the following types of suggestions:
 
 - Can the documentation be improved?
 
+## Development Steps
+
+- [ ] **Fork the repository** and clone it to your computer.
+
+- [ ] **Create an issue branch** for the changes you are making. You should only make changes on this branch for the issue you are currently working on.
+
+- [ ] **Install [Node.js](https://nodejs.org/en/)**. Use the version specified in the `engines` field of the `package.json` file. If you need to manage multiple versions of Node.js on your computer, install [nvm](https://github.com/creationix/nvm) or [nvm windows](https://github.com/coreybutler/nvm-windows).
+
+- [ ] **Install project dependencies** by running `npm install` from the command line in the project root.
+
 ## Scripts
 
 The following scripts can be run from the command line:
