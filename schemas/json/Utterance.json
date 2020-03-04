@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Utterance-5.1.1.json",
+  "$id": "http://schemas.digitallinguistics.io/Utterance-6.0.0.json",
   "title": "Utterance",
   "type": "object",
   "description": "The term *utterance* is intentionally ambiguous, and refers to any unit of a text above the word level. The DLx framework imposes no requirements regarding this size of this unit or how segmentation of the text into units should be accomplished. The user may choose to segment a text based on prosodic units, turns, sentences, or any other appropriate subdivision.",
@@ -112,9 +112,15 @@
     },
     "speaker": {
       "title": "Speaker",
-      "type": "string",
-      "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
-      "description": "The abbreviation of person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match the abbreviation of one of the people listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a `speaker` role are included in a text, each Utterance must have its `speaker` attribute specified."
+      "type": "object",
+      "$ref": "http://schemas.digitallinguistics.io/Person.json",
+      "description": "The Person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match one of the people listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a `speaker` role are included in a text, each Utterance must have its `speaker` attribute specified."
+    },
+    "source": {
+      "title": "Source",
+      "type": "object",
+      "$ref": "http://schemas.digitallinguistics.io/Citation.json",
+      "description": "A citation to the publication where this utterance was taken from. When the utterance is not part of a text, or when the text consists of random utterances taken from different places, this field is strongly recommended."
     },
     "startTime": {
       "title": "Start Time",
@@ -174,7 +180,9 @@
           "judgment": 0.66,
           "judgmentType": "acceptability",
           "note": {
-            "source": "BP",
+            "source": {
+              "abbreviation": "BP"
+            },
             "text": "Speaker B found this utterance odd because the first two words were contracted."
           }
         }
@@ -183,6 +191,13 @@
         "eng": "one day a man"
       },
       "phonetic": "waʃtˀunkˀu ʔasi",
+      "speaker": {
+        "familyName": "Paul",
+        "givenName": "Benjamin"
+      },
+      "source": {
+        "citationKey": "Swadesh1946"
+      },
       "transcript": {
         "Mod": "Waxdungu qasi,"
       },

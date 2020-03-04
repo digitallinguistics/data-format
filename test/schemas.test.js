@@ -2,6 +2,10 @@
  * This test checks that all the example data in each schema is valid
  */
 
+/* eslint-disable
+  max-nested-callbacks,
+ */
+
 // IMPORTS
 const {
   AJV,
@@ -22,10 +26,14 @@ describe(`schemas`, () => {
 
     schemas.forEach(schema => {
 
-      const IDRegExp     = /\.io\/(?<schemaID>.+).json/;
+      const IDRegExp     = /\.io\/(?<schemaID>.+).json/u;
       const { schemaID } = IDRegExp.exec(schema.$id).groups;
 
       const validate = data => ajv.validate(schemaID, data);
+
+      if (!schema.examples) {
+        return fail(`${schemaID} does not have example data`);
+      }
 
       schema.examples.forEach(ex => {
         const valid = validate(ex);

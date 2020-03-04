@@ -4,7 +4,7 @@ title:   Language
 type:    object
 
 description: 'DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).'
-$comment: 'This is a top-level database object'
+$comment: This is a top-level database object
 
 required:
   - name
@@ -21,28 +21,28 @@ properties:
     description: 'The type of object. Must be set to `Language`.'
 
   id:
-    title: ID
+    title:       ID
     description: A unique database identifier for this Language
 
   abbreviation:
     title: Abbreviation
     type:  string
     $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
-    description: 'A short, human-readable abbreviation for this Language'
+    description: A short, human-readable abbreviation for this Language
 
   access:
-    title: 'Access Rights'
+    title: Access Rights
     type:  object
     $ref:  'http://schemas.digitallinguistics.io/Access.json'
-    description: 'An object describing who may have access to materials on this language.'
+    description: An object describing who may have access to materials on this language.
 
   additionalNames:
-    title:       'Additional Names'
+    title:       Additional Names
     type:        array
     uniqueItems: true
     description: 'An Array of additional names for this Language. Only use this property if the `name` property is not sufficient to describe the various names for this language. This field is especially useful when the Language has multiple spellings in historical documentation. Each additional name can be a plain string, or an object with two properties: `name` and `note`. The object format is preferred, since the `note` field provides a way to give a description of this additional name and where or by whom it was used.'
     items:
-      title: 'Additional Language Name'
+      title: Additional Language Name
       oneOf:
 
         - type:      string
@@ -68,7 +68,17 @@ properties:
     title: Autonym
     type:  object
     $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
-    description: 'The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.'
+    description: The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.
+
+  bibliography:
+    title:       Bibliography
+    type:        array
+    uniqueItems: true
+    description: A collection of citations to bibliographic references about this language.
+    items:
+      title:       Citation
+      $ref:        'http://schemas.digitallinguistics.io/Citation.json'
+      description: A citation to a bibliographic source about this language
 
   classification:
     title: Genetic Classification
@@ -147,7 +157,7 @@ properties:
           type:        integer
           minimum:     0
           description: 'The Population of speakers included in this Demographic data'
-          
+
         status:
           title:       'Status'
           type:        object
@@ -278,17 +288,6 @@ properties:
       $ref: 'http://schemas.digitallinguistics.io/Phoneme.json'
       description: 'A Phoneme object'
 
-  references:
-    title:       'Bibliographic References'
-    type:        array
-    uniqueItems: true
-    description: 'A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.'
-    items:
-      title: 'Bibliographic Reference'
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: 'A bibliographic reference about this language'
-
   tags:
     title: Tags
     type:  object
@@ -306,12 +305,13 @@ examples:
   - abbreviation: chiti
     access:
       AILLA: password
-      notes:
+      note:
         eng: Materials on this language should not be made available to non-tribal members without permission.
     additionalNames:
       - name: Shetimashas
         note:
-          source: DWH
+          source:
+            abbreviation: DWH
           text:   This is the name commonly used for the language by French colonials.
       - Chetimachas
     autonym:
@@ -319,6 +319,8 @@ examples:
       IPA:  sitimaʃa
       Mod:  sitimaxa
       Swad: sitimaša
+    bibliography:
+      - citationKey: Swadesh1946
     contributors:
       - abbreviation: DWH
         roles:
@@ -463,19 +465,6 @@ examples:
         manner:    affricate
         place:     post-alveolar
         voicing:   voiceless
-    references:
-      - authors:
-          - firstName:   Morris
-            lastName:    Swadesh
-        city:            New York
-        editors:
-          - firstName:   Cornelius
-            lastName:    Osgood
-        pages:           '312-336'
-        publication:     Linguistic Structures of Native America
-        publicationType: book section
-        title:           Chitimacha
-        year:            1946
     tags:
       morphologicalType: synthetic
     type:                Language
@@ -490,23 +479,24 @@ examples:
         location:
           name: Oklahoma
         notes:
-          - text: 'Musckogee is also spoken in Florida'
-          - text: 'This population data is based on a 2015 census'
+          - text: Muskogee is also spoken in Florida
+          - text: This population data is based on a 2015 census
         population: 4,470
         status:
-          EGIDS:  'Shifting'
-          ELCat:  'Severely Endangered'
+          EGIDS:  Shifting
+          ELCat:  Severely Endangered
           GIDS:   7
-          UNESCO: 'Definitely Endangered'
+          UNESCO: Definitely Endangered
 
   - abbreviation: gusii
     access:
-      notes:
+      note:
         eng: Unless otherwise noted, materials for this language may be made publicly accessible, and the speakers in the content identified.
     additionalNames:
       - name: Kikisii
         note:
-          source: DWH
+          source:
+            abbreviation: DWH
           text:   This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
     autonym:
       IPA: ékeɣusií

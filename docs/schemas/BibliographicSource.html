@@ -4,7 +4,7 @@
   <head>
 
     <meta charset=utf-8>
-    <title>Bibliographic Reference</title>
+    <title>Bibliographic Source</title>
     <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
     <link href=../schema-page.css rel=stylesheet>
@@ -50,8 +50,8 @@
       </li>
       <li>
         <p>
-          <a href='BibliographicReference.html'>
-              Bibliographic Reference
+          <a href='BibliographicSource.html'>
+              Bibliographic Source
           </a>
         </p>
       </li>
@@ -59,6 +59,13 @@
         <p>
           <a href='Bundle.html'>
               Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Citation.html'>
+              Citation
           </a>
         </p>
       </li>
@@ -200,7 +207,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/BibliographicReference-5.3.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/BibliographicSource-1.0.0.json class=jschemer-schema>
 
 
     <details open>
@@ -208,7 +215,7 @@
 
         <summary>
           <h1 class='title keyword'>
-            Bibliographic Reference
+            Bibliographic Source
           </h1>
         </summary>
 
@@ -217,7 +224,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/BibliographicReference-5.3.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/BibliographicSource-1.0.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -228,7 +235,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A bibliographic Reference</p>
+          <div><p>A bibliographic source, such as a book or journal article</p>
 </div>
         </section>
 
@@ -572,7 +579,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A unique database identifier for this Reference</p>
+          <div><p>A unique database identifier for this bibliographic source</p>
 </div>
         </section>
 
@@ -654,7 +661,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The type of object. Must be set to <code>BibliographicReference</code>.</p>
+          <div><p>The type of object. Must be set to <code>BibliographicSource</code>.</p>
 </div>
         </section>
 
@@ -665,7 +672,7 @@
 
 
           <p>This item must have the following value:</p>
-          <pre><code>&quot;BibliographicReference&quot;</code></pre>
+          <pre><code>&quot;BibliographicSource&quot;</code></pre>
 
 
 
@@ -735,7 +742,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An array of authors for this Reference</p>
+          <div><p>An array of authors for this bibliographic source</p>
 </div>
         </section>
 
@@ -907,7 +914,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a reference.</p>
+          <div><p>A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a source.</p>
 </div>
         </section>
 
@@ -991,7 +998,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The city in which this reference was published</p>
+          <div><p>The city in which this bibliographic source was published</p>
 </div>
         </section>
 
@@ -1152,7 +1159,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The edition of this Reference, formatted as an integer</p>
+          <div><p>The edition of this publication, formatted as an integer</p>
 </div>
         </section>
 
@@ -1234,7 +1241,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An array of editors for this Reference</p>
+          <div><p>An array of editors for this bibliographic source</p>
 </div>
         </section>
 
@@ -1570,7 +1577,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The page numbers of this Reference</p>
+          <div><p>The page numbers of this publication</p>
 </div>
         </section>
 
@@ -1649,7 +1656,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The publication where this item was published</p>
+          <div><p>The publication that this bibliographic source is published in</p>
 </div>
         </section>
 
@@ -1826,7 +1833,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The name of the publisher of this reference, or the institution where it was published</p>
+          <div><p>The name of the publisher of this soruce, or the institution where it was published</p>
 </div>
         </section>
 
@@ -2066,7 +2073,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An array of translators for this Reference</p>
+          <div><p>An array of translators for this bibliographic source</p>
 </div>
         </section>
 
@@ -2241,7 +2248,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A URL for the JSON data for this Reference</p>
+          <div><p>A URL for the JSON data for this bibliographic source</p>
 </div>
         </section>
 
@@ -2541,7 +2548,7 @@
   &quot;publisher&quot;: &quot;John Benjamins&quot;,
   &quot;series&quot;: &quot;Constructional approaches to language&quot;,
   &quot;title&quot;: &quot;Category genesis in Chitimacha&quot;,
-  &quot;type&quot;: &quot;BibliographicReference&quot;,
+  &quot;type&quot;: &quot;BibliographicSource&quot;,
   &quot;url&quot;: &quot;https://api.digitallinguistics.io/references/Hieber2018.json&quot;,
   &quot;volume&quot;: 20,
   &quot;year&quot;: 2018
@@ -2563,7 +2570,7 @@
   &quot;publication&quot;: &quot;Linguistic Typology&quot;,
   &quot;publicationType&quot;: &quot;journal article&quot;,
   &quot;title&quot;: &quot;On linguistics, linguists, and our times: A linguist’s personal narrative reviewed&quot;,
-  &quot;type&quot;: &quot;BibliographicReference&quot;,
+  &quot;type&quot;: &quot;BibliographicSource&quot;,
   &quot;url&quot;: &quot;https://api.digitallinguistics.io/references/Hieber2013.json&quot;,
   &quot;year&quot;: 2013
 }</code></pre>

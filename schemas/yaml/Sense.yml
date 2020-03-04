@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Sense-1.3.0.json'
+$id:     'http://schemas.digitallinguistics.io/Sense-2.0.0.json'
 title:   Sense
 type:    object
 
@@ -27,6 +27,19 @@ properties:
     title: Argument Structure
     type:  string
     description: An abstract representation of the argument structure for this sense
+
+  bibliography:
+    title:       Bibliography
+    type:        array
+    uniqueItems: true
+    description: A list of citations to attested sources where this sense appears or is discussed. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.
+    items:
+      title:         Citation
+      type:          object
+      $ref:          'http://schemas.digitallinguistics.io/Citation.json'
+      referenceType: Citation
+      description:   An attested source for this sense. This will be a citation to a published text in which the sense appears.
+
 
   category:
     title: Lexical Category (Part of Speech, Morphosyntactic Class, etc.)
@@ -134,17 +147,6 @@ properties:
                 - semantics
                 - sociocultural
 
-  references:
-    title:       Bibliographic References
-    type:        array
-    uniqueItems: true
-    description: A collection of bibliographic references relating to this sense. For example, a particular sense may have been discussed in detail in a published article.
-    items:
-      title: Reference
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: A bibliographic Reference about this sense
-
   scientificName:
     title: Scientific Name
     type:  string
@@ -164,12 +166,13 @@ properties:
     title:       Sources
     type:        array
     uniqueItems: true
-    description: A list of attested sources for this sense, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.
+    description: A list of the initials of the speaker or speakers who are the attested sources for this sense. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a Person object.
     items:
       title:     Source
-      type:      string
-      minLength: 1
-      description: An attested source for this sense. This will often be the initials of a speaker, but could also be the abbreviation of the story the sense was found it, or a citation to a published text in which the sense appears.
+      type:      object
+      $ref:      'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      referenceType: Person
+      description: An attested source for this sense. This will often be the initials of a speaker.
 
   tags:
     title: Tags
@@ -227,11 +230,15 @@ examples:
     gloss:             eat
     link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2
 
-  - category:   verb
+  - bibliography:
+      - citationKey: Duralde1802
+    category:   verb
     definition: A suffix that derives transitive verbs from intransitive verbs
     derives:    verb
     gloss:      TR
     link:       https://data.digitallinguistics.io/languages/Chitimacha/lexemes/t1/senses/1
+    sources:
+      - source: TEST
 
   - category:   noun
     definition: a male

@@ -13,10 +13,10 @@ let schemas;
  */
 async function getSchemas() {
 
-  const IDRegExp = /\.io\/(?<schemaID>.+)-/;
-  const filenames = await readdir(schemasPath, `utf8`);
-
   if (schemas) return schemas;
+
+  const IDRegExp = /\.io\/(?<schemaID>.+)-/u;
+  const filenames = await readdir(schemasPath, `utf8`);
 
   schemas = filenames
   .map(filename => yamljs.load(path.join(schemasPath, filename)))

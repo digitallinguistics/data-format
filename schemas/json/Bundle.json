@@ -36,7 +36,7 @@
     "dateCreated": {
       "title": "Date Created",
       "type": "string",
-      "description": "The date and optionally time that this bundle was created",
+      "description": "The date and optionally time that this bundle object was created (not the date that the bundle was recorded)",
       "oneOf": [
         {
           "format": "date"

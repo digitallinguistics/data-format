@@ -4,7 +4,7 @@
   <head>
 
     <meta charset=utf-8>
-    <title>Access Rights</title>
+    <title>Citation</title>
     <meta name=viewport content='width=device-width, initial-scale=1, shrink-to-fit=no'>
 
     <link href=../schema-page.css rel=stylesheet>
@@ -207,7 +207,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Access-3.2.0.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Citation-1.0.0.json class=jschemer-schema>
 
 
     <details open>
@@ -215,7 +215,7 @@
 
         <summary>
           <h1 class='title keyword'>
-            Access Rights
+            Citation
           </h1>
         </summary>
 
@@ -224,7 +224,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Access-3.2.0.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Citation-1.0.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -235,9 +235,68 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. <code>online: false</code> or <code>permission: researcher only</code>, etc. <strong>Note:</strong> The Access object does not have a <code>type</code> property.</p>
+          <div><p>A citation to a bibliographic source. Citation objects consist of an optional <code>pages</code> property which indicates the relevant page numbers within the cited publication, and either a <code>citationKey</code> field or a <code>bibliographicSource</code> field. If the <code>citationKey</code> field is used, it contains a reference to the citation key of a bibliographic source stored elsewhere. If the <code>bibliographicSource</code> field is used, it contains an entire bibliographicSource. This allows developers to dereference their bibliographies, if they choose to.</p>
 </div>
         </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='allOf keyword'>
+
+            <p>This item must also validate against all of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
 
 
 
@@ -282,7 +341,232 @@
 
         <summary>
           <h1 class='title keyword'>
-            Access Note: <code>note</code>
+            Pages: <code>pages</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>string</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>The relevant page numbers within the cited publication</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='oneOf'>
+
+            <p>This item must also validate against exactly one of the following schemas:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>citationKey</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Citation Key: <code>citationKey</code>
           </h1>
         </summary>
 
@@ -293,7 +577,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A note about access rights for this resource, or any other special considerations regarding who should have Access. This attribute should be a MultiLangString rather than an Array of Note objects.</p>
+          <div><p>The citation key for the bibliographic source being reference. Must be a valid Abbreviation.</p>
 </div>
         </section>
 
@@ -305,7 +589,7 @@
           <section class='$ref keyword'>
             <h2>Referenced Schema</h2>
             <p>This item must validate against the following schema:</p>
-            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
+            <p><a href='http://schemas.digitallinguistics.io/Abbreviation.json'>http://schemas.digitallinguistics.io/Abbreviation.json</a></p>
           </section>
 
 
@@ -355,31 +639,40 @@
 
 </section>
 </li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
                 <li><section  class=jschemer-schema>
 
 
     <details open>
 
 
-        <summary>
-          <h1 class='title keyword'>
-            AILLA Access Level: <code>AILLA</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>For users who are depositing their materials at The Archive of the Indigenous Languages of Latin America (AAILA) in Texas, an <code>AILLA</code> attribute may be added, and its value set to one of the access levels set forth by the archive.</p>
-</div>
-        </section>
 
 
 
@@ -388,167 +681,49 @@
 
 
 
-          <section class='enum keyword'>
-            <h2>Allowed Values</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
             <ul>
-                <li><pre><code>&quot;public access&quot;</code></pre></li>
-                <li><pre><code>&quot;password&quot;</code></pre></li>
-                <li><pre><code>&quot;time limit&quot;</code></pre></li>
-                <li><pre><code>&quot;depositor control&quot;</code></pre></li>
+                <li><code>bibliographicSource</code></li>
             </ul>
+
           </section>
 
 
 
 
+          <section class='properties keyword'>
 
+            <h2>Properties</h2>
 
+            <p>The following properties are defined for this object:</p>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class='default keyword'>
-
-          <h2>Default Value</h2>
-
-          <p>The default value for this item is:</p>
-
-          <pre><code>&quot;depository control&quot;</code></pre>
-
-        </section>
-
-
-    </details>
-
-
-</section>
-</li>
-                <li><section  class=jschemer-schema>
-
-
-    <details open>
-
-
-        <summary>
-          <h1 class='title keyword'>
-            ELAR Access Level: <code>ELAR</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>For users who are depositing their materials at the Endangered Language Archive (ELAR) in London, an <code>ELAR</code> attribute may be added, and its value set to one of the access levels set forth by the archive. See <a href="https://www.soas.ac.uk/elar/using-elar/access-protocol/">ELAR’s protocols for access management</a> for more information.</p>
-</div>
-        </section>
-
-
-
-
-
-
-
-
-          <section class='enum keyword'>
-            <h2>Allowed Values</h2>
             <ul>
-                <li><pre><code>&quot;User&quot;</code></pre></li>
-                <li><pre><code>&quot;Researcher&quot;</code></pre></li>
-                <li><pre><code>&quot;Community Member&quot;</code></pre></li>
-                <li><pre><code>&quot;Subscriber&quot;</code></pre></li>
-            </ul>
-          </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <section class='default keyword'>
-
-          <h2>Default Value</h2>
-
-          <p>The default value for this item is:</p>
-
-          <pre><code>&quot;Researcher&quot;</code></pre>
-
-        </section>
-
-
-    </details>
-
-
-</section>
-</li>
                 <li><section  class=jschemer-schema>
 
 
@@ -557,21 +732,18 @@
 
         <summary>
           <h1 class='title keyword'>
-            License: <code>license</code>
+            Bibliographic Source: <code>bibliographicSource</code>
           </h1>
         </summary>
 
 
 
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The license under which you want to release this resource, most likely a <a href="https://spdx.org/licenses/">SPDX abbreviation</a>. If you do not want to release this data to others, set this to <code>UNLICENSED.</code> Otherwise, use <a href="https://choosealicense.com/">choosealicense.com</a> to decide which license is right for your usage.</p>
+          <div><p>The bibliographic source being referenced.</p>
 </div>
         </section>
 
@@ -580,6 +752,11 @@
 
 
 
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/BibliographicSource.json'>http://schemas.digitallinguistics.io/BibliographicSource.json</a></p>
+          </section>
 
 
 
@@ -621,15 +798,6 @@
 
 
 
-        <section class='default keyword'>
-
-          <h2>Default Value</h2>
-
-          <p>The default value for this item is:</p>
-
-          <pre><code>&quot;UNLICENSED&quot;</code></pre>
-
-        </section>
 
 
     </details>
@@ -641,57 +809,6 @@
 
           </section>
 
-          <section class='additionalProperties keyword'>
-
-            <h2>Additional Properties</h2>
-
-            <p>Any additional properties must adhere to the following schema:</p>
-
-            <section  class=jschemer-schema>
-
-
-    <details open>
-
-
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -715,6 +832,8 @@
 
 
 </section>
+</li>
+            </ul>
 
           </section>
 
@@ -722,13 +841,14 @@
 
 
 
+    </details>
 
 
+</section>
+</li>
+            </ul>
 
-
-
-
-
+          </section>
 
 
 
@@ -744,20 +864,8 @@
           <ul>
               <li>
                 <pre><code>{
-  &quot;AILLA&quot;: &quot;password&quot;,
-  &quot;ELAR&quot;: &quot;Community Member&quot;,
-  &quot;license&quot;: &quot;UNLICENSED&quot;,
-  &quot;note&quot;: {
-    &quot;eng&quot;: &quot;Speaker also requested that this text only be shared with family members.&quot;
-  },
-  &quot;speaker&quot;: &quot;family&quot;
-}</code></pre>
-              </li>
-              <li>
-                <pre><code>{
-  &quot;note&quot;: {
-    &quot;eng&quot;: &quot;The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members.&quot;
-  }
+  &quot;citationKey&quot;: &quot;Hieber2018&quot;,
+  &quot;pages&quot;: &quot;1-15&quot;
 }</code></pre>
               </li>
           </ul>

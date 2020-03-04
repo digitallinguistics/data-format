@@ -50,8 +50,8 @@
       </li>
       <li>
         <p>
-          <a href='BibliographicReference.html'>
-              Bibliographic Reference
+          <a href='BibliographicSource.html'>
+              Bibliographic Source
           </a>
         </p>
       </li>
@@ -59,6 +59,13 @@
         <p>
           <a href='Bundle.html'>
               Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Citation.html'>
+              Citation
           </a>
         </p>
       </li>
@@ -200,7 +207,7 @@
 </nav>
 
     <main>
-      <section id=http://schemas.digitallinguistics.io/Utterance-5.1.1.json class=jschemer-schema>
+      <section id=http://schemas.digitallinguistics.io/Utterance-6.0.0.json class=jschemer-schema>
 
 
     <details open>
@@ -217,7 +224,7 @@
         </p>
 
         <p class='$id keyword'>
-          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Utterance-5.1.1.json</code>
+          <b>Schema ID:</b> <code>http://schemas.digitallinguistics.io/Utterance-6.0.0.json</code>
         </p>
 
         <p class='type keyword'>
@@ -1526,14 +1533,14 @@
 
 
         <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
+          <b>Type:</b> <code>object</code>
         </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The abbreviation of person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match the abbreviation of one of the people listed in the <code>contributors</code> array of the Text. If the text has a single contributor with the role of <code>speaker</code>, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a <code>speaker</code> role are included in a text, each Utterance must have its <code>speaker</code> attribute specified.</p>
+          <div><p>The Person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match one of the people listed in the <code>contributors</code> array of the Text. If the text has a single contributor with the role of <code>speaker</code>, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a <code>speaker</code> role are included in a text, each Utterance must have its <code>speaker</code> attribute specified.</p>
 </div>
         </section>
 
@@ -1545,7 +1552,91 @@
           <section class='$ref keyword'>
             <h2>Referenced Schema</h2>
             <p>This item must validate against the following schema:</p>
-            <p><a href='http://schemas.digitallinguistics.io/Abbreviation.json'>http://schemas.digitallinguistics.io/Abbreviation.json</a></p>
+            <p><a href='http://schemas.digitallinguistics.io/Person.json'>http://schemas.digitallinguistics.io/Person.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Source: <code>source</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A citation to the publication where this utterance was taken from. When the utterance is not part of a text, or when the text consists of random utterances taken from different places, this field is strongly recommended.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Citation.json'>http://schemas.digitallinguistics.io/Citation.json</a></p>
           </section>
 
 
@@ -2327,7 +2418,9 @@
       &quot;judgment&quot;: 0.66,
       &quot;judgmentType&quot;: &quot;acceptability&quot;,
       &quot;note&quot;: {
-        &quot;source&quot;: &quot;BP&quot;,
+        &quot;source&quot;: {
+          &quot;abbreviation&quot;: &quot;BP&quot;
+        },
         &quot;text&quot;: &quot;Speaker B found this utterance odd because the first two words were contracted.&quot;
       }
     }
@@ -2336,6 +2429,13 @@
     &quot;eng&quot;: &quot;one day a man&quot;
   },
   &quot;phonetic&quot;: &quot;waʃtˀunkˀu ʔasi&quot;,
+  &quot;speaker&quot;: {
+    &quot;familyName&quot;: &quot;Paul&quot;,
+    &quot;givenName&quot;: &quot;Benjamin&quot;
+  },
+  &quot;source&quot;: {
+    &quot;citationKey&quot;: &quot;Swadesh1946&quot;
+  },
   &quot;transcript&quot;: {
     &quot;Mod&quot;: &quot;Waxdungu qasi,&quot;
   },

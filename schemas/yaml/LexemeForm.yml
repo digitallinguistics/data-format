@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-1.2.0.json'
+$id:     'http://schemas.digitallinguistics.io/LexemeForm-2.0.0.json'
 title:   Lexeme Form
 type:    object
 
@@ -63,6 +63,16 @@ properties:
           type:  object
           $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
           description: A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
+
+  bibliography:
+    title:       Bibliography
+    type:        array
+    uniqueItems: true
+    description: A list of citations to attested sources where this lexeme form appears or is discussed. For precision's sake, citations should be listed for specific forms of a lexeme rather than the lexeme whenever possible.
+    items:
+      title:       Citation
+      $ref:        'http://schemas.digitallinguistics.io/Citation.json'
+      description: An attested source for this lexeme form. This will be a citation to a published text in which the lexeme form appears.
 
   components:
     title:       Components
@@ -159,27 +169,17 @@ properties:
                 - semantics
                 - sociocultural
 
-  references:
-    title:       Bibliographic References
-    type:        array
-    uniqueItems: true
-    description: A collection of bibliographic references relating to this lexeme form. For example, a particular form may have been discussed in detail in a published article.
-    items:
-      title: Reference
-      type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: A bibliographic Reference about this lexeme form
-
   sources:
     title:       Sources
     type:        array
     uniqueItems: true
-    description: A list of attested sources for this lexeme form, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific forms of a lexeme rather than the lexeme whenever possible.
+    description: A list of the initials of the speaker or speakers who are the attested sources for this lexeme form. For precision's sake, sources should be listed for specific forms of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a Person object.
     items:
-      title:     Source
-      type:      string
-      minLength: 1
-      description: An attested source for this lexeme form. This will often be the initials of a speaker, but could also be the abbreviation of the story the sense was found it, or a citation to a published text in which the form appears.
+      title:         Source
+      type:          object
+      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      referenceType: Person
+      description:   An attested source for this lexeme form. This will often be the initials of a speaker.
 
   syllableStructure:
     title: Syllable Structure
@@ -255,6 +255,8 @@ examples:
           IPA:  kˀuš
           Mod:  gux
           Swad: guš
+    bibliography:
+      - citationKey: Duralde1802
     components:
       - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
         key:           gux
@@ -267,7 +269,7 @@ examples:
         filename:      guxt.wav
     morphemeType:      stem
     sources:
-      - Dur 13
+      - source: TEST
     syllableStructure: CVCC
     transcription:
       APA:  kʼušt

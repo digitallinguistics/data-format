@@ -50,8 +50,8 @@
       </li>
       <li>
         <p>
-          <a href='BibliographicReference.html'>
-              Bibliographic Reference
+          <a href='BibliographicSource.html'>
+              Bibliographic Source
           </a>
         </p>
       </li>
@@ -59,6 +59,13 @@
         <p>
           <a href='Bundle.html'>
               Bundle
+          </a>
+        </p>
+      </li>
+      <li>
+        <p>
+          <a href='Citation.html'>
+              Citation
           </a>
         </p>
       </li>
@@ -1150,6 +1157,178 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Bibliography: <code>bibliography</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A collection of citations to bibliographic references about this language.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+          <p class='uniqueItems keyword'>
+            <b>Items must be unique:</b> <code>true</code>
+          </p>
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Citation: <code>bibliography</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A citation to a bibliographic source about this language</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Citation.json'>http://schemas.digitallinguistics.io/Citation.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
 
 
 
@@ -4435,181 +4614,6 @@
 
         <summary>
           <h1 class='title keyword'>
-            Bibliographic References: <code>references</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>array</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>A collection of bibliographic references about this language. If this collection grows large, it is recommended that references be stored in separate JSON documents instead.</p>
-</div>
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-          <p class='uniqueItems keyword'>
-            <b>Items must be unique:</b> <code>true</code>
-          </p>
-
-
-          <section class='items keyword'>
-
-            <h2>Items</h2>
-
-
-              <p>Each item in this array must adhere to the following schema:</p>
-
-              <section  class=jschemer-schema>
-
-
-    <details open>
-
-
-        <summary>
-          <h1 class='title keyword'>
-            Bibliographic Reference: <code>references</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>object</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>A bibliographic reference about this language</p>
-</div>
-        </section>
-
-
-
-
-
-
-          <section class='$ref keyword'>
-            <h2>Referenced Schema</h2>
-            <p>This item must validate against the following schema:</p>
-            <p><a href='http://schemas.digitallinguistics.io/BibliographicReference.json'>http://schemas.digitallinguistics.io/BibliographicReference.json</a></p>
-          </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </details>
-
-
-</section>
-
-
-          </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </details>
-
-
-</section>
-</li>
-                <li><section  class=jschemer-schema>
-
-
-    <details open>
-
-
-        <summary>
-          <h1 class='title keyword'>
             Tags: <code>tags</code>
           </h1>
         </summary>
@@ -4817,7 +4821,7 @@
   &quot;abbreviation&quot;: &quot;chiti&quot;,
   &quot;access&quot;: {
     &quot;AILLA&quot;: &quot;password&quot;,
-    &quot;notes&quot;: {
+    &quot;note&quot;: {
       &quot;eng&quot;: &quot;Materials on this language should not be made available to non-tribal members without permission.&quot;
     }
   },
@@ -4825,7 +4829,9 @@
     {
       &quot;name&quot;: &quot;Shetimashas&quot;,
       &quot;note&quot;: {
-        &quot;source&quot;: &quot;DWH&quot;,
+        &quot;source&quot;: {
+          &quot;abbreviation&quot;: &quot;DWH&quot;
+        },
         &quot;text&quot;: &quot;This is the name commonly used for the language by French colonials.&quot;
       }
     },
@@ -4837,6 +4843,11 @@
     &quot;Mod&quot;: &quot;sitimaxa&quot;,
     &quot;Swad&quot;: &quot;sitimaša&quot;
   },
+  &quot;bibliography&quot;: [
+    {
+      &quot;citationKey&quot;: &quot;Swadesh1946&quot;
+    }
+  ],
   &quot;contributors&quot;: [
     {
       &quot;abbreviation&quot;: &quot;DWH&quot;,
@@ -5098,28 +5109,6 @@
       &quot;voicing&quot;: &quot;voiceless&quot;
     }
   ],
-  &quot;references&quot;: [
-    {
-      &quot;authors&quot;: [
-        {
-          &quot;firstName&quot;: &quot;Morris&quot;,
-          &quot;lastName&quot;: &quot;Swadesh&quot;
-        }
-      ],
-      &quot;city&quot;: &quot;New York&quot;,
-      &quot;editors&quot;: [
-        {
-          &quot;firstName&quot;: &quot;Cornelius&quot;,
-          &quot;lastName&quot;: &quot;Osgood&quot;
-        }
-      ],
-      &quot;pages&quot;: &quot;312-336&quot;,
-      &quot;publication&quot;: &quot;Linguistic Structures of Native America&quot;,
-      &quot;publicationType&quot;: &quot;book section&quot;,
-      &quot;title&quot;: &quot;Chitimacha&quot;,
-      &quot;year&quot;: 1946
-    }
-  ],
   &quot;tags&quot;: {
     &quot;morphologicalType&quot;: &quot;synthetic&quot;
   },
@@ -5144,7 +5133,7 @@
       },
       &quot;notes&quot;: [
         {
-          &quot;text&quot;: &quot;Musckogee is also spoken in Florida&quot;
+          &quot;text&quot;: &quot;Muskogee is also spoken in Florida&quot;
         },
         {
           &quot;text&quot;: &quot;This population data is based on a 2015 census&quot;
@@ -5165,7 +5154,7 @@
                 <pre><code>{
   &quot;abbreviation&quot;: &quot;gusii&quot;,
   &quot;access&quot;: {
-    &quot;notes&quot;: {
+    &quot;note&quot;: {
       &quot;eng&quot;: &quot;Unless otherwise noted, materials for this language may be made publicly accessible, and the speakers in the content identified.&quot;
     }
   },
@@ -5173,7 +5162,9 @@
     {
       &quot;name&quot;: &quot;Kikisii&quot;,
       &quot;note&quot;: {
-        &quot;source&quot;: &quot;DWH&quot;,
+        &quot;source&quot;: {
+          &quot;abbreviation&quot;: &quot;DWH&quot;
+        },
         &quot;text&quot;: &quot;This is a Swahili version of the name of this language. It is an alternate for simply &#x60;Kisii&#x60;.&quot;
       }
     }

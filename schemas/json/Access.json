@@ -8,10 +8,10 @@
     "type": "string"
   },
   "properties": {
-    "notes": {
-      "title": "Access Notes",
+    "note": {
+      "title": "Access Note",
       "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-      "description": "Notes about access rights for this resource, or any other special considerations regarding who should have Access. This attribute should be a MultiLangString rather than an Array of Note objects."
+      "description": "A note about access rights for this resource, or any other special considerations regarding who should have Access. This attribute should be a MultiLangString rather than an Array of Note objects."
     },
     "AILLA": {
       "title": "AILLA Access Level",
@@ -40,7 +40,7 @@
     "license": {
       "title": "License",
       "type": "string",
-      "description": "The license under which you want to release this resource, most likely a SPDX abbreviation. If you do not want to release this data to others, set this to `UNLICENSED.` Otherwise, use choosealicense.com to decide which license is right for your usage.",
+      "description": "The license under which you want to release this resource, most likely a [SPDX abbreviation](https://spdx.org/licenses/). If you do not want to release this data to others, set this to `UNLICENSED.` Otherwise, use [choosealicense.com](https://choosealicense.com/) to decide which license is right for your usage.",
       "default": "UNLICENSED"
     }
   },
@@ -49,13 +49,13 @@
       "AILLA": "password",
       "ELAR": "Community Member",
       "license": "UNLICENSED",
-      "notes": {
+      "note": {
         "eng": "Speaker also requested that this text only be shared with family members."
       },
       "speaker": "family"
     },
     {
-      "notes": {
+      "note": {
         "eng": "The tribe has requested that language materials only be made available to academic researchers who have been given permission, and enrolled tribal members."
       }
     }

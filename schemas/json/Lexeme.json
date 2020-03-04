@@ -1,9 +1,9 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Lexeme-8.3.1.json",
+  "$id": "http://schemas.digitallinguistics.io/Lexeme-9.0.0.json",
   "title": "Lexeme",
   "type": "object",
-  "description": "A *lexeme* is an abstract entity that represents all the various forms of a word. In DLx, a lexeme refers broadly to any bundle of related senses and forms, whether the item is an individual word, morpheme, idiom, etc. — anything that constitues a semantic unit. Examples of lexemes in English might include *be*, *run up*, and *‑ing*. A lexeme will typically have multiple *senses* or meanings, and those are listed in the `senses` property. It is up to the linguist to decide when two meanings are related, and therefore belong to the same lexeme, or when they belong to different lexemes. A lexeme often also has multiple base forms, such as suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc. These are listed in the `forms` field. The `forms` field should **not** be used to list all the regularly-inflected forms of a word. Individual base forms may have phonologically-conditioned allomorphs, and these are listed in the `allomorphs` field of the form. The lexeme and its forms and senses may also have variations, such as dialectal and idiolectal variants, rapid speech variants, register-based variants, variations in meaning, or even spelling variants. These are listed in the `variants` fields. By convention, one of the forms of a lexeme is typically chosen as a representative headword or *lemma*, and this is indicated by the `lemma` field. For example, the form *man* is typically used as the lemma/headword for the lexeme that includes the forms *man* and *men*. Note that the DLx Lexeme does **not** represent a lexical entry in a dictionary. Dictionaries typically list each base form of a lexeme as a separate lexical entry. The DLx Lexeme lists puts each of these lexical entries together in the `forms` field instead.",
+  "description": "A *lexeme* is an abstract entity that represents all the various forms of a word. In DLx, a lexeme refers broadly to any bundle of related senses and forms, whether the item is an individual word, morpheme, idiom, etc. — anything that constitues a semantic unit. Examples of lexemes in English might include *be*, *run up* (a phrasal verb), and *‑ing*. A lexeme will typically have multiple *senses* or meanings, and those are listed in the `senses` property. It is up to the linguist to decide when two meanings are related, and therefore belong to the same lexeme, or when they belong to different lexemes. A lexeme often also has multiple base forms, such as suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc. These are listed in the `forms` field. The `forms` field should **not** be used to list all the regularly-inflected forms of a word. In addition, individual base forms may have phonologically-conditioned allomorphs, and these are listed in the `allomorphs` field of the form. The lexeme and its forms and senses may also have variations, such as dialectal and idiolectal variants, rapid speech variants, register-based variants, variations in meaning, or even spelling variants. These are listed in the `variants` fields. By convention, one of the forms of a lexeme is typically chosen as a representative headword or *lemma*, and this is indicated by the `lemma` field. For example, the form *man* in English is typically used as the lemma/headword for the lexeme that includes the forms *man* and *men*. Note that the DLx Lexeme does **not** represent a lexical entry in a dictionary. Dictionaries typically list each base form of a lexeme as a separate lexical entry. The DLx Lexeme lists puts each of these lexical entries together in the `forms` field instead.",
   "$comment": "This is a top-level database object.",
   "required": [
     "forms",
@@ -44,6 +44,19 @@
         "type": "object",
         "$ref": "http://schemas.digitallinguistics.io/Lexeme.json",
         "description": "A lexeme object representing an alternative analysis of this lexeme."
+      }
+    },
+    "bibliography": {
+      "title": "Bibliography",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A list of citations to attested bibliographic sources where this lexeme appears or is discussed. For precision's sake, it is recommended that sources be listed for specific senses or forms of a lexeme whenever possible.",
+      "items": {
+        "title": "Citation",
+        "type": "object",
+        "$ref": "http://schemas.digitallinguistics.io/Citation.json",
+        "referenceType": "Citation",
+        "description": "A citation to an attested source for this lexeme."
       }
     },
     "citationForm": {
@@ -241,18 +254,6 @@
         ]
       }
     },
-    "references": {
-      "title": "Bibliographic References",
-      "type": "array",
-      "uniqueItems": true,
-      "description": "A collection of bibliographic references relating to this lexeme. For example, a particular lexeme may have been discussed in detail in a published article.",
-      "items": {
-        "title": "Reference",
-        "type": "object",
-        "$ref": "http://schemas.digitallinguistics.io/BibliographicReference.json",
-        "description": "A bibliographic Reference about this lexeme"
-      }
-    },
     "senses": {
       "title": "Senses",
       "type": "array",
@@ -270,12 +271,13 @@
       "title": "Sources",
       "type": "array",
       "uniqueItems": true,
-      "description": "A list of attested sources for this lexeme, such as a citation to a published text where it appears, the key of an Utterance in the database, or the initials of the speaker who provided it. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible.",
+      "description": "A list of the initials of the speaker or speakers who are the attested sources for this lexeme. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These sources should be DatabaseReferences to a Person object.",
       "items": {
         "title": "Source",
-        "type": "string",
-        "minLength": 1,
-        "description": "An attested source for this lexeme. This will often be the initials of a speaker, but could also be the abbreviation of the story the lexeme was found it, or a citation to a published text in which the lexeme appears."
+        "type": "object",
+        "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
+        "referenceType": "Person",
+        "description": "An attested source for this lexeme. This will often be the initials of a speaker."
       }
     },
     "tags": {
@@ -337,13 +339,13 @@
           "forms": [
             {
               "transcription": {
-                "APA": "kʼuš"
+                "APA": "kʼuš"
               }
             }
           ],
           "lemma": {
-            "APA": "kʼuš",
-            "IPA": "kˀuš"
+            "APA": "kʼuš",
+            "IPA": "kˀuš"
           },
           "senses": [
             {
@@ -353,11 +355,16 @@
           ]
         }
       ],
+      "bibliography": [
+        {
+          "citationKey": "Duralde1802"
+        }
+      ],
       "citationForm": {
-        "APA": "kʼušti",
-        "IPA": "kˀušti",
+        "APA": "kʼušti",
+        "IPA": "kˀušti",
         "Mod": "guxti",
-        "Swad": "gušti"
+        "Swad": "gušti"
       },
       "dateCreated": "2018-11-03T00:23:55.842Z",
       "dateModified": "2018-11-03T00:24:04.730Z",
@@ -368,10 +375,10 @@
         "id": "3d91a22d-005b-4ec5-8151-09e44629f58f"
       },
       "lemma": {
-        "APA": "kʼušt",
-        "IPA": "kˀušt",
+        "APA": "kʼušt",
+        "IPA": "kˀušt",
         "Mod": "guxt",
-        "Swad": "gušt"
+        "Swad": "gušt"
       },
       "link": "https://explorer.digitallinguistics.io/languages/Chitimacha/lexemes/guxt",
       "type": "Lexeme",
@@ -385,10 +392,10 @@
               ],
               "syllableStructure": "CVC",
               "transcription": {
-                "APA": "kʼuš",
-                "IPA": "kˀuš",
+                "APA": "kʼuš",
+                "IPA": "kˀuš",
                 "Mod": "gux",
-                "Swad": "guš"
+                "Swad": "guš"
               }
             }
           ],
@@ -412,14 +419,16 @@
           ],
           "morphemeType": "stem",
           "sources": [
-            "Dur 13"
+            {
+              "source": "TEST"
+            }
           ],
           "syllableStructure": "CVCC",
           "transcription": {
-            "APA": "kʼušt",
-            "IPA": "kˀušt",
+            "APA": "kʼušt",
+            "IPA": "kˀušt",
             "Mod": "guxt",
-            "Swad": "gušt"
+            "Swad": "gušt"
           },
           "variants": [
             {

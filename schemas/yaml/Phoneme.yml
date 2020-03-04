@@ -191,12 +191,12 @@ properties:
     title: 'Bibliographic References'
     type:  array
     uniqueItems: true
-    description: 'A collection of bibliographic references about this phoneme'
+    description: 'A collection of bibliographic sources about this phoneme'
     items:
-      title: 'Bibliographic Reference'
+      title: Bibliographic Source
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/BibliographicReference.json'
-      description: 'A bibliographic reference'
+      $ref:  'http://schemas.digitallinguistics.io/BibliographicSource.json'
+      description: A bibliographic source
 
   rounding:
     title: Rounding
