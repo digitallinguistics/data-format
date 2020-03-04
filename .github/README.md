@@ -191,7 +191,7 @@ Check out the [Contributing Guidelines][Contributing] for this project, and the 
 
 ## Maintainers
 
-This repository is maintained by [Daniel W. Hieber][Me] ([@dwhieb][19]).
+This repository is maintained by [Daniel W. Hieber][Me] ([@dwhieb][me]).
 
 [Austin]:       http://site.uit.no/linguisticsdatacitation/
 [Bugs]:         https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
