@@ -1,6 +1,6 @@
 // IMPORTS
-const AJV        = require(`ajv`);
-const getSchemas = require(`./getSchemas`);
+const AJV        = require(`ajv.cjs`);
+const getSchemas = require(`./getSchemas.cjs`);
 const GeoJSON    = require(`./GeoJSON.json`);
 
 // SETUP
