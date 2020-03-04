@@ -487,7 +487,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A list of attested sources where this sense appears, as citations to published texts. For precision’s sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a BibliographicReference object.</p>
+          <div><p>A list of citations to attested sources where this sense appears or is discussed. For precision’s sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.</p>
 </div>
         </section>
 
@@ -548,7 +548,7 @@
           <section class='$ref keyword'>
             <h2>Referenced Schema</h2>
             <p>This item must validate against the following schema:</p>
-            <p><a href='http://schemas.digitallinguistics.io/DatabaseReference.json'>http://schemas.digitallinguistics.io/DatabaseReference.json</a></p>
+            <p><a href='http://schemas.digitallinguistics.io/Citation.json'>http://schemas.digitallinguistics.io/Citation.json</a></p>
           </section>
 
 
@@ -2411,181 +2411,6 @@
 
         <summary>
           <h1 class='title keyword'>
-            Bibliographic References: <code>references</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>array</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>A collection of bibliographic references relating to this sense. For example, a particular sense may have been discussed in detail in a published article.</p>
-</div>
-        </section>
-
-
-
-
-
-
-
-
-
-
-
-
-          <p class='uniqueItems keyword'>
-            <b>Items must be unique:</b> <code>true</code>
-          </p>
-
-
-          <section class='items keyword'>
-
-            <h2>Items</h2>
-
-
-              <p>Each item in this array must adhere to the following schema:</p>
-
-              <section  class=jschemer-schema>
-
-
-    <details open>
-
-
-        <summary>
-          <h1 class='title keyword'>
-            Reference: <code>references</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>object</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>A bibliographic Reference about this sense</p>
-</div>
-        </section>
-
-
-
-
-
-
-          <section class='$ref keyword'>
-            <h2>Referenced Schema</h2>
-            <p>This item must validate against the following schema:</p>
-            <p><a href='http://schemas.digitallinguistics.io/BibliographicReference.json'>http://schemas.digitallinguistics.io/BibliographicReference.json</a></p>
-          </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </details>
-
-
-</section>
-
-
-          </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </details>
-
-
-</section>
-</li>
-                <li><section  class=jschemer-schema>
-
-
-    <details open>
-
-
-        <summary>
-          <h1 class='title keyword'>
             Scientific Name: <code>scientificName</code>
           </h1>
         </summary>
@@ -3902,7 +3727,7 @@
                 <pre><code>{
   &quot;bibliography&quot;: [
     {
-      &quot;citation&quot;: &quot;Dur 13&quot;
+      &quot;citationKey&quot;: &quot;Duralde1802&quot;
     }
   ],
   &quot;category&quot;: &quot;verb&quot;,

@@ -235,7 +235,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A citation to a bibliographic source. Citation objects consist of a <code>pages</code> property which indicates the relevant page numbers within the cited publication, and either a <code>citationKey</code> field or a <code>bibliographicSource</code> field. If the <code>citationKey</code> field is used, it contains a reference to the citation key of a bibliographic source stored elsewhere. If the <code>bibliographicSource</code> field is used, it contains an entire bibliographicSource. This allows developers to dereference their bibliographies, if they choose to.</p>
+          <div><p>A citation to a bibliographic source. Citation objects consist of an optional <code>pages</code> property which indicates the relevant page numbers within the cited publication, and either a <code>citationKey</code> field or a <code>bibliographicSource</code> field. If the <code>citationKey</code> field is used, it contains a reference to the citation key of a bibliographic source stored elsewhere. If the <code>bibliographicSource</code> field is used, it contains an entire bibliographicSource. This allows developers to dereference their bibliographies, if they choose to.</p>
 </div>
         </section>
 
@@ -263,15 +263,65 @@
 
 
 
-          <section class='required keyword'>
 
-            <h2>Required Properties</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='allOf keyword'>
+
+            <p>This item must also validate against all of the following schemas:</p>
 
             <ul>
-                <li><code>pages</code></li>
-            </ul>
+                <li><section  class=jschemer-schema>
 
-          </section>
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -366,21 +416,72 @@
 
           </section>
 
-          <section class='additionalProperties keyword'>
-
-            <h2>Additional Properties</h2>
-
-            <p>Any additional properties must adhere to the following schema:</p>
-
-            <section  class=jschemer-schema>
 
 
-      <p>No values are valid for this schema.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
 
 
 </section>
+</li>
+                <li><section  class=jschemer-schema>
 
-          </section>
+
+    <details open>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -739,6 +840,37 @@
 
 
 
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+        <section class='examples keyword'>
+
+          <h2>Examples</h2>
+
+          <p>The following are example values for this schema:</p>
+
+          <ul>
+              <li>
+                <pre><code>{
+  &quot;citationKey&quot;: &quot;Hieber2018&quot;,
+  &quot;pages&quot;: &quot;1-15&quot;
+}</code></pre>
+              </li>
+          </ul>
+
+        </section>
 
     </details>
 

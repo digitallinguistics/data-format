@@ -45,7 +45,7 @@
     "language": {
       "title": "Note Language",
       "type": "string",
-      "description": "A language code or language name of the language that this note is written in"
+      "description": "A language code or language name of the language that this note is written in. Assumed to be English if not otherwise specified."
     },
     "noteType": {
       "title": "Note Type",

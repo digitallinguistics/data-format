@@ -119,8 +119,8 @@
     "source": {
       "title": "Source",
       "type": "object",
-      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-      "description": "The Source of an Utterance taken out of context such as sets of utterances to be used as examples in publications. This field is strongly recommended when an Utterance is not part of a Text."
+      "$ref": "http://schemas.digitallinguistics.io/Citation.json",
+      "description": "A citation to the publication where this utterance was taken from. When the utterance is not part of a text, or when the text consists of random utterances taken from different places, this field is strongly recommended."
     },
     "startTime": {
       "title": "Start Time",
@@ -196,7 +196,7 @@
         "givenName": "Benjamin"
       },
       "source": {
-        "eng": "Paul Benjamin"
+        "citationKey": "Swadesh1946"
       },
       "transcript": {
         "Mod": "Waxdungu qasi,"
