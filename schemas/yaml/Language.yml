@@ -36,11 +36,24 @@ properties:
     $ref:  'http://schemas.digitallinguistics.io/Access.json'
     description: An object describing who may have access to materials on this language.
 
-  autonym:
-    title: Autonym
-    type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
-    description: The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.
+  autonyms:
+    title: Autonyms
+    type:  array
+    description: A list of objects describing autonyms for this language (names for this language _in_ the language itself). For the canonical scientific name, use the `name` field instead. For other ways of referring to this language by outsiders, use the `exonyms` field.
+    items:
+      title: Autonym
+      type:  object
+      required:
+        - transcription
+      properties:
+        transcription:
+          title: Autonym Transcription
+          $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+          description: A transcription of this autonym, optionally in multiple orthographies.
+        note:
+          title: Note
+          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          description: A note about this autonym, such as who uses this name and where, or perhaps its etymology.
 
   bibliography:
     title:       Bibliography
