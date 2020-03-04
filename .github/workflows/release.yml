@@ -29,17 +29,17 @@ jobs:
       - name: publish to DLx CDN
         run:  npm run upload
         env:
-          AZURE_CONNECTION_STRING: ${{secrets.AZURE_CONNECTION_STRING}}
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
 
       - name: publish to npm
         run:  npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: publish to GitHub Packages
         run:  npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: create docs
         run:  npm run docs
