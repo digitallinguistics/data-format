@@ -5,7 +5,30 @@ on:
     types: [published]
 
 jobs:
-  publish:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13
+          registry-url: https://registry.npmjs.org/
+
+      - name: install dependencies
+        run:  npm ci
+
+      - name: build
+        run:  npm run build
+
+      - name: run tests
+        run:  npm test
+
+  publish-dlx:
+    needs:   tests
     runs-on: ubuntu-latest
     steps:
 
@@ -23,23 +46,77 @@ jobs:
       - name: build
         run:  npm run build
 
-      - name: run tests
-        run:  npm test
-
       - name: publish to DLx CDN
         run:  npm run upload
         env:
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+
+  publish-npm:
+    needs:   tests
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13
+          registry-url: https://registry.npmjs.org/
+
+      - name: install dependencies
+        run:  npm ci
+
+      - name: build
+        run:  npm run build
 
       - name: publish to npm
         run:  npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+  publish-gpr:
+    needs:   tests
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13
+          registry-url: https://npm.pkg.github.com/
+          scope:        '@digitallinguistics'
+
+      - name: install dependencies
+        run:  npm ci
+
+      - name: build
+        run:  npm run build
+
       - name: publish to GitHub Packages
         run:  npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish-docs:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 13
+
+      - name: install dependencies
+        run:  npm ci
 
       - name: create docs
         run:  npm run docs

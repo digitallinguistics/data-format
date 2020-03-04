@@ -19,7 +19,7 @@
       "url": "https://danielhieber.com"
     }
   ],
-  "config": {
+  "publishConfig": {
     "access": "public"
   },
   "repository": "https://github.com/digitallinguistics/spec.git",
