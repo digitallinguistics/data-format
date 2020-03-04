@@ -26,6 +26,9 @@ jobs:
       - name: run tests
         run:  npm test
 
+      - name: create docs
+        run:  npm run docs
+
   publish-dlx:
     needs:   build
     runs-on: ubuntu-latest
