@@ -9,6 +9,7 @@ let schemas;
 
 /**
  * Retrieves the schemas from /schemas/yaml, converts them to JSON, and returns a Map of the schemas. This function is a singleton: the schemas are only loaded once.
+ * @return {Promise<Map>} Returns a Promise that resolves to a Map of the schemas
  */
 async function getSchemas() {
 

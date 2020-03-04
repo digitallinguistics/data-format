@@ -6,14 +6,23 @@
   max-nested-callbacks,
  */
 
-import { createValidator, getSchemas } from './utilities/index.js';
+// IMPORTS
+const {
+  AJV,
+  getSchemas,
+} = require(`./utilities/index.cjs`);
 
 describe(`schemas`, () => {
 
-  it(`validate against example data`, async () => {
+  let ajv;
+  let schemas;
 
-    const ajv     = await createValidator();
-    const schemas = await getSchemas();
+  beforeAll(async () => {
+    ajv     = await AJV();
+    schemas = await getSchemas();
+  });
+
+  it(`validate against example data`, () => {
 
     schemas.forEach(schema => {
 
