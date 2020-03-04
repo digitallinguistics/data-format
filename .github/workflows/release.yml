@@ -5,7 +5,7 @@ on:
     types: [published]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
 
@@ -26,13 +26,20 @@ jobs:
       - name: run tests
         run:  npm test
 
-  publish-gh-pages:
-    needs:   build
-    runs-on: ubuntu-latest
-    steps:
+      - name: publish to DLx CDN
+        run:  npm run upload
+        env:
+          AZURE_CONNECTION_STRING: ${{secrets.AZURE_CONNECTION_STRING}}
 
-      - name: checkout
-        uses: actions/checkout@v2
+      - name: publish to npm
+        run:  npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
+      - name: publish to GitHub Packages
+        run:  npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - name: create docs
         run:  npm run docs
@@ -42,61 +49,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir:  ./docs
-
-  publish-dlx:
-    needs:   build
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: publish to DLx CDN
-        run:  npm run upload
-        env:
-          AZURE_CONNECTION_STRING: ${{secrets.AZURE_CONNECTION_STRING}}
-
-  publish-npm:
-    needs:   build
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 13
-          registry-url: https://registry.npmjs.org/
-
-      - name: install package
-        run:  npm ci
-
-      - name: publish to npm
-        run:  npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
-  publish-gpr:
-    needs:   build
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: checkout
-        uses: actions/checkout@v2
-
-      - name: set up Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: 13
-          registry-url: https://npm.pkg.github.com/
-          scope:        '@digitallinguistics'
-
-      - name: install package
-        run:  npm ci
-
-      - name: publish to GitHub Packages
-        run:  npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
