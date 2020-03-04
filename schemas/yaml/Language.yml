@@ -227,7 +227,7 @@ properties:
     title:         Language Name
     $ref:          'http://schemas.digitallinguistics.io/MultiLangString.json'
     minProperties: 1
-    description: The name of this Language, optionally in multiple languages. There must be a name provided in at least one language. Use the `additionalNames` field to list names for this language that need additional explanation or notes, or if there are multiple names for this variety in a language.
+    description: The canonical scientific name of this language, usually in English, and also optionally in multiple languages. There must be a name provided in at least one language. Use the `exonyms` field to list other ways this language is referred to, and the `autonyms` field to list names for the language _in_ the language itself (a.k.a. endonyms).
 
   notes:
     title:       Notes
