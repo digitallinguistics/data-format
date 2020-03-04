@@ -8,64 +8,78 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      
+
       - name: checkout
         uses: actions/checkout@v2
-      
+
       - name: set up Node
         uses: actions/setup-node@v1
         with:
           node-version: 13
-      
-      - name: install dependencies
-        run: npm ci
-      
-      - name: build
-        run: npm run build
-      
-      - name: run tests
-        run: npm test
 
-  publish-npm:
-    needs: build
+      - name: install dependencies
+        run:  npm ci
+
+      - name: build
+        run:  npm run build
+
+      - name: run tests
+        run:  npm test
+
+  publish-dlx:
+    needs:   build
     runs-on: ubuntu-latest
     steps:
-      
+
       - name: checkout
         uses: actions/checkout@v2
-      
-      - name: publish to npm
+
+      - name: publish to DLx CDN
+        run:  npm run upload
+        env:
+          AZURE_CONNECTION_STRING: ${{secrets.AZURE_CONNECTION_STRING}}
+
+  publish-npm:
+    needs:   build
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: set up Node
         uses: actions/setup-node@v1
         with:
           node-version: 13
           registry-url: https://registry.npmjs.org/
-      
+
       - name: install package
-        run: npm ci
-      
-      - run: npm publish
+        run:  npm ci
+
+      - name: publish to npm
+        run:  npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
-    needs: build
+    needs:   build
     runs-on: ubuntu-latest
     steps:
-      
+
       - name: checkout
         uses: actions/checkout@v2
-      
+
       - name: set up Node
         uses: actions/setup-node@v1
         with:
           node-version: 13
           registry-url: https://npm.pkg.github.com/
-          scope: '@digitallinguistics'
-      
+          scope:        '@digitallinguistics'
+
       - name: install package
-        run: npm ci
-      
+        run:  npm ci
+
       - name: publish to GitHub Packages
-        run: npm publish
+        run:  npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
