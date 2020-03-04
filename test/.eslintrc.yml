@@ -1,5 +1,2 @@
 env:
-  browser: false
-  es6:     true
   jasmine: true
-  node:    true
