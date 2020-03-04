@@ -34,7 +34,7 @@ The project would especially benefit from the following types of suggestions:
 
 The following scripts can be run from the command line:
 
-- `npm run build`: convert YAML > JSON, regenerate project documentation
+- `npm run build`: convert YAML > JSON
 - `npm run convert`: convert the YAML schemas to JSON
 - `npm run docs`: regenerate the project documentation
 - `npm test`: run tests

@@ -32,3 +32,5 @@
 - [ ] **Run the tests** (`npm test`) and fix issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
 
 - [ ] **Update the project documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you made, if applicable.
+
+- [ ] **Build the project documentation** (`npm run docs`)

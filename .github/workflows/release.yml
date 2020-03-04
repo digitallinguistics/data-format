@@ -26,6 +26,23 @@ jobs:
       - name: run tests
         run:  npm test
 
+  publish-gh-pages:
+    needs:   build
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: create docs
+        run:  npm run docs
+
+      - name: publish GitHub pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ GITHUB_TOKEN }}
+          publish_dir:  ./docs
+
   publish-dlx:
     needs:   build
     runs-on: ubuntu-latest
