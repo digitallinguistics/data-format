@@ -1,14 +1,10 @@
 # ESLint v5.15.2
+parser: babel-eslint
 parserOptions:
-  ecmaVersion: 10
-  ecmaFeatures:
-    impliedStrict: true
   sourceType: module
 env:
-  browser: true
-  es6:     true
-  jasmine: false
-  node:    true
+  es2020: true
+  shared-node-browser: true
 rules:
   id-blacklist:
   - error

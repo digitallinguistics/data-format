@@ -27,6 +27,7 @@
     "node": "13.x"
   },
   "main": "schemas/json",
+  "type": "module",
   "scripts": {
     "build": "npm run convert & npm run docs",
     "convert": "node build/convert.js",
@@ -38,6 +39,7 @@
   "devDependencies": {
     "ajv": "^6.12.0",
     "azure-storage": "^2.10.3",
+    "babel-eslint": "^10.1.0",
     "chalk": "^3.0.0",
     "eslint": "^6.8.0",
     "fs-extra": "^8.1.0",

@@ -1,7 +1,9 @@
-// IMPORTS
+// IMPORTS & GLOBALS
 
-const path   = require(`path`);
-const yamljs = require(`yamljs`);
+import { fileURLToPath } from 'url';
+import fs                from 'fs-extra';
+import path              from 'path';
+import yamljs            from 'yamljs';
 
 const {
   mkdirp:  createDir,
@@ -9,11 +11,13 @@ const {
   readFile,
   remove:  removeDir,
   writeFile,
-} = require(`fs-extra`);
+} = fs;
+
+const currentDir = path.dirname(fileURLToPath(import.meta.url));
 
 // VARIABLES
 
-const schemasDir = path.join(__dirname, `../schemas`);
+const schemasDir = path.join(currentDir, `../schemas`);
 const jsonDir    = path.join(schemasDir, `json`);
 const yamlDir    = path.join(schemasDir, `yaml`);
 
@@ -21,7 +25,6 @@ const yamlDir    = path.join(schemasDir, `yaml`);
 
 /**
  * Create the index.js file for the /json directory
- * @return {Promise}
  */
 async function generateIndex() {
 
@@ -42,12 +45,11 @@ async function generateIndex() {
 /**
  * Converts a single YAML schema to JSON
  * @param  {String} filename The name of a file in the /yaml directory
- * @return {Promise}
  */
 async function convertSchema(filename) {
-  const yaml   = await readFile(path.join(yamlDir, filename), `utf8`);
-  const schema = yamljs.parse(yaml);
-  const json   = JSON.stringify(schema, null, 2);
+  const yaml         = await readFile(path.join(yamlDir, filename), `utf8`);
+  const schema       = yamljs.parse(yaml);
+  const json         = JSON.stringify(schema, null, 2);
   const jsonFileName = filename.replace(`.yml`, `.json`);
   const jsonFilePath = path.join(jsonDir, jsonFileName);
   await writeFile(jsonFilePath, json, `utf8`);
@@ -59,7 +61,7 @@ async function convertSchema(filename) {
  * Converts each YAML schema in /schemas/yaml to a JSON file in /schemas/json
  * @return {Promise}
  */
-async function convert() {
+void async function convert() {
   try {
     const filenames = await readDir(yamlDir);        // retrieve the list of YAML schemas to convert
     await removeDir(jsonDir);                        // remove the /json directory
@@ -69,10 +71,4 @@ async function convert() {
   } catch (e) {
     console.error(e);
   }
-}
-
-// Run the script if called directly from the command line
-if (require.main === module) convert();
-
-// Export the convert() function if called from another script
-else module.exports = convert;
+}();
