@@ -24,25 +24,6 @@ const yamlDir    = path.join(schemasDir, `yaml`);
 // METHODS
 
 /**
- * Create the index.js file for the /json directory
- */
-async function generateIndex() {
-
-  const fileNames   = await readDir(jsonDir);
-  const schemaNames = fileNames.map(fileName => fileName.replace(`.json`, ``));
-
-  const lines = schemaNames
-  .map(schemaName => `  ${schemaName}: require('./${schemaName}'),`)
-  .join(`\n`);
-
-  const indexText = `module.exports = {\n${lines}\n};`;
-  const indexPath = path.join(jsonDir, `index.js`);
-
-  await writeFile(indexPath, indexText, `utf8`);
-
-}
-
-/**
  * Converts a single YAML schema to JSON
  * @param  {String} filename The name of a file in the /yaml directory
  */
@@ -67,7 +48,6 @@ void async function convert() {
     await removeDir(jsonDir);                        // remove the /json directory
     await createDir(jsonDir);                        // recreate the /json directory
     await Promise.all(filenames.map(convertSchema)); // convert all YAML schemas to JSON
-    await generateIndex();                           // generate index.js for the JSON files
   } catch (e) {
     console.error(e);
   }
