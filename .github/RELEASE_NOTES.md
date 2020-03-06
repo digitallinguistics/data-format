@@ -8,6 +8,8 @@ See the complete documentation for the current version of the DLx format here:
 
 https://format.digitallinguistics.io
 
+A huge thank you to Brock Wroblewski (@Calvin1119) and Vade Kamenitsa-Hale (@vadekh) for all their work implementing changes to the specification, as well as Monica Macaulay (@monicamacaulay) and Hunter Lockwood (@HunterLockwood) for many discussions about the details of this format.
+
 ## General
 
 - **CHANGE:** `BibliographicReference` > `BibliographicSource`
