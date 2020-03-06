@@ -624,7 +624,7 @@
 
         <summary>
           <h1 class='title keyword'>
-            Additional Names: <code>additionalNames</code>
+            Autonyms: <code>autonyms</code>
           </h1>
         </summary>
 
@@ -638,7 +638,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>An Array of additional names for this Language. Only use this property if the <code>name</code> property is not sufficient to describe the various names for this language. This field is especially useful when the Language has multiple spellings in historical documentation. Each additional name can be a plain string, or an object with two properties: <code>name</code> and <code>note</code>. The object format is preferred, since the <code>note</code> field provides a way to give a description of this additional name and where or by whom it was used.</p>
+          <div><p>A list of objects describing autonyms for this language (names for this language <em>in</em> the language itself). For the canonical scientific name, use the <code>name</code> field instead. For other ways of referring to this language by outsiders, use the <code>exonyms</code> field.</p>
 </div>
         </section>
 
@@ -653,9 +653,6 @@
 
 
 
-          <p class='uniqueItems keyword'>
-            <b>Items must be unique:</b> <code>true</code>
-          </p>
 
 
           <section class='items keyword'>
@@ -673,142 +670,9 @@
 
         <summary>
           <h1 class='title keyword'>
-            Additional Language Name: <code>additionalNames</code>
+            Autonym: <code>autonyms</code>
           </h1>
         </summary>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <section class='oneOf'>
-
-            <p>This item must also validate against exactly one of the following schemas:</p>
-
-            <ul>
-                <li><section  class=jschemer-schema>
-
-
-    <details open>
-
-
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <p class='minLength keyword'>
-            <b>Minimum length:</b> <code>1</code>
-          </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </details>
-
-
-</section>
-</li>
-                <li><section  class=jschemer-schema>
-
-
-    <details open>
-
-
 
 
 
@@ -848,8 +712,7 @@
             <h2>Required Properties</h2>
 
             <ul>
-                <li><code>name</code></li>
-                <li><code>note</code></li>
+                <li><code>transcription</code></li>
             </ul>
 
           </section>
@@ -872,21 +735,18 @@
 
         <summary>
           <h1 class='title keyword'>
-            Additional Language Name: <code>name</code>
+            Autonym Transcription: <code>transcription</code>
           </h1>
         </summary>
 
 
 
-        <p class='type keyword'>
-          <b>Type:</b> <code>string</code>
-        </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The additional language name</p>
+          <div><p>A transcription of this autonym, optionally in multiple orthographies.</p>
 </div>
         </section>
 
@@ -895,6 +755,11 @@
 
 
 
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Transcription.json'>http://schemas.digitallinguistics.io/Transcription.json</a></p>
+          </section>
 
 
 
@@ -922,9 +787,6 @@
 
 
 
-          <p class='minLength keyword'>
-            <b>Minimum length:</b> <code>1</code>
-          </p>
 
 
 
@@ -954,21 +816,18 @@
 
         <summary>
           <h1 class='title keyword'>
-            Additional Language Note: <code>note</code>
+            Note: <code>note</code>
           </h1>
         </summary>
 
 
 
-        <p class='type keyword'>
-          <b>Type:</b> <code>object</code>
-        </p>
 
 
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>A note about this additional language, explaining where it is used and who uses it. You should use the <code>language</code> property of the Note to describe what language this additional name is in.</p>
+          <div><p>A note about this autonym, such as who uses this name and where, or perhaps its etymology.</p>
 </div>
         </section>
 
@@ -1057,106 +916,9 @@
 
 
 </section>
-</li>
-            </ul>
-
-          </section>
-
-
-
-
-
-    </details>
-
-
-</section>
 
 
           </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </details>
-
-
-</section>
-</li>
-                <li><section  class=jschemer-schema>
-
-
-    <details open>
-
-
-        <summary>
-          <h1 class='title keyword'>
-            Autonym: <code>autonym</code>
-          </h1>
-        </summary>
-
-
-
-        <p class='type keyword'>
-          <b>Type:</b> <code>object</code>
-        </p>
-
-
-
-        <section class='description keyword'>
-          <h2>Description</h2>
-          <div><p>The autonym for this language, optionally in multiple orthographies. Note that this is a transcription of the autonym, and so should not be capitalized.</p>
-</div>
-        </section>
-
-
-
-
-
-
-          <section class='$ref keyword'>
-            <h2>Referenced Schema</h2>
-            <p>This item must validate against the following schema:</p>
-            <p><a href='http://schemas.digitallinguistics.io/Transcription.json'>http://schemas.digitallinguistics.io/Transcription.json</a></p>
-          </section>
-
-
-
-
-
-
-
-
 
 
 
@@ -3590,6 +3352,349 @@
 
         <summary>
           <h1 class='title keyword'>
+            Exonyms: <code>exonyms</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>array</code>
+        </p>
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A list of exonyms for this language (names of the language in <em>other</em> languages). For the canonical scientific name of the language (usually in English), use the <code>name</code> field. This field is for any additional exonyms beyond the canonical scientific name. For autonyms (names of the language <em>in</em> the language), use the <code>autonyms</code> field.</p>
+</div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='items keyword'>
+
+            <h2>Items</h2>
+
+
+              <p>Each item in this array must adhere to the following schema:</p>
+
+              <section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Exonym: <code>exonyms</code>
+          </h1>
+        </summary>
+
+
+
+        <p class='type keyword'>
+          <b>Type:</b> <code>object</code>
+        </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <section class='required keyword'>
+
+            <h2>Required Properties</h2>
+
+            <ul>
+                <li><code>transcription</code></li>
+            </ul>
+
+          </section>
+
+
+
+
+          <section class='properties keyword'>
+
+            <h2>Properties</h2>
+
+            <p>The following properties are defined for this object:</p>
+
+            <ul>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Exonym Transcription: <code>transcription</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A transcription of this exonym, optionally in multiple languages.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/MultiLangString.json'>http://schemas.digitallinguistics.io/MultiLangString.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
+            Note: <code>note</code>
+          </h1>
+        </summary>
+
+
+
+
+
+
+        <section class='description keyword'>
+          <h2>Description</h2>
+          <div><p>A note about this exonym, such as who uses this name and where, or perhaps its etymology.</p>
+</div>
+        </section>
+
+
+
+
+
+
+          <section class='$ref keyword'>
+            <h2>Referenced Schema</h2>
+            <p>This item must validate against the following schema:</p>
+            <p><a href='http://schemas.digitallinguistics.io/Note.json'>http://schemas.digitallinguistics.io/Note.json</a></p>
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+            </ul>
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+
+
+          </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </details>
+
+
+</section>
+</li>
+                <li><section  class=jschemer-schema>
+
+
+    <details open>
+
+
+        <summary>
+          <h1 class='title keyword'>
             Glottolog Code: <code>glottolog</code>
           </h1>
         </summary>
@@ -4022,7 +4127,7 @@
 
         <section class='description keyword'>
           <h2>Description</h2>
-          <div><p>The name of this Language, optionally in multiple languages. There must be a name provided in at least one language. Use the <code>additionalNames</code> field to list names for this language that need additional explanation or notes, or if there are multiple names for this variety in a language.</p>
+          <div><p>The canonical scientific name of this language, usually in English, and also optionally in multiple languages. There must be a name provided in at least one language. Use the <code>exonyms</code> field to list other ways this language is referred to, and the <code>autonyms</code> field to list names for the language <em>in</em> the language itself (a.k.a. endonyms).</p>
 </div>
         </section>
 
@@ -4053,6 +4158,9 @@
 
 
 
+          <p class='minProperties keyword'>
+            <b>Minimum number of properties:</b> <code>1</code>
+          </p>
 
 
 
@@ -4825,24 +4933,19 @@
       &quot;eng&quot;: &quot;Materials on this language should not be made available to non-tribal members without permission.&quot;
     }
   },
-  &quot;additionalNames&quot;: [
+  &quot;autonyms&quot;: [
     {
-      &quot;name&quot;: &quot;Shetimashas&quot;,
+      &quot;transcription&quot;: {
+        &quot;APA&quot;: &quot;sitimaša&quot;,
+        &quot;IPA&quot;: &quot;sitimaʃa&quot;,
+        &quot;Mod&quot;: &quot;sitimaxa&quot;,
+        &quot;Swad&quot;: &quot;sitimaša&quot;
+      },
       &quot;note&quot;: {
-        &quot;source&quot;: {
-          &quot;abbreviation&quot;: &quot;DWH&quot;
-        },
-        &quot;text&quot;: &quot;This is the name commonly used for the language by French colonials.&quot;
+        &quot;text&quot;: &quot;This is the traditional name used for the Chitimacha language by the Chitimacha people themselves. It most likely derives from _siit‑_ &#x27;body of water&#x27; + _‑ma_ pluractional + _‑x_ topic marker, meaning &#x27;people of the waters&#x27;. This is most likely a reference to the fact that the Chitimacha people live deep in the bayou waterways of Louisiana.&quot;
       }
-    },
-    &quot;Chetimachas&quot;
+    }
   ],
-  &quot;autonym&quot;: {
-    &quot;APA&quot;: &quot;sitimaša&quot;,
-    &quot;IPA&quot;: &quot;sitimaʃa&quot;,
-    &quot;Mod&quot;: &quot;sitimaxa&quot;,
-    &quot;Swad&quot;: &quot;sitimaša&quot;
-  },
   &quot;bibliography&quot;: [
     {
       &quot;citationKey&quot;: &quot;Swadesh1946&quot;
@@ -4871,6 +4974,17 @@
   &quot;dateCreated&quot;: &quot;2018-10-13T18:16:57.497Z&quot;,
   &quot;dateModified&quot;: &quot;2018-10-13T18:17:06.515Z&quot;,
   &quot;defaultOrthography&quot;: &quot;modern&quot;,
+  &quot;exonyms&quot;: [
+    {
+      &quot;transcription&quot;: &quot;Shetimashas&quot;,
+      &quot;note&quot;: {
+        &quot;text&quot;: &quot;This is the name commonly used for the language by French colonials, borrowed from the Chitimacha name for the language, _Sitimaxa_.&quot;
+      }
+    },
+    {
+      &quot;transcription&quot;: &quot;Chetimachas&quot;
+    }
+  ],
   &quot;glottolog&quot;: &quot;chit1248&quot;,
   &quot;id&quot;: &quot;4d633ee3-25ba-4add-83cf-b588ba51f758&quot;,
   &quot;iso&quot;: &quot;ctm&quot;,
@@ -5158,22 +5272,15 @@
       &quot;eng&quot;: &quot;Unless otherwise noted, materials for this language may be made publicly accessible, and the speakers in the content identified.&quot;
     }
   },
-  &quot;additionalNames&quot;: [
+  &quot;autonyms&quot;: [
     {
-      &quot;name&quot;: &quot;Kikisii&quot;,
-      &quot;note&quot;: {
-        &quot;source&quot;: {
-          &quot;abbreviation&quot;: &quot;DWH&quot;
-        },
-        &quot;text&quot;: &quot;This is a Swahili version of the name of this language. It is an alternate for simply &#x60;Kisii&#x60;.&quot;
+      &quot;transcription&quot;: {
+        &quot;IPA&quot;: &quot;ékeɣusií&quot;,
+        &quot;Gus&quot;: &quot;ékegusií&quot;,
+        &quot;Swa&quot;: &quot;ekegusii&quot;
       }
     }
   ],
-  &quot;autonym&quot;: {
-    &quot;IPA&quot;: &quot;ékeɣusií&quot;,
-    &quot;Gus&quot;: &quot;ékegusií&quot;,
-    &quot;Swa&quot;: &quot;ekegusii&quot;
-  },
   &quot;classification&quot;: [
     &quot;Niger-Congo&quot;,
     &quot;Atlantic-Congo&quot;,
@@ -5209,6 +5316,24 @@
   ],
   &quot;dateCreated&quot;: &quot;2018-10-13T18:17:24.477Z&quot;,
   &quot;dateModified&quot;: &quot;2018-10-13T18:17:34.512Z&quot;,
+  &quot;exonyms&quot;: [
+    {
+      &quot;transcription&quot;: {
+        &quot;swa&quot;: &quot;Kisii&quot;
+      },
+      &quot;note&quot;: {
+        &quot;text&quot;: &quot;This is the most typical way that Swahili speakers refer to the language.&quot;
+      }
+    },
+    {
+      &quot;transcription&quot;: {
+        &quot;swa&quot;: &quot;Kikisii&quot;
+      },
+      &quot;note&quot;: {
+        &quot;text&quot;: &quot;This is a Swahili version of the name of this language. It is an alternate for simply &#x60;Kisii&#x60;.&quot;
+      }
+    }
+  ],
   &quot;glottolog&quot;: &quot;gusi1247&quot;,
   &quot;id&quot;: &quot;708d1bd4-84f6-42e5-8b09-5c64493441b3&quot;,
   &quot;iso&quot;: &quot;guz&quot;,
