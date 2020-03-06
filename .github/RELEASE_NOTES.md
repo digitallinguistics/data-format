@@ -1,6 +1,6 @@
 # v1.0.0 Release Notes
 
-This is the first alpha release of `v1.0.0` of the DLx data format!
+This is the official release of `v1.0.0` of the DLx data format!
 
 This is a major release with many additions and breaking changes since the release of `v0.29.0`. Most of the individual schemas have undergone major version bumps. Changes are summarized below.
 
