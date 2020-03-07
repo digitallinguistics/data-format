@@ -2,7 +2,9 @@
 
 # Data Format for Digital Linguistics (Daffodil)
 
-The DLx data format is a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called [Digital Linguistics][About] (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
+The DLx data format is a set of recommendations (i.e. schemas or specifications) for how to store linguistic data in JSON- a simple, human-readable text format which is supported by every major programming language, and is widely used for data storage and interchange on the web. The DLx format is useful for anybody who manages a linguistic database.
+
+The format includes recommendations (called "schemas") for storing data about every kind of linguistic entity (e.g. Language, Morpheme, Text, etc.). It is part of a broader project called [Digital Linguistics][About] (DLx), which aims to create web-based tools for managing linguistic data, and to encourage best practices in digital linguistic data management.
 
 This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil), in the form of a number of schemas. There is one schema for each type of linguistic object (e.g. Language, Morpheme, Text, etc), and schemas for various non-linguistic objects as well (e.g. Person, Location, etc.). The schemas follow the [JSON Schema][JSON Schema] format for describing the structure of JSON data.
 
@@ -33,10 +35,6 @@ Please consider citing this specification in scholarly articles using this repos
 * [Best Practices](#best-practices)
 * [NDJSON](#ndjson)
 * [Tests](#tests)
-
-## Note on Versioning
-
-This project is using v0 for initial development. While the specification is largely stable, it may still change at any time, and should not yet be considered 100% production-ready. Once the specification has been tested in a production environment with a live project, its version will be incremented to v1.0.0, and the specification considered stable. Until that time, both major and minor changes will increment the minor version number (the second number), and patches / fixes will increment the patch version number (the third number). Individual schemas however start at v1.0.0.
 
 ## Basic Usage
 

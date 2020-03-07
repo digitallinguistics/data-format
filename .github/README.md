@@ -4,13 +4,11 @@
 
 ## Introduction
 
-This project aims to create a standardized, human-readable, web-compatible format for storing linguistic data, following best practices for managing data on the modern web. It is part of a broader project called Digital Linguistics (DLx), which has the goal of creating web tools for managing linguistic data. This project will be useful for anyone who manages a linguistic database.
+The DLx data format is a set of recommendations (i.e. schemas or specifications) for how to store linguistic data in JSON- a simple, human-readable text format which is supported by every major programming language, and is widely used for data storage and interchange on the web. The DLx format is useful for anybody who manages a linguistic database.
 
-This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil). This specification is a recommendation for how to store linguistic data in a way that is standardized, human-readable and web-compatible, using a popular data storage format on the web known as [JSON][JSON].
+The format includes recommendations (called "schemas") for storing data about every kind of linguistic entity (e.g. Language, Morpheme, Text, etc.). It is part of a broader project called [Digital Linguistics][About] (DLx), which aims to create web-based tools for managing linguistic data, and to encourage best practices in digital linguistic data management.
 
-Tools which follow this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. All Digital Linguistics projects utilize this data format.
-
-This format also facilitates adherence to the [Austin Principles for Data Citation in Linguistics][Austin] by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.
+This repository contains the schemas themselves (in the `/schemas` folder), as well as more human-readable documentation for them.
 
 [View this project on GitHub.][GitHub]
 
@@ -29,11 +27,12 @@ Please consider citing this specification in scholarly articles using this repos
 
 * [Schemas](#schemas): read the schemas and get started using the DLx format in your own projects
 
-* [Bugs & Feature Requests][Bugs]: Need to report a bug or suggest a feature? [Open an issue on GitHub][Issues]. Check out the [contributing guidelines][Contributing] for information on the best way to report a bug or request a feature.
+* [Bugs & Feature Requests][Bugs]: Need to report a bug or suggest a feature? [Open an issue on GitHub][Issues].
 
-* [Contributing][Contributing]: Want to contribute to this project? :star2: Awesome! :star2: [Check out the contributing guidelines to get started][Contributing].
+* [Contributing][Contributing]: Want to contribute to this project? 🌟 Awesome! 🌟 [Check out the contributing guidelines to get started][Contributing].
 
 * [Developer Readme][Developer]: Are you a developer who wants to work with the data format programmatically? Check out the [Developer Readme][Developer].
+
 
 ## About the DLx Format
 
@@ -169,7 +168,26 @@ JSON format is easy to learn. It consists of just a few simple rules:
 
 Another great feature of JSON is that adding new properties to an Object doesn't change or in any way disrupt its other properties. This allows you to take your data from tool to tool without any tedious conversion or formatting. For example, say you've transcribed your data using a tool for morphological analysis, and now you want to add time alignment to each phrase using a different tool. If you were using FLEx and ELAN, you would have to first export from FLEx and create an ELAN file. In other words, you have to change the data *format* just to change the type of annotation you want to add. But with JSON, adding time alignment data couldn’t be simpler. The time alignment tool would merely add properties called `"startTime"` and `"endTime"` to the phrase, and enter their values. You could then take your data back to the morphological analysis tool without any converting. The data hasn't been altered, just extended. The underlying format is all the same.
 
-## Schemas
+## Why is this format useful?
+
+Tools which adhere to this recommended format will be interoperable, allowing users to migrate their data easily from one tool to another. In addition, this format is compatible with the modern web platform, making it easy to manage linguistic data online or in a browser. JSON (the format underlying DaFoDiL), is extremely easy to use and to write programming scripts with, greatly reducing the time researchers need to spend writing scripts. In fact, even tools which do not adhere to the DLx data format will nonetheless find data stored in this format very easy to work with or support, because of how easy JSON is to use when programming.
+
+DaFoDiL is not intended to be the format that language scientists work in directly. It is a storage format that's designed for use in databases or when working with language data programmatically. That said, because the DLx format uses JSON, it is highly human readable, and users can simply open the text document for the item they are interested in to examine and edit the data firsthand. Since JSON files are just simple text documents with Unicode encoding, this also ensures the longevity of the data beyond any particular tool or user interface.
+
+This format also facilitates adherence to the [Austin Principles for Data Citation in Linguistics][Austin] by supporting the use of persistent identifiers, fields for identifying contributors to the data and their role(s), easy searchability, human-readability (in the form of human-readable keys in addition to opaque database IDs), and interoperability between different tools and web technologies more generally.
+
+## How can I use DaFoDiL in my project?
+
+To use DaFoDiL in your project, all you have to do is store your data in JSON, using the recommended field names and formats listed in this specification. For example, if you were storing metadata about a language, you would go to the [Language schema][Language] and see that each Language object must have a `name` property. That `name` property in turn must be formatted according to the [Multi-Language String schema][MultiLangString], which can be either a string (if that string is English), or an object with strings in multiple languages. It might look like this for the language called Gusii:
+
+```json
+{
+  "name": {
+    "eng": "Gusii",
+    "swa": "Kisii"
+  }
+}
+```
 
 ### Linguistic Schemas
 
@@ -179,29 +197,26 @@ The DLx project provides recommendations for how to format linguistic data in JS
 
 Other non-linguistic objects are given specifications as well, including Abbreviations, Bundles, Locations, Media Files, Notes, Persons, Tags, and many others.
 
-### Using the Schemas
-
-Following the recommended data format in your own project is as easy as making sure you include the required properties in your data, and format them in the recommended ways. For example, if you wish to create a JSON object representing a phrase, you should follow the Utterance schema by making sure you include the `transcription`, `translation`, and `words` properties on the JSON object. And if you want to include additional data, check to see whether there is already a recommended property you can use. For example, if you wish to indicate the time within the audio file that the phrase begins and ends, you would use the `startTime` and `endTime` properties, each of which is a number formatted in seconds and milliseconds (SS.MMM).
-
-Note that most schemas have a strongly-recommended (but optional) `type` property indicating the schema that that object adheres to.
-
 ## Want to Contribute?
 
-Check out the [Contributing Guidelines][Contributing] for this project, and the [Developer Readme][DevReadme].
+Check out the [Contributing Guidelines][Contributing] for this project, and the [Developer Readme][Developer].
 
 ## Maintainers
 
 This repository is maintained by [Daniel W. Hieber][Me] ([@dwhieb][me]).
 
-[Austin]:       http://site.uit.no/linguisticsdatacitation/
-[Bugs]:         https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
-[Contributing]: https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
-[Developer]:    https://github.com/digitallinguistics/spec/blob/master/README.md
-[GitHub]:       https://github.com/digitallinguistics/spec
-[IGL]:          https://en.wikipedia.org/wiki/Interlinear_gloss
-[Issues]:       https://github.com/digitallinguistics/spec/issues
-[JSON]:         http://json.org/
-[License]:      https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
-[Me]:           https://github.com/dwhieb/
-[npm]:          https://www.npmjs.com/package/@digitallinguistics/spec
-[Zenodo]:       http://doi.org/10.5281/zenodo.594557
+[About]:           https://digitallinguistics.io/about
+[Austin]:          http://site.uit.no/linguisticsdatacitation/
+[Bugs]:            https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md#reporting-bugs--other-issues
+[Contributing]:    https://github.com/digitallinguistics/spec/blob/master/.github/CONTRIBUTING.md
+[Developer]:       https://github.com/digitallinguistics/spec/blob/master/README.md
+[GitHub]:          https://github.com/digitallinguistics/spec
+[IGL]:             https://en.wikipedia.org/wiki/Interlinear_gloss
+[Issues]:          https://github.com/digitallinguistics/spec/issues
+[JSON]:            http://json.org/
+[Language]:        https://format.digitallinguistics.io/schemas/Language.html
+[License]:         https://github.com/digitallinguistics/spec/blob/master/.github/LICENSE.md
+[Me]:              https://github.com/dwhieb/
+[MultiLangString]: https://format.digitallinguistics.io/schemas/MultiLangString.html
+[npm]:             https://www.npmjs.com/package/@digitallinguistics/spec
+[Zenodo]:          http://doi.org/10.5281/zenodo.594557
