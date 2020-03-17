@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Language-8.4.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Language-9.0.0.json",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -169,6 +169,19 @@
             "description": "The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO. The official status scales can be found [here](http://langlxmelanesia.com/Paris%20-%20EGIDS%20The%20Expanded%20Graded%20Intergenerational%20Disrupt.pdf).",
             "minimumProperties": 1,
             "properties": {
+              "AES": {
+                "title": "Agglomerated Endangerment Scale",
+                "type": "string",
+                "enum": [
+                  "Not Endangered",
+                  "Threatened",
+                  "Shifting",
+                  "Moribund",
+                  "Nearly Extinct",
+                  "Extinct"
+                ],
+                "description": "The Agglomerated Endangerment Scale status of this Demographic data. The details of the AES, along with AES language data, can be found [here](https://glottolog.org/langdoc/status)."
+              },
               "EGIDS": {
                 "title": "EGIDS",
                 "type": "string",
@@ -674,6 +687,7 @@
           ],
           "population": 4470,
           "status": {
+            "AES": "Moribund",
             "EGIDS": "Shifting",
             "ELCat": "Severely Endangered",
             "GIDS": 7,

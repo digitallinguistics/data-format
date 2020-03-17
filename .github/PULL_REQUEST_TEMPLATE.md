@@ -33,4 +33,4 @@
 
 - [ ] **Update the project documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you made, if applicable.
 
-- [ ] **Build the project documentation** (`npm run docs`)
+- [ ] **Build the project documentation** (`npm run docs`) and then inspect it for your changes (open `docs/index.html`)

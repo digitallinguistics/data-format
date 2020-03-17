@@ -150,6 +150,18 @@ properties:
           minimumProperties: 1
           properties:
 
+            AES:
+              title: 'Agglomerated Endangerment Scale'
+              type:  string
+              enum:
+              - Not Endangered
+              - Threatened
+              - Shifting
+              - Moribund
+              - Nearly Extinct
+              - Extinct
+              description: 'The Agglomerated Endangerment Scale status of this Demographic data. The details of the AES, along with AES language data, can be found [here](https://glottolog.org/langdoc/status).'
+
             EGIDS:
               title: 'EGIDS'
               type:  string
@@ -489,6 +501,7 @@ examples:
           - text: This population data is based on a 2015 census
         population: 4,470
         status:
+          AES:    Moribund
           EGIDS:  Shifting
           ELCat:  Severely Endangered
           GIDS:   7

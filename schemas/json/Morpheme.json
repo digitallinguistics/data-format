@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Morpheme-3.2.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Morpheme-4.0.0.json",
   "title": "Morpheme Token",
   "type": "object",
   "description": "A *morpheme token* is a particular instance of a morpheme in a text. In DLx, the primary function of the Morpheme object is to provide a concise, short description of each token of a morpheme in a corpus - its form, its gloss, and a reference to a lexeme where more information can be found.",
