@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Language-9.0.0.json'
+$id:     'http://schemas.digitallinguistics.io/Language-9.1.0.json'
 title:   Language
 type:    object
 
@@ -149,6 +149,18 @@ properties:
           description: 'The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO. The official status scales can be found [here](http://langlxmelanesia.com/Paris%20-%20EGIDS%20The%20Expanded%20Graded%20Intergenerational%20Disrupt.pdf).'
           minimumProperties: 1
           properties:
+
+            AES:
+              title: 'Agglomerated Endangerment Scale'
+              type:  string
+              enum:
+              - Not Endangered
+              - Threatened
+              - Shifting
+              - Moribund
+              - Nearly Extinct
+              - Extinct
+              description: 'The Agglomerated Endangerment Scale status of this Demographic data.'
 
             EGIDS:
               title: 'EGIDS'
@@ -489,6 +501,7 @@ examples:
           - text: This population data is based on a 2015 census
         population: 4,470
         status:
+          AES:    Moribund
           EGIDS:  Shifting
           ELCat:  Severely Endangered
           GIDS:   7
