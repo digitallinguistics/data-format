@@ -215,13 +215,13 @@ properties:
     description: 'A set of tags for this phoneme'
 
   target1:
-    title: 'Dipthong / Triphthong Target 1'
+    title: 'Diphthong / Triphthong Target 1'
     type:  object
     $ref:  '#'
     description: 'For diphthongs or triphthongs, this should be a Phoneme object representing the features of the first target in the pronunciation of the diphthong/triphthong.'
 
   target2:
-    title: 'Dipthong / Triphthong Target 2'
+    title: 'Diphthong / Triphthong Target 2'
     type:  object
     $ref:  '#'
     description: 'For diphthongs or thriphthongs, this should be a Phoneme object representing the features of the second target in the pronunciation of the diphthong/triphthong.'
