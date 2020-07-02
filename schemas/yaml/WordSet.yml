@@ -17,12 +17,12 @@ properties:
     description: 'The type of object. Must be set to `WordSet`.'
 
   items:
-    title:       'Items'
+    title:       Lexemes
     type:        array
     uniqueItems: true
     description: 'A collection of DatabaseReferences to lexemes in this Word Set.'
     items:
-      title:       'Item'
+      title:       'Lexeme'
       type:        object
       $ref:        'http://schemas.digitallinguistics.io/DatabaseReference.json'
       description: 'A DatabaseReference to a lexeme in this Word Set'
