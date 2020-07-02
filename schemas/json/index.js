@@ -25,4 +25,5 @@ module.exports = {
   Translation: require('./Translation'),
   Utterance: require('./Utterance'),
   Word: require('./Word'),
+  WordSet: require('./WordSet'),
 };
