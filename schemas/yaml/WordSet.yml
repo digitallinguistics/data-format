@@ -3,7 +3,7 @@ $id:     'http://schemas.digitallinguistics.io/WordSet-1.0.0.json'
 title:   'Word Set'
 type:    object
 
-description: 'A *WordSet* is a set of related lexemes across languages. '
+description: 'A *WordSet* is a set of related lexemes across languages. This could be a cognate set, a loandword set, or some other crosslinguistic grouping.'
 
 additionalProperties: true
 
