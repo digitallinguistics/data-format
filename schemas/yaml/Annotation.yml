@@ -68,7 +68,7 @@ allOf:
           description: The point in time that the annotation is about, formated in seconds and millseconds (SS.MMM)
 
     - title: Timespan Annotation
-      description: A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.
+      description: The time that the annotation starts, formated in seconds and milliseconds (SS.MMM)
       required:
         - startTime
         - endTime
@@ -78,7 +78,7 @@ allOf:
           title:   Start Time
           type:    number
           minimum: 0
-          description: The time that the annotation starts, formated in seconds and milliseconds (SS.MMM)
+          description: A timestamp annotation is an annotation at a single point in time in a text. It should be used for data that do not have a duration, or to attach generic notes with observations at specific points in time.
 
         endTime:
           title:   End Time
