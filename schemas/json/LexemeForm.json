@@ -90,6 +90,12 @@
         "description": "A database reference to a lexeme or lexeme form"
       }
     },
+    "etymon": {
+      "title": "Etymon",
+      "type": "object",
+      "$ref": "http://schemas.digitallinguistics.io/DatabaseReference.json",
+      "description": "A database reference to a Lexeme in another lexicon to specify the historical origin of this form."
+    },
     "examples": {
       "title": "Examples",
       "type": "array",
