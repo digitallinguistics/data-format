@@ -1,9 +1,9 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Word-4.3.0.json'
-title:   Word
+$id:     'http://schemas.digitallinguistics.io/Word-4.4.0.json'
+title:   Word Token
 type:    object
 
-description: 'A Word object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).'
+description: 'A *Word Token* object represents a specific token in a text, rather than an abstract lexeme (see the Lexeme object for that).'
 
 additionalProperties: true
 
