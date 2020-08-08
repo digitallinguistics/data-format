@@ -68,7 +68,7 @@ properties:
   classification:
     title: Genetic Classification
     type:  array
-    description: 'The genetic classification of this language. This property must be an array of language families (in English), with larger family groupings listed before smaller ones. For example, Spanish might have an array of the following strings: `Indo-European`, `Romance`, `Ibero-Romance`. For language isolates, this property should be an array containing the single string, `isolate`.'
+    description: 'The genetic classification of this language. This property must be an array of language families (in English), with larger family groupings listed before smaller ones. For example, Spanish might have an array of the following strings: `Indo-European`, `Romance`, `Ibero-Romance`. For language isolates, this property should be an array containing the single string, `isolate`. If a Language object represents a dialect, this property can be used to indicate the language to which the dialect belongs.'
     items:
       title: Language Family
       type:  string
