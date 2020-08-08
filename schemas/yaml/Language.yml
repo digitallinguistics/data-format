@@ -317,6 +317,12 @@ properties:
     format: uri
     description: 'A URL where the JSON data for this language can be found'
 
+  varietyOf:
+    title: Variety of
+    type:  object
+    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    description: 'A database reference to another Language object. This property is used to indicate the larger (synchronic) language variety that a smaller variety or dialect belongs to.'
+
 examples:
 
   - abbreviation: chiti
