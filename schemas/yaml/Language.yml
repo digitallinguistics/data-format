@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Language-9.0.0.json'
+$id:     'http://schemas.digitallinguistics.io/Language-9.1.0.json'
 title:   Language
 type:    object
 
@@ -68,7 +68,7 @@ properties:
   classification:
     title: Genetic Classification
     type:  array
-    description: 'The genetic classification of this language. This property must be an array of language families (in English), with larger family groupings listed before smaller ones. For example, Spanish might have an array of the following strings: `Indo-European`, `Romance`, `Ibero-Romance`. For language isolates, this property should be an array containing the single string, `isolate`.'
+    description: 'The genetic classification of this language. This property must be an array of language families (in English), with larger family groupings listed before smaller ones. For example, Spanish might have an array of the following strings: `Indo-European`, `Romance`, `Ibero-Romance`. For language isolates, this property should be an array containing the single string, `isolate`. If a Language object represents a dialect, this property can be used to indicate the language to which the dialect belongs.'
     items:
       title: Language Family
       type:  string
@@ -316,6 +316,12 @@ properties:
     type:   string
     format: uri
     description: 'A URL where the JSON data for this language can be found'
+
+  varietyOf:
+    title: Variety of
+    type:  object
+    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    description: 'A database reference to another Language object. This property is used to indicate the larger (synchronic) language variety that a smaller variety or dialect belongs to.'
 
 examples:
 
