@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Language-9.1.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Language-9.2.0.json",
   "title": "Language",
   "type": "object",
   "description": "DLx uses the term *language* broadly to refer to any speech variety - whether a language, dialect, idiolect, or even a historical variety. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).",
@@ -352,6 +352,17 @@
       "type": "object",
       "$ref": "http://schemas.digitallinguistics.io/Tags.json",
       "description": "A set of tags for this Language"
+    },
+    "templates": {
+      "title": "Word Templates",
+      "type": "array",
+      "description": "The set of Word Template objects by which this language is governed.",
+      "items": {
+        "title": "Word Template",
+        "type": "object",
+        "$ref": "http://schemas.digitallinguistics.io/WordTemplate.json",
+        "description": "A word template object"
+      }
     },
     "url": {
       "title": "URL",

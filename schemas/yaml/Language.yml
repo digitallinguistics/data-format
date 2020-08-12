@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Language-9.1.0.json'
+$id:     'http://schemas.digitallinguistics.io/Language-9.2.0.json'
 title:   Language
 type:    object
 
@@ -310,6 +310,16 @@ properties:
     type:  object
     $ref:  'http://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this Language'
+
+  templates:
+    title: Word Templates
+    type:  array
+    description: 'The set of Word Template objects by which this language is governed.'
+    items:
+      title: Word Template
+      type: object
+      $ref: 'http://schemas.digitallinguistics.io/WordTemplate.json'
+      description: 'A word template object'
 
   url:
     title:  URL
