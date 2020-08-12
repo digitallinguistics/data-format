@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://schemas.digitallinguistics.io/WordTemplate-1.0.0.json",
+  "title": "Word Template",
+  "type": "object",
+  "description": "A *Word Template* should be used to indicate the diferent slots to which a Lexeme object could belong in a specific lexical category.",
+  "required": [
+    "name",
+    "category"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "type": {
+      "title": "Type",
+      "type": "string",
+      "const": "WordTemplate",
+      "readOnly": true,
+      "description": "The type of object. Must be set to `WordTemplate`."
+    },
+    "category": {
+      "title": "Lexical Category",
+      "type": "string",
+      "description": "The lexical category that is governed by this Word Template"
+    },
+    "name": {
+      "title": "Word Template Name",
+      "type": "string",
+      "minProperties": 1,
+      "description": "The name of this Word Template. ADD RECOMMENATION."
+    },
+    "notes": {
+      "title": "Notes",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A collection of notes about this Word Template",
+      "items": {
+        "title": "Note",
+        "type": "object",
+        "$ref": "http://schemas.digitallinguistics.io/Note.json",
+        "description": "A note about this Word Template"
+      }
+    },
+    "slots": {
+      "title": "Slots",
+      "type": "array",
+      "uniqueItems": true,
+      "description": "A group of slot objects to which a lexeme can belong",
+      "items": {
+        "title": "Slot",
+        "type": "object",
+        "description": "A slot object represents a single slot in the construsction of a word.",
+        "required": [
+          "abbreviation",
+          "name",
+          "optional"
+        ],
+        "properties": {
+          "abbreviation": {
+            "title": "Slot Abbreviation",
+            "type": "string",
+            "$ref": "http://schemas.digitallinguistics.io/Abbreviation.json",
+            "description": "An abbreviation for this slot"
+          },
+          "name": {
+            "title": "Slot Name",
+            "type": "string",
+            "description": "The name for this slot"
+          },
+          "optional": {
+            "title": "Optional",
+            "type": "boolean",
+            "description": "When set to False, this field indicates that the slot must be filled."
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "type": "WordTemplate",
+      "category": "Derivational Morphemes??",
+      "name": "Algonquian Components",
+      "slots": [
+        {
+          "abbreviation": "Init",
+          "name": "Initial",
+          "optional": true
+        },
+        {
+          "abbreviation": "Med",
+          "name": "Medial",
+          "optional": true
+        },
+        {
+          "abbreviation": "Fin",
+          "name": "Final",
+          "optional": true
+        }
+      ],
+      "notes": [
+        {
+          "text": "Initials are also called roots."
+        },
+        {
+          "text": "Initials and finals are obligatory; medials are optional. (Caveat: Sometimes a final can be zero.)"
+        },
+        {
+          "text": "Finals determine the lexical category (part of speech) of the stem, and sometimes add additional meaning too."
+        }
+      ]
+    }
+  ]
+}
