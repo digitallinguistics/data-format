@@ -26,4 +26,5 @@ module.exports = {
   Utterance: require('./Utterance'),
   Word: require('./Word'),
   WordSet: require('./WordSet'),
+  WordTemplate: require('./WordTemplate'),
 };
