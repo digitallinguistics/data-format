@@ -40,40 +40,43 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this Word Template'
+    description: 'A collection of notes about this Word Template.'
     items:
       title:       Note
       type:        object
       $ref:        'http://schemas.digitallinguistics.io/Note.json'
-      description: 'A note about this Word Template'
+      description: 'A note about this Word Template.'
 
   slots:
     title:       Slots
     type:        array
     uniqueItems: true
-    description: 'A group of slot objects to which a lexeme can belong'
+    description: 'A group of objects describing the slots in this Word Template.'
     items:
+
       title:       Slot
       type:        object
-      description: 'A slot object represents a single slot in the construsction of a word.'
+      description: 'An object representing a single slot in a word template.'
       required:
         - abbreviation
         - name
         - optional
       properties:
+
         abbreviation:
           title:       Slot Abbreviation
           type:        string
           $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
-          description: 'An abbreviation for this slot'
+          description: 'An abbreviation for this slot.'
         name:
           title:       Slot Name
           type:        string
           description: 'The name for this slot'
+          description: 'The name for this slot, optionally in multiple languages.'
         optional:
           title:       Optional
           type:        boolean
-          description: 'When set to False, this field indicates that the slot must be filled.'
+          description: 'When set to `false`, this field indicates that the slot must be filled.'
 
 examples:
 
