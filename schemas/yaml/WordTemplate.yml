@@ -25,6 +25,11 @@ properties:
     type:        string
     description: 'The lexical category that is governed by this Word Template'
 
+  inflectionClass:
+    title: Inflection Class
+    $ref: 'http://schemas.digitallinguistics.io/MultiLangString.json'
+    description: 'The inflectional class that this Word Template applies to.'
+
   name:
     title:         Word Template Name
     type:          string
