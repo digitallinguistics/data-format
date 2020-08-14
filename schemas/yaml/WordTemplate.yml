@@ -7,7 +7,6 @@ description: 'A *Word Template* is an object that describes the morphological sl
 
 required:
   - name
-  - category
 
 additionalProperties: false
 
@@ -79,7 +78,7 @@ properties:
 
 examples:
 
-  - type: WordTemplate
+  - type:     WordTemplate
     category: Derivational Morphemes??
     name: Algonquian Components
     slots:
