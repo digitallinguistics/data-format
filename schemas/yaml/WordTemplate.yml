@@ -83,19 +83,19 @@ properties:
 
 examples:
 
-  - type:     WordTemplate
-    category: Derivational Morphemes??
-    name: Algonquian Components
+  - type:         WordTemplate
+    morphemeType: stem
+    name:         stem
     slots:
       - abbreviation: Init
         name:         Initial
-        optional:     true
+        optional:     false
       - abbreviation: Med
         name:         Medial
         optional:     true
       - abbreviation: Fin
         name:         Final
-        optional:     true
+        optional:     false
     notes:
       - text: 'Initials are also called roots.'
       - text: 'Initials and finals are obligatory; medials are optional. (Caveat: Sometimes a final can be zero.)'
