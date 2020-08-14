@@ -3,7 +3,7 @@ $id:     'http://schemas.digitallinguistics.io/WordTemplate-1.0.0.json'
 title:   Word Template
 type:    object
 
-description: 'A *Word Template* should be used to indicate the diferent slots to which a Lexeme object could belong in a specific lexical category.'
+description: 'A *Word Template* is an object that describes the morphological slots in a word.'
 
 required:
   - name
