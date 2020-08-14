@@ -70,8 +70,7 @@ properties:
           description: 'An abbreviation for this slot.'
         name:
           title:       Slot Name
-          type:        string
-          description: 'The name for this slot'
+          $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
           description: 'The name for this slot, optionally in multiple languages.'
         optional:
           title:       Optional
