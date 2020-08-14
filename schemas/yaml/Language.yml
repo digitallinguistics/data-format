@@ -314,12 +314,12 @@ properties:
   templates:
     title: Word Templates
     type:  array
-    description: 'The set of Word Template objects by which this language is governed.'
+    description: 'A set of word templates used in this language. Each item should be a Word Template object.'
     items:
       title: Word Template
-      type: object
-      $ref: 'http://schemas.digitallinguistics.io/WordTemplate.json'
-      description: 'A word template object'
+      type:  object
+      $ref:  'http://schemas.digitallinguistics.io/WordTemplate.json'
+      description: 'An object representing a word template.'
 
   url:
     title:  URL
