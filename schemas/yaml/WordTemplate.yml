@@ -25,9 +25,14 @@ properties:
     description: 'The lexical category that this Word Template applies to.'
 
   inflectionClass:
-    title: Inflection Class
-    $ref: 'http://schemas.digitallinguistics.io/MultiLangString.json'
+    title:        Inflection Class
+    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The inflectional class that this Word Template applies to.'
+
+  morphemeType:
+    title:       Morpheme Type
+    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    description: 'The type of morpheme that this Word Template applies to. Examples might be `stem`, `compound`, etc.'
 
   name:
     title:       Word Template Name
