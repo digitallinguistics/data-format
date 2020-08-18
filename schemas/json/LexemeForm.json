@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/LexemeForm-2.1.0.json",
+  "$id": "http://schemas.digitallinguistics.io/LexemeForm-2.2.0.json",
   "title": "Lexeme Form",
   "type": "object",
   "description": "The *base forms* of a lexeme are the minimal set of forms needed to determine the full set of inflectional possibilities of a lexeme. These include suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc., while the lexeme *man* has the base forms *man* and *men*. A base form does **not** refer to a regularly-inflected, predictable form like *being* or *cats*. Principal parts of verbs in Latin are another example of base forms, since they are the minimal set of forms that someone must know to determine all the inflectional possibilities of a verb.",
@@ -20,6 +20,11 @@
       "const": "LexemeForm",
       "readOnly": true,
       "description": "The type of object. Must be set to `LexemeForm`."
+    },
+    "abstract": {
+      "title": "Abstract",
+      "type": "boolean",
+      "description": "A True/False field used to indicate if a LexemeForm is an abstract form. For example, the field can be used to contrast an underlying representation from a surface realization."
     },
     "allomorphs": {
       "title": "Allomorphs",
@@ -284,6 +289,7 @@
   },
   "examples": [
     {
+      "abstract": false,
       "allomorphs": [
         {
           "environments": [
