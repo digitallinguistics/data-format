@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Text-6.0.0.json'
+$id:     'http://schemas.digitallinguistics.io/Text-6.1.0.json'
 title:   Text
 type:    object
 
@@ -208,7 +208,7 @@ examples:
     id:             5790c2b7-579c-4bb5-aa5e-537ae1ac06ca
     language:
       abbreviation: chiti
-      id:           3d91a22d-005b-4ec5-8151-09e44629f58f      
+      id:           3d91a22d-005b-4ec5-8151-09e44629f58f
     link:           https://explorer.digitallinguistics.io/languages/Chitimacha/texts/A1
     location:
       abbreviation: Charenton
