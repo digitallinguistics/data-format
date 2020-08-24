@@ -1,5 +1,5 @@
 $schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-2.1.0.json'
+$id:     'http://schemas.digitallinguistics.io/LexemeForm-2.2.0.json'
 title:   Lexeme Form
 type:    object
 
@@ -22,6 +22,11 @@ properties:
     const:    LexemeForm
     readOnly: true
     description: The type of object. Must be set to `LexemeForm`.
+
+  abstract:
+    title:       Abstract
+    type:        boolean
+    description: 'A Boolean (`true/false`) field used to indicate if a LexemeForm is an abstract form. If a form is an underlying representation, the value should be `true`. If the form is a surface realization, the value should be `false` (or may be omitted; a value of `false` is assumed by default).'
 
   allomorphs:
 
@@ -252,7 +257,8 @@ properties:
     description: If this form is a variant of another lexeme form, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:
-  - allomorphs:
+  - abstract: false
+    allomorphs:
       - environments:
           - _m
         syllableStructure: CVC
