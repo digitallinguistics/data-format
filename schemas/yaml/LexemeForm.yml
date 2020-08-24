@@ -26,7 +26,7 @@ properties:
   abstract:
     title:       Abstract
     type:        boolean
-    description: 'A True/False field used to indicate if a LexemeForm is an abstract form. For example, the field can be used to contrast an underlying representation from a surface realization.'
+    description: 'A Boolean (`true/false`) field used to indicate if a LexemeForm is an abstract form. If a form is an underlying representation, the value should be `true`. If the form is a surface realization, the value should be `false` (or may be omitted; a value of `false` is assumed by default).'
 
   allomorphs:
 
