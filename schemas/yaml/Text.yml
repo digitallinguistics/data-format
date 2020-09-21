@@ -116,11 +116,15 @@ properties:
           type:      string
           minLength: 1
 
-  language:
-    title: Language (DatabaseReference)
-    type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
-    description: The language of this Text. This property is most useful when working with lexical data from multiple languages.
+  languages:
+    title:       Languages
+    type:        array
+    description: A list of languages used in this text. If only one language is provided, all utterances in the text are assumed to be in that language, unless otherwise specified on specific utterances (using the `Utterance.language` property).
+    items:
+      title:       Language (DatabaseReference)
+      type:        object
+      $ref:        'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      description: A database reference to a language that is used in this text. This property is most useful when working with lexical data from multiple languages.
 
   link:
     title:  Link
@@ -207,8 +211,8 @@ examples:
      - personal narrative
     id:             5790c2b7-579c-4bb5-aa5e-537ae1ac06ca
     language:
-      abbreviation: chiti
-      id:           3d91a22d-005b-4ec5-8151-09e44629f58f
+      - abbreviation: chiti
+        id:           3d91a22d-005b-4ec5-8151-09e44629f58f
     link:           https://explorer.digitallinguistics.io/languages/Chitimacha/texts/A1
     location:
       abbreviation: Charenton
