@@ -157,6 +157,11 @@ properties:
     type:  string
     description: The scientific name for this item
 
+  semanticClass:
+    title: Semantic Class
+    type:  string
+    description: The semantic class that this lexeme falls into. If this class affects the morphosyntactic behavior of the item, use the Sense.category property instead. The semanticClass property is for purely semantic classification. Note that the semanticClass field is different from the semanticDomains field. A word may be a member of a semantic domain (for example, "body parts"), but its membership in that domain might have no effect on its morphosyntactic behavior or its semantic interpretation, if for example the grammar of the language does not treat body parts in any special way. The semanticClass field should only be used for sets of words that share semantic behaviors.
+
   semanticDomains:
     title:       Semantic Domains
     type:        array
