@@ -1,12 +1,15 @@
 <!-- This readme is targeted at developers. The general user readme is in /.github/README.md -->
 
-# Data Format for Digital Linguistics (Daffodil)
+# Data Format for Digital Linguistics (DaFoDiL)
 
-The DLx data format is a set of recommendations (i.e. schemas or specifications) for how to store linguistic data in JSON- a simple, human-readable text format which is supported by every major programming language, and is widely used for data storage and interchange on the web. The DLx format is useful for anybody who manages a linguistic database.
+The DLx data format is a set of recommendations (i.e. schemas or specifications) for how to store linguistic data in JSON- a simple, human-readable text format which is supported by every major programming language, and is widely used for data storage and interchange on the web. The DLx format is useful for anybody who manages linguistic data and knows a programming language. All major programming languages support JSON natively, allowing you to easily convert to and from DaFoDiL format.
+
+<!-- uncomment this when Lotus and TooLiP are live -->
+<!-- If you do not have any programming experience and are looking for a web-based tool for managing linguistic data instead, check out the DLx [Lotus app][Lotus] or [Tools for Linguistic Productivity][TooLiP] (<abbr title="TooLiP">TooLiP</abbr>). -->
 
 The format includes recommendations (called "schemas") for storing data about every kind of linguistic entity (e.g. Language, Morpheme, Text, etc.). It is part of a broader project called [Digital Linguistics][About] (DLx), which aims to create web-based tools for managing linguistic data, and to encourage best practices in digital linguistic data management.
 
-This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as DaFoDiL, i.e. Daffodil), in the form of a number of schemas. There is one schema for each type of linguistic object (e.g. Language, Morpheme, Text, etc), and schemas for various non-linguistic objects as well (e.g. Person, Location, etc.). The schemas follow the [JSON Schema][JSON Schema] format for describing the structure of JSON data.
+This repository contains the specification for the Data Format for Digital Linguistics (abbreviated as <abbr title="Data Format for Digital Linguistics">DaFoDiL</abbr>), in the form of a number of schemas. There is one schema for each type of linguistic object (e.g. Language, Morpheme, Text, etc), and schemas for various non-linguistic objects as well (e.g. Person, Location, etc.). The schemas follow the [JSON Schema][JSON Schema] format for describing the structure of JSON data.
 
 See the [documentation][Docs] for human-readable versions of the schemas, and an example of the schema in use.
 
@@ -127,11 +130,11 @@ The following is a list of principles and best practices to keep in mind when wo
 
 * **YAML vs. JSON**
 
-    * The Daffodil schemas may be applied to either YAML or JSON documents. It may be easier to write your linguistic data in YAML format, and then convert it to JSON for storage in a database.
+    * The DaFoDiL schemas may be applied to either YAML or JSON documents. It may be easier to write your linguistic data in YAML format, and then convert it to JSON for storage in a database.
 
 * **Documents**
 
-    * The Daffodil format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
+    * The DaFoDiL format is designed to work well with _document databases_, where each item is stored as a single document (typically in JSON) rather than as records in a table. Schemas that include a comment that they are top-level database objects should be their own documents in the database. Other schemas will be subparts of those documents.
 
 * **IDs & Cross-References**
 
@@ -185,9 +188,11 @@ Tests are run using [Jasmine][Jasmine] in Node.js. Run them from the command lin
 [Issues]:       https://github.com/digitallinguistics/spec/issues
 [Jasmine]:      https://jasmine.github.io/
 [License]:      https://github.com/digitallinguistics/spec/blob/master/LICENSE.md
+[Lotus]:        https://app.digitallinguistics.io
 [NDJSON]:       http://ndjson.org/
 [npm]:          https://www.npmjs.com/package/@digitallinguistics/spec
 [JSON Schema]:  http://json-schema.org/
+[TooLiP]:       https://tools.digitallinguistics.io
 [UUID]:         https://www.uuidgenerator.net/
 [Validators]:   http://json-schema.org/implementations.html#validators
 [Zenodo]:       http://doi.org/10.5281/zenodo.594557
