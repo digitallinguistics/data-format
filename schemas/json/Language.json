@@ -276,11 +276,17 @@
         }
       }
     },
-    "glottolog": {
+    "glottocode": {
       "title": "Glottolog Code",
       "type": "string",
       "pattern": "^[a-z]{4}[0-9]{4}$",
       "description": "The Glottolog code for this language variety, as a String in the format abcd1234"
+    },
+    "glottolog": {
+      "title": "Glottolog Code (OLD)",
+      "type": "string",
+      "pattern": "^[a-z]{4}[0-9]{4}$",
+      "description": "This field will no longer be supported in v2.0. It has been replaced by Language.glottocode."
     },
     "iso": {
       "title": "ISO 639-3 Code",
@@ -438,6 +444,7 @@
           "transcription": "Chetimachas"
         }
       ],
+      "glottocode": "chit1248",
       "glottolog": "chit1248",
       "id": "4d633ee3-25ba-4add-83cf-b588ba51f758",
       "iso": "ctm",
@@ -782,6 +789,7 @@
           }
         }
       ],
+      "glottocode": "gusi1247",
       "glottolog": "gusi1247",
       "id": "708d1bd4-84f6-42e5-8b09-5c64493441b3",
       "iso": "guz",

@@ -238,11 +238,17 @@ properties:
           $ref:        'http://schemas.digitallinguistics.io/Note.json'
           description: A note about this exonym, such as who uses this name and where, or perhaps its etymology.
 
-  glottolog:
+  glottocode:
     title:       Glottolog Code
     type:        string
     pattern:     '^[a-z]{4}[0-9]{4}$'
     description: The Glottolog code for this language variety, as a String in the format abcd1234
+
+  glottolog:
+    title:       Glottolog Code (OLD)
+    type:        string
+    pattern:     '^[a-z]{4}[0-9]{4}$'
+    description: This field will no longer be supported in v2.0. It has been replaced by Language.glottocode.
 
   iso:
     title:       ISO 639-3 Code
@@ -368,6 +374,7 @@ examples:
         note:
           text: This is the name commonly used for the language by French colonials, borrowed from the Chitimacha name for the language, _Sitimaxa_.
       - transcription: Chetimachas
+    glottocode:         chit1248
     glottolog:          chit1248
     id:                 4d633ee3-25ba-4add-83cf-b588ba51f758
     iso:                ctm
@@ -565,6 +572,7 @@ examples:
           swa: Kikisii
         note:
           text: This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
+    glottocode:    gusi1247
     glottolog:    gusi1247
     id:           708d1bd4-84f6-42e5-8b09-5c64493441b3
     iso:          guz
