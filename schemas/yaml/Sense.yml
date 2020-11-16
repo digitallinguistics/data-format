@@ -49,7 +49,7 @@ properties:
   category:
     title: Lexical Category (Part of Speech, Morphosyntactic Class, etc.)
     $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
-    description: The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix *‑s* would have this this property set to `verb`, and the English derivational suffix *‑ize* would have this property set to `noun`.
+    description: The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. Lexical subcategories can be specified by a separating colon. For example, mass nouns in English might be noun:mass. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix *‑s* would have this this property set to `verb`, and the English derivational suffix *‑ize* would have this property set to `noun`.
 
   definition:
     title: Definition
