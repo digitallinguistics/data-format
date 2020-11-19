@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://schemas.digitallinguistics.io/Sense-2.0.0.json",
+  "$id": "http://schemas.digitallinguistics.io/Sense-2.1.0.json",
   "title": "Sense",
   "type": "object",
   "description": "A *sense* is one of the possible meanings of a lexeme. For example, the lexeme *run* has many different senses, such as as \"run in a race\" and \"run water in a sink\". It is up to the linguist to decide whether two particular uses of a lexeme count as the same sense or different senses.",
@@ -26,6 +26,11 @@
       "type": "string",
       "description": "An abstract representation of the argument structure for this sense"
     },
+    "baseCategory": {
+      "title": "Base Category",
+      "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
+      "description": "If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to, optionally in multiple languages. This field should generally (but not obligatorily) be used in tandem with the Sense.derives property."
+    },
     "bibliography": {
       "title": "Bibliography",
       "type": "array",
@@ -42,7 +47,7 @@
     "category": {
       "title": "Lexical Category (Part of Speech, Morphosyntactic Class, etc.)",
       "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-      "description": "The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix *‑s* would have this this property set to `verb`, and the English derivational suffix *‑ize* would have this property set to `noun`."
+      "description": "The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. Lexical subcategories can be specified by a separating colon. For example, mass nouns in English might be noun:mass. If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to. For example, the English verb suffix *‑s* would have this this property set to `verb`, and the English derivational suffix *‑ize* would have this property set to `noun`."
     },
     "definition": {
       "title": "Definition",
@@ -171,6 +176,11 @@
       "title": "Scientific Name",
       "type": "string",
       "description": "The scientific name for this item"
+    },
+    "semanticClass": {
+      "title": "Semantic Class",
+      "type": "string",
+      "description": "The semantic class that this lexeme falls into. If this class affects the morphosyntactic behavior of the item, use the Sense.category property instead. The semanticClass property is for purely semantic classification. Note that the semanticClass field is different from the semanticDomains field. A word may be a member of a semantic domain (for example, \"body parts\"), but its membership in that domain might have no effect on its morphosyntactic behavior or its semantic interpretation, if for example the grammar of the language does not treat body parts in any special way. The semanticClass field should only be used for sets of words that share semantic behaviors."
     },
     "semanticDomains": {
       "title": "Semantic Domains",
