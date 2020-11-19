@@ -147,7 +147,7 @@ properties:
   writingSystem:
     title: Writing System
     type: string
-    pattern: '^[A-Z]{1}[a-z]{3}[0-9]{3}$'
+    pattern: '^[A-Z]{1}[a-z]{3}$'
     description: 'The writing system used by this orthography. Should be a valid 4-letter ISO 15924 script code.'
 
 examples:
