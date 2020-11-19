@@ -27,10 +27,10 @@
 
 - [ ] **Update examples** in the affected schemas to reflect the changes you made.
 
-- [ ] **Build the project** (`npm run build`)
+- [ ] **Build the project** (`npm run build`).
 
 - [ ] **Run the tests** (`npm test`) and fix issues that arise. If you find an issue that is unrelated to the one you are working on, open a new issue for it.
 
 - [ ] **Update the project documentation** (`README.md`, `CONTRIBUTING.md`, etc.) to reflect the changes you made, if applicable.
 
-- [ ] **Build the project documentation** (`npm run docs`) and then inspect it for your changes (open `docs/index.html`)
+- [ ] **Build the project documentation** (`npm run docs`) and then inspect it for your changes (open `docs/index.html` in a browser).
