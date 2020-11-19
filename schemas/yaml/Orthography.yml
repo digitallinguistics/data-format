@@ -192,4 +192,4 @@ examples:
       - '"'
     type:         Orthography
     url:          https://data.digitallinguistics.io/languages/Chitimacha/orthographies/Modern
-    writingSystem: Latn215
+    writingSystem: Latn
