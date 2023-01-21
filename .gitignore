@@ -215,6 +215,5 @@ pip-log.txt
 
 node_modules/
 
-# custom
+# Project
 nodemon.json
-docs
