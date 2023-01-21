@@ -1,0 +1,1 @@
+export { default as Abbreviation } from './json/Abbreviation.json' assert { type: 'json' }
