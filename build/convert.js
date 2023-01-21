@@ -14,9 +14,9 @@ import {
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname  = path.dirname(__filename)
-const yamlPath   = path.join(__dirname, `schemas`)
+const yamlPath   = path.join(__dirname, `../schemas`)
 const files      = await readDir(yamlPath)
-const jsonPath   = path.join(__dirname, `json`)
+const jsonPath   = path.join(__dirname, `../json`)
 
 await emptyDir(jsonPath)
 
