@@ -27,6 +27,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@digitallinguistics/eslint-config": "^0.3.0",
+    "eslint": "^8.32.0"
+  }
 }

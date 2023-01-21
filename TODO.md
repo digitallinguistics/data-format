@@ -1,15 +1,13 @@
 # To Do
 
-- [ ] package.json
-- [ ] readme (combine both existing ones)
-- [ ] contributing
-- [ ] issue template
-- [ ] ESLint
+- [ ] test for year in license
 - [ ] tests
+- [ ] convert YAML to JSON
 - [ ] create documentation pages
 - [ ] deploy docs to GitHub Pages
 - [ ] publish to npm
-- [ ] convert YAML to JSON
 - [ ] maintainers
-- [ ] test for year in license
 - [ ] PR template
+- [ ] readme (combine both existing ones)
+- [ ] contributing
+- [ ] issue template
