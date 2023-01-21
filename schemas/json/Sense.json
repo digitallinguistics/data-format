@@ -29,7 +29,7 @@
     "baseCategory": {
       "title": "Base Category",
       "$ref": "http://schemas.digitallinguistics.io/MultiLangString.json",
-      "description": "If the current lexeme is an affix or other grammatical morpheme morpheme, this field should be used to describe the category that the morpheme attaches to, optionally in multiple languages. This field should generally (but not obligatorily) be used in tandem with the Sense.derives property."
+      "description": "If the current lexeme is an affix or other grammatical morpheme, this field should be used to describe the category that the morpheme attaches to, optionally in multiple languages. This field should generally (but not obligatorily) be used in tandem with the Sense.derives property."
     },
     "bibliography": {
       "title": "Bibliography",
