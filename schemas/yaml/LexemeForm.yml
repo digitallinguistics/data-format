@@ -94,7 +94,7 @@ properties:
     title: Etymon
     type:  object
     $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
-    description: A database reference to a Lexeme in another lexicon to specify the historical origin of this form.
+    description: A database reference to a Lexeme Form in another lexicon to specify the historical origin of this form.
 
   examples:
     title:       Examples
