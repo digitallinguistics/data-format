@@ -1,0 +1,32 @@
+{
+  "name": "@digitallinguistics/schemas",
+  "version": "0.1.0",
+  "description": "The Data Format for Digital Linguistics (DaFoDiL)",
+  "keywords": [
+    "linguistics",
+    "language",
+    "digital linguistics",
+    "DLx",
+    "digital humanities",
+    "documentary linguistics",
+    "corpus linguistics"
+  ],
+  "homepage": "https://digitallinguistics.io/",
+  "bugs": "https://github.com/digitallinguistics/data-format/issues",
+  "license": "MIT",
+  "author": {
+    "name": "Daniel W. Hieber",
+    "url": "https://github.com/dwhieb"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitallinguistics/data-format.git"
+  },
+  "scripts": {},
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
