@@ -1,6 +1,5 @@
 # To Do
 
-- [ ] test all the schemas against the JSON Schema specification
 - [ ] create documentation pages
 - [ ] deploy docs to GitHub Pages
 - [ ] publish to npm
