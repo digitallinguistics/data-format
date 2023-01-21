@@ -1,5 +1,6 @@
 # To Do
 
+- [ ] package.json
 - [ ] readme (combine both existing ones)
 - [ ] contributing
 - [ ] issue template
