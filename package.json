@@ -23,12 +23,16 @@
     "type": "git",
     "url": "https://github.com/digitallinguistics/data-format.git"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "mocha **.test.js"
+  },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
     "@digitallinguistics/eslint-config": "^0.3.0",
-    "eslint": "^8.32.0"
+    "chai": "^4.3.7",
+    "eslint": "^8.32.0",
+    "mocha": "^10.2.0"
   }
 }

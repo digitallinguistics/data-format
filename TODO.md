@@ -1,6 +1,5 @@
 # To Do
 
-- [ ] test for year in license
 - [ ] tests
 - [ ] convert YAML to JSON
 - [ ] create documentation pages
