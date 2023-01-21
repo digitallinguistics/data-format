@@ -28,8 +28,6 @@
   },
   "scripts": {
     "build": "node build/convert.js",
-    "docs": "node build/docs.js",
-    "pretest": "npm run build",
     "test": "mocha **.test.js"
   },
   "publishConfig": {
@@ -42,7 +40,6 @@
     "eslint": "^8.32.0",
     "fs-extra": "^11.1.0",
     "js-yaml": "^4.1.0",
-    "mocha": "^10.2.0",
-    "wetzel": "^0.2.3"
+    "mocha": "^10.2.0"
   }
 }
