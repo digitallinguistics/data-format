@@ -19,11 +19,15 @@
     "url": "https://github.com/dwhieb"
   },
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/digitallinguistics/data-format.git"
   },
   "scripts": {
+    "build": "node build.js",
     "test": "mocha **.test.js"
   },
   "publishConfig": {
@@ -33,6 +37,8 @@
     "@digitallinguistics/eslint-config": "^0.3.0",
     "chai": "^4.3.7",
     "eslint": "^8.32.0",
+    "fs-extra": "^11.1.0",
+    "js-yaml": "^4.1.0",
     "mocha": "^10.2.0"
   }
 }
