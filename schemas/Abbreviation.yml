@@ -1,10 +1,10 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Abbreviation-2.1.0.json'
+$schema: https://json-schema.org/draft/2020-12/schema
+$id:     http://schemas.digitallinguistics.io/Abbreviation-2.2.0.json
 title:   Abbreviation
 type:    string
-pattern: '^[(a-z)|(A-Z)|(0-9)]+$'
+pattern: ^\w+$
 
-description: 'A human-readable abbreviation, containing on letters `a-z`, `A-Z`, and numbers `0-9` (no spaces allowed).'
+description: A human-readable abbreviation, containing only the letters `A-Z`, `a-z`, numbers `0-9`, and underscores. No spaces allowed.
 
 examples:
   - chiti
