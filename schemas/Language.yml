@@ -203,23 +203,27 @@ properties:
     description: A high-level overview of the Language and the sociohistorical and documentary context for the accompanying data
 
   exonyms:
-    title: Exonyms
-    type:  array
-    description: A list of exonyms for this language (names of the language in _other_ languages). For the canonical scientific name of the language (usually in English), use the `name` field. This field is for any additional exonyms beyond the canonical scientific name. For autonyms (names of the language _in_ the language), use the `autonyms` field.
+    title:       Exonyms
+    type:        array
+    description: 'A list of exonyms for this language (names of the language in _other_ languages). For the canonical scientific name of the language (usually in English), use the `name` field. This field is for any additional exonyms beyond the canonical scientific name. For autonyms (names of the language _in_ the language), use the `autonyms` field.'
     items:
       title: Exonym
       type:  object
       required:
         - transcription
       properties:
-        transcription:
-          title:       Exonym Transcription
-          $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
-          description: A transcription of this exonym, optionally in multiple languages.
+        language:
+          title:       Exonym Language
+          $ref:        https://schemas.digitallinguistics.io/LanguageTag.json
+          description: 'The language that the exonym is from, as an IETF language tag.'
         note:
           title:       Note
           $ref:        'https://schemas.digitallinguistics.io/Note.json'
-          description: A note about this exonym, such as who uses this name and where, or perhaps its etymology.
+          description: 'A note about this exonym, such as who uses this name and where, or perhaps its etymology.'
+        transcription:
+          title:       Exonym Transcription
+          type:        string
+          description: A transcription of this exonym, as a simple string rather than a MultiLangString/Transcription.
 
   glottocode:
     title:       Glottolog Code
