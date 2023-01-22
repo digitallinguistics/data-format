@@ -1,0 +1,19 @@
+$schema: https://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/DatabaseReference.json
+title:   Database Reference
+
+description: 'A reference to an item in a database. The value of the Database Reference will depend on your database model. In relational databases, this will probably be a unique ID, formatted as a string or integer. For document databases, this might be an entire embedded object, or a partially embededed object containing only a key subset of fields.'
+
+examples:
+
+  # A unique string ID.
+  - 888a2165-9e85-483a-9c39-26d6a501ad66
+
+  # A unique numeric ID.
+  - 93487
+
+  # A partially-embedded Person object.
+  - id:           0e2233d8-e51a-4332-9915-9f1baed3578c
+    abbreviation: JS
+    familyName:   Smith
+    givenName:    John
