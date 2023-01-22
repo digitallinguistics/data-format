@@ -49,14 +49,11 @@ properties:
       description: 'An annotation on this text'
 
   bibliography:
-    title: Bibliography
-    type:  array
-    description: A list of citations to any bibliographic sources concerning or relating to this Text
+    title:       Bibliography
+    type:        array
+    description: 'A list of citations to any bibliographic sources concerning or relating to this Text.'
     items:
-      title: Citation
-      type:  object
-      $ref: 'https://schemas.digitallinguistics.io/Citation.json'
-      description: A citation to a bibliographic source about this text
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   contributors:
     title: Contributors (People)
@@ -142,7 +139,7 @@ properties:
     title: Media
     type:  array
     uniqueItems: true
-    description: 'An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well. Media associated with a text are automatically considered to be part of the same database bundle as the Text.'
+    description: 'An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well.'
     items:
       title: 'Media Items (Database Reference)'
       type:  object

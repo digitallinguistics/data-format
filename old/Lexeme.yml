@@ -54,11 +54,7 @@ properties:
     uniqueItems: true
     description: "A list of citations to attested bibliographic sources where this lexeme appears or is discussed. For precision's sake, it is recommended that sources be listed for specific senses or forms of a lexeme whenever possible."
     items:
-      title:         Citation
-      type:          object
-      $ref:          'https://schemas.digitallinguistics.io/Citation.json'
-      referenceType: Citation
-      description:   A citation to an attested source for this lexeme.
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   citationForm:
     title: Citation Form

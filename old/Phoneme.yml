@@ -57,12 +57,9 @@ properties:
     title:       Bibliography
     type:        array
     uniqueItems: true
-    description: A collection of citations to bibliographic sources about this phoneme
+    description: 'A collection of citations to bibliographic sources about this phoneme.'
     items:
-      title:       Citation
-      type:        object
-      $ref:        'https://schemas.digitallinguistics.io/Citation.json'
-      description: A citation to a bibliographic source about this phoneme
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   features:
     title:       Features

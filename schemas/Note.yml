@@ -10,6 +10,11 @@ required:
 
 properties:
 
+  citation:
+    title:       Citation
+    $ref:        https://resource.citationstyles.org/schema/latest/input/json/csl-citation.json#/citationItems/items
+    description: 'A citation for this note.'
+
   dateCreated:
     title:       Date Created
     type:        string
@@ -32,9 +37,9 @@ properties:
     description: 'The language that the note is written in, as an IETF language tag.'
 
   source:
-    title:       Source (Person)
+    title:       'Source (Database Reference: Person)'
     $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-    description: 'A database reference to a Person object describing the person who is the source of the information in this Note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.'
+    description: 'The person who is the source of the information in this note. This is not necessarily the person who wrote it. For example, a linguist could make a note based on something that a speaker reports, in which case the speaker should be listed as the source.'
 
   tags:
     title:       Tags

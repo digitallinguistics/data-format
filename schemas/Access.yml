@@ -35,6 +35,7 @@ properties:
   notes:
     title:       Access Notes
     type:        array
+    uniqueItems: true
     description: 'Notes about access conditions for this resource, or any other special considerations regarding who should have access.'
     items:
       $ref: 'https://schemas.digitallinguistics.io/Note.json'

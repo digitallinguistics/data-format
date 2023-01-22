@@ -22,15 +22,14 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this Annotation.'
+    description: 'A set of notes about this annotation.'
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
   tags:
     title:       Tags
-    type:        object
     $ref:        https://schemas.digitallinguistics.io/Tags.json
-    description: 'A set of tags for this Annotation.'
+    description: 'A set of tags for this annotation.'
 
   type:
     title:       Type

@@ -61,9 +61,7 @@ properties:
     uniqueItems: true
     description: A collection of citations to bibliographic references about this language.
     items:
-      title:       Citation
-      $ref:        'https://schemas.digitallinguistics.io/Citation.json'
-      description: A citation to a bibliographic source about this language
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   classification:
     title: Genetic Classification

@@ -46,12 +46,9 @@ properties:
     title:       Bibliography
     type:        array
     uniqueItems: true
-    description: A collection of citations to bibliographic sources about this location
+    description: 'A collection of citations to bibliographic sources about this location.'
     items:
-      title: Citation
-      type:  object
-      $ref: 'https://schemas.digitallinguistics.io/Citation.json'
-      description: A citation to a bibliographic source about this location
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   date:
     title: 'Date'

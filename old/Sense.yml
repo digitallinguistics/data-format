@@ -37,13 +37,9 @@ properties:
     title:       Bibliography
     type:        array
     uniqueItems: true
-    description: A list of citations to attested sources where this sense appears or is discussed. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.
+    description: 'A list of citations to attested sources where this sense appears or is discussed. For precision's sake, sources should be listed for specific senses of a lexeme rather than the lexeme whenever possible.'
     items:
-      title:         Citation
-      type:          object
-      $ref:          'https://schemas.digitallinguistics.io/Citation.json'
-      referenceType: Citation
-      description:   An attested source for this sense. This will be a citation to a published text in which the sense appears.
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   category:
     title: Lexical Category (Part of Speech, Morphosyntactic Class, etc.)

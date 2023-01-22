@@ -1,4 +1,5 @@
 import Abbreviation from './json/Abbreviation.json' assert { type: 'json' }
+import Bundle from './json/Bundle.json' assert { type: 'json' }
 import Access from './json/Access.json' assert { type: 'json' }
 import Address from './json/Address.json' assert { type: 'json' }
 import Annotation from './json/Annotation.json' assert { type: 'json' }
@@ -12,6 +13,7 @@ export default {
   Access,
   Address,
   Annotation,
+  Bundle,
   DatabaseReference,
   LanguageTag,
   Note,
