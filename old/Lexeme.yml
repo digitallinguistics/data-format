@@ -258,28 +258,6 @@ properties:
     $ref:        '#/$defs/lemma'
     description: 'A *lemma* is the form of a lexeme conventionally used to represent that lexeme. It is typically (but not always) used as the headword in dictionary entries. It may differ drastically from the citation form. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc., but the citation form is typically given in the infinitive as *to be*. The Lemma object contains information about the lemma and how it should be displayed. Lemmas may be represented in multiple orthographies. They should include any relevant leading or trailing tokens (e.g. hyphens, equal signs).'
 
-  lexicalRelations:
-    title:       Lexical Relations
-    type:        array
-    uniqueItems: true
-    description: A list of the lexical relations that this lexeme has to other lexemes. Each item is a Database Reference, and must also have a property called `relation`, indicating the type of lexical relation. For precision's sake, lexical relations should be specified for individual senses rather than the entire lexeme whenever possible.
-    items:
-      allOf:
-
-        - title: Lexeme (Database Reference)
-          type:  object
-          $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-          description: A database reference representing a lexical relation between two lexemes or senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation.
-
-        - required:
-            - relation
-          properties:
-            relation:
-              title: Relation Type
-              type:  string
-              $ref: 'https://schemas.digitallinguistics.io/Abbreviation.json'
-              description: "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
-
   lexemeType:
     title: Lexeme Type
     type:  string
