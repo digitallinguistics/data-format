@@ -11,35 +11,34 @@ required:
 properties:
 
   abbreviation:
-    title: Abbreviation
-    type:  string
-    $ref:  'https://schemas.digitallinguistics.io/Abbreviation.json'
-    description: A short, human-readable abbreviation for this Language
+    title:       Abbreviation
+    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+    description: 'A short, human-readable abbreviation for this Language.'
 
   access:
-    title: Access Conditions
-    type:  object
-    $ref:  'https://schemas.digitallinguistics.io/Access.json'
-    description: An object describing who may have access to materials on this language.
+    title:       Access Conditions
+    type:        object
+    $ref:        'https://schemas.digitallinguistics.io/Access.json'
+    description: 'An object describing who may have access to materials on this language.'
 
   autonyms:
-    title: Autonyms
-    type:  array
-    description: A list of objects describing autonyms for this language (names for this language _in_ the language itself). For the canonical scientific name, use the `name` field instead. For other ways of referring to this language by outsiders, use the `exonyms` field.
+    title:       Autonyms
+    type:        array
+    description: A list of autonyms for this language (names for this language _in_ the language itself). For the canonical scientific name, use the `name` field instead. For other ways of referring to this language by outsiders, use the `exonyms` field.
     items:
       title: Autonym
       type:  object
       required:
         - transcription
       properties:
-        transcription:
-          title: Autonym Transcription
-          $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
-          description: A transcription of this autonym, optionally in multiple orthographies.
         note:
-          title: Note
-          $ref:  'https://schemas.digitallinguistics.io/Note.json'
-          description: A note about this autonym, such as who uses this name and where, or perhaps its etymology.
+          title:       Note
+          $ref:        https://schemas.digitallinguistics.io/Note.json
+          description: 'A note about this autonym, such as who uses this name and where, or perhaps its etymology.'
+        transcription:
+          title:       Autonym Transcription
+          $ref:        https://schemas.digitallinguistics.io/Transcription.json
+          description: 'A transcription of this autonym, optionally in multiple orthographies.'
 
   bibliography:
     title:       Bibliography
