@@ -1,11 +1,9 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Address-2.2.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Address.json
 title:   Address
 type:    object
 
-description: A postal Address
-
-additionalProperties: true
+description: 'A postal Address.'
 
 properties:
 
@@ -19,7 +17,7 @@ properties:
   streetAddress:
     title:       Street Address
     type:        string
-    description: The street address, not including apartment or unit number
+    description: 'The street address, not including apartment or unit number.'
 
   apartmentNumber:
     title:       'Apartment / Unit Number'
@@ -29,27 +27,27 @@ properties:
   postalBoxNumber:
     title:       Postal Box Number
     type:        string
-    description: The postal box number
+    description: 'The postal box number.'
 
   locality:
     title:       'Locality / City'
     type:        string
-    description: The locality or city for this Address
+    description: 'The locality or city for this Address.'
 
   region:
     title:       'Region / State'
     type:        string
-    description: The region or state for this Address
+    description: 'The region or state for this Address.'
 
   country:
     title:       Country
     type:        string
-    description: The country this address is located in
+    description: 'The country this address is located in.'
 
   postalCode:
     title:       Postal Code
     type:        string
-    description: The postal code for this address (as a string rather than a number)
+    description: 'The postal code for this address (as a string rather than a number).'
 
 examples:
 

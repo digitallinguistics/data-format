@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/BibliographicSource-1.0.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/BibliographicSource-1.0.0.json'
 title:   Bibliographic Source
 type:    object
 
@@ -54,7 +54,7 @@ properties:
 
   citationKey:
     title:       Citation Key
-    $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:        'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: A citation key which must be a valid Abbreviation. This field can be used by bibliographic reference management software like Mendeley or Zotero to store the citation key for a source.
 
   city:

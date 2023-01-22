@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Orthography-3.3.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Orthography-3.3.0.json'
 title:   Orthography
 type:    object
 
@@ -27,7 +27,7 @@ properties:
   abbreviation:
     title: Abbreviation
     type:  string
-    $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: 'An abbreviation for this Orthography'
 
   direction:
@@ -73,7 +73,7 @@ properties:
 
         description:
           title:       'Description'
-          $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+          $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
           description: 'A learner-friendly description of the pronunciation of this grapheme'
 
         form:
@@ -108,7 +108,7 @@ properties:
 
   name:
     title: 'Orthography Name'
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The name of this orthography (e.g. `Practical`, `Phonemic`), optionally in multiple languages (e.g. both `Phonemic` and `Fonémica`). The name of the orthography must be provided in at least one language.'
 
   notes:
@@ -119,7 +119,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref: 'http://schemas.digitallinguistics.io/Note.json'
+      $ref: 'https://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this orthography'
 
   punctuation:
@@ -135,7 +135,7 @@ properties:
   tags:
     title: Tags
     type:  object
-    $ref: 'http://schemas.digitallinguistics.io/Tags.json'
+    $ref: 'https://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this orthography'
 
   url:

@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Language-9.2.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Language-9.2.0.json'
 title:   Language
 type:    object
 
@@ -27,13 +27,13 @@ properties:
   abbreviation:
     title: Abbreviation
     type:  string
-    $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: A short, human-readable abbreviation for this Language
 
   access:
-    title: Access Rights
+    title: Access Conditions
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Access.json'
+    $ref:  'https://schemas.digitallinguistics.io/Access.json'
     description: An object describing who may have access to materials on this language.
 
   autonyms:
@@ -48,11 +48,11 @@ properties:
       properties:
         transcription:
           title: Autonym Transcription
-          $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+          $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
           description: A transcription of this autonym, optionally in multiple orthographies.
         note:
           title: Note
-          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          $ref:  'https://schemas.digitallinguistics.io/Note.json'
           description: A note about this autonym, such as who uses this name and where, or perhaps its etymology.
 
   bibliography:
@@ -62,7 +62,7 @@ properties:
     description: A collection of citations to bibliographic references about this language.
     items:
       title:       Citation
-      $ref:        'http://schemas.digitallinguistics.io/Citation.json'
+      $ref:        'https://schemas.digitallinguistics.io/Citation.json'
       description: A citation to a bibliographic source about this language
 
   classification:
@@ -82,7 +82,7 @@ properties:
     items:
       title: 'Contributor (Person - Database Reference)'
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: 'A database reference to a Person object describing a contributor'
 
   dateCreated:
@@ -123,7 +123,7 @@ properties:
         location:
           title:       'Location'
           type:        object
-          $ref:        'http://schemas.digitallinguistics.io/Location.json'
+          $ref:        'https://schemas.digitallinguistics.io/Location.json'
           description: 'The geographic Location of this Demographic data'
 
         notes:
@@ -134,7 +134,7 @@ properties:
           items:
             title: 'Note'
             type:  object
-            $ref:  'http://schemas.digitallinguistics.io/Note.json'
+            $ref:  'https://schemas.digitallinguistics.io/Note.json'
             description: 'A Note about this Demographic data'
 
         population:
@@ -146,7 +146,7 @@ properties:
         status:
           title:       'Status'
           type:        object
-          description: 'The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO. The official status scales can be found [here](http://langlxmelanesia.com/Paris%20-%20EGIDS%20The%20Expanded%20Graded%20Intergenerational%20Disrupt.pdf).'
+          description: 'The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO. The official status scales can be found [here](https://langlxmelanesia.com/Paris%20-%20EGIDS%20The%20Expanded%20Graded%20Intergenerational%20Disrupt.pdf).'
           minimumProperties: 1
           properties:
 
@@ -216,7 +216,7 @@ properties:
 
   description:
     title:       Description
-    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: A high-level overview of the Language and the sociohistorical and documentary context for the accompanying data
 
   exonyms:
@@ -231,11 +231,11 @@ properties:
       properties:
         transcription:
           title:       Exonym Transcription
-          $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+          $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
           description: A transcription of this exonym, optionally in multiple languages.
         note:
           title:       Note
-          $ref:        'http://schemas.digitallinguistics.io/Note.json'
+          $ref:        'https://schemas.digitallinguistics.io/Note.json'
           description: A note about this exonym, such as who uses this name and where, or perhaps its etymology.
 
   glottocode:
@@ -270,12 +270,12 @@ properties:
     items:
       title: 'Location (Database Reference)'
       type:  object
-      $ref: 'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref: 'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: 'A database reference to a Location object describing a location where this language variety is spoken'
 
   name:
     title:         Language Name
-    $ref:          'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:          'https://schemas.digitallinguistics.io/MultiLangString.json'
     minProperties: 1
     description: The canonical scientific name of this language, usually in English, and also optionally in multiple languages. There must be a name provided in at least one language. Use the `exonyms` field to list other ways this language is referred to, and the `autonyms` field to list names for the language _in_ the language itself (a.k.a. endonyms).
 
@@ -287,7 +287,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Note.json'
+      $ref:  'https://schemas.digitallinguistics.io/Note.json'
       description: 'A Note about this Language'
 
   orthographies:
@@ -298,7 +298,7 @@ properties:
     items:
       title: Orthography
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Orthography.json'
+      $ref:  'https://schemas.digitallinguistics.io/Orthography.json'
       description: 'An orthography used to represent this language'
 
   phonemes:
@@ -308,13 +308,13 @@ properties:
     items:
       title: Phoneme
       type:  object
-      $ref: 'http://schemas.digitallinguistics.io/Phoneme.json'
+      $ref: 'https://schemas.digitallinguistics.io/Phoneme.json'
       description: 'A Phoneme object'
 
   tags:
     title: Tags
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
+    $ref:  'https://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this Language'
 
   templates:
@@ -324,7 +324,7 @@ properties:
     items:
       title: Word Template
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/WordTemplate.json'
+      $ref:  'https://schemas.digitallinguistics.io/WordTemplate.json'
       description: 'An object representing a word template.'
 
   url:
@@ -336,7 +336,7 @@ properties:
   varietyOf:
     title: Variety of
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: 'A database reference to another Language object. This property is used to indicate the larger (synchronic) language variety that a smaller variety or dialect belongs to.'
 
 examples:

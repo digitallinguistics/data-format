@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Bundle-3.2.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Bundle-3.2.0.json'
 title:   Bundle
 type:    object
 
@@ -27,13 +27,13 @@ properties:
   abbreviation:
     title:       Abbreviation
     type:        string
-    $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:        'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: An abbreviation for this bundle
 
   access:
-    title:       Access Rights
+    title:       Access Conditions
     type:        object
-    $ref:        'http://schemas.digitallinguistics.io/Access.json'
+    $ref:        'https://schemas.digitallinguistics.io/Access.json'
     description: An object describing the acess rights for this bundle
 
   dateCreated:
@@ -66,7 +66,7 @@ properties:
     items:
       title:       Location (Database Reference)
       type:        object
-      $ref:        'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:        'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference pointing to a location associated with this bundle
 
   media:
@@ -77,12 +77,12 @@ properties:
     items:
       title: Media File (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference that points to an object describing a media file in this bundle
 
   name:
     title: Name
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: A name for this bundle, optionally in multiple languages. There must be a name in at least one language.
 
   notes:
@@ -93,7 +93,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Note.json'
+      $ref:  'https://schemas.digitallinguistics.io/Note.json'
       description: A note about this bundle
 
   people:
@@ -104,13 +104,13 @@ properties:
     items:
       title: Person (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference that points to a person associated with this bundle
 
   tags:
     title: Tags
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
+    $ref:  'https://schemas.digitallinguistics.io/Tags.json'
     description: A hash containing tags for this bundle
 
   texts:
@@ -121,7 +121,7 @@ properties:
     items:
       title: 'Text (Database Reference)'
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference that points to a text included in this bundle
 
   url:

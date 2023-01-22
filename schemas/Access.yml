@@ -1,9 +1,9 @@
-$schema: https://json-schema.org/draft-07/schema
+$schema: http://json-schema.org/draft-07/schema
 $id:     https://schemas.digitallinguistics.io/Access.json
-title:   Access Rights
+title:   Access Conditions
 type:    object
 
-description: 'The Access Rights object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: researcher only`, etc.'
+description: 'The Access Conditions object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: researcher only`, etc.'
 
 properties:
 
@@ -35,9 +35,9 @@ properties:
   notes:
     title:       Access Notes
     type:        array
-    description: 'Notes about access rights for this resource, or any other special considerations regarding who should have access.'
+    description: 'Notes about access conditions for this resource, or any other special considerations regarding who should have access.'
     items:
-      $ref: 'http://schemas.digitallinguistics.io/Note.json'
+      $ref: 'https://schemas.digitallinguistics.io/Note.json'
 
 examples:
 

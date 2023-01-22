@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Morpheme-4.0.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Morpheme-4.0.0.json'
 title:   'Morpheme Token'
 type:    object
 
@@ -22,13 +22,13 @@ properties:
 
   gloss:
     title: Gloss
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'A gloss for this morpheme, optionally in multiple languages. The gloss must be provided in at least one language. The gloss of a grammatical morpheme must be written in CAPS, for human readability.'
 
   lexeme:
     title: Lexeme (Database Reference)
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: 'A database reference to a lexeme where more information about this morpheme may be found'
 
   notes:
@@ -39,20 +39,20 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Note.json'
+      $ref:  'https://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this morpheme token'
 
   tags:
     title: Tags
     type:  object
-    $ref: 'http://schemas.digitallinguistics.io/Tags.json'
+    $ref: 'https://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this morpheme token'
 
   transcription:
     title:         Transcription
     type:          object
     minProperties: 1
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+    $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: 'A transcription of this morpheme token. Should be a phonemic transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.'
 
 examples:

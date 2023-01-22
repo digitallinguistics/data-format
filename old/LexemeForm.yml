@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/LexemeForm-2.2.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/LexemeForm-2.2.0.json'
 title:   Lexeme Form
 type:    object
 
@@ -66,7 +66,7 @@ properties:
         transcription:
           title: Transcription
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+          $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
           description: A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
 
   bibliography:
@@ -76,7 +76,7 @@ properties:
     description: A list of citations to attested sources where this lexeme form appears or is discussed. For precision's sake, citations should be listed for specific forms of a lexeme rather than the lexeme whenever possible.
     items:
       title:       Citation
-      $ref:        'http://schemas.digitallinguistics.io/Citation.json'
+      $ref:        'https://schemas.digitallinguistics.io/Citation.json'
       description: An attested source for this lexeme form. This will be a citation to a published text in which the lexeme form appears.
 
   components:
@@ -87,13 +87,13 @@ properties:
     items:
       title: Lexeme / Lexeme Form (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to a lexeme or lexeme form
 
   etymon:
     title: Etymon
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: A database reference to a Lexeme Form in another lexicon to specify the historical origin of this form.
 
   examples:
@@ -104,7 +104,7 @@ properties:
     items:
       title: Example Utterance (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to an Utterance object
 
   features:
@@ -114,7 +114,7 @@ properties:
     allOf:
       - title: Tags
         type:  object
-        $ref: 'http://schemas.digitallinguistics.io/Tags.json'
+        $ref: 'https://schemas.digitallinguistics.io/Tags.json'
         description: The Features object must be a Tags object
       - additionalProperties:
           title:     Feature
@@ -124,7 +124,7 @@ properties:
 
   inflectionClass:
     title: Inflectional Class
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form. May be written in multiple languages.
 
   link:
@@ -141,12 +141,12 @@ properties:
     items:
       title: Media Item (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to a media item associated with this lexeme form
 
   morphemeType:
     title: Morpheme Type
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. Typically, all the forms of a lexeme will have the same morpheme type, but occasionally they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English)."
 
   notes:
@@ -159,7 +159,7 @@ properties:
 
         - title: Note
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          $ref:  'https://schemas.digitallinguistics.io/Note.json'
           description: A note about this lexeme form
 
         - required:
@@ -188,7 +188,7 @@ properties:
     items:
       title:         Source
       type:          object
-      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:          'https://schemas.digitallinguistics.io/DatabaseReference.json'
       referenceType: Person
       description:   An attested source for this lexeme form. This will often be the initials of a speaker.
 
@@ -200,7 +200,7 @@ properties:
   tags:
     title: Tags
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
+    $ref:  'https://schemas.digitallinguistics.io/Tags.json'
     description: A set of tags for this lexeme form
 
   tone:
@@ -211,7 +211,7 @@ properties:
   transcription:
     title: Transcription
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+    $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: A transcription of this lexeme form, optionally in multiple orthographies
 
   usages:
@@ -221,13 +221,13 @@ properties:
     description: A list of MultiLangStrings giving information about this form's social usage, regional information, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
     items:
       title:       Usage
-      $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+      $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
       description: A MultiLangString giving information about this form's usage
 
   variantOf:
     title: Variant Of
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: If this lexeme form is a variant of another form, a reference to the other form should go here. For example, some speakers of English have *hanged* as the past tense of *hang*, while others have *hung*.
 
   variants:
@@ -240,7 +240,7 @@ properties:
 
         - title: Variant (Database Reference)
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+          $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
           description: A database reference to a variant of this form. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant.
 
         - required:
@@ -248,12 +248,12 @@ properties:
           properties:
             variantType:
               title: Variant Type
-              $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+              $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
               description: This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages.
 
   variantType:
     title: Variant Type
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: If this form is a variant of another lexeme form, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:

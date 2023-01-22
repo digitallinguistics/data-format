@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/WordTemplate-1.0.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/WordTemplate-1.0.0.json'
 title:   Word Template
 type:    object
 
@@ -21,23 +21,23 @@ properties:
 
   category:
     title:       Lexical Category
-    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The lexical category that this Word Template applies to.'
 
   inflectionClass:
     title:        Inflection Class
-    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The inflectional class that this Word Template applies to.'
 
   morphemeType:
     title:       Morpheme Type
-    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The type of morpheme that this Word Template applies to. Examples might be `stem`, `compound`, etc.'
 
   name:
     title:       Word Template Name
     type:        string
-    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The name of this Word Template, optionally in multiple languages.'
 
   notes:
@@ -48,7 +48,7 @@ properties:
     items:
       title:       Note
       type:        object
-      $ref:        'http://schemas.digitallinguistics.io/Note.json'
+      $ref:        'https://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this Word Template.'
 
   slots:
@@ -70,11 +70,11 @@ properties:
         abbreviation:
           title:       Slot Abbreviation
           type:        string
-          $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
+          $ref:        'https://schemas.digitallinguistics.io/Abbreviation.json'
           description: 'An abbreviation for this slot.'
         name:
           title:       Slot Name
-          $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+          $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
           description: 'The name for this slot, optionally in multiple languages.'
         optional:
           title:       Optional

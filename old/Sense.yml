@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Sense-2.1.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Sense-2.1.0.json'
 title:   Sense
 type:    object
 
@@ -30,7 +30,7 @@ properties:
 
   baseCategory:
     title:       Base Category
-    $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'If the current lexeme is an affix or other grammatical morpheme, this field should be used to describe the category that the morpheme attaches to, optionally in multiple languages. This field should generally (but not obligatorily) be used in tandem with the Sense.derives property.'
 
   bibliography:
@@ -41,23 +41,23 @@ properties:
     items:
       title:         Citation
       type:          object
-      $ref:          'http://schemas.digitallinguistics.io/Citation.json'
+      $ref:          'https://schemas.digitallinguistics.io/Citation.json'
       referenceType: Citation
       description:   An attested source for this sense. This will be a citation to a published text in which the sense appears.
 
   category:
     title: Lexical Category (Part of Speech, Morphosyntactic Class, etc.)
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. Subcategories can be specified by separating the category and subcategory with a colon. For example, mass nouns in English might be `noun:mass`. If the current lexeme is an affix or other grammatical morpheme, this property may be omitted.
 
   definition:
     title: Definition
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: The definition for this particular sense, optionally in multiple languages
 
   derives:
     title: Derived Category
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix *‑er* would have this property set to `noun`, since this suffix derives nouns from verbs. May be in multiple languages.
 
   examples:
@@ -68,12 +68,12 @@ properties:
     items:
       title: Example Utterance (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to an Utterance object
 
   gloss:
     title: Gloss
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: A Leipzig-style gloss for this sense. A gloss must be provided in at least one language.
     oneOf:
       - type:          string
@@ -91,7 +91,7 @@ properties:
 
         - title: Lexeme (Database Reference)
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+          $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
           description: A database reference representing a lexical relation between two senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation.
 
         - required:
@@ -100,7 +100,7 @@ properties:
             relation:
               title: Relation Type
               type:  string
-              $ref: 'http://schemas.digitallinguistics.io/Abbreviation.json'
+              $ref: 'https://schemas.digitallinguistics.io/Abbreviation.json'
               description: "The type of lexical relation that holds between the current sense and the referenced sense. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
 
   link:
@@ -117,7 +117,7 @@ properties:
     items:
       title: Media Item (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to a media item associated with this sense
 
   notes:
@@ -130,7 +130,7 @@ properties:
 
         - title: Note
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          $ref:  'https://schemas.digitallinguistics.io/Note.json'
           description: A note about this sense
 
         - required:
@@ -168,7 +168,7 @@ properties:
     description: A list of the semantic domains this sense belongs to. Examples include color, body part, clothing, etc. The colon character can be used to represent subdomains e.g. quality:color:primary, color:red, etc.
     items:
       title:       Semantic Domain
-      $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+      $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
       description: A domain that this sense belongs to, as a MultiLangString
 
   sources:
@@ -179,14 +179,14 @@ properties:
     items:
       title:     Source
       type:      object
-      $ref:      'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:      'https://schemas.digitallinguistics.io/DatabaseReference.json'
       referenceType: Person
       description: An attested source for this sense. This will often be the initials of a speaker.
 
   tags:
     title: Tags
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
+    $ref:  'https://schemas.digitallinguistics.io/Tags.json'
     description: A set of tags for this sense
 
   usages:
@@ -196,13 +196,13 @@ properties:
     description: A list of MultiLangStrings giving information about this sense's social usage, regional information, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
     items:
       title:       Usage
-      $ref:        'http://schemas.digitallinguistics.io/MultiLangString.json'
+      $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
       description: A MultiLangString giving information about this sense's usage
 
   variantOf:
     title: Variant Of
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: If this sense is a variant of another sense, a reference to the other sense should go here. For example, sometimes two speakers may use the same word with a slightly different set of senses. In American English, for instance, *Coke* is a specific brand of soda for most speakers, but a generic term for soda for other speakers. The generic sense would therefore be listed as a dialectal variant of the specific sense.
 
   variants:
@@ -215,7 +215,7 @@ properties:
 
         - title: Variant (Database Reference)
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+          $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
           description: A database reference to a variant of this sense. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant.
 
         - required:
@@ -223,12 +223,12 @@ properties:
           properties:
             variantType:
               title: Variant Type
-              $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+              $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
               description: This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), etc. May be in multiple languages.
 
   variantType:
     title: Variant Type
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: If this sense is a variant of another sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), etc. May be in multiple languages.
 
 examples:

@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Utterance-5.0.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Utterance-5.0.0.json'
 title:   Utterance
 type:    object
 
@@ -69,13 +69,13 @@ properties:
         note:
           title: judgment Note
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          $ref:  'https://schemas.digitallinguistics.io/Note.json'
           description: A note about this judgment. It is strongly recommended that every judgment be accompanied by a note, indicating the speaker / source of the judgment, and if possible an explanation for unacceptable or ungrammatical judgments.
 
   language:
     title: Language
     type:  string
-    $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: 'The key for the Language used in this Utterance, e.g. `spa` or `eng`. If the text is labeled with a Language, all its Utterance are assumed to be the same Language unless labeled otherwise. Likewise, if a Utterance is given a Language, all its words are assumed to be the same Language unless the word is labeled otherwise.'
 
   link:
@@ -87,7 +87,7 @@ properties:
   literal:
     title:  Literal Translation
     type:   object
-    $ref:   'http://schemas.digitallinguistics.io/Translation.json'
+    $ref:   'https://schemas.digitallinguistics.io/Translation.json'
     description: 'The literal translations for this Utterance, optionally in multiple languages.'
 
   phonetic:
@@ -103,19 +103,19 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Note.json'
+      $ref:  'https://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this Utterance'
 
   speaker:
     title: Speaker
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Person.json'
+    $ref:  'https://schemas.digitallinguistics.io/Person.json'
     description: 'The Person who produced (uttered, signed, spoke, sung) this Utterance. The value of this field must match one of the people listed in the `contributors` array of the Text. If the text has a single contributor with the role of `speaker`, that speaker is assumed to be the speaker for all Utterances in the Text. If multiple contributors with a `speaker` role are included in a text, each Utterance must have its `speaker` attribute specified.'
 
   source:
     title: Source
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Citation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Citation.json'
     description: A citation to the publication where this utterance was taken from. When the utterance is not part of a text, or when the text consists of random utterances taken from different places, this field is strongly recommended.
 
   startTime:
@@ -127,27 +127,27 @@ properties:
   tags:
     title: Tags
     type:  object
-    $ref: 'http://schemas.digitallinguistics.io/Tags.json'
+    $ref: 'https://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this Utterance'
 
   transcript:
     title:         Transcript
     type:          object
     minProperties: 1
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+    $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: 'A transcript of this Utterance, including things like prosodic markup, overlap, pauses, and various other discourse features. This field is intended for use by those doing discourse or conversation analysis, who need to mark up their text without affecting the phonemic transcription (in the `transcription` property). The transcript may be in multiple orthographies, or representational systems (e.g. you might have a `CA` transcript and a `DT` transcript, for discourse transcripts using Conversation Analysis and Discourse Transcription conventions respectively).'
 
   transcription:
     title:         Transcription
     type:          object
     minProperties: 1
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+    $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: 'The transcriptions for this Utterance, optionally in multiple orthographies. This field is intended for use with purely phonemic / morphophonemic transcriptions. Punctuation should generally be avoided. To add punctuation and other discourse-level transcriptional features, use the `transcript` property. The transcription must be provided in at least one orthography.'
 
   translation:
     title: Translation
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Translation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Translation.json'
     description: 'The free translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language.'
 
   url:
@@ -164,7 +164,7 @@ properties:
     items:
       title: Word
       type:  object
-      $ref: 'http://schemas.digitallinguistics.io/Word.json'
+      $ref: 'https://schemas.digitallinguistics.io/Word.json'
       description: 'A Word object'
 
 examples:

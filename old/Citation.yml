@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Citation-1.0.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Citation-1.0.0.json'
 title:   Citation
 type:    object
 
@@ -20,7 +20,7 @@ allOf:
       properties:
         citationKey:
           title:       Citation Key
-          $ref:        'http://schemas.digitallinguistics.io/Abbreviation.json'
+          $ref:        'https://schemas.digitallinguistics.io/Abbreviation.json'
           description: The citation key for the bibliographic source being reference. Must be a valid Abbreviation.
 
     - required:
@@ -28,7 +28,7 @@ allOf:
       properties:
         bibliographicSource:
           title:       Bibliographic Source
-          $ref:        'http://schemas.digitallinguistics.io/BibliographicSource.json'
+          $ref:        'https://schemas.digitallinguistics.io/BibliographicSource.json'
           description: The bibliographic source being referenced.
 
 examples:

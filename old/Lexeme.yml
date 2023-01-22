@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Lexeme-9.1.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Lexeme-9.1.0.json'
 title:   Lexeme
 type:    object
 
@@ -45,7 +45,7 @@ properties:
     items:
       title: Alternative Analysis
       type: object
-      $ref: 'http://schemas.digitallinguistics.io/Lexeme.json'
+      $ref: 'https://schemas.digitallinguistics.io/Lexeme.json'
       description: A lexeme object representing an alternative analysis of this lexeme.
 
   bibliography:
@@ -56,14 +56,14 @@ properties:
     items:
       title:         Citation
       type:          object
-      $ref:          'http://schemas.digitallinguistics.io/Citation.json'
+      $ref:          'https://schemas.digitallinguistics.io/Citation.json'
       referenceType: Citation
       description:   A citation to an attested source for this lexeme.
 
   citationForm:
     title: Citation Form
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+    $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in Swahili the citation form of a verb is typically the infinitive, e.g. *kuandika* `to write`, even though *‑andika* is typically used as its lemma form. It may be represented in multiple orthographies. Do not include leading or trailing tokens (e.g. hyphens, equal signs) in this field.
 
   dateCreated:
@@ -90,7 +90,7 @@ properties:
     items:
       title: Example Utterance (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to an Utterance object
 
   features:
@@ -100,7 +100,7 @@ properties:
     allOf:
       - title: Tags
         type:  object
-        $ref: 'http://schemas.digitallinguistics.io/Tags.json'
+        $ref: 'https://schemas.digitallinguistics.io/Tags.json'
         description: The Features object must be a Tags object
       - additionalProperties:
           title:     Feature
@@ -116,19 +116,19 @@ properties:
     items:
       title: Lexeme Base Form
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/LexemeForm.json'
+      $ref:  'https://schemas.digitallinguistics.io/LexemeForm.json'
       description: One of the base forms of this lexeme
 
   language:
     title: Language (DatabaseReference)
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: The language of this Lexeme. This property is most useful when working with lexical data from multiple languages.
 
   lemma:
     title: Lemma
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Transcription.json'
+    $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: A *lemma* is the form of a lexeme conventionally used to represent that lexeme. It is typically used as the headword in dictionary entries. It may differ drastically from the citation form. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc. Lemmas may be represented in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
 
   lexicalRelations:
@@ -141,7 +141,7 @@ properties:
 
         - title: Lexeme (Database Reference)
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+          $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
           description: A database reference representing a lexical relation between two lexemes or senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation.
 
         - required:
@@ -150,7 +150,7 @@ properties:
             relation:
               title: Relation Type
               type:  string
-              $ref: 'http://schemas.digitallinguistics.io/Abbreviation.json'
+              $ref: 'https://schemas.digitallinguistics.io/Abbreviation.json'
               description: "The type of lexical relation that holds between the current item and the referenced Lexeme. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
 
   lexemeType:
@@ -169,7 +169,7 @@ properties:
 
   literalMeaning:
     title: Literal Meaning
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: The literal meaning of the lexeme, optionally in multiple languages
 
   media:
@@ -180,12 +180,12 @@ properties:
     items:
       title: Media Item (Database Reference)
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
       description: A database reference to a media item associated with this lexeme
 
   morphemeType:
     title: Morpheme Type
-    $ref: 'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref: 'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The morphological type for this lexeme. Example values might include `"root"`, `"stem"`, `"prefix"`, `"suffix"`, `"compound"`, `"phrasal verb"`, etc.'
 
   notes:
@@ -198,7 +198,7 @@ properties:
 
         - title: Note
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/Note.json'
+          $ref:  'https://schemas.digitallinguistics.io/Note.json'
           description: A note about this lexeme
 
         - required:
@@ -229,13 +229,13 @@ properties:
     items:
       title: Sense
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Sense.json'
+      $ref:  'https://schemas.digitallinguistics.io/Sense.json'
       description: A sense or meaning for this lexeme.
 
   slot:
     title: Slot
     type:  string
-    $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: 'This field indicates the slot in a Word Template in which this Lexeme belongs. The value should be the same as the value found in WordTemplate.slots.abbreviation in the corresponding slot.'
 
   sources:
@@ -246,14 +246,14 @@ properties:
     items:
       title:         Source
       type:          object
-      $ref:          'http://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref:          'https://schemas.digitallinguistics.io/DatabaseReference.json'
       referenceType: Person
       description:   An attested source for this lexeme. This will often be the initials of a speaker.
 
   tags:
     title: Tags
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Tags.json'
+    $ref:  'https://schemas.digitallinguistics.io/Tags.json'
     description: A set of tags for this lexeme
 
   url:
@@ -265,7 +265,7 @@ properties:
   variantOf:
     title: Variant Of
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: If this lexeme is a variant of another lexeme, this field should contain a reference to the other Lexeme. Lexemes may only be variants of one other Lexeme.
 
   variants:
@@ -278,7 +278,7 @@ properties:
 
         - title: Variant (Database Reference)
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+          $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
           description: A database reference to a variant of this lexeme. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant.
 
         - required:
@@ -286,12 +286,12 @@ properties:
           properties:
             variantType:
               title: Variant Type
-              $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+              $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
               description: This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages.
 
   variantType:
     title: Variant Type
-    $ref:  'http://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: If this lexeme is a variant of another lexeme or sense, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
 
 examples:

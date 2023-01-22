@@ -1,5 +1,5 @@
-$schema: 'http://json-schema.org/draft-07/schema#'
-$id:     'http://schemas.digitallinguistics.io/Person-4.3.0.json'
+$schema: http://json-schema.org/draft-07/schema
+$id:     'https://schemas.digitallinguistics.io/Person-4.3.0.json'
 title:   Person
 type:    object
 
@@ -28,19 +28,19 @@ properties:
   abbreviation:
     title: Abbreviation
     type:  string
-    $ref:  'http://schemas.digitallinguistics.io/Abbreviation.json'
+    $ref:  'https://schemas.digitallinguistics.io/Abbreviation.json'
     description: 'An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.'
 
   access:
-    title: 'Access Rights'
+    title: Access Conditions
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/Access.json'
-    description: 'The access rights for information about this person'
+    $ref:  'https://schemas.digitallinguistics.io/Access.json'
+    description: 'The access conditions for the information about this person.'
 
   address:
     title: Address
     type:  object
-    $ref: 'http://schemas.digitallinguistics.io/Address.json'
+    $ref: 'https://schemas.digitallinguistics.io/Address.json'
     description: 'The address for this person'
 
   birthDate:
@@ -52,7 +52,7 @@ properties:
   birthPlace:
     title: 'Birth Place (Database Reference)'
     type:  object
-    $ref:  'http://schemas.digitallinguistics.io/DatabaseReference.json'
+    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
     description: 'A database reference to this person’s place of birth, as a Location object'
 
   email:
@@ -87,7 +87,7 @@ properties:
 
         - title: Language
           type:  object
-          $ref:  'http://schemas.digitallinguistics.io/Language.json'
+          $ref:  'https://schemas.digitallinguistics.io/Language.json'
           description: 'Each item in the `languages` Array must be a valid Language object'
 
         - additionalProperties: true
@@ -107,7 +107,7 @@ properties:
               items:
                 title: Note
                 type:  object
-                $ref:  'http://schemas.digitallinguistics.io/Note.json'
+                $ref:  'https://schemas.digitallinguistics.io/Note.json'
                 description: 'A note about this person’s use of this language'
 
             proficiency:
@@ -134,7 +134,7 @@ properties:
     items:
       title: Note
       type:  object
-      $ref:  'http://schemas.digitallinguistics.io/Note.json'
+      $ref:  'https://schemas.digitallinguistics.io/Note.json'
       description: 'A note about this person'
 
   phone:
@@ -177,7 +177,7 @@ properties:
   tags:
     title: Tags
     type:  object
-    $ref: 'http://schemas.digitallinguistics.io/Tags.json'
+    $ref: 'https://schemas.digitallinguistics.io/Tags.json'
     description: 'A set of tags for this Person'
 
   url:
