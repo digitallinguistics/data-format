@@ -8,6 +8,7 @@ import {
 } from 'node:fs/promises'
 
 import {
+  copy,
   emptyDir,
   outputJSON,
 } from 'fs-extra/esm'
@@ -21,10 +22,20 @@ const jsonPath   = path.join(__dirname, `../json`)
 await emptyDir(jsonPath)
 
 for (const file of files) {
+
+  const ext        = path.extname(file)
   const inputPath  = path.join(yamlPath, file)
-  const yaml       = await readFile(inputPath, `utf8`)
-  const data       = yamlParser.load(yaml)
-  const name       = path.basename(file, `.yml`)
+  const name       = path.basename(file, ext)
   const outputPath = path.join(jsonPath, `${ name }.json`)
+
+  if (ext === `.json`) {
+    await copy(inputPath, outputPath)
+    continue
+  }
+
+  const yaml = await readFile(inputPath, `utf8`)
+  const data = yamlParser.load(yaml)
+
   await outputJSON(outputPath, data, { spaces: 2 })
+
 }

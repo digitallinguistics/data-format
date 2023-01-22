@@ -87,7 +87,7 @@ properties:
   literal:
     title:  Literal Translation
     type:   object
-    $ref:   'https://schemas.digitallinguistics.io/Translation.json'
+    $ref:   'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The literal translations for this Utterance, optionally in multiple languages.'
 
   phonetic:
@@ -147,7 +147,7 @@ properties:
   translation:
     title: Translation
     type:  object
-    $ref:  'https://schemas.digitallinguistics.io/Translation.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'The free translations for this Utterance, optionally in multiple languages. The translation must be provided in at least one language.'
 
   url:

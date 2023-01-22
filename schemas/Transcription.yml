@@ -5,8 +5,6 @@ type:    object
 
 description: 'A transcription of a piece of data in a language, optionally in multiple orthographies. For example, a transcription might be written in both a practical orthography and IPA. Each key is the abbreviation / short name for an orthography, and the value for that key is the transcription of the data in that particular orthography. The abbreviation / short names for the orthographies may be any string, but it is recommended to keep them short and to use only ASCII characters.'
 
-additionalProperties: false
-
 additionalProperties:
   type: string
 

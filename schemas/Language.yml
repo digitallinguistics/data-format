@@ -46,7 +46,7 @@ properties:
     uniqueItems: true
     description: 'Bibliographic citations for this language.'
     items:
-      $ref: https://resource.citationstyles.org/schema/latest/input/json/csl-citation.json#/citationItems/items
+      $ref: https://schemas.digitallinguistics.io/Citation.json
 
   classification:
     title:       'Genetic Classification (Database References: Language)'
@@ -251,13 +251,13 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
-  orthographies:
-    title:       Orthographies
-    type:        array
-    uniqueItems: true
-    description: 'A collection of orthographies used to transcribe data in this Language.'
-    items:
-      $ref: https://schemas.digitallinguistics.io/Orthography.json
+  # orthographies:
+  #   title:       Orthographies
+  #   type:        array
+  #   uniqueItems: true
+  #   description: 'A collection of orthographies used to transcribe data in this Language.'
+  #   items:
+  #     $ref: https://schemas.digitallinguistics.io/Orthography.json
 
   people:
     title:       'People (Database References: Person)'
@@ -267,24 +267,24 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
-  phonemes:
-    title:       Phonemes
-    type:        array
-    description: 'The phonological inventory for this language, i.e. a collection of phonemes.'
-    items:
-      $ref: https://schemas.digitallinguistics.io/Phoneme.json
+  # phonemes:
+  #   title:       Phonemes
+  #   type:        array
+  #   description: 'The phonological inventory for this language, i.e. a collection of phonemes.'
+  #   items:
+  #     $ref: https://schemas.digitallinguistics.io/Phoneme.json
 
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json
     description: 'A set of tags for this Language.'
 
-  templates:
-    title:       Word Templates
-    type:        array
-    description: 'A set of word templates used in this language. Each item should be a Word Template object.'
-    items:
-      $ref: https://schemas.digitallinguistics.io/WordTemplate.json
+  # templates:
+  #   title:       Word Templates
+  #   type:        array
+  #   description: 'A set of word templates used in this language. Each item should be a Word Template object.'
+  #   items:
+  #     $ref: https://schemas.digitallinguistics.io/WordTemplate.json
 
   type:
     title:    Type

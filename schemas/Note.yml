@@ -12,7 +12,7 @@ properties:
 
   citation:
     title:       Citation
-    $ref:        https://resource.citationstyles.org/schema/latest/input/json/csl-citation.json#/citationItems/items
+    $ref:        https://schemas.digitallinguistics.io/Citation.json
     description: 'A citation for this note.'
 
   dateCreated:

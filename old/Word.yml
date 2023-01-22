@@ -43,7 +43,7 @@ properties:
 
   literal:
     title: 'Literal Translation'
-    $ref:   'https://schemas.digitallinguistics.io/Translation.json'
+    $ref:   'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'A literal translation of the word at the level of the morpheme token'
 
   morphemes:
@@ -151,7 +151,7 @@ properties:
   translation:
     title: Translation
     type:  object
-    $ref:  'https://schemas.digitallinguistics.io/Translation.json'
+    $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
     description: 'A translation of this word, optionally in multiple languages. Note that the translation is not the same as a gloss. Use the translation field for free, natural language translations of a word. There is a separate field for literal translations.; use the gloss field for Leipzig-style glosses only.'
 
 examples:
