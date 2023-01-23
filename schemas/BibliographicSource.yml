@@ -5,7 +5,7 @@ type:    object
 
 description: 'An object containing information about a bibliographic resource, such as a book or journal article. DLx recommends using Citation Style Language (CSL) JSON format for references, but some implementations may choose to use other bibliographic tools and formats. As such, this schema does not enforce any particular format for Bibliographic Source objects.'
 
-$comment: The DLx tech stack uses a light wrapper object around the CSL data, storing that CSL data in a `csl` field. This is because the `type` property of the CSL data format conflicts with DLx's `type` property (which the DLx database relies on heavily).
+$comment: The DLx tech stack uses a light wrapper object around the CSL data, because the `type` property of the CSL data format conflicts with DLx's `type` property (which the DLx database relies on heavily).
 
 oneOf:
   - {}
