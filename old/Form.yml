@@ -1,6 +1,6 @@
 $schema: http://json-schema.org/draft-07/schema
-$id:     'https://schemas.digitallinguistics.io/LexemeForm-2.2.0.json'
-title:   Lexeme Form
+$id:     https://schemas.digitallinguistics.io/Form.json
+title:   Base Form
 type:    object
 
 description: The *base forms* of a lexeme are the minimal set of forms needed to determine the full set of inflectional possibilities of a lexeme. These include suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc., while the lexeme *man* has the base forms *man* and *men*. A base form does **not** refer to a regularly-inflected, predictable form like *being* or *cats*. Principal parts of verbs in Latin are another example of base forms, since they are the minimal set of forms that someone must know to determine all the inflectional possibilities of a verb.
@@ -8,20 +8,11 @@ description: The *base forms* of a lexeme are the minimal set of forms needed to
 required:
   - transcription
 
-additionalProperties: true
-
 dependencies:
   variantType:
     - variantOf
 
 properties:
-
-  type:
-    title:    Type
-    type:     string
-    const:    LexemeForm
-    readOnly: true
-    description: The type of object. Must be set to `LexemeForm`.
 
   abstract:
     title:       Abstract
@@ -211,6 +202,18 @@ properties:
     type:  object
     $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
     description: A transcription of this lexeme form, optionally in multiple orthographies
+
+  type:
+    title:    Type
+    type:     string
+    const:    Form
+    readOnly: true
+    description: The type of object. Must be set to `LexemeForm`.
+
+  UR:
+    title:       Underlying Form / Representation
+    $ref:        https://schemas.digitallinguistics.io/Transcription.json
+    description: 'The underlying form/representation for this base form. Use of this field typically isn't necessary since base forms tend to be represented in their underlying form anyway. This field can however be useful for transcribing a base form using archiphonemes or other deep phonological representations of the form.'
 
   usages:
     title:       Usages
