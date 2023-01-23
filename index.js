@@ -14,6 +14,7 @@ import Morpheme from './json/Morpheme.json' assert { type: 'json' }
 import MultiLangString from './json/MultiLangString.json' assert { type: 'json' }
 import Note from './json/Note.json' assert { type: 'json' }
 import Person from './json/Person.json' assert { type: 'json' }
+import Phoneme from './json/Phoneme.json' assert { type: 'json' }
 import Tags from './json/Tags.json' assert { type: 'json' }
 import Text from './json/Text.json' assert { type: 'json' }
 import Transcription from './json/Transcription.json' assert { type: 'json' }
@@ -39,6 +40,7 @@ export default {
   MultiLangString,
   Note,
   Person,
+  Phoneme,
   Tags,
   Text,
   Transcription,
