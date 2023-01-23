@@ -261,10 +261,10 @@ properties:
   lexemeType:
     title: Lexeme Type
     type:  string
-    description: 'The type of lexeme this is (either lexical or grammatical). The primary purpose of this field is to make it easy to style interlinear glosses in small caps.'
+    description: 'The type of lexeme this is (either lexical or functional). The primary purpose of this field is to make it easy to style interlinear glosses in small caps.'
     enum:
+      - 'functional'
       - 'lexical'
-      - 'grammatical'
 
   link:
     title:  Link
@@ -354,6 +354,10 @@ properties:
       $ref:          'https://schemas.digitallinguistics.io/DatabaseReference.json'
       referenceType: Person
       description:   An attested source for this lexeme. This will often be the initials of a speaker.
+
+  status:
+    title:       Status
+    description: `status` is a reserved keyword, used to describe the status of a lexical item in a workflow. Implementations may include `status` fields with widely different formats and structures, depending on the needs of the software. As such, DLx imposes no requirements on the format of the `status` field. Implementers should ignore data in this field if it does not conform to their specification.
 
   tags:
     title: Tags
