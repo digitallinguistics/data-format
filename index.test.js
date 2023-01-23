@@ -4,9 +4,9 @@ import validator from './validator.js'
 
 describe(`examples`, function() {
 
-  it(`are all valid`, function() {
+  for (const [type, schema] of Object.entries(schemas)) {
 
-    for (const [type, schema] of Object.entries(schemas)) {
+    it(type, function() {
 
       if (!schema.examples) return
 
@@ -25,8 +25,8 @@ describe(`examples`, function() {
 
       }
 
-    }
+    })
 
-  })
+  }
 
 })

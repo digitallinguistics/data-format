@@ -14,6 +14,8 @@ import MultiLangString from './json/MultiLangString.json' assert { type: 'json' 
 import Note from './json/Note.json' assert { type: 'json' }
 import Tags from './json/Tags.json' assert { type: 'json' }
 import Transcription from './json/Transcription.json' assert { type: 'json' }
+import WordTemplate from './json/WordTemplate.json' assert { type: 'json' }
+import WordSet from './json/WordSet.json' assert { type: 'json' }
 
 export default {
   Abbreviation,
@@ -32,4 +34,6 @@ export default {
   Note,
   Tags,
   Transcription,
+  WordTemplate,
+  WordSet,
 }

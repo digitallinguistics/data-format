@@ -7,6 +7,6 @@ description: 'An object containing information about a bibliographic resource, s
 
 $comment: The DLx tech stack uses a light wrapper object around the CSL data, because the `type` property of the CSL data format conflicts with DLx's `type` property (which the DLx database relies on heavily).
 
-oneOf:
+anyOf:
   - {}
   - $ref: https://resource.citationstyles.org/schema/v1.0/input/json/csl-data.json

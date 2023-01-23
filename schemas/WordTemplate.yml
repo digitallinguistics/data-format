@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft-07/schema
-$id:     'https://schemas.digitallinguistics.io/WordTemplate-1.0.0.json'
+$id:     https://schemas.digitallinguistics.io/WordTemplate.json
 title:   Word Template
 type:    object
 
@@ -8,36 +8,27 @@ description: 'A *Word Template* is an object that describes the morphological sl
 required:
   - name
 
-additionalProperties: false
-
 properties:
-
-  type:
-    title:       Type
-    type:        string
-    const:       WordTemplate
-    readOnly:    true
-    description: 'The type of object. Must be set to `WordTemplate`.'
 
   category:
     title:       Lexical Category
-    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'The lexical category that this Word Template applies to.'
 
   inflectionClass:
-    title:        Inflection Class
-    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
+    title:       Inflection Class
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'The inflectional class that this Word Template applies to.'
 
-  morphemeType:
-    title:       Morpheme Type
-    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
+  morphType:
+    title:       Morph Type
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'The type of morpheme that this Word Template applies to. Examples might be `stem`, `compound`, etc.'
 
   name:
     title:       Word Template Name
     type:        string
-    $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'The name of this Word Template, optionally in multiple languages.'
 
   notes:
@@ -46,10 +37,7 @@ properties:
     uniqueItems: true
     description: 'A collection of notes about this Word Template.'
     items:
-      title:       Note
-      type:        object
-      $ref:        'https://schemas.digitallinguistics.io/Note.json'
-      description: 'A note about this Word Template.'
+      $ref: https://schemas.digitallinguistics.io/Note.json
 
   slots:
     title:       Slots
@@ -70,16 +58,24 @@ properties:
         abbreviation:
           title:       Slot Abbreviation
           type:        string
-          $ref:        'https://schemas.digitallinguistics.io/Abbreviation.json'
+          $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
           description: 'An abbreviation for this slot.'
         name:
           title:       Slot Name
-          $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
           description: 'The name for this slot, optionally in multiple languages.'
         optional:
           title:       Optional
           type:        boolean
           description: 'When set to `false`, this field indicates that the slot must be filled.'
+          default:     false
+
+  type:
+    title:       Type
+    type:        string
+    const:       WordTemplate
+    readOnly:    true
+    description: 'The type of object. Must be set to `WordTemplate`.'
 
 examples:
 

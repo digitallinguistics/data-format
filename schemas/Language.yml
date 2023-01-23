@@ -311,7 +311,7 @@ examples:
     access:
       AILLA: password
       notes:
-        - eng: Materials on this language should not be made available to non-tribal members without permission.
+        - text: Materials on this language should not be made available to non-tribal members without permission.
     autonyms:
       - transcription:
           APA:     Sitimaša

@@ -7,6 +7,6 @@ description: 'An object containing information about a citation to a bibliograph
 
 $comment: The DLx tech stack uses a custom Citation object that stores precomputed bibliography entries and citation strings for the citation, so they don't have to be computed at runtime.
 
-oneOf:
+anyOf:
   - {}
   - $ref: https://resource.citationstyles.org/schema/latest/input/json/csl-citation.json#/properties/citationItems/items
