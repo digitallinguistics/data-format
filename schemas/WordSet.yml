@@ -7,15 +7,20 @@ description: 'A *WordSet* is a set of related lexemes across languages. This cou
 
 properties:
 
+  id:
+    title:       ID
+    description: A unique database identifier for this WordSet.
+
   members:
-    title:       'Lexemes (Databse References: Lexeme)'
+    title:       'Lexical Items (Databse References: Lexical Item)'
     type:        array
     uniqueItems: true
-    description: 'The collection of lexemes in this word set.'
+    description: 'The collection of lexical items in this word set.'
     items:
       allOf:
         - $ref:     https://schemas.digitallinguistics.io/DatabaseReference.json
         - required: [language]
+          type:     object
 
   notes:
     title:       Notes
@@ -31,6 +36,7 @@ properties:
     allOf:
       - $ref:     https://schemas.digitallinguistics.io/DatabaseReference.json
       - required: [language]
+        type:     object
 
   type:
     title:       Type

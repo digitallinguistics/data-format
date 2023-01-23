@@ -260,12 +260,29 @@ properties:
   #     $ref: https://schemas.digitallinguistics.io/Orthography.json
 
   people:
-    title:       'People (Database References: Person)'
+    title:       People / Contributors
     type:        array
     uniqueItems: true
-    description: 'A collection of people who contributed to the documentation, analysis, or curation of this language data in some way. It is strongly recommended that each Person object in this collection have its `roles` property specified, so that the contribution of each person is known.'
+    description: 'People associated with this language.'
     items:
-      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+      title: Contributor
+      type:  object
+      properties:
+
+        person:
+          title: Person (Database Reference)
+          $ref:  https://schemas.digitallinguistics.io/Person.json
+
+        roles:
+          title:       Roles
+          type:        array
+          uniqueItems: true
+          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          items:
+            title:       Role
+            type:        string
+            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
 
   # phonemes:
   #   title:       Phonemes

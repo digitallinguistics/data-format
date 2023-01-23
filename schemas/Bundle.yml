@@ -73,12 +73,29 @@ properties:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
   people:
-    title:       'People (Database References: Person)'
+    title:       People / Contributors
     type:        array
     uniqueItems: true
     description: 'People associated with this bundle.'
     items:
-      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+      title: Contributor
+      type:  object
+      properties:
+
+        person:
+          title: Person (Database Reference)
+          $ref:  https://schemas.digitallinguistics.io/Person.json
+
+        roles:
+          title:       Roles
+          type:        array
+          uniqueItems: true
+          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          items:
+            title:       Role
+            type:        string
+            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
 
   tags:
     title:       Tags
