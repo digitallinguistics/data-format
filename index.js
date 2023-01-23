@@ -10,6 +10,8 @@ import CiteItem from './json/CiteItem.json' assert { type: 'json' }
 import DatabaseReference from './json/DatabaseReference.json' assert { type: 'json' }
 import Language from './json/Language.json' assert { type: 'json' }
 import LanguageTag from './json/LanguageTag.json' assert { type: 'json' }
+import Location from './json/Location.json' assert { type: 'json' }
+import Media from './json/Media.json' assert { type: 'json' }
 import Morpheme from './json/Morpheme.json' assert { type: 'json' }
 import MultiLangString from './json/MultiLangString.json' assert { type: 'json' }
 import Note from './json/Note.json' assert { type: 'json' }
@@ -36,6 +38,8 @@ export default {
   DatabaseReference,
   Language,
   LanguageTag,
+  Location,
+  Media,
   Morpheme,
   MultiLangString,
   Note,
