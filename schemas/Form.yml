@@ -70,10 +70,18 @@ properties:
       $ref: https://schemas.digitallinguistics.io/Citation.json
 
   components:
-    title:       'Components (Database References: Lexeme | Form)'
+    title:       'Components (Database References: Lexeme)'
     type:        array
     uniqueItems: false
-    description: A list of the morphemes or other forms contained within the current form. For example, the form *gentlemen* in an English lexicon might have references to the lexical item for *gentle*, and the form *men* within the lexical item for *man*. Components may reference either an entire lexical item or a specific form. Components do not have to be unique (under some analyses, the same morpheme may appear twice in a word).
+    description: A list of the morphemes or other forms contained within the current form. For example, the form *gentlemen* in an English lexicon might have references to the lexical item for *gentle*, and the form *men* within the lexical item for *man*. Components do not have to be unique (under some analyses, the same morpheme may appear twice in a word).
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  componentOf:
+    title:       'Component Of (Database Reference: Lexeme)'
+    type:        array
+    uniqueItems: true
+    description: A list of forms that the current form is a component of.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
