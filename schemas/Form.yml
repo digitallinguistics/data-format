@@ -121,11 +121,6 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
-  morphType:
-    title:       Morpheme Type
-    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. Typically, all the forms of a lexeme will have the same morpheme type, but occasionally they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English)."
-
   notes:
     title:       Notes
     type:        array
