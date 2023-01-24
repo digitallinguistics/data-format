@@ -33,10 +33,6 @@ required:
   - lemma
   - senses
 
-dependencies:
-  variantType:
-    - variantOf
-
 properties:
 
   type:

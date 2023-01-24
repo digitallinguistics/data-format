@@ -8,10 +8,6 @@ description: The *base forms* of a lexeme are the minimal set of forms needed to
 required:
   - transcription
 
-dependencies:
-  variantType:
-    - variantOf
-
 properties:
 
   abstract:
@@ -83,7 +79,7 @@ properties:
 
   derivedInflectionClass:
     title:       Inflectional Class of Derived Form
-    $ref:        https://schemas.digitallinguistics.io/Category.
+    $ref:        https://schemas.digitallinguistics.io/Category.json
     description: If this form is a derivational morpheme, use this field to indicate the inflectional class/category of the resulting form.
 
   etymology:
@@ -117,181 +113,193 @@ properties:
     format:      uri
     description: A URL where a presentational format for this form may be viewed.
 
-#   media:
-#     title:       Media
-#     type:        array
-#     uniqueItems: true
-#     description: Media items associated with this lexeme form, such as recordings of this form being pronounced. When a media item pertains to a specific lexeme form, it should be placed in that form's `media` field rather than the lexeme's.
-#     items:
-#       title: Media Item (Database Reference)
-#       type:  object
-#       $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#       description: A database reference to a media item associated with this lexeme form
+  media:
+    title:       'Media (Database References: Media Item)'
+    type:        array
+    uniqueItems: true
+    description: Media items associated with this form, such as recordings of this form being pronounced. When a media item pertains to a specific form, it should be placed in that form's `media` field rather than the lexeme's.
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
-#   morphemeType:
-#     title: Morpheme Type
-#     $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#     description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. Typically, all the forms of a lexeme will have the same morpheme type, but occasionally they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English)."
+  morphType:
+    title:       Morpheme Type
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. Typically, all the forms of a lexeme will have the same morpheme type, but occasionally they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English)."
 
-#   notes:
-#     title:       Notes
-#     type:        array
-#     uniqueItems: true
-#     description: A collection of notes about this lexeme form. Each Note object must have its `noteType` property specified. Notes with a note type of `private` are not intended for publication in dictionaries, while other types of notes are. For precision's sake, it is recommended that notes be attached to specific forms rather than the lexeme whenever possible.
-#     items:
-#       allOf:
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: A collection of notes about this form. Each Note object must have its `noteType` property specified.
+    items:
+      allOf:
 
-#         - title: Note
-#           type:  object
-#           $ref:  'https://schemas.digitallinguistics.io/Note.json'
-#           description: A note about this lexeme form
+        - title:       Note
+          $ref:        https://schemas.digitallinguistics.io/Note.json
+          description: A note about this form.
 
-#         - required:
-#             - noteType
-#           properties:
-#             noteType:
-#               title: Note Type
-#               type:  string
-#               description: The type of note about this lexeme form
-#               enum:
-#                 - private
-#                 - general
-#                 - anthropology
-#                 - discourse
-#                 - encyclopedic
-#                 - grammar
-#                 - phonology
-#                 - semantics
-#                 - sociocultural
+        - type: object
+          required:
+            - noteType
+          properties:
+            noteType:
+              title:       Note Type
+              type:        string
+              description: The type of note about this form.
+              enum:
+                - anthropology
+                - discourse
+                - encyclopedic
+                - general
+                - grammar
+                - phonology
+                - semantics
+                - sociocultural
 
-#   phonologicalClass:
-#     title:       Phonological Class
-#     $ref:        https://schemas.digitallinguistics.io/Category.json
-#     description: The phonological class of this form. This is useful when the morphophonological behavior of a form is lexically specified and/or unpredictable. For example, some stems in Plains Cree palatalize in certain contexts, while other stems do not. Which stem adheres to which behavior is unpredictable. The phonological class field allows you to specify the phonological behavior of individual items in such cases.
+  phonologicalClass:
+    title:       Phonological Class
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: The phonological class of this form. This is useful when the morphophonological behavior of a form is lexically specified and/or unpredictable. For example, some stems in Plains Cree palatalize in certain contexts, while other stems do not. Which stem adheres to which behavior is unpredictable. The phonological class field allows you to specify the phonological behavior of individual items in such cases.
 
-#   sources:
-#     title:       Sources
-#     type:        array
-#     uniqueItems: true
-#     description: A list of the initials of the speaker or speakers who are the attested sources for this lexeme form. For precision's sake, sources should be listed for specific forms of a lexeme rather than the lexeme whenever possible. These sources should be DatabaseReferences to a Person object.
-#     items:
-#       title:         Source
-#       type:          object
-#       $ref:          'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#       referenceType: Person
-#       description:   An attested source for this lexeme form. This will often be the initials of a speaker.
+  sources:
+    title:       'Sources (Database References: Person)'
+    type:        array
+    uniqueItems: true
+    description: A list of the speakers who are the attested sources for this form.
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
-#   syllableStructure:
-#     title: Syllable Structure
-#     type:  string
-#     description: An abstract representation of the syllable structure of this form, e.g. `CVC`
+  syllableStructure:
+    title:       Syllable Structure
+    type:        string
+    description: An abstract representation of the syllable structure of this form, e.g. `CVC`.
 
-#   tags:
-#     title: Tags
-#     type:  object
-#     $ref:  'https://schemas.digitallinguistics.io/Tags.json'
-#     description: A set of tags for this lexeme form
+  tags:
+    title:       Tags
+    $ref:        https://schemas.digitallinguistics.io/Tags.json
+    description: A set of tags for this form.
 
-#   tone:
-#     title: Tone
-#     type:  string
-#     description: "An abstract representation of the tonal pattern of this lexeme form. Examples: `HLH`, `313`, `˦˨˦` etc."
+  tone:
+    title:       Tone
+    type:        string
+    description: "An abstract representation of the tonal pattern of this form. Examples: `HLH`, `313`, `˦˨˦` etc."
 
-#   transcription:
-#     title: Transcription
-#     type:  object
-#     $ref:  'https://schemas.digitallinguistics.io/Transcription.json'
-#     description: A transcription of this lexeme form, optionally in multiple orthographies
+  transcription:
+    title:       Transcription
+    $ref:        https://schemas.digitallinguistics.io/Transcription.json
+    description: A transcription of this form, optionally in multiple orthographies.
 
-#   type:
-#     title:    Type
-#     type:     string
-#     const:    Form
-#     readOnly: true
-#     description: The type of object. Must be set to `LexemeForm`.
+  type:
+    title:       Type
+    type:        string
+    const:       Form
+    readOnly:    true
+    description: The type of object. Must be set to `Form`.
 
-#   UR:
-#     title:       Underlying Form / Representation
-#     $ref:        https://schemas.digitallinguistics.io/Transcription.json
-#     description: 'The underlying form/representation for this base form. Use of this field typically isn't necessary since base forms tend to be represented in their underlying form anyway. This field can however be useful for transcribing a base form using archiphonemes or other deep phonological representations of the form.'
+  UR:
+    title:       Underlying Form / Representation
+    $ref:        https://schemas.digitallinguistics.io/Transcription.json
+    description: The underlying form/representation for this base form. Use of this field typically isn't necessary since base forms tend to be represented in their underlying form anyway. This field can however be useful for transcribing a base form using archiphonemes or other deep phonological representations of the form.
 
-#   usages:
-#     title:       Usages
-#     type:        array
-#     uniqueItems: true
-#     description: A list of MultiLangStrings giving information about this form's social usage, regional information, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
-#     items:
-#       title:       Usage
-#       $ref:        'https://schemas.digitallinguistics.io/MultiLangString.json'
-#       description: A MultiLangString giving information about this form's usage
+  usages:
+    title:       Usages
+    type:        array
+    uniqueItems: true
+    description: A list of MultiLangStrings giving information about this form's social usage, region, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
+    items:
+      $ref: https://schemas.digitallinguistics.io/MultiLangString.json
 
-#   variantOf:
-#     title: Variant Of
-#     type:  object
-#     $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#     description: If this lexeme form is a variant of another form, a reference to the other form should go here. For example, some speakers of English have *hanged* as the past tense of *hang*, while others have *hung*.
+  variantOf:
+    title:       Variant Of
+    type:        array
+    description: If this form is a variant of another form, a reference to the other form should go here. For example, some speakers of English have *hanged* as the past tense of *hang*, while others have *hung*.
+    items:
+      type: object
+      required:
+        - form
+        - variantType
+      properties:
 
-#   variants:
-#     title:       Variants
-#     type:        array
-#     uniqueItems: true
-#     description: A list of variants of this this form. This field should be used for dialectal and idiolectal variants, rapid and careful speech variants, register-based variants, spelling variants, etc. It should not be used for phonologically-conditioned variants (use the `allomorphs` field of a specific form instead). Each variant should have its `variantType` property specified.
-#     items:
-#       allOf:
+        form:
+          title:       Form (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the form that the current form is a variant of.
 
-#         - title: Variant (Database Reference)
-#           type:  object
-#           $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#           description: A database reference to a variant of this form. **Note:** The Database Reference object must have a `variantType` property, indicating the type of variant.
+        variantType:
+          title:       Variant Type
+          $ref:        https://schemas.digitallinguistics.io/Category.json
+          description: The type of variant that this form is. Possible variant types might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.
 
-#         - required:
-#             - variantType
-#           properties:
-#             variantType:
-#               title: Variant Type
-#               $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#               description: This field is be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. May be in multiple languages.
+  variants:
+    title:       Variants
+    type:        array
+    uniqueItems: true
+    description: A list of variants of this this form. This field should be used for dialectal and idiolectal variants, rapid and careful speech variants, register-based variants, spelling variants, pronunciation variants, morphological variants, etc. It should not be used for phonologically-conditioned variants. Use the `allomorphs` field for that instead. Each variant should have its `variantType` property specified.
+    items:
+      type: object
+      required:
+        - form
+        - variantType
+      properties:
 
-#   variantType:
-#     title: Variant Type
-#     $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#     description: If this form is a variant of another lexeme form, this field can be used to specify the type of variant. Possible values might be a person’s name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc. Optionally in multiple languages.
+        form:
+          title:       Form (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the variant form.
 
-# examples:
-#   - abstract: false
-#     allomorphs:
-#       - environments:
-#           - _m
-#         syllableStructure: CVC
-#         transcription:
-#           APA:  kʼuš
-#           IPA:  kˀuš
-#           Mod:  gux
-#           Swad: guš
-#     bibliography:
-#       - citationKey: Duralde1802
-#     components:
-#       - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
-#         key:           gux
-#       - id:            797f0f6b-3024-4d0c-bbfc-a1bc7cc48b81
-#         key:           't1'
-#     inflectionClass:   main verb
-#     link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/forms/guxt
-#     media:
-#       - id:            24a14428-f2e7-47a8-8d4f-00c4437f6c3a
-#         filename:      guxt.wav
-#     morphemeType:      stem
-#     sources:
-#       - source: { abbreviation: BP }
-#     syllableStructure: CVCC
-#     transcription:
-#       APA:  kʼušt
-#       IPA:  kˀušt
-#       Mod:  guxt
-#       Swad: gušt
-#     usages:
-#       - colloquial
-#     variants:
-#       - id:          0f765e8d-1401-4c01-a88f-3092d077813b
-#         key:         guxma
-#         variantType: pluractional
+        variantType:
+          title:       Variant Type
+          $ref:        https://schemas.digitallinguistics.io/Category.json
+          description: The type of variant. Possible variant types might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.
+
+examples:
+  - abstract: false
+    allomorphs:
+      - environments:
+          - _m
+        syllableStructure: CVC
+        transcription:
+          APA:  kʼuš
+          IPA:  kˀuš
+          Mod:  gux
+          Swad: guš
+    bibliography:
+      - citationKey: Duralde1802
+    components:
+      - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
+        key:           gux
+      - id:            797f0f6b-3024-4d0c-bbfc-a1bc7cc48b81
+        key:           't1'
+    inflectionClass:
+      abbreviation:
+        eng: v main
+      name:
+        eng: main verb
+    link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/forms/guxt
+    media:
+      - id:            24a14428-f2e7-47a8-8d4f-00c4437f6c3a
+        filename:      guxt.wav
+    morphemeType:      stem
+    sources:
+      - source: { abbreviation: BP }
+    syllableStructure: CVCC
+    transcription:
+      APA:     kʼušt
+      IPA:     kˀušt
+      Modern:  guxt
+      Swadesh: gušt
+    usages:
+      - colloquial
+    variants:
+      - form:
+          id: 0f765e8d-1401-4c01-a88f-3092d077813b
+          lemma:
+            APA:     kʼušma-
+            IPA:     kˀušma-
+            Modern:  guxma-
+            Swadesh: gušma-
+        variantType:
+          abbreviation:
+            eng: plact.
+          name:
+            eng: pluractional
