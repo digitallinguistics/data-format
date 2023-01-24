@@ -60,6 +60,11 @@ properties:
           $ref:        https://schemas.digitallinguistics.io/Transcription.json
           description: A transcription of this allomorph, optionally in multiple orthographies. Do not include any leading or trailing tokens (e.g. hyphens, equal signs).
 
+  baseInflectionClass:
+    title:       Inflectional Class of Base
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: The inflectional class/category of the base that this form attaches to. For example, if a suffix only attaches to a specific noun class, you would provide the Category object for that noun class here.
+
   bibliography:
     title:       Bibliography
     type:        array
@@ -76,47 +81,41 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
-  etymon:
-    title:       Etymon
-    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-    description: A database reference to a Lexeme Form in another lexicon to specify the historical origin of this form.
+  derivedInflectionClass:
+    title:       Inflectional Class of Derived Form
+    $ref:        https://schemas.digitallinguistics.io/Category.
+    description: If this form is a derivational morpheme, use this field to indicate the inflectional class/category of the resulting form.
 
-#   examples:
-#     title:       Examples
-#     type:        array
-#     uniqueItems: true
-#     description: A collection of examples illustrating this lexeme form in use. Each example is an Utterance from a Text. The Utterance number should be indicated in the `index` field of the Database Reference object. If using a full Utterance object rather than a Database Reference object, the `key` field should be included. For precision's sake, it is recommended that examples be given for individual forms rather than the entire lexeme when possible.
-#     items:
-#       title: Example Utterance (Database Reference)
-#       type:  object
-#       $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#       description: A database reference to an Utterance object
+  etymology:
+    title:       Etymology
+    type:        array
+    description: 'An array representing the etymological history of this form. Each item in the array is a Database Reference to a lexical item. Items in the array should be ordered from the oldest etymon to the most recent. For example, the etymology field for the English word *water* would have an array of objects for the following lexical items, in this order: Old English *wæter* > Proto-Germanic *watr-* > Proto-Indo-European *wodor*.'
 
-#   features:
-#     title: Features
-#     type:  object
-#     description: "A set of inflectional features for this lexeme form (used primarily with grammatical morphemes). Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in different languages. For example, a morpheme may have the feature `case: accusative` (English) as well as `caso: acusativo` (Spanish)."
-#     allOf:
-#       - title: Tags
-#         type:  object
-#         $ref: 'https://schemas.digitallinguistics.io/Tags.json'
-#         description: The Features object must be a Tags object
-#       - additionalProperties:
-#           title:     Feature
-#           type:      string
-#           minLength: 1
-#           description: Individual features must be represented as Strings
+  examples:
+    title:       'Examples (Database References: Utterance)'
+    type:        array
+    uniqueItems: true
+    description: A collection of examples illustrating this form in use. Each example is structured as an Utterance, but does not need to be a specific Utterance from a specific Text (though this is recommended).
+    items:
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
 
-#   inflectionClass:
-#     title: Inflectional Class
-#     $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#     description: If this lexeme is a root or stem, this field indicates the inflectional class that the sense takes. If this lexeme is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to. If this lexeme is a derivational morpheme, this field indicates the inflectional class of the derived form. May be written in multiple languages.
+  features:
+    title:       Features
+    type:        object
+    description: 'A set of inflectional features for this form. This field is primarily used with grammatical morphemes. Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in different languages. For example, a morpheme may have the feature `case: accusative` (English) as well as `caso: acusativo` (Spanish).'
+    additionalProperties:
+      type: string
 
-#   link:
-#     title:  Link
-#     type:   string
-#     format: uri
-#     description: A URL where a presentational format for this lexeme form may be viewed
+  inflectionClass:
+    title:       Inflectional Class
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: If this form is a root or stem, this field indicates the inflectional class that the form takes. If this form is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to.
+
+  link:
+    title:       Link
+    type:        string
+    format:      uri
+    description: A URL where a presentational format for this form may be viewed.
 
 #   media:
 #     title:       Media
