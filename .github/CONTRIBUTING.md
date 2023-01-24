@@ -1,45 +1,18 @@
-# Contributing Guidelines
+# Contributing
 
-* To **learn about this project**, check out the [documentation][docs].
+- Schemas are written as YAML for easy editing, and stored in the `schemas/` folder. (The exceptions are third-party schemas, which are stored in the `schemas/` folder as JSON and simply copied to the `json/` folder during build.) During the build process, these are converted to JSON and saved to the `json/` folder.
+- You will need to build the JSON versions of the schemas before running other scripts. You can do this by running the file `build/convert.js` in Node, or running `npm run build` on the command line.
 
-* To **ask a question**, **report a bug**, or **request changes to the schemas**, [open an issue on GitHub][issue].
+## Schema Conventions
 
-* To **contribute additions/changes to this project**, follow the [Pull Request Checklist][checklist].
+- `$ref`: Include `title`, `type`, `description` fields for any referenced schema, except when used for `items`. Include the description in the superordinate array property instead. This is useful because the use/interpretation of a schema varies by context. It's also necessary for pointers to DatabaseReference objects.
+- Vertically align property values for better readability.
+- `DatabaseReference`: When referencing the DatabaseReference schema, the title of the referencing schema should be `{Title} (Database Reference(s): {Type})`.
+- The `description` field should end in a period, even when it's not a complete sentence.
 
-## Suggesting Changes
+## Third-Party Schemas
 
-The project would especially benefit from the following types of suggestions:
+The following third-party schemas are also used in this project (and copies of those schemas are saved as JSON in the `schemas/` folder.)
 
-- Is there some part of the specification that could be structured more simply, without losing any information?
-
-- Is there a use case, property, or other piece of information that linguists commonly use that hasn't been included in the specification?
-
-- Are there any parts of the specification that are unclear or could be made clearer?
-
-- Is there a type of linguistic object or data that isn't included in the specification?
-
-- Can the documentation be improved?
-
-## Development Steps
-
-- [ ] **Fork the repository** and clone it to your computer.
-
-- [ ] **Create an issue branch** for the changes you are making. You should only make changes on this branch for the issue you are currently working on.
-
-- [ ] **Install [Node.js](https://nodejs.org/en/)**. Use the version specified in the `engines` field of the `package.json` file. If you need to manage multiple versions of Node.js on your computer, install [nvm](https://github.com/creationix/nvm) or [nvm windows](https://github.com/coreybutler/nvm-windows).
-
-- [ ] **Install project dependencies** by running `npm install` from the command line in the project root.
-
-## Scripts
-
-The following scripts can be run from the command line:
-
-- `npm run build`: convert YAML > JSON
-- `npm run convert`: convert the YAML schemas to JSON
-- `npm run docs`: regenerate the project documentation
-- `npm test`: run tests
-- `npm run upload`: upload the schemas to the DLx CDN
-
-[checklist]: ./PULL_REQUEST_TEMPLATE.md
-[docs]:      https://format.digitallinguistics.io/
-[issue]:     https://github.com/digitallinguistics/spec/issues/new
+- [CSL Bibliographic Resource](): Saved as `BibItem.json`.
+- [CSL Cite Item](): Saved as `CiteItem.json`.

@@ -1,74 +1,41 @@
-// IMPORTS & GLOBALS
+import { fileURLToPath } from 'node:url'
+import path              from 'node:path'
+import yamlParser        from 'js-yaml'
 
-import { fileURLToPath } from 'url';
-import fs                from 'fs-extra';
-import path              from 'path';
-import yamljs            from 'yamljs';
-
-const {
-  mkdirp:  createDir,
-  readdir: readDir,
+import {
+  readdir as readDir,
   readFile,
-  remove:  removeDir,
-  writeFile,
-} = fs;
+} from 'node:fs/promises'
 
-const currentDir = path.dirname(fileURLToPath(import.meta.url));
+import {
+  copy,
+  emptyDir,
+  outputJSON,
+} from 'fs-extra/esm'
 
-// VARIABLES
+const __filename = fileURLToPath(import.meta.url)
+const __dirname  = path.dirname(__filename)
+const yamlPath   = path.join(__dirname, `../schemas`)
+const files      = await readDir(yamlPath)
+const jsonPath   = path.join(__dirname, `../json`)
 
-const schemasDir = path.join(currentDir, `../schemas`);
-const jsonDir    = path.join(schemasDir, `json`);
-const yamlDir    = path.join(schemasDir, `yaml`);
+await emptyDir(jsonPath)
 
-// METHODS
+for (const file of files) {
 
-/**
- * Create the index.js file for the /json directory
- */
-async function generateIndex() {
+  const ext        = path.extname(file)
+  const inputPath  = path.join(yamlPath, file)
+  const name       = path.basename(file, ext)
+  const outputPath = path.join(jsonPath, `${ name }.json`)
 
-  const fileNames   = await readDir(jsonDir);
-  const schemaNames = fileNames.map(fileName => fileName.replace(`.json`, ``));
-
-  const lines = schemaNames
-  .map(schemaName => `  ${schemaName}: require('./${schemaName}'),`)
-  .join(`\n`);
-
-  const indexText = `module.exports = {\n${lines}\n};`;
-  const indexPath = path.join(jsonDir, `index.js`);
-
-  await writeFile(indexPath, indexText, `utf8`);
-
-}
-
-/**
- * Converts a single YAML schema to JSON
- * @param  {String} filename The name of a file in the /yaml directory
- */
-async function convertSchema(filename) {
-  const yaml         = await readFile(path.join(yamlDir, filename), `utf8`);
-  const schema       = yamljs.parse(yaml);
-  const json         = JSON.stringify(schema, null, 2);
-  const jsonFileName = filename.replace(`.yml`, `.json`);
-  const jsonFilePath = path.join(jsonDir, jsonFileName);
-  await writeFile(jsonFilePath, json, `utf8`);
-}
-
-// TOP-LEVEL SCRIPT
-
-/**
- * Converts each YAML schema in /schemas/yaml to a JSON file in /schemas/json
- * @return {Promise}
- */
-void async function convert() {
-  try {
-    const filenames = await readDir(yamlDir);        // retrieve the list of YAML schemas to convert
-    await removeDir(jsonDir);                        // remove the /json directory
-    await createDir(jsonDir);                        // recreate the /json directory
-    await Promise.all(filenames.map(convertSchema)); // convert all YAML schemas to JSON
-    await generateIndex();                           // generate index.js for the JSON files
-  } catch (e) {
-    console.error(e);
+  if (ext === `.json`) {
+    await copy(inputPath, outputPath)
+    continue
   }
-}();
+
+  const yaml = await readFile(inputPath, `utf8`)
+  const data = yamlParser.load(yaml)
+
+  await outputJSON(outputPath, data, { spaces: 2 })
+
+}

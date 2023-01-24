@@ -1,0 +1,224 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Text.json
+title:   Text
+type:    object
+
+description: 'A *text* is the fundamental unit of documentation. It represents a linguistic performance of a stretch of discourse in context. This may include a wide variety of linguistic genres: an elicitation session, a conversation, a narrative, a song, etc. In technical terms, a text is an interlinearized set of utterances with one or more transcriptions, translations, and optionally Leipzig-style glosses.'
+
+required:
+  - utterances
+
+properties:
+
+  abbreviation:
+    title:       Abbreviation
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'An abbreviation for this Text.'
+
+  access:
+    title:       Access Conditions
+    $ref:        https://schemas.digitallinguistics.io/Access.json
+    description: 'An object describing the access conditions for this Text.'
+
+  annotations:
+    title:       Annotations
+    type:        array
+    uniqueItems: true
+    description: 'A collection of annotations on this text.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Annotation.json
+
+  bibliography:
+    title:       Bibliography
+    type:        array
+    description: 'A list of citations to any bibliographic sources concerning or relating to this Text.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Citation.json
+
+  id:
+    title:       ID
+    description: 'A unique database identifier for this Text.'
+
+  dateCreated:
+    title:       Date Created
+    type:        string
+    description: 'The date and optionally time that this Text was created in the database (**not** the date it was recorded; see the `dateRecorded` property instead).'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  dateModified:
+    title:       Date Modified
+    type:        string
+    description: 'The date and optionally time that this Text object was last modified (**not** the date that the recording of the text was modified).'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  dateRecorded:
+    title:       Date Recorded
+    type:        string
+    description: 'The date and optionally time that this text was recorded.'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  discourseType:
+    title:       Discourse Type
+    description: 'The type, or types, of discourse event, e.g. monologue, dialogue, or song.'
+    oneOf:
+      - $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+      - type:        array
+        uniqueItems: true
+        items:
+          $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+
+  genre:
+    title:       Genre
+    description: 'The genre, or genres, of the text, e.g. folktale, personal narrative, or expository.'
+    oneOf:
+      - $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+      - type:        array
+        uniqueItems: true
+        items:
+          $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+
+  languages:
+    title:       Languages (Database References)
+    type:        array
+    description: A list of languages used in this text. If only one language is provided, all utterances in the text are assumed to be in that language, unless otherwise specified on specific utterances (using the `Utterance.language` property).
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  link:
+    title:       Link
+    type:        string
+    format:      uri
+    description: 'A URL where a presentational format for this resource may be viewed.'
+
+  location:
+    title:       Location
+    type:        object
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: 'A database reference to the location where this text was recorded.'
+
+  media:
+    title:       'Media (Database References: Media)'
+    type:        array
+    uniqueItems: true
+    description: 'An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: 'A collection of notes about this Text.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Note.json
+
+  people:
+    title:       People / Contributors
+    type:        array
+    uniqueItems: true
+    description: 'People associated with this text.'
+    items:
+
+      title: Contributor
+      type:  object
+      properties:
+
+        person:
+          title: Person (Database Reference)
+          $ref:  https://schemas.digitallinguistics.io/Person.json
+
+        roles:
+          title:       Roles
+          type:        array
+          uniqueItems: true
+          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          items:
+            title:       Role
+            type:        string
+            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+
+  tags:
+    title:       Tags
+    type:        object
+    $ref:        https://schemas.digitallinguistics.io/Tags.json
+    description: 'A set of tags associated with this Text.'
+
+  title:
+    title:       Title
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'The title of the text, in one or more languages.'
+
+  type:
+    title:       Type
+    type:        string
+    const:       Text
+    readOnly:    true
+    description: 'The type of object. Must be set to `Text`.'
+
+  url:
+    title:       URL
+    type:        string
+    format:      uri
+    description: 'The URL where this data can be retrieved in JSON format.'
+
+  utterances:
+    title:       Utterance
+    type:        array
+    uniqueItems: false
+    description: 'A collection of all the Utterances contained in this Text. The DLx specification imposes no requirements regarding how the linguist should segment the text into Utterances. The linguist may decide to segment their text based on intonation units, turns, or any other appropriate linguistic subdivision. The order of Utterances in the collection must reflect their actual order in the Text. Utterances do *not* have to be JSON unique - an Utterance may be repeated in a text. However, utterances are conceptually unique: each utterance represents a different token of speech.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Utterance.json
+
+examples:
+
+  - abbreviation:   A1
+    access:
+      notes:
+        - text: This text may be disseminated publicly, provided proper attribution is given to Chief Benjamin Paul and the Chitimacha Tribe.
+    annotations:    []
+    contributors:
+      - familyName: Paul
+        givenName:  Benjamin
+        roles:
+          - speaker
+      - familyName: Swadesh
+        givenName:  Morris
+        roles:
+          - researcher
+    dateCreated:    '2018-10-05T15:26:23.070Z'
+    dateModified:   '2018-10-05T15:26:23.070Z'
+    discourseType:  monologue
+    genre:
+     - folktale
+     - personal narrative
+    id:             5790c2b7-579c-4bb5-aa5e-537ae1ac06ca
+    languages:
+      - abbreviation: chiti
+        id:           3d91a22d-005b-4ec5-8151-09e44629f58f
+    link:           https://explorer.digitallinguistics.io/languages/Chitimacha/texts/A1
+    location:
+      abbreviation: Charenton
+      address:
+        locality:   Charenton
+        region:     Louisiana
+        country:    United States
+      name:         Charenton
+    title:
+      eng:          How the Indian came (first telling)
+      ctm:          Qaxt Panx Pinikankx qap cuyi (1)
+    type:           Text
+    utterances:
+      - transcription:
+          Mod: waxdungu qasi
+        translation:
+          eng: One day a man,
+        transcript:
+          Mod: Waxdungu qasi,
+        words: []
+    url:            https://data.digitallinguistics.io/languages/Chitimacha/texts/A1

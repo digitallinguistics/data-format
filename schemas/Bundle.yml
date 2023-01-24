@@ -1,0 +1,186 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Bundle.json
+title:   Bundle
+type:    object
+
+description: 'A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.'
+
+properties:
+
+  abbreviation:
+    title:       Abbreviation
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'An abbreviation for this Bundle.'
+
+  access:
+    title:       Access Conditions
+    $ref:        https://schemas.digitallinguistics.io/Access.json
+    description: 'An object describing the access conditions for this Bundle.'
+
+  dateCreated:
+    title:       Date Created
+    type:        string
+    description: 'The date and optionally time that this Bundle was created.'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  dateModified:
+    title:       Date Modified
+    type:        string
+    description: 'The date and optionally time that this Bundle was last modified.'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  id:
+    title:       ID
+    description: 'A unique database identifier for this Bundle.'
+
+  key:
+    title:       Key
+    description: 'A unique human-readable identifier for this Bundle.'
+
+  link:
+    title:       Link
+    type:        string
+    format:      uri
+    description: 'A URL where a presentational format for this resource may be viewed.'
+
+  locations:
+    title:       'Locations (Database References: Location)'
+    type:        array
+    uniqueItems: true
+    description: 'Locations included in this bundle (usually locations that were visited during a day or session).'
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  media:
+    title:       'Media (Database References: Media)'
+    type:        array
+    uniqueItems: true
+    description: 'Media files included in this bundle.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  name:
+    title:       Name
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'A name for this bundle, optionally in multiple languages.'
+
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: 'Notes about this bundle.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Note.json
+
+  people:
+    title:       People / Contributors
+    type:        array
+    uniqueItems: true
+    description: 'People associated with this bundle.'
+    items:
+
+      title: Contributor
+      type:  object
+      properties:
+
+        person:
+          title: Person (Database Reference)
+          $ref:  https://schemas.digitallinguistics.io/Person.json
+
+        roles:
+          title:       Roles
+          type:        array
+          uniqueItems: true
+          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          items:
+            title:       Role
+            type:        string
+            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+
+  tags:
+    title:       Tags
+    $ref:        https://schemas.digitallinguistics.io/Tags.json
+    description: 'A set of tags for this Bundle.'
+
+  texts:
+    title:       'Texts (Database References: Text)'
+    type:        array
+    uniqueItems: true
+    description: 'Texts included in this bundle.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  type:
+    title:       Type
+    type:        string
+    const:       Bundle
+    readOnly:    true
+    description: 'The type of object. Must be set to `Bundle`.'
+
+  url:
+    title:       URL
+    type:        string
+    format:      uri
+    description: 'The URL where the JSON data for this bundle may be accessed.'
+
+examples:
+
+  - abbreviation: Day1
+    access:
+      ELAR:       Researcher
+    dateCreated:  '2018-10-13T15:48:11.496Z'
+    dateModified: '2018-10-13T15:54:23.382Z'
+    id:           aea46597-be32-48bb-9cb5-862c4f0a2081
+    link:         https://data.digitallinguistics.io/bundles/aea46597-be32-48bb-9cb5-862c4f0a2081
+    locations:
+      - key:      Kisii
+      - key:      KennedyFarm
+    media:
+      - key:      Helen1
+      - key:      Helen2
+    name:         Gusii Recording Day 1
+    notes:
+      - text:     "Texts recorded during the first day of recording in Kisii Town and Kennedy's farm."
+    people:
+      - key:      HM
+        name:     Helen Makana
+    tags:
+      analyze:    true
+    texts:
+      - key:      Omoiseke
+        name:     Ómoíséké ósokérété chíséese
+      - key:      Okando
+        name:     "Ókandó n'Ókanyang'aú"
+    type:         Bundle
+    url:          https://api.digitallinguistics.io/bundles/aea46597-be32-48bb-9cb5-862c4f0a2081.json
+
+  - abbreviation: Lexicon1
+    access:
+      AILLA:      public access
+    dateCreated:  '2018-10-13T15:54:12.484Z'
+    dateModified: '2018-10-13T15:54:48.916Z'
+    id:           cd79381a-6a44-4c9a-a8c1-d33186c6d839
+    link:         https://data.digitallinguistics.io/bundles/cd79381a-6a44-4c9a-a8c1-d33186c6d839
+    locations:
+      - key:      Charenton
+    media:
+      - key:      qasi1
+      - key:      qasi2
+      - key:      kici
+    name:
+      eng:        Lexicon Recording Day 1
+    notes:
+      - text:     First day of recording for the dictionary project.
+    people:
+      - key:      JMS
+        name:     John M. Smith
+      - key:      CB
+        name:     Chris Baker
+    tags:
+      lexicon:    true
+    type:         Bundle
+    url:          https://api.digitallinguistics.io/bundles/cd79381a-6a44-4c9a-a8c1-d33186c6d839.json

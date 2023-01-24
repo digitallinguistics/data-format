@@ -1,0 +1,436 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Lexeme.json
+title:   Lexeme
+type:    object
+
+description: "A *lexeme* or *lexical item* in DLx refers to any linguistic sign—that is, a form-meaning pairing or a construction. It is an abstract conceptual entity that represents all the various base forms of a sign and its associated meanings. In DLx, the lexical item might be a word, morpheme, idiom, etc. Examples of lexical items in English might include *be*, *run up* (a phrasal verb), and *‑ing* (a suffix). A lexical item will typically have multiple *senses* or meanings, and those are listed in the `senses` property. It is up to the linguist to decide when two meanings are related, and therefore belong to the same lexical item, or when they belong to different lexical items.\n\nA lexical item often also has multiple base forms, such as suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexical item *be* has the base forms *be*, *am*, *is*, etc. These are listed in the `forms` field. The `forms` field should **not** be used to list all the regularly-inflected forms of a word. Individual base forms may have phonologically-conditioned allomorphs, and these are listed in the `allomorphs` field of the form.\n\nThe lexical item and its forms and senses may also have variations, such as dialectal and idiolectal variants, rapid speech variants, register-based variants, variations in meaning, or even spelling variants. These are listed in the `variants` fields.\n\nBy convention, one of the forms of a lexical item is typically chosen as a representative headword or *lemma*, and this is indicated by the `lemma` field. For example, the form *man* in English is typically used as the lemma/headword for the lexical item that includes the forms *man* and *men*. Note that the DLx lexical item does **not** represent a lexical entry in a dictionary. Dictionaries typically list each base form of a lexical item as a separate lexical entry. The DLx lexical item puts each of these lexical entries together in the `forms` field instead."
+
+required:
+  - forms
+  - lemma
+  - senses
+
+properties:
+
+  alternativeAnalyses:
+    title:       Alternative Analyses
+    type:        array
+    uniqueItems: true
+    description: An array of alternative analyses for this lexical item, each formatted as their own Lexeme object. This can be useful when working with historical sources or research from other linguists. It allows users to decide on their own analysis, while still maintaining a faithful record of the analyses of the original documentation.
+    items:
+      $ref: '#'
+
+  bibliography:
+    title:       Bibliography
+    type:        array
+    uniqueItems: true
+    description: A list of citations to attested bibliographic sources where this lexical item appears or is discussed.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Citation.json
+
+  citationForm:
+    title:       Citation Form
+    $ref:        https://schemas.digitallinguistics.io/Transcription.json
+    description: The citation form of a lexeme is the form given when spoken in isolation, which may be different from its lemma form. For example, in Swahili the citation form of a verb is typically the infinitive, e.g. *kuandika* `to write`, even though *‑andika* is typically used as its lemma and dictionary headword. The citation form should include any relevant leading or trailing tokens (e.g. hyphens, equal signs).
+
+  crossReferences:
+    title:       Cross References
+    type:        array
+    uniqueItems: true
+    description: Cross references to other lexical items. (To cross-reference specific senses, use the `lexicalRelations` property in the Sense instead.)
+    items:
+      title:       Cross Reference
+      type:        object
+      description: A cross reference to another lexical item.
+      required:
+        - relationType
+      properties:
+
+        label:
+          title:       Label (for Singular Item)
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: The label to display before the cross-reference.
+
+        lexeme:
+          title:       'Lexeme (Database Reference: Lexeme)'
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: The referenced lexical item. Required for bidirectional and unidirectional cross-references.
+
+        members:
+          title:       Members
+          description: For enumerated/open sets, specifies the members of the set of lexical items. The current lexical item may also be included in the set. Required for enumerated/open sets. For enumerated sets, `members` must be an object. For open sets, `members` must be an array.
+
+        plural:
+          title:       Label (for Plural Items)
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: The label to display before the cross-reference if there is more than one item to list. Only applies to enumerated/open sets.
+
+        relation:
+          title:       Relation Name
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: The name of the cross-reference relation (e.g. "Synonym", "Part/Whole", "Adjective Scale"), as a MultiLangString.
+
+        relationType:
+          title:       Relation Type
+          description: 'The type of cross-reference relation. `bidirectional`: Both lexemes cross-reference each other. The cross-reference is displayed on both. `enumerated set`: The lexeme is part of a restricted set of lexemes, where each lexeme fulfills a particular role in the set. For example, scalar adjectives might form an enumerated set of "positive", "comparative", and "superlative". `open set`: The lexeme is part of a set of lexemes. `undirectional`: The current lexeme references another lexeme, but the other lexeme does not reference this lexeme.'
+          enum:
+            - bidirectional
+            - enumerated set
+            - open set
+            - undirectional
+
+      allOf:
+        - if:
+            required: [relationType]
+            properties:
+              relationType:
+                enum:
+                  - bidirectional
+                  - unidirectional
+          then:
+            required: [lexeme]
+        - if:
+            required: [relationType]
+            properties:
+              relationType:
+                const: enumerated set
+          then:
+            required: [members]
+            properties:
+              members:
+                title:       'Members (Enumerated Set) (Database References: Lexeme)'
+                type:        object
+                description: An object whose keys indicate the role that a lexeme fills in the set, and whose values provide information about the referenced lexeme. For example, when creating an enumerated set of lexemes for scalar adjectives, the keys in this object might be "positive", "comparative", and "superlative", and the values of each of these would be references to the positive, comparative, and superlative versions of the current lexeme, respectively.
+                additionalProperties:
+                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+        - if:
+            required: [relationType]
+            properties:
+              relationType:
+                const: open set
+          then:
+            required: [members]
+            properties:
+              members:
+                title: 'Members (Open Set) (Database References: Lexeme)'
+                type:  array
+                items:
+                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  dateCreated:
+    title:       Date Created
+    type:        string
+    description: The date and optionally time that this lexical item was created
+    oneOf:
+      - format: date
+      - format: date-time
+
+  dateModified:
+    title:       Date Modified
+    type:        string
+    description: The date and optionally time that this lexical item was last modified
+    oneOf:
+      - format: date
+      - format: date-time
+
+  examples:
+    title:       'Examples (Database References: Utterance)'
+    type:        array
+    uniqueItems: true
+    description: A collection of examples illustrating this lexical item in use. Each example is structured as an Utterance, but does not need to be a specific Utterance from a specific Text (though this is recommended).
+    items:
+      $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
+
+  features:
+    title:       Features
+    type:        object
+    description: 'A set of inflectional features for this lexical item. This field is primarily used with grammatical morphemes. Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in different languages. For example, a morpheme may have the feature `case: accusative` (English) as well as `caso: acusativo` (Spanish). Note that the `features` property is available at both the Lexeme and Forms levels. This is because the locus of some features varies from language to language.'
+    additionalProperties:
+      type: string
+
+  forms:
+    title:       Base Forms
+    type:        array
+    uniqueItems: true
+    description: "The base forms for this lexical item, i.e. the different forms that this lexeme or morpheme may take, exclusive of its regular inflectional variants. For example: the lexeme *man* would include the forms *man* and *men*; the lexeme *run* would include the forms *run* and *ran*, but not *runs* or *running*, because these are regularly-inflected and therefore predictable; the lexeme *be* would include *am*, *are*, *is*, etc., because these are irregular / suppletive forms, but would not include *being*."
+    items:
+      $ref: https://schemas.digitallinguistics.io/Form.json
+
+  id:
+    title:       ID
+    description: A unique database identifier for this Lexeme.
+
+  key:
+    title:       Key
+    type:        string
+    description: A human-readable key that uniquely identifies this lexical item within the language.
+
+  language:
+    title:       Language (DatabaseReference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: The language of this Lexeme.
+
+  lemma:
+    title:       Lemma
+    type:        object
+    description: 'A *lemma* is the form of a lexeme conventionally used to represent that lexeme. It is mostly an organizational convenience—a useful way to refer to a lexical item without having to list all its forms every time. The choice of lemma depends on the project, person, language, field of study, etc. It is often (but not always) used as the headword in dictionary entries. Possible choices for the lemma include: the citation form (examples of which might be the infinitive or the third person singular perfective); one of the base forms (often the stem in the singular); the underlying representation; or others. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc., even though the citation form is typically given in the infinitive as *to be*. The DLx Lemma object contains information about the lemma and how it should be displayed. Lemmas may be represented in multiple orthographies. They should include any relevant leading or trailing tokens (e.g. hyphens, equal signs).'
+    required:
+      - transcription
+    properties:
+
+      abstract:
+        title:       Abstract
+        type:        boolean
+        default:     false
+        description: Whether the lemma is an abstract (underlying) form. User interfaces will typically display abstract forms between |pipes|, /slashes/, {brackets}, or other leading/trailing tokens according to convention in their subfield.
+
+      reconstructed:
+        title:       Reconstructed
+        type:        boolean
+        default:     false
+        description: Whether the lemma is a reconstructed (unattested) form. Note that some historically reconstructed forms are also attested in the actual historical record. In this case, you may want to set the value of this property to `false`. User interfaces will typically display reconstructed forms with a leading asterisk, following standard convention in historical linguistics.
+
+      transcription:
+        title:       Transcription
+        $ref:        https://schemas.digitallinguistics.io/Transcription.json
+        description: The transcription of the lemma.
+
+  lexemeType:
+    title:       Lexeme Type
+    type:        string
+    description: The type of lexeme this is (either lexical or functional). The primary purpose of this field is to make it easy to style interlinear glosses in small caps.
+    enum:
+      - functional
+      - lexical
+
+  link:
+    title:       Link
+    type:        string
+    format:      uri
+    description: A URL where a presentational format for this resource may be viewed.
+
+  literalMeaning:
+    title:       Literal Meaning
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: The literal meaning of the lexical item.
+
+  media:
+    title:       'Media (Database Reference: Media Item)'
+    type:        array
+    uniqueItems: true
+    description: Media items associated with this lexical item, such as recordings of the citation form of the word, pictures of the item this word refers to, or videos of the action being performed. If a media item pertains a specific sense or form, it should be placed in that sense or form's `media` field instead.
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  morphType:
+    title:       Morph Type
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: The morphological type for this lexical item. Example values include `"root"`, `"stem"`, `"prefix"`, `"suffix"`, `"compound"`, `"phrasal verb"`, etc.
+
+  morphType:
+    title:       Morpheme Type
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. All the forms of a lexical item should have the same morpheme type. If they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English), create separate lexical items for both forms."
+
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: A collection of notes about this lexical item.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Note.json
+
+  senses:
+    title:       Senses
+    type:        array
+    uniqueItems: true
+    description: A collection of meanings or *senses* for this lexical item. It is up to the linguist to decide whether two uses of a lexical item are distinct enough to be considered separate senses.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Sense.json
+
+  slot:
+    title:       Slot
+    type:        string
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: This field indicates the slot in a Word Template in which this Lexeme belongs. The value should be the same as the value found in `WordTemplate.slots`.
+
+  sources:
+    title:       'Sources (Database References: Person)'
+    type:        array
+    uniqueItems: true
+    description: A list of the speakers who are the attested sources for this lexical item.
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  status:
+    title:       Status
+    description: '`status` is a reserved keyword, used to describe the status of a lexical item in a documentary workflow. Implementations may include `status` fields with widely different formats and structures, depending on the needs of the software. As such, DLx imposes no requirements on the format of the `status` field. Implementers should ignore data in this field if it does not conform to their specification.'
+
+  tags:
+    title:       Tags
+    $ref:        https://schemas.digitallinguistics.io/Tags.json
+    description: A set of tags for this lexical item.
+
+  type:
+    title:       Type
+    type:        string
+    const:       Lexeme
+    readOnly:    true
+    description: The type of object. Must be set to `Lexeme`.
+
+  url:
+    title:       URL
+    type:        string
+    format:      uri
+    description: A URL where a JSON representation of this lexical item may be retrieved.
+
+  usages:
+    title:       Usages
+    type:        array
+    uniqueItems: true
+    description: A set of information about the social contexts where this sense is used. Common values might include regions, registers, dialects, or particular social groups.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
+  variantOf:
+    title:       Variant Of
+    type:        array
+    description: If this lexical item is a variant of another lexical item, a reference to the other item should be listed here. Note that a lexical item may be a variant of a specific sense or form, rather than an entire lexeme. For example, American English *elevator* is a variant of one specific sense of British English *lift*, but *lift* has other senses as well, which *elevator* is not connected to. Each variant in this field can therefore include information about the specific form or sense that the current item is a variant of as well.
+    items:
+      type: object
+      required:
+        - variantType
+      properties:
+
+        form:
+          title:       Form (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the form that the current lexical item is a variant of.
+
+        lexeme:
+          title:       Lexeme (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the lexical item that the current lexical is a variant of.
+
+        sense:
+          title:       Sense (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the sense that the current lexical item is a variant of.
+
+        variantType:
+          title:       Variant Type
+          $ref:        https://schemas.digitallinguistics.io/Category.json
+          description: The type of variant that this lexical is. Possible variant types might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.
+
+  variants:
+    title:       Variants
+    type:        array
+    uniqueItems: true
+    description: A list of variants of this this lexical item. This field should be used for dialectal and idiolectal variants, rapid and careful speech variants, register-based variants, variations in meaning, spelling variants, etc. It should not be used for phonologically-conditioned variants (use the `allomorphs` field of a specific form instead) or morphologically-conditioned variants (use the `forms` field instead). Each variant should have its `variantType` property specified. You can also refer to specific forms or senses instead of the entire lexical item as well.
+    items:
+      type: object
+      required:
+        - variantType
+      properties:
+
+        form:
+          title:       Form (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the variant form.
+
+        lexeme:
+          title:       Lexeme (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the variant lexical item.
+
+        sense:
+          title:       Sense (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the variant sense.
+
+        variantType:
+          title:       Variant Type
+          $ref:        https://schemas.digitallinguistics.io/Category.json
+          description: The type of variant. Possible variant types might be a person's name (representing an idiolectal variant), or simply `idiolectal`, or `dialectal` (or the name of the dialect), or `rapid speech`, etc.
+
+examples:
+  - alternativeAnalyses:
+    - forms:
+        - transcription:
+            APA: kʼuš
+      lemma:
+        transcription:
+          APA:  kʼuš
+          IPA:  kˀuš
+      senses:
+        - argumentStructure: eat(agent, patient)
+          gloss: eat
+    bibliography:
+      - citationKey: Duralde1802
+    citationForm:
+      APA:          kʼušti
+      IPA:          kˀušti
+      Mod:          guxti
+      Swad:         gušti
+    dateCreated:    '2018-11-03T00:23:55.842Z'
+    dateModified:   '2018-11-03T00:24:04.730Z'
+    id:             783cbaa8-befe-4049-bfe4-bb5688173780
+    key:            guxt-(1)
+    language:
+      abbreviation: chiti
+      id:           3d91a22d-005b-4ec5-8151-09e44629f58f
+    lemma:
+      transcription:
+        APA:     kʼušt
+        IPA:     kˀušt
+        Modern:  guxt
+        Swadesh: gušt
+    link:           https://explorer.digitallinguistics.io/languages/Chitimacha/lexemes/guxt
+    type:           Lexeme
+    url:            https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt
+    forms:
+      - allomorphs:
+          - environments:
+              - _m
+            syllableStructure: CVC
+            transcription:
+              APA:  kʼuš
+              IPA:  kˀuš
+              Mod:  gux
+              Swad: guš
+        components:
+          - id:            e0e2dbdb-f89b-4002-bd46-4f6803bb4391
+            key:           gux
+          - id:            797f0f6b-3024-4d0c-bbfc-a1bc7cc48b81
+            key:           't1'
+        inflectionClass:
+          name:
+            eng: main verb
+        link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/forms/guxt
+        media:
+          - id:            24a14428-f2e7-47a8-8d4f-00c4437f6c3a
+            filename:      guxt.wav
+        morphemeType:      stem
+        sources:
+          - source: { abbreviation: DWH }
+        syllableStructure: CVCC
+        transcription:
+          APA:  kʼušt
+          IPA:  kˀušt
+          Mod:  guxt
+          Swad: gušt
+        variants:
+          - lexeme: c5c3102e-a8e7-424a-9605-0308a1055d5d
+            variantType:
+              abbreviation:
+                eng: plact.
+              name:
+                eng: pluractional
+    senses:
+      - argumentStructure: eat(agent, patient)
+        category:
+          name:
+            eng: transitive verb
+        definition:        to eat
+        gloss:             eat
+        link:              https://data.digitallinguistics.io/languages/Chitimacha/lexemes/guxt/senses/2

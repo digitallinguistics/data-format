@@ -1,0 +1,95 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/WordSet.json
+title:   Word Set
+type:    object
+
+description: 'A *WordSet* is a set of related lexemes across languages. This could be a cognate set, a loandword set, or some other crosslinguistic grouping. Referenced lexemes must have their `language` property set.'
+
+properties:
+
+  id:
+    title:       ID
+    description: A unique database identifier for this WordSet.
+
+  members:
+    title:       'Lexical Items (Databse References: Lexical Item)'
+    type:        array
+    uniqueItems: true
+    description: 'The collection of lexical items in this word set.'
+    items:
+      allOf:
+        - $ref:     https://schemas.digitallinguistics.io/DatabaseReference.json
+        - required: [language]
+          type:     object
+
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: 'A collection of notes about this Word Set.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Note.json
+
+  reconstruction:
+    title:       Reconstructed Form
+    description: 'A DatabaseReference to the lexeme which is the reconstructed form for this word set (cognate set).'
+    allOf:
+      - $ref:     https://schemas.digitallinguistics.io/DatabaseReference.json
+      - required: [language]
+        type:     object
+
+  type:
+    title:       Type
+    type:        string
+    const:       WordSet
+    readOnly:    true
+    description: 'The type of object. Must be set to `WordSet`.'
+
+  relation:
+    title:       WordSet Type
+    type:        string
+    description: 'The type of set to which this collection of lexemes belongs.'
+    enum:
+      - borrowing
+      - cognate
+      - other
+
+examples:
+
+  - type: WordSet
+    items:
+      - forms:
+          - transcription:
+              IPA: 'dɪʃ'
+        language:
+          id: 0fced80b-5e47-46b2-80ac-2709545cd447
+        lemma:
+          IPA: 'dɪʃ'
+        senses:
+          - gloss: 'dish'
+      - forms:
+          - transcription:
+              IPA: 'tɪʃ'
+        language:
+          id: 3fcd10db-6702-4c4d-9726-3f01ffaaa903
+        lemma:
+          IPA: 'tɪʃ'
+        senses:
+          - gloss:
+              en: table
+              de: tisch
+    notes:
+      - text: 'This is not a complete list of cognates for discus.'
+    reconstruction:
+      forms:
+        - transcription:
+            IPA: 'ˈdis.kus'
+      language:
+        id: 143ed570-f340-46d5-90c1-a6d3f5879bb2
+      lemma:
+        IPA: 'ˈdis.kus'
+      senses:
+        - gloss:
+            en: discus
+            la: discus
+    wordsetType: cognate

@@ -1,0 +1,82 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Morpheme.json
+title:   Morpheme Token
+type:    object
+
+description: 'A *morpheme token* is a particular instance of a morpheme or lexical item in a text. In DLx, the primary function of the Morpheme object is to provide a concise, short description of each token of a morpheme in a corpus—its form, its gloss, and a reference to a lexical entry where more information can be found.'
+
+required:
+  - gloss
+  - transcription
+
+properties:
+
+  gloss:
+    title:       Gloss
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'A gloss for this morpheme, optionally in multiple languages. The gloss of a grammatical morpheme should be written in CAPS, for human readability.'
+
+  key:
+    title:       Key
+    type:        string
+    pattern:     '^\w+[-_\.][0-9]+[-_\.][0-9]+[-_\.][0-9]+$'
+    description: 'A key that uniquely identifies this morpheme token within the Text. Sometimes called a "breadcrumb". The key for a Morpheme consists of: 1) the abbreviation of the text; 2) a period, dash, or underscore; 3) the number of Utterance within the text (indexing starts at 1); 4) another period, dash, or underscore; 5) the number of the word within the Utterance (indexing starts at 1); 6) one more period, dash, or underscore; and finally 7) the number of the Morpheme within the Word. For example, for the second morpheme of the fourth word of the third utterance in a text with the abbreviation `A`, the key would be `A.3.4.2`. Keys should be unique within a corpus.'
+
+  language:
+    title:       Morpheme Language (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/Language.json
+    description: 'The language of this word token. This field is primarily used for bilingual texts or code-mixing within a text. A researcher may decide, for example, that the stem of a word is in one language and the suffix in the same word is in another language.'
+
+  lexicalItem:
+    title:       Lexical Item (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: 'A lexical entry where more information about this morpheme may be found.'
+
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: 'A collection of notes about this morpheme token.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Note.json
+
+  tags:
+    title:       Tags
+    $ref:        https://schemas.digitallinguistics.io/Tags.json
+    description: 'A set of tags for this morpheme token.'
+
+  transcription:
+    title:       Transcription
+    $ref:        https://schemas.digitallinguistics.io/Transcription.json
+    description: 'A transcription of this morpheme token. Should be a phonemic transcription of this particular token/allomorph, rather than an abstract representation of the morpheme. Do not include any leading or trailing tokens such as hyphens or equal signs.'
+
+  type:
+    title:       Type
+    type:        string
+    const:       Morpheme
+    readOnly:    true
+    description: 'The type of object. Must be set to `Morpheme`.'
+
+examples:
+
+  - gloss:  man
+    lexeme:
+      id:   06ed7bda-9923-4295-97da-8c9a24b98fd4
+      key:  qasi
+    tags:
+      role: subject
+    transcription:
+      APA:  ʔasi
+      IPA:  ʔasi
+      Mod:  qasi
+    type:   Morpheme
+
+  - gloss:  dog
+    lexeme:
+      id:   69bde5cc-a2cd-4bdc-8097-8e71e865e35a
+      key:  chisese
+    transcription:
+      IPA:  sɛ́ɛsɛ
+      Swa:  sese
+      Eke:  séese
+    type:   Morpheme

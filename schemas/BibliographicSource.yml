@@ -1,0 +1,12 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/BibliographicSource.json
+title:   BibliographicSource
+type:    object
+
+description: 'An object containing information about a bibliographic resource, such as a book or journal article. DLx recommends using Citation Style Language (CSL) JSON format for references, but some implementations may choose to use other bibliographic tools and formats. As such, this schema does not enforce any particular format for Bibliographic Source objects.'
+
+$comment: The DLx tech stack uses a light wrapper object around the CSL data, because the `type` property of the CSL data format conflicts with DLx's `type` property (which the DLx database relies on heavily).
+
+anyOf:
+  - {}
+  - $ref: https://resource.citationstyles.org/schema/v1.0/input/json/csl-data.json

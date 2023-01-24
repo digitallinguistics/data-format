@@ -1,0 +1,49 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Access.json
+title:   Access Conditions
+type:    object
+
+description: 'The Access Conditions object provides information for archives on who should be allowed to access the current resource. Some access protocols used by language archives are already supported, and custom protocols may be used as, e.g. `online: false` or `permission: researcher only`, etc.'
+
+properties:
+
+  AILLA:
+    title:       AILLA Access Level
+    type:        string
+    description: 'For users who are depositing their materials at The Archive of the Indigenous Languages of Latin America (AAILA), an `AILLA` attribute may be added, and its value set to one of the access levels set forth by the archive.'
+    enum:
+      - depositor control
+      - public access
+      - password
+      - time limit
+
+  ELAR:
+    title:       ELAR Access Level
+    type:        string
+    description: 'For users who are depositing their materials at the Endangered Language Archive (ELAR), an `ELAR` attribute may be added, and its value set to one of the access levels set forth by the archive.'
+    enum:
+      - Community Member
+      - Researcher
+      - Subscriber
+      - User
+
+  license:
+    title:       License
+    type:        string
+    description: 'The license under which you want to make this resource available, most likely a [SPDX abbreviation](https://spdx.org/licenses/). If you do not want to license others to use this resource, omit this field. Otherwise, use [choosealicense.com](https://choosealicense.com/) to decide which license is right for your usage.'
+
+  notes:
+    title:       Access Notes
+    type:        array
+    uniqueItems: true
+    description: 'Notes about access conditions for this resource, or any other special considerations regarding who should have access.'
+    items:
+      $ref: 'https://schemas.digitallinguistics.io/Note.json'
+
+examples:
+
+  - AILLA:   password
+    ELAR:    Community Member
+    license: UNLICENSED
+    notes:
+      - text: Speaker also requested that this text only be shared with family members.

@@ -1,0 +1,28 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Category.json
+title:   Category
+type:    object
+
+description: 'A very generic schema for listing a class or category (e.g. lexical category, inflection class, phonological class, etc.).'
+
+properties:
+
+  abbreviation:
+    title:       Abbreviation
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'An abbreviation for this class/category, optionally in multiple languages.'
+
+  name:
+    title: Name
+    $ref:  https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'The name of this class/category, optionally in multiple languages.'
+
+  parent:
+    title:       Parent Category (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: The parent category for this category.
+
+  subcategories:
+    title:       'Subcategories (Database References: Category)'
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: A list of subcategories for this class/category.

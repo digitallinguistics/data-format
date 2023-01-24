@@ -1,52 +1,45 @@
 {
-  "name": "@digitallinguistics/spec",
-  "version": "1.0.0",
-  "description": "The DLx format for representing linguistic data in JSON",
+  "name": "@digitallinguistics/schemas",
+  "version": "0.1.0",
+  "description": "The Data Format for Digital Linguistics (DaFoDiL)",
   "keywords": [
-    "DLx",
-    "Digital Linguistics",
-    "JSON",
     "linguistics",
     "language",
-    "documentation"
+    "digital linguistics",
+    "DLx",
+    "digital humanities",
+    "documentary linguistics",
+    "corpus linguistics"
   ],
-  "homepage": "https://github.com/digitallinguistics/spec#readme",
-  "bugs": "https://github.com/digitallinguistics/spec/issues",
+  "homepage": "https://digitallinguistics.io/",
+  "bugs": "https://github.com/digitallinguistics/data-format/issues",
   "license": "MIT",
-  "contributors": [
-    {
-      "name": "Daniel W. Hieber",
-      "url": "https://danielhieber.com"
-    }
-  ],
+  "author": {
+    "name": "Daniel W. Hieber",
+    "url": "https://github.com/dwhieb"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitallinguistics/data-format.git"
+  },
+  "scripts": {
+    "build": "node build/convert.js",
+    "test": "mocha **.test.js --bail"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/digitallinguistics/spec.git",
-  "engines": {
-    "node": "13.x"
-  },
-  "main": "schemas/json",
-  "type": "module",
-  "scripts": {
-    "build": "npm run convert",
-    "convert": "node build/convert.js",
-    "docs": "node build/docs.js",
-    "test": "jasmine JASMINE_CONFIG_PATH=test/jasmine.json",
-    "upload": "node build/upload.js"
-  },
-  "dependencies": {},
   "devDependencies": {
-    "ajv": "^6.12.0",
-    "azure-storage": "^2.10.3",
-    "babel-eslint": "^10.1.0",
-    "chalk": "^3.0.0",
-    "eslint": "^6.8.0",
-    "fs-extra": "^8.1.0",
-    "ietf-language-tag-regex": "0.0.5",
-    "jasmine": "^3.5.0",
-    "jschemer": "^3.0.3",
-    "semver-regex": "^3.1.1",
-    "yamljs": "^0.3.0"
+    "@digitallinguistics/eslint-config": "^0.3.0",
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "eslint": "^8.32.0",
+    "fs-extra": "^11.1.0",
+    "js-yaml": "^4.1.0",
+    "mocha": "^10.2.0"
   }
 }

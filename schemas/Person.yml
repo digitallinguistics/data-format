@@ -1,0 +1,185 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/Person.json
+title:   Person
+type:    object
+
+description: 'An object providing information about a Person.'
+
+properties:
+
+  access:
+    title:       Access Conditions
+    type:        object
+    $ref:        https://schemas.digitallinguistics.io/Access.json
+    description: 'The access conditions for the information about this person.'
+
+  address:
+    title:       Address
+    type:        object
+    $ref:        https://schemas.digitallinguistics.io/Address.json
+    description: "The person's address."
+
+  birthDate:
+    title:       Birth Date
+    type:        string
+    format:      date
+    description: "This person's birth date, in [internet date time format](https://www.w3.org/TR/NOTE-datetime)."
+
+  birthPlace:
+    title:       Birth Place (Database Reference)
+    type:        object
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: "A database reference to this person's place of birth, as a Location object."
+
+  email:
+    title:       Email
+    type:        string
+    format:      email
+    description: "This person's email."
+
+  familyName:
+    title:       'Family Name(s) / Last Name(s)'
+    type:        string
+    description: "This person's family name(s) or last name(s)."
+
+  gender:
+    title:       Gender
+    type:        string
+    description: "This person's self-reported gender identity."
+
+  givenName:
+    title:       'Given Name(s) / First Name(s)'
+    type:        string
+    description: "This person's first name(s) or given name(s), including middle name(s) if any."
+
+  id:
+    title:       ID
+    description: 'A unique database identifier for this Person.'
+
+  initials:
+    title:       Initials
+    type:        string
+    description: "This person's initials. If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials."
+
+  languages:
+    title:       Languages Spoken
+    type:        array
+    uniqueItems: true
+    description: 'A list of the languages that this person speaks. Each item should be a DLx Language object or Database Reference to a Language object, optionally with a few additional properties such as `ageLearned`, etc., Because the DLx Language object consists minimally of just the language name, not all details about the language need to be provided here.'
+    items:
+      title:       Proficiency
+      description: "Information about this person's proficiency in this language."
+      type:        object
+      properties:
+
+        ageLearned:
+          title:       Age Learned
+          type:        integer
+          minimum:     0
+          description: 'The age at which this person learned this language.'
+
+        notes:
+          title:       Notes
+          type:        array
+          uniqueItems: true
+          description: "Notes about this person's use of this language."
+          items:
+            $ref: https://schemas.digitallinguistics.io/Note.json
+
+        language:
+          title:       Language (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: 'The language that the person has experience with.'
+
+        proficiency:
+          title:       Proficiency
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: 'The proficiency level of this person in this Language.'
+
+        yearsKnown:
+          title:       Years Known
+          type:        number
+          description: 'The number of years this person has known this Language'
+
+  link:
+    title:       Link
+    type:        string
+    format:      uri
+    description: 'A URL where a presentational format for this resource may be viewed.'
+
+  notes:
+    title:       Notes
+    type:        array
+    uniqueItems: true
+    description: 'An array of notes about this person'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Note.json
+
+  phone:
+    title:       Phone Number
+    type:        string
+    description: 'A phone number for this Person.'
+
+  pseudonym:
+    title:       Pseudonym
+    type:        string
+    description: 'A pseudonym for this Person.'
+
+  startDate:
+    title:       Start Date
+    type:        string
+    description: 'The date a person began work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  endDate:
+    title:       End Date
+    type:        string
+    description: 'The date a person finished work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.'
+    oneOf:
+      - format: date
+      - format: date-time
+
+  tags:
+    title:       Tags
+    type:        object
+    $ref:        https://schemas.digitallinguistics.io/Tags.json
+    description: 'A set of tags for this Person.'
+
+  type:
+    title:       Type
+    type:        string
+    const:       Person
+    readOnly:    true
+    description: 'The type of object. Must be set to `Person`.'
+
+  url:
+    title:       URL
+    type:        string
+    format:      uri
+    description: 'The URL where the JSON data for this Person may be accessed.'
+
+examples:
+
+  - access:
+      notes:
+        - text: No access restrictions on this person's data.
+    birthDate:    '1867-01-01'
+    dateCreated:  '2018-10-05T15:26:23.070Z'
+    dateModified: '2018-10-05T15:26:23.070Z'
+    familyName:   Paul
+    gender:       male
+    givenName:    Benjamin
+    id:           46d3ad45-d1b8-4656-b496-dcb39203c5a9
+    initials:     BP
+    languages:
+      - name:        Chitimacha
+        proficiency: fluent
+      - name:        English
+        proficiency: fluent
+    link:         https://data.digitallinguistics.io/languages/Chitimacha/people/BP
+    startDate:    '2018-10-05T15:26:23.070Z'
+    endDate:      '2018-10-05T15:26:23.070Z'
+    type:         Person
+    url:          https://data.digitallinguistics.io/languages/Chitimacha/people/BP.json
