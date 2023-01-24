@@ -3,7 +3,7 @@ $id:     https://schemas.digitallinguistics.io/Form.json
 title:   Base Form
 type:    object
 
-description: The *base forms* of a lexeme are the minimal set of forms needed to determine the full set of inflectional possibilities of a lexeme. These include suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc., while the lexeme *man* has the base forms *man* and *men*. A base form does **not** refer to a regularly-inflected, predictable form like *being* or *cats*. Principal parts of verbs in Latin are another example of base forms, since they are the minimal set of forms that someone must know to determine all the inflectional possibilities of a verb.
+description: The *base forms* of a lexeme are the minimal set of forms needed to determine the full set of inflectional possibilities of a lexeme. In the simplest case, you will often only need to list one form (typically the stem, or a transcription of the affix). Base forms might include suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexeme *be* has the base forms *be*, *am*, *is*, etc., while the lexeme *man* has the base forms *man* and *men*. A base form does **not** refer to a regularly-inflected, predictable form like *being* or *cats*. Principal parts of verbs in Latin are another example of base forms, since they are the minimal set of forms that someone must know to determine all the inflectional possibilities of a verb.
 
 required:
   - transcription
@@ -13,7 +13,7 @@ properties:
   abstract:
     title:       Abstract
     type:        boolean
-    description: A Boolean (`true/false`) field used to indicate if a LexemeForm is an abstract/underlying form. If a form is an underlying representation, the value should be `true`. If the form is a surface realization, the value should be `false` (or may be omitted; a value of `false` is assumed by default). This is useful for tools that wish to display abstract forms between some type of brackets or slashes.
+    description: A Boolean (`true/false`) field used to indicate if this form is an abstract/underlying form. If a form is an underlying representation, the value should be `true`. If the form is a surface realization, the value should be `false` (or may be omitted; a value of `false` is assumed by default). This is useful for tools that wish to display abstract forms between some type of brackets or slashes.
 
   allomorphs:
 
