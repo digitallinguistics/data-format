@@ -20,6 +20,7 @@ import Note from './json/Note.json' assert { type: 'json' }
 import Orthography from './json/Orthography.json' assert { type: 'json' }
 import Person from './json/Person.json' assert { type: 'json' }
 import Phoneme from './json/Phoneme.json' assert { type: 'json' }
+import Sense from './json/Sense.json' assert { type: 'json' }
 import Tags from './json/Tags.json' assert { type: 'json' }
 import Text from './json/Text.json' assert { type: 'json' }
 import Transcription from './json/Transcription.json' assert { type: 'json' }
@@ -51,6 +52,7 @@ export default {
   Orthography,
   Person,
   Phoneme,
+  Sense,
   Tags,
   Text,
   Transcription,

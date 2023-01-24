@@ -16,3 +16,13 @@ properties:
     title: Name
     $ref:  https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'The name of this class/category, optionally in multiple languages.'
+
+  parent:
+    title:       Parent Category (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: The parent category for this category.
+
+  subcategories:
+    title:       'Subcategories (Database References: Category)'
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: A list of subcategories for this class/category.
