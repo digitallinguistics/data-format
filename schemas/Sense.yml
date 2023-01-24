@@ -33,69 +33,119 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/Category.json
     description: The lexical category, part of speech, or morphosyntactic class for this Lexeme, optionally in multiple languages. If the current lexeme is an affix or other grammatical morpheme where a `category` property doesn't always make sense, this property may be omitted.
 
+  definition:
+    title:       Definition
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: The definition for this particular sense.
+
+  derivedCategory:
+    title:       Derived Category
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: If this lexical item is a derivational morpheme, this field indicates the category of the derived form. For example, the English derivational suffix *‑er* would have this property set to `noun`, since this suffix derives nouns from verbs.
+
+  examples:
+    title:       'Examples (Database References: Utterance)'
+    type:        array
+    uniqueItems: true
+    description: A collection of examples illustrating this sense in use. Examples are formatted as Utterance objects, but do not to be utterances from specific texts (though this is recommended).
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+  gloss:
+    title:       Gloss
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: A Leipzig-style gloss for this sense.
+
+  lexicalRelations:
+    title:       Lexical Relations
+    type:        array
+    uniqueItems: true
+    description: A list of the lexical relations that this sense has to other senses of different lexemes.
+    items:
+      title:       Lexical Relation
+      type:        object
+      description: A lexical relation to another sense.
+      required:
+        - relationType
+      properties:
+
+        label:
+          title:       Label (for Singular Item)
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: The label to display before the lexical relation.
+
+        lexeme:
+          title:       'Lexeme (Database Reference: Lexeme)'
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: The referenced lexical item. Required for bidirectional and unidirectional relationships.
+
+        members:
+          title:       Members
+          description: For enumerated/open sets, specifies the members of the set of lexical items. The current lexical item may also be included in the set. Required for enumerated/open sets. For enumerated sets, `members` must be an object. For open sets, `members` must be an array.
+
+        plural:
+          title:       Label (for Plural Items)
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: The label to display before the lexical relation if there is more than one item to list. Only applies to enumerated/open sets.
+
+        relation:
+          title:       Relation Name
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+          description: The name of the lexical relation (e.g. "Synonym", "Hypernym Of", "Part/Whole"), as a MultiLangString.
+
+        relationType:
+          title:       Relation Type
+          description: 'The type of lexical relation. `bidirectional`: Both senses reference each other. The lexical relation is displayed on both. `enumerated set`: The sense is part of a restricted set of items, where each item fulfills a particular role in the set. For example, polar antonyms may form a set of "positive" vs. "negative". `open set`: The sense is part of a set of items. `undirectional`: The current sense references another sense, but the other sense does not reference this sense.'
+          enum:
+            - bidirectional
+            - enumerated set
+            - open set
+            - undirectional
+
+      allOf:
+        - if:
+            required: [relationType]
+            properties:
+              relationType:
+                enum:
+                  - bidirectional
+                  - unidirectional
+          then:
+            required: [lexeme]
+        - if:
+            required: [relationType]
+            properties:
+              relationType:
+                const: enumerated set
+          then:
+            required: [members]
+            properties:
+              members:
+                title:       'Members (Enumerated Set) (Database References: Sense)'
+                type:        object
+                description: 'An object whose keys indicate the role that a sense fills in the set, and whose values provide information about the referenced sense. For example, when creating an enumerated set of sense for polar antonyms, the keys in this object might be "positive" and "negative", and the values of each of these would be references to the positive and negative antonyms, respectively.'
+                additionalProperties:
+                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+        - if:
+            required: [relationType]
+            properties:
+              relationType:
+                const: open set
+          then:
+            required: [members]
+            properties:
+              members:
+                title: 'Members (Open Set) (Database References: Sense)'
+                type:  array
+                items:
+                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
   type:
     title:       Type
     type:        string
     const:       Sense
     readOnly:    true
     description: The type of object. Must be set to `Sense`.
-
-
-
-
-
-#   definition:
-#     title: Definition
-#     $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#     description: The definition for this particular sense, optionally in multiple languages
-
-#   derives:
-#     title: Derived Category
-#     $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#     description: If this lexeme is a derivational morpheme, this field indicates the type of lexical category, part of speech, or morphosyntactic class that is derived when this morpheme is applied. For example, the English derivational suffix *‑er* would have this property set to `noun`, since this suffix derives nouns from verbs. May be in multiple languages.
-
-#   examples:
-#     title:       Examples
-#     type:        array
-#     uniqueItems: true
-#     description: A collection of examples illustrating this sense in use. Each example is an Utterance from a Text. The Utterance number should be indicated in the `index` field of the Database Reference object. If using a full Utterance object rather than a Database Reference object, the `key` field should be included. For precision's sake, it is recommended that examples be given for individual senses rather than the entire lexeme when possible.
-#     items:
-#       title: Example Utterance (Database Reference)
-#       type:  object
-#       $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#       description: A database reference to an Utterance object
-
-#   gloss:
-#     title: Gloss
-#     $ref:  'https://schemas.digitallinguistics.io/MultiLangString.json'
-#     description: A Leipzig-style gloss for this sense. A gloss must be provided in at least one language.
-#     oneOf:
-#       - type:          string
-#         minLength:     1
-#       - type:          object
-#         minProperties: 1
-
-#   lexicalRelations:
-#     title:       Lexical Relations
-#     type:        array
-#     uniqueItems: true
-#     description: A list of the lexical relations that this sense has to other senses of different lexemes. Each item is a Database Reference, and must also have a property called `relation`, indicating the type of lexical relation. For precision's sake, lexical relations should be specified for individual senses rather than the entire lexeme whenever possible.
-#     items:
-#       allOf:
-
-#         - title: Lexeme (Database Reference)
-#           type:  object
-#           $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-#           description: A database reference representing a lexical relation between two senses. **Note:** The database reference must also have a `relation` property specified, indicating the type of lexical relation.
-
-#         - required:
-#             - relation
-#           properties:
-#             relation:
-#               title: Relation Type
-#               type:  string
-#               $ref: 'https://schemas.digitallinguistics.io/Abbreviation.json'
-#               description: "The type of lexical relation that holds between the current sense and the referenced sense. Can also be used for general cross-references (a `compare` relation) or historical relationships (a `derivedFrom` or `originOf` relation). Examples: `antonym`, `synonym`, `cognate`, `derivedFrom`, `originOf`, `compare`, `partOf`, `hypernymOf`, `hyponymOf`."
 
 #   link:
 #     title:  Link

@@ -5,29 +5,6 @@ type:    object
 
 description: "A *lexeme* or *lexical item* in DLx refers to any linguistic sign—that is, a form-meaning pairing or a construction. It is an abstract conceptual entity that represents all the various base forms of a sign and its associated meanings. In DLx, the lexical item might be a word, morpheme, idiom, etc. Examples of lexical items in English might include *be*, *run up* (a phrasal verb), and *‑ing* (a suffix). A lexical item will typically have multiple *senses* or meanings, and those are listed in the `senses` property. It is up to the linguist to decide when two meanings are related, and therefore belong to the same lexical item, or when they belong to different lexical items.\n\nA lexical item often also has multiple base forms, such as suppletive forms, irregular forms, or morphologically-conditioned forms. For example, the lexical item *be* has the base forms *be*, *am*, *is*, etc. These are listed in the `forms` field. The `forms` field should **not** be used to list all the regularly-inflected forms of a word. Individual base forms may have phonologically-conditioned allomorphs, and these are listed in the `allomorphs` field of the form.\n\nThe lexical item and its forms and senses may also have variations, such as dialectal and idiolectal variants, rapid speech variants, register-based variants, variations in meaning, or even spelling variants. These are listed in the `variants` fields.\n\nBy convention, one of the forms of a lexical item is typically chosen as a representative headword or *lemma*, and this is indicated by the `lemma` field. For example, the form *man* in English is typically used as the lemma/headword for the lexical item that includes the forms *man* and *men*. Note that the DLx lexical item does **not** represent a lexical entry in a dictionary. Dictionaries typically list each base form of a lexical item as a separate lexical entry. The DLx lexical item puts each of these lexical entries together in the `forms` field instead."
 
-$defs:
-  lemma:
-    title:       Lemma
-    type:        object
-    description: 'Information about a lemma (the form conventionally chosen to represent a lexeme) and how it should be displayed.'
-    required:
-      - transcription
-    properties:
-      abstract:
-        title:       Abstract
-        type:        boolean
-        default:     false
-        description: 'Whether the lemma is an abstract (underlying) form. User interfaces will typically display abstract forms between |pipes|, /slashes/, {brackets}, or other leading/trailing tokens according to convention in their subfield.'
-      reconstructed:
-        title:       Reconstructed
-        type:        boolean
-        default:     false
-        description: 'Whether the lemma is a reconstructed (unattested) form. Note that some historically reconstructed forms are also attested in the actual historical record. In this case, you may want to set the value of this property to `false`. User interfaces will typically display reconstructed forms with a leading asterisk, following standard convention in historical linguistics.'
-      transcription:
-        title:       Transcription
-        $ref:        https://schemas.digitallinguistics.io/Transcription.json
-        description: 'The transcription of the lemma.'
-
 required:
   - forms
   - lemma
@@ -95,11 +72,6 @@ properties:
           $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
           description: 'The label to display before the cross-reference.'
 
-        lemma:
-          title:       Lemma
-          $ref:        '#/$defs/lemma'
-          description: 'The lemma for the referenced lexeme.'
-
         lexeme:
           title:       'Lexeme (Database Reference: Lexeme)'
           $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
@@ -147,23 +119,11 @@ properties:
             required: [members]
             properties:
               members:
-                title:       Members (Enumerated Set)
+                title:       'Members (Enumerated Set) (Database References: Lexeme)'
                 type:        object
                 description: 'An object whose keys indicate the role that a lexeme fills in the set, and whose values provide information about the referenced lexeme. For example, when creating an enumerated set of lexemes for scalar adjectives, the keys in this object might be "positive", "comparative", and "superlative", and the values of each of these would be references to the positive, comparative, and superlative versions of the current lexeme, respectively.'
                 additionalProperties:
-                  type: object
-                  required:
-                    - lemma
-                    - lexeme
-                  properties:
-                    lemma:
-                      title:       Lemma
-                      $ref:        '#/$defs/lemma'
-                      description: 'The lemma for the referenced lexeme.'
-                    lexeme:
-                      title:       Referenced Lexeme
-                      $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-                      description: 'The referenced lexeme.'
+                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
         - if:
             required: [relationType]
             properties:
@@ -173,22 +133,10 @@ properties:
             required: [members]
             properties:
               members:
-                title: Members (Open Set)
+                title: 'Members (Open Set) (Database References: Lexeme)'
                 type:  array
                 items:
-                  type: object
-                  required:
-                    - lemma
-                    - lexeme
-                  properties:
-                    lemma:
-                      title:       Lemma
-                      $ref:        '#/$defs/lemma'
-                      description: 'The lemma for the referenced lexeme.'
-                    lexeme:
-                      title:       Referenced Lexeme
-                      $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-                      description: 'The referenced lexeme.'
+                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   dateCreated:
     title: Date Created
@@ -251,8 +199,25 @@ properties:
 
   lemma:
     title:       Lemma
-    $ref:        '#/$defs/lemma'
+    type:        object
     description: 'A *lemma* is the form of a lexeme conventionally used to represent that lexeme. It is mostly an organizational convenience—a useful way to refer to a lexical item without having to list all its forms every time. The choice of lemma depends on the project, person, language, field of study, etc. It is often (but not always) used as the headword in dictionary entries. Possible choices for the lemma include: the citation form (examples of which might be the infinitive or the third person singular perfective); one of the base forms (often the stem in the singular); the underlying representation; or others. For example, the form *be* is typically used as the lemma form of the English verb forms *am*, *are*, *is*, etc., even though the citation form is typically given in the infinitive as *to be*. The DLx Lemma object contains information about the lemma and how it should be displayed. Lemmas may be represented in multiple orthographies. They should include any relevant leading or trailing tokens (e.g. hyphens, equal signs).'
+    required:
+      - transcription
+    properties:
+      abstract:
+        title:       Abstract
+        type:        boolean
+        default:     false
+        description: Whether the lemma is an abstract (underlying) form. User interfaces will typically display abstract forms between |pipes|, /slashes/, {brackets}, or other leading/trailing tokens according to convention in their subfield.
+      reconstructed:
+        title:       Reconstructed
+        type:        boolean
+        default:     false
+        description: Whether the lemma is a reconstructed (unattested) form. Note that some historically reconstructed forms are also attested in the actual historical record. In this case, you may want to set the value of this property to `false`. User interfaces will typically display reconstructed forms with a leading asterisk, following standard convention in historical linguistics.
+      transcription:
+        title:       Transcription
+        $ref:        https://schemas.digitallinguistics.io/Transcription.json
+        description: The transcription of the lemma.
 
   lexemeType:
     title: Lexeme Type
