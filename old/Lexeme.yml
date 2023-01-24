@@ -258,33 +258,9 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: A collection of notes about this lexeme. Each Note object must have its `noteType` property specified. Notes with a note type of `private` are not intended for publication in dictionaries, while other types of notes are. For precision's sake, it is recommended that notes be attached to specific forms or senses whenever possible.
+    description: A collection of notes about this lexical item.
     items:
-      allOf:
-
-        - title: Note
-          type:  object
-          $ref:  'https://schemas.digitallinguistics.io/Note.json'
-          description: A note about this lexeme
-
-        - required:
-            - noteType
-          properties:
-            noteType:
-              title: Note Type
-              type:  string
-              description: The type of note about this lexeme
-              enum:
-                - private
-                - general
-                - anthropology
-                - discourse
-                - encyclopedic
-                - grammar
-                - phonology
-                - semantics
-                - sociocultural
-                - pragmatic
+      $ref: https://schemas.digitallinguistics.io/Note.json
 
   senses:
     title:       Senses
@@ -305,16 +281,12 @@ properties:
     description: 'This field indicates the slot in a Word Template in which this Lexeme belongs. The value should be the same as the value found in WordTemplate.slots.abbreviation in the corresponding slot.'
 
   sources:
-    title:       Sources
+    title:       'Sources (Database References: Person)'
     type:        array
     uniqueItems: true
-    description: A list of the initials of the speaker or speakers who are the attested sources for this lexeme. For precision's sake, sources should be listed for specific senses or forms of a lexeme whenever possible. These sources should be DatabaseReferences to a Person object.
+    description: A list of the speakers who are the attested sources for this lexical item.
     items:
-      title:         Source
-      type:          object
-      $ref:          'https://schemas.digitallinguistics.io/DatabaseReference.json'
-      referenceType: Person
-      description:   An attested source for this lexeme. This will often be the initials of a speaker.
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   status:
     title:       Status
@@ -330,7 +302,15 @@ properties:
     title:  URL
     type:   string
     format: uri
-    description: A URL where a JSON representation of this lexeme may be retrieved
+    description: A URL where a JSON representation of this lexeme may be retrieved.
+
+  usages:
+    title:       Usages
+    type:        array
+    uniqueItems: true
+    description: A set of information about the social contexts where this sense is used. Common values might include regions, registers, dialects, or particular social groups.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
 
   variantOf:
     title: Variant Of

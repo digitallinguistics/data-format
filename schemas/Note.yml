@@ -36,6 +36,11 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/LanguageTag.json
     description: 'The language that the note is written in, as an IETF language tag.'
 
+  noteType:
+    title:       Note Type
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: The type of note. For lexical items, note types might include "historical", "anthropological", etc.
+
   source:
     title:       'Source (Database Reference: Person)'
     $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json

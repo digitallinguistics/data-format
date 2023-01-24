@@ -130,31 +130,9 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: A collection of notes about this form. Each Note object must have its `noteType` property specified.
+    description: A collection of notes about this form.
     items:
-      allOf:
-
-        - title:       Note
-          $ref:        https://schemas.digitallinguistics.io/Note.json
-          description: A note about this form.
-
-        - type: object
-          required:
-            - noteType
-          properties:
-            noteType:
-              title:       Note Type
-              type:        string
-              description: The type of note about this form.
-              enum:
-                - anthropology
-                - discourse
-                - encyclopedic
-                - general
-                - grammar
-                - phonology
-                - semantics
-                - sociocultural
+      $ref: https://schemas.digitallinguistics.io/Note.json
 
   phonologicalClass:
     title:       Phonological Class
@@ -205,9 +183,9 @@ properties:
     title:       Usages
     type:        array
     uniqueItems: true
-    description: A list of MultiLangStrings giving information about this form's social usage, region, register, dialect, and/or connotations. Common values might be "archaic", "colloquial", "formal", "positive", "negative", etc.
+    description: A set of information about the social contexts where this sense is used. Common values might include regions, registers, dialects, or particular social groups.
     items:
-      $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+      $ref: https://schemas.digitallinguistics.io/Category.json
 
   variantOf:
     title:       Variant Of
@@ -289,7 +267,8 @@ examples:
       Modern:  guxt
       Swadesh: gušt
     usages:
-      - colloquial
+      - name:
+          eng: colloquial
     variants:
       - form:
           id: 0f765e8d-1401-4c01-a88f-3092d077813b
