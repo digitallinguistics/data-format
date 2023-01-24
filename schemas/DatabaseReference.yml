@@ -17,3 +17,6 @@ examples:
     abbreviation: JS
     familyName:   Smith
     givenName:    John
+
+  # A human-readable key.
+  - DWH

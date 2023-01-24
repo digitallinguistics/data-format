@@ -13,8 +13,8 @@ properties:
   abbreviation:
     title:       Abbreviation
     type:        string
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
-    description: 'An abbreviation for this Orthography. Implementations will typically display this next to any data transcribed in this orthography, so best practice is to keep this short.'
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: 'An abbreviation for this Orthography.'
 
   direction:
     title:       Text Direction
@@ -85,7 +85,11 @@ properties:
 
   id:
     title:       ID
-    description: A unique database identifier for this Orthography
+    description: 'A unique database identifier for this Orthography.'
+
+  key:
+    title:       Key
+    description: 'A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language. In the DLx infrastruture, the orthography key is displayed next to any transcriptions in that orthography.'
 
   link:
     title:       Link

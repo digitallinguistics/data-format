@@ -12,7 +12,7 @@ properties:
 
   abbreviation:
     title:       Abbreviation
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'An abbreviation for this Text.'
 
   access:

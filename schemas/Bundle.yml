@@ -9,7 +9,7 @@ properties:
 
   abbreviation:
     title:       Abbreviation
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'An abbreviation for this Bundle.'
 
   access:
@@ -36,6 +36,10 @@ properties:
   id:
     title:       ID
     description: 'A unique database identifier for this Bundle.'
+
+  key:
+    title:       Key
+    description: 'A unique human-readable identifier for this Bundle.'
 
   link:
     title:       Link

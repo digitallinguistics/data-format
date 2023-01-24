@@ -12,7 +12,7 @@ properties:
 
   abbreviation:
     title:       Abbreviation
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'An abbreviation for referring to this file.'
 
   access:
@@ -79,6 +79,10 @@ properties:
   id:
     title:       ID
     description: A unique database identifier for this Media Item
+
+  key:
+    title:       Key
+    description: 'A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language.'
 
   languages:
     title:       'Languages (Database References: Language)'

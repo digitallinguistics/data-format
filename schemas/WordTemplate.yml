@@ -58,7 +58,7 @@ properties:
         abbreviation:
           title:       Slot Abbreviation
           type:        string
-          $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
           description: 'An abbreviation for this slot.'
         name:
           title:       Slot Name

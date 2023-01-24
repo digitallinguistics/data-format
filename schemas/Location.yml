@@ -9,7 +9,7 @@ properties:
 
   abbreviation:
     title:       Abbreviation
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'An abbreviation for this Location.'
 
   access:
@@ -47,15 +47,19 @@ properties:
       - format: date
       - format: date-time
 
-  # geoJSON:
-  #   title: 'GeoJSON Geometry Object'
-  #   type:  object
-  #   $ref:  'https://geojson.org/schema/GeoJSON.json'
-  #   description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: https://geojson.org/.'
+  geoJSON:
+    title:       GeoJSON Geometry Object
+    type:        object
+    $ref:        https://geojson.org/schema/GeoJSON.json
+    description: 'A GeoJSON object describing this Location. Must adhere to the GeoJSON format: https://geojson.org/.'
 
   id:
     title:       ID
     description: 'A unique database identifier for this Location.'
+
+  key:
+    title:       Key
+    description: 'A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language.'
 
   link:
     title:       Link

@@ -7,12 +7,6 @@ description: 'An object providing information about a Person.'
 
 properties:
 
-  abbreviation:
-    title:       Abbreviation
-    type:        string
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
-    description: 'An abbreviation for this person (typically their initials). If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.'
-
   access:
     title:       Access Conditions
     type:        object
@@ -61,6 +55,11 @@ properties:
   id:
     title:       ID
     description: 'A unique database identifier for this Person.'
+
+  initials:
+    title:       Initials
+    type:        string
+    description: "This person's initials. If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials."
 
   languages:
     title:       Languages Spoken
@@ -163,8 +162,7 @@ properties:
 
 examples:
 
-  - abbreviation: BP
-    access:
+  - access:
       notes:
         - text: No access restrictions on this person's data.
     birthDate:    '1867-01-01'
@@ -174,6 +172,7 @@ examples:
     gender:       male
     givenName:    Benjamin
     id:           46d3ad45-d1b8-4656-b496-dcb39203c5a9
+    initials:     BP
     languages:
       - name:        Chitimacha
         proficiency: fluent

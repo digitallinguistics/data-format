@@ -12,7 +12,7 @@ properties:
 
   abbreviation:
     title:       Abbreviation
-    $ref:        https://schemas.digitallinguistics.io/Abbreviation.json
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: 'A short, human-readable abbreviation for this Language.'
 
   access:
@@ -238,6 +238,10 @@ properties:
     items:
       $ref: 'https://schemas.digitallinguistics.io/DatabaseReference.json'
 
+  key:
+    title:       Key
+    description: 'A unique human-readable identifier (typically a string) for this Language, intended for use by software implementers as a dependable, stable way to refer to this language.'
+
   name:
     title:       Language Name
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
@@ -251,13 +255,13 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
-  # orthographies:
-  #   title:       Orthographies
-  #   type:        array
-  #   uniqueItems: true
-  #   description: 'A collection of orthographies used to transcribe data in this Language.'
-  #   items:
-  #     $ref: https://schemas.digitallinguistics.io/Orthography.json
+  orthographies:
+    title:       Orthographies
+    type:        array
+    uniqueItems: true
+    description: 'A collection of orthographies used to transcribe data in this Language.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Orthography.json
 
   people:
     title:       People / Contributors
@@ -284,24 +288,24 @@ properties:
             type:        string
             description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
 
-  # phonemes:
-  #   title:       Phonemes
-  #   type:        array
-  #   description: 'The phonological inventory for this language, i.e. a collection of phonemes.'
-  #   items:
-  #     $ref: https://schemas.digitallinguistics.io/Phoneme.json
+  phonemes:
+    title:       Phonemes
+    type:        array
+    description: 'The phonological inventory for this language, i.e. a collection of phonemes.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/Phoneme.json
 
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json
     description: 'A set of tags for this Language.'
 
-  # templates:
-  #   title:       Word Templates
-  #   type:        array
-  #   description: 'A set of word templates used in this language. Each item should be a Word Template object.'
-  #   items:
-  #     $ref: https://schemas.digitallinguistics.io/WordTemplate.json
+  templates:
+    title:       Word Templates
+    type:        array
+    description: 'A set of word templates used in this language. Each item should be a Word Template object.'
+    items:
+      $ref: https://schemas.digitallinguistics.io/WordTemplate.json
 
   type:
     title:    Type
