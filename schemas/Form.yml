@@ -98,7 +98,7 @@ properties:
   features:
     title:       Features
     type:        object
-    description: 'A set of inflectional features for this form. This field is primarily used with grammatical morphemes. Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in different languages. For example, a morpheme may have the feature `case: accusative` (English) as well as `caso: acusativo` (Spanish).'
+    description: 'A set of inflectional features for this form. This field is primarily used with grammatical morphemes. Each property should be the name of a feature type (e.g. `case`, `person`, `number`, `gender`, `nounClass`, etc.), and its value should be the value for that feature, as a string (e.g. `nominative`, `1`, `singular`, `masculine`, etc.). Features may be written more than once, in different languages. For example, a morpheme may have the feature `case: accusative` (English) as well as `caso: acusativo` (Spanish). Note that the `features` property is available at both the Lexeme and Forms levels. This is because the locus of some features varies from language to language.'
     additionalProperties:
       type: string
 
@@ -190,7 +190,7 @@ properties:
   variantOf:
     title:       Variant Of
     type:        array
-    description: If this form is a variant of another form, a reference to the other form should go here. For example, some speakers of English have *hanged* as the past tense of *hang*, while others have *hung*.
+    description: If this form is a variant of another form, a reference to the other form should be listed here. For example, some speakers of English have *hanged* as the past tense of *hang*, while others have *hung*.
     items:
       type: object
       required:
@@ -216,7 +216,6 @@ properties:
     items:
       type: object
       required:
-        - form
         - variantType
       properties:
 
@@ -224,6 +223,16 @@ properties:
           title:       Form (Database Reference)
           $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
           description: A Database Reference to the variant form.
+
+        lexeme:
+          title:       Lexeme (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the variant lexical item.
+
+        sense:
+          title:       Sense (Database Reference)
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: A Database Reference to the variant sense.
 
         variantType:
           title:       Variant Type
