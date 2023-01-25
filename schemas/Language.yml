@@ -336,6 +336,14 @@ properties:
     format:      uri
     description: 'A URL where the JSON data for this language can be found.'
 
+  variantTypes:
+    title:       Variant Types
+    type:        array
+    uniqueItems: true
+    description: A list of variant types used in this language's lexicon. Tools may choose to match values in the Lexemes and Form's `variantType` fields against the values in this one.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   varietyOf:
     title: Variety of
     type:  object
