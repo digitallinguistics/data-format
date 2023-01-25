@@ -226,6 +226,14 @@ properties:
     title:       ID
     description: 'A unique database identifier for this Language.'
 
+  inflectionClasses:
+    title:       Inflection Classes
+    type:        array
+    uniqueItems: true
+    description: A list of inflectional classes/categories in this language. Tools may choose to match values in the Form's `inflectionClass` field against the values in this one.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   iso:
     title:       ISO 639-3 Code
     type:        string
@@ -593,6 +601,15 @@ examples:
           text: This is a Swahili version of the name of this language. It is an alternate for simply `Kisii`.
     glottocode:   gusi1247
     id:           708d1bd4-84f6-42e5-8b09-5c64493441b3
+    inflectionClasses:
+      - abbreviation:
+          eng: '1/2'
+        name:
+          eng: 'Class 1/2 (ómo-/ába-)'
+      - abbreviation:
+          eng: '3/4'
+        name:
+          eng: 'Class 3/4 (ómo-/éme-)'
     iso:          guz
     link:         https://data.digitallinguistics.io/languages/708d1bd4-84f6-42e5-8b09-5c64493441b3
     locations:
