@@ -224,11 +224,6 @@ properties:
 
   morphType:
     title:       Morph Type
-    $ref:        https://schemas.digitallinguistics.io/Category.json
-    description: The morphological type for this lexical item. Example values include `"root"`, `"stem"`, `"prefix"`, `"suffix"`, `"compound"`, `"phrasal verb"`, etc.
-
-  morphType:
-    title:       Morpheme Type
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. All the forms of a lexical item should have the same morpheme type. If they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English), create separate lexical items for both forms."
 
