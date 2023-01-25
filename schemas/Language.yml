@@ -79,6 +79,13 @@ properties:
       - format: date
       - format: date-time
 
+  dialects:
+    title:       'Dialects (Database References: Language)'
+    type:        array
+    description: A list of dialects of this language. Each dialect is itself a Language object. These could be fully-embedded, or pointers to another Language object in the database.
+    items:
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
   demographics:
     title:       'Demographics'
     type:        array
