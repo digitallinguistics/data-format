@@ -311,6 +311,14 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/Phoneme.json
 
+  phonologicalClasses:
+    title:       Phonological Classes
+    type:        array
+    uniqueItems: true
+    description: A list of morphonological classes in this language. This field is primarily used by tools to validate the values of the `phonologicalClass` field on the Form object when present. (It isn't a requirement of the DaFoDiL format that members of the `phonologicalClass` field validate against this one, however.) These fields are useful when the morphophonological behavior of a lexical item is lexically specified / unpredictable. See the `phonologicalClass` field on the Form object for more details.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json
