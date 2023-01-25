@@ -342,6 +342,14 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/Category.json
 
+  semanticClasses:
+    title:       Semantic Classes
+    type:        array
+    uniqueItems: true
+    description: A list of semantic classes in this language. Tools may wish to validate the values of the `semanticClass` property of the Sense object against that of this field. See that property for more details.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json

@@ -131,7 +131,7 @@ properties:
 
   semanticClass:
     title:       Semantic Class
-    type:        string
+    $ref:        https://schemas.digitallinguistics.io/Category.json
     description: The semantic class of this sense. Note that this field is different than the broader Semantic Domains (`semanticDomains`) field. A word may be a member of a semantic domain (for example, "body parts"), but its membership in that domain might have no effect on its morphosyntactic behavior or its semantic interpretation (if for example the grammar of the language does not treat body parts in any special way). The `semanticClass` field should be used when the semantic class of the lexical item conditions the morphosyntactic behavior of other items. It is especially useful when that semantic class is not overtly marked on the form. For example, some languages have noun classes that are lexically specified and that don't always have overt expression on the noun, but which nonetheless condition agreement on verbs or adjectives. If the semantic class of the item conditions its *own* morphosyntactic behavior rather than just the behavior of surrounding items, you may want to use the `inflectionClass` or `category` properties instead of, or in addition to, the `semanticClass` property.
 
   semanticDomains:
