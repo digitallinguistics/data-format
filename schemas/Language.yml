@@ -273,6 +273,14 @@ properties:
     title:       Key
     description: 'A unique human-readable identifier (typically a string) for this Language, intended for use by software implementers as a dependable, stable way to refer to this language.'
 
+  morphTypes:
+    title:       Morph Types
+    type:        array
+    uniqueItems: true
+    description: A list of morph types in this language. Tools may wish to validate the values of the `morphType` property of the Lexeme object against that of this field.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   name:
     title:       Language Name
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json

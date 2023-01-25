@@ -181,8 +181,9 @@ properties:
 
   morphType:
     title:       Morph Type
-    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: "The type of morpheme or complex construction that this lexeme is, optionally in multiple languages. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. All the forms of a lexical item should have the same morpheme type. If they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English), create separate lexical items for both forms."
+    $ref:        https://schemas.digitallinguistics.io/Category.json
+    description: >
+      The type of morpheme or complex construction that this lexeme is. Examples: `root`, `stem`, `bipartite stem`, `enclitic`, `prefix`, `inflected word`, `phrase`, `circumfix`, `compound`, `complex`, `ideophonic`. All the forms of a lexical item should have the same morpheme type. If they differ (e.g. independent vs. cliticized forms of a word, such as *are* vs. *='re* in English), create separate lexical items for both forms.
 
   notes:
     title:       Notes
@@ -386,7 +387,9 @@ examples:
         media:
           - id:            24a14428-f2e7-47a8-8d4f-00c4437f6c3a
             filename:      guxt.wav
-        morphemeType:      stem
+        morphType:
+          name:
+            eng: stem
         sources:
           - source: { abbreviation: DWH }
         syllableStructure: CVCC
