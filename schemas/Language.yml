@@ -247,6 +247,14 @@ properties:
     pattern:     '^[a-z]{3}$'
     description: 'The ISO 639-3 code for this language variety, as a 3-letter String.'
 
+  lexicalRelations:
+    title:       Lexical Relations
+    type:        array
+    uniqueItems: true
+    description: A list of lexical relations and cross-reference types used in this language's lexicon. Tools may choose to match values in the Lexeme and Sense's `lexicalRelations` fields against the values in this one.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   link:
     title:       Link
     type:        string
@@ -355,7 +363,7 @@ properties:
     title:       Variant Types
     type:        array
     uniqueItems: true
-    description: A list of variant types used in this language's lexicon. Tools may choose to match values in the Lexemes and Form's `variantType` fields against the values in this one.
+    description: A list of variant types used in this language's lexicon. Tools may choose to match values in the Lexeme and Form's `variantType` fields against the values in this one.
     items:
       $ref: https://schemas.digitallinguistics.io/Category.json
 
