@@ -48,6 +48,14 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/Citation.json
 
+  categories:
+    title:       Lexical Categories (Parts of Speech, Morphosyntactic Classes, etc.)
+    type:        array
+    uniqueItems: true
+    description: A list of lexical categories / parts of speech / syntactic categories / etc. in this language. Tools may choose to match values in the Sense's `category` field against the values in this one.
+    items:
+      $ref: https://schemas.digitallinguistics.io/Category.json
+
   classification:
     title:       'Genetic Classification (Database References: Language)'
     type:        array
@@ -531,6 +539,25 @@ examples:
       - transcription:
           IPA:   ékeɣusií
           Gusii: Ékegusií
+    categories:
+      - abbreviation:
+          eng: n
+          swa: nm
+        name:
+          eng: noun
+          swa: nomino
+      - abbreviation:
+          eng: v
+          swa: kt
+        name:
+          eng: verb
+          swa: kitenzi
+      - abbreviation:
+          eng: adj
+          swa: kv
+        name:
+          eng: adjective
+          swa: kivumishi
     classification:
       - name: Niger-Congo
       - name: Atlantic-Congo
