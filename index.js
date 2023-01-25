@@ -13,6 +13,7 @@ import GeoJSON from './json/GeoJSON.json' assert { type: 'json' }
 import Language from './json/Language.json' assert { type: 'json' }
 import LanguageTag from './json/LanguageTag.json' assert { type: 'json' }
 import Lexeme from './json/Lexeme.json' assert { type: 'json' }
+import LexicalRelation from './json/LexicalRelation.json' assert { type: 'json' }
 import Location from './json/Location.json' assert { type: 'json' }
 import Media from './json/Media.json' assert { type: 'json' }
 import Morpheme from './json/Morpheme.json' assert { type: 'json' }
@@ -46,6 +47,7 @@ export default {
   Language,
   LanguageTag,
   Lexeme,
+  LexicalRelation,
   Location,
   Media,
   Morpheme,

@@ -115,6 +115,11 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/Category.json
     description: If this form is a root or stem, this field indicates the inflectional class that the form takes. If this form is an inflectional morpheme, this field indicates the inflectional class that the morpheme belongs to.
 
+  lexeme:
+    title:       Lexeme (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: The Lexeme object to which this Form belongs. Useful when embedding data about a specific form, without having to embed the entire lexical item.
+
   link:
     title:       Link
     type:        string

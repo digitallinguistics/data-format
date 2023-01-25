@@ -1,0 +1,164 @@
+$schema: http://json-schema.org/draft-07/schema
+$id:     https://schemas.digitallinguistics.io/LexicalRelation.json
+title:   Lexical Relation Type
+type:    object
+
+description: An object that provides details about a type of lexical relationship between forms/senses/lexemes, such as the name of the relationship (e.g. "Cross Reference", "Antonym", "See Also") and whether the set of items has any internal organization (for example, which item is positive and which is negative in a polar adjectives pair). Note that this object represents an abstract description of a *type* of relationship, not a particular *instance* of the relationship between specific items.
+
+required:
+  - relationType
+
+properties:
+
+  abbreviation:
+    title:       Abbreviation
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: An abbreviation for this type of lexical relation. This is *not* intended to be the label displayed alongside cross-references (see the `labels` property for that).
+
+  labels:
+    title:       Labels
+    type:        object
+    description: >
+      When displaying lexical relations, it is necessary to know the label to display alongside them, such as "see also:", "synonyms:", "antonym:", "part of:", "compare:", etc. The `labels` property allows you to specify these labels. This field is an object with `singular` and `plural` properties. Use these properties to provide labels for when there are one or multiple referenced items, respectively. For example, the labels for a Synonyms relation might be `singular: synonym` and `plural: synonyms`. For an Antonym relationship (bidirectional) the singular might be `antonym of`, while the plural is left undefined. Labels aren't necessary for enumerated sets. Note that labels are MultiLangStrings rather than simple strings. Conceivably you could add other types of labels to the `labels` object as well, depending on your use case (a `dual` label, for example).
+    properties:
+
+      singular:
+        $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+
+      plural:
+        $ref: https://schemas.digitallinguistics.io/MultiLangString.json
+
+  members:
+    title:       name
+    type:        object
+    description: >
+      For enumerated sets, use the `members` field to specify the predefined types of items that can be included in this set. The `members` field is an object hash whose keys are any arbitrary key you wish to assign to each member, and whose values are MultiLangStrings representing the names of each member. For example, a Scalar Adjective relation would have 3 members: "positive", "comparative", and "superlative", so the `members` object would have 3 keys. (See the example data in this schema for an illustration.)
+
+  name:
+    title:       Name
+    $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
+    description: The name of this lexical relationship. Examples might be "See Also", "Antonyms", or "Scalar Adjective".
+
+  relationType:
+    title:       Relation Type
+    description: 'The type of lexical relation. `bidirectional`: Both items cross-reference each other. The cross-reference is displayed on both. `enumerated set`: The item is part of a restricted set, where each item fulfills a particular role in the set. For example, scalar adjectives might form an enumerated set of "positive", "comparative", and "superlative". `open set`: The item is part of a set of items, where all items in the set have equal standing. `undirectional`: The current item references another item, but the other item does not reference this item in return.'
+    enum:
+      - bidirectional
+      - enumerated set
+      - open set
+      - unidirectional
+
+  type:
+    title:       Type
+    type:        string
+    const:       LexicalRelation
+    readOnly:    true
+    description: The type of object. Must be set to `LexicalRelation`.
+
+examples:
+
+  - name:
+      eng: Antonyms
+    relationType: bidirectional
+    abbreviation:
+      eng: Ant.
+    labels:
+      singular:
+        eng: antonym of
+
+  - name:
+      eng: Part Of / Meronym Of
+    relationType: unidirectional
+    labels:
+      # this label is the same in the singular and the plural
+      singular:
+        eng: part of
+      plural:
+        eng: part of
+
+  - name:
+      eng: Outdated
+    relationType: unidirectional
+    labels:
+      singular:
+        eng: instead use
+
+  - name:
+      eng: Days of the Week
+    relationType: enumerated set
+    labels:
+      plural:
+        eng: additional days
+    members:
+      mon:
+        eng: Monday
+        swa: Jumatatu
+      tues:
+        eng: Tuesday
+        swa: Jumanne
+      wed:
+        eng: Wednesday
+        swa: Jumatano
+      thu:
+        eng: Thursday
+        swa: Alhamisi
+      fri:
+        eng: Friday
+        swa: Ijumaa
+      sat:
+        eng: Saturday
+        swa: Jumamosi
+      sun:
+        eng: Sunday
+        swa: Jumapili
+
+    # the `label` property isn't always necessary for enumerated sets
+  - name:
+      eng: Part-Whole / Meronymy
+    relationType: enumerated set
+    members:
+      meronym:
+        eng: meronym
+      holonym:
+        eng: holonym
+
+  - name:
+      eng: Scalar Adjective
+    relationType: enumerated set
+    members:
+      positive:
+        eng: positive
+      comparative:
+        eng: comparative
+      superlative:
+        eng: superlative
+
+  - name:
+      eng: Specific / Generic
+    relationType: enumerated set
+    members:
+      spec:
+        eng: specific
+      gen:
+        eng: generic
+
+  - name:
+      eng: Vehicle/Operator
+    relationType: enumerated set
+    members:
+      vehicle:
+        eng: vehicle
+      operator:
+        eng: operator
+
+  - name:
+      eng: Compare
+    relationType: open set
+    abbreviation:
+      eng: Comp.
+
+  - name:
+      eng: Synonyms
+    relationType: open set
+    abbreviation:
+      eng: Syn.

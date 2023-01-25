@@ -37,85 +37,42 @@ properties:
     title:       Cross References
     type:        array
     uniqueItems: true
-    description: Cross references to other lexical items. (To cross-reference specific senses, use the `lexicalRelations` property in the Sense instead.)
+    description: A list of cross references to other lexical items. (To cross-reference specific senses, use the `lexicalRelations` property in the Sense instead.)
     items:
       title:       Cross Reference
       type:        object
-      description: A cross reference to another lexical item.
+      description: >
+        A cross reference to another lexical item. A cross reference object has two properties: `relation`, and either `members` or `lexeme`. The `relation` property indicates the type of lexical relation, while the `lexeme` or `members` properties point to the referenced lexical items.
       required:
-        - relationType
+        - relation
+      oneOf:
+        - required: [lexeme]
+        - required: [members]
       properties:
-
-        label:
-          title:       Label (for Singular Item)
-          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: The label to display before the cross-reference.
 
         lexeme:
           title:       'Lexeme (Database Reference: Lexeme)'
           $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-          description: The referenced lexical item. Required for bidirectional and unidirectional cross-references.
+          description: The referenced lexical item.
 
         members:
           title:       Members
-          description: For enumerated/open sets, specifies the members of the set of lexical items. The current lexical item may also be included in the set. Required for enumerated/open sets. For enumerated sets, `members` must be an object. For open sets, `members` must be an array.
+          description: For enumerated/open sets, this property specifies the members of the set of lexical items. The current lexical item may also be included in the set. Required for enumerated/open sets. For enumerated sets, `members` must be an object. For open sets, `members` must be an array.
+          oneOf:
 
-        plural:
-          title:       Label (for Plural Items)
-          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: The label to display before the cross-reference if there is more than one item to list. Only applies to enumerated/open sets.
+            - type:        object
+              description: If the lexical relation type is an enumerated set, `members` should be an object whose keys are arbitrary strings representing each role within the enumerated set, and whose values are Database References to Lexemes. For example, when creating an enumerated set of lexemes for scalar adjectives, the keys in this object might be "positive", "comparative", and "superlative", and the values of each of these would be references to the positive, comparative, and superlative versions of the current lexeme, respectively.
+              additionalProperties:
+                $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+            - type:        array
+              description: If the lexical relation type is an open set, `members` should be an array of Database References to Lexeme objects.
+              $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
 
         relation:
-          title:       Relation Name
-          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: The name of the cross-reference relation (e.g. "Synonym", "Part/Whole", "Adjective Scale"), as a MultiLangString.
-
-        relationType:
-          title:       Relation Type
-          description: 'The type of cross-reference relation. `bidirectional`: Both lexemes cross-reference each other. The cross-reference is displayed on both. `enumerated set`: The lexeme is part of a restricted set of lexemes, where each lexeme fulfills a particular role in the set. For example, scalar adjectives might form an enumerated set of "positive", "comparative", and "superlative". `open set`: The lexeme is part of a set of lexemes. `undirectional`: The current lexeme references another lexeme, but the other lexeme does not reference this lexeme.'
-          enum:
-            - bidirectional
-            - enumerated set
-            - open set
-            - undirectional
-
-      allOf:
-        - if:
-            required: [relationType]
-            properties:
-              relationType:
-                enum:
-                  - bidirectional
-                  - unidirectional
-          then:
-            required: [lexeme]
-        - if:
-            required: [relationType]
-            properties:
-              relationType:
-                const: enumerated set
-          then:
-            required: [members]
-            properties:
-              members:
-                title:       'Members (Enumerated Set) (Database References: Lexeme)'
-                type:        object
-                description: An object whose keys indicate the role that a lexeme fills in the set, and whose values provide information about the referenced lexeme. For example, when creating an enumerated set of lexemes for scalar adjectives, the keys in this object might be "positive", "comparative", and "superlative", and the values of each of these would be references to the positive, comparative, and superlative versions of the current lexeme, respectively.
-                additionalProperties:
-                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
-        - if:
-            required: [relationType]
-            properties:
-              relationType:
-                const: open set
-          then:
-            required: [members]
-            properties:
-              members:
-                title: 'Members (Open Set) (Database References: Lexeme)'
-                type:  array
-                items:
-                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+          title:       Lexical Relation Type
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: The type of lexical relation.
 
   dateCreated:
     title:       Date Created
@@ -366,6 +323,31 @@ examples:
       IPA:          kˀušti
       Mod:          guxti
       Swad:         gušti
+    crossReferences:
+      - relation:
+          name:
+            eng: Scalar Adjective
+          relationType: enumerated set
+          labels:
+            positive:
+              eng: positive
+            comparative:
+              eng: comparative
+            superlative:
+              eng: superlative
+        members:
+          positive:
+            lemma:
+              transcription:
+                eng: good
+          comparative:
+            lemma:
+              transcription:
+                eng: better
+          superlative:
+            lemma:
+              transcription:
+                eng: best
     dateCreated:    '2018-11-03T00:23:55.842Z'
     dateModified:   '2018-11-03T00:24:04.730Z'
     id:             783cbaa8-befe-4049-bfe4-bb5688173780

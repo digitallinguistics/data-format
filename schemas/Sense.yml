@@ -56,89 +56,51 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: A Leipzig-style gloss for this sense.
 
+  lexeme:
+    title:       Lexeme (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: The Lexeme object to which this Sense belongs. Useful when embedding data about a specific sense, without having to embed the entire lexical item.
+
   lexicalRelations:
     title:       Lexical Relations
     type:        array
     uniqueItems: true
-    description: A list of the lexical relations that this sense has to other senses of different lexemes.
+    description: A list of lexical relations to other senses. (To cross-reference entire lexemes, use the `crossReferences` property in the Lexeme instead.)
     items:
       title:       Lexical Relation
       type:        object
-      description: A lexical relation to another sense.
+      description: >
+        A cross reference to another sense. A cross reference object has two properties: `relation`, and either `members` or `sense`. The `relation` property indicates the type of lexical relation, while the `sense` or `members` properties point to the referenced senses.
       required:
-        - relationType
+        - relation
+      oneOf:
+        - required: [sense]
+        - required: [members]
       properties:
 
-        label:
-          title:       Label (for Singular Item)
-          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: The label to display before the lexical relation.
-
-        lexeme:
-          title:       'Lexeme (Database Reference: Lexeme)'
+        sense:
+          title:       Sense (Database Reference)
           $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-          description: The referenced lexical item. Required for bidirectional and unidirectional relationships.
+          description: The referenced sense.
 
         members:
           title:       Members
-          description: For enumerated/open sets, specifies the members of the set of lexical items. The current lexical item may also be included in the set. Required for enumerated/open sets. For enumerated sets, `members` must be an object. For open sets, `members` must be an array.
+          description: For enumerated/open sets, this property specifies the members of the set of lexical items. The current lexical item may also be included in the set. Required for enumerated/open sets. For enumerated sets, `members` must be an object. For open sets, `members` must be an array.
+          oneOf:
 
-        plural:
-          title:       Label (for Plural Items)
-          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: The label to display before the lexical relation if there is more than one item to list. Only applies to enumerated/open sets.
+            - type:        object
+              description: If the lexical relation type is an enumerated set, `members` should be an object whose keys are arbitrary strings representing each role within the enumerated set, and whose values are Database References to Lexemes. For example, when creating an enumerated set of senses for polar adjectives, the keys in this object might be "positive" and "negative", and the values of each of these would be references to the positive and negative senses, respectively.
+              additionalProperties:
+                $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+
+            - type:        array
+              description: If the lexical relation type is an open set, `members` should be an array of Database References to Lexeme objects.
+              $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
 
         relation:
-          title:       Relation Name
-          $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: The name of the lexical relation (e.g. "Synonym", "Hypernym Of", "Part/Whole"), as a MultiLangString.
-
-        relationType:
-          title:       Relation Type
-          description: 'The type of lexical relation. `bidirectional`: Both senses reference each other. The lexical relation is displayed on both. `enumerated set`: The sense is part of a restricted set of items, where each item fulfills a particular role in the set. For example, polar antonyms may form a set of "positive" vs. "negative". `open set`: The sense is part of a set of items. `undirectional`: The current sense references another sense, but the other sense does not reference this sense.'
-          enum:
-            - bidirectional
-            - enumerated set
-            - open set
-            - undirectional
-
-      allOf:
-        - if:
-            required: [relationType]
-            properties:
-              relationType:
-                enum:
-                  - bidirectional
-                  - unidirectional
-          then:
-            required: [lexeme]
-        - if:
-            required: [relationType]
-            properties:
-              relationType:
-                const: enumerated set
-          then:
-            required: [members]
-            properties:
-              members:
-                title:       'Members (Enumerated Set) (Database References: Sense)'
-                type:        object
-                description: 'An object whose keys indicate the role that a sense fills in the set, and whose values provide information about the referenced sense. For example, when creating an enumerated set of sense for polar antonyms, the keys in this object might be "positive" and "negative", and the values of each of these would be references to the positive and negative antonyms, respectively.'
-                additionalProperties:
-                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
-        - if:
-            required: [relationType]
-            properties:
-              relationType:
-                const: open set
-          then:
-            required: [members]
-            properties:
-              members:
-                title: 'Members (Open Set) (Database References: Sense)'
-                type:  array
-                items:
-                  $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
+          title:       Lexical Relation Type
+          $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+          description: The type of lexical relation.
 
   link:
     title:       Link

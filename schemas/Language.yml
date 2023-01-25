@@ -251,9 +251,9 @@ properties:
     title:       Lexical Relations
     type:        array
     uniqueItems: true
-    description: A list of lexical relations and cross-reference types used in this language's lexicon. Tools may choose to match values in the Lexeme and Sense's `lexicalRelations` fields against the values in this one.
+    description: A list of the types lexical relations and/or cross-reference types used in this language's lexicon. Tools may choose to match values in the Lexeme's `crossReferences` field and the Sense's `lexicalRelations` fields against the values in this one.
     items:
-      $ref: https://schemas.digitallinguistics.io/Category.json
+      $ref: https://schemas.digitallinguistics.io/LexicalRelation.json
 
   link:
     title:       Link
