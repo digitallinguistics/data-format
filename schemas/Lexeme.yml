@@ -244,10 +244,9 @@ properties:
       $ref: https://schemas.digitallinguistics.io/Sense.json
 
   slot:
-    title:       Slot
-    type:        string
-    $ref:        https://schemas.digitallinguistics.io/Category.json
-    description: This field indicates the slot in a Word Template in which this Lexeme belongs. The value should be the same as the value found in `WordTemplate.slots`.
+    title:       Slot (Database Reference)
+    $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: This field indicates the slot in a Word Template in which this Lexeme belongs. The value should point to a slot within a Word Template.
 
   sources:
     title:       'Sources (Database References: Person)'

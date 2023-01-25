@@ -48,11 +48,7 @@ properties:
 
       title:       Slot
       type:        object
-      description: 'An object representing a single slot in a word template.'
-      required:
-        - abbreviation
-        - name
-        - optional
+      description: An object representing a single slot in a word template.
       properties:
 
         abbreviation:
