@@ -396,6 +396,11 @@ examples:
           - researcher
     dateCreated:  '2018-10-13T18:16:57.497Z'
     dateModified: '2018-10-13T18:17:06.515Z'
+    dialects:
+      - name:
+          eng: Washa
+      - name:
+          eng: Chawasha
     exonyms:
       - language:      fr
         transcription: Shetimashas
