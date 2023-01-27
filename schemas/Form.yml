@@ -147,6 +147,12 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/Category.json
     description: The phonological class of this form. This is useful when the morphophonological behavior of a form is lexically specified and/or unpredictable. For example, some stems in Plains Cree palatalize in certain contexts, while other stems do not. Which stem adheres to which behavior is unpredictable. The phonological class field allows you to specify the phonological behavior of individual items in such cases.
 
+  reconstructed:
+    title:       Reconstructed
+    type:        boolean
+    default:     false
+    description: Whether the form is a reconstructed (unattested) form. Note that some historically reconstructed forms are also attested in the actual historical record. In this case, you may want to set the value of this property to `false`. User interfaces will typically display reconstructed forms with a leading asterisk, following standard convention in historical linguistics.
+
   sources:
     title:       'Sources (Database References: Person)'
     type:        array
