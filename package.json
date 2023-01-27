@@ -27,6 +27,7 @@
     "url": "https://github.com/digitallinguistics/data-format.git"
   },
   "files": [
+    "index.js",
     "json",
     "schemas"
   ],
