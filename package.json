@@ -26,6 +26,10 @@
     "type": "git",
     "url": "https://github.com/digitallinguistics/data-format.git"
   },
+  "files": [
+    "json",
+    "schemas"
+  ],
   "scripts": {
     "build": "node build/convert.js",
     "test": "mocha **.test.js --bail"
