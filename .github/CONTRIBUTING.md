@@ -16,3 +16,10 @@ The following third-party schemas are also used in this project (and copies of t
 
 - [CSL Bibliographic Resource](): Saved as `BibItem.json`.
 - [CSL Cite Item](): Saved as `CiteItem.json`.
+- [GeoJSON]: Saved as `GeoJSON.json`.
+
+## Releases
+
+- 1. `npm version`
+- 2. Create a release on GitHub.
+- 3. The GitHub Actions release workflow publishes the package to npm.
