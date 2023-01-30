@@ -35,40 +35,40 @@ properties:
     title:       Email
     type:        string
     format:      email
-    description: "This person's email."
+    description: This person's email.
 
   familyName:
     title:       'Family Name(s) / Last Name(s)'
     type:        string
-    description: "This person's family name(s) or last name(s)."
+    description: This person's family name(s) or last name(s).
 
   gender:
     title:       Gender
     type:        string
-    description: "This person's self-reported gender identity."
+    description: This person's self-reported gender identity.
 
   givenName:
     title:       'Given Name(s) / First Name(s)'
     type:        string
-    description: "This person's first name(s) or given name(s), including middle name(s) if any."
+    description: This person's first name(s) or given name(s), including middle name(s) if any.
 
   id:
     title:       ID
-    description: 'A unique database identifier for this Person.'
+    description: A unique database identifier for this Person.
 
   initials:
     title:       Initials
     type:        string
-    description: "This person's initials. If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials."
+    description: This person's initials. If a pseudonym is used for this person, use the initials of the pseudonym rather than their actual initials.
 
   languages:
     title:       Languages Spoken
     type:        array
     uniqueItems: true
-    description: 'A list of the languages that this person speaks. Each item should be a DLx Language object or Database Reference to a Language object, optionally with a few additional properties such as `ageLearned`, etc., Because the DLx Language object consists minimally of just the language name, not all details about the language need to be provided here.'
+    description: A list of the languages that this person speaks. Each item should be a DLx Language object or Database Reference to a Language object, optionally with a few additional properties such as `ageLearned`, etc., Because the DLx Language object consists minimally of just the language name, not all details about the language need to be provided here.
     items:
       title:       Proficiency
-      description: "Information about this person's proficiency in this language."
+      description: Information about this person's proficiency in this language.
       type:        object
       properties:
 
@@ -76,59 +76,59 @@ properties:
           title:       Age Learned
           type:        integer
           minimum:     0
-          description: 'The age at which this person learned this language.'
+          description: The age at which this person learned this language.
 
         notes:
           title:       Notes
           type:        array
           uniqueItems: true
-          description: "Notes about this person's use of this language."
+          description: Notes about this person's use of this language.
           items:
             $ref: https://schemas.digitallinguistics.io/Note.json
 
         language:
           title:       Language (Database Reference)
           $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-          description: 'The language that the person has experience with.'
+          description: The language that the person has experience with.
 
         proficiency:
           title:       Proficiency
           $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-          description: 'The proficiency level of this person in this Language.'
+          description: The proficiency level of this person in this Language.
 
         yearsKnown:
           title:       Years Known
           type:        number
-          description: 'The number of years this person has known this Language'
+          description: The number of years this person has known this Language.
 
   link:
     title:       Link
     type:        string
     format:      uri
-    description: 'A URL where a presentational format for this resource may be viewed.'
+    description: A URL where a presentational format for this resource may be viewed.
 
   notes:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'An array of notes about this person'
+    description: An array of notes about this person.
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
   phone:
     title:       Phone Number
     type:        string
-    description: 'A phone number for this Person.'
+    description: A phone number for this Person.
 
   pseudonym:
     title:       Pseudonym
     type:        string
-    description: 'A pseudonym for this Person.'
+    description: A pseudonym for this Person.
 
   startDate:
     title:       Start Date
     type:        string
-    description: 'The date a person began work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.'
+    description: The date a person began work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.
     oneOf:
       - format: date
       - format: date-time
@@ -136,7 +136,7 @@ properties:
   endDate:
     title:       End Date
     type:        string
-    description: 'The date a person finished work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.'
+    description: The date a person finished work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.
     oneOf:
       - format: date
       - format: date-time
@@ -145,20 +145,20 @@ properties:
     title:       Tags
     type:        object
     $ref:        https://schemas.digitallinguistics.io/Tags.json
-    description: 'A set of tags for this Person.'
+    description: A set of tags for this Person.
 
   type:
     title:       Type
     type:        string
     const:       Person
     readOnly:    true
-    description: 'The type of object. Must be set to `Person`.'
+    description: The type of object. Must be set to `Person`.
 
   url:
     title:       URL
     type:        string
     format:      uri
-    description: 'The URL where the JSON data for this Person may be accessed.'
+    description: The URL where the JSON data for this Person may be accessed.
 
 examples:
 
