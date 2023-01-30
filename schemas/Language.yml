@@ -342,6 +342,14 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/Category.json
 
+  punctuation:
+    title:       Punctuation
+    type:        array
+    uniqueItems: true
+    description: A list of valid punctuation characters for this orthography.
+    items:
+      type: string
+
   semanticClasses:
     title:       Semantic Classes
     type:        array
@@ -540,9 +548,9 @@ examples:
         notes:
           - text:     This is the official orthography used by the Chitimacha Tribe.
         punctuation:
-          - .
-          - ?
-          - !
+          - '.'
+          - '?'
+          - '!'
 
       - abbreviation: APA
         graphemes:    []
@@ -680,9 +688,9 @@ examples:
         link:         https://data.digitallinguistics.io/languages/Gusii/orthographies/Practical
         name:         Practical
         punctuation:
-          - .
-          - ?
-          - !
+          - '.'
+          - '?'
+          - '!'
 
       - abbreviation: Swahili
         direction:    ltr-ttb
@@ -692,9 +700,9 @@ examples:
         notes:
           - text:     This orthography represents the way that the language is written when using the Swahili orthography. Tone is omitted from this orthography.
         punctuation:
-          - .
-          - ?
-          - !
+          - '.'
+          - '?'
+          - '!'
 
     phonemes:     []
     type:         Language
