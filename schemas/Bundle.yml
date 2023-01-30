@@ -3,24 +3,24 @@ $id:     https://schemas.digitallinguistics.io/Bundle.json
 title:   Bundle
 type:    object
 
-description: 'A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.'
+description: A bundle is a collection of related resources and derivative products. For example, many field linguists will put all the data from a single day or elicitation session in one bundle, as well as any transcriptions and pedagogical outputs derived from that session. Bundles are purely organizational objects containing references to the included items.
 
 properties:
 
   abbreviation:
     title:       Abbreviation
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'An abbreviation for this Bundle.'
+    description: An abbreviation for this Bundle.
 
   access:
     title:       Access Conditions
     $ref:        https://schemas.digitallinguistics.io/Access.json
-    description: 'An object describing the access conditions for this Bundle.'
+    description: An object describing the access conditions for this Bundle.
 
   dateCreated:
     title:       Date Created
     type:        string
-    description: 'The date and optionally time that this Bundle was created.'
+    description: The date and optionally time that this Bundle was created.
     oneOf:
       - format: date
       - format: date-time
@@ -28,30 +28,30 @@ properties:
   dateModified:
     title:       Date Modified
     type:        string
-    description: 'The date and optionally time that this Bundle was last modified.'
+    description: The date and optionally time that this Bundle was last modified.
     oneOf:
       - format: date
       - format: date-time
 
   id:
     title:       ID
-    description: 'A unique database identifier for this Bundle.'
+    description: A unique database identifier for this Bundle.
 
   key:
     title:       Key
-    description: 'A unique human-readable identifier for this Bundle.'
+    description: A unique human-readable identifier for this Bundle.
 
   link:
     title:       Link
     type:        string
     format:      uri
-    description: 'A URL where a presentational format for this resource may be viewed.'
+    description: A URL where a presentational format for this resource may be viewed.
 
   locations:
     title:       'Locations (Database References: Location)'
     type:        array
     uniqueItems: true
-    description: 'Locations included in this bundle (usually locations that were visited during a day or session).'
+    description: Locations included in this bundle (usually locations that were visited during a day or session).
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
@@ -59,20 +59,20 @@ properties:
     title:       'Media (Database References: Media)'
     type:        array
     uniqueItems: true
-    description: 'Media files included in this bundle.'
+    description: Media files included in this bundle.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   name:
     title:       Name
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'A name for this bundle, optionally in multiple languages.'
+    description: A name for this bundle, optionally in multiple languages.
 
   notes:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'Notes about this bundle.'
+    description: Notes about this bundle.
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
@@ -80,7 +80,7 @@ properties:
     title:       People / Contributors
     type:        array
     uniqueItems: true
-    description: 'People associated with this bundle.'
+    description: People associated with this bundle.
     items:
 
       title: Contributor
@@ -95,22 +95,22 @@ properties:
           title:       Roles
           type:        array
           uniqueItems: true
-          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          description: An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.
           items:
             title:       Role
             type:        string
-            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+            description: The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.
 
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json
-    description: 'A set of tags for this Bundle.'
+    description: A set of tags for this Bundle.
 
   texts:
     title:       'Texts (Database References: Text)'
     type:        array
     uniqueItems: true
-    description: 'Texts included in this bundle.'
+    description: Texts included in this bundle.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
@@ -119,7 +119,7 @@ properties:
     type:        string
     const:       Bundle
     readOnly:    true
-    description: 'The type of object. Must be set to `Bundle`.'
+    description: The type of object. Must be set to `Bundle`.
 
   url:
     title:       URL
@@ -144,7 +144,7 @@ examples:
       - key:      Helen2
     name:         Gusii Recording Day 1
     notes:
-      - text:     "Texts recorded during the first day of recording in Kisii Town and Kennedy's farm."
+      - text:     Texts recorded during the first day of recording in Kisii Town and Kennedy's farm.
     people:
       - key:      HM
         name:     Helen Makana
@@ -154,7 +154,7 @@ examples:
       - key:      Omoiseke
         name:     Ómoíséké ósokérété chíséese
       - key:      Okando
-        name:     "Ókandó n'Ókanyang'aú"
+        name:     Ókandó n'Ókanyang'aú
     type:         Bundle
     url:          https://api.digitallinguistics.io/bundles/aea46597-be32-48bb-9cb5-862c4f0a2081.json
 
