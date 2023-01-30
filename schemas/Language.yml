@@ -3,7 +3,7 @@ $id:     https://schemas.digitallinguistics.io/Language.json
 title:   Language
 type:    object
 
-description: 'DLx uses the term *language* broadly to refer to any speech variety—whether a language, dialect, idiolect, or even a historical variety. The same schema is also used for language families. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).'
+description: DLx uses the term *language* broadly to refer to any speech variety—whether a language, dialect, idiolect, or even a historical variety. The same schema is also used for language families. The DLx `Language` object groups together all the information about the language, including writing systems, its phonological inventory, and metadata (e.g. names and language codes).
 
 required:
   - name
@@ -13,13 +13,13 @@ properties:
   abbreviation:
     title:       Abbreviation
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'A short, human-readable abbreviation for this Language.'
+    description: A short, human-readable abbreviation for this Language.
 
   access:
     title:       Access Conditions
     type:        object
-    $ref:        'https://schemas.digitallinguistics.io/Access.json'
-    description: 'An object describing who may have access to materials on this language.'
+    $ref:        https://schemas.digitallinguistics.io/Access.json
+    description: An object describing who may have access to materials on this language.
 
   autonyms:
     title:       Autonyms
@@ -34,17 +34,17 @@ properties:
         note:
           title:       Note
           $ref:        https://schemas.digitallinguistics.io/Note.json
-          description: 'A note about this autonym, such as who uses this name and where, or perhaps its etymology.'
+          description: A note about this autonym, such as who uses this name and where, or perhaps its etymology.
         transcription:
           title:       Autonym Transcription
           $ref:        https://schemas.digitallinguistics.io/Transcription.json
-          description: 'A transcription of this autonym, optionally in multiple orthographies.'
+          description: A transcription of this autonym.
 
   bibliography:
     title:       Bibliography
     type:        array
     uniqueItems: true
-    description: 'Bibliographic citations for this language.'
+    description: Bibliographic citations for this language.
     items:
       $ref: https://schemas.digitallinguistics.io/Citation.json
 
@@ -59,14 +59,14 @@ properties:
   classification:
     title:       'Genetic Classification (Database References: Language)'
     type:        array
-    description: 'The genetic classification of this language. This property must be an array of Database References to Language objects, with larger family groupings listed before smaller ones. For example, Spanish might have an array of objects for Indo-European, Romance, and Ibero-Romance in that order. In practice, each Database Reference here will likely contain only a few necessary properties, such as `name` and `glottocode`, potentially among others. For language isolates, sign languages, artificial languages, or other varieties whose classification is not straightforward, use a Language object with the appropriate name instead, such as `Isolate` or `Sign Language`.'
+    description: The genetic classification of this language. This property must be an array of Database References to Language objects, with larger family groupings listed before smaller ones. For example, Spanish might have an array of objects for Indo-European, Romance, and Ibero-Romance in that order. In practice, each Database Reference here will likely contain only a few necessary properties, such as `name` and `glottocode`, potentially among others. For language isolates, sign languages, artificial languages, or other varieties whose classification is not straightforward, use a Language object with the appropriate name instead, such as `Isolate` or `Sign Language`.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   dateCreated:
     title:       Date Created
     type:        string
-    description: 'The date and optionally time that this Language object was created.'
+    description: The date and optionally time that this Language object was created.
     oneOf:
       - format: date
       - format: date-time
@@ -74,7 +74,7 @@ properties:
   dateModified:
     title:       Date Modified
     type:        string
-    description: 'The date and optionally time that this Language object was last modified.'
+    description: The date and optionally time that this Language object was last modified.
     oneOf:
       - format: date
       - format: date-time
@@ -87,20 +87,20 @@ properties:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   demographics:
-    title:       'Demographics'
+    title:       Demographics
     type:        array
     uniqueItems: true
-    description: 'An array of Demographic objects, each of which contain demographic information about the Language at a specific point in time, and/or at a specific location.'
+    description: An array of Demographic objects, each of which contain demographic information about the Language at a specific point in time, and/or at a specific location.
     items:
-      title:       'Demographic Data'
+      title:       Demographic Data
       type:        object
-      description: 'The demographic data for this Language, at a specific point in time, and/or at a specific location.'
+      description: The demographic data for this Language, at a specific point in time, and/or at a specific location.
 
       properties:
         date:
           title:       Date
           type:        string
-          description: 'The date and optionally time that this Demographic data was created.'
+          description: The date and optionally time that this Demographic data was created.
           oneOf:
             - format: date
             - format: date-time
@@ -108,32 +108,32 @@ properties:
         location:
           title:       Location (Database Reference)
           $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-          description: 'The geographic Location of this Demographic data.'
+          description: The geographic Location of this Demographic data.
 
         notes:
           title:       Notes
           type:        array
           uniqueItems: true
-          description: 'A collection of notes about this Demographic data.'
+          description: A collection of notes about this Demographic data.
           items:
-            $ref:  'https://schemas.digitallinguistics.io/Note.json'
+            $ref:  https://schemas.digitallinguistics.io/Note.json
 
         population:
           title:       Population
           type:        integer
           minimum:     0
-          description: 'The number of speakers included in this Demographic data.'
+          description: The number of speakers included in this Demographic data.
 
         status:
           title:       Status
           type:        object
-          description: 'The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO. The official status scales can be found [here](https://langlxmelanesia.com/Paris%20-%20EGIDS%20The%20Expanded%20Graded%20Intergenerational%20Disrupt.pdf).'
+          description: 'The Status of this Demographic data on one or more of the following scales: EGIDS, ELCat (using the LEI), GIDS, and/or UNESCO.'
           properties:
 
             AES:
               title:       Agglomerated Endangerment Scale
               type:        string
-              description: 'The Agglomerated Endangerment Scale status of this Demographic data. The details of the AES, along with AES language data, can be found [here](https://glottolog.org/langdoc/status).'
+              description: The Agglomerated Endangerment Scale status of this Demographic data. The details of the AES, along with AES language data, can be found [here](https://glottolog.org/langdoc/status).
               enum:
                 - Not Endangered
                 - Threatened
@@ -145,9 +145,9 @@ properties:
             EGIDS:
               title:       EGIDS
               type:        string
-              description: 'The Expanded Graded Intergenerational Disruption Scale, or EGIDS, status of this Demographic data. Either the official level or the official label representing the EGIDS status of the data, as a string.'
+              description: The Expanded Graded Intergenerational Disruption Scale, or EGIDS, status of this Demographic data. Either the official level or the official label representing the EGIDS status of the data, as a string.
               oneOf:
-                - pattern: '^[0-9|10|6a|6b|8a|8b]$'
+                - pattern: ^[0-9|10|6a|6b|8a|8b]$
                 - enum:
                   - International
                   - National
@@ -173,19 +173,19 @@ properties:
                 - Endangered
                 - Severely Endangered
                 - Critically Endangered
-              description: 'The ELCat status of this Demographic data. ELCat uses the Language Endangerment Index, or LEI, scale. This status should be the LEI level of endangerment of this Demographic data, as a string.'
+              description: The ELCat status of this Demographic data. ELCat uses the Language Endangerment Index, or LEI, scale. This status should be the LEI level of endangerment of this Demographic data, as a string.
 
             GIDS:
               title:   GIDS
               type:    integer
               minimum: 1
               maximum: 8
-              description: 'The Graded Intergenerational Disruption Scale, or GIDS, status of this Demographic data. This is the scale created by Thomas Fishman in his 1991 work *Reversing Language Shift*. The GIDS status should be represented by the integer, 1-8, that corresponds with the GIDS Stage of the data.'
+              description: The Graded Intergenerational Disruption Scale, or GIDS, status of this Demographic data. This is the scale created by Thomas Fishman in his 1991 work *Reversing Language Shift*. The GIDS status should be represented by the integer, 1-8, that corresponds with the GIDS Stage of the data.
 
             UNESCO:
               title:       UNESCO
               type:        string
-              description: 'The UNESCO Language Degree of Endangerment for this Demographic data. This status should be the string representation of the Degree of endangerment level.'
+              description: The UNESCO Language Degree of Endangerment for this Demographic data. This status should be the string representation of the Degree of endangerment level.
               enum:
                 - Safe
                 - Vulnerable
@@ -202,7 +202,7 @@ properties:
   exonyms:
     title:       Exonyms
     type:        array
-    description: 'A list of exonyms for this language (names of the language in _other_ languages). Data in this field can be capitalized as appropriate. For the canonical scientific name of the language (usually in English), use the `name` field. This field is for any additional exonyms beyond the canonical scientific name. For autonyms (names of the language _in_ the language), use the `autonyms` field.'
+    description: A list of exonyms for this language (names of the language in _other_ languages). Data in this field can be capitalized as appropriate. For the canonical scientific name of the language (usually in English), use the `name` field. This field is for any additional exonyms beyond the canonical scientific name. For autonyms (names of the language _in_ the language), use the `autonyms` field.
     items:
       title: Exonym
       type:  object
@@ -212,26 +212,26 @@ properties:
         language:
           title:       Exonym Language
           $ref:        https://schemas.digitallinguistics.io/LanguageTag.json
-          description: 'The language that the exonym is from, as an IETF language tag.'
+          description: The language that the exonym is from, as an IETF language tag.
         note:
           title:       Note
-          $ref:        'https://schemas.digitallinguistics.io/Note.json'
-          description: 'A note about this exonym, such as who uses this name and where, or perhaps its etymology.'
+          $ref:        https://schemas.digitallinguistics.io/Note.json
+          description: A note about this exonym, such as who uses this name and where, or perhaps its etymology.
         transcription:
           title:       Exonym Transcription
           type:        string
-          description: 'A transcription of this exonym, as a simple string rather than a MultiLangString/Transcription.'
-          $comment:    'The reason for making `transcription` a simple string rather than a Transcription object is that exonyms may come from languages not being used as analysis languages, potentially requiring many different orthographies and no way to track abbreviations for those orthographies.'
+          description: A transcription of this exonym, as a simple string rather than a MultiLangString/Transcription.
+          $comment:    The reason for making `transcription` a simple string rather than a Transcription object is that exonyms may come from languages not being used as analysis languages, potentially requiring many different orthographies and no way to track abbreviations for those orthographies.
 
   glottocode:
     title:       Glottolog Code
     type:        string
-    pattern:     '^[a-z]{4}[0-9]{4}$'
-    description: 'The Glottolog code for this language variety, as a String in the format `abcd1234`.'
+    pattern:     ^[a-z]{4}[0-9]{4}$
+    description: The Glottolog code for this language variety, as a String in the format `abcd1234`.
 
   id:
     title:       ID
-    description: 'A unique database identifier for this Language.'
+    description: A unique database identifier for this Language.
 
   inflectionClasses:
     title:       Inflection Classes
@@ -244,8 +244,8 @@ properties:
   iso:
     title:       ISO 639-3 Code
     type:        string
-    pattern:     '^[a-z]{3}$'
-    description: 'The ISO 639-3 code for this language variety, as a 3-letter String.'
+    pattern:     ^[a-z]{3}$
+    description: The ISO 639-3 code for this language variety, as a 3-letter String.
 
   lexicalRelations:
     title:       Lexical Relations
@@ -259,19 +259,19 @@ properties:
     title:       Link
     type:        string
     format:      uri
-    description: 'A URL where a presentational format for this resource may be viewed.'
+    description: A URL where a presentational format for this resource may be viewed.
 
   locations:
     title:       'Locations (Database References: Location)'
     type:        array
     uniqueItems: true
-    description: 'Geographic locations where this language variety is spoken, optionally with geographic coordinate data.'
+    description: Geographic locations where this language variety is spoken, optionally with geographic coordinate data.
     items:
-      $ref: 'https://schemas.digitallinguistics.io/DatabaseReference.json'
+      $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   key:
     title:       Key
-    description: 'A unique human-readable identifier (typically a string) for this Language, intended for use by software implementers as a dependable, stable way to refer to this language.'
+    description: A unique human-readable identifier (typically a string) for this Language, intended for use by software implementers as a dependable, stable way to refer to this language.
 
   morphTypes:
     title:       Morph Types
@@ -284,13 +284,13 @@ properties:
   name:
     title:       Language Name
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'The canonical scientific name of this language, usually in English, but optionally in multiple languages. Data in this field can be capitalized as appropriate. Use the `exonyms` field to list other ways this language is referred to in other languages, and the `autonyms` field to list names for the language _in_ the language itself (a.k.a. endonyms).'
+    description: The canonical scientific name of this language, usually in English, but optionally in multiple languages. Data in this field can be capitalized as appropriate. Use the `exonyms` field to list other ways this language is referred to in other languages, and the `autonyms` field to list names for the language _in_ the language itself (a.k.a. endonyms).
 
   notes:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this language.'
+    description: A collection of notes about this language.
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
@@ -298,7 +298,7 @@ properties:
     title:       Orthographies
     type:        array
     uniqueItems: true
-    description: 'A collection of orthographies used to transcribe data in this Language.'
+    description: A collection of orthographies used to transcribe data in this Language.
     items:
       $ref: https://schemas.digitallinguistics.io/Orthography.json
 
@@ -306,7 +306,7 @@ properties:
     title:       People / Contributors
     type:        array
     uniqueItems: true
-    description: 'People associated with this language.'
+    description: People associated with this language.
     items:
 
       title: Contributor
@@ -321,16 +321,16 @@ properties:
           title:       Roles
           type:        array
           uniqueItems: true
-          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          description: An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.
           items:
             title:       Role
             type:        string
-            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+            description: The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.
 
   phonemes:
     title:       Phonemes
     type:        array
-    description: 'The phonological inventory for this language, i.e. a collection of phonemes.'
+    description: The phonological inventory for this language, i.e. a collection of phonemes.
     items:
       $ref: https://schemas.digitallinguistics.io/Phoneme.json
 
@@ -353,12 +353,12 @@ properties:
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json
-    description: 'A set of tags for this Language.'
+    description: A set of tags for this Language.
 
   templates:
     title:       Word Templates
     type:        array
-    description: 'A set of word templates used in this language. Each item should be a Word Template object.'
+    description: A set of word templates used in this language. Each item should be a Word Template object.
     items:
       $ref: https://schemas.digitallinguistics.io/WordTemplate.json
 
@@ -367,13 +367,13 @@ properties:
     type:     string
     const:    Language
     readOnly: true
-    description: 'The type of object. Must be set to `Language`.'
+    description: The type of object. Must be set to `Language`.
 
   url:
     title:       URL
     type:        string
     format:      uri
-    description: 'A URL where the JSON data for this language can be found.'
+    description: A URL where the JSON data for this language can be found.
 
   variantTypes:
     title:       Variant Types
@@ -386,8 +386,8 @@ properties:
   varietyOf:
     title: Variety of
     type:  object
-    $ref:  'https://schemas.digitallinguistics.io/DatabaseReference.json'
-    description: 'A database reference to another Language object. This property is used to indicate the larger (synchronic) language variety that a smaller variety or dialect belongs to. Note that you may want to use the `classification` property instead, as their functions are similar.'
+    $ref:  https://schemas.digitallinguistics.io/DatabaseReference.json
+    description: A database reference to another Language object. This property is used to indicate the larger (synchronic) language variety that a smaller variety or dialect belongs to. Note that you may want to use the `classification` property instead, as their functions are similar.
 
 examples:
 
@@ -540,9 +540,9 @@ examples:
         notes:
           - text:     This is the official orthography used by the Chitimacha Tribe.
         punctuation:
-          - '.'
-          - '?'
-          - '!'
+          - .
+          - ?
+          - !
 
       - abbreviation: APA
         graphemes:    []
@@ -573,16 +573,16 @@ examples:
 
   - name: Shangaji
     description:
-      eng: 'Shangaji is spoken in three small villages in the Nampula province of Mozambique. The deposit focuses on the variant spoken in Naatthembo village, just west of the Sangage peninsula which begins north of Angoche town. Naatthembo has more or less 4000 inhabitants and represents the major Shangaji speaking centre with the two other locations; Nakonya village and the Likookha area in Mogincual adding more or less 500 and 700 speakers to this number of speakers which is in decline due to a lack of intergenerational language transfer. Nthamala village, some 10 km away from Naatthembo, no longer has Shangaji speakers because of a complete shift to the regional lingua franca Makhuwa (Enlai). The Shangaji deposit thus responds to an urgent documentation need, also because the language is one of four coastal languages that are believed to bear traces of the Swahili world which once stretched from Somalia to the south of Mozambique.'
+      eng: Shangaji is spoken in three small villages in the Nampula province of Mozambique. The deposit focuses on the variant spoken in Naatthembo village, just west of the Sangage peninsula which begins north of Angoche town. Naatthembo has more or less 4000 inhabitants and represents the major Shangaji speaking centre with the two other locations; Nakonya village and the Likookha area in Mogincual adding more or less 500 and 700 speakers to this number of speakers which is in decline due to a lack of intergenerational language transfer. Nthamala village, some 10 km away from Naatthembo, no longer has Shangaji speakers because of a complete shift to the regional lingua franca Makhuwa (Enlai). The Shangaji deposit thus responds to an urgent documentation need, also because the language is one of four coastal languages that are believed to bear traces of the Swahili world which once stretched from Somalia to the south of Mozambique.
 
   - name: Muskogee
     demographics:
-      - date: '2015-01-01'
+      - date: 2015-01-01
         location:
           name: Oklahoma
         notes:
-          - text: 'Muskogee is also spoken in Florida.'
-          - text: 'This population data is based on a 2015 census.'
+          - text: Muskogee is also spoken in Florida.
+          - text: This population data is based on a 2015 census.
         population: 4470
         status:
           AES:    Moribund
@@ -655,13 +655,13 @@ examples:
     id:           708d1bd4-84f6-42e5-8b09-5c64493441b3
     inflectionClasses:
       - abbreviation:
-          eng: '1/2'
+          eng: 1/2
         name:
-          eng: 'Class 1/2 (ómo-/ába-)'
+          eng: Class 1/2 (ómo-/ába-)
       - abbreviation:
-          eng: '3/4'
+          eng: 3/4
         name:
-          eng: 'Class 3/4 (ómo-/éme-)'
+          eng: Class 3/4 (ómo-/éme-)
     iso:          guz
     link:         https://data.digitallinguistics.io/languages/708d1bd4-84f6-42e5-8b09-5c64493441b3
     locations:
@@ -680,9 +680,9 @@ examples:
         link:         https://data.digitallinguistics.io/languages/Gusii/orthographies/Practical
         name:         Practical
         punctuation:
-          - '.'
-          - '?'
-          - '!'
+          - .
+          - ?
+          - !
 
       - abbreviation: Swahili
         direction:    ltr-ttb
@@ -692,9 +692,9 @@ examples:
         notes:
           - text:     This orthography represents the way that the language is written when using the Swahili orthography. Tone is omitted from this orthography.
         punctuation:
-          - '.'
-          - '?'
-          - '!'
+          - .
+          - ?
+          - !
 
     phonemes:     []
     type:         Language
