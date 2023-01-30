@@ -40,7 +40,7 @@ properties:
     title:       Date Created
     type:        string
     description: 'The date and optionally time that this metadata object was originally created. *Not* the date the media file was created. For that, see the `dateRecorded` property.'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -48,7 +48,7 @@ properties:
     title:       Date Modified
     type:        string
     description: 'The date and optionally time that this metadata was last modified. *Not* the date that the media file was modified.'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -56,7 +56,7 @@ properties:
     title:       Date Recorded
     type:        string
     description: 'The date and optionally time that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. *Not* the date that this metadata object was created. For that, see the `dateCreated` property.'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 

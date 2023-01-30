@@ -129,7 +129,7 @@ properties:
     title:       Start Date
     type:        string
     description: The date a person began work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -137,7 +137,7 @@ properties:
     title:       End Date
     type:        string
     description: The date a person finished work on a project, a language documentation, the transcription of a text, or another form of data collection or research. This field is most useful when the Person object is being used as part of the `Language.people` and `Text.people` fields.
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 

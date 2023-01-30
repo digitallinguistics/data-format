@@ -43,7 +43,7 @@ properties:
     title:       Date Created
     type:        string
     description: 'The date and optionally time that this Text was created in the database (**not** the date it was recorded; see the `dateRecorded` property instead).'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -51,7 +51,7 @@ properties:
     title:       Date Modified
     type:        string
     description: 'The date and optionally time that this Text object was last modified (**not** the date that the recording of the text was modified).'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -59,7 +59,7 @@ properties:
     title:       Date Recorded
     type:        string
     description: 'The date and optionally time that this text was recorded.'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 

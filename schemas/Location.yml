@@ -35,7 +35,7 @@ properties:
     title:       Date Created
     type:        string
     description: 'The date and optionally time that this Location object was created.'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -43,7 +43,7 @@ properties:
     title:       Date Modified
     type:        string
     description: 'The date and optionally time that this Location was last modified.'
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 

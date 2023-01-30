@@ -77,16 +77,16 @@ properties:
   dateCreated:
     title:       Date Created
     type:        string
-    description: The date and optionally time that this lexical item was created
-    oneOf:
+    description: The date and optionally time that this lexical item was created.
+    anyOf:
       - format: date
       - format: date-time
 
   dateModified:
     title:       Date Modified
     type:        string
-    description: The date and optionally time that this lexical item was last modified
-    oneOf:
+    description: The date and optionally time that this lexical item was last modified.
+    anyOf:
       - format: date
       - format: date-time
 

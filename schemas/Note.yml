@@ -19,7 +19,7 @@ properties:
     title:       Date Created
     type:        string
     description: The date and optionally time that this note was created.
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
@@ -27,7 +27,7 @@ properties:
     title:       Date Modified
     type:        string
     description: The date and optionally time that this note was last modified.
-    oneOf:
+    anyOf:
       - format: date
       - format: date-time
 
