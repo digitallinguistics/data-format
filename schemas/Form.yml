@@ -26,7 +26,6 @@ properties:
       type:        object
       description: An allomorph of this form.
       required:
-        - environments
         - transcription
       properties:
 
