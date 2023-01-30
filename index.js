@@ -1,7 +1,7 @@
 import Access from './json/Access.json' assert { type: 'json' }
 import Address from './json/Address.json' assert { type: 'json' }
 import Annotation from './json/Annotation.json' assert { type: 'json' }
-import BibItem from './json/BibItem.json' assert { type: 'json' }
+import Bibliography from './json/Bibliography.json' assert { type: 'json' }
 import BibliographicSource from './json/BibliographicSource.json' assert { type: 'json' }
 import Bundle from './json/Bundle.json' assert { type: 'json' }
 import Category from './json/Category.json' assert { type: 'json' }
@@ -35,7 +35,7 @@ export default {
   Access,
   Address,
   Annotation,
-  BibItem,
+  Bibliography,
   BibliographicSource,
   Bundle,
   Category,
