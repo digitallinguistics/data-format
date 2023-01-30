@@ -31,6 +31,7 @@
     "json",
     "schemas"
   ],
+  "main": "index.js",
   "scripts": {
     "build": "node build/convert.js",
     "test": "mocha **.test.js --bail"
