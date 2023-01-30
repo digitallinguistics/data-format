@@ -14,7 +14,7 @@ properties:
     title:       Abbreviation
     type:        string
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'An abbreviation for this Orthography.'
+    description: An abbreviation for this Orthography.
 
   direction:
     title:       Text Direction
@@ -89,7 +89,8 @@ properties:
 
   key:
     title:       Key
-    description: 'A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language. In the DLx infrastruture, the orthography key is displayed next to any transcriptions in that orthography.'
+    description: A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language.
+    $comment:    In the DLx infrastruture, the orthography key is displayed next to any transcriptions in that orthography. (The key is used rather than the abbreviation, because using the abbreviation would require knowing which language to display the abbreviation in.)
 
   link:
     title:       Link
