@@ -89,6 +89,7 @@ properties:
 
   key:
     title:       Key
+    type:        string
     description: A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language.
     $comment:    In the DLx infrastruture, the orthography key is displayed next to any transcriptions in that orthography. (The key is used rather than the abbreviation, because using the abbreviation would require knowing which language to display the abbreviation in.)
 
