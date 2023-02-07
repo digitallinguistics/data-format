@@ -84,6 +84,14 @@ properties:
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
+  dateCreated:
+    title:       Date Created
+    description: A timestamp indicating when this Form was created.
+
+  dateModified:
+    title:       Date Modified
+    description: A timestamp indicating when this Form was last modified.
+
   derivedInflectionClass:
     title:       Inflectional Class of Derived Form
     $ref:        https://schemas.digitallinguistics.io/Category.json

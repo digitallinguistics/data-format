@@ -3,7 +3,7 @@ $id:     https://schemas.digitallinguistics.io/Media.json
 title:   Media File
 type:    object
 
-description: 'An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.'
+description: An object containing information about a media file. The file itself should be stored at the URL indicated in the `mediaURL` field. Media files generally contain primary data. Examples might include audio/video recordings, scans of archival materials, photos taken during fieldwork, or scans of field notes.
 
 required:
   - filename
@@ -13,17 +13,17 @@ properties:
   abbreviation:
     title:       Abbreviation
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'An abbreviation for referring to this file.'
+    description: An abbreviation for referring to this file.
 
   access:
     title:       Access Conditions
     $ref:        https://schemas.digitallinguistics.io/Access.json
-    description: 'Access conditions for this media file.'
+    description: Access conditions for this media file.
 
   content:
     title:       Content
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'A description of the content of this file, optionally in multiple languages.'
+    description: A description of the content of this file, optionally in multiple languages.
 
   contentType:
     title:       MIME Content Type
@@ -34,42 +34,30 @@ properties:
     title:       'Creator (Database Reference: Person)'
     type:        object
     $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-    description: 'A database reference to the person who created/recorded this media file (not necessarily the person speaking in the file).'
+    description: A database reference to the person who created/recorded this media file (not necessarily the person speaking in the file).
 
   dateCreated:
     title:       Date Created
-    type:        string
-    description: 'The date and optionally time that this metadata object was originally created. *Not* the date the media file was created. For that, see the `dateRecorded` property.'
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Media metadata object was created. *Not* the time when the media file was created. For that, see the `dateRecorded` property.
 
   dateModified:
     title:       Date Modified
-    type:        string
-    description: 'The date and optionally time that this metadata was last modified. *Not* the date that the media file was modified.'
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Media metadata object was last modified.
 
   dateRecorded:
     title:       Date Recorded
-    type:        string
-    description: 'The date and optionally time that this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. *Not* the date that this metadata object was created. For that, see the `dateCreated` property.'
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this media file was recorded or photographed. Or, if the file is a scan of field notes, the date that the scan was made. *Not* the date that this metadata object was created. For that, see the `dateCreated` property.
 
   endTime:
     title:       End Time
     type:        number
     minimum:     0.001
-    description: 'Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.234`, or `167.780`, etc.'
+    description: Within an audiovisual file, the time at which the relevant linguistic data ends. Programs may use this field in different ways. For example, if the camera recorded for five minutes after the speaker finished talking, the `End Time` would be the time 5 minutes before the end of the file. The time stamp should be in seconds and milliseconds, separated by a period, e.g. `12.573`, or `1.234`, or `167.780`, etc.
 
   filename:
     title:       Filename
     type:        string
-    description: 'The filename for this media item without spaces, but including the extension.'
+    description: The filename for this media item without spaces, but including the extension.
 
   format:
     title:       Format (File Extension)
@@ -78,17 +66,17 @@ properties:
 
   id:
     title:       ID
-    description: A unique database identifier for this Media Item
+    description: A unique database identifier for this Media Item.
 
   key:
     title:       Key
-    description: 'A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language.'
+    description: A unique human-readable identifier (typically a string) for this item, intended for use by software implementers as a dependable, stable way to refer to this language.
 
   languages:
     title:       'Languages (Database References: Language)'
     type:        array
     uniqueItems: true
-    description: 'An array of the languages that are used in this media file.'
+    description: An array of the languages that are used in this media file.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
@@ -96,31 +84,31 @@ properties:
     title:       Length (in Time / Pages)
     type:        number
     minimum:     0.001
-    description: 'The length of the file, in seconds and milliseconds if an audio/video file (in `SS.MMM` format), or pages if a document.'
+    description: The length of the file, in seconds and milliseconds if an audio/video file (in `SS.MMM` format), or pages if a document.
 
   link:
     title:       Link
     type:        string
     format:      uri
-    description: 'A URL where a presentational format for this resource may be viewed.'
+    description: A URL where a presentational format for this resource may be viewed.
 
   location:
     title:       Location (Database Reference)
     type:        object
     $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-    description: 'A database reference to the location where the content in this media file was recorded or produced.'
+    description: A database reference to the location where the content in this media file was recorded or produced.
 
   mediaURL:
     title:       Media URL
     type:        string
     format:      uri
-    description: 'The URL where the media file can be found.'
+    description: The URL where the media file can be found.
 
   notes:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this media item.'
+    description: A collection of notes about this media item.
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
@@ -128,20 +116,20 @@ properties:
     title:       Original Media Item
     type:        string
     format:      uri
-    description: 'The URL of the Media object (*not* the URL to the media file itself) that this file is derived from. Useful if you have created an edited version of a file or converted it to another format.'
+    description: The URL of the Media object (*not* the URL to the media file itself) that this file is derived from. Useful if you have created an edited version of a file or converted it to another format.
 
   people:
     title:       'Persons in File (Database References: Person)'
     type:        array
     uniqueItems: true
-    description: 'A list of all the people who appear in this file. Often a list of speakers.'
+    description: A list of all the people who appear in this file. Often a list of speakers.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
   size:
     title:       File Size
     type:        integer
-    description: 'The size of the file, in bytes.'
+    description: The size of the file, in bytes.
 
   startTime:
     title:       Start Time
@@ -152,20 +140,20 @@ properties:
   tags:
     title:       Tags
     $ref:        https://schemas.digitallinguistics.io/Tags.json
-    description: 'A set of tags for this media item.'
+    description: A set of tags for this media item.
 
   type:
     title:       Type
     type:        string
     const:       Media
     readOnly:    true
-    description: 'The type of object. Must be set to `Media`.'
+    description: The type of object. Must be set to `Media`.
 
   url:
     title:       URL
     type:        string
     format:      uri
-    description: 'The URL where this media data can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaURL` attribute).'
+    description: The URL where this media data can be retrieved. *NOT* the URL of the media file itself (for that, see the `mediaURL` attribute).
 
 examples:
 

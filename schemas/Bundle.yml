@@ -19,19 +19,11 @@ properties:
 
   dateCreated:
     title:       Date Created
-    type:        string
-    description: The date and optionally time that this Bundle was created.
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Bundle was created.
 
   dateModified:
     title:       Date Modified
-    type:        string
-    description: The date and optionally time that this Bundle was last modified.
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Bundle was last modified.
 
   id:
     title:       ID

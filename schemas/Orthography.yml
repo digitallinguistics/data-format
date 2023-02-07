@@ -16,6 +16,14 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
     description: An abbreviation for this Orthography.
 
+  dateCreated:
+    title:       Date Created
+    description: A timestamp indicating when this Orthography was created.
+
+  dateModified:
+    title:       Date Modified
+    description: A timestamp indicating when this Orthography was last modified.
+
   direction:
     title:       Text Direction
     type:        string

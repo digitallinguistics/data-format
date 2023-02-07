@@ -13,59 +13,47 @@ properties:
   abbreviation:
     title:       Abbreviation
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'An abbreviation for this Text.'
+    description: An abbreviation for this Text.
 
   access:
     title:       Access Conditions
     $ref:        https://schemas.digitallinguistics.io/Access.json
-    description: 'An object describing the access conditions for this Text.'
+    description: An object describing the access conditions for this Text.
 
   annotations:
     title:       Annotations
     type:        array
     uniqueItems: true
-    description: 'A collection of annotations on this text.'
+    description: A collection of annotations on this text.
     items:
       $ref: https://schemas.digitallinguistics.io/Annotation.json
 
   bibliography:
     title:       Bibliography
     type:        array
-    description: 'A list of citations to any bibliographic sources concerning or relating to this Text.'
+    description: A list of citations to any bibliographic sources concerning or relating to this Text.
     items:
       $ref: https://schemas.digitallinguistics.io/Citation.json
 
   id:
     title:       ID
-    description: 'A unique database identifier for this Text.'
+    description: A unique database identifier for this Text.
 
   dateCreated:
     title:       Date Created
-    type:        string
-    description: 'The date and optionally time that this Text was created in the database (**not** the date it was recorded; see the `dateRecorded` property instead).'
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Text was created.
 
   dateModified:
     title:       Date Modified
-    type:        string
-    description: 'The date and optionally time that this Text object was last modified (**not** the date that the recording of the text was modified).'
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Text was last modified.
 
   dateRecorded:
     title:       Date Recorded
-    type:        string
-    description: 'The date and optionally time that this text was recorded.'
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this text was recorded.
 
   discourseType:
     title:       Discourse Type
-    description: 'The type, or types, of discourse event, e.g. monologue, dialogue, or song.'
+    description: The type, or types, of discourse event, e.g. monologue, dialogue, or song.
     oneOf:
       - $ref: https://schemas.digitallinguistics.io/MultiLangString.json
       - type:        array
@@ -75,7 +63,7 @@ properties:
 
   genre:
     title:       Genre
-    description: 'The genre, or genres, of the text, e.g. folktale, personal narrative, or expository.'
+    description: The genre, or genres, of the text, e.g. folktale, personal narrative, or expository.
     oneOf:
       - $ref: https://schemas.digitallinguistics.io/MultiLangString.json
       - type:        array
@@ -94,19 +82,19 @@ properties:
     title:       Link
     type:        string
     format:      uri
-    description: 'A URL where a presentational format for this resource may be viewed.'
+    description: A URL where a presentational format for this resource may be viewed.
 
   location:
     title:       Location
     type:        object
     $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
-    description: 'A database reference to the location where this text was recorded.'
+    description: A database reference to the location where this text was recorded.
 
   media:
     title:       'Media (Database References: Media)'
     type:        array
     uniqueItems: true
-    description: 'An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well.'
+    description: An array of objects containing information about the media files associated with this Text. Usually this will include the WAV or video file that was originally recorded for the text, but can also include any derivative media files (such as MP3) as well.
     items:
       $ref: https://schemas.digitallinguistics.io/DatabaseReference.json
 
@@ -114,7 +102,7 @@ properties:
     title:       Notes
     type:        array
     uniqueItems: true
-    description: 'A collection of notes about this Text.'
+    description: A collection of notes about this Text.
     items:
       $ref: https://schemas.digitallinguistics.io/Note.json
 
@@ -122,7 +110,7 @@ properties:
     title:       People / Contributors
     type:        array
     uniqueItems: true
-    description: 'People associated with this text.'
+    description: People associated with this text.
     items:
 
       title: Contributor
@@ -137,35 +125,35 @@ properties:
           title:       Roles
           type:        array
           uniqueItems: true
-          description: 'An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+          description: An array of the roles that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.
           items:
             title:       Role
             type:        string
-            description: 'The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.'
+            description: The role that this person has in the context of the associated data, e.g. `speaker` or `transcriber`.
 
   tags:
     title:       Tags
     type:        object
     $ref:        https://schemas.digitallinguistics.io/Tags.json
-    description: 'A set of tags associated with this Text.'
+    description: A set of tags associated with this Text.
 
   title:
     title:       Title
     $ref:        https://schemas.digitallinguistics.io/MultiLangString.json
-    description: 'The title of the text, in one or more languages.'
+    description: The title of the text, in one or more languages.
 
   type:
     title:       Type
     type:        string
     const:       Text
     readOnly:    true
-    description: 'The type of object. Must be set to `Text`.'
+    description: The type of object. Must be set to `Text`.
 
   url:
     title:       URL
     type:        string
     format:      uri
-    description: 'The URL where this data can be retrieved in JSON format.'
+    description: The URL where this data can be retrieved in JSON format.
 
   utterances:
     title:       Utterance

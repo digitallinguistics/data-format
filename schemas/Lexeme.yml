@@ -76,19 +76,11 @@ properties:
 
   dateCreated:
     title:       Date Created
-    type:        string
-    description: The date and optionally time that this lexical item was created.
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Lexeme was created.
 
   dateModified:
     title:       Date Modified
-    type:        string
-    description: The date and optionally time that this lexical item was last modified.
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Lexeme was last modified.
 
   examples:
     title:       'Examples (Database References: Utterance)'

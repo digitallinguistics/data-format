@@ -31,6 +31,14 @@ properties:
     $ref:        https://schemas.digitallinguistics.io/DatabaseReference.json
     description: "A database reference to this person's place of birth, as a Location object."
 
+  dateCreated:
+    title:       Date Created
+    description: A timestamp indicating when this Person object was created.
+
+  dateModified:
+    title:       Date Modified
+    description: A timestamp indicating when this Person object was last modified.
+
   email:
     title:       Email
     type:        string

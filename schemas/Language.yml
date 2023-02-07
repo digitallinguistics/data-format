@@ -65,19 +65,11 @@ properties:
 
   dateCreated:
     title:       Date Created
-    type:        string
-    description: The date and optionally time that this Language object was created.
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Language was created.
 
   dateModified:
     title:       Date Modified
-    type:        string
-    description: The date and optionally time that this Language object was last modified.
-    anyOf:
-      - format: date
-      - format: date-time
+    description: A timestamp indicating when this Language was last modified.
 
   dialects:
     title:       'Dialects (Database References: Language)'
